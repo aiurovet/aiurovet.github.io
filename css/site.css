@@ -1,9 +1,55 @@
-html {
+:root {
+  --header-back-color: rgb(0, 123, 49);
+  --header-fore-color: rgb(255, 255, 255);
+  --content-back-color: rgb(255, 255, 255);
+  --content-fore-color: rgb(0, 0, 0);
+  --footer-back-color: var(--header-back-color);
+  --footer-fore-color: var(--header-fore-color);
+  --icon-url: var(--header-fore-color);
+}
+
+body {
+  display: block;
+  flex-direction: column;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 40px;
+  margin: 0;
+  min-height: 100vh;
 }
-.header-outer {
-  max-height: 5em;
+content {
+  background: var(--content-back-color);
+  color: var(--content-fore-color);
+  overflow: auto;
+  padding: 1em 1em 0 1em;
+  position: absolute; left: 0; right: 0; top: 2em; bottom: 1em;
+  text-align: left;
+}
+footer {
+  background: var(--footer-back-color);
+  color: var(--footer-fore-color);
+  font-size: large;
+  height: 1em;
+  overflow: hidden;
+  padding: 1em 0 1em 0;
+  position: absolute; left: 0; right: 0; bottom: 0;
+}
+footer::before {
+  content: "\2002\2002 Copyright \00A9\00A0 Alexander Iurovetski 2023";
+}
+header {
+  background: var(--header-back-color);
+  color: var(--header-fore-color);
+  overflow: hidden;
+  padding-top: 0.5em;
+  cursor: pointer;
+  position: absolute; top: 0px; left: 0px; right: 0; height: 2em;
+}
+header::before {
+  background-image: url('https://phrasehacker.files.wordpress.com/2018/04/logo_256x256.png?w=32');
+  background-position-y: 33%;
+  background-repeat: no-repeat;
+  content: "\2002\2002 Alexander Iurovetski";
+  margin-left: 0.5em;
 }
 details > summary {
   font-size: xx-large;
@@ -53,7 +99,6 @@ details details .link {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  width: 25%;
 }
 .about-details {
   font-size: x-large;
