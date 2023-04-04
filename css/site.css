@@ -1,0 +1,48 @@
+.header-outer {
+  max-height: 5em;
+}
+details > summary {
+  font-size: xx-large;
+}
+details > summary::-webkit-details-marker {
+  color: #00ACF3;
+  font-size: xx-large;
+  margin-right: 2px;
+}
+details > summary:focus {
+  outline-style: none;
+}
+details > details > summary {
+  font-size: x-large;
+  margin-top: 1em;
+  margin-left: 2em;
+}
+details {
+  cursor: pointer;
+}
+.details {
+  font-size: large;
+  margin-left: 2em;
+}
+details .details {
+  margin-left: 4em;
+}
+details details .details {
+  margin-left: 8em;
+}
+.link {
+  font-size: x-large;
+  margin-left: 0;
+}
+details .link {
+  margin-left: 2em;
+}
+details details .link {
+  margin-left: 4em;
+}
+.non-details {
+  font-size: x-large;
+}
+.non-details:first-of-type {
+  margin-top: 2em !important;
+}
