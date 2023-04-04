@@ -1,13 +1,4 @@
-:root {
-  --header-back-color: rgb(0, 123, 49);
-  --header-fore-color: rgb(255, 255, 255);
-  --content-back-color: rgb(255, 255, 255);
-  --content-fore-color: rgb(0, 0, 0);
-  --footer-back-color: var(--header-back-color);
-  --footer-fore-color: var(--header-fore-color);
-  --icon-url: var(--header-fore-color);
-}
-
+/* Copyright (C) Alexander Iurovetski 2023 */
 body {
   display: block;
   flex-direction: column;
@@ -17,16 +8,16 @@ body {
   min-height: 100vh;
 }
 content {
-  background: var(--content-back-color);
-  color: var(--content-fore-color);
+  background: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
   overflow: auto;
   padding: 1em 1em 0 1em;
   position: absolute; left: 0; right: 0; top: 2em; bottom: 1em;
   text-align: left;
 }
 footer {
-  background: var(--footer-back-color);
-  color: var(--footer-fore-color);
+  background: rgb(0, 123, 49);
+  color: rgb(255, 255, 255);
   font-size: large;
   height: 1em;
   overflow: hidden;
@@ -37,8 +28,8 @@ footer::before {
   content: "\2002\2002 Copyright \00A9\00A0 Alexander Iurovetski 2023";
 }
 header {
-  background: var(--header-back-color);
-  color: var(--header-fore-color);
+  background: rgb(0, 123, 49);
+  color: rgb(255, 255, 255);
   overflow: hidden;
   padding-top: 0.5em;
   cursor: pointer;
@@ -101,5 +92,8 @@ details details .link {
   margin-right: auto;
 }
 .about-details {
+  font-size: x-large;
+}
+.to-home {
   font-size: x-large;
 }
