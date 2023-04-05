@@ -1,16 +1,9 @@
 ////////////////////////////////////////////////////////////////////////////////
 
-document.addEventListener('DOMContentLoaded', onReady, false);
-
-////////////////////////////////////////////////////////////////////////////////
-
-const toHomeSelectors = ['.to-home'];
-
-////////////////////////////////////////////////////////////////////////////////
-
-function getHeader() {
-  return document.querySelector('header');
-}
+$(document).ready(function () {
+  $('header').click(onHeaderClick);
+  setToHome();
+});
 
 ////////////////////////////////////////////////////////////////////////////////
 
@@ -23,27 +16,20 @@ function getHomePage() {
 function setToHome() {
   const homePage = getHomePage();
 
-  for (var i = 0, n = toHomeSelectors.length; i < n; i++) {
-    const toHome = document.querySelector(toHomeSelectors[i]);
+  $('.to-home').each(function (i) {
+    const jqElem = $(toHomeSelectors[i]);
 
-    if (toHome) {
-      toHome.setAttribute('href', homePage);
-      toHome.removeAttribute('target');
+    if (jqElem) {
+      jqElem.attr('href', homePage);
+      jqElem.removeAttr('target');
     }
-  }
+  });
 }
 
 ////////////////////////////////////////////////////////////////////////////////
 
 function onHeaderClick() {
   document.location = getHomePage();
-}
-
-////////////////////////////////////////////////////////////////////////////////
-
-function onReady() {
-  getHeader().addEventListener('click', onHeaderClick);
-  setToHome();
 }
 
 ////////////////////////////////////////////////////////////////////////////////
