@@ -123,3 +123,6 @@ details > details > summary {
 .to-home {
   font-size: 125%;
 }
+.to-home::before {
+  content: "\01F868\000A Home";
+}
