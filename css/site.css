@@ -3,88 +3,74 @@ body {
   display: block;
   flex-direction: column;
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 40px;
+  font-size: 16px;
   margin: 0;
   min-height: 100vh;
+  overflow: hidden;
+}
+body {
+  display: block;
+  flex-direction: column;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  margin: 0;
+  min-height: 100vh;
+  min-width: 60em;
+  overflow: hidden;
+}
+header {
+  background: rgb(0, 123, 49);
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+  font-size: 200%;
+  height: 100%;
+  min-height: 2em;
+  overflow: hidden;
+  padding-top: 0.5em;
+  position: absolute; top: 0px; left: 0px; right: 0;
+}
+header::before {
+  background-image: url('https://phrasehacker.files.wordpress.com/2018/04/logo_256x256.png?w=32');
+  background-position-y: 33%;
+  background-repeat: no-repeat;
+  content: "\2002\2002\2002 Alexander Iurovetski";
+  margin-left: 0.5em;
 }
 content {
   background: rgb(255, 255, 255);
   color: rgb(0, 0, 0);
   overflow: auto;
   padding: 1em 1em 0 1em;
-  position: absolute; left: 0; right: 0; top: 2em; bottom: 1em;
+  position: absolute; left: 0; right: 0; top: 4em; bottom: 2em;
   text-align: left;
 }
 footer {
   background: rgb(0, 123, 49);
   color: rgb(255, 255, 255);
-  font-size: large;
   height: 1em;
   overflow: hidden;
-  padding: 1em 0 1em 0;
+  padding: 0.5em 0 0.5em 0;
   position: absolute; left: 0; right: 0; bottom: 0;
 }
 footer::before {
   content: "\2002\2002 Copyright \00A9\00A0 Alexander Iurovetski 2023";
 }
-header {
-  background: rgb(0, 123, 49);
-  color: rgb(255, 255, 255);
-  overflow: hidden;
-  padding-top: 0.5em;
-  cursor: pointer;
-  position: absolute; top: 0px; left: 0px; right: 0; height: 2em;
-}
-header::before {
-  background-image: url('https://phrasehacker.files.wordpress.com/2018/04/logo_256x256.png?w=32');
-  background-position-y: 33%;
-  background-repeat: no-repeat;
-  content: "\2002\2002 Alexander Iurovetski";
-  margin-left: 0.5em;
-}
-details > summary {
-  font-size: xx-large;
-}
-details > summary::-webkit-details-marker {
-  font-size: xx-large;
-  margin-right: 2px;
-}
-details > summary:focus {
-  outline-style: none;
-}
-details > details > summary {
-  font-size: x-large;
+details {
+  display: block;
   margin-top: 1em;
   margin-left: 2em;
 }
-details {
+details > summary,
+details > summary::-webkit-details-marker {
   cursor: pointer;
+  font-size: 150%;
 }
-.details {
-  font-size: large;
-  margin-left: 2em;
+content > details > summary,
+content > details > summary::-webkit-details-marker {
+  font-size: 200%;
 }
-details .details {
-  margin-left: 4em;
-}
-details details .details {
-  margin-left: 8em;
-}
-.link {
-  font-size: x-large;
-  margin-left: 0;
-}
-details .link {
-  margin-left: 2em;
-}
-details details .link {
-  margin-left: 4em;
-}
-.non-details {
-  font-size: x-large;
-}
-.non-details:first-of-type {
-  margin-top: 2em !important;
+details > summary:focus {
+  outline-style: none;
 }
 .about-image {
   display: block;
@@ -92,8 +78,47 @@ details details .link {
   margin-right: auto;
 }
 .about-details {
-  font-size: x-large;
+  font-size: 150%;
+}
+.article {
+  font-size: 150%;
+  margin-left: 2em;
+  margin-right: 0.25em;
+}
+.article:first-of-type {
+  margin-top: 1em;
+}
+.article > .caption {
+  white-space: nowrap;
+}
+.article > .caption > .link:first-child {
+  margin-left: 0;
+  margin-right: 1em;
+}
+.article > .caption > .link:not(first-child) {
+  margin-left: 1em;
+  margin-right: 0;
+}
+.article > .caption > .title {
+  display: inline;
+  font-weight: bold;
+}
+.article > .caption > .title.first {
+  margin-top: 2em;
+}
+.description {
+  display: block;
+  font-size: 90%;
+  margin-top: 0.5em;
+  margin-bottom: 2em;
+  text-align: justify;
+}
+.details {
+  display: block;
+  font-size: 150%;
+  margin-top: 2em;
+  margin-left: 1.25em;
 }
 .to-home {
-  font-size: x-large;
+  font-size: 150%;
 }
