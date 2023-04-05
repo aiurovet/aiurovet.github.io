@@ -1,6 +1,10 @@
 /* Copyright (C) Alexander Iurovetski 2023 */
 a {
   text-decoration: none;
+  opacity: 1;
+}
+a:hover {
+  opacity: 0.5;
 }
 body {
   display: block;
