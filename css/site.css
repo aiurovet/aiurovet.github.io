@@ -1,4 +1,7 @@
 /* Copyright (C) Alexander Iurovetski 2023 */
+a {
+  text-decoration: none;
+}
 body {
   display: block;
   flex-direction: column;
@@ -6,7 +9,7 @@ body {
   font-size: 20px;
   margin: 0;
   min-height: 100vh;
-  min-width: 60em;
+  min-width: 100%;
   overflow: hidden;
 }
 header {
@@ -71,8 +74,12 @@ details > details > summary {
   margin-left: auto;
   margin-right: auto;
 }
-.about-details {
+.about-title {
   font-size: 150%;
+  font-weight: bold;
+  min-width: 100%;
+  text-align: center;
+  vertical-align: middle;
 }
 .article {
   font-size: 150%;
@@ -102,7 +109,7 @@ details > details > summary {
 }
 .description {
   display: block;
-  font-size: 90%;
+  font-size: 75%;
   margin-top: 0.5em;
   margin-bottom: 2em;
   text-align: justify;
@@ -114,5 +121,5 @@ details > details > summary {
   margin-left: 1.25em;
 }
 .to-home {
-  font-size: 150%;
+  font-size: 125%;
 }

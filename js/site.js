@@ -17,7 +17,7 @@ function setToHome() {
   const homePage = getHomePage();
 
   $('.to-home').each(function (i) {
-    const jqElem = $(toHomeSelectors[i]);
+    const jqElem = $(this);
 
     if (jqElem) {
       jqElem.attr('href', homePage);
