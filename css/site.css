@@ -130,3 +130,11 @@ details > details > summary {
 .to-home::before {
   content: "\01F868\000A Home";
 }
+@media screen and (min-device-width: 0) and (max-device-width: 480px) {
+  body { font-size: 50px; }
+  header { font-size: 160%; }
+}
+@media screen and (min-device-width: 481px) and (max-device-width: 1024px) {
+  body { font-size: 40px; }
+  header { font-size: 160%; }
+}
