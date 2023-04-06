@@ -28,11 +28,17 @@ header {
   position: absolute; top: 0px; left: 0px; right: 0;
 }
 header::before {
-  background-image: url('https://phrasehacker.files.wordpress.com/2018/04/logo_256x256.png?w=32');
+  background-image: url('https://phrasehacker.files.wordpress.com/2018/04/logo_256x256.png');
   background-position-y: 33%;
   background-repeat: no-repeat;
-  content: "\2002\2002\2002 Alexander Iurovetski";
+  background-size: 100%;
+  content: "\2003";
   margin-left: 0.5em;
+  margin-right: 0.25em;
+  width: 64px;
+}
+header::after {
+  content: "Alexander Iurovetski";
 }
 content {
   background: rgb(255, 255, 255);
@@ -87,7 +93,7 @@ details > details > summary {
 }
 .article {
   font-size: 150%;
-  margin-left: 2em;
+  margin-left: -2.5em;
   margin-right: 0.25em;
 }
 .article:first-of-type {
@@ -131,10 +137,12 @@ details > details > summary {
   content: "\01F868\000A Home";
 }
 @media screen and (min-device-width: 0) and (max-device-width: 480px) {
-  body { font-size: 50px; }
-  header { font-size: 160%; }
-}
-@media screen and (min-device-width: 481px) and (max-device-width: 1024px) {
   body { font-size: 40px; }
   header { font-size: 160%; }
+  header::before { width: 2em; }
+}
+@media screen and (min-device-width: 481px) and (max-device-width: 1024px) {
+  body { font-size: 30px; }
+  header { font-size: 160%; }
+  header::before { width: 3em; }
 }
