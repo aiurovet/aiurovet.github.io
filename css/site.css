@@ -19,25 +19,31 @@ body {
   min-width: 100%;
   overflow: hidden;
 }
-content {
-  background: rgb(255, 255, 255);
-  color: rgb(0, 0, 0);
-  overflow: auto;
-  padding: 0 1em 0 1em;
-  position: absolute; left: 0; right: 0; top: 0; bottom: 1.2em;
-  text-align: left;
+header {
+  position: absolute; left: 0; right: 0; top: 0;
 }
-footer {
+header, footer {
   background: rgb(0, 123, 49);
   color: rgb(255, 255, 255);
   font-size: 80%;
   height: 1em;
   overflow: hidden;
-  padding: 0.15em 0 0.25em 0;
+  padding: 0.1em 0 0.25em 0;
+}
+content {
+  background: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+  overflow: auto;
+  padding: 0 1em 0 1em;
+  position: absolute; left: 0; right: 0; top: 1em; bottom: 1em;
+  text-align: left;
+}
+footer {
   position: absolute; left: 0; right: 0; bottom: 0;
 }
 footer::before {
-  content: "\2002\2002 Copyright \00A9\00A0 Alexander Iurovetski 2023";
+  content: "Copyright \00A9\00A0 Alexander Iurovetski 2023";
+  margin-left: 1em;
 }
 details {
   display: block;
@@ -111,10 +117,11 @@ details > details > summary {
   margin-left: 1.25em;
 }
 .to-home {
-  font-size: 125%;
+  cursor: pointer;
 }
 .to-home::before {
-  content: "Home";
+  content: "< Home";
+  margin-left: 1em;
 }
 @media screen and (min-device-width: 0) and (max-device-width: 480px) {
   body { font-size: 40px; }

@@ -15,10 +15,17 @@ function getHomePage() {
 
 ////////////////////////////////////////////////////////////////////////////////
 
+function getToHomeClass() {
+  return "to-home";
+}
+
+////////////////////////////////////////////////////////////////////////////////
+
 function setToHome() {
   const homePage = getHomePage();
+  const toHomeClass = getToHomeClass();
 
-  $('.to-home').each(function (i) {
+  $(`.${toHomeClass}`).each(function (i) {
     const jqElem = $(this);
 
     if (jqElem) {
@@ -26,6 +33,12 @@ function setToHome() {
       jqElem.removeAttr('target');
     }
   });
+
+  const jqHeader = $('header');
+
+  if (!jqHeader.hasClass(toHomeClass)) {
+    jqHeader.addClass(toHomeClass);
+  }
 }
 
 ////////////////////////////////////////////////////////////////////////////////
