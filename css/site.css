@@ -37,8 +37,7 @@ header::before {
   background-repeat: no-repeat;
   background-size: 100%;
   content: "\2003";
-  margin-left: 0.5em;
-  margin-right: 0.25em;
+  margin: 0.1em 0.25em 0 0.5em;
   width: 64px;
 }
 header::after {
@@ -58,7 +57,7 @@ footer {
   font-size: 80%;
   height: 1em;
   overflow: hidden;
-  padding: 0.1em 0 0.2em 0;
+  padding: 0.15em 0 0.25em 0;
   position: absolute; left: 0; right: 0; bottom: 0;
 }
 footer::before {
