@@ -15,29 +15,23 @@ function getHomePage() {
 
 ////////////////////////////////////////////////////////////////////////////////
 
-function getToHomeClass() {
-  return "to-home";
+function getIsHomeClass() {
+  return "is-home";
+}
+
+////////////////////////////////////////////////////////////////////////////////
+
+function onHeaderClick() {
+  document.location = getHomePage();
 }
 
 ////////////////////////////////////////////////////////////////////////////////
 
 function setToHome() {
-  const homePage = getHomePage();
-  const toHomeClass = getToHomeClass();
-
-  $(`.${toHomeClass}`).each(function (i) {
-    const jqElem = $(this);
-
-    if (jqElem) {
-      jqElem.attr('href', homePage);
-      jqElem.removeAttr('target');
-    }
-  });
-
   const jqHeader = $('header');
 
-  if (!jqHeader.hasClass(toHomeClass)) {
-    jqHeader.addClass(toHomeClass);
+  if (!jqHeader.hasClass(getIsHomeClass())) {
+    jqHeader.click(onHeaderClick);
   }
 }
 
