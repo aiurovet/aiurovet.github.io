@@ -17,17 +17,21 @@ body {
   margin: 0;
   min-height: 100vh;
   min-width: 100%;
-  overflow: hidden;
+  overflow: auto;
 }
 header {
   font-weight: bold;
   position: absolute; left: 0; right: 0; top: 0;
 }
+header::before {
+  content: "Home";
+  margin-left: 1em;
+}
 header:not(.is-home) {
   cursor: pointer;
 }
 header:not(.is-home)::before {
-  content: "< Home";
+  content: "Back to Home";
   margin-left: 1em;
 }
 header, footer {
