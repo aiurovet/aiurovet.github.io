@@ -143,11 +143,11 @@ details > details > summary {
 }
 @media screen and (min-device-width: 0) and (max-device-width: 480px) {
   body { font-size: 40px; }
-  header { font-size: 160%; }
+  header { font-size: 120%; }
   header::before { width: 2em; }
 }
 @media screen and (min-device-width: 481px) and (max-device-width: 1024px) {
   body { font-size: 30px; }
-  header { font-size: 160%; }
+  header { font-size: 130%; }
   header::before { width: 3em; }
 }
