@@ -102,6 +102,9 @@ details > details > summary {
 .app-gap {
   margin: 0 0 0 1em;
 }
+.app-gap::before {
+  content: \00A0;
+}
 .article {
   font-size: 150%;
   margin-left: -2.5em;
