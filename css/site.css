@@ -20,20 +20,17 @@ body {
   margin: 0;
   min-height: 100vh;
   min-width: 100%;
-  overflow: hidden;
 }
 header, footer {
-  background: rgb(0, 123, 49);
-  color: rgb(255, 255, 255);
-  font-size: 80%;
   height: 1em;
-  overflow: hidden;
   padding: 0.1em 0 0.25em 0;
 }
 header {
+  background: rgb(0, 123, 49);
+  color: rgb(255, 255, 255);
   font-size: 125%;
   font-weight: bold;
-  position: absolute; left: 0; right: 0; top: 0;
+  width: 100%;
 }
 header::before {
   content: "Home";
@@ -52,17 +49,17 @@ content {
   background-repeat: repeat;
   background-attachment: fixed;
   color: rgb(0, 0, 0);
-  overflow: auto;
   padding: 0 1em 0 1em;
-  position: absolute; left: 0; right: 0; top: 1.7em; bottom: 1.05em;
   text-align: justify;
+  width: 100%;
 }
 footer {
-  position: absolute; left: 0; right: 0; bottom: 0;
+  font-size: 80%;
+  width: 100%;
 }
 footer::before {
   content: "Copyright \00A9\00A0 Alexander Iurovetski 2023";
-  margin-left: 1em;
+  margin-left: 2em;
 }
 details {
   display: block;
@@ -77,6 +74,9 @@ details > summary::-webkit-details-marker {
 content > details > summary,
 content > details > summary::-webkit-details-marker {
   font-size: 200%;
+}
+content > p {
+  padding: inherit;
 }
 details > summary:focus {
   outline-style: none;
