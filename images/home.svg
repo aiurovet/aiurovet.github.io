@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100">
+
+<defs>
+  <style>
+    g {
+      fill: none;
+      stroke: white;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      stroke-width: 7;
+    }
+    rect {
+      fill: none;
+      stroke: none;
+    }
+  </style>
+</defs>
+
+<g transform="scale(1)">
+  <rect x="0" width="100" height="100" rx="8" />
+
+  <g>
+    <path d="M7,50 L50,7 L93,50 M83,40 L83,93 L62,93 L62,68 L39,68 L39,93 L18,93 L18,40" />
+  </g>
+
+  Sorry, your browser does not support SVG!
+</g>
+
+</svg>

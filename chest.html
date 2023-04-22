@@ -10,26 +10,23 @@
 	<script src="js/site.js"></script>
 </head>
 <body>
-  <header>Back to Home</header>
-  <content>
-    <h2>chest</h2>
-    <h2>
-      <a class="link" href="https://github.com/aiurovet/chest/" target="_blank">Repo</a>
-      <span class="app-gap"></span>
-      <a class="link" href="https://github.com/aiurovet/chest/tree/master/app" target="_blank">App</a>
-      <span class="app-gap"></span>
-      <a class="link" href="https://github.com/aiurovet/chest/tree/master/bin" target="_blank">Bin</a>
-    </h2>
-    <pre>
-Version 0.1.0 (c) 2022-2023 Alexander Iurovetski
-
-CHEck STrings: command-line utility to read text from files or stdin or from
-files listed in stdin, then to filter the content. Filtration is based on plain
-(literal) text strings and/or regular expressions (can be linked to each other
-by logical operators). The result can be checked upon the number of matches
-being within the expected range.
-
-USAGE:
+  <div class="header">chest</div>
+  <div class="content">
+    <div class="product">
+			<div class="caption">
+				<a class="link" href="https://github.com/aiurovet/chest/" target="_blank">Repo</a>
+				<a class="link" href="https://github.com/aiurovet/chest/tree/master/app" target="_blank">App</a>
+				<a class="link" href="https://github.com/aiurovet/chest/tree/master/bin" target="_blank">Bin</a>
+			</div>
+			<div class="description">
+        <p>
+          Command-line utility for <em>Linux</em>, <em>macOS</em> and <em>Windows</em>.
+          Reads text from files, or stdin/pipe, or from files listed in stdin/pipe, then
+          filters the content. Filtration is based on plain (literal) text strings and/or
+          regular expressions that can be linked to each other by logical operators.
+          The result can be checked upon the number of matches being within the expected range.
+        </p>
+        <pre>
 
 chest [OPTIONS]
 
@@ -109,14 +106,17 @@ EXAMPLES:
 
 chest -dir "${HOME}/Documents" -files '**' "../*.csv" -plain -not ","
 chest -d "${HOME}/Projects/chest/app" -files '**.{gz,zip}' -e 3 -o "c:p"
-    </pre>
-    <h2 class="bottom">
+        </pre>
+    </div>
+
+
+    <!-- <h2 class="bottom">
       <a class="link" href="https://github.com/aiurovet/chest/" target="_blank">Repo</a>
       <span class="app-gap"></span>
       <a class="link" href="https://github.com/aiurovet/chest/tree/master/app" target="_blank">App</a>
       <span class="app-gap"></span>
       <a class="link" href="https://github.com/aiurovet/chest/tree/master/bin" target="_blank">Bin</a>
-    </h2>
+    </h2> -->
   </content>
 </body>
 </html>

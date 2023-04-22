@@ -10,7 +10,7 @@ $(document).ready(function () {
 ////////////////////////////////////////////////////////////////////////////////
 
 function initHeader() {
-  const jqHeader = $('header');
+  const jqHeader = $('.header');
 
   if (!jqHeader.hasClass('is-home')) {
     jqHeader.click(onHeaderClick);
