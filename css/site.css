@@ -79,7 +79,7 @@ pre {
 }
 .header:not(.is-home) {
   background-image: url(../images/home.svg);
-  background-position: 0.5em;:
+  background-position: 0.5em;
   background-repeat: no-repeat;
   background-size: 1em 1em;
   cursor: pointer;
