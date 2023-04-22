@@ -12,7 +12,7 @@ $(document).ready(function () {
 function initHeader() {
   const jqHeader = $('.header');
 
-  if (!jqHeader.hasClass('is-home')) {
+  if (!jqHeader.hasClass('home')) {
     jqHeader.click(onHeaderClick);
   }
 }
