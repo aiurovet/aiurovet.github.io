@@ -1,0 +1,146 @@
+<!--
+  Copyright (C) Alexander Iurovetski 2023
+  All rights reserved under MIT license (see LICENSE file)
+-->
+<html>
+<head>
+	<title>xnx - Alexander Iurovetski</title>
+	<link rel="stylesheet" href="css/site.css">
+	<link rel="shortcut icon" type="image/x-icon" href="images/favicon.png">
+	<script src="js/jquery-3.6.4.slim.min.js"></script>
+	<script src="js/site.js"></script>
+</head>
+<body>
+  <div class="header">xnx</div>
+  <div class="content">
+    <div class="product">
+			<div class="caption">
+				<p class="link">
+					Coming soon
+				</p>
+				<!-- <a class="link" href="https://github.com/aiurovet/xnx/" target="_blank">Repo</a>
+				<a class="link" href="https://github.com/aiurovet/xnx/tree/master/examples" target="_blank">Examples</a>
+				<a class="link" href="https://github.com/aiurovet/xnx/tree/master/app" target="_blank">App</a>
+				<a class="link" href="https://github.com/aiurovet/xnx/tree/master/bin" target="_blank">Bin</a> -->
+			</div>
+			<div class="description">
+        <p>
+					Command-line utility for <em>Linux</em>, <em>macOS</em> and <em>Windows</em>
+					performing sophisticated search and replace followed by calling external
+					executables. Can be considered as a kind of <em>JSON</em>	shell.
+        </p>
+        <p>
+					Supported encodings: <em>UTF-8</em>
+        </p>
+        <p>
+          Planning to add: <em>UTF-16LE</em>, <em>UTF-16BE</em>,
+          <em>UTF-32LE</em> and <em>UTF-32BE</em> via the <a href="dart-packages.html#utf_ext">utf_ext</a> package.
+        </p>
+        <pre>
+
+xnx [OPTIONS]
+
+-h, --help              - this help screen
+-c, --app-config=FILE   - application configuration file in JSON5 format https://json5.org/;
+                          defaults to default.xnxconfig in the directory where .xnx file is from
+-x, --xnx=FILE          - the actual JSON5 file to process (the ruleset), see https://json5.org/;
+                          default extension: .xnx
+-d, --dir=DIR           - directory to start in; if -x, --xnx option is omitted, the application will
+                          take the first .xnx file in this directory and use that as primary ruleset
+-i, --import-dir=DIR    - default directory for .xnx files being imported into other .xnx files,
+                          the application will export the environment variable _XNX_IMPORT_DIR
+-m, --escape=MODE       - how to escape special characters before the expansion: quotes, xml, html (default: none),
+                          the application will export the environment variable _XNX_ESCAPE
+-q, --quiet             - quiet mode (no output, same as verbosity 0),
+                          the application will export the environment variable _XNX_QUIET
+-v, --verbose           - shows detailed log, the application will export the environment variable _XNX_VERBOSE,
+-e, --each              - treat each plain argument independently (e.g. can pass multiple filenames as arguments)
+                          see also -x/--xargs
+-a, --xargs             - similar to -e/--each, but reads arguments from stdin
+                          useful in a pipe with a file path finding command
+-l, --list-only         - display all commands, but do not execute those; if no command specified, then show config,
+                          the application will export the environment variable _XNX_LIST_ONLY
+-s, --append-sep        - append record separator "," when filtering input config file (for "list-only" exclusively),
+                          the application will export the environment variable _XNX_APPEND_SEP
+-f, --force             - ignore timestamps and force conversion,
+                          the application will export the environment variable _XNX_FORCE
+-p, --compression=LEVEL - compression level for archiving-related operations (1..9) excepting BZip2,
+                          the application will export the environment variable _XNX_COMPRESSION
+-W, --wait-always       - always wait for a user to press &lt;Enter&gt; upon completion
+-w, --wait-err          - wait for a user to press &lt;Enter&gt; upon unsuccessful completion
+
+    --find              - just find recursively all files and sub-directories matching the glob pattern
+                          in a given or the current directory and print those to stdout
+    --print             - just print the arguments to stdout
+    --env               - just print all environment variables to stdout
+    --pwd               - just print the current working directory to stdout
+    --copy              - just copy file(s) and/or directorie(s) passed as plain argument(s),
+                          glob patterns are allowed
+    --copy-newer        - just copy more recently updated file(s) and/or directorie(s) passed as plain argument(s),
+                          glob patterns are allowed
+    --move              - just move file(s) and/or directorie(s) passed as plain argument(s),
+                          glob patterns are allowed
+    --move-newer        - just move more recently updated file(s) and/or directorie(s) passed as plain argument(s),
+                          glob patterns are allowed
+    --rename            - just the same as --move
+    --rename-newer      - just the same as --move-newer
+    --mkdir             - just create directories passed as plain arguments
+    --delete            - just delete file(s) and/or directorie(s) passed as plain argument(s),
+                          glob patterns are allowed
+    --remove            - just the same as --delete
+    --bz2               - just compress a single source file to a single destination BZip2 file,
+                          can be used with --move
+    --unbz2             - just decompress a single BZip2 file to a single destination file,
+                          can be used with --move
+    --gz                - just compress a single source file to a single GZip file,
+                          can be used with --move
+    --ungz              - just decompress a single GZip file to a single destination file,
+                          can be used with --move
+    --tar               - just create a single destination archive file containing source files and/or
+                          directories, can be used with --move
+    --untar             - just untar a single archive file to a destination directory,
+                          can be used with --move
+    --tarbz2            - just a combination of --tar and --bz2,
+                          can be used with --move
+    --untarbz2          - just a combination of --untar and --unbz2,
+                          can be used with --move
+    --targz             - just a combination of --tar and --gz,
+                          can be used with --move
+    --untargz           - just a combination of --untar and --ungz,
+                          can be used with --move
+    --tarz              - just a combination of --tar and --Z,
+                          can be used with --move
+    --untarz            - just a combination of --untar and --unz,
+                          can be used with --move
+    --zip               - just zip source files and/or directories to a single destination
+                          archive file, can be used with --move to delete the source
+    --unzip             - just unzip single archive file to destination directory,
+                          can be used with --move to delete the source
+    --z                 - just compress a single source file to a single Z file,
+                          can be used with --move to delete the source
+    --unz               - just decompress a single Z file to a single destination file,
+                          can be used with --move to delete the source
+    --pack              - juOption names are case-insensitive and dash-insensitive: you can use
+                          any number of dashes in the front, in the middle or at the back of
+                          any option name.st compress source files and/or directories to a single destination
+                          archive file depending on its extension, can be used with --move
+    --unpack            - just decompress a single source archive file to destination files and/or
+                          directories depending on the source extension, can be used with --move
+        </pre>
+      </div>
+    </div>
+    <div class="caption">
+      <p class="link">
+        Coming soon
+      </p>
+      <!-- <a class="link" href="https://github.com/aiurovet/xnx/" target="_blank">Repo</a>
+      <a class="link" href="https://github.com/aiurovet/xnx/tree/master/examples" target="_blank">Examples</a>
+      <a class="link" href="https://github.com/aiurovet/xnx/tree/master/app" target="_blank">App</a>
+      <a class="link" href="https://github.com/aiurovet/xnx/tree/master/bin" target="_blank">Bin</a> -->
+    </div>
+		<div class="footer">
+			Copyright &#169;&#10; <a href="mailto:aiurovet@gmai.com">Alexander Iurovetski</a> 2023
+		</div>
+  </div>
+</body>
+</html>
