@@ -62,7 +62,7 @@ pre {
   vertical-align: middle;
 }
 .content {
-  margin: 1em 10% 0 10%;
+  margin: 1em 1em 0 1em;
   text-align: center;
 }
 .content:not(.home) {
