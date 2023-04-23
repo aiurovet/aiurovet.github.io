@@ -8,17 +8,18 @@
 :root {
   --color-app: rgb(0, 123, 49);
   --color-bkg: white;
+  --color-lnk: rgb(0, 173, 78);
   --color-txt: black;
 }
 
 /* NODES */
 
 a, a:visited {
-  color: var(--color-app);
+  color: var(--color-lnk);
   text-decoration: none;
 }
 a:hover {
-  opacity: 0.5;
+  color: var(--color-app);
 }
 body {
   background: var(--color-bkg);
