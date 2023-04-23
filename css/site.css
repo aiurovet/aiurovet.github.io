@@ -118,6 +118,7 @@ pre {
 /* RESPONSIVENESS */
 
 @media screen and (min-device-width: 0) and (max-device-width: 480px) {
+  body { font-size: 40px;}
   .caption { font-size: 150%; }
   .footer { margin-top: 4em; }
 }
