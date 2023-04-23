@@ -30,6 +30,7 @@ body {
   margin: 0;
   padding: 0;
   width: 100%;
+  word-wrap: break-word;
 }
 li {
   margin: 0.5em 0;
