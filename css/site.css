@@ -73,6 +73,7 @@ pre {
 }
 .description.home.software {
   font-size: 125%;
+  font-weight: bold;
 }
 .description:not(.home) {
   font-size: 75%;
