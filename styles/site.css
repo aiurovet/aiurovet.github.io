@@ -91,7 +91,7 @@ pre {
 .header {
   background-color: var(--color-app);
   color: var(--color-bkg);
-  font-size: 150%;
+  font-size: 150%;..
   font-weight: bold;
   margin: 0;
   overflow: hidden;
