@@ -29,12 +29,80 @@
 					performing sophisticated search and replace followed by calling external
 					executables. It can be considered a kind of <em>JSON</em>	shell.
         </p>
+				<p>
+					Key features:
+				</p>
+				<ul>
+					<li>
+						multiple substitution rules are stored in <a href="https://json5.org/" target="_blank">JSON5</a>
+						format in a file with the extension <em>.xnx</em>;
+					</li>
+					<li>
+						implements loops and conditional processing (<em>if-then-else</em>);
+					</li>
+					<li>
+						allows staged (chained) rules in <em>.xnx</em> files;
+					</li>
+					<li>
+						allows importing (embedding) other <em>.xnx</em> files into a given one (either entire
+						or filtered with an <em>XPATH</em> query);
+					</li>
+					<li>
+						supports an application configuration file with the extension <em>.xnxconfig</em>
+						that allows redefining all keywords (keys with special meaning in <em>.xnx</em> files);
+					</li>
+					<li>
+						calls any external executables after all placeholders (keys) are replaced with
+						the final values.
+					</li>
+					<li>
+						has Azure DevOps extension in a separate project;
+					</li>
+					<li>
+						produces multiple configuration files from a single source based on rules;
+					</li>
+					<li>
+						produces application icons as multiple <em>.png</em> files for <em>Flutter</em> apps
+						(all platforms, light and dark theme) from a single <em>.svg</em> file;
+					</li>
+					<li>
+						produces light and dark multi-dimensional icons from a single <em>.svg</em> file:
+						<em>.icns</em> for <em>macOS</em>, and <em>.ico</em> for <em>Windows</em>;
+					</li>
+					<li>
+						natively supports decompression via the <em>archive</em> package for <em>zip</em>,
+						<em>tar</em>, <em>gz</em>, <em>bz2</em>, <em>Z</em>;
+					</li>
+					<li>
+						performs search and replace with the multiple outputs in the <em>MS Office</em> files:
+						<em>.docx</em>, <em>.pptx</em>,	<em>.xlsx</em> (aka mail merge);
+					</li>
+					<li>
+						resolves environment variables in every rule;
+					</li>
+					<li>
+						allows passing arbitrary arguments to <em>.xnx</em> files;
+					</li>
+					<li>
+						resolves paths in every rule depending on OS it runs under;
+					</li>
+					<li>
+						implements in <em>.xnx</em> files commonly used functions: <em>trim</em>, <em>substr</em>,
+						regex <em>match</em> and <em>replace</em>, <em>full path</em>, <em>file size</em>,
+						<em>date/time</em> math, and many more.
+
+						<!-- , <a class="link" href="xnx.html">and many more...</a> -->
+					</li>
+				</ul>
         <p>
 					Supported encodings: <em>UTF-8</em>
         </p>
         <p>
           Planning to add: <em>UTF-16LE</em>, <em>UTF-16BE</em>,
           <em>UTF-32LE</em> and <em>UTF-32BE</em> via the <a href="dart-packages.html#utf_ext">utf_ext</a> package.
+        </p>
+        <p>
+          Usage:
         </p>
         <pre>
 
