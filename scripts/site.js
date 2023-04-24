@@ -23,6 +23,8 @@ function getRootUrl(withFile) {
     const startPos = url.indexOf(lastDir);
   
     url = url.substring(0, startPos + lastDir.length) + '/';
+  } else {
+    url = '/';
   }
 
   if (withFile) {
