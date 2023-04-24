@@ -24,7 +24,7 @@ function getRootUrl(withFile) {
     const startPos = url.indexOf(lastDir);
     const sepWin = '\\';
   
-    if (url.contains(sepWin)) {
+    if (url.indexOf(sepWin) >= 0) {
       sep = sepWin;
     }
 
