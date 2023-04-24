@@ -3,8 +3,6 @@
 // All rights reserved under MIT license (see LICENSE file)
 ////////////////////////////////////////////////////////////////////////////////
 
-const NakedRootUrls = [ 'aiurovet.com', 'aiurovet.github.io' ];
-
 ////////////////////////////////////////////////////////////////////////////////
 // Current page's entry point
 ////////////////////////////////////////////////////////////////////////////////
@@ -17,33 +15,18 @@ $(document).ready(function () {
 // Returns top-level URL in both local and remote mode
 ////////////////////////////////////////////////////////////////////////////////
 
-function getRootUrl(withHtml) {
+function getRootUrl(withFile) {
   var url = window.location.href;
 
-  // Loop though the top-level naked URLs to find the right one
-  // If not found, return the current URL
-
-  for (var i = 0, n = NakedRootUrls.length; ; i++) {
-    if (i >= n) {
-      return url;
-    }
-
-    var nakedRootUrl = NakedRootUrls[i];
-    var startPos = url.indexOf(nakedRootUrl);
-
-    if (startPos >= 0) {
-      break;
-    }
+  if (/^(file:|[A-Z]:|[\/\\])/i.test(url)) {
+    const lastDir = 'aiurovet.github.io';
+    const startPos = url.indexOf(lastDir);
+  
+    url = url.substring(0, startPos + lastDir.length) + '/';
   }
 
-  // Cut off anything beyond the top-level naked URL found
-  // and append the index filename if required, then return
-  // the result
-
-  url = url.substring(0, startPos + nakedRootUrl.length);
-
-  if (withHtml) {
-    url += '/index.html';
+  if (withFile) {
+    url += 'index.html';
   }
 
   return url;
