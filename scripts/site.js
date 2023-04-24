@@ -17,14 +17,20 @@ $(document).ready(function () {
 
 function getRootUrl(withFile) {
   var url = window.location.href;
+  var sep = '/';
 
   if (/^(file:|[A-Z]:|[\/\\])/i.test(url)) {
     const lastDir = 'aiurovet.github.io';
     const startPos = url.indexOf(lastDir);
+    const sepWin = '\\';
   
-    url = url.substring(0, startPos + lastDir.length) + '/';
+    if (url.contains(sepWin)) {
+      sep = sepWin;
+    }
+
+    url = url.substring(0, startPos + lastDir.length) + sep;
   } else {
-    url = '/';
+    url = sep;
   }
 
   if (withFile) {
