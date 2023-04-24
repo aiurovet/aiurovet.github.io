@@ -33,7 +33,9 @@
 				</p>
 				<ul>
 					<li>
-						understands all major Unicode formats;
+						understands all major Unicode formats: <em>UTF-16LE</em>, <em>UTF-16BE</em>,
+            <em>UTF-32LE</em> and <em>UTF-32BE</em> via the <a href="dart-packages.html#utf_ext">utf_ext</a>
+            package;
 					</li>
 					<li>
 						one or more glob patterns for input files;
@@ -48,7 +50,13 @@
 						logical operations on patterns: <em>and</em>, <em>or</em>, <em>not</em>;
 					</li>
 					<li>
-						multi-line search.</a>
+						multi-line search;</a>
+					</li>
+					<li>
+						for plain patterns in a multi-line search a single space means any number of spaces, tabs and line breaks;</a>
+					</li>
+					<li>
+						allows to check the expected number of matches equals the given one, or lies within a given range.</a>
 					</li>
 				</ul>
         <p>
