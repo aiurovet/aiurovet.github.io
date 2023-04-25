@@ -67,6 +67,9 @@ pre {
   text-align: center;
   vertical-align: middle;
 }
+.contact-note {
+  font-size: 75%;
+}
 .content {
   margin: 1em 1em 0 1em;
   text-align: center;
