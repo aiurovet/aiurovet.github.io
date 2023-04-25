@@ -33,11 +33,15 @@ body {
   width: 100%;
   word-wrap: break-word;
 }
+hr {
+  margin-top: 2em;
+  border-width: 2px;
+}
 li {
   margin: 0.5em 0;
 }
 p.home {
-  margin: 2em 0 0 0;
+  margin: 1.5em 0 0 0;
 }
 pre {
   background-color: var(--color-pre);
@@ -91,7 +95,7 @@ pre {
 .header {
   background-color: var(--color-app);
   color: var(--color-bkg);
-  font-size: 150%;..
+  font-size: 150%;
   font-weight: bold;
   margin: 0;
   overflow: hidden;
@@ -115,17 +119,8 @@ pre {
 .hgap-min::after {
   content: '\00A0';
 }
-.product.home {
-  margin-bottom: 3em;
-}
-.product:not(home) {
+.product {
   margin-bottom: 2em;
-}
-.separator.home {
-  margin: 1.5em 0 1.5em 0;
-}
-.separator.home::after {
-  content: '* * *';
 }
 
 /* RESPONSIVENESS */
