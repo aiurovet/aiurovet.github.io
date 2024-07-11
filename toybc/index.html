@@ -1,0 +1,254 @@
+<!--
+  Copyright (C) Alexander Iurovetski 2024
+  All rights reserved under MIT license (see LICENSE file)
+-->
+<html>
+<head>
+	<meta charset="UTF-8"></meta>
+	<title>ToyBC - Alexander Iurovetski</title>
+	<link rel="shortcut icon" type="image/x-icon" href="ux/images/favicon.png">
+	<link rel="stylesheet" href="ux/styles/main.css">
+	<link rel="stylesheet" href="ux/styles/pref.css">
+	<script src="ux/scripts/jquery.slim.min.js"></script>
+	<script src="ux/scripts/core.js"></script>
+	<script src="ux/scripts/data.js"></script>
+	<script src="ux/scripts/file.js"></script>
+	<script src="ux/scripts/main.js"></script>
+	<script src="ux/scripts/pref.js"></script>
+</head>
+<body>
+  <div id="main" style="display: block;">
+    <div class="tools center">
+      <div class="tool center" style="width: 20%;" onclick="onClickFirstWord();">&laquo;</div>
+      <div class="tool center" style="width: 20%;" onclick="onClickPrevWord();">&lsaquo;</div>
+      <div class="tool center" style="width: 20%;" onclick="onClickMenu();">&equiv;</div>
+      <div class="tool center" style="width: 20%;" onclick="onClickNextWord();">&rsaquo;</div>
+      <div class="tool center" style="width: 20%;" onclick="onClickLastWord();">&raquo;</div>
+    </div>
+    <div class="word center">
+			<span id="word" onclick="onClickWord();"></span>
+    </div>
+  </div>
+	<div class="modal center">
+		<div id="pref">
+			<div class="pref toolbar" id="file">
+				<div>
+					<label for="always">
+						<input type="checkbox" id="always" onclick="onClickAlways(true);"/>
+						Always
+					</label>
+					<span id="export" onclick="onClickExport();">Export</span>
+				</div>
+				<div id="import" class="underline" onclick="onClickImport();">Import</div>
+				<input type="text" id="superuser" onblur="onBlurSuperUser();"/>
+			</div>
+			<div class="pref buttons">
+				<div id="help" onclick="onClickHelp(true);">?</div>
+				<div id="exit" onclick="onClickExit();">X</div>
+			</div>
+			<div class="gap"></div>
+			<div class="gap"></div>
+			<div class="wdef">
+				<input class="kind" type="radio" name="kind" value="0" onfocus="onFocusRadio(0);"/>
+				<label class="list" for="kind0">
+					<input class="kind" type="text" value="" id="kind0" onblur="onBlurEdit(0);" onfocus="onFocusEdit(0);"/>
+					<textarea class="list" rows="3" id="list0" onblur="onBlurEdit(0);" onfocus="onFocusEdit(0);"></textarea>
+				</label>
+			</div>
+			<div class="gap"></div>
+			<div class="wdef">
+				<input class="kind" type="radio" name="kind" value="1" onfocus="onFocusRadio(1);"/>
+				<label class="list" for="kind1">
+					<input class="kind" type="text" value="" id="kind1" onblur="onBlurEdit(1);" onfocus="onFocusEdit(1);"/>
+					<textarea class="list" rows="3" id="list1" onblur="onBlurEdit(1);" onfocus="onFocusEdit(1);"></textarea>
+				</label>
+			</div>
+			<div class="gap"></div>
+			<div class="wdef">
+				<input class="kind" type="radio" name="kind" value="2" onfocus="onFocusRadio(2);"/>
+				<label class="list" for="kind2">
+					<input class="kind" type="text" value="" id="kind2" onblur="onBlurEdit(2);" onfocus="onFocusEdit(2);"/>
+					<textarea class="list" rows="3" id="list2" onblur="onBlurEdit(2);" onfocus="onFocusEdit(2);"></textarea>
+				</label>
+			</div>
+			<div class="gap"></div>
+			<div class="wdef">
+				<input class="kind" type="radio" name="kind" value="3" onfocus="onFocusRadio(3);"/>
+				<label class="list" for="kind3">
+					<input class="kind" type="text" value="" id="kind3" onblur="onBlurEdit(3);" onfocus="onFocusEdit(3);"/>
+					<textarea class="list" rows="3" id="list3" onblur="onBlurEdit(3);" onfocus="onFocusEdit(3);"></textarea>
+				</label>
+			</div>
+			<div class="gap"></div>
+			<div class="wdef">
+				<input class="kind" type="radio" name="kind" value="4" onfocus="onFocusRadio(4);"/>
+				<label class="list" for="kind4">
+					<input class="kind" type="text" value="" id="kind4" onblur="onBlurEdit(4);" onfocus="onFocusEdit(4);"/>
+					<textarea class="list" rows="3" id="list4" onblur="onBlurEdit(4);" onfocus="onFocusEdit(4);"></textarea>
+				</label>
+			</div>
+			<div class="gap"></div>
+			<div class="wdef">
+				<input class="kind" type="radio" name="kind" value="5" onfocus="onFocusRadio(5);"/>
+				<label class="list" for="kind5">
+					<input class="kind" type="text" value="" id="kind5" onblur="onBlurEdit(5);" onfocus="onFocusEdit(5);"/>
+					<textarea class="list" rows="3" id="list5" onblur="onBlurEdit(5);" onfocus="onFocusEdit(5);"></textarea>
+				</label>
+			</div>
+			<div class="gap"></div>
+			<div class="wdef">
+				<input class="kind" type="radio" name="kind" value="6" onfocus="onFocusRadio(6);"/>
+				<label class="list" for="kind6">
+					<input class="kind" type="text" value="" id="kind6" onblur="onBlurEdit(6);" onfocus="onFocusEdit(6);"/>
+					<textarea class="list" rows="3" id="list6" onblur="onBlurEdit(6);" onfocus="onFocusEdit(6);"></textarea>
+				</label>
+			</div>
+			<div class="gap"></div>
+			<div class="wdef">
+				<input class="kind" type="radio" name="kind" value="7" onfocus="onFocusRadio(7);"/>
+				<label class="list" for="kind7">
+					<input class="kind" type="text" value="" id="kind7" onblur="onBlurEdit(7);" onfocus="onFocusEdit(7);"/>
+					<textarea class="list" rows="3" id="list7" onblur="onBlurEdit(7);" onfocus="onFocusEdit(7);"></textarea>
+				</label>
+			</div>
+			<div class="gap"></div>
+			<div class="wdef">
+				<input class="kind" type="radio" name="kind" value="8" onfocus="onFocusRadio(8);"/>
+				<label class="list" for="kind8">
+					<input class="kind" type="text" value="" id="kind8" onblur="onBlurEdit(8);" onfocus="onFocusEdit(8);"/>
+					<textarea class="list" rows="3" id="list8" onblur="onBlurEdit(8);" onfocus="onFocusEdit(8);"></textarea>
+				</label>
+			</div>
+			<div class="gap"></div>
+			<div class="wdef">
+				<input class="kind" type="radio" name="kind" value="9" onfocus="onFocusRadio(9);"/>
+				<label class="list" for="kind9">
+					<input class="kind" type="text" value="" id="kind9" onblur="onBlurEdit(9);" onfocus="onFocusEdit(9);"/>
+					<textarea class="list" rows="3" id="list9" onblur="onBlurEdit(9);" onfocus="onFocusEdit(9);"></textarea>
+				</label>
+			</div>
+			<div class="gap"></div>
+			<div class="wdef">
+				<input class="kind" type="radio" name="kind" value="10" onfocus="onFocusRadio(10);"/>
+				<label class="list" for="kind10">
+					<input class="kind" type="text" value="" id="kind10" onblur="onBlurEdit(10);" onfocus="onFocusEdit(10);"/>
+					<textarea class="list" rows="3" id="list10" onblur="onBlurEdit(10);" onfocus="onFocusEdit(10);"></textarea>
+				</label>
+			</div>
+			<div class="gap"></div>
+			<div class="wdef">
+				<input class="kind" type="radio" name="kind" value="11" onfocus="onFocusRadio(11);"/>
+				<label class="list" for="kind11">
+					<input class="kind" type="text" value="" id="kind11" onblur="onBlurEdit(11);" onfocus="onFocusEdit(11);"/>
+					<textarea class="list" rows="3" id="list11" onblur="onBlurEdit(11);" onfocus="onFocusEdit(11);"></textarea>
+				</label>
+			</div>
+			<div class="gap"></div>
+			<div class="wdef">
+				<input class="kind" type="radio" name="kind" value="12" onfocus="onFocusRadio(12);"/>
+				<label class="list" for="kind12">
+					<input class="kind" type="text" value="" id="kind12" onblur="onBlurEdit(12);" onfocus="onFocusEdit(12);"/>
+					<textarea class="list" rows="3" id="list12" onblur="onBlurEdit(12);" onfocus="onFocusEdit(12);"></textarea>
+				</label>
+			</div>
+			<div class="gap"></div>
+			<div class="wdef">
+				<input class="kind" type="radio" name="kind" value="13" onfocus="onFocusRadio(13);"/>
+				<label class="list" for="kind13">
+					<input class="kind" type="text" value="" id="kind13" onblur="onBlurEdit(13);" onfocus="onFocusEdit(13);"/>
+					<textarea class="list" rows="3" id="list13" onblur="onBlurEdit(13);" onfocus="onFocusEdit(13);"></textarea>
+				</label>
+			</div>
+			<div class="gap"></div>
+			<div class="wdef">
+				<input class="kind" type="radio" name="kind" value="14" onfocus="onFocusRadio(14);"/>
+				<label class="list" for="kind14">
+					<input class="kind" type="text" value="" id="kind14" onblur="onBlurEdit(14);" onfocus="onFocusEdit(14);"/>
+					<textarea class="list" rows="3" id="list14" onblur="onBlurEdit(14);" onfocus="onFocusEdit(14);"></textarea>
+				</label>
+			</div>
+			<div class="gap"></div>
+			<div class="wdef">
+				<input class="kind" type="radio" name="kind" value="15" onfocus="onFocusRadio(15);"/>
+				<label class="list" for="kind15">
+					<input class="kind" type="text" value="" id="kind15" onblur="onBlurEdit(15);" onfocus="onFocusEdit(15);"/>
+					<textarea class="list" rows="3" id="list15" onblur="onBlurEdit(15);" onfocus="onFocusEdit(15);"></textarea>
+				</label>
+			</div>
+		</div>
+		<div id="tutor">
+			<div class="tutor buttons">
+				<div id="exit" onclick="onClickHelp(false);">X</div>
+			</div>
+			<div class="gap"></div>
+			<div class="gap"></div>
+			<h3>ToyBC</h3>
+			<div class="para">
+				Copyright &copy; 2024 <a href="https://aiurovet.com/help/about.html" target="_blank">Alexander Iurovetski</a>
+			</div>
+			<div class="para">
+				This web application allows you to teach kids first words, names, birthdays and simple Math.
+			</div>
+			<div class="para">
+				It is available on any device: tablet (ideal), phone, laptop or desktop. The only requirements are
+				an internet connection and a web browser.
+			</div>
+			<h4>How to Use</h4>
+			<div class="para">
+				On the main screen, tap or click the following arrows to navigate through the words:
+				<ul class="no-bullet">
+					<li><span class="arrow">&laquo;</span>move to the first word</li>
+					<li><span class="arrow">&lsaquo;</span>move to the previous word.</li>
+					<li><span class="arrow">&equiv;</span>open the <em>Preferences</em> popup dialog</li>
+					<li><span class="arrow">&rsaquo;</span>move to the next word</li>
+					<li><span class="arrow">&raquo;</span>move to the last word</li>
+				</ul>
+			</div>
+			<div class="para">
+				Depending on your preferences (under &equiv;), tapping or clicking the current word, might
+				submit a full or image search in another browser tab. By default, this feature is switched
+				off, as the search	results are not always child-friendly.
+			</div>
+			<h4>Preferences</h4>
+			<div class="para">
+				You can replace the preset categories and lists of words with the ones in a language of
+				your choice simply by updating the text in the respective text boxes: the left column for
+				the categories, and the right one for the word lists. Once finished, close the dialogue
+				by clicking the red <em>Close</em> button.
+			</div>
+			<div class="para">
+				The changes to preferences you make are automatically saved to a browser's local storage, so the
+				next time you visit the page, all these changes will not be lost.
+				However, you can't access that storage for the sake of sharing, and if you clear your browser
+				data, all these changes will disappear. It is highly recommended to use <em>Export</em>, and
+				even better, in combination with <em>Always</em> checked. This will place all preferences to the
+				clipboard as text that can be pasted to a local file or, better, to a cloud document.
+				The latter allows you to share the preferences across devices: on another device, open that cloud
+				document, select the text you previously pasted, switch to the <em>ToyBC</em> page and click
+				<em>Import</em>. If, by mistake, the text you import from the clipboard is in a different
+				format, your preferences will stay unchanged, and an error box will pop up reporting the wrong
+				data.
+			</div>
+			<h4 id="help_superuser">Super-User Features</h4>
+			<div class="para">
+				It is better to hide some preferences away from kids. Of course, if they can read this manual, they
+				are capable enough to follow the instructions. But in that case, they can do things anyway. Still,
+				for the younger kids, this approach serves as a good shield.
+			</div>
+			<div class="para">
+				At the top of the <em>Preferences</em> screen left to the <em>Help</em> and <em>Close</em> icons, a text
+				box is located. By typing the following commands there and closing the <em>Preferences</em> screen, you can
+				do the following (the commands are case-insensitive, letters in square brackets can be omitted, in English only):
+				<ul>
+					<li><em>Reset</em> &ndash; revert all preferences, categories and word lists to the default ones.</li>
+					<li><em>Search A[ll]</em> &ndash; when a word is tapped or clicked, the full search on that word
+						will be performed in the new browser tab.</li>
+					<li><em>Search I[mage]</em> &ndash; when a word is tapped or clicked, the image search on that word
+						will be performed in the new browser tab.</li>
+					<li><em>Search [None]</em> &ndash; turn off the search functionality.</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

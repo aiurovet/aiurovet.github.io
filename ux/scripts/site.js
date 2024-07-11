@@ -23,7 +23,7 @@ function getRootUrl(withFile) {
     const lastDir = 'aiurovet.github.io';
     const startPos = url.indexOf(lastDir);
     const sepWin = '\\';
-  
+
     if (url.indexOf(sepWin) >= 0) {
       sep = sepWin;
     }

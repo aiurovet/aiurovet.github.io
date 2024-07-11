@@ -1,0 +1,50 @@
+/*
+  Copyright (C) Alexander Iurovetski 2024
+  All rights reserved under MIT license (see LICENSE file)
+*/
+
+body {
+  color: black;
+  margin: 0;
+  padding: 0;
+}
+div.center {
+  align-items: center;
+  display: flex;
+  float: left;
+  justify-content: center;
+}
+div.center.tools {
+  align-items: center;
+  cursor: pointer;
+  display: flex;
+  float: left;
+  justify-content: center;
+}
+div.tools {
+  float: left;
+  font-size: 64px;
+  font-weight: bold;
+  height: 20%;
+  width: 100%;
+}
+div.word {
+  color: black;
+  display: flex;
+  height: 80%;
+  text-align: center;
+  width: 100%;
+}
+#main {
+  float: left;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+#main > div {
+  background-color: rgb(255, 255, 237);
+}
+#word {
+  cursor: pointer;
+}
