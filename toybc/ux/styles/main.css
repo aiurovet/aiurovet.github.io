@@ -3,6 +3,9 @@
   All rights reserved under MIT license (see LICENSE file)
 */
 
+* {
+  -webkit-tap-highlight-color: transparent;
+}
 body {
   color: black;
   margin: 0;

@@ -49,7 +49,7 @@ var Data = {
     IsChanged: false,
     IsExportAlways: false,
     ListNo: 0,
-    Search: "I" // "A...": all, "I...": images, any other: disable
+    Search: "" // "A...": all, "I...": images, any other: disable
   }
 };
 
