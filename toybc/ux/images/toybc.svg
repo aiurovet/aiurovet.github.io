@@ -11,16 +11,18 @@
       stroke-width: 11;
     }
     text {
+      dominant-baseline: middle;
       fill: rgb(0, 56, 184);
       font-size: 96px;
       stroke-width: 7;
+      text-anchor: middle;
     }
   </style>
 </defs>
 
 <g>
   <path d="M7,7 L93,7 L93,93 L7,93 L7,7" />
-  <text x="28" y="72">a</text>
+  <text x="50%" y="50%">a</text>
   Sorry, your browser does not support SVG!
 </g>
 
