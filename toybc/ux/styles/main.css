@@ -3,47 +3,54 @@
   All rights reserved under MIT license (see LICENSE file)
 */
 
+/* NODES */
+
 * {
-  -webkit-tap-highlight-color: transparent;
+  -webkit-tap-highlight-color: transparent; /* prevent from flickering on click */
 }
 body {
   color: black;
   margin: 0;
   padding: 0;
 }
-div.center {
+
+/* CLASSES */
+
+.center {
   align-items: center;
   display: flex;
   float: left;
   justify-content: center;
 }
-div.center.tools {
-  cursor: pointer;
+.main-tool {
+  margin: 0 1rem 0 0;
 }
-div.tools {
-  float: left;
-  font-size: 64px;
+.main-tools {
+  cursor: pointer;
+  font-size: 96px;
   font-weight: bold;
   height: 20%;
   width: 100%;
 }
-div.word {
+.main-word {
   color: black;
+  cursor: pointer;
   display: flex;
   height: 80%;
   text-align: center;
   width: 100%;
 }
+
+/* ELEMENTS */
+
 #main {
+  background-color: rgb(244, 238, 228);
   float: left;
   height: 100%;
   margin: 0;
   padding: 0;
   width: 100%;
 }
-#main > div {
-  background-color: rgb(244, 238, 228);
-}
-#word {
+#main-word {
   cursor: pointer;
 }

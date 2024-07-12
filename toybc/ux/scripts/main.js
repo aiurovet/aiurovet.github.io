@@ -53,7 +53,8 @@ function onClickLastWord() {
 ////////////////////////////////////////////////////////////////////////////////
 
 function onClickMenu() {
-  setModal(true);
+  setPopup(true);
+  onClickHelp(false);
 }
 
 ////////////////////////////////////////////////////////////////////////////////
@@ -98,7 +99,7 @@ function onClickWord() {
       return;
   }
 
-  var word = encodeURIComponent($("#word").text().toLowerCase());
+  var word = encodeURIComponent($("#main-word").text().toLowerCase());
 
   window.open(`https://www.google.com/search?q=${word}${mode}`);
 }

@@ -29,7 +29,7 @@ function setListNo(listNo, isFromUI) {
 
   if (isFromUI) {
     Data.KindList[ListNo] = $(`#kind${ListNo}`).val();
-    Data.WordList[ListNo] = $(`#list${ListNo}`).val().split(/\s*,\s*/);
+    Data.WordList[ListNo] = $(`#wlst${ListNo}`).val().split(/\s*,\s*/);
     Data.Options.ListNo = ListNo;
     Data.Options.IsExportAlways = $("#always").prop("checked");
   }
@@ -54,8 +54,8 @@ function setListNo(listNo, isFromUI) {
     }
   }
 
-  $(`.kind[type='radio']`).prop("checked", false);
-  $(`.kind[value='${ListNo}']`).prop("checked", true);
+  $(".kinr").prop("checked", false);
+  $(`.kinr[value='${ListNo}']`).prop("checked", true);
 
   setWordNo(0);
 }
@@ -64,8 +64,8 @@ function setListNo(listNo, isFromUI) {
 // Switch views from main to preferences and back
 ////////////////////////////////////////////////////////////////////////////////
 
-function setModal(isVisible) {
-  setVisible($(".modal"), isVisible);
+function setPopup(isVisible) {
+  setVisible($(".popup-container"), isVisible);
 }
 
 ////////////////////////////////////////////////////////////////////////////////
@@ -84,11 +84,10 @@ function setWord(text) {
   var maxCharWidth = getMaxCharWidth();
 
   if (maxCharWidth > 0) {
-    $(".main.tool").css("font-size", `${maxCharWidth * 0.75}px`);
-    $(".word").css("font-size", `${maxCharWidth}px`);
+    $(".main-word").css("font-size", `${maxCharWidth}px`);
   }
 
-  $("#word").text(text);
+  $("#main-word").text(text);
 }
 
 ////////////////////////////////////////////////////////////////////////////////

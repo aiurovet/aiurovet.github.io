@@ -12,13 +12,13 @@ function initPref(jsonData) {
 
   for (var i = 0; i < KindCount; i++) {
     $(`#kind${i}`).val(Data.KindList[i]);
-    $(`#list${i}`).val(Data.WordList[i].join(", "));
+    $(`#wlst${i}`).val(Data.WordList[i].join(", "));
   }
 
   if (CanExport) {
     $("#aways").prop("checked", Data.Options.IsExportAlways);
   } else {
-    setVisible($(".pref.toolbar > *:not(#superuser)"), false);
+    setVisible($(".toolbar-pref > *:not(#superuser)"), false);
   }
 
   setListNo(Data.Options.ListNo ?? 0);
@@ -124,7 +124,7 @@ async function onClickExit() {
     await savePrefEx();
   }
 
-  setModal(false);
+  setPopup(false);
 }
 
 ////////////////////////////////////////////////////////////////////////////////
@@ -152,8 +152,8 @@ async function onClickImport() {
 ////////////////////////////////////////////////////////////////////////////////
 
 function onClickHelp(isOn) {
-  setVisible($("#pref"), !isOn)
-  setVisible($("#tutor"), isOn)
+  setVisible($("#popup-pref"), !isOn)
+  setVisible($("#popup-help"), isOn)
 }
 
 ////////////////////////////////////////////////////////////////////////////////

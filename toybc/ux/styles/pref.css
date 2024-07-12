@@ -3,34 +3,65 @@
   All rights reserved under MIT license (see LICENSE file)
 */
 
-li > .arrow {
-  font-size: 1.5rem;
-  font-family: monospace;
-  margin-right: 1em;
+/* CLASSES */
+
+.copyright {
+  margin: 0 0 2rem 0;
 }
 .bold-off {
   font-weight: normal;
 }
-.no-bullet {
-  list-style: none;
-}
-.underline {
-  text-decoration: underline;
-}
-div.buttons.pref {
-  float: right;
-  margin-right: 1rem;
-}
-div.buttons.tutor {
-  float: right;
-  margin-right: 0;
-}
-div.gap {
+.break {
   float: left;
   padding: 0.5rem 0 0 0;
   width: 100%;
 }
-div.modal {
+.button {
+  cursor: pointer;
+  float: left;
+  padding: 0 1.5rem 0 1.5rem;
+}
+.button.exit {
+  background-color: red;
+  color: white;
+}
+.buttons-pref {
+  float: right;
+  margin: 0 0.5rem 0 0;
+  font-family: monospace;
+  font-weight: bold;
+}
+.buttons-help {
+  float: right;
+  font-family: monospace;
+  font-weight: bold;
+  margin: 0 0.5rem 0 0;
+}
+.kind {
+  float: left;
+  font-size: 100%;
+  padding: 0.5rem;
+  width: 25%;
+}
+.kinr {
+  float: left;
+  font-size: 100%;
+  height: 1rem;
+  margin: 1rem 0.5rem 0 0;
+  width: 1rem;
+}
+.li-arrow {
+  font-size: 1.5rem;
+  font-family: monospace;
+  margin-right: 1em;
+}
+.no-bullet {
+  list-style: none;
+}
+.para-help {
+  margin: 1rem 0 0 0;
+}
+.popup-container {
   background-color: rgb(0,0,0); /* Fallback color */
   background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
   display: none; /* Hidden by default */
@@ -39,15 +70,11 @@ div.modal {
   top: 0;
   width: 100%; /* Full width */
   height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
   padding-top: 1rem; /* Location of the box */
   position: fixed; /* Stay in place */
   z-index: 1; /* Sit on top */
 }
-div.para {
-  margin: 1rem 0 0 0;
-}
-div.pref > div, div.tutor > div {
+.popup-pref > div, .popup-help > div {
   cursor: pointer;
   float: left;
   font-family: monospace;
@@ -56,66 +83,72 @@ div.pref > div, div.tutor > div {
   height: 2rem;
   padding: 0.25rem 1.5rem 0 1.5rem;
 }
-div.toolbar {
+.popup-scroll {
+  height: calc(100% - 3.5rem);
+  overflow: auto;
+  margin: 2.5rem 0 0 0;
+}
+.popup-scroll.help {
+  padding: 0.25rem 0.75rem 0.5rem 1.25rem;
+  width: calc(100% - 2rem);
+}
+.popup-scroll.pref {
+  padding: 0.25rem 0.75rem 0.5rem 0.75rem;
+  width: calc(100% - 1.5rem);
+}
+.toolbar-link {
+  margin: 0 1rem 0 0;
+}
+.toolbar-pref {
   float: left;
+  font-family: monospace;
+  font-size: 80%;
+  font-weight: bold;
+  margin: 0 0 0 0.7rem;
   width: calc(100% - 10rem);
 }
-div.toolbar > div {
+.toolbar-pref > div {
+  cursor: pointer;
   float: left;
 }
-div.wdef {
+.underline {
+  text-decoration: underline;
+}
+.wdef {
   float: left;
   width: calc(100% - 0.5rem);
   text-align: left;
   vertical-align: top;
 }
-input[type='radio'].kind {
-  float: left;
-  font-size: 100%;
-  height: 1rem;
-  margin: 1rem 0.5rem 0 0;
-  width: 1rem;
-}
-input[type='text'].kind {
-  float: left;
-  font-size: 100%;
-  padding: 0.5rem;
-  width: 25%;
-}
-label.wdef {
-  float: left;
-  font-size: 100%;
-}
-textarea.list {
+.wlst {
   float: left;
   font-size: 100%;
   margin: 0 0 0 0.75rem;
   padding: 0.5rem;
   width: calc(75% - 2.5rem);
 }
-#exit {
-  background-color: red;
-  color: white;
-}
-#pref {
-  background-color: rgb(237, 237, 255);
-  padding: 0.25rem 0.75rem 0.5rem 0.75rem;
+
+/* ELEMENTS */
+
+#popup-help {
+  background-color: rgb(237, 255, 237);
+  display: none;
+  height: calc(100% - 4rem);
+  padding: 0.5rem 0 0 0;
+  text-align: justify;
   width: calc(100% - 3rem);
 }
-#pref, #tutor {
+#popup-pref {
+  background-color: rgb(237, 237, 255);
+  padding: 0.5rem 0 0 0;
+  width: calc(100% - 3rem);
+}
+#popup-pref, #popup-help {
   border: 1px solid;
   height: calc(100% - 3rem);
   margin: auto;
-  overflow: auto;
   position: relative;
   z-index: 0;
-}
-#tutor {
-  background-color: rgb(237, 255, 237);
-  display: none;
-  padding: 0.25rem 0.75rem 0.5rem 1.25rem;
-  text-align: justify;
-  width: calc(100% - 4rem);
 }
 #superuser {
   float: right;
