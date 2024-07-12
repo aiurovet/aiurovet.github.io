@@ -132,7 +132,7 @@ async function onClickExit() {
 async function onClickExport() {
   savePref();
   await saveTo();
-  alert("\nThe preferences were copied to the clipboard.\n\nYou can paste those wherever you like and save.");
+  alert("\nThe preferences were exported to the clipboard.\n\nYou can paste those wherever you like and save.");
 }
 
 ////////////////////////////////////////////////////////////////////////////////
@@ -146,6 +146,7 @@ async function onClickImport() {
 
   initPref(content);
   savePref();
+  alert("\nThe preferences were successfully imported from the clipboard.");
 }
 
 ////////////////////////////////////////////////////////////////////////////////

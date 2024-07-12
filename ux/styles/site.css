@@ -33,6 +33,12 @@ body {
   width: 100%;
   word-wrap: break-word;
 }
+div.center {
+  align-items: center;
+  display: flex;
+  float: left;
+  justify-content: center;
+}
 hr {
   margin-top: 2em;
   border-width: 2px;
@@ -50,6 +56,9 @@ pre {
 
 /* CLASSES */
 
+.align-middle {
+  vertical-align: middle;
+}
 .caption {
   font-size: 125%;
   margin: 0 0 1em 0;
@@ -121,6 +130,9 @@ pre {
 }
 .hgap-min::after {
   content: '\00A0';
+}
+.link img {
+  margin-right: 1rem;
 }
 .product {
   margin-bottom: 2em;

@@ -18,11 +18,7 @@ div.center {
   justify-content: center;
 }
 div.center.tools {
-  align-items: center;
   cursor: pointer;
-  display: flex;
-  float: left;
-  justify-content: center;
 }
 div.tools {
   float: left;
@@ -46,7 +42,7 @@ div.word {
   width: 100%;
 }
 #main > div {
-  background-color: rgb(255, 255, 237);
+  background-color: rgb(244, 238, 228);
 }
 #word {
   cursor: pointer;
