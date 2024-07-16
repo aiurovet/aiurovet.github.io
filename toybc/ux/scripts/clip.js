@@ -24,6 +24,7 @@ class ClipClass {
   async read() {
     try {
       if (this.isAvailable) {
+        Core.setFocusToEditor();
         return await navigator.clipboard.readText();
       }
     } catch (e) {
@@ -38,6 +39,7 @@ class ClipClass {
   async write(text) {
     try {
       if (this.isAvailable) {
+        Core.setFocusToEditor();
         await navigator.clipboard.writeText(text);
       }
     } catch(e) {

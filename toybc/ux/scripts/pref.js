@@ -9,14 +9,7 @@
 
 class PrefClass {
   constructor() {
-  }
-
-  //////////////////////////////////////////////////////////////////////////////
-  // Get wordlists editor's jQuery element
-  //////////////////////////////////////////////////////////////////////////////
-
-  getEditor() {
-    return $("#lists");
+    this.isTextChanged;
   }
 
   //////////////////////////////////////////////////////////////////////////////
@@ -25,7 +18,7 @@ class PrefClass {
 
   init(isFromUI) {
     if (isFromUI) {
-      this.getEditor().val(Data.text);
+      Core.getEditor().val(Data.text);
 
       if (!Clip.isAvailable) {
         Core.setVisible($(".toolbar-pref > *:not(#superuser)"), false);
@@ -100,7 +93,7 @@ class PrefClass {
   async onClickCopy() {
     Data.save();
 
-    var jqEditor = this.getEditor();
+    var jqEditor = Core.getEditor();
     var text = jqEditor.val();
 
     var editor = jqEditor[0];
@@ -136,12 +129,13 @@ class PrefClass {
       return;
     }
 
-    var jqEditor = this.getEditor();
+    var jqEditor = Core.getEditor();
     var editor = jqEditor[0];
     var before = Data.text.substring(0, editor.selectionStart);
     var after = Data.text.substring(editor.selectionEnd);
 
     Data.text = before + content + after;
+    this.isTextChanged = content.length > 0;
 
     Data.init();
     Data.save();
@@ -163,7 +157,7 @@ class PrefClass {
   //////////////////////////////////////////////////////////////////////////////
 
   onEditAction(action) {
-    this.setFocusToEditor();
+    Core.setFocusToEditor();
     document.execCommand(action, false, null);
   }
 
@@ -176,8 +170,9 @@ class PrefClass {
     var selectionStart = undefined;
 
     if (isFromUi) {
-      var jqEditor = this.getEditor();
+      var jqEditor = Core.getEditor();
       Data.text = jqEditor.val();
+      this.isTextChanged = Data.text != oldData.text;
       selectionStart = jqEditor[0].selectionStart;
     }
 
@@ -197,15 +192,10 @@ class PrefClass {
 
   async saveData() {
     Data.save(false);
-    await Clip.write(Data.text);
-  }
 
-  //////////////////////////////////////////////////////////////////////////////
-  // Set focus to the editor element
-  //////////////////////////////////////////////////////////////////////////////
-
-  setFocusToEditor() {
-    this.getEditor().focus();
+    if (this.isTextChanged) {
+      await Clip.write(Data.text);
+    }
   }
 
   //////////////////////////////////////////////////////////////////////////////
