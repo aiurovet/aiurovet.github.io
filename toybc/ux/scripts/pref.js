@@ -3,192 +3,204 @@
 // All rights reserved under MIT license (see LICENSE file)
 ////////////////////////////////////////////////////////////////////////////////
 
-///////////////////////////////////////////////////////////////////////////////
-// Initialize preferences UI
-////////////////////////////////////////////////////////////////////////////////
-
-function initPref(jsonData) {
-  initData(jsonData);
-
-  for (var i = 0; i < KindCount; i++) {
-    $(`#kind${i}`).val(Data.KindList[i]);
-    $(`#wlst${i}`).val(Data.WordList[i].join(", "));
-  }
-
-  if (CanExport) {
-    $("#aways").prop("checked", Data.Options.IsExportAlways);
-  } else {
-    setVisible($(".toolbar-pref > *:not(#superuser)"), false);
-  }
-
-  setListNo(Data.Options.ListNo ?? 0);
-  onClickAlways(false);
-}
-
-///////////////////////////////////////////////////////////////////////////////
-// Load the data and preferences from the application storage
-////////////////////////////////////////////////////////////////////////////////
-
-function loadPref() {
-  var content = localStorage[AppName];
-
-  if (content) {
-    Data = JSON.parse(localStorage[AppName]);
-  } else {
-    savePref();
-  }
-}
+'use strict';
 
 ////////////////////////////////////////////////////////////////////////////////
 
-function onBlurEdit(listNo) {
-  setListNo(listNo, true);
-}
-
-///////////////////////////////////////////////////////////////////////////////
-// Aquire the superuser value from the UI
-////////////////////////////////////////////////////////////////////////////////
-
-function onBlurSuperUser() {
-  var jqSuperUser = $("#superuser");
-
-  var values = jqSuperUser.val().trim().toLowerCase().split(/\s+/, 2);
-  jqSuperUser.val(null);
-
-  var valueCount = values.length;
-
-  if (valueCount <= 0) {
-    return false;
+class PrefClass {
+  constructor() {
   }
 
-  var newValue = valueCount <= 1 ? "" : values[1].trim();
-  newValue = newValue ? newValue[0].toLowerCase() : newValue;
+  //////////////////////////////////////////////////////////////////////////////
+  // Get wordlists editor's jQuery element
+  //////////////////////////////////////////////////////////////////////////////
 
-  var optKey = null;
+  getEditor() {
+    return $("#lists");
+  }
 
-  switch (values[0]) {
-    case "search":
-      optKey = "Search";
-      break;
-    case "reset":
-      localStorage.clear();
-      location.reload();
-      return true;
-    default:
+  //////////////////////////////////////////////////////////////////////////////
+  // Initialize preferences
+  //////////////////////////////////////////////////////////////////////////////
+
+  init(isFromUI) {
+    if (isFromUI) {
+      this.getEditor().val(Data.text);
+
+      if (!Clip.isAvailable) {
+        Core.setVisible($(".toolbar-pref > *:not(#superuser)"), false);
+      }
+    }
+
+    this.resetList();
+  }
+
+  //////////////////////////////////////////////////////////////////////////////
+
+  onBlurEdit() {
+    this.resetList(true);
+  }
+
+  //////////////////////////////////////////////////////////////////////////////
+  // Aquire the superuser value from the UI
+  //////////////////////////////////////////////////////////////////////////////
+
+  onBlurSuperUser() {
+    var jqSuperUser = $("#superuser");
+
+    var values = jqSuperUser.val().trim().toLowerCase().split(/\s+/, 2);
+    jqSuperUser.val(null);
+
+    var valueCount = values.length;
+
+    if (valueCount <= 0) {
       return false;
     }
 
-  var oldValue = Data.Options[optKey].toLowerCase();
+    var newValue = valueCount <= 1 ? "" : values[1].trim();
+    newValue = newValue ? newValue[0].toLowerCase() : newValue;
 
-  if (newValue) {
-    if (oldValue.startsWith(newValue)) {
+    var optKey = null;
+
+    switch (values[0]) {
+      case "search":
+        optKey = "Search";
+        break;
+      case "reset":
+        localStorage.clear();
+        location.reload();
+        return true;
+      default:
+        return false;
+      }
+
+    var oldValue = Data[optKey].toLowerCase();
+
+    if (newValue) {
+      if (oldValue.startsWith(newValue)) {
+        return false;
+      }
+    } else if (!oldValue) {
       return false;
     }
-  } else if (!oldValue) {
-    return false;
+
+    Data[optKey] = newValue;
+    Data.isChanged = true;
+
+    return true;
   }
 
-  Data.Options[optKey] = newValue;
-  Data.Options.IsChanged = true;
+  //////////////////////////////////////////////////////////////////////////////
 
-  return true;
-}
+  async onClickCopy() {
+    Data.save();
 
-////////////////////////////////////////////////////////////////////////////////
+    var jqEditor = this.getEditor();
+    var text = jqEditor.val();
 
-function onClickAlways(isFromUI) {
-  var jqAlways = $("#always"); 
-  
-  if (isFromUI) {
-    Data.Options.IsExportAlways = jqAlways.prop("checked");
-    Data.Options.IsChanged = true;
-    savePref();
-  } else {
-    jqAlways.prop("checked", Data.Options.IsExportAlways)
+    var editor = jqEditor[0];
+    var selStart = editor.selectionStart;
+    var selEnd = editor.selectionEnd;
+
+    if (selStart != selEnd) {
+      text = text.substring(selStart, selEnd);
+    }
+
+    await Clip.write(text);
+    jqEditor.focus();
+
+    alert("\nThe words were copied to the clipboard.\n\nYou can paste those wherever you like and save.");
   }
 
-  var jqExport = $("#export");
+  //////////////////////////////////////////////////////////////////////////////
 
-  if (Data.Options.IsExportAlways) {
-    jqExport.removeClass("underline");
-  } else {
-    jqExport.addClass("underline");
-  }
-}
+  async onClickExit() {
+    if (this.onBlurSuperUser() || Data.isChanged) {
+      await this.saveData();
+    }
 
-////////////////////////////////////////////////////////////////////////////////
-
-async function onClickExit() {
-  if (onBlurSuperUser() || Data.Options.IsChanged) {
-    Data.Options.IsChanged = false;
-    await savePrefEx();
+    Core.setPopup(false);
   }
 
-  setPopup(false);
-}
+  //////////////////////////////////////////////////////////////////////////////
 
-////////////////////////////////////////////////////////////////////////////////
+  async onClickPaste() {
+    var content = await Clip.read();
 
-async function onClickExport() {
-  savePref();
-  await saveTo();
-  alert("\nThe preferences were exported to the clipboard.\n\nYou can paste those wherever you like and save.");
-}
+    if (!content) {
+      return;
+    }
 
-////////////////////////////////////////////////////////////////////////////////
+    var jqEditor = this.getEditor();
+    var editor = jqEditor[0];
+    var before = Data.text.substring(0, editor.selectionStart);
+    var after = Data.text.substring(editor.selectionEnd);
 
-async function onClickImport() {
-  var content = await loadFrom();
+    Data.text = before + content + after;
 
-  if (!content) {
-    return;
+    Data.init();
+    Data.save();
+    this.init(true);
+    jqEditor.focus();
+
+    alert("\nThe words were successfully pasted from the clipboard.");
   }
 
-  initPref(content);
-  savePref();
-  alert("\nThe preferences were successfully imported from the clipboard.");
-}
+  //////////////////////////////////////////////////////////////////////////////
 
-////////////////////////////////////////////////////////////////////////////////
-
-function onClickHelp(isOn) {
-  setVisible($("#popup-pref"), !isOn)
-  setVisible($("#popup-help"), isOn)
-}
-
-////////////////////////////////////////////////////////////////////////////////
-
-function onFocusEdit(listNo) {
-  $($("[name='kind']")[listNo]).prop("checked", true);
-  setListNo(listNo);
-}
-
-////////////////////////////////////////////////////////////////////////////////
-
-function onFocusRadio(listNo) {
-  $(`#kind${listNo}`).focus();
-  setListNo(listNo);
-}
-
-///////////////////////////////////////////////////////////////////////////////
-// Save the data and preferences to the application storage
-////////////////////////////////////////////////////////////////////////////////
-
-function savePref() {
-  localStorage[AppName] = JSON.stringify(Data);
-}
-
-///////////////////////////////////////////////////////////////////////////////
-// Save the data and preferences to the application storage
-////////////////////////////////////////////////////////////////////////////////
-
-async function savePrefEx() {
-  Data.Options.IsChanged = false;
-  savePref();
-
-  if (CanExport && Data.Options.IsExportAlways) {
-    await saveTo();
+  onClickHelp(isOn) {
+    Core.setVisible($("#popup-pref"), !isOn)
+    Core.setVisible($("#popup-help"), isOn)
   }
-}
 
-////////////////////////////////////////////////////////////////////////////////
+  //////////////////////////////////////////////////////////////////////////////
+  // Perform edit action
+  //////////////////////////////////////////////////////////////////////////////
+
+  onEditAction(action) {
+    this.setFocusToEditor();
+    document.execCommand(action, false, null);
+  }
+
+  //////////////////////////////////////////////////////////////////////////////
+  // Select another list and adjust all related data
+  //////////////////////////////////////////////////////////////////////////////
+
+  resetList(isFromUi) {
+    var oldData = new DataClass(Data);
+    var selectionStart = undefined;
+
+    if (isFromUi) {
+      var jqEditor = this.getEditor();
+      Data.text = jqEditor.val();
+      selectionStart = jqEditor[0].selectionStart;
+    }
+
+    Data.init(undefined, undefined, undefined, isFromUi, selectionStart);
+
+    if (!Data.equals(oldData)) {
+      Data.save();
+    }
+
+    Core.setWordNo(0);
+  }
+
+  //////////////////////////////////////////////////////////////////////////////
+  // Save the data and preferences to the application storage
+  //////////////////////////////////////////////////////////////////////////////
+
+  async saveData() {
+    Data.save(false);
+    await Clip.write(Data.text);
+  }
+
+  //////////////////////////////////////////////////////////////////////////////
+  // Set focus to the editor element
+  //////////////////////////////////////////////////////////////////////////////
+
+  setFocusToEditor() {
+    this.getEditor().focus();
+  }
+
+  //////////////////////////////////////////////////////////////////////////////
+}
