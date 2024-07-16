@@ -13,7 +13,8 @@ class ClipClass {
   constructor() {
     // Initialize properties
     //
-    this.isAvailable = navigator.clipboard?.writeText ? true : false;
+    var c = navigator.clipboard;
+    this.isAvailable = c && c.readText && c.writeText ? true : false;
   }
 
   //////////////////////////////////////////////////////////////////////////////
