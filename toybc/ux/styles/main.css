@@ -34,7 +34,6 @@ body {
 }
 .main-word {
   color: black;
-  cursor: pointer;
   display: flex;
   height: 80%;
   text-align: center;

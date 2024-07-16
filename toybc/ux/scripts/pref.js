@@ -57,14 +57,15 @@ class PrefClass {
       return false;
     }
 
+    var isSearch = false;
     var newValue = valueCount <= 1 ? "" : values[1].trim();
     newValue = newValue ? newValue[0].toLowerCase() : newValue;
 
-    var optKey = null;
+    var optKey = values[0];
 
-    switch (values[0]) {
+    switch (optKey) {
       case "search":
-        optKey = "Search";
+        isSearch = true;
         break;
       case "reset":
         localStorage.clear();
@@ -86,6 +87,10 @@ class PrefClass {
 
     Data[optKey] = newValue;
     Data.isChanged = true;
+
+    if (isSearch) {
+      this.setCursorForSearch();
+    }
 
     return true;
   }
@@ -183,6 +188,7 @@ class PrefClass {
     }
 
     Core.setWordNo(0);
+    this.setCursorForSearch();
   }
 
   //////////////////////////////////////////////////////////////////////////////
@@ -200,6 +206,25 @@ class PrefClass {
 
   setFocusToEditor() {
     this.getEditor().focus();
+  }
+
+  //////////////////////////////////////////////////////////////////////////////
+  // Set the type of the cursor to show above the current word
+  //////////////////////////////////////////////////////////////////////////////
+
+  setCursorForSearch() {
+    var isDefault = true;
+
+    switch (Data.search.toLowerCase()) {
+      case "a":
+      case "i":
+        isDefault = false;
+        break;
+      default:
+        break;
+    }
+
+    $("#main-word").css("cursor", isDefault ? "default" : "pointer");
   }
 
   //////////////////////////////////////////////////////////////////////////////
