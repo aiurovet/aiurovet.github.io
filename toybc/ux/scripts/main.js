@@ -49,7 +49,7 @@ $(window).bind("beforeunload", async () => {
 });
 
 $(window).resize(() => {
-  Core.getEditor().css("height", Main.getEditorHeight());
+  this.setEditorHeight();
   Core.setWordNo(Data.wordNo);
 });
 
@@ -63,11 +63,12 @@ class MainClass {
   // Get the dynamic max height of the editor element
   //////////////////////////////////////////////////////////////////////////////
 
-  getEditorHeight() {
+  setEditorHeight() {
     var jqSuper = $("#superuser");
     var offset = jqSuper.offset().top + jqSuper.outerHeight();
+    var height = `calc(100% - 0rem - ${offset}px)`;
 
-    return `calc(100% - 0rem - ${offset}px)`;
+    Core.getEditor().css("height", height);
   }
 
   //////////////////////////////////////////////////////////////////////////////
@@ -93,6 +94,7 @@ class MainClass {
   onClickMenu() {
     Core.setPopup(true);
     Pref.onClickHelp(false);
+    this.setEditorHeight();
   }
 
   //////////////////////////////////////////////////////////////////////////////
