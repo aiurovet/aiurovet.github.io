@@ -94,7 +94,7 @@ class MainClass {
   onClickMenu() {
     Core.setPopup(true);
     Pref.onClickHelp(false);
-    this.setEditorHeight();
+    Main.setEditorHeight();
   }
 
   //////////////////////////////////////////////////////////////////////////////
