@@ -286,12 +286,6 @@ GRANDMA - 17 OCTOBER, GRANDPA - 23 JUNE,
                .replaceAll(this.multipleListSeparatorsRegex, this.listSeparator)
                .replaceAll("\\t", " ") // don't compress!
                .trim();
-    // var x = text.replaceAll(this.paddedWordSeparatorsRegex, this.wordSeparator);
-    // x = x.replaceAll(this.multipleListSeparatorsRegex, this.listSeparator);
-    // x = x.replaceAll("\\t", " ") // don't compress!
-    // x = x.trim();
-
-    // return x;
   }
 
   //////////////////////////////////////////////////////////////////////////////

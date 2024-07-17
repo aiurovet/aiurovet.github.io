@@ -37,13 +37,9 @@
 				<div class="toolbar-link" id="paste" onclick="Pref.onClickPaste();">Paste</div>
 				<div class="toolbar-link" id="undo" onclick="Pref.onEditAction('undo');">Undo</div>
 				<div class="toolbar-link" id="redo" onclick="Pref.onEditAction('redo');">Redo</div>
-				<input type="text" id="superuser" onblur="Pref.onBlurSuperUser();"/>
-			</div>
-			<div class="buttons-pref">
-				<div class="button help" onclick="Pref.onClickHelp(true);">?</div>
 				<div class="button exit" onclick="Pref.onClickExit();">X</div>
-			</div>
-      <div class="popup-scroll pref">
+				<div class="button help" onclick="Pref.onClickHelp(true);">Help</div>
+				<input type="text" id="superuser" onblur="Pref.onBlurSuperUser();"/>
 				<textarea class="lists" id="lists" maxlength="11000" onblur="Pref.onBlurEdit();"></textarea>
 			</div>
 		</div>
@@ -87,14 +83,14 @@
 				<h4>Preferences</h4>
 				<div class="para-help">
 					Switch between word lists simply by tapping or clicking any word in that list, then closing
-					the <em>Preferences</em> popup by clicking the red <em><strong>X</strong></em> button.
+					the <em>Preferences</em> popup by clicking the red <em>X</em> button.
 				</div>
 				<div class="para-help">
 					You can replace the preset lists of words with the ones in a language of your choice simply by
 					updating the text in the edit box. The separator between words is comma, so you can put the whole
 					expression as a "word" or make a bigger spacing between the letters. If you wish to break a
 					particular list	and continue on the next line, just end the previous line with comma. Once
-					finished, close the <em>Preferences</em> popup by clicking the red <em><strong>X</strong></em> button.
+					finished, close the <em>Preferences</em> popup by clicking the red <em>X</em> button.
 				</div>
 				<div class="para-help">
 					The changes to preferences you make are automatically saved to a browser's local storage, so the
@@ -129,18 +125,15 @@
 					things anyway. Still, this approach serves as a good shield for the younger kids.
 				</div>
 				<div class="para-help">
-					At the top of the <em>Preferences</em> screen left to the <em><strong>?</strong></em> and <em><strong>X</strong></em>
-					icons, a text box is located. By typing the following commands there and closing the <em>Preferences</em>
-					screen, you can do the following (the commands are case-insensitive, letters in square brackets can be
-					omitted, in English only):
+					There is a text box left to the <em>Help</em> link of the <em>Preferences</em> screen. By typing the
+					following commands there and closing the <em>Preferences</em> screen, you can get theses results
+					(the commands are case-insensitive, in English only):
 					<ul>
 						<li><em>Reset</em> &ndash; revert all preferences (selected list, search mode) and the word lists to
 							the default ones. Please be cautious, as this operation cannot be undone.</li>
-						<li><em>Search A[ll]</em> &ndash; when a word is tapped or clicked, the full search on that word
-							will be performed in the new browser tab.</li>
-						<li><em>Search I[mage]</em> &ndash; when a word is tapped or clicked, the image search on that word
-							will be performed in the new browser tab.</li>
-						<li><em>Search [None]</em> &ndash; turn off the search functionality.</li>
+						<li><em>Search</em> &ndash; when a word is tapped or clicked, the <em>Google Search</em> on
+							that word will be performed in the new browser tab.</li>
+						<li><em>Search Off</em> &ndash; turn off the search functionality (the default behaviour).</li>
 					</ul>
 				</div>
 			</div>

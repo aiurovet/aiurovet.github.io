@@ -49,6 +49,7 @@ $(window).bind("beforeunload", async () => {
 });
 
 $(window).resize(() => {
+  Core.getEditor().css("height", Main.getEditorHeight());
   Core.setWordNo(Data.wordNo);
 });
 
@@ -56,6 +57,17 @@ $(window).resize(() => {
 
 class MainClass {
   constructor() {
+  }
+
+  //////////////////////////////////////////////////////////////////////////////
+  // Get the dynamic max height of the editor element
+  //////////////////////////////////////////////////////////////////////////////
+
+  getEditorHeight() {
+    var jqSuper = $("#superuser");
+    var offset = jqSuper.offset().top + jqSuper.outerHeight();
+
+    return `calc(100% - 0rem - ${offset}px)`;
   }
 
   //////////////////////////////////////////////////////////////////////////////
@@ -104,30 +116,20 @@ class MainClass {
   //////////////////////////////////////////////////////////////////////////////
 
   onClickWord() {
-    var mode = Data.search;
-
-    if (mode) {
-      mode = mode.trim();
-    }
+    var mode = Data.search?.trim();
 
     if (!mode) {
       return;
     }
 
-    switch (mode[0].toLowerCase()) {
-      case 'a':
-        mode = "";
-        break;
-      case 'i':
-        mode = "&udm=2";
-        break;
-      default:
-        return;
+    var word = $("#main-word").text().toLowerCase();
+
+    try {
+      search.search(word);
+    } catch (e) {
+      var encoded = encodeURIComponent(word);
+      window.open(`https://www.google.com/search?q=${encoded}`);
     }
-
-    var word = encodeURIComponent($("#main-word").text().toLowerCase());
-
-    window.open(`https://www.google.com/search?q=${word}${mode}`);
   }
 
   //////////////////////////////////////////////////////////////////////////////

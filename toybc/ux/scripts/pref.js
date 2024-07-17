@@ -9,7 +9,14 @@
 
 class PrefClass {
   constructor() {
-    this.isTextChanged;
+    // Constants
+    //
+    this.superUserSeparatorRegex = new RegExp("[\\s=]+");
+    this.searchOffRegex = new RegExp("^(no|off)", "i");
+
+    // Properties
+    //
+    this.isTextChanged = false;
   }
 
   //////////////////////////////////////////////////////////////////////////////
@@ -21,7 +28,7 @@ class PrefClass {
       Core.getEditor().val(Data.text);
 
       if (!Clip.isAvailable) {
-        Core.setVisible($(".toolbar-pref > *:not(#superuser)"), false);
+        Core.setVisible($(".toolbar-link > *:not(#superuser)"), false);
       }
     }
 
@@ -41,7 +48,11 @@ class PrefClass {
   onBlurSuperUser() {
     var jqSuperUser = $("#superuser");
 
-    var values = jqSuperUser.val().trim().toLowerCase().split(/\s+/, 2);
+    var values = jqSuperUser.val()
+      .trim()
+      .toLowerCase()
+      .split(this.superUserSeparatorRegex, 2);
+
     jqSuperUser.val(null);
 
     var valueCount = values.length;
@@ -51,14 +62,14 @@ class PrefClass {
     }
 
     var isSearch = false;
-    var newValue = valueCount <= 1 ? "" : values[1].trim();
-    newValue = newValue ? newValue[0].toLowerCase() : newValue;
+    var newValue = valueCount <= 1 ? "" : values[1].trim().toLowerCase();
 
     var optKey = values[0];
 
     switch (optKey) {
       case "search":
         isSearch = true;
+        newValue = this.searchOffRegex.test(newValue) ? "" : "a";
         break;
       case "reset":
         localStorage.clear();
@@ -148,8 +159,9 @@ class PrefClass {
   //////////////////////////////////////////////////////////////////////////////
 
   onClickHelp(isOn) {
-    Core.setVisible($("#popup-pref"), !isOn)
-    Core.setVisible($("#popup-help"), isOn)
+    var visibleDisplayStyle = "flex";
+    Core.setVisible($("#popup-pref"), !isOn, visibleDisplayStyle);
+    Core.setVisible($("#popup-help"), isOn, visibleDisplayStyle);
   }
 
   //////////////////////////////////////////////////////////////////////////////
