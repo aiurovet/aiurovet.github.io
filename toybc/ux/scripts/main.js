@@ -49,7 +49,7 @@ $(window).bind("beforeunload", async () => {
 });
 
 $(window).resize(() => {
-  this.setEditorHeight();
+  Main.setEditorHeight();
   Core.setWordNo(Data.wordNo);
 });
 
@@ -94,7 +94,7 @@ class MainClass {
   onClickMenu() {
     Core.setPopup(true);
     Pref.onClickHelp(false);
-    Main.setEditorHeight();
+    this.setEditorHeight();
   }
 
   //////////////////////////////////////////////////////////////////////////////
