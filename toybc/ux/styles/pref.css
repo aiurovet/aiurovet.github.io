@@ -106,6 +106,9 @@
 
 /* ELEMENTS */
 
+#home {
+  margin: 0 0 0 1rem;
+}
 #lists {
   font-size: 100%;
   height: calc(100% - 4rem);
