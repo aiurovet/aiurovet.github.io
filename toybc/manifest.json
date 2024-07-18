@@ -1,0 +1,17 @@
+{
+
+  "name": "ToyBC",
+  "short_name": "ToyBC",
+  "description": "Teach your kid letters and words in any language as well as numbers and simple Math",
+  "start_url": "/toybc",
+  "display": "standalone",
+  "background_color": "#f4eee4",
+  "theme_color": "#000000",
+  "icons": [
+      {
+          "src": "/toybc/ux/images/toybc.svg",
+          "sizes": "any",
+          "type": "image/svg+xml"
+      }
+  ]
+}
