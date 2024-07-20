@@ -13,6 +13,8 @@
 
 var Clip = null;
 var Core = null;
+var DeferredPrompt = null;
+var IsInstallable = false;
 var Json = null;
 var Data = null;
 var Main = null;
@@ -32,6 +34,16 @@ $(document).ready(() => {
   Main = new MainClass();
   Pref = new PrefClass();
 
+  // Set installability flag and hide install button if it is off
+  //
+  IsInstallable = /^http/.test(document.location.href) &&
+    !(window.matchMedia && window.matchMedia("(display-mode: standalone)").matches);
+
+  if (!IsInstallable) {
+    DeferredPrompt = null;
+    Core.setVisible($("#install"), false);
+  }
+
   // Initialize the UI
   //
   Core.setWordNo(Data.wordNo);
@@ -43,6 +55,11 @@ $(document).ready(() => {
 ////////////////////////////////////////////////////////////////////////////////
 // Set the event handlers
 ////////////////////////////////////////////////////////////////////////////////
+
+$(window).on('beforeinstallprompt', (event) => {
+  event.preventDefault();
+  DeferredPrompt = event;
+});
 
 $(window).bind("beforeunload", async () => {
   await Pref.onClickExit();

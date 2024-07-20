@@ -16,6 +16,7 @@ class PrefClass {
 
     // Properties
     //
+    this.deferredPrompt = null;
     this.isTextChanged = false;
   }
 
@@ -129,6 +130,21 @@ class PrefClass {
     }
 
     Core.setPopup(false);
+  }
+
+  //////////////////////////////////////////////////////////////////////////////
+
+  async onClickInstall() {
+    if (!DeferredPrompt) {
+      return;
+    }
+
+    DeferredPrompt.prompt();
+    var result = await DeferredPrompt.userChoice;
+
+    if (result.outcome === "accepted") {
+      DeferredPrompt = null;
+    }
   }
 
   //////////////////////////////////////////////////////////////////////////////
