@@ -56,7 +56,7 @@ $(document).ready(() => {
 // Set the event handlers
 ////////////////////////////////////////////////////////////////////////////////
 
-$(window).on('beforeinstallprompt', (event) => {
+$(window).bind('beforeinstallprompt', (event) => {
   event.preventDefault();
   DeferredPrompt = event;
 });
