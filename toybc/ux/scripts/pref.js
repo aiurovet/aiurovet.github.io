@@ -134,21 +134,6 @@ class PrefClass {
 
   //////////////////////////////////////////////////////////////////////////////
 
-  async onClickInstall() {
-    if (!DeferredPrompt) {
-      return;
-    }
-
-    DeferredPrompt.prompt();
-    var result = await DeferredPrompt.userChoice;
-
-    if (result.outcome === "accepted") {
-      DeferredPrompt = null;
-    }
-  }
-
-  //////////////////////////////////////////////////////////////////////////////
-
   async onClickPaste() {
     var content = await Clip.read();
 
