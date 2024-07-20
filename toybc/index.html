@@ -6,7 +6,7 @@
 <head>
 	<meta charset="UTF-8"></meta>
 	<title>ToyBC</title>
-	<link rel="manifest" href="manifest.json">
+	<link rel="manifest" href="manifest.json" crossorigin="use-credentials">
 	<link rel="shortcut icon" type="image/x-icon" href="ux/images/toybc.svg">
 	<link rel="stylesheet" href="ux/styles/main.css">
 	<link rel="stylesheet" href="ux/styles/pref.css">
@@ -20,7 +20,7 @@
 	<script>
 		if ('serviceWorker' in navigator) {
 				navigator.serviceWorker
-					.register('/toybc/service-worker.js')
+					.register('/toybc/service-worker.js', {scope: "/toybc/"})
 					.then((registration) => {
 						console.log('Service Worker registered successfully:', registration);
 					})
