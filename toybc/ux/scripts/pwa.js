@@ -28,7 +28,7 @@ function initPwa() {
         iw.onstatechange = () => {
           if ((iw.state === "installed")) {
             if (sw.controller) {
-              document.location.reload();
+              location.reload();
               console.log("The newer version is available.");
             } else {
               console.log("The latest version has been installed.");

@@ -69,15 +69,10 @@ class CoreClass {
     var maxCharWidth = this._getMaxCharWidth();
 
     if (maxCharWidth > 0) {
-      var mainToolMaxWidth = $(window).width() * MainToolFullWidthRatio;
       var mainToolFontSize = maxCharWidth * MainToolFontRatio;
 
       if (mainToolFontSize < MinMainToolFontSize) {
         mainToolFontSize = MinMainToolFontSize;
-      }
-
-      if (mainToolFontSize > mainToolMaxWidth) {
-        mainToolFontSize = mainToolMaxWidth;
       }
 
       $(".main-word").css("font-size", `${maxCharWidth}px`);
