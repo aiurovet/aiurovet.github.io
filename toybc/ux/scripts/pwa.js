@@ -20,9 +20,9 @@ function initPwa() {
   
   sw.register("/toybc/service-worker.js", {scope: "/toybc/"})
     .then((reg) => {
-      console.log("Service Worker registered successfully:", reg);
+      console.log(`The service worker has been registered: ${reg}`);
 
-      reg.onupdatefound = () => {
+      /*reg.onupdatefound = () => {
         var iw = reg.installing;
 
         iw.onstatechange = () => {
@@ -35,9 +35,8 @@ function initPwa() {
             }
           }
         };
-    }})
+    }*/})
     .catch((error) => {
-      console.log("Service worker registration failed:", error);
     });
 }
 
