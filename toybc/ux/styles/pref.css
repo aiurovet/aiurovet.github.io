@@ -99,6 +99,7 @@
 }
 .toolbar-pref > div {
   cursor: pointer;
+  font-size: 150%;
 }
 .toolbar-pref > div:first-child {
   margin-left: 0.5rem;
@@ -139,7 +140,7 @@
 }
 #superuser {
   float: right;
-  margin: 0rem 0 0 2rem;
+  margin: 0.5rem 0 0 2rem;
   font-size: 100%;
-  width: 10rem;
+  width: 9rem;
 }
