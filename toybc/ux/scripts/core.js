@@ -7,7 +7,7 @@
 
 ////////////////////////////////////////////////////////////////////////////////
 
-const MainToolFontRatio = 0.33;
+const MainToolFontRatio = 0.50;
 const MinMainToolFontSize = 32;
 
 ////////////////////////////////////////////////////////////////////////////////
@@ -68,7 +68,12 @@ class CoreClass {
     var maxCharWidth = this._getMaxCharWidth();
 
     if (maxCharWidth > 0) {
-      var mainToolFontSize = maxCharWidth * MainToolFontRatio;
+      var mainToolFontSize = $(".main-tool:first").width();
+      var maxMainToolFontSize = maxCharWidth * MainToolFontRatio;
+
+      if (mainToolFontSize > maxMainToolFontSize) {
+        mainToolFontSize = maxMainToolFontSize;
+      }
 
       if (mainToolFontSize < MinMainToolFontSize) {
         mainToolFontSize = MinMainToolFontSize;
@@ -116,12 +121,13 @@ class CoreClass {
   //////////////////////////////////////////////////////////////////////////////
 
   _getMaxCharWidth() {
-    var jqFull = $(window);
-    var maxWidth = jqFull.width();
+    //var jqFull = $(window);
+    var maxWidth = window.innerWidth; // jqFull.width();
+    //var maxHeight = window.innerHeight; // jqFull.height()
     var maxCharWidth = Math.floor(maxWidth / Data.maxWordLength);
-    var maxCharHeight = parseInt(jqFull.height() * 0.40);
+    //var maxCharHeight = parseInt(maxHeight * 0.40);
 
-    return maxCharWidth <= maxCharHeight ? maxCharWidth : maxCharHeight;
+    return maxCharWidth; // <= maxCharHeight ? maxCharWidth : maxCharHeight;
   }
 
   //////////////////////////////////////////////////////////////////////////////
