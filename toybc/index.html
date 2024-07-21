@@ -18,11 +18,22 @@
 	<script src="ux/scripts/core.js"></script>
 	<script src="ux/scripts/main.js"></script>
 	<script src="ux/scripts/pref.js"></script>
-	<script src="ux/scripts/pwa.js"></script>
-	<script>initPwa();</script>
+	<script>
+		var sw = navigator.serviceWorker;
+
+		if (sw) {
+			sw.register("/toybc/service-worker.js", {scope: "/toybc/"})
+				.then((reg) => {
+					console.log("The service worker registration successfully completed");
+				})
+				.catch((error) => {
+					console.log(error);
+				});
+		}
+</script>
 </head>
 <body>
-  <div id="main" style="display: block;">
+  <div id="main">
     <div class="main-tools center">
       <div class="main-tool center" onclick="Main.onClickPrevWord();">&lsaquo;</div>
       <div class="main-tool center" onclick="Main.onClickFirstWord();">&laquo;</div>
@@ -52,7 +63,7 @@
 				<div class="button exit" onclick="Pref.onClickHelp(false);">X</div>
 			</div>
 			<div class="popup-scroll help">
-				<h2>ToyBC <span id="version">version 0.1.9</span></h2>
+				<h2>ToyBC <span id="version">version 0.1.10</span></h2>
 				<h4>
   				Copyright &copy; 2024<a id="home" href="https://aiurovet.com/" target="_blank">Alexander Iurovetski</a>
 				</h4>

@@ -8,6 +8,10 @@
 * {
   -webkit-tap-highlight-color: transparent; /* prevent from flickering on click */
 }
+html {
+  height: 100%;
+  width: 100%;
+}
 body {
   color: black;
   margin: 0;

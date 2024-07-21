@@ -16,7 +16,6 @@ self.addEventListener("install", (event) => {
         "/toybc/ux/scripts/core.js",
         "/toybc/ux/scripts/main.js",
         "/toybc/ux/scripts/pref.js",
-        "/toybc/ux/scripts/pwa.js",
         "/toybc/ux/styles/main.css",
         "/toybc/ux/styles/pref.css"
       ]);
