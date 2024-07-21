@@ -12,19 +12,11 @@
 ////////////////////////////////////////////////////////////////////////////////
 
 function initPwa() {
-  var sw = navigator?.serviceWorker;
-
-  if (!sw) {
+  if (!("serviceWorker" in navigator)) {
     return;
   }
-  
-  sw.getRegistrations().then((registrations) => {
-    for (let registration of registrations) {
-        registration.unregister();
-    }
-  });
  
-  sw.register("/toybc/service-worker.js", {scope: "/toybc/"})
+  navigator.serviceWorker.register("/toybc/service-worker.js", {scope: "/toybc/"})
     .then((reg) => {
       console.log(`The service worker has been registered: ${reg}`);
     })
