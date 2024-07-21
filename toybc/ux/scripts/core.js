@@ -8,6 +8,7 @@
 ////////////////////////////////////////////////////////////////////////////////
 
 const MainToolFontRatio = 0.50;
+const MaxCharHeightRatio = 0.60;
 const MinMainToolFontSize = 32;
 
 ////////////////////////////////////////////////////////////////////////////////
@@ -121,13 +122,13 @@ class CoreClass {
   //////////////////////////////////////////////////////////////////////////////
 
   _getMaxCharWidth() {
-    //var jqFull = $(window);
-    var maxWidth = window.innerWidth; // jqFull.width();
-    //var maxHeight = window.innerHeight; // jqFull.height()
+    var jqFull = $(window);
+    var maxWidth = jqFull.width();
+    var maxHeight = jqFull.height();
     var maxCharWidth = Math.floor(maxWidth / Data.maxWordLength);
-    //var maxCharHeight = parseInt(maxHeight * 0.40);
+    var maxCharHeight = maxHeight * MaxCharHeightRatio;
 
-    return maxCharWidth; // <= maxCharHeight ? maxCharWidth : maxCharHeight;
+    return maxCharWidth <= maxCharHeight ? maxCharWidth : maxCharHeight;
   }
 
   //////////////////////////////////////////////////////////////////////////////
