@@ -30,7 +30,7 @@ self.addEventListener("install", (event) => {
 self.addEventListener("fetch", (event) => {
   event.respondWith(
     caches.match(event.request).then((response) => {
-      if (arguments.length >= 1) {
+      if (response !== undefined) {
         if (response) {
           return true;
         }
