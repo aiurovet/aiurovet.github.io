@@ -32,7 +32,7 @@ self.addEventListener("fetch", (event) => {
     caches.match(event.request).then((response) => {
       if (response !== undefined) {
         if (response) {
-          return true;
+          return response;
         }
       }
       return fetch(event.request);
