@@ -144,3 +144,7 @@
   font-size: 100%;
   width: 9rem;
 }
+#version {
+  font-size: 75%;
+  font-weight: normal;
+}
