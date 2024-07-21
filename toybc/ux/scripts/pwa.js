@@ -18,6 +18,12 @@ function initPwa() {
     return;
   }
   
+  sw.getRegistrations().then((registrations) => {
+    for (let registration of registrations) {
+        registration.unregister();
+    }
+  });
+ 
   sw.register("/toybc/service-worker.js", {scope: "/toybc/"})
     .then((reg) => {
       console.log(`The service worker has been registered: ${reg}`);
