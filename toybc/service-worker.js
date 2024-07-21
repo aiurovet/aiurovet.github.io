@@ -4,7 +4,7 @@
 
 self.addEventListener("install", (event) => {
   event.waitUntil(
-    caches.open("my-cache").then((cache) => {
+    caches.open("toybc").then((cache) => {
       return cache.addAll([
         "/toybc",
         "/toybc/index.html",

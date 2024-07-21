@@ -45,7 +45,7 @@ body {
 /* ELEMENTS */
 
 #main {
-  background-color: rgb(244, 238, 228);
+  background: rgb(244, 238, 228);
   float: left;
   height: 100%;
   margin: 0;

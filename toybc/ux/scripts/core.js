@@ -7,9 +7,8 @@
 
 ////////////////////////////////////////////////////////////////////////////////
 
-var MainToolFullWidthRatio = 0.20;
-var MainToolFontRatio = 0.33;
-var MinMainToolFontSize = 32;
+const MainToolFontRatio = 0.33;
+const MinMainToolFontSize = 32;
 
 ////////////////////////////////////////////////////////////////////////////////
 
@@ -75,8 +74,8 @@ class CoreClass {
         mainToolFontSize = MinMainToolFontSize;
       }
 
-      $(".main-word").css("font-size", `${maxCharWidth}px`);
       $(".main-tool").css("font-size", `${mainToolFontSize}px`);
+      $(".main-word").css("font-size", `${maxCharWidth}px`);
     }
 
     $("#main-word").text(text);

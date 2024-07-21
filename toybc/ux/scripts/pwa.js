@@ -23,6 +23,7 @@ function initPwa() {
       console.log(`The service worker has been registered: ${reg}`);
     })
     .catch((error) => {
+      console.log(`The service worker registration failed: ${error}`);
     });
 }
 
