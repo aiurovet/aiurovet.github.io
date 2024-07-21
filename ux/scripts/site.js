@@ -17,12 +17,12 @@ $(document).ready(function () {
 
 function getRootUrl(withFile) {
   var url = window.location.href;
-  var sep = '/';
+  var sep = "/";
 
   if (/^(file:|[A-Z]:|[\/\\])/i.test(url)) {
-    const lastDir = 'aiurovet.github.io';
+    const lastDir = "aiurovet.github.io";
     const startPos = url.indexOf(lastDir);
-    const sepWin = '\\';
+    const sepWin = "\\";
 
     if (url.indexOf(sepWin) >= 0) {
       sep = sepWin;
@@ -34,7 +34,7 @@ function getRootUrl(withFile) {
   }
 
   if (withFile) {
-    url += 'index.html';
+    url += "index.html";
   }
 
   return url;
@@ -45,9 +45,9 @@ function getRootUrl(withFile) {
 ////////////////////////////////////////////////////////////////////////////////
 
 function initHeader() {
-  const jqHeader = $('.header');
+  const jqHeader = $(".header");
 
-  if (!jqHeader.hasClass('home')) {
+  if (!jqHeader.hasClass("home")) {
     jqHeader.click(onHeaderClick);
   }
 }

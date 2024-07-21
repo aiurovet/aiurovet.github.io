@@ -17,18 +17,8 @@
 	<script src="ux/scripts/core.js"></script>
 	<script src="ux/scripts/main.js"></script>
 	<script src="ux/scripts/pref.js"></script>
-	<script>
-		if ('serviceWorker' in navigator) {
-				navigator.serviceWorker
-					.register('/toybc/service-worker.js', {scope: "/toybc/"})
-					.then((registration) => {
-						console.log('Service Worker registered successfully:', registration);
-					})
-					.catch((error) => {
-							console.log('Service Worker registration failed:', error);
-					});
-		}
-	</script>
+	<script src="ux/scripts/pwa.js"></script>
+	<script>initPwa();</script>
 </head>
 <body>
   <div id="main" style="display: block;">

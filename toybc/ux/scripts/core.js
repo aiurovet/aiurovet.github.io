@@ -3,7 +3,7 @@
 // All rights reserved under MIT license (see LICENSE file)
 ////////////////////////////////////////////////////////////////////////////////
 
-'use strict';
+"use strict";
 
 ////////////////////////////////////////////////////////////////////////////////
 
@@ -82,8 +82,6 @@ class CoreClass {
 
       $(".main-word").css("font-size", `${maxCharWidth}px`);
       $(".main-tool").css("font-size", `${mainToolFontSize}px`);
-
-console.log(`Main Tool: ${mainToolFontSize}px`);
     }
 
     $("#main-word").text(text);

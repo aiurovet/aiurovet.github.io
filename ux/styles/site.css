@@ -129,7 +129,7 @@ pre {
   width: 100%;
 }
 .hgap-min::after {
-  content: '\00A0';
+  content: "\00A0";
 }
 .link img {
   margin-right: 1rem;
