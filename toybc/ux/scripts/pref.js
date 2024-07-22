@@ -114,15 +114,6 @@ class PrefClass {
 
   //////////////////////////////////////////////////////////////////////////////
 
-  onClickEdit() {
-    if (Core.getEditor("read-only").length <= 0) {
-      return;
-    }
-    this.resetList(true);
-  }
-
-  //////////////////////////////////////////////////////////////////////////////
-
   async onClickCopy() {
     Data.save();
 
@@ -141,6 +132,15 @@ class PrefClass {
     jqEditor.focus();
 
     alert("\nThe words were copied to the clipboard.\n\nYou can paste those wherever you like and save.");
+  }
+
+  //////////////////////////////////////////////////////////////////////////////
+
+  onClickEdit() {
+    if (Core.getEditor("read-only").length <= 0) {
+      return;
+    }
+    this.resetList(true);
   }
 
   //////////////////////////////////////////////////////////////////////////////
