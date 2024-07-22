@@ -1,0 +1,12 @@
+/*
+  Copyright (C) Alexander Iurovetski 2024
+  All rights reserved under MIT license (see LICENSE file)
+
+  Version number
+*/
+
+/* ELEMENTS */
+
+#version::before {
+  content: "Version 0.2.8";
+}

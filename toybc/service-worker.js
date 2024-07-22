@@ -18,7 +18,8 @@ self.addEventListener("install", (event) => {
         "/toybc/ux/scripts/main.js",
         "/toybc/ux/scripts/pref.js",
         "/toybc/ux/styles/main.css",
-        "/toybc/ux/styles/pref.css"
+        "/toybc/ux/styles/pref.css",
+        "/toybc/ux/styles/version.css"
       ]);
     })
   );
