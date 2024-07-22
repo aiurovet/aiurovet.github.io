@@ -18,11 +18,17 @@ class CoreClass {
   }
 
   //////////////////////////////////////////////////////////////////////////////
-  // Get wordlists editor's jQuery element
+  // Get wordlists editor's jQuery element with or without an extra selector
   //////////////////////////////////////////////////////////////////////////////
 
-  getEditor() {
-    return $("#lists");
+  getEditor(extraSelector) {
+    var fullSelector = "#lists";
+
+    if (extraSelector) {
+      fullSelector = `${fullSelector}:${extraSelector}`
+    }
+
+    return $(fullSelector);
   }
 
   //////////////////////////////////////////////////////////////////////////////
@@ -41,6 +47,22 @@ class CoreClass {
   // Set focus to the editor element
   //////////////////////////////////////////////////////////////////////////////
 
+  setEditorSelection(start, end) {
+    var editor = this.getEditor()[0];
+
+    if ((start !== undefined) && (start !== null)) {
+      editor.selectionStart = start;
+    }
+
+    if ((end !== undefined) && (end !== null)) {
+      editor.selectionEnd = end;
+    }
+  }
+
+  //////////////////////////////////////////////////////////////////////////////
+  // Set focus to the editor element
+  //////////////////////////////////////////////////////////////////////////////
+
   setFocusToEditor() {
     this.getEditor().focus();
   }
@@ -50,6 +72,7 @@ class CoreClass {
   //////////////////////////////////////////////////////////////////////////////
 
   setPopup(isVisible) {
+    $("#canedit").prop("checked", false);
     this.setVisible($(".popup-container"), isVisible);
   }
 
@@ -85,6 +108,12 @@ class CoreClass {
     }
 
     $("#main-word").text(text);
+
+    var selection = Data.getSelectionFromListNo();
+    var editor = this.getEditor()[0];
+
+    editor.selectionStart = selection.start;
+    editor.selectionEnd = selection.end;
   }
 
   //////////////////////////////////////////////////////////////////////////////

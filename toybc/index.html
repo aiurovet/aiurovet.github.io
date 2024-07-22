@@ -13,6 +13,7 @@
 	<link rel="stylesheet" href="ux/styles/pref.css">
 	<script src="lib/scripts/jquery.slim.min.js"></script>
 	<script src="dl/data.js"></script>
+	<script src="dl/extn.js"></script>
 	<script src="dl/json.js"></script>
 	<script src="ux/scripts/clip.js"></script>
 	<script src="ux/scripts/core.js"></script>
@@ -48,22 +49,26 @@
 	<div class="popup-container center">
 		<div id="popup-pref">
 			<div class="toolbar-pref">
-				<div class="toolbar-link" id="copy" onclick="Pref.onClickCopy();">Copy</div>
-				<div class="toolbar-link" id="paste" onclick="Pref.onClickPaste();">Paste</div>
+				<label class="toolbar-link">
+					<input type="checkbox" id="canedit" onclick="Pref.onClickCanEdit();"/>
+					<span id="canedit-text">Edit</span>
+				</label>
+				<!-- <div class="toolbar-link" id="copy" onclick="Pref.onClickCopy();">Copy</div>
+				<div class="toolbar-link" id="paste" onclick="Pref.onClickPaste();">Paste</div> -->
 				<div class="toolbar-link" id="undo" onclick="Pref.onEditAction('undo');">Undo</div>
 				<div class="toolbar-link" id="redo" onclick="Pref.onEditAction('redo');">Redo</div>
 				<div class="button exit" onclick="Pref.onClickExit();">X</div>
 				<div class="button help" onclick="Pref.onClickHelp(true);">Help</div>
 				<input type="text" id="superuser" onblur="Pref.onBlurSuperUser();"/>
-				<textarea class="lists" id="lists" maxlength="11000" onblur="Pref.onBlurEdit();"></textarea>
+				<textarea class="lists" id="lists" readonly maxlength="11000" onblur="Pref.onBlurEdit();" onclick="Pref.onClickEdit();"></textarea>
 			</div>
 		</div>
 		<div id="popup-help">
+			<div id="help-title">ToyBC <span id="version">version 0.2.3</span></div>
 			<div class="buttons-help">
 				<div class="button exit" onclick="Pref.onClickHelp(false);">X</div>
 			</div>
 			<div class="popup-scroll help">
-				<h2>ToyBC <span id="version">version 0.2.3</span></h2>
 				<h4>
   				Copyright &copy; 2024<a id="homepage" href="https://aiurovet.com/" target="_blank">Alexander Iurovetski</a>
 				</h4>

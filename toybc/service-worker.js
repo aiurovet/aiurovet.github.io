@@ -10,6 +10,7 @@ self.addEventListener("install", (event) => {
         "/toybc/index.html",
         "/toybc/ux/images/toybc.svg",
         "/toybc/dl/data.js",
+        "/toybc/dl/extn.js",
         "/toybc/dl/json.js",
         "/toybc/lib/scripts/jquery.slim.min.js",
         "/toybc/ux/scripts/clip.js",

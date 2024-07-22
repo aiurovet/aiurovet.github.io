@@ -28,12 +28,26 @@ class DataClass {
 
     this.multipleListSeparatorsRegex = new RegExp("[\\r\\n]{2,}", "g");
     this.paddedWordSeparatorsRegex = new RegExp(`(\\s*${this.wordSeparator}\\s*)+`, "g");
+    this.spacesPattern = "\\s+";
+    this.spacesRegex = new RegExp(this.spacesPattern, "g");
 
     // Initialize the properties
     //
     this.maxWordLength = 0;
     this.wordNo = 0;
     this.init("", -1, "", false, false, null);
+  }
+
+  //////////////////////////////////////////////////////////////////////////////
+  // Delete all saved data
+  //////////////////////////////////////////////////////////////////////////////
+
+  drop() {
+    delete localStorage[this.keyPref];
+    delete localStorage[this.keyText];
+    this.text = this._getDefaultText();
+    this.listNo = 0;
+    this.search = "";
   }
 
   //////////////////////////////////////////////////////////////////////////////
@@ -46,6 +60,32 @@ class DataClass {
            (this.listNo != that.listNo) ||
            (this.search != that.search) ||
            (this.text != that.text);
+  }
+
+  //////////////////////////////////////////////////////////////////////////////
+  // Find selection from listNo
+  //////////////////////////////////////////////////////////////////////////////
+
+  getSelectionFromListNo() {
+    if (!this.text || !this.list || (this.list.length <= 0)) {
+      return {start: 0, end: 0};
+    }
+
+    var findText = this.list.join("\x01").replaceAll("\t", " ");
+    findText = RegExp.escape(findText);
+    findText = findText.replaceAll(this.spacesRegex, this.spacesPattern).replaceAll("\x01", "\\s*,\\s*");
+    var findRegex = new RegExp(findText, "g");
+
+    var match = findRegex.exec(this.text);
+
+    if (!match) {
+      return {start: null, end: null};
+    }
+
+    return {
+      start: findRegex.lastIndex - match[0].length,
+      end: findRegex.lastIndex
+    };
   }
 
   //////////////////////////////////////////////////////////////////////////////
@@ -285,7 +325,7 @@ GRANDMA - 17 OCTOBER, GRANDPA - 23 JUNE
     return text.replaceAll(this.paddedWordSeparatorsRegex, this.wordSeparator)
                .replaceAll(this.multipleListSeparatorsRegex, this.listSeparator)
                .replaceAll("\\t", " ") // don't compress!
-               .trim();
+               .trimSpaces();
   }
 
   //////////////////////////////////////////////////////////////////////////////

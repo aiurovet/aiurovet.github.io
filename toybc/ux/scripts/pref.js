@@ -73,7 +73,8 @@ class PrefClass {
         newValue = this.searchOffRegex.test(newValue) ? "" : "a";
         break;
       case "reset":
-        localStorage.clear();
+        Data.drop();
+        this.resetList();
         location.reload();
         return true;
       default:
@@ -98,6 +99,26 @@ class PrefClass {
     }
 
     return true;
+  }
+
+  //////////////////////////////////////////////////////////////////////////////
+
+  onClickCanEdit() {
+    var jqEditor = Core.getEditor();
+    var isEditable = $("#canedit").prop("checked");
+    Core.setVisible($("#copy, #paste, #undo, #redo"), isEditable);
+    jqEditor.prop("readonly", !isEditable);
+    jqEditor.focus();
+    jqEditor[0].selectionEnd = jqEditor[0].selectionStart;
+  }
+
+  //////////////////////////////////////////////////////////////////////////////
+
+  onClickEdit() {
+    if (Core.getEditor("read-only").length <= 0) {
+      return;
+    }
+    this.resetList(true);
   }
 
   //////////////////////////////////////////////////////////////////////////////
