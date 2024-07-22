@@ -15,9 +15,6 @@ textarea:read-only {
 
 /* CLASSES */
 
-.copyright {
-  margin: 0 0 2rem 0;
-}
 .bold-off {
   font-weight: normal;
 }
@@ -29,7 +26,6 @@ textarea:read-only {
 }
 .button.help {
   padding: 0 2.5rem 0 2.5rem;
-  /*text-decoration: underline;*/
 }
 .button.exit {
   background: red;
@@ -37,17 +33,21 @@ textarea:read-only {
   padding: 0 1.5rem 0 1.5rem;
   text-decoration: none;
 }
+.buttons-help {
+  float: right;
+  font-family: monospace;
+  font-weight: bold;
+  margin: 0 0 0 calc(100% - 46rem);
+}
 .buttons-pref {
   float: right;
   margin: 0 0.5rem 0 0;
   font-family: monospace;
   font-weight: bold;
 }
-.buttons-help {
-  float: right;
-  font-family: monospace;
-  font-weight: bold;
-  margin: 0 0 0 calc(100% - 23.75rem);
+.copyright {
+  font-size: 2rem;
+  margin: 0 0 0 1rem;
 }
 .li-arrow {
   font-size: 1.5rem;
@@ -61,7 +61,7 @@ textarea:read-only {
   margin: 1rem 0 0 0;
 }
 .popup-container {
-  background: none;
+  background: rgba(0, 0, 0, 0.4);
   display: none; /* Hidden by default */
   font-size: 24px;
   left: 0;
@@ -131,7 +131,7 @@ textarea:read-only {
 }
 #help-title {
   float: left;
-  font-size: 2.5rem;
+  font-size: 2.15rem;
   font-weight: bold;
   margin: 0 0 0 1rem;
 }
