@@ -159,6 +159,11 @@ textarea:read-only {
   width: calc(100% - 3rem);
   z-index: 0;
 }
+#refresh {
+  font-size: 75%;
+  margin-left: 1rem;
+  padding: 0.5rem 1rem 0.5rem 1rem;
+}
 #superuser {
   float: right;
   margin: 0.5rem 0 0 2rem;
