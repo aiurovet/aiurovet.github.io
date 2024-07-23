@@ -8,6 +8,10 @@ self.addEventListener("install", (event) => {
       return cache.addAll([
         "/toybc",
         "/toybc/index.html",
+        "/toybc/ux/images/exit.svg",
+        "/toybc/ux/images/last.svg",
+        "/toybc/ux/images/menu.svg",
+        "/toybc/ux/images/next.svg",
         "/toybc/ux/images/toybc.svg",
         "/toybc/dl/data.js",
         "/toybc/dl/extn.js",

@@ -28,13 +28,9 @@ textarea:read-only {
   padding: 0 2.5rem 0 2.5rem;
 }
 .button.exit {
-  background: red;
-  color: white;
-  font-family: monospace;
-  font-weight: bold;
   margin: 0 0.5rem 0 0;
-  padding: 0 1.5rem 0 1.5rem;
   text-decoration: none;
+  width: 3rem;
 }
 .buttons-pref {
   float: right;

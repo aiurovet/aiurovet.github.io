@@ -58,7 +58,7 @@
 				<div class="toolbar-link" id="paste" onclick="Pref.onClickPaste();">Paste</div> -->
 				<div class="toolbar-link" id="undo" onclick="Pref.onEditAction('undo');">Undo</div>
 				<div class="toolbar-link" id="redo" onclick="Pref.onEditAction('redo');">Redo</div>
-				<div class="button exit" onclick="Pref.onClickExit();">X</div>
+				<div class="button exit tool" onclick="Pref.onClickExit();"></div>
 				<div class="button help" onclick="Pref.onClickHelp(true);">Help</div>
 				<input type="text" id="superuser" onblur="Pref.onBlurSuperUser();"/>
 				<textarea class="lists" id="lists" readonly maxlength="11000" onblur="Pref.onBlurEdit();" onclick="Pref.onClickEdit();"></textarea>
@@ -68,7 +68,7 @@
 			<div class="toolbar-help">
 			<div id="help-title">ToyBC</div>
 				<span id="copyright"><a id="homepage" href="https://aiurovet.com/" target="_blank">Alexander Iurovetski</a></span>
-				<div class="button exit" onclick="Pref.onClickHelp(false);">X</div>
+				<div class="button tool exit" onclick="Pref.onClickHelp(false);"></div>
 			</div>
 			<div class="popup-scroll help">
 				<h4 id="version"></h4>

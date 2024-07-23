@@ -59,6 +59,11 @@ body, html {
 .tool::before {
   content: "\00a0";
 }
+.tool.exit {
+  background-image: url("../images/exit.svg");
+  height: 3rem;
+  width: 3rem;
+}
 .tool.first {
   background-image: url("../images/last.svg");
   transform: scale(-1, 1);
