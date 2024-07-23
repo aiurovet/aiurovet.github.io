@@ -7,6 +7,13 @@
 
 /* ELEMENTS */
 
+#copyright {
+  font-size: 2rem;
+  margin: 0 0 0 1rem;
+}
+#copyright::before {
+  content: "Copyright \00a9  2024";
+}
 #version::before {
-  content: "Version 0.2.8";
+  content: "Version 0.3.0";
 }

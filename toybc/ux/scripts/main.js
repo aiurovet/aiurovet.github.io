@@ -55,7 +55,7 @@ $(window).resize(() => {
   if (!Main || !Core) {
     return;
   }
-  Main.setEditorHeight();
+  Pref.setEditorHeight();
   Core.setWordNo(Data.wordNo);
 });
 
@@ -63,18 +63,6 @@ $(window).resize(() => {
 
 class MainClass {
   constructor() {
-  }
-
-  //////////////////////////////////////////////////////////////////////////////
-  // Get the dynamic max height of the editor element
-  //////////////////////////////////////////////////////////////////////////////
-
-  setEditorHeight() {
-    var jqSuper = $("#superuser");
-    var offset = jqSuper.offset().top + jqSuper.outerHeight();
-    var height = `calc(100% - 0rem - ${offset}px)`;
-
-    Core.getEditor().css("height", height);
   }
 
   //////////////////////////////////////////////////////////////////////////////
@@ -101,7 +89,7 @@ class MainClass {
     Core.setPopup(true);
     Pref.onClickCanEdit();
     Pref.onClickHelp(false);
-    this.setEditorHeight();
+    Pref.setEditorHeight();
     Pref.resetList();
   }
 

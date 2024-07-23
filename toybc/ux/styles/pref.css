@@ -42,14 +42,12 @@ textarea:read-only {
   font-family: monospace;
   font-weight: bold;
 }
-.copyright {
-  font-size: 2rem;
-  margin: 0 0 0 1rem;
-}
-.li-arrow {
+.help-tool {
   font-size: 1.5rem;
   font-family: monospace;
+  height: 2.5rem;
   margin-right: 1em;
+  width: 1rem;
 }
 .no-bullet {
   list-style: none;

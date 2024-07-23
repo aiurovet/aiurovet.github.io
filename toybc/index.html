@@ -9,9 +9,9 @@
 	<title>ToyBC</title>
 	<link rel="manifest" href="manifest.json" crossorigin="use-credentials">
 	<link rel="shortcut icon" type="image/x-icon" href="ux/images/toybc.svg">
+	<link rel="stylesheet" href="ux/styles/info.css">
 	<link rel="stylesheet" href="ux/styles/main.css">
 	<link rel="stylesheet" href="ux/styles/pref.css">
-	<link rel="stylesheet" href="ux/styles/version.css">
 	<script src="lib/scripts/jquery.slim.min.js"></script>
 	<script src="dl/data.js"></script>
 	<script src="dl/extn.js"></script>
@@ -37,11 +37,11 @@
 <body>
   <div id="main">
     <div class="main-tools center">
-      <div class="main-tool center" onclick="Main.onClickPrevWord();">&lsaquo;</div>
-      <div class="main-tool center" onclick="Main.onClickFirstWord();">&laquo;</div>
-      <div class="main-tool center" onclick="Main.onClickMenu();">&equiv;</div>
-      <div class="main-tool center" onclick="Main.onClickLastWord();">&raquo;</div>
-      <div class="main-tool center" onclick="Main.onClickNextWord();">&rsaquo;</div>
+      <div class="main-tool tool center prev" onclick="Main.onClickPrevWord();"></div>
+      <div class="main-tool tool center first" onclick="Main.onClickFirstWord();"></div>
+      <div class="main-tool tool center menu" onclick="Main.onClickMenu();"></div>
+      <div class="main-tool tool center last" onclick="Main.onClickLastWord();"></div>
+      <div class="main-tool tool center next" onclick="Main.onClickNextWord();"></div>
     </div>
     <div class="main-word center">
 			<span id="main-word" onclick="Main.onClickWord();"></span>
@@ -67,7 +67,7 @@
 		<div id="popup-help">
 			<div class="toolbar-help">
 			<div id="help-title">ToyBC</div>
-				<span class="copyright">Copyright &copy; 2024<a id="homepage" href="https://aiurovet.com/" target="_blank">Alexander Iurovetski</a></span>
+				<span id="copyright"><a id="homepage" href="https://aiurovet.com/" target="_blank">Alexander Iurovetski</a></span>
 				<div class="button exit" onclick="Pref.onClickHelp(false);">X</div>
 			</div>
 			<div class="popup-scroll help">
@@ -98,54 +98,55 @@
 				<div class="para-help">
 					On the main screen, tap or click the following arrows to navigate through the words:
 					<ul class="no-bullet">
-						<li><span class="li-arrow">&lsaquo;</span>move to the previous word</li>
-						<li><span class="li-arrow">&laquo;</span>move to the first word</li>
-						<li><span class="li-arrow">&equiv;</span>open the <em>Preferences</em> popup window</li>
-						<li><span class="li-arrow">&raquo;</span>move to the last word</li>
-						<li><span class="li-arrow">&rsaquo;</span>move to the next word</li>
+						<li><span class="help-tool tool prev"></span>move to the previous word</li>
+						<li><span class="help-tool tool first"></span>move to the first word</li>
+						<li><span class="help-tool tool menu"></span>open the <em>Preferences</em> popup window</li>
+						<li><span class="help-tool tool last"></span>move to the last word</li>
+						<li><span class="help-tool tool next"></span>move to the next word</li>
 					</ul>
 				</div>
 				<div class="para-help">
 					Depending on your preferences (under &equiv;), tapping or clicking the current word, might
-					submit a full or image search in another browser tab. By default, this feature is switched
+					submit a <em>Google search</em> in another browser tab. By default, this feature is switched
 					off, as the search results are not always child-friendly.
 				</div>
 				<h4>Preferences</h4>
 				<div class="para-help">
 					Switch between word lists simply by tapping or clicking any word in that list, then closing
-					the <em>Preferences</em> popup by clicking the red <em>X</em> button.
+					the <em>Preferences</em> popup by tapping or clicking the red <em>X</em> button.
 				</div>
 				<div class="para-help">
-					You can replace the preset lists of words with the ones in a language of your choice simply by
-					updating the text in the edit box. The separator between words is comma, so you can put the whole
-					expression as a "word" or make a bigger spacing between the letters. If you wish to break a
-					particular list and continue on the next line, just end the previous line with comma. Once
-					finished, close the <em>Preferences</em> popup by clicking the red <em>X</em> button.
+					You can replace the preset lists of words with the ones in a language of your choice by checking
+					the <em>Edit</em> box, then updating the text in the text box. The word separator is comma, so
+					you can put the whole	expression as a "word" or make a bigger spacing between the letters. If you
+					wish to break a	particular list and continue on the next line, just end the previous line with comma.
+					Once finished, close the <em>Preferences</em> popup by tapping or clicking the red <em>X</em> button.
 				</div>
 				<div class="para-help">
 					The changes to preferences you make are automatically saved to a browser's local storage, so the
 					next time you visit the page, all these changes will not be lost.
 					However, you can't access that storage for the sake of sharing, and if you clear your browser
-					data, all these changes will disappear. It is highly recommended to click <em>Copy</em> (or
-					perform copy as you normally do) all your word lists to clipboard, then paste and save to a file
-					or a cloud document in <em>Google Docs</em> or <em>Microsoft Office 365</em> or similar. In case
-					you need to restore your word list, you could open that document, highlight all word lists, copy,
-					then <em>Paste</em> or paste like you normally do. The copy/paste approach also allows you to easily
-					share word lists with your friends and relatives.
+					data, all these changes will disappear. It is highly recommended to select all your word lists (i.e.
+					the whole text) to clipboard, then paste that in a proper text editor and save to a file or a cloud
+					document in <em>Google Docs</em> or <em>Microsoft Office 365</em> or similar. In case of to restore
+					your word list, you could open that document, select all word lists, copy, then paste into the text
+					field like you would normally do. The copy/paste approach also allows you to easily	share word lists
+					with your friends and relatives.
 				</div>
 				<div class="para-help">
 					Please note that:
 					<ul>
-						<li>Every time you change any of the word lists in the editor, the whole text gets copied
-							to the clipboard automatically after you close the <em>Preferences</em> popup.</li>
-						<li><em>Copy</em> and <em>Paste</em> links might not work for all browsers, especially, the
-							  mobile ones. But you can still do copy/paste the default way.</li>
+						<li>Every time you change any of the word lists in the editor, the whole text gets copied to the
+							clipboard automatically after you close the <em>Preferences</em> popup.</li>
+						<li><em>Undo</em> and <em>Redo</em> links might not work for all browsers, especially, the
+							mobile ones. But you can still try to get the context menu (long press on a mobile device or
+							the right mouse click on PC), then perform your normal editing operation.</li>
 						<li>If no text is highlighted in the editor, clicking <em>Copy</em> will copy everything
 							to the clipboard.</li>
-					  <li>The data is not shared among different browsers on the same device. However, you
-						    can copy from one browser and paste to another one.</li>
+					  <li>The data is not shared among different browsers on the same device. However, you can copy from
+							a text area in one browser and paste into a text area in another one.</li>
 					  <li>The text limit is 11,000 characters which is about 10x the size of the preset word
-							  lists.</li>
+							lists.</li>
 					</ul>
 				</div>
 				<h4>Super-User Features</h4>

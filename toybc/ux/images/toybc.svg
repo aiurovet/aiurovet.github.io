@@ -3,7 +3,6 @@
 <defs>
   <style>
     g {
-      /*fill: rgb(234, 221, 202);*/
       fill: rgb(239, 229, 215);
       stroke: rgb(0, 56, 184);
       stroke-linecap: square;

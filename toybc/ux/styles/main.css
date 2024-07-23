@@ -30,14 +30,15 @@ body, html {
   justify-content: center;
 }
 .main-tool {
-  margin: 0 1rem 0 0;
+  min-height: 32px;
+  max-height: 96px;
   width: 20%;
 }
 .main-tools {
   cursor: pointer;
   font-size: 80px;
   font-weight: bold;
-  height: 20%;
+  height: 15%;
   padding: 1rem 0 0 0;
   width: 100%;
 }
@@ -47,6 +48,33 @@ body, html {
   height: 80%;
   text-align: center;
   width: 100%;
+}
+.tool {
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  margin: 0 1rem 0 0;
+}
+.tool::before {
+  content: "\00a0";
+}
+.tool.first {
+  background-image: url("../images/last.svg");
+  transform: scale(-1, 1);
+}
+.tool.last {
+  background-image: url("../images/last.svg");
+}
+.tool.menu {
+  background-image: url("../images/menu.svg");
+}
+.tool.next {
+  background-image: url("../images/next.svg");
+}
+.tool.prev {
+  background-image: url("../images/next.svg");
+  transform: scale(-1, 1);
 }
 
 /* ELEMENTS */

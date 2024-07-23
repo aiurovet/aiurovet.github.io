@@ -18,6 +18,22 @@ class CoreClass {
   }
 
   //////////////////////////////////////////////////////////////////////////////
+  // Either set or return the value of the check-box
+  //////////////////////////////////////////////////////////////////////////////
+
+  canEdit(mode) {
+    var jqCanEdit = $("#canedit");
+
+    if ((mode !== undefined) && (mode !== null)) {
+      jqCanEdit.prop("checked", mode ? true : false);
+    } else {
+      mode = jqCanEdit.prop("checked");
+    }
+
+    return mode;
+  }
+
+  //////////////////////////////////////////////////////////////////////////////
   // Get wordlists editor's jQuery element with or without an extra selector
   //////////////////////////////////////////////////////////////////////////////
 
@@ -72,7 +88,7 @@ class CoreClass {
   //////////////////////////////////////////////////////////////////////////////
 
   setPopup(isVisible) {
-    $("#canedit").prop("checked", false);
+    this.canEdit(false);
     this.setVisible($(".popup-container"), isVisible);
   }
 

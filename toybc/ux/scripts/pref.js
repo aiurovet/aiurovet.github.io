@@ -105,11 +105,16 @@ class PrefClass {
 
   onClickCanEdit() {
     var jqEditor = Core.getEditor();
-    var isEditable = $("#canedit").prop("checked");
+    var isEditable = Core.canEdit();
     Core.setVisible($("#copy, #paste, #undo, #redo"), isEditable);
     jqEditor.prop("readonly", !isEditable);
     jqEditor.focus();
-    jqEditor[0].selectionEnd = jqEditor[0].selectionStart;
+
+    if (isEditable) {
+      jqEditor[0].selectionEnd = jqEditor[0].selectionStart;
+    } else {
+      this.resetList(true);
+    }
   }
 
   //////////////////////////////////////////////////////////////////////////////
@@ -155,6 +160,27 @@ class PrefClass {
 
   //////////////////////////////////////////////////////////////////////////////
 
+  onClickHelp(isOn) {
+    var visibleDisplayStyle = "flex";
+    Core.setVisible($("#popup-pref"), !isOn, visibleDisplayStyle);
+    Core.setVisible($("#popup-help"), isOn, visibleDisplayStyle);
+
+    if (isOn) {
+      return;
+    }
+
+    this.setEditorHeight();
+    Core.getEditor().focus();
+
+    if (Core.canEdit()) {
+      return;
+    }
+
+    this.resetList();
+  }
+
+  //////////////////////////////////////////////////////////////////////////////
+
   async onClickPaste() {
     var content = await Clip.read();
 
@@ -176,14 +202,6 @@ class PrefClass {
     jqEditor.focus();
 
     alert("\nThe words were successfully pasted from the clipboard.");
-  }
-
-  //////////////////////////////////////////////////////////////////////////////
-
-  onClickHelp(isOn) {
-    var visibleDisplayStyle = "flex";
-    Core.setVisible($("#popup-pref"), !isOn, visibleDisplayStyle);
-    Core.setVisible($("#popup-help"), isOn, visibleDisplayStyle);
   }
 
   //////////////////////////////////////////////////////////////////////////////
@@ -218,6 +236,18 @@ class PrefClass {
 
     Core.setWordNo(0);
     this.setCursorForSearch();
+  }
+
+  //////////////////////////////////////////////////////////////////////////////
+  // Get the dynamic max height of the editor element
+  //////////////////////////////////////////////////////////////////////////////
+
+  setEditorHeight() {
+    var jqSuper = $("#superuser");
+    var offset = jqSuper.offset().top + jqSuper.outerHeight();
+    var height = `calc(100% - 0rem - ${offset}px)`;
+
+    Core.getEditor().css("height", height);
   }
 
   //////////////////////////////////////////////////////////////////////////////
