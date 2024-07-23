@@ -11,6 +11,7 @@ textarea {
 }
 textarea:read-only {
   background: rgb(248, 248, 255);
+  cursor: default;
 }
 
 /* CLASSES */
