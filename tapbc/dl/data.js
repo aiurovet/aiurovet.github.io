@@ -17,8 +17,8 @@ class DataClass {
       return this.init(that.text, that.listNo, that.search, that.isChanged);
     }
 
-    this.appName = "toybc";
-    this.version = "0.2.0";
+    this.appName = "tapbc";
+    this.version = "0.4.0";
 
     this.keyPref = this.appName + "_pref";
     this.keyText = this.appName + "_text";

@@ -6,9 +6,9 @@
 <html>
 <head>
 	<meta charset="UTF-8">
-	<title>ToyBC</title>
+	<title>TapBC</title>
 	<link rel="manifest" href="manifest.json" crossorigin="use-credentials">
-	<link rel="shortcut icon" type="image/x-icon" href="ux/images/toybc.svg">
+	<link rel="shortcut icon" type="image/x-icon" href="ux/images/tapbc.svg">
 	<link rel="stylesheet" href="ux/styles/info.css">
 	<link rel="stylesheet" href="ux/styles/main.css">
 	<link rel="stylesheet" href="ux/styles/pref.css">
@@ -24,7 +24,7 @@
 		var sw = navigator.serviceWorker;
 
 		if (sw) {
-			sw.register("/toybc/service-worker.js", {scope: "/toybc/"})
+			sw.register("/tapbc/service-worker.js", {scope: "/tapbc/"})
 				.then((reg) => {
 					console.log("The service worker registration successfully completed");
 				})
@@ -66,7 +66,7 @@
 		</div>
 		<div id="popup-help">
 			<div class="toolbar-help">
-			<div id="help-title">ToyBC</div>
+			<div id="help-title">TapBC</div>
 				<span id="copyright"><a id="homepage" href="https://aiurovet.com/" target="_blank">Alexander Iurovetski</a></span>
 				<div class="button tool exit" onclick="Pref.onClickHelp(false);"></div>
 			</div>
@@ -86,13 +86,13 @@
 				</div>
 				<h4>How to Install</h4>
 				<div class="para-help">
-					You can use <em>ToyBC</em> in a browser as is without any installation. However, you can install it on most
+					You can use <em>TapBC</em> in a browser as is without any installation. However, you can install it on most
 					devices via a browser. This will give you the native app experience and the ability to run offline
 					when the internet connection is intermittent or unavailable. Please note that not all browsers are capable of
 					that. Ideally, use <em>Google Chrome</em> or <em>Microsoft Edge</em>. You should find and click
 					<em>Add to Home screen</em> menu item (or similar), then follow the prompts. On laptops and desktops, an icon
 					with a monitor and an arrow might be displayed at the end of the address bar. If you hover it with the mouse
-					cursor, a tooltip will pop: <em>Install ToyBC</em>. Click the icon and follow the prompts.
+					cursor, a tooltip will pop: <em>Install TapBC</em>. Click the icon and follow the prompts.
 				</div>
 				<h4>How to Use</h4>
 				<div class="para-help">

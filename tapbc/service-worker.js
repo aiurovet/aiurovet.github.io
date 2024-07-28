@@ -4,26 +4,26 @@
 
 self.addEventListener("install", (event) => {
   event.waitUntil(
-    caches.open("toybc").then((cache) => {
+    caches.open("tapbc").then((cache) => {
       return cache.addAll([
-        "/toybc",
-        "/toybc/index.html",
-        "/toybc/ux/images/exit.svg",
-        "/toybc/ux/images/last.svg",
-        "/toybc/ux/images/menu.svg",
-        "/toybc/ux/images/next.svg",
-        "/toybc/ux/images/toybc.svg",
-        "/toybc/dl/data.js",
-        "/toybc/dl/extn.js",
-        "/toybc/dl/json.js",
-        "/toybc/lib/scripts/jquery.slim.min.js",
-        "/toybc/ux/scripts/clip.js",
-        "/toybc/ux/scripts/core.js",
-        "/toybc/ux/scripts/main.js",
-        "/toybc/ux/scripts/pref.js",
-        "/toybc/ux/styles/main.css",
-        "/toybc/ux/styles/pref.css",
-        "/toybc/ux/styles/version.css"
+        "/tapbc",
+        "/tapbc/index.html",
+        "/tapbc/ux/images/exit.svg",
+        "/tapbc/ux/images/last.svg",
+        "/tapbc/ux/images/menu.svg",
+        "/tapbc/ux/images/next.svg",
+        "/tapbc/ux/images/tapbc.svg",
+        "/tapbc/dl/data.js",
+        "/tapbc/dl/extn.js",
+        "/tapbc/dl/json.js",
+        "/tapbc/lib/scripts/jquery.slim.min.js",
+        "/tapbc/ux/scripts/clip.js",
+        "/tapbc/ux/scripts/core.js",
+        "/tapbc/ux/scripts/main.js",
+        "/tapbc/ux/scripts/pref.js",
+        "/tapbc/ux/styles/main.css",
+        "/tapbc/ux/styles/pref.css",
+        "/tapbc/ux/styles/version.css"
       ]);
     })
   );
