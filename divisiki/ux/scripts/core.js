@@ -34,7 +34,6 @@ class CoreClass {
   //////////////////////////////////////////////////////////////////////////////
 
   setPopup(isVisible) {
-    this.canEdit(false);
     this.setVisible($(".popup-container"), isVisible);
   }
 

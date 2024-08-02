@@ -37,7 +37,7 @@
   <div class="main">
 		<div class="main-row">
 			<div id="main-menu" class="main-col menu"></div>
-			<div id="main-score" class="main-col clickable info max">
+			<div id="main-score" class="main-col clickable info max" onclick="Main.onClickSetUser();">
 				<span id="user"></span>: <span id="score"></span>
 			</div>
 		</div>
@@ -56,6 +56,11 @@
 	<!-- PREF & HELP -->
 
 	<div class="popup-container center">
+		<div id="popup-user">
+			<input type="text" id="set-user"/>
+			<button onclick="Pref.onClickSetUser(true);">OK</button>
+			<button onclick="Pref.onClickSetUser(false);">Cancel</button>
+		</div>
 		<div id="popup-pref">
 			<div class="toolbar-pref">
 				<label class="toolbar-link">

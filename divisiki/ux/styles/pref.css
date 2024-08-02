@@ -64,6 +64,9 @@ textarea:read-only {
   position: fixed; /* Stay in place */
   z-index: 1; /* Sit on top */
 }
+.popup-pref, .popup-help, .popup-user {
+  display: none;
+}
 .popup-pref > div, .popup-help > div {
   display: flex;
   cursor: pointer;
