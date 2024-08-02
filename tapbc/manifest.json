@@ -3,7 +3,7 @@
   "short_name": "TapBC",
   "description": "Teach your child an alphabet and words you prefer, in a language of your choice",
   "scope": "/tapbc/",
-  "start_url": "/tapbc/",
+  "start_url": ".",
   "display": "standalone",
   "background_color": "#f4eee4",
   "theme_color": "#000000",
