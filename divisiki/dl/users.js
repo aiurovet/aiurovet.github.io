@@ -1,0 +1,146 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (C) Alexander Iurovetski 2024
+// All rights reserved under MIT license (see LICENSE file)
+//
+// Manage application data and preferences
+////////////////////////////////////////////////////////////////////////////////
+
+"use strict";
+
+////////////////////////////////////////////////////////////////////////////////
+
+class UsersClass {
+  constructor(list) {
+    // Constants
+    //
+    this.defaultDivBy = "2";
+    this.defaultId = "Incognito";
+    this.defaultMaxScore = 0;
+    this.minLevel = 0;
+    this.maxLevel = Number.MAX_SAFE_INTEGER.toString().length;
+    this.defaultLevel = this.minLevel;
+    this.defaultTimeLimitValue = 0;
+
+    // Initialize
+    //
+    this.selectedNo = 0;
+    this.list = list || [];
+
+    // Ensure the default user has been created
+    //
+    this.add();
+  }
+
+  //////////////////////////////////////////////////////////////////////////////
+
+  add(id) {
+    this.selectedNo = this.list.length;
+
+    this.list[this.selectedNo] = {
+      divBy: this.defaultDivBy,
+      id: id ?? this.defaultId,
+      level: this.defaultLevel,
+      maxScore: this.defaultMaxScore,
+      timeLimitValue: this.defaultTimeLimitValue
+    };
+
+    return this;
+  }
+
+  //////////////////////////////////////////////////////////////////////////////
+
+  fromSerializable(from) {
+    this.selectedNo = from.selectedNo;
+    this.list = from.list;
+  }
+
+  //////////////////////////////////////////////////////////////////////////////
+
+  getDivBy() {
+    return this.list[this.selectedNo].divBy;
+  }
+
+  //////////////////////////////////////////////////////////////////////////////
+
+  getId() {
+    return this.list[this.selectedNo].id;
+  }
+
+  //////////////////////////////////////////////////////////////////////////////
+
+  getLevel() {
+    return this.list[this.selectedNo].level;
+  }
+
+  //////////////////////////////////////////////////////////////////////////////
+
+  getMaxScore() {
+    return this.list[this.selectedNo].maxScore;
+  }
+
+  //////////////////////////////////////////////////////////////////////////////
+
+  getSelected() {
+    return this.list[this.selectedNo];
+  }
+
+  //////////////////////////////////////////////////////////////////////////////
+
+  getSelectedNo() {
+    return this.selectedNo;
+  }
+
+  //////////////////////////////////////////////////////////////////////////////
+
+  getTimeLimitValue() {
+    return this.list[this.selectedNo].timeLimitValue;
+  }
+
+  //////////////////////////////////////////////////////////////////////////////
+
+  select(value) {
+    var selNo = !value || (value < 0) ? 0 : value;
+    var maxNo = this.list.length;
+
+    if (selNo >= maxNo) {
+      selNo = maxNo - 1;
+    }
+
+    this.selectedNo = selNo;
+  }
+
+  //////////////////////////////////////////////////////////////////////////////
+
+  setDivBy(value) {
+    this.list[this.selectedNo].divBy = value || "2";
+  }
+
+  //////////////////////////////////////////////////////////////////////////////
+
+  setLevel(value) {
+    this.list[this.selectedNo].level = value.length || 1;
+  }
+
+  //////////////////////////////////////////////////////////////////////////////
+
+  setMaxScore(value) {
+    this.list[this.selectedNo].maxScore = value.length || 1;
+  }
+
+  //////////////////////////////////////////////////////////////////////////////
+
+  setTimeLimitValue(value) {
+    this.list[this.selectedNo].timeLimitValue = value;
+  }
+
+  //////////////////////////////////////////////////////////////////////////////
+
+  toSerializable() {
+    return {
+      selectedNo: this.selectedNo,
+      list: this.list
+    };
+  }
+
+  //////////////////////////////////////////////////////////////////////////////
+}

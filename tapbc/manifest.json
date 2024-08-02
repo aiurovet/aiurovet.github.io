@@ -1,7 +1,7 @@
 {
   "name": "TapBC",
   "short_name": "TapBC",
-  "description": "Teach your kid letters and words in any language as well as numbers and simple Math",
+  "description": "Teach your child an alphabet and words you prefer, in a language of your choice",
   "start_url": "/tapbc",
   "display": "standalone",
   "background_color": "#f4eee4",

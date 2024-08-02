@@ -131,6 +131,9 @@ pre {
 .hgap-min::after {
   content: "\00A0";
 }
+.link {
+  cursor: pointer;
+}
 .link img {
   margin-right: 1rem;
 }

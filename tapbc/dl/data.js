@@ -2,7 +2,7 @@
 // Copyright (C) Alexander Iurovetski 2024
 // All rights reserved under MIT license (see LICENSE file)
 //
-// Manage application data (preferences and word lists)
+// Manage the application data and preferences
 ////////////////////////////////////////////////////////////////////////////////
 
 "use strict";
