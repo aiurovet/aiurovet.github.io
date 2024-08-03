@@ -24,7 +24,7 @@
 		var sw = navigator.serviceWorker;
 
 		if (sw) {
-			sw.register("/tapbc/service-worker.js", {scope: "/tapbc/"})
+			sw.register("/tapbc/service-worker.js")
 				.then((reg) => {
 					console.log("The service worker registration successfully completed");
 				})
