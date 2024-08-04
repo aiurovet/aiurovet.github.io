@@ -24,7 +24,7 @@ class UserClass {
 
   // List of game stats
   //
-  #games = [];
+  #games = [new GameClass()];
 
   //////////////////////////////////////////////////////////////////////////////
 
@@ -33,7 +33,9 @@ class UserClass {
       this.id = id ?? defaultId;
     }
     if ((games !== undefined) && (games !== null) && Array.isArray(games)) {
-      this.#games = games;
+      if ((games.length > 0) && (games[0] instanceof GameClass)) {
+        this.#games = games;
+      }
     }
   }
 

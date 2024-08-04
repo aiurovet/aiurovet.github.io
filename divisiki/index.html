@@ -23,7 +23,7 @@
 		var sw = navigator.serviceWorker;
 
 		if (sw) {
-			sw.register("/divisiki/service-worker.js", {scope: "/divisiki/"})
+			sw.register("/divisiki/service-worker.js")
 				.then((reg) => {
 					console.log("The service worker registration successfully completed");
 				})

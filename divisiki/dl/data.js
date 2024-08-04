@@ -22,9 +22,6 @@ class DataClass {
 
     this.keyPref = this.appName;
 
-    this.timeLimitTexts  = [ "None", "1m", "45s", "30s", "20s", "15s", "10s", "5s" ];
-    this.timeLimitValues = [ 0, 60, 45, 30, 20, 15, 10, 5 ];
-
     // Initialize the properties
     //
     this.initUsers();
@@ -37,16 +34,6 @@ class DataClass {
   drop() {
     delete localStorage[this.keyPref];
     initUsers();
-  }
-
-  //////////////////////////////////////////////////////////////////////////////
-  // Get time limit index by the current value
-  //////////////////////////////////////////////////////////////////////////////
-
-  indexOfTimeLimitValue() {
-    var i = this.timeLimitValues.indexOf(this.users.getTimeLimitValue());
-
-    return i < 0 ? 0 : i;
   }
 
   //////////////////////////////////////////////////////////////////////////////
@@ -103,45 +90,7 @@ class DataClass {
   //////////////////////////////////////////////////////////////////////////////
 
   setLevel(number) {
-    this.users.setLevel(number.length);
-  }
-
-  //////////////////////////////////////////////////////////////////////////////
-  // Set the current user's time limit value from the value passed:
-  // either exact or within the range (and taking the lower boundary then)
-  //////////////////////////////////////////////////////////////////////////////
-
-  setTimeLimitValue(value) {
-    var endNo = this.timeLimitValues.length - 1;
-    var selNo = 0;
-
-    for (; selNo <= endNo; selNo++) {
-      if (value < this.timeLimitValues[selNo]) {
-        continue;
-      }
-      if (selNo >= endNo) {
-        break;
-      }
-      if (value < this.timeLimitValues[selNo + 1]) {
-        break;
-      }
-    }
-
-    this.users.setTimeLimitValue(this.timeLimitValues[selNo]);
-  }
-
-  //////////////////////////////////////////////////////////////////////////////
-  // Set the current user's time limit value from the display text
-  //////////////////////////////////////////////////////////////////////////////
-
-  setTimeLimitValueFromText(text) {
-    var selNo = this.timeLimitTexts.indexOf(text);
-
-    if (selNo < 0) {
-      selNo = 0;
-    }
-
-    this.users.setTimeLimitValue(this.timeLimitValues[selNo]);
+    this.users.active.active.level(number.length);
   }
 
   //////////////////////////////////////////////////////////////////////////////
