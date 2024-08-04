@@ -18,7 +18,7 @@ class DataClass {
     }
 
     this.appName = "tapbc";
-    this.version = "0.4.0";
+    this.version = "0.2.0";
 
     this.keyPref = this.appName + "_pref";
     this.keyText = this.appName + "_text";

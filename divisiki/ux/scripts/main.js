@@ -33,9 +33,9 @@ $(document).ready(() => {
   // Initialize the UI
   //
   Data.load();
-  Core.setNumber(2);
-  Core.setDivBy(2);
-  Core.setScore(0);
+  this.setNumber(2);
+  this.setDivBy(2);
+  this.setScore(0);
   //Pref.init(true);
 });
 
@@ -55,7 +55,7 @@ $(window).resize(() => {
   if (!Core) {
     return;
   }
-  Core.setNumberHeight();
+  thissetNumberHeight();
 });
 
 ////////////////////////////////////////////////////////////////////////////////
@@ -106,6 +106,49 @@ class MainClass {
   //////////////////////////////////////////////////////////////////////////////
 
   onClickYes() {
+  }
+
+  //////////////////////////////////////////////////////////////////////////////
+
+  setDivBy(value) {
+    $("#divby").text(value);
+    Data.save();
+  }
+
+  //////////////////////////////////////////////////////////////////////////////
+
+  setNumber(value) {
+    $("#number").text(value);
+    Data.save();
+    this.setNumberHeight();
+  }
+
+  //////////////////////////////////////////////////////////////////////////////
+
+  setNumberHeight() {
+    var jqNumber = $("#number"); 
+    var maxHeight = $("#action-no").innerHeight();
+    var maxWidth = jqNumber.innerWidth();
+    var numLen = (jqNumber.text().length || 1);
+    var curWidth = ((maxWidth / numLen) * (15. / 12));
+
+    if (curWidth > maxWidth) {
+      curWidth = maxWidth;
+    }
+
+    if (curWidth > maxHeight) {
+      curWidth = maxHeight;
+    }
+
+    jqNumber.css("font-size", `${curWidth}px`);
+  }
+
+  //////////////////////////////////////////////////////////////////////////////
+
+  setScore(value) {
+    $("#user").text(Data.users.getId());
+    $("#score").text(value);
+    Data.save();
   }
 
   //////////////////////////////////////////////////////////////////////////////

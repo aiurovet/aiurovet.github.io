@@ -9,32 +9,31 @@
 
 ////////////////////////////////////////////////////////////////////////////////
 
-import {UserClass} from "./user.js";
+import {GameClass} from "./game.js";
 
 ////////////////////////////////////////////////////////////////////////////////
 
-class UsersClass {
+class GamesClass {
   // Selected game
   //
   active = null;
 
-  // Selected index in the list of users
+  // Selected game index in the games list
   //
   #activeNo = 0;
 
-  // List of users (always has at least one element)
+  // List of games (always has at least one element)
   //
-  #list = [new UserClass()];
+  #list = [new GameClass()];
 
   //////////////////////////////////////////////////////////////////////////////
 
   constructor(list, activeNo) {
     if ((list !== undefined) && (list !== null) && Array.isArray(list)) {
-      if ((list.length > 0) && (list[0] instanceof UserClass)) {
+      if ((list.length > 0) && (list[0] instanceof GameClass)) {
         this.#list = list;
       }
     }
-
     this.setActiveNo(activeNo);
   }
 
@@ -51,10 +50,10 @@ class UsersClass {
     var list = [];
 
     for (var i = 0, n = fromList.length; i < n; i++) {
-      list.push(UserClass.fromSerializable(fromList[i]));
+      list.push(GameClass.fromSerializable(fromList[i]));
     }
 
-    return new UsersClass(list, from.activeNo);
+    return new GamesClass(list, from.activeNo);
   }
 
   //////////////////////////////////////////////////////////////////////////////
@@ -65,12 +64,6 @@ class UsersClass {
 
     this.active = this.#list[actNo];
     this.#activeNo = actNo;
-  }
-
-  //////////////////////////////////////////////////////////////////////////////
-
-  setActiveGameNo(value) {
-    this.active.setActiveGameNo(value);
   }
 
   //////////////////////////////////////////////////////////////////////////////

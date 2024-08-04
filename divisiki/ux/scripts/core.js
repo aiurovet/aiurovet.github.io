@@ -7,12 +7,6 @@
 
 ////////////////////////////////////////////////////////////////////////////////
 
-const MainToolFontRatio = 0.50;
-const MaxCharHeightRatio = 0.60;
-const MinMainToolFontSize = 32;
-
-////////////////////////////////////////////////////////////////////////////////
-
 class CoreClass {
   constructor() {
   }
@@ -43,49 +37,6 @@ class CoreClass {
 
   setVisible(jqElem, isVisible, style) {
     jqElem.css("display", isVisible ? style ?? "block" : "none");
-  }
-
-  //////////////////////////////////////////////////////////////////////////////
-
-  setDivBy(value) {
-    $("#divby").text(value);
-    Data.save();
-  }
-
-  //////////////////////////////////////////////////////////////////////////////
-
-  setNumber(value) {
-    $("#number").text(value);
-    Data.save();
-    this.setNumberHeight();
-  }
-
-  //////////////////////////////////////////////////////////////////////////////
-
-  setNumberHeight() {
-    var jqNumber = $("#number"); 
-    var maxHeight = $("#action-no").innerHeight();
-    var maxWidth = jqNumber.innerWidth();
-    var numLen = (jqNumber.text().length || 1);
-    var curWidth = ((maxWidth / numLen) * (15. / 12));
-
-    if (curWidth > maxWidth) {
-      curWidth = maxWidth;
-    }
-
-    if (curWidth > maxHeight) {
-      curWidth = maxHeight;
-    }
-
-    jqNumber.css("font-size", `${curWidth}px`);
-  }
-
-  //////////////////////////////////////////////////////////////////////////////
-
-  setScore(value) {
-    $("#user").text(Data.users.getId());
-    $("#score").text(value);
-    Data.save();
   }
 
   //////////////////////////////////////////////////////////////////////////////
