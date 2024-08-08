@@ -44,6 +44,17 @@ class GameClass {
   //////////////////////////////////////////////////////////////////////////////
 
   constructor(level, divisors, maxScore, lastTimeLimit) {
+    if (level instanceof Object) {
+      var from = level;
+      this.init(from.level, from.divisors, from.maxScore, from.lastTimeLimit);
+    } else {
+      this.init(level, divisors, maxScore, lastTimeLimit);
+    }
+  }
+
+  //////////////////////////////////////////////////////////////////////////////
+
+  init(level, divisors, maxScore, lastTimeLimit) {
     if ((level !== undefined) && (level !== null)) {
       this.level = level;
     }
@@ -51,17 +62,58 @@ class GameClass {
       this.divisors = divisors;
     }
     if (lastTimeLimit) {
-      this.lastTimeLimit = lastTimeLimit;
+      this.lastTimeLimit = lastTimeLimconstructorit;
     }
     if (maxScore) {
       this.maxScore = maxScore;
     }
+
+    return this;
   }
 
   //////////////////////////////////////////////////////////////////////////////
 
-  static fromSerializable(that) {
-    return new GameClass(that.level, that.divisors, that.maxScore, that.lastTimeLimit);
+  getMaxScore(value) {
+    if ((value === undefined) || (value === null)) {
+      return this.maxScore;
+    }
+
+    if (!Number.isInteger(value)) {
+      value = parseInt(value);
+    }
+
+    return this.maxScore > value ? this.maxScore : value;
+  }
+
+  //////////////////////////////////////////////////////////////////////////////
+
+  static levelFromNumber(value) {
+    if ((value === undefined) || (value === null)) {
+      return 1;
+    }
+
+    var valueStr = value.toString();
+
+    if (Number.isInteger(value)) {
+      return valueStr.length - (value < 0 ? 1 : 0);
+    }
+
+    var n = valueStr.length;
+
+    return n <= 0 ? 1 : n;
+  }
+
+  //////////////////////////////////////////////////////////////////////////////
+
+  setMaxScore(value) {
+    var maxScore = this.getMaxScore(value);
+
+    if (this.maxScore < maxScore) {
+      this.maxScore = maxScore;
+      return true;
+    }
+
+    return false;
   }
 
   //////////////////////////////////////////////////////////////////////////////

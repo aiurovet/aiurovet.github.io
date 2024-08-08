@@ -7,24 +7,58 @@
 
 "use strict";
 
+import {UserClass} from "./user.js";
+
 ////////////////////////////////////////////////////////////////////////////////
 
 class DataClass {
-  constructor(that) {
-    // Initialize constants
-    //
-    if (that) {
-      return this.init(that.text, that.listNo, that.search, that.isChanged);
+  // Constants
+  //
+  static appName = "divisiki";
+  static keyPref = appName;
+  static version = "0.1.0";
+
+  //////////////////////////////////////////////////////////////////////////////
+
+  // List of users with game stats
+  //
+  #users = [new UserClass()];
+
+  // An index of a selected user in the list of users
+  //
+  #selectedUserNo = 0;
+
+  //////////////////////////////////////////////////////////////////////////////
+
+  constructor(version, selectedUserNo, users) {
+    if (version instanceof Object) {
+      var from = version;
+      this.init(from.version, from.selectedUserNo, from.users);
+    } else {
+      this.init(version, selectedUserNo, users);
+    }
+  }
+
+  //////////////////////////////////////////////////////////////////////////////
+
+  init(version, selectedUserNo, users) {
+    if ((version !== undefined) && (version !== null) && (version.length > 0)) {
+      this.version = version;
     }
 
-    this.appName = "divisiki";
-    this.version = "0.1.0";
+    if ((users === undefined) || (users === null) || !Array.isArray(users) || (users.length == 0)) {
+      this.#users = [new UserClass()];
+      selectedUserNo = 0;
+    } else if (users[0] instanceof UserClass) {
+      this.#users = users;
+    } else {
+      this.#users = [];
+      for (var i = 0, n = users.length; i < n; i++) {
+        this.#users.push(new UserClass(users[i]));
+      }
+    }
 
-    this.keyPref = this.appName;
-
-    // Initialize the properties
-    //
-    this.initUsers();
+    this.setSelectedUserNo(selectedUserNo);
   }
 
   //////////////////////////////////////////////////////////////////////////////
@@ -33,15 +67,20 @@ class DataClass {
 
   drop() {
     delete localStorage[this.keyPref];
-    initUsers();
+    this.init();
+    this.save();
   }
 
   //////////////////////////////////////////////////////////////////////////////
-  // Delete all users and add the default one
+
+  getSelectedGame() {
+    return this.getSelectedUser().getSelectedGame();
+  }
+
   //////////////////////////////////////////////////////////////////////////////
 
-  initUsers() {
-    this.users = new UsersClass();
+  getSelectedUser() {
+    return this.#users[this.#selectedUserNo];
   }
 
   //////////////////////////////////////////////////////////////////////////////
@@ -51,12 +90,14 @@ class DataClass {
   load() {
     var prefContent = localStorage[this.keyPref];
 
-    if (prefContent) {
-      var pref = Json.fromString(prefContent);
-      this.users.fromSerializable(pref.users);
-    } else {
+    if (!prefContent) {
       this.save(true);
+      return this;
     }
+
+    var pref = Json.fromString(prefContent);
+    // Check the saved version here if needed
+    this.init(pref);
 
     return this;
   }
@@ -72,25 +113,38 @@ class DataClass {
       return;
     }
 
-    // Collect all properties that are supposed to be saved
-    //
-    var pref = {
-      version: this.version,
-      users: this.users.toSerializable()
-    };
-
     // Write to the local storage
     //
-
-    localStorage[this.keyPref] = Json.toString(pref);
+    localStorage[this.keyPref] = Json.toString(this.toSerializable());
   }
 
   //////////////////////////////////////////////////////////////////////////////
-  // Set the current user's level
+
+  setSelectedGameNo(value) {
+    this.getSelectedUser().setSelectedGameNo(value);
+  }
+
   //////////////////////////////////////////////////////////////////////////////
 
-  setLevel(number) {
-    this.users.active.active.level(number.length);
+  setSelectedUserNo(value) {
+    var count = this.#users.length;
+    this.#selectedUserNo = !value || (value < 0) ? 0 : value % count;
+  }
+
+  //////////////////////////////////////////////////////////////////////////////
+
+  toSerializable() {
+    var users = [];
+
+    for (var i = 0, n = this.#users.length; i < n; i++) {
+      users[i] = this.#users[i].toSerializable();
+    }
+
+    return {
+      version: version,
+      selectedUserNo: this.#selectedUserNo,
+      users: users
+    };
   }
 
   //////////////////////////////////////////////////////////////////////////////

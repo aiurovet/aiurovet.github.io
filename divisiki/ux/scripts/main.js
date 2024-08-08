@@ -7,6 +7,8 @@
 
 "use strict";
 
+import {DataClass} from "./data.js";
+
 ////////////////////////////////////////////////////////////////////////////////
 // Global variables (singlwtons)
 ////////////////////////////////////////////////////////////////////////////////
@@ -55,7 +57,7 @@ $(window).resize(() => {
   if (!Core) {
     return;
   }
-  thissetNumberHeight();
+  this.setNumberHeight();
 });
 
 ////////////////////////////////////////////////////////////////////////////////
@@ -112,6 +114,7 @@ class MainClass {
 
   setDivBy(value) {
     $("#divby").text(value);
+    Data.getSelectedGame().divisors.splice(0, 0, value);
     Data.save();
   }
 
@@ -119,6 +122,7 @@ class MainClass {
 
   setNumber(value) {
     $("#number").text(value);
+    Data.getSelectedGame().level = GameClass.levelFromNumber(value);
     Data.save();
     this.setNumberHeight();
   }
@@ -146,9 +150,12 @@ class MainClass {
   //////////////////////////////////////////////////////////////////////////////
 
   setScore(value) {
-    $("#user").text(Data.users.getId());
+    $("#user").text(Data.getSelectedUser().getUserId());
     $("#score").text(value);
-    Data.save();
+
+    if (Data.getSelectedGame().setMaxScore(value)) {
+      Data.save();
+    }
   }
 
   //////////////////////////////////////////////////////////////////////////////

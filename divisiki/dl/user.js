@@ -7,63 +7,88 @@
 
 "use strict";
 
-import {GamesClass} from "./games.js";
+import {GameClass} from "./game.js";
 
 ////////////////////////////////////////////////////////////////////////////////
 
 class UserClass {
   // Constants
   //
-  static defaultId = "Anonymous";
+  static defaultUserId = "Anonymous";
 
   //////////////////////////////////////////////////////////////////////////////
 
-  // User id (free text)
+  // User id (unique free text)
   //
-  id = this.defaultId;
+  userId = this.defaultUserId;
 
   // List of game stats
   //
   #games = [new GameClass()];
 
+  // An index of a selected game in the list of games
+  //
+  #selectedGameNo = 0;
+
   //////////////////////////////////////////////////////////////////////////////
 
-  constructor(id, games) {
-    if ((id !== undefined) && (id !== null)) {
-      this.id = id ?? defaultId;
+  constructor(userId, selectedGameNo, games) {
+    if (userId instanceof Object) {
+      var from = userId;
+      this.init(from.userId, from.selectedGameNo, from.games)
+    } else {
+      this.init(userId, selectedGameNo, games);
     }
-    if ((games !== undefined) && (games !== null) && Array.isArray(games)) {
-      if ((games.length > 0) && (games[0] instanceof GameClass)) {
-        this.#games = games;
+  }
+
+  //////////////////////////////////////////////////////////////////////////////
+
+  init(userId, selectedGameNo, games) {
+    this.userId = userId ?? defaultUserId;
+
+    if ((games === undefined) || (games === null) || !Array.isArray(games) || (games.length == 0)) {
+      this.#games = [new GameClass()];
+      selectedGameNo = 0;
+    } else if (games[0] instanceof GameClass) {
+      this.#games = games;
+    } else {
+      this.#games = [];
+      for (var i = 0, n = games.length; i < n; i++) {
+        this.#games.push(new GameClass(games[i]));
       }
     }
+
+    this.setSelectedGameNo(selectedGameNo);
+
+    return this;
   }
 
   //////////////////////////////////////////////////////////////////////////////
 
-  acceptActiveGame() {
-    this.#games.acceptActive();
+  getSelectedGame() {
+    return this.#games[this.#selectedGameNo];
   }
 
   //////////////////////////////////////////////////////////////////////////////
 
-  fromSerializable(that) {
-    this.id = that.id;
-    this.#games = GamesClass.fromSerializable(that.games);
-  }
-
-  //////////////////////////////////////////////////////////////////////////////
-
-  setActiveGameNo(value) {
-    this.#games.setActiveNo(value);
+  setSelectedGameNo(value) {
+    var count = this.#games.length;
+    this.#selectedGameNo = !value || (value < 0) ? 0 : value % count;
   }
 
   //////////////////////////////////////////////////////////////////////////////
 
   toSerializable() {
+    var games = [];
+
+    for (var i = 0, n = this.#games.length; i < n; i++) {
+      games[i] = this.#games[i].toSerializable();
+    }
+
     return {
-      id: this.id,
-      games: this.#games.toSerializable()
+      userId: this.userId,
+      selectedGameNo: this.#selectedGameNo,
+      games: games
     };
   }
 
