@@ -7,8 +7,6 @@
 
 "use strict";
 
-import {GameClass} from "./game.js";
-
 ////////////////////////////////////////////////////////////////////////////////
 
 class UserClass {
@@ -20,7 +18,7 @@ class UserClass {
 
   // User id (unique free text)
   //
-  userId = this.defaultUserId;
+  userId = UserClass.defaultUserId;
 
   // List of game stats
   //
@@ -43,8 +41,14 @@ class UserClass {
 
   //////////////////////////////////////////////////////////////////////////////
 
+  getSelectedGame() {
+    return this.#games[this.#selectedGameNo];
+  }
+
+  //////////////////////////////////////////////////////////////////////////////
+
   init(userId, selectedGameNo, games) {
-    this.userId = userId ?? defaultUserId;
+    this.userId = userId ?? UserClass.defaultUserId;
 
     if ((games === undefined) || (games === null) || !Array.isArray(games) || (games.length == 0)) {
       this.#games = [new GameClass()];
@@ -61,12 +65,6 @@ class UserClass {
     this.setSelectedGameNo(selectedGameNo);
 
     return this;
-  }
-
-  //////////////////////////////////////////////////////////////////////////////
-
-  getSelectedGame() {
-    return this.#games[this.#selectedGameNo];
   }
 
   //////////////////////////////////////////////////////////////////////////////

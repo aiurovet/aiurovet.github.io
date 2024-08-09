@@ -6,23 +6,18 @@
       fill: none;
       stroke: none;
     }
-    circle {
-      stroke: none;
-      fill: rgb(0, 123, 49);
-    }
     path {
-      fill: none;
-      stroke: white;
+      fill: black;
+      stroke: black;
       stroke-linecap: round;
-      stroke-linejoin: miter;
+      stroke-linejoin: round;
       stroke-width: 11;
     }
   </style>
 </defs>
 
 <g>
-  <circle cx="50" cy="50" r="50" />
-  <path d="M23,49 L44,68 L74,32" />
+  <path d="M30,30 L70,50 L30,70 L30,30" />
   Sorry, your browser does not support SVG!
 </g>
 

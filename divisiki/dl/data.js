@@ -7,15 +7,13 @@
 
 "use strict";
 
-import {UserClass} from "./user.js";
-
 ////////////////////////////////////////////////////////////////////////////////
 
 class DataClass {
   // Constants
   //
   static appName = "divisiki";
-  static keyPref = appName;
+  static keyPref = DataClass.appName;
   static version = "0.1.0";
 
   //////////////////////////////////////////////////////////////////////////////
@@ -66,7 +64,7 @@ class DataClass {
   //////////////////////////////////////////////////////////////////////////////
 
   drop() {
-    delete localStorage[this.keyPref];
+    delete localStorage[DataClass.keyPref];
     this.init();
     this.save();
   }
@@ -88,7 +86,7 @@ class DataClass {
   //////////////////////////////////////////////////////////////////////////////
 
   load() {
-    var prefContent = localStorage[this.keyPref];
+    var prefContent = localStorage[DataClass.keyPref];
 
     if (!prefContent) {
       this.save(true);
@@ -97,7 +95,7 @@ class DataClass {
 
     var pref = Json.fromString(prefContent);
     // Check the saved version here if needed
-    this.init(pref);
+    this.init(pref.version, pref.selectedUserNo, pref.users);
 
     return this;
   }
@@ -115,7 +113,8 @@ class DataClass {
 
     // Write to the local storage
     //
-    localStorage[this.keyPref] = Json.toString(this.toSerializable());
+    var pref = this.toSerializable();
+    localStorage[DataClass.keyPref] = Json.toString(pref);
   }
 
   //////////////////////////////////////////////////////////////////////////////
@@ -141,7 +140,7 @@ class DataClass {
     }
 
     return {
-      version: version,
+      version: DataClass.version,
       selectedUserNo: this.#selectedUserNo,
       users: users
     };

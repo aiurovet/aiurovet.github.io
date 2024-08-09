@@ -14,7 +14,7 @@ class GameClass {
   //
   static defaultDivisors = [2];
   static defaultTimeLimit = 0;
-  static minLevel = 0;
+  static minLevel = 1;
   static maxLevel = Number.MAX_SAFE_INTEGER.toString().length;
   static minMaxScore = 0;
   static maxMaxScore = Number.MAX_SAFE_INTEGER;
@@ -25,21 +25,33 @@ class GameClass {
 
   //////////////////////////////////////////////////////////////////////////////
 
+  // The current number within the level
+  //
+  curNumber = 0;
+
   // Array of numbers to check divisbility against (one of to be passed)
   //
-  divisors = defaultDivisors;
+  divisors = GameClass.defaultDivisors;
 
   // The last selected time period (the number of seconds) to solve each primer (0 - unlimited)
   //
-  lastTimeLimit = defaultTimeLimit;
+  lastTimeLimit = GameClass.defaultTimeLimit;
 
   // Number of digits in the number being played
   //
-  level = minLevel;
+  level = GameClass.minLevel;
+
+  // The highest number within the level
+  //
+  maxNumber = GameClass.defaultDivisors[0];
 
   // The highest score ever achieved
   //
-  maxScore = minMaxScore;
+  maxScore = GameClass.minMaxScore;
+
+  // The lowest number within the level
+  //
+  minNumber = GameClass.defaultDivisors[0];
 
   //////////////////////////////////////////////////////////////////////////////
 
@@ -54,25 +66,6 @@ class GameClass {
 
   //////////////////////////////////////////////////////////////////////////////
 
-  init(level, divisors, maxScore, lastTimeLimit) {
-    if ((level !== undefined) && (level !== null)) {
-      this.level = level;
-    }
-    if ((divisors !== undefined) && (divisors !== null) && Array.isArray(divisors)) {
-      this.divisors = divisors;
-    }
-    if (lastTimeLimit) {
-      this.lastTimeLimit = lastTimeLimconstructorit;
-    }
-    if (maxScore) {
-      this.maxScore = maxScore;
-    }
-
-    return this;
-  }
-
-  //////////////////////////////////////////////////////////////////////////////
-
   getMaxScore(value) {
     if ((value === undefined) || (value === null)) {
       return this.maxScore;
@@ -83,6 +76,34 @@ class GameClass {
     }
 
     return this.maxScore > value ? this.maxScore : value;
+  }
+
+  //////////////////////////////////////////////////////////////////////////////
+
+  getNextNumber() {
+    var range = this.maxNumber - this.minNumber;
+    return this.minNumber + Math.floor(Math.random() * range);
+  }
+
+  //////////////////////////////////////////////////////////////////////////////
+
+  init(level, divisors, maxScore, lastTimeLimit) {
+    if ((level !== undefined) && (level !== null)) {
+      this.level = level < GameClass.minLevel ? GameClass.minLevel : level;
+    }
+    if ((divisors !== undefined) && (divisors !== null) && Array.isArray(divisors)) {
+      this.divisors = divisors.length <= 0 ? GameClass.defaultDivisors : divisors;
+    }
+    if ((lastTimeLimit !== undefined) && (lastTimeLimit !== null)) {
+      this.lastTimeLimit = lastTimeLimit <= 0 ? 0 : lastTimeLimit;
+    }
+    if ((maxScore !== undefined) && (maxScore !== null)) {
+      this.maxScore = maxScore <= 0 ? 0 : maxScore;
+    }
+
+    this.setMinMaxNumber();
+
+    return this;
   }
 
   //////////////////////////////////////////////////////////////////////////////
@@ -105,6 +126,14 @@ class GameClass {
 
   //////////////////////////////////////////////////////////////////////////////
 
+  setMinMaxNumber(level) {
+    level ??= this.level;
+    this.minNumber = parseInt("1" + "0".repeat(level - 1));
+    this.maxNumber = parseInt("9".repeat(level));
+  }
+
+  //////////////////////////////////////////////////////////////////////////////
+
   setMaxScore(value) {
     var maxScore = this.getMaxScore(value);
 
@@ -114,6 +143,14 @@ class GameClass {
     }
 
     return false;
+  }
+
+  //////////////////////////////////////////////////////////////////////////////
+
+  setResponse(isDivisible) {
+    level ??= this.level;
+    this.minNumber = parseInt("1" + "0".repeat(level - 1));
+    this.maxNumber = parseInt("9".repeat(level));
   }
 
   //////////////////////////////////////////////////////////////////////////////

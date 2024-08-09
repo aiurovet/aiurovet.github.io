@@ -7,15 +7,13 @@
 
 "use strict";
 
-import {DataClass} from "./data.js";
-
 ////////////////////////////////////////////////////////////////////////////////
-// Global variables (singlwtons)
+// Global variables (singletons)
 ////////////////////////////////////////////////////////////////////////////////
 
 var Core = null;
-var Json = null;
 var Data = null;
+var Json = null;
 var Main = null;
 var Pref = null;
 
@@ -24,20 +22,20 @@ var Pref = null;
 ////////////////////////////////////////////////////////////////////////////////
 
 $(document).ready(() => {
-  // Initialize global variables
+  // Initialize singletons
   //
-  Core = new CoreClass();
-  Data = new DataClass();
   Json = new JsonClass();
-  Main = new MainClass();
+  Data = (new DataClass()).load();
+  Core = new CoreClass();
   Pref = new PrefClass();
+  Main = new MainClass();
 
   // Initialize the UI
   //
-  Data.load();
-  this.setNumber(2);
-  this.setDivBy(2);
-  this.setScore(0);
+  Main.setNumber();
+  Main.onClickPlay(false);
+  Main.setDivisor(2);
+  Main.setScore(0);
   //Pref.init(true);
 });
 
@@ -57,7 +55,7 @@ $(window).resize(() => {
   if (!Core) {
     return;
   }
-  this.setNumberHeight();
+  Main.setNumberHeight();
 });
 
 ////////////////////////////////////////////////////////////////////////////////
@@ -79,6 +77,25 @@ class MainClass {
   }
 
   //////////////////////////////////////////////////////////////////////////////
+  // Go to the menu
+  //////////////////////////////////////////////////////////////////////////////
+
+  onClickPlay(isPlay) {
+    var visibleStyle = "flex";
+
+    if (isPlay) {
+      Core.setVisible($("#play"), false);
+      Core.setVisible($("#number"), true, visibleStyle);
+    } else {
+      Core.setVisible($("#number"), false);
+      Core.setVisible($("#play"), true, visibleStyle);
+    }
+
+    Main.setNumberHeight();
+    $("#action-no, #action-yes").css("opacity", (isPlay ? 1.0 : 0.25));
+  }
+
+  //////////////////////////////////////////////////////////////////////////////
   // Reaction: a number is NOT divisible by given number(s)
   //////////////////////////////////////////////////////////////////////////////
 
@@ -95,15 +112,6 @@ class MainClass {
   }
 
   //////////////////////////////////////////////////////////////////////////////
-  // Click handler to select a user
-  //////////////////////////////////////////////////////////////////////////////
-
-  onClickSetUserConfirm(isOK) {
-    Core.setPopup(false);
-    Core.setVisible($("#popup-user"), false);
-  }
-
-  //////////////////////////////////////////////////////////////////////////////
   // Reaction: a number is divisible by given number(s)
   //////////////////////////////////////////////////////////////////////////////
 
@@ -112,18 +120,16 @@ class MainClass {
 
   //////////////////////////////////////////////////////////////////////////////
 
-  setDivBy(value) {
-    $("#divby").text(value);
+  setDivisor(value) {
+    $("#divisor").text(value);
     Data.getSelectedGame().divisors.splice(0, 0, value);
     Data.save();
   }
 
   //////////////////////////////////////////////////////////////////////////////
 
-  setNumber(value) {
-    $("#number").text(value);
-    Data.getSelectedGame().level = GameClass.levelFromNumber(value);
-    Data.save();
+  setNumber() {
+    $("#number").text(Data.getSelectedGame().getNextNumber());
     this.setNumberHeight();
   }
 
@@ -150,7 +156,7 @@ class MainClass {
   //////////////////////////////////////////////////////////////////////////////
 
   setScore(value) {
-    $("#user").text(Data.getSelectedUser().getUserId());
+    $("#user").text(Data.getSelectedUser().userId);
     $("#score").text(value);
 
     if (Data.getSelectedGame().setMaxScore(value)) {
