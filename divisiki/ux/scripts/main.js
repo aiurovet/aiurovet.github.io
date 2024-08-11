@@ -37,7 +37,7 @@ $(document).ready(() => {
   Main.setNumber();
   Main.setUser();
   Main.setScore();
-  Main.setDivisors();
+  Main.setDivisors([3]); // temporarily defaulting to divisbility by 3
   Main.onClickPlay(false);
   //Pref.init(true);
 });
