@@ -14,12 +14,13 @@ class GameClass {
   //
   static defaultDivisors = [2];
   static defaultTimeLimit = 0;
+  static maxAttempts = 100;
   static minLevel = 1;
   static maxLevel = Number.MAX_SAFE_INTEGER.toString().length;
   static minMaxScore = 0;
   static maxMaxScore = Number.MAX_SAFE_INTEGER;
   static timeLimits = {
-    0: "--:--", 120: "02:00", 90: "01:30", 60: "01:00", 45: "00:45",
+    0: "No time limit", 120: "02:00", 90: "01:30", 60: "01:00", 45: "00:45",
     30: "00:30", 20: "00:20", 15: "00:15", 10: "00:10", 5: "00:05"
   };
 
@@ -28,6 +29,10 @@ class GameClass {
   // The current number within the level
   //
   curNumber = 0;
+
+  // The current score
+  //
+  curScore = 0;
 
   // Array of numbers to check divisbility against (one of to be passed)
   //
@@ -41,18 +46,17 @@ class GameClass {
   //
   level = GameClass.minLevel;
 
-  // The highest number within the level
-  //
-  maxNumber = GameClass.defaultDivisors[0];
-
   // The highest score ever achieved
   //
   maxScore = GameClass.minMaxScore;
 
-  // The lowest number within the level
+  // Array of previously played numbers to avoid repetitions within the session
   //
-  minNumber = GameClass.defaultDivisors[0];
+  #oldNumbers = [];
 
+  //////////////////////////////////////////////////////////////////////////////
+  // If only one argument passed, and that is an object, initialize parameters
+  // with its properties: i.e. constructing from a deserialized saved object
   //////////////////////////////////////////////////////////////////////////////
 
   constructor(level, divisors, maxScore, lastTimeLimit) {
@@ -68,7 +72,7 @@ class GameClass {
 
   getMaxScore(value) {
     if ((value === undefined) || (value === null)) {
-      return this.maxScore;
+      value = this.curScore;
     }
 
     if (!Number.isInteger(value)) {
@@ -76,13 +80,6 @@ class GameClass {
     }
 
     return this.maxScore > value ? this.maxScore : value;
-  }
-
-  //////////////////////////////////////////////////////////////////////////////
-
-  getNextNumber() {
-    var range = this.maxNumber - this.minNumber;
-    return this.minNumber + Math.floor(Math.random() * range);
   }
 
   //////////////////////////////////////////////////////////////////////////////
@@ -101,11 +98,53 @@ class GameClass {
       this.maxScore = maxScore <= 0 ? 0 : maxScore;
     }
 
-    this.setMinMaxNumber();
+    this.#oldNumbers = [];
 
     return this;
   }
 
+  //////////////////////////////////////////////////////////////////////////////
+  // Check the current number is divisible by any of the divisors
+  //////////////////////////////////////////////////////////////////////////////
+
+  isDivisible() {
+    for (var i = 0; i < this.level; i++) {
+      var divisor = this.divisors[i];
+
+      if (divisor <= 0) {
+        break;
+      }
+      if ((this.curNumber % divisor) == 0) {
+        return true;
+      }
+    }
+    return false;
+  }
+
+  //////////////////////////////////////////////////////////////////////////////
+  // Check the current number is divisible by any of the divisors and return
+  // the next number in case of success or 0 otherwise
+  //
+  // However, maxScore should be updated explicitly by the caller, as they might
+  // want to save the game too
+  //////////////////////////////////////////////////////////////////////////////
+
+  setResult(isAnswerYes) {
+    var isDivisible = this.isDivisible();
+    var isSuccess = ((isAnswerYes && isDivisible) || (!isAnswerYes && !isDivisible));
+
+    if (!isSuccess) {
+      this.curScore = 0;
+      return 0;
+    }
+
+    ++this.curScore;
+
+    return this.setNextNumber();
+  }
+
+  //////////////////////////////////////////////////////////////////////////////
+  // Return the number of digits in the given number
   //////////////////////////////////////////////////////////////////////////////
 
   static levelFromNumber(value) {
@@ -125,13 +164,19 @@ class GameClass {
   }
 
   //////////////////////////////////////////////////////////////////////////////
+  // Set the new list of divisors from the list of string values
+  //////////////////////////////////////////////////////////////////////////////
 
-  setMinMaxNumber(level) {
-    level ??= this.level;
-    this.minNumber = parseInt("1" + "0".repeat(level - 1));
-    this.maxNumber = parseInt("9".repeat(level));
+  setDivisors(value) {
+    this.divisors = [];
+
+    for (var i = 0, n = value.length; i < n; i++) {
+      this.divisors.push(parseInt(value[i]));
+    }
   }
 
+  //////////////////////////////////////////////////////////////////////////////
+  // Set the new record the passed value exceeds the previous record
   //////////////////////////////////////////////////////////////////////////////
 
   setMaxScore(value) {
@@ -147,12 +192,44 @@ class GameClass {
 
   //////////////////////////////////////////////////////////////////////////////
 
-  setResponse(isDivisible) {
-    level ??= this.level;
-    this.minNumber = parseInt("1" + "0".repeat(level - 1));
-    this.maxNumber = parseInt("9".repeat(level));
+  setNextNumber() {
+    var curNumber = this.curNumber;
+
+    if (curNumber && !this.#oldNumbers.includes(curNumber)) {
+      this.#oldNumbers.push(curNumber);
+    }
+
+    var attempts = 0;
+
+    for (curNumber = 0; !curNumber || this.#oldNumbers.includes(curNumber);) {
+      if ((++attempts) > GameClass.maxAttempts) {
+        if (this.level >= GameClass.maxLevel) {
+          return 0;
+        }
+        attempts = 0;
+        ++this.level;
+      }
+
+      curNumber = 0;
+
+      for (var i = 0; i < this.level; i++) {
+        var digit = Math.floor(Math.random() * 9);
+
+        if ((i == 0) && (digit == 0)) {
+          digit = 1;
+        }
+
+        curNumber = (curNumber * 10) + digit;
+      }
+    }
+
+    this.curNumber = curNumber;
+
+    return curNumber;
   }
 
+  //////////////////////////////////////////////////////////////////////////////
+  // Convert a text string like mm:ss into the number of seconds
   //////////////////////////////////////////////////////////////////////////////
 
   static timeLimitFromName(name) {
@@ -199,6 +276,8 @@ class GameClass {
     return value;
   }
 
+  //////////////////////////////////////////////////////////////////////////////
+  // Convert this object into the one that excludes all irrelevant properties
   //////////////////////////////////////////////////////////////////////////////
 
   toSerializable() {

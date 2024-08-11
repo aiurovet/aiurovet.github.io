@@ -16,6 +16,7 @@ var Data = null;
 var Json = null;
 var Main = null;
 var Pref = null;
+var Timer = null;
 
 ////////////////////////////////////////////////////////////////////////////////
 // Application entry point
@@ -29,13 +30,15 @@ $(document).ready(() => {
   Core = new CoreClass();
   Pref = new PrefClass();
   Main = new MainClass();
+  Timer = new TimerClass($("#timer"));
 
   // Initialize the UI
   //
   Main.setNumber();
+  Main.setUser();
+  Main.setScore();
+  Main.setDivisors();
   Main.onClickPlay(false);
-  Main.setDivisor(2);
-  Main.setScore(0);
   //Pref.init(true);
 });
 
@@ -65,6 +68,32 @@ class MainClass {
   }
 
   //////////////////////////////////////////////////////////////////////////////
+  // Game reaction response
+  //////////////////////////////////////////////////////////////////////////////
+
+  onClickAnswer(isYes) {
+    var game = Data.getSelectedGame();
+    var nextNumber = game.setResult(isYes);
+
+    if (!nextNumber) {
+      this.onClickPlay(false);
+      return;
+    }
+
+    this.setTimer(true);
+    this.setNumber(nextNumber);
+    this.setScore();
+  }
+
+  //////////////////////////////////////////////////////////////////////////////
+  // Go to the help screen
+  //////////////////////////////////////////////////////////////////////////////
+
+  onClickHelp(isOn) {
+    Core.setVisible($(".popup-container, #popup-help"), isOn, "flex");
+  }
+
+  //////////////////////////////////////////////////////////////////////////////
   // Go to the menu
   //////////////////////////////////////////////////////////////////////////////
 
@@ -84,6 +113,7 @@ class MainClass {
     var visibleStyle = "flex";
 
     if (isPlay) {
+      this.setScore(0);
       Core.setVisible($("#play"), false);
       Core.setVisible($("#number"), true, visibleStyle);
     } else {
@@ -91,15 +121,13 @@ class MainClass {
       Core.setVisible($("#play"), true, visibleStyle);
     }
 
-    Main.setNumberHeight();
-    $("#action-no, #action-yes").css("opacity", (isPlay ? 1.0 : 0.25));
-  }
+    this.setNumberHeight();
 
-  //////////////////////////////////////////////////////////////////////////////
-  // Reaction: a number is NOT divisible by given number(s)
-  //////////////////////////////////////////////////////////////////////////////
+    var jqButtons = $("#action-no, #action-yes");
+    jqButtons.css("opacity", (isPlay ? 1.0 : 0.25));
+    jqButtons.css("pointer-events", (isPlay ? "auto" : "none"));
 
-  onClickNo() {
+    this.setTimer(isPlay);
   }
 
   //////////////////////////////////////////////////////////////////////////////
@@ -112,24 +140,30 @@ class MainClass {
   }
 
   //////////////////////////////////////////////////////////////////////////////
-  // Reaction: a number is divisible by given number(s)
-  //////////////////////////////////////////////////////////////////////////////
 
-  onClickYes() {
-  }
+  setDivisors(value) {
+    var game = Data.getSelectedGame();
 
-  //////////////////////////////////////////////////////////////////////////////
+    if (value) {
+      game.setDivisors(value);
+      Data.save();
+    }
 
-  setDivisor(value) {
-    $("#divisor").text(value);
-    Data.getSelectedGame().divisors.splice(0, 0, value);
-    Data.save();
+    $("#divisor").text(game.divisors.join(" or "));
   }
 
   //////////////////////////////////////////////////////////////////////////////
 
   setNumber() {
-    $("#number").text(Data.getSelectedGame().getNextNumber());
+    var game = Data.getSelectedGame();
+    var oldLevel = game.level;
+    var newNumber = game.setNextNumber();
+
+    if (game.level > oldLevel) {
+      Data.save();
+    }
+
+    $("#number").text(newNumber);
     this.setNumberHeight();
   }
 
@@ -156,12 +190,36 @@ class MainClass {
   //////////////////////////////////////////////////////////////////////////////
 
   setScore(value) {
-    $("#user").text(Data.getSelectedUser().userId);
-    $("#score").text(value);
+    var game = Data.getSelectedGame();
 
-    if (Data.getSelectedGame().setMaxScore(value)) {
+    if ((value !== undefined) && (value !== null)) {
+      game.curScore = value;
+    }
+
+    if (game.setMaxScore(value)) {
       Data.save();
     }
+
+    $("#score").text(`${game.curScore} / ${game.maxScore}`);
+  }
+
+  //////////////////////////////////////////////////////////////////////////////
+
+  setTimer(isStart) {
+    var game = Data.getSelectedGame();
+    Timer.init(null, game.lastTimeLimit);
+
+    if (isStart) {
+      Timer.start();
+    } else {
+      Timer.stop();
+    }
+  }
+
+  //////////////////////////////////////////////////////////////////////////////
+
+  setUser() {
+    $("#user").text(Data.getSelectedUser().userId);
   }
 
   //////////////////////////////////////////////////////////////////////////////

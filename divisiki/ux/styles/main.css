@@ -6,8 +6,13 @@
 /* PARAMETERS */
 
 :root {
-  --min-icon-size: 32px;
-  --max-icon-size: 96px;
+  --font-size-body: 16px;
+  --font-size-help: 48px;
+  --font-size-info: 32px;
+  --min-margin-help: 1.5%;
+  --min-margin-info: 1%;
+  --min-margin-left: 1%;
+  --min-margin-menu: 1.5%;
 }
 
 /* NODES */
@@ -33,9 +38,6 @@ body, html {
 .btn, .clickable, .clickable > *, .menu {
   cursor: pointer;
 }
-.info.clickable {
-  color: blue;
-}
 .main {
   background: rgb(244, 238, 228);
   display: flex;
@@ -49,22 +51,32 @@ body, html {
   background-repeat: no-repeat;
   background-size: contain;
   flex-grow: 0;
-  margin: 0 1.5% 0 1.5%;
+  margin: 0 var(--min-margin-menu) 0 var(--min-margin-menu);
   opacity: 0.25;
   width: 10%;
 }
 .main-col.btn.no {
   background-image: url("../images/no.svg");
 }
-.main-col.btn.yes {
+.main-col.btn.yes {.bold-off {
+  font-weight: normal;
+}
+
   background-image: url("../images/yes.svg");
 }
 .main-col.info {
   align-self: center;
   align-items: center;
-  font-size: 200%;
+  font-size: var(--font-size-info);
   justify-content: center;
-  margin: 0 1% 0 auto;
+  margin: 0 var(--min-margin-info) 0 auto;
+}
+.main-col.info.help {
+  font-size: var(--font-size-help);
+  margin-left: var(--min-margin-help);
+}
+.main-col.info.left {
+  margin-left: var(--min-margin-info);
 }
 .main-col.menu {
   align-self: stretch;
@@ -72,7 +84,7 @@ body, html {
   background-position: left center;
   background-size: contain;
   background-repeat: no-repeat;
-  margin-left: 1.5%;
+  margin-left: var(--min-margin-menu);
   width: 10%;
 }
 .main-col.number {

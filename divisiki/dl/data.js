@@ -27,6 +27,9 @@ class DataClass {
   #selectedUserNo = 0;
 
   //////////////////////////////////////////////////////////////////////////////
+  // If only one argument passed, and that is an object, initialize parameters
+  // with its properties: i.e. constructing from a deserialized saved object
+  //////////////////////////////////////////////////////////////////////////////
 
   constructor(version, selectedUserNo, users) {
     if (version instanceof Object) {
@@ -37,6 +40,9 @@ class DataClass {
     }
   }
 
+  //////////////////////////////////////////////////////////////////////////////
+  // If only one argument passed, and that is an object, initialize parameters
+  // with its properties: i.e. constructing from a deserialized saved object
   //////////////////////////////////////////////////////////////////////////////
 
   init(version, selectedUserNo, users) {

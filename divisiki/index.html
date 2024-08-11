@@ -9,17 +9,18 @@
 	<title>Divisiki</title>
 	<link rel="manifest" href="./manifest.json" crossorigin="use-credentials">
 	<link rel="shortcut icon" type="image/x-icon" href="ux/images/divisiki.svg">
+	<link rel="stylesheet" href="ux/styles/help.css">
 	<link rel="stylesheet" href="ux/styles/info.css">
 	<link rel="stylesheet" href="ux/styles/main.css">
-	<link rel="stylesheet" href="ux/styles/pref.css">
 	<script src="dl/data.js"></script>
 	<script src="dl/game.js"></script>
 	<script src="dl/json.js"></script>
 	<script src="dl/user.js"></script>
 	<script src="lib/scripts/jquery.slim.min.js"></script>
 	<script src="ux/scripts/core.js"></script>
+	<script src="ux/scripts/help.js"></script>
 	<script src="ux/scripts/main.js"></script>
-	<script src="ux/scripts/pref.js"></script>
+	<script src="ux/scripts/timer.js"></script>
 	<script>
 		var sw = navigator.serviceWorker;
 
@@ -37,18 +38,29 @@
 <body>
   <div class="main">
 		<div class="main-row">
-			<div id="main-menu" class="main-col menu"></div>
-			<div id="main-score" class="main-col clickable info max" onclick="Main.onClickSetUser();">
+			<!-- <div id="main-menu" class="main-col menu"></div> -->
+			<div id="main-help" class="main-col clickable info help left " onclick="Main.onClickHelp(true);">
+				?
+			</div>
+			<div id="main-help" class="main-col clickable info" onclick="Main.onClickHelp(true);">
+				Updates coming soon
+			</div>
+			<div id="main-score" class="main-col info max"> <!-- onclick="Main.onClickSetUser();"> -->
 				<span id="user"></span>: <span id="score"></span>
 			</div>
 		</div>
     <div class="main-row max">
-			<div id="action-no" class="main-col btn no"></div>
+			<div id="action-no" class="main-col btn no" onclick="Main.onClickAnswer(false);"></div>
 			<div id="number" class="main-col clickable number" onclick="Main.onClickPlay(false);"></div>
 			<div id="play" class="main-col clickable play" onclick="Main.onClickPlay(true);"></div>
-			<div id="action-yes" class="main-col btn yes"></div>
+			<div id="action-yes" class="main-col btn yes" onclick="Main.onClickAnswer(true);"></div>
 		</div>
     <div class="main-row">
+			<div id="main-timer" class="main-col info left">
+				<span id="timer"></span>
+			</div>
+			<div class="main-col info max">
+			</div>
 			<div id="main-divisor" class="main-col info max">
 				By: <span id="divisor"></span>
 			</div>
@@ -58,30 +70,13 @@
 	<!-- PREF & HELP -->
 
 	<div class="popup-container center">
-		<div id="popup-user">
-			<input type="text" id="set-user"/>
-			<button onclick="Pref.onClickSetUser(true);">OK</button>
-			<button onclick="Pref.onClickSetUser(false);">Cancel</button>
-		</div>
-		<div id="popup-pref">
-			<div class="toolbar-pref">
-				<label class="toolbar-link">
-					<input type="checkbox" id="canedit" onclick="Pref.onClickCanEdit();"/>
-					<span id="canedit-text">Edit</span>
-				</label>
-				<div class="toolbar-link" id="undo" onclick="Pref.onEditAction('undo');">Undo</div>
-				<div class="toolbar-link" id="redo" onclick="Pref.onEditAction('redo');">Redo</div>
-				<div class="button exit tool" onclick="Pref.onClickExit();"></div>
-				<div class="button help" onclick="Pref.onClickHelp(true);">Help</div>
-				<input type="text" id="superuser" onblur="Pref.onBlurSuperUser();"/>
-				<textarea class="lists" id="lists" readonly maxlength="11000" onblur="Pref.onBlurEdit();" onclick="Pref.onClickEdit();"></textarea>
-			</div>
-		</div>
 		<div id="popup-help">
 			<div class="toolbar-help">
 			<div id="help-title">Divisiki</div>
 				<span id="copyright"><a id="homepage" href="https://aiurovet.com/" target="_blank">Alexander Iurovetski</a></span>
-				<div class="button tool exit" onclick="Pref.onClickHelp(false);"></div>
+				<div class="buttons">
+					<div class="button tool exit" onclick="Main.onClickHelp(false);"></div>
+				</div>
 			</div>
 			<div class="popup-scroll help">
 				<h4 id="version"><button id="refresh" onclick="location.reload(true);">Refresh</button></h4>
@@ -109,76 +104,32 @@
 				</div>
 				<h4>How to Use</h4>
 				<div class="para-help">
-					On the main screen, tap or click the following arrows to navigate through the words:
-					<ul class="no-bullet">
-						<li><span class="help-tool">&lsaquo;</span>move to the previous word</li>
-						<li><span class="help-tool">&laquo;</span>move to the first word</li>
-						<li><span class="help-tool">&equiv;</span>open the <em>Preferences</em> popup window</li>
-						<li><span class="help-tool">&raquo;</span>move to the last word</li>
-						<li><span class="help-tool">&rsaquo;</span>move to the next word</li>
-					</ul>
+					At start, tap or click the large play button in the center, and you'll see a random number. If it is divisible
+					by the one(s) listed at the right bottom corner, click the green tick button. Otherwise, click the red cross
+					button. If your mental calculation is right, you'll get another number, and the score at the right top corner
+					will change. Otherwise, you'll see the large play button again, but the score will stay until you start another
+					game. If the game is timed, every time you give an answer, the timer at the left bottom corner will be
+					reset. The score at the top right corner is in the format of <em>User: CurrentPoints / BestPoints</em>.
 				</div>
+				<h4>To be Implemented</h4>
 				<div class="para-help">
-					Depending on your preferences (under &equiv;), tapping or clicking the current word, might
-					submit a <em>Google search</em> in another browser tab. By default, this feature is switched
-					off, as the search results are not always child-friendly.
-				</div>
-				<h4>Preferences</h4>
-				<div class="para-help">
-					Switch between word lists simply by tapping or clicking any word in that list, then closing
-					the <em>Preferences</em> popup by tapping or clicking the red <em>X</em> button.
-				</div>
-				<div class="para-help">
-					You can replace the preset lists of words with the ones in a language of your choice by checking
-					the <em>Edit</em> box, then updating the text in the text box. The word separator is comma, so
-					you can put the whole	expression as a "word" or make a bigger spacing between the letters. If you
-					wish to break a	particular list and continue on the next line, just end the previous line with comma.
-					Once finished, close the <em>Preferences</em> popup by tapping or clicking the red <em>X</em> button.
-				</div>
-				<div class="para-help">
-					The changes to preferences you make are automatically saved to a browser's local storage, so the
-					next time you visit the page, all these changes will not be lost.
-					However, you can't access that storage for the sake of sharing, and if you clear your browser
-					data, all these changes will disappear. It is highly recommended to select all your word lists (i.e.
-					the whole text) to clipboard, then paste that in a proper text editor and save to a file or a cloud
-					document in <em>Google Docs</em> or <em>Microsoft Office 365</em> or similar. In case of to restore
-					your word list, you could open that document, select all word lists, copy, then paste into the text
-					field like you would normally do. The copy/paste approach also allows you to easily	share word lists
-					with your friends and relatives.
-				</div>
-				<div class="para-help">
-					Please note that:
-					<ul>
-						<li>Every time you change any of the word lists in the editor, the whole text gets copied to the
-							clipboard automatically after you close the <em>Preferences</em> popup.</li>
-						<li><em>Undo</em> and <em>Redo</em> links might not work for all browsers, especially, the
-							mobile ones. But you can still try to get the context menu (long press on a mobile device or
-							the right mouse click on PC), then perform your normal editing operation.</li>
-						<li>If no text is highlighted in the editor, clicking <em>Copy</em> will copy everything
-							to the clipboard.</li>
-					  <li>The data is not shared among different browsers on the same device. However, you can copy from
-							a text area in one browser and paste into a text area in another one.</li>
-					  <li>The text limit is 11,000 characters which is about 10x the size of the preset word
-							lists.</li>
-					</ul>
-				</div>
-				<h4>Super-User Features</h4>
-				<div class="para-help">
-					It is better to hide some preferences away from kids. Of course, if they can read this manual and
-					understand it, they	are likely to be able to follow the instructions. But in that case, they can do
-					things anyway. Still, this approach serves as a good shield for the younger kids.
-				</div>
-				<div class="para-help">
-					There is a text box left to the <em>Help</em> link of the <em>Preferences</em> screen. By typing the
-					following commands there and closing the <em>Preferences</em> screen, you can get theses results
-					(the commands are case-insensitive, in English only):
-					<ul>
-						<li><em>Reset</em> &ndash; revert all preferences (selected list, search mode) and the word lists to
-							the default ones. Please be cautious, as this operation cannot be undone.</li>
-						<li><em>Search</em> &ndash; when a word is tapped or clicked, the <em>Google Search</em> on
-							that word will be performed in the new browser tab.</li>
-						<li><em>Search Off</em> &ndash; turn off the search functionality (the default behaviour).</li>
-					</ul>
+					<ol>
+						<li>Every corner text should be clickable:
+							<ul>
+								<li>top right - change or rename a user (free text like: "Lily", "Johnny", "Mum", "Dad"),
+									or reset stats</li>
+								<li>bottom left - change the time limit (no limit, 2m, 1m30s, 1m, 45s, 30s, 20s, 15s, 10s, 5s)</li>
+								<li>bottom right - change divisors:
+									<ul>
+										<li>2 - check divisibility by 2</li>
+										<li>6 - check divisibility by 2 and by 3</li>
+										<li>2, 3 - check divisibility either by 2 or by 3</li>
+										<li>6, 5 - check divisibility either by 2 and 3 or by 5</li>
+									</ul>
+								</li>
+							</ul>
+						</li>
+					</ol>
 				</div>
 			</div>
 		</div>
