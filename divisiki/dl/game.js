@@ -14,15 +14,13 @@ class GameClass {
   //
   static defaultDivisors = [2];
   static defaultTimeLimit = 0;
+  static jumpScore = 100;
   static maxAttempts = 100;
   static minLevel = 1;
   static maxLevel = Number.MAX_SAFE_INTEGER.toString().length;
   static minMaxScore = 0;
   static maxMaxScore = Number.MAX_SAFE_INTEGER;
-  static timeLimits = {
-    0: "No time limit", 120: "02:00", 90: "01:30", 60: "01:00", 45: "00:45",
-    30: "00:30", 20: "00:20", 15: "00:15", 10: "00:10", 5: "00:05"
-  };
+  static timeLimits = [0, 5, 10, 15, 20, 30, 45, 60, 90, 120];
 
   //////////////////////////////////////////////////////////////////////////////
 
@@ -92,7 +90,7 @@ class GameClass {
       this.divisors = divisors.length <= 0 ? GameClass.defaultDivisors : divisors;
     }
     if ((lastTimeLimit !== undefined) && (lastTimeLimit !== null)) {
-      this.lastTimeLimit = lastTimeLimit <= 0 ? 0 : lastTimeLimit;
+      this.lastTimeLimit = GameClass.timeLimitFromValue(lastTimeLimit);
     }
     if ((maxScore !== undefined) && (maxScore !== null)) {
       this.maxScore = maxScore <= 0 ? 0 : maxScore;
@@ -104,7 +102,7 @@ class GameClass {
   }
 
   //////////////////////////////////////////////////////////////////////////////
-  // Check the current number is divisible by any of the divisors
+  // Check whether the current number divides by at least one of the divisors
   //////////////////////////////////////////////////////////////////////////////
 
   isDivisible() {
@@ -114,6 +112,7 @@ class GameClass {
       if (divisor <= 0) {
         break;
       }
+
       if ((this.curNumber % divisor) == 0) {
         return true;
       }
@@ -195,7 +194,10 @@ class GameClass {
   setNextNumber() {
     var curNumber = this.curNumber;
 
-    if (curNumber && !this.#oldNumbers.includes(curNumber)) {
+    if ((this.curScore >= GameClass.jumpScore) && (this.level < this.maxLevel)) {
+      ++this.level;
+      this.#oldNumbers = [];
+    } else if (curNumber && !this.#oldNumbers.includes(curNumber)) {
       this.#oldNumbers.push(curNumber);
     }
 
@@ -208,6 +210,7 @@ class GameClass {
         }
         attempts = 0;
         ++this.level;
+        this.curScore = 0;
       }
 
       curNumber = 0;
@@ -232,25 +235,30 @@ class GameClass {
   // Convert a text string like mm:ss into the number of seconds
   //////////////////////////////////////////////////////////////////////////////
 
-  static timeLimitFromName(name) {
-    var parts = name.split(":");
-    var count = parts.length;
+  static timeLimitToString(value) {
+    var seconds = value
+      ? Math.floor(value / TimerClass.millisPerSec)
+      : this.duration ?? 0;
 
-    if (count > 2) {
-      return GameClass.defaultTimeLimit;
+    if (seconds < 0) {
+      seconds = 0;
+    }
+  
+    var secs = (seconds % 60);
+    var mins = Math.floor(seconds / 60);
+
+    if ((mins == 0) && (secs == 0)) {
+      return "No time limit";
     }
 
-    var mins = count >= 2 ? parts[0] : "0";
-    var secs = count >= 2 ? parts[1] : parts[0];
-
-    if (!Number.isInteger(mins) || !Number.isInteger(secs)) {
-      return GameClass.defaultTimeLimit;
+    if (mins > 99) {
+      mins = 99;
     }
 
-    secs = parseInt(secs);
-    mins = parseInt(mins) + Math.trunc(secs / 60);
+    mins = (mins < 10 ? "0" : "") + mins.toString();
+    secs = (secs < 10 ? "0" : "") + secs.toString();
 
-    return timeLimitFromValue((mins * 60)  + (secs % 60));
+    return `${mins}:${secs}`;
   }
 
   //////////////////////////////////////////////////////////////////////////////
@@ -261,16 +269,17 @@ class GameClass {
     }
 
     var mins = Math.trunc(value / 60);
-    var secs = value % 60;
 
     if (mins > 99) {
       return GameClass.defaultTimeLimit;
     }
 
-    if (!(value in GameClass.timeLimits)) {
-      GameClass.timeLimits[value] =
-        (100 + mins).toString().substring(1) + ":" +
-        (100 + secs).toString().substring(1);
+    var secs = value % 60;
+    value = mins * 60 + secs;
+
+    if (GameClass.timeLimits.indexOf(value) < 0) {
+      GameClass.timeLimits.push(value);
+      GameClass.timeLimits.sort();
     }
 
     return value;

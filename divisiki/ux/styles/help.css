@@ -73,6 +73,9 @@ textarea:read-only {
   height: 2rem;
   padding: 0.25rem 1.5rem 0 1.5rem;
 }
+.popup-pref {
+  display: none;
+}
 .popup-scroll {
   height: calc(100% - 3.75rem);
   overflow: auto;
@@ -81,6 +84,9 @@ textarea:read-only {
 .popup-scroll.help {
   padding: 0.25rem 0.75rem 0.5rem 1.25rem;
   width: 100%;
+}
+.rules {
+  line-height: 200%;
 }
 
 /* ELEMENTS */

@@ -161,6 +161,7 @@ class MainClass {
 
     if (game.level > oldLevel) {
       Data.save();
+      this.setScore();
     }
 
     $("#number").text(newNumber);

@@ -130,10 +130,15 @@ class DataClass {
   }
 
   //////////////////////////////////////////////////////////////////////////////
+  // Set the index of the user to be considered as the current one
+  // Return true if the selected index equals the value passed
+  //////////////////////////////////////////////////////////////////////////////
 
   setSelectedUserNo(value) {
     var count = this.#users.length;
     this.#selectedUserNo = !value || (value < 0) ? 0 : value % count;
+
+    return this.#selectedUserNo === value;
   }
 
   //////////////////////////////////////////////////////////////////////////////

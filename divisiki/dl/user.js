@@ -52,7 +52,7 @@ class UserClass {
 
   //////////////////////////////////////////////////////////////////////////////
   // Initialise properties from the given parameters
-x  //////////////////////////////////////////////////////////////////////////////
+  //////////////////////////////////////////////////////////////////////////////
 
   init(userId, selectedGameNo, games) {
     this.userId = userId ?? UserClass.defaultUserId;
@@ -75,12 +75,46 @@ x  /////////////////////////////////////////////////////////////////////////////
   }
 
   //////////////////////////////////////////////////////////////////////////////
-  // Set the index of the game to be used as the current one
+  // Set the index of the game to be considered as the current one
+  // Returns true if the selected no equals the value passed
   //////////////////////////////////////////////////////////////////////////////
 
   setSelectedGameNo(value) {
     var count = this.#games.length;
     this.#selectedGameNo = !value || (value < 0) ? 0 : value % count;
+
+    return this.#selectedGameNo === value;
+  }
+
+  //////////////////////////////////////////////////////////////////////////////
+  // Find the game object by the list of divisors and select that
+  // Return true if the selected index equals the value passed
+  // Useful when loading saved data
+  //////////////////////////////////////////////////////////////////////////////
+
+  setSelectedGameNoByDivisors(divisors) {
+    var divisorCount = divisors.length;
+    var games = this.#games;
+    var gameCount = games.length;
+    var gameNo = 0;
+
+    for (var gameNo = 0; gameNo < gameCount; gameNo++) {
+      var gameDivisors = games[gameNo].divisors;
+
+      for (var divisorNo = 0; ; divisorNo++) {
+        if (divisorNo >= divisorCount) {
+          return this.setSelectedGameNo(gameNo);
+        }
+
+        var divisor = divisors[divisorNo];
+
+        if ((divisor > 1) && (gameDivisors.indexOf(divisor) < 0)) {
+          break;
+        }
+      }
+    }
+
+    return false;
   }
 
   //////////////////////////////////////////////////////////////////////////////

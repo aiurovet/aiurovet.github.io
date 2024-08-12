@@ -94,7 +94,8 @@ class TimerClass {
 
   show(time) {
     if (this.jqText) {
-      this.jqText.text(this.toString(time ? this.expiresAt - time : 0));
+      var delta = time ? this.expiresAt - time : 0;
+      this.jqText.text(GameClass.timeLimitToString(delta));
     }
 
     return this;
@@ -107,32 +108,6 @@ class TimerClass {
   stop() {
     this.init().show();
     return this;
-  }
-
-  //////////////////////////////////////////////////////////////////////////////
-  // Convert the remaining time interval into a readable string
-  //////////////////////////////////////////////////////////////////////////////
-
-  toString(time) {
-    var seconds = time
-      ? Math.floor(time / TimerClass.millisPerSec)
-      : this.duration;
-
-    if (seconds < 0) {
-      seconds = 0;
-    }
-  
-    var secs = (seconds % 60);
-    var mins = Math.floor(seconds / 60);
-
-    if (mins > 99) {
-      mins = 99;
-    }
-
-    mins = (mins < 10 ? "0" : "") + mins.toString();
-    secs = (secs < 10 ? "0" : "") + secs.toString();
-
-    return `${mins}:${secs}`;
   }
 
   //////////////////////////////////////////////////////////////////////////////
