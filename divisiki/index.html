@@ -9,17 +9,17 @@
 	<title>Divisiki</title>
 	<link rel="manifest" href="./manifest.json" crossorigin="use-credentials">
 	<link rel="shortcut icon" type="image/x-icon" href="ux/images/divisiki.svg">
-	<link rel="stylesheet" href="ux/styles/help.css">
 	<link rel="stylesheet" href="ux/styles/info.css">
 	<link rel="stylesheet" href="ux/styles/main.css">
+	<link rel="stylesheet" href="ux/styles/pref.css">
 	<script src="dl/data.js"></script>
 	<script src="dl/game.js"></script>
 	<script src="dl/json.js"></script>
 	<script src="dl/user.js"></script>
 	<script src="lib/scripts/jquery.slim.min.js"></script>
 	<script src="ux/scripts/core.js"></script>
-	<script src="ux/scripts/help.js"></script>
 	<script src="ux/scripts/main.js"></script>
+	<script src="ux/scripts/pref.js"></script>
 	<script src="ux/scripts/timer.js"></script>
 	<script>
 		var sw = navigator.serviceWorker;
@@ -40,9 +40,9 @@
 		<div class="main-row">
 			<!-- <div id="main-menu" class="main-col menu"></div> -->
 			<div id="main-help" class="main-col clickable info help left " onclick="Main.onClickHelp(true);">
-				?
+				Help
 			</div>
-			<div id="main-help" class="main-col info">
+			<div id="main-status" class="main-col info">
 				<span id="status"></span>
 			</div>
 			<div id="main-score" class="main-col info max"> <!-- onclick="Main.onClickSetUser();"> -->

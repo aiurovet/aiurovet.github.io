@@ -71,10 +71,6 @@ body, html {
   justify-content: center;
   margin: 0 var(--min-margin-info) 0 auto;
 }
-.main-col.info.help {
-  font-size: var(--font-size-help);
-  margin-left: var(--min-margin-help);
-}
 .main-col.info.left {
   margin-left: var(--min-margin-info);
 }

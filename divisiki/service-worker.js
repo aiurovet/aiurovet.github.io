@@ -10,10 +10,10 @@ self.addEventListener("install", (event) => {
         "/divisiki/index.html",
         "/divisiki/ux/images/divisiki.svg",
         "/divisiki/ux/images/exit.svg",
-        "/divisiki/ux/images/help.svg",
         "/divisiki/ux/images/menu.svg",
         "/divisiki/ux/images/no.svg",
         "/divisiki/ux/images/play.svg",
+        "/divisiki/ux/images/pref.svg",
         "/divisiki/ux/images/yes.svg",
         "/divisiki/dl/data.js",
         "/divisiki/dl/game.js",
@@ -21,12 +21,12 @@ self.addEventListener("install", (event) => {
         "/divisiki/dl/user.js",
         "/divisiki/lib/scripts/jquery.slim.min.js",
         "/divisiki/ux/scripts/core.js",
-        "/divisiki/ux/scripts/help.js",
         "/divisiki/ux/scripts/main.js",
+        "/divisiki/ux/scripts/pref.js",
         "/divisiki/ux/scripts/timer.js",
-        "/divisiki/ux/styles/help.css",
         "/divisiki/ux/styles/info.css",
         "/divisiki/ux/styles/main.css",
+        "/divisiki/ux/styles/pref.css",
       ]);
     })
   );
