@@ -14,13 +14,12 @@ class GameClass {
   //
   static defaultDivisors = [2];
   static defaultTimeLimit = 0;
-  static jumpScore = 100;
+  static isFastRandom = true;
+  static jumpScore = 50;
   static maxAttempts = 100;
   static minLevel = 1;
   static maxLevel = Number.MAX_SAFE_INTEGER.toString().length;
-  static minMaxScore = 0;
-  static maxMaxScore = Number.MAX_SAFE_INTEGER;
-  static timeLimits = [0, 5, 10, 15, 20, 30, 45, 60, 90, 120];
+  static timeLimits = [0, 10, 15, 20, 30, 45, 60, 90, 120];
 
   //////////////////////////////////////////////////////////////////////////////
 
@@ -44,9 +43,17 @@ class GameClass {
   //
   level = GameClass.minLevel;
 
+  // The highest number for the given level
+  //
+  maxNumber = 0;
+
   // The highest score ever achieved
   //
-  maxScore = GameClass.minMaxScore;
+  maxScore = 0;
+
+  // The lowest number for the given level
+  //
+  minNumber = 0;
 
   // Array of previously played numbers to avoid repetitions within the session
   //
@@ -83,12 +90,14 @@ class GameClass {
   //////////////////////////////////////////////////////////////////////////////
 
   init(level, divisors, maxScore, lastTimeLimit) {
-    if ((level !== undefined) && (level !== null)) {
-      this.level = level < GameClass.minLevel ? GameClass.minLevel : level;
-    }
+    this.setLevel(level);
+
     if ((divisors !== undefined) && (divisors !== null) && Array.isArray(divisors)) {
       this.divisors = divisors.length <= 0 ? GameClass.defaultDivisors : divisors;
     }
+
+lastTimeLimit = 5;
+
     if ((lastTimeLimit !== undefined) && (lastTimeLimit !== null)) {
       this.lastTimeLimit = GameClass.timeLimitFromValue(lastTimeLimit);
     }
@@ -106,8 +115,10 @@ class GameClass {
   //////////////////////////////////////////////////////////////////////////////
 
   isDivisible() {
-    for (var i = 0; i < this.level; i++) {
-      var divisor = this.divisors[i];
+    var divisors = this.divisors;
+
+    for (var i = 0, n = divisors.length; i < n; i++) {
+      var divisor = divisors[i];
 
       if (divisor <= 0) {
         break;
@@ -117,6 +128,7 @@ class GameClass {
         return true;
       }
     }
+
     return false;
   }
 
@@ -175,6 +187,27 @@ class GameClass {
   }
 
   //////////////////////////////////////////////////////////////////////////////
+  // Set level as well as dependent properties
+  //////////////////////////////////////////////////////////////////////////////
+
+  setLevel(value) {
+    if ((value !== undefined) && (value !== null)) {
+      if (value < GameClass.minLevel) {
+        this.level = GameClass.minLevel;
+      } else if (value > GameClass.maxLevel) {
+        this.level = GameClass.maxLevel;
+      } else {
+        this.level = value;
+      }
+    }
+    this.minNumber = Math.floor(Math.pow(10, this.level - 1));
+    this.maxNumber = Math.floor(Math.pow(10, this.level)) - 1;
+    this.maxScore = 0;
+    this.curScore = 0;
+    this.#oldNumbers = [];
+  }
+
+  //////////////////////////////////////////////////////////////////////////////
   // Set the new record the passed value exceeds the previous record
   //////////////////////////////////////////////////////////////////////////////
 
@@ -194,9 +227,8 @@ class GameClass {
   setNextNumber() {
     var curNumber = this.curNumber;
 
-    if ((this.curScore >= GameClass.jumpScore) && (this.level < this.maxLevel)) {
-      ++this.level;
-      this.#oldNumbers = [];
+    if ((this.curScore >= GameClass.jumpScore) && (this.level < GameClass.maxLevel)) {
+      this.setLevel(this.level + 1);
     } else if (curNumber && !this.#oldNumbers.includes(curNumber)) {
       this.#oldNumbers.push(curNumber);
     }
@@ -209,8 +241,13 @@ class GameClass {
           return 0;
         }
         attempts = 0;
-        ++this.level;
-        this.curScore = 0;
+        this.setLevel(this.level + 1);
+      }
+
+      if (GameClass.isFastRandom) {
+        var range = this.maxNumber - this.minNumber + 1;
+        curNumber = this.minNumber + Math.floor(Math.random() * range);
+        continue;
       }
 
       curNumber = 0;
@@ -235,10 +272,8 @@ class GameClass {
   // Convert a text string like mm:ss into the number of seconds
   //////////////////////////////////////////////////////////////////////////////
 
-  static timeLimitToString(value) {
-    var seconds = value
-      ? Math.floor(value / TimerClass.millisPerSec)
-      : this.duration ?? 0;
+  static secondsToString(value, fullDuration) {
+    var seconds = Math.floor(value / TimerClass.millisPerSec);
 
     if (seconds < 0) {
       seconds = 0;
@@ -247,7 +282,7 @@ class GameClass {
     var secs = (seconds % 60);
     var mins = Math.floor(seconds / 60);
 
-    if ((mins == 0) && (secs == 0)) {
+    if ((mins == 0) && (secs == 0) && !fullDuration) {
       return "No time limit";
     }
 

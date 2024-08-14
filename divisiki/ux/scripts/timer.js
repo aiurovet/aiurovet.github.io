@@ -68,20 +68,14 @@ class TimerClass {
   // Start timer and reflect its changes in a jQuery object by updating its text
   //////////////////////////////////////////////////////////////////////////////
 
-  start() {
+  start(endProc) {
     this.startedAt = Date.now();
     this.expiresAt = this.startedAt + (this.duration * TimerClass.millisPerSec);
+    this.timerProc();
 
     this.intervalId = setInterval(
       () => {
-        var now = Date.now();
-
-        if (now >= this.expiresAt) {
-          this.init();
-          now = 0;
-        }
-
-        this.show(now);
+        this.timerProc(endProc);
       },
       TimerClass.frequency);
 
@@ -94,8 +88,11 @@ class TimerClass {
 
   show(time) {
     if (this.jqText) {
-      var delta = time ? this.expiresAt - time : 0;
-      this.jqText.text(GameClass.timeLimitToString(delta));
+      var delta = this.expiresAt && time
+        ? this.expiresAt - time
+        : this.duration * TimerClass.millisPerSec;
+
+        this.jqText.text(GameClass.secondsToString(delta, this.duration));
     }
 
     return this;
@@ -106,8 +103,27 @@ class TimerClass {
   //////////////////////////////////////////////////////////////////////////////
 
   stop() {
-    this.init().show();
+    this.init().show(this.duration);
     return this;
+  }
+
+  //////////////////////////////////////////////////////////////////////////////
+  // Timer callback
+  //////////////////////////////////////////////////////////////////////////////
+
+  timerProc(endProc) {
+    var now = Date.now();
+
+    if ((this.expiresAt !== null) && (now >= this.expiresAt)) {
+      this.init();
+      now = 0;
+
+      if (endProc) {
+        endProc();
+      }
+    }
+
+    this.show(now);
   }
 
   //////////////////////////////////////////////////////////////////////////////

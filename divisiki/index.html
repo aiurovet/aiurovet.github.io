@@ -42,8 +42,8 @@
 			<div id="main-help" class="main-col clickable info help left " onclick="Main.onClickHelp(true);">
 				?
 			</div>
-			<div id="main-help" class="main-col clickable info" onclick="Main.onClickHelp(true);">
-				Updates coming soon
+			<div id="main-help" class="main-col info">
+				<span id="status"></span>
 			</div>
 			<div id="main-score" class="main-col info max"> <!-- onclick="Main.onClickSetUser();"> -->
 				<span id="user"></span>: <span id="score"></span>
@@ -51,7 +51,7 @@
 		</div>
     <div class="main-row max">
 			<div id="action-no" class="main-col btn no" onclick="Main.onClickAnswer(false);"></div>
-			<div id="number" class="main-col clickable number" onclick="Main.onClickPlay(false);"></div>
+			<div id="number" class="main-col clickable number" onclick="Main.onClickPlay(false, 'Stopped manually');"></div>
 			<div id="play" class="main-col clickable play" onclick="Main.onClickPlay(true);"></div>
 			<div id="action-yes" class="main-col btn yes" onclick="Main.onClickAnswer(true);"></div>
 		</div>

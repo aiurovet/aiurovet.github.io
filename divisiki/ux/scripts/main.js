@@ -34,7 +34,6 @@ $(document).ready(() => {
 
   // Initialize the UI
   //
-  Main.setNumber();
   Main.setUser();
   Main.setScore();
   Main.setDivisors([3]); // temporarily defaulting to divisbility by 3
@@ -76,7 +75,7 @@ class MainClass {
     var nextNumber = game.setResult(isYes);
 
     if (!nextNumber) {
-      this.onClickPlay(false);
+      this.onClickPlay(false, "Stopped by the wrong answer");
       return;
     }
 
@@ -109,11 +108,13 @@ class MainClass {
   // Go to the menu
   //////////////////////////////////////////////////////////////////////////////
 
-  onClickPlay(isPlay) {
+  onClickPlay(isPlay, status) {
     var visibleStyle = "flex";
 
     if (isPlay) {
+      this.setStatus(null);
       this.setScore(0);
+      this.setNumber();
       Core.setVisible($("#play"), false);
       Core.setVisible($("#number"), true, visibleStyle);
     } else {
@@ -126,6 +127,10 @@ class MainClass {
     var jqButtons = $("#action-no, #action-yes");
     jqButtons.css("opacity", (isPlay ? 1.0 : 0.25));
     jqButtons.css("pointer-events", (isPlay ? "auto" : "none"));
+
+    if (status !== undefined) {
+      this.setStatus(status);
+    }
 
     this.setTimer(isPlay);
   }
@@ -206,12 +211,20 @@ class MainClass {
 
   //////////////////////////////////////////////////////////////////////////////
 
+  setStatus(text) {
+    $("#status").text(text || "");
+  }
+
+  //////////////////////////////////////////////////////////////////////////////
+
   setTimer(isStart) {
     var game = Data.getSelectedGame();
     Timer.init(null, game.lastTimeLimit);
 
     if (isStart) {
-      Timer.start();
+      Timer.start(() => {
+        this.onClickPlay(false, "Time limit reached");
+      });
     } else {
       Timer.stop();
     }
