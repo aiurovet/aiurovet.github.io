@@ -95,9 +95,6 @@ class GameClass {
     if ((divisors !== undefined) && (divisors !== null) && Array.isArray(divisors)) {
       this.divisors = divisors.length <= 0 ? GameClass.defaultDivisors : divisors;
     }
-
-lastTimeLimit = 5;
-
     if ((lastTimeLimit !== undefined) && (lastTimeLimit !== null)) {
       this.lastTimeLimit = GameClass.timeLimitFromValue(lastTimeLimit);
     }
