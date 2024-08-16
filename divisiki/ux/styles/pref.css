@@ -23,7 +23,7 @@ textarea:read-only {
   margin: 0 0 0 auto;
 }
 .button.exit {
-  background-image: url("../images/exit.svg?v=0.2.2");
+  background-image: url("../images/exit.svg?v=0.2.4");
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
