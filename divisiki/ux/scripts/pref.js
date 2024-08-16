@@ -40,12 +40,6 @@ class PrefClass {
 
   //////////////////////////////////////////////////////////////////////////////
 
-  onClickHardReload() {
-    setTimeout(() => {location.reload(true);}, 300);
-  }
-
-  //////////////////////////////////////////////////////////////////////////////
-
   onClickHelp(isOn) {
     Core.setVisible($(".popup-container, #popup-help"), isOn, "flex");
   }
