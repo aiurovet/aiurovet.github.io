@@ -10,10 +10,6 @@
 #
 JOB=$(basename "${0}")
 
-# Get top input directory
-#
-DIR=$(dirname $(dirname "${0}"))"/${PRJ}"
-
 # Get the project name. Print usage and fail if it is not specified
 #
 PRJ="${1}"
@@ -22,6 +18,10 @@ PRJ="${1}"
 # Get the temporary file path
 #
 TMF="/tmp/${PRJ}.tmp"
+
+# Get top input directory
+#
+DIR=$(dirname $(dirname "${0}"))"/${PRJ}"
 
 # Get the pattern for search and replace
 #
