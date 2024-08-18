@@ -34,6 +34,7 @@ SED="s/${PAT}/${VST}${VER}/"
 #
 for inp in $(ls -1\
     "${DIR}/index.html"\
+    "${DIR}/manifest.json"\
     "${DIR}/service-worker.js"\
     "${DIR}/ux/styles/"*.css\
 ); do
