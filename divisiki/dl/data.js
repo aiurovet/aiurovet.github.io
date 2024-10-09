@@ -100,12 +100,14 @@ class DataClass {
   }
 
   //////////////////////////////////////////////////////////////////////////////
-  // Returns true if there is at least one user with non-default id
+  // Returns true if there are 2 or more users, or one user with non-default id
   //////////////////////////////////////////////////////////////////////////////
 
   hasValidUsers() {
     let users = this.#users;
-    return users && users.length > 0 && users[0].userId != UserClass.defaultUserId;
+    let count = users?.length ?? 0;
+
+    return (count > 1) || (count > 0 && users[0].userId != UserClass.defaultUserId);
   }
 
   //////////////////////////////////////////////////////////////////////////////

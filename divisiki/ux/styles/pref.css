@@ -67,6 +67,9 @@ ui-dialog-client.help .rules {
 .ui-listedit-tool.modify.help {
   display: inline-block;
 }
+ul.rules > li {
+  margin-top: 0.5em;
+}
 
 /* ELEMENTS */
 
