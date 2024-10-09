@@ -48,7 +48,7 @@ ui-dialog-client.help .rules {
 .ui-dialog-content.pref:not(.msgbox) {
   background: var(--dialog-content-bg-color-1);
 }
-.ui-dialog-icon:not(.msgbox), .ui-dialog-icon:not(.help) {
+.ui-dialog-icon:not(.msgbox) {
   filter: invert(100%);
 }
 
