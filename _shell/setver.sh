@@ -41,6 +41,7 @@ for inp in $(ls -1\
   sed -r "${SED}" "${inp}" > "${TMF}" && mv -f "${TMF}" "${inp}" || exit 1
 done
 
-# Perform the cleanup nd finish
+# Perform the cleanup, inform and finish
 #
 rm -f "${TMF}"
+echo "Successfully updated to version \"${VER}\""

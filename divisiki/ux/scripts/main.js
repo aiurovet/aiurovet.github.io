@@ -39,11 +39,9 @@ $(document).ready(() => {
   Main.setDivisors();
   Main.onClickPlay(false);
 
-  Pref.onClickHelp();
-
-  // if (!Data.hasValidUsers()) {
-  //   Pref.onClickUser();
-  // }
+  if (!Data.hasValidUsers()) {
+    Pref.onClickUser();
+  }
 });
 
 ////////////////////////////////////////////////////////////////////////////////

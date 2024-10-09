@@ -9,7 +9,7 @@
   "theme_color": "#000000",
   "icons": [
       {
-          "src": "/tapbc/ux/images/tapbc.svg?v=0.4.2",
+          "src": "/tapbc/ux/images/tapbc.svg?v=0.4.3",
           "sizes": "any",
           "type": "image/svg+xml"
       }
