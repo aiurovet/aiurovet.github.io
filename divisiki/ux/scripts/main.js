@@ -36,11 +36,15 @@ $(document).ready(() => {
   //
   Main.setUser();
   Main.setScore();
-  Main.setDivisors([3]); // temporarily defaulting to divisbility by 3
+  Main.setDivisors();
   Main.onClickPlay(false);
-  //Pref.init(true);
-});
 
+  Pref.onClickHelp();
+
+  // if (!Data.hasValidUsers()) {
+  //   Pref.onClickUser();
+  // }
+});
 
 ////////////////////////////////////////////////////////////////////////////////
 // Set the event handlers
@@ -72,10 +76,16 @@ class MainClass {
 
   onClickAnswer(isYes) {
     var game = Data.getSelectedGame();
+
+    if (!game) {
+      return;
+    }
+
+    var curNumber = game.curNumber;
     var nextNumber = game.setResult(isYes);
 
     if (!nextNumber) {
-      this.onClickPlay(false, "Stopped by the wrong answer");
+      this.onClickPlay(false, `Failed at ${curNumber}`);
       return;
     }
 
@@ -88,23 +98,18 @@ class MainClass {
   // Go to the menu
   //////////////////////////////////////////////////////////////////////////////
 
-  onClickMenu() {
-    Core.setPopup(true);
-    Pref.onClickCanEdit();
-    Pref.onClickHelp(false);
-    Pref.setEditorHeight();
-    Pref.resetList();
-  }
-
-  //////////////////////////////////////////////////////////////////////////////
-  // Go to the menu
-  //////////////////////////////////////////////////////////////////////////////
-
   onClickPlay(isPlay, status) {
     var visibleStyle = "flex";
 
-    if (isPlay) {
+    if (isPlay || !status) {
       this.setStatus(null);
+    }
+
+    if (isPlay) {
+      if (!Data.hasValidUsers()) {
+        Pref.onClickUser();
+        return;
+      }
       this.setScore(0);
       this.setNumber();
       Core.setVisible($("#play"), false);
@@ -120,7 +125,7 @@ class MainClass {
     jqButtons.css("opacity", (isPlay ? 1.0 : 0.25));
     jqButtons.css("pointer-events", (isPlay ? "auto" : "none"));
 
-    if (status !== undefined) {
+    if (status) {
       this.setStatus(status);
     }
 
@@ -128,40 +133,64 @@ class MainClass {
   }
 
   //////////////////////////////////////////////////////////////////////////////
-  // Click handler to select a user
-  //////////////////////////////////////////////////////////////////////////////
-
-  onClickSetUser() {
-    Core.setVisible($("#popup-user"), true, "flex");
-    Core.setPopup(true);
-  }
-
-  //////////////////////////////////////////////////////////////////////////////
 
   setDivisors(value) {
     var game = Data.getSelectedGame();
+
+    if (!game) {
+      return;
+    }
 
     if (value) {
       game.setDivisors(value);
       Data.save();
     }
 
-    $("#divisor").text(game.divisors.join(" or "));
+    $("#divisor").text(game.toDivisorsString());
   }
 
   //////////////////////////////////////////////////////////////////////////////
 
-  setNumber() {
+  setLevel(value) {
     var game = Data.getSelectedGame();
-    var oldLevel = game.level;
-    var newNumber = game.setNextNumber();
 
-    if (game.level > oldLevel) {
+    if (!game) {
+      return;
+    }
+
+    var oldLevel = game.level;
+
+    if ((value !== undefined) && (value !== null)) {
+      game.setLevel(value);
+    }
+
+    if (game.level != oldLevel) {
+      Data.save();
+      this.setScore();
+    }
+  }
+
+  //////////////////////////////////////////////////////////////////////////////
+
+  setNumber(value) {
+    var game = Data.getSelectedGame();
+
+    if (!game) {
+      return;
+    }
+
+    var oldLevel = game.level;
+
+    if (!value) {
+      value = game.setNextNumber();
+    }
+
+    if (game.level != oldLevel) {
       Data.save();
       this.setScore();
     }
 
-    $("#number").text(newNumber);
+    $("#number").text(value);
     this.setNumberHeight();
   }
 
@@ -190,6 +219,10 @@ class MainClass {
   setScore(value) {
     var game = Data.getSelectedGame();
 
+    if (!game) {
+      return;
+    }
+
     if ((value !== undefined) && (value !== null)) {
       game.curScore = value;
     }
@@ -209,13 +242,23 @@ class MainClass {
 
   //////////////////////////////////////////////////////////////////////////////
 
-  setTimer(isStart) {
+  setTimer(isStart, timeLimit) {
     var game = Data.getSelectedGame();
+
+    if (!game) {
+      return;
+    }
+
+    if ((timeLimit !== undefined) && (timeLimit !== null)) {
+      game.lastTimeLimit = timeLimit;
+      Data.save();
+    }
+
     Timer.init(null, game.lastTimeLimit);
 
     if (isStart) {
       Timer.start(() => {
-        this.onClickPlay(false, "Time limit reached");
+        this.onClickPlay(false, "Too late!");
       });
     } else {
       Timer.stop();
@@ -225,7 +268,15 @@ class MainClass {
   //////////////////////////////////////////////////////////////////////////////
 
   setUser() {
-    $("#user").text(Data.getSelectedUser().userId);
+    let user = Data.getSelectedUser();
+
+    if (!user) {
+      return;
+    }
+
+    $("#user").text(user.userId);
+    this.setScore();
+    this.setTimer();
   }
 
   //////////////////////////////////////////////////////////////////////////////

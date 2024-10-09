@@ -78,13 +78,34 @@ class DataClass {
   //////////////////////////////////////////////////////////////////////////////
 
   getSelectedGame() {
-    return this.getSelectedUser().getSelectedGame();
+    return this.getSelectedUser()?.getSelectedGame();
   }
 
   //////////////////////////////////////////////////////////////////////////////
 
   getSelectedUser() {
-    return this.#users[this.#selectedUserNo];
+    return this.#selectedUserNo < 0 ? null : this.#users[this.#selectedUserNo];
+  }
+
+  //////////////////////////////////////////////////////////////////////////////
+
+  getSelectedUserNo() {
+    return this.#selectedUserNo;
+  }
+
+  //////////////////////////////////////////////////////////////////////////////
+
+  getUsers() {
+    return this.#users;
+  }
+
+  //////////////////////////////////////////////////////////////////////////////
+  // Returns true if there is at least one user with non-default id
+  //////////////////////////////////////////////////////////////////////////////
+
+  hasValidUsers() {
+    let users = this.#users;
+    return users && users.length > 0 && users[0].userId != UserClass.defaultUserId;
   }
 
   //////////////////////////////////////////////////////////////////////////////
@@ -126,7 +147,7 @@ class DataClass {
   //////////////////////////////////////////////////////////////////////////////
 
   setSelectedGameNo(value) {
-    this.getSelectedUser().setSelectedGameNo(value);
+    this.getSelectedUser()?.setSelectedGameNo(value);
   }
 
   //////////////////////////////////////////////////////////////////////////////
@@ -136,7 +157,7 @@ class DataClass {
 
   setSelectedUserNo(value) {
     var count = this.#users.length;
-    this.#selectedUserNo = !value || (value < 0) ? 0 : value % count;
+    this.#selectedUserNo = count <= 0 ? -1 : !value || (value < 0) ? 0 : value % count;
 
     return this.#selectedUserNo === value;
   }

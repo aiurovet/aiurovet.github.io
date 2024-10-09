@@ -3,118 +3,92 @@
   All rights reserved under MIT license (see LICENSE file)
 */
 
-/* NODES */
+/* PARAMETERS */
 
-textarea {
-  background: white;
-  color: black;
-}
-textarea:read-only {
-  background: rgb(248, 248, 255);
-  cursor: default;
+:root {
+  --dialog-caption-bg-color-1: rgb(103, 25, 210);
+  --dialog-caption-bg-color-2: rgb(25, 103, 210);
+  --dialog-caption-bg-color-3: rgb(25, 103, 103);
+  --dialog-caption-fg-color-1: white;
+  --dialog-caption-ln-color: rgb(240, 240, 144);
+  --dialog-content-bg-color-1: rgb(237, 237, 255);
+  --dialog-content-bg-color-2: white;
 }
 
-/* CLASSES */
+/* DIALOG: HELP */
 
-.buttons {
-  cursor: pointer;
-  float: right;
-  font-size: 150%;
-  margin: 0 0 0 auto;
-}
-.button.exit {
-  background-image: url("../images/exit.svg?v=0.2.4");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
-  margin: 0 0.5rem 0 0;
-  text-decoration: none;
-  width: 3rem;
-}
-.button.exit::before {
-  content: "\00a0";
-}
-.help-tool {
-  font-size: 1.5rem;
-  font-family: monospace;
-  height: 2.5rem;
-  margin-right: 1em;
-  width: 1rem;
-}
-.no-bullet {
-  list-style: none;
+ui-dialog-client.help .rules {
+  line-height: 200%;
 }
 .para-help {
   margin: 1rem 0 0 0;
 }
-.popup-container {
-  background: rgba(0, 0, 0, 0.4);
-  display: none; /* Hidden by default */
-  font-size: 24px;
-  left: 0;
-  top: 0;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  padding-top: 1rem; /* Location of the box */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
+
+/* DIALOG: PREF */
+
+.ui-dialog-caption.help {
+  background-color: var(--dialog-caption-bg-color-3);
+  color: var(--dialog-caption-fg-color-1);
 }
-.popup-help {
-  display: none;
+.ui-dialog-caption.pref:not(.msgbox) {
+  background-color: var(--dialog-caption-bg-color-1);
+  color: var(--dialog-caption-fg-color-1);
 }
-.popup-help > div {
-  display: flex;
-  cursor: pointer;
-  flex-wrap: wrap;
-  float: left;
-  font-family: monospace;
-  font-size: 1.25rem;
-  font-weight: bold;
-  height: 2rem;
-  padding: 0.25rem 1.5rem 0 1.5rem;
-}
-.popup-pref {
-  display: none;
-}
-.popup-scroll {
-  height: calc(100% - 3.75rem);
+.ui-dialog-client.pref {
+  padding: 1em;
   overflow: auto;
-  margin: 0.5rem 0 0 0;
 }
-.popup-scroll.help {
-  padding: 0.25rem 0.75rem 0.5rem 1.25rem;
-  width: 100%;
+.ui-dialog-client.pref.game, .ui-dialog-client.pref.level, .ui-dialog-client.pref.time-limit, .ui-dialog-client.pref.user {
+  padding: 2em;
+  overflow: auto;
 }
-.rules {
-  line-height: 200%;
+.ui-dialog-content.pref {
+  font-size: 32px;
+}
+.ui-dialog-content.pref:not(.msgbox) {
+  background: var(--dialog-content-bg-color-1);
+}
+.ui-dialog-icon:not(.msgbox), .ui-dialog-icon:not(.help) {
+  filter: invert(100%);
+}
+
+/* DIALOG: 2ND-LEVEL POPUPS */
+
+.ui-dialog.ui-listedit-popup .ui-dialog-caption:not(.msgbox) {
+  background-color: var(--dialog-caption-bg-color-2);
+  color: var(--dialog-caption-fg-color-1);
+}
+.ui-dialog.ui-listedit-popup .ui-dialog-content:not(.msgbox) {
+  background: var(--dialog-content-bg-color-2);
+}
+
+/* HELP */
+
+.ui-listedit-tool.modify.help {
+  display: inline-block;
 }
 
 /* ELEMENTS */
 
-#help-title {
-  float: left;
-  font-size: 2.15rem;
-  font-weight: bold;
-  margin: 0 0 0 1rem;
+#help-link {
+  color: var(--dialog-caption-ln-color);
 }
-#homepage {
-  margin: 0 0 0 1rem;
+
+#pref-game-value, #pref-level-value, #pref-time-limit-value, #pref-user-value {
+  align-items: stretch;
+  align-content: stretch;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
 }
-#popup-help {
-  background: rgb(237, 255, 237);
-  border: 1px solid;
-  display: none;
-  flex-wrap: wrap;
-  height: calc(100% - 1rem);
-  margin: auto;
-  padding: 0.5rem 0 0 0;
-  position: relative;
-  text-align: justify;
-  width: calc(100% - 3rem);
-  z-index: 0;
+#pref-game-value, #pref-user-value {
+  flex-direction: column;
+  flex-grow: 0;
 }
-#refresh {
-  font-size: 75%;
-  margin-left: 1rem;
-  padding: 0.5rem 1rem 0.5rem 1rem;
+#pref-game-value > *, #pref-level-value > input, #pref-user-value > * {
+  align-self: stretch;
+  flex-grow: 1;
+}
+#pref-level-value > .ui-listedit-items > option {
+  text-align: center;
 }

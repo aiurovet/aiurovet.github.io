@@ -1,0 +1,65 @@
+/*
+  Copyright (C) Alexander Iurovetski 2024
+  All rights reserved under MIT license (see LICENSE file)
+
+  Message box styles
+*/
+
+:root {
+  --msgbox-button-bg-color: rgb(192, 192, 192);
+  --msgbox-button-fg-color: black;
+
+  --msgbox-caption-inf-bg-color: rgb(25, 103, 210);
+  --msgbox-caption-inf-fg-color: white;
+
+  --msgbox-caption-err-bg-color: rgb(255, 0, 0);
+  --msgbox-caption-err-fg-color: white;
+
+  --msgbox-caption-wrn-bg-color: rgb(230, 152, 45);
+  --msgbox-caption-wrn-fg-color: black;
+
+  --msgbox-content-bg-color: white;
+  --msgbox-content-fg-color: black;
+}
+
+.ui-dialog-caption.msgbox.inf {
+  background-color: var(--msgbox-caption-inf-bg-color);
+  color: var(--msgbox-caption-inf-fg-color);
+}
+.ui-dialog-caption.msgbox.err {
+  background-color: var(--msgbox-caption-err-bg-color);
+  color: var(--msgbox-caption-err-fg-color);
+}
+.ui-dialog-caption.msgbox.wrn {
+  background-color: var(--msgbox-caption-wrn-bg-color);
+  color: var(--msgbox-caption-wrn-fg-color);
+}
+.ui-dialog-client.msgbox.buttons {
+  padding: 0.5em 0.5em 1em 0.5em;
+}
+.ui-dialog-client.msgbox.message {
+  padding: 0 0.5em 0 0.5em;
+  text-align: center;
+}
+.ui-dialog-content.msgbox {
+  background-color: var(--msgbox-content-bg-color);
+  color: var(--msgbox-content-fg-color);
+}
+.ui-dialog-icon:not(.wrn) {
+  filter: invert(100%);
+}
+.ui-msgbox-button {
+  background-color: var(--msgbox-button-bg-color);
+  border-radius: 1.5em;
+  color: var(--msgbox-button-fg-color);
+  cursor: pointer;
+  flex-grow: 0;
+  font-weight: bold;
+  padding: 0.5em 1.5em;
+}
+.ui-msgbox-button:hover {
+  opacity: 0.5;
+}
+.ui-msgbox-message {
+  margin: 1em 0;
+}

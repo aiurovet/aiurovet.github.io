@@ -1,0 +1,56 @@
+/*
+  Copyright (C) Alexander Iurovetski 2024
+  All rights reserved under MIT license (see LICENSE file)
+
+  Editable list styles
+*/
+
+.ui-editlist-check {
+  height: 1.6em;
+  width: 2em;
+}
+.ui-editlist-items {
+  font-size: 1em;
+}
+.ui-editlist-label {
+  margin-right: 1em;
+}
+.ui-editlist-label::after {
+  content: "Revise";
+}
+.ui-editlist-items:read-only, .ui-editlist-rename:read-only {
+  background-color: inherit;
+}
+.ui-editlist-top {
+  align-items: stretch;
+  align-content: stretch;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+.ui-editlist-top {
+  padding-bottom: 0.25em;
+}
+.ui-editlist-top > * {
+  align-self: stretch;
+}
+.ui-editlist-filler {
+  flex-grow: 1;
+}
+.ui-editlist-popup .ui-dialog-content {
+  background-color: rgb(240, 240, 240);
+  border: 1px solid black;
+}
+.ui-editlist-rename-label {
+  cursor: default;
+  text-decoration: underline;
+}
+.ui-editlist-rename-label::after {
+  content: "Rename";
+}
+.ui-editlist-rename {
+  align-self: stretch;
+  flex-grow: 1;
+  font-size: 1em;
+  margin-top: 1em;
+}

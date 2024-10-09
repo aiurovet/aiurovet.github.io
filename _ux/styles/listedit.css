@@ -1,0 +1,75 @@
+/*
+  Copyright (C) Alexander Iurovetski 2024
+  All rights reserved under MIT license (see LICENSE file)
+
+  Editable list styles
+*/
+
+.ui-listedit-check {
+  height: 1.6em;
+  width: 2em;
+}
+.ui-listedit-item {
+  white-space: normal;
+  word-wrap: normal !important;
+}
+.ui-listedit-items {
+  font-size: 1em;
+  width: 20em;
+}
+.ui-listedit-label {
+  margin-right: 1em;
+}
+.ui-listedit-label::after {
+  content: "Revise";
+}
+.ui-listedit-modify {
+  align-self: stretch;
+  flex-grow: 1;
+  font-size: 1em;
+  margin-top: 1em;
+}
+.ui-listedit-popup .ui-dialog-content {
+  background-color: rgb(240, 240, 240);
+  border: 1px solid black;
+}
+.ui-listedit-tool {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 1em;
+  margin-left: 0;
+  width: 1em;
+}
+.ui-listedit-tool:hover {
+  background-color: rgb(224, 224, 224);
+}
+.ui-listedit-tool.insert {
+  background-image: url(../images/more.svg);
+}
+.ui-listedit-tool.modify {
+  background-image: url(../images/edit.svg);
+}
+.ui-listedit-tool.movedn {
+  background-image: url(../images/next.svg);
+  transform: rotate(90deg);
+}
+.ui-listedit-tool.moveup {
+  background-image: url(../images/next.svg);
+  transform: rotate(-90deg);
+}
+.ui-listedit-tool.remove {
+  background-image: url(../images/close.svg);
+}
+.ui-listedit-toolbar {
+  align-items: stretch;
+  align-content: stretch;
+  display: flex;
+  flex-direction: row;
+  font-size: 1.25em;
+  padding-bottom: 0.25em;
+  width: 100%;
+}
+.ui-listedit-toolbar > * {
+  align-self: stretch;
+}

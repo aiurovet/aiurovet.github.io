@@ -92,7 +92,7 @@ class TimerClass {
         ? this.expiresAt - time
         : this.duration * TimerClass.millisPerSec;
 
-        this.jqText.text(GameClass.secondsToString(delta, this.duration));
+        this.jqText.text(GameClass.timeLimitToString(delta, this.duration));
     }
 
     return this;

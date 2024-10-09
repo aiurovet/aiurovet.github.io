@@ -23,6 +23,7 @@
 }
 body {
   color: black;
+  cursor: default;
   position: fixed;
 }
 body, html {
@@ -35,9 +36,6 @@ body, html {
 
 /* CLASSES */
 
-.btn, .clickable, .clickable > *, .menu {
-  cursor: pointer;
-}
 .main {
   background: rgb(244, 238, 228);
   display: flex;
@@ -56,13 +54,13 @@ body, html {
   width: 10%;
 }
 .main-col.btn.no {
-  background-image: url("../images/no.svg?v=0.2.4");
+  background-image: url("../images/no.svg?v=0.3.0");
 }
 .main-col.btn.yes {.bold-off {
   font-weight: normal;
 }
 
-  background-image: url("../images/yes.svg?v=0.2.4");
+  background-image: url("../images/yes.svg?v=0.3.0");
 }
 .main-col.info {
   align-self: center;
@@ -76,7 +74,7 @@ body, html {
 }
 .main-col.menu {
   align-self: stretch;
-  background-image: url("../images/menu.svg?v=0.2.4");
+  background-image: url("../images/menu.svg?v=0.3.0");
   background-position: left center;
   background-size: contain;
   background-repeat: no-repeat;
@@ -95,7 +93,7 @@ body, html {
 }
 .main-col.play {
   align-self: center;
-  background-image: url("../images/play.svg?v=0.2.4");
+  background-image: url("../images/play.svg?v=0.3.0");
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
@@ -115,4 +113,12 @@ body, html {
 }
 .popup-container {
   display: none;
+}
+
+/* ELEMENTS: */
+
+#main-divisor:hover, #main-help:hover, #main-timer:hover, #score:hover, #user:hover {
+  background-color: var(--dialog-caption-bg-color-1);
+  color: var(--dialog-caption-fg-color-1);
+  font-weight: bold;
 }

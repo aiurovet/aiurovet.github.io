@@ -1,0 +1,43 @@
+/*
+  Copyright (C) Alexander Iurovetski 2024
+  All rights reserved under MIT license (see LICENSE file)
+
+  Numeric/fixed-values box spinner styles
+*/
+
+.ui-spinner {
+  padding: 0.25em;
+}
+.ui-spinner > * {
+  display: block;
+  float: left;
+}
+.ui-spinner > *:not(:focus) {
+  user-select: none;
+}
+.ui-spinner-value {
+  border: 1px solid black;
+  border-radius: 3px;
+  margin: 0 0.5em;
+  text-align: center;
+}
+.ui-spinner-less {
+  background-image: url(../images/less.svg);
+}
+.ui-spinner-more {
+  background-image: url(../images/more.svg);
+}
+.ui-spinner-next {
+  background-image: url(../images/next.svg);
+}
+.ui-spinner-prev {
+  background-image: url(../images/prev.svg);
+}
+.ui-spinner-less, .ui-spinner-more, .ui-spinner-next, .ui-spinner-prev {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  cursor: default;
+  height: 1.5em;
+  width: 1em;
+}

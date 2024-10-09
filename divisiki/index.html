@@ -7,20 +7,31 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Divisiki</title>
-	<link rel="manifest" href="./manifest.json?v=0.2.4" crossorigin="use-credentials">
-	<link rel="shortcut icon" type="image/x-icon" href="ux/images/divisiki.svg?v=0.2.4">
-	<link rel="stylesheet" href="ux/styles/info.css?v=0.2.4">
-	<link rel="stylesheet" href="ux/styles/main.css?v=0.2.4">
-	<link rel="stylesheet" href="ux/styles/pref.css?v=0.2.4">
-	<script src="dl/data.js?v=0.2.4"></script>
-	<script src="dl/game.js?v=0.2.4"></script>
-	<script src="dl/json.js?v=0.2.4"></script>
-	<script src="dl/user.js?v=0.2.4"></script>
+	<link rel="manifest" href="./manifest.json?v=0.3.0" crossorigin="use-credentials">
+	<link rel="shortcut icon" type="image/x-icon" href="ux/images/divisiki.svg?v=0.3.0">
+	<link rel="stylesheet" href="../_ux/styles/dialog.css?v=0.3.0">
+	<link rel="stylesheet" href="../_ux/styles/help.css?v=0.3.0">
+	<link rel="stylesheet" href="../_ux/styles/listedit.css?v=0.3.0">
+	<link rel="stylesheet" href="../_ux/styles/msgbox.css?v=0.3.0">
+	<link rel="stylesheet" href="../_ux/styles/spinner.css?v=0.3.0">
+	<link rel="stylesheet" href="ux/styles/info.css?v=0.3.0">
+	<link rel="stylesheet" href="ux/styles/main.css?v=0.3.0">
+	<link rel="stylesheet" href="ux/styles/pref.css?v=0.3.0">
 	<script src="lib/scripts/jquery-3.7.1.slim.min.js"></script>
-	<script src="ux/scripts/core.js?v=0.2.4"></script>
-	<script src="ux/scripts/main.js?v=0.2.4"></script>
-	<script src="ux/scripts/pref.js?v=0.2.4"></script>
-	<script src="ux/scripts/timer.js?v=0.2.4"></script>
+	<script src="../_dl/extensions.js?v=0.3.0"></script>
+	<script src="../_ux/scripts/common.js?v=0.3.0"></script>
+	<script src="../_ux/scripts/dialog.js?v=0.3.0"></script>
+	<script src="../_ux/scripts/listedit.js?v=0.3.0"></script>
+	<script src="../_ux/scripts/msgbox.js?v=0.3.0"></script>
+	<script src="../_ux/scripts/spinner.js?v=0.3.0"></script>
+	<script src="dl/data.js?v=0.3.0"></script>
+	<script src="dl/game.js?v=0.3.0"></script>
+	<script src="dl/json.js?v=0.3.0"></script>
+	<script src="dl/user.js?v=0.3.0"></script>
+	<script src="ux/scripts/core.js?v=0.3.0"></script>
+	<script src="ux/scripts/main.js?v=0.3.0"></script>
+	<script src="ux/scripts/pref.js?v=0.3.0"></script>
+	<script src="ux/scripts/timer.js?v=0.3.0"></script>
 	<script>
 		var sw = navigator.serviceWorker;
 
@@ -33,121 +44,197 @@
 					console.log(error);
 				});
 		}
-</script>
+  </script>
 </head>
 <body>
   <div class="main">
 		<div class="main-row">
 			<!-- <div id="main-menu" class="main-col menu"></div> -->
-			<div id="main-help" class="main-col clickable info help left " onclick="Pref.onClickHelp(true);">
+			<div id="main-help" class="main-col clickable info help left" onclick="Pref.onClickHelp();">
 				Help
 			</div>
 			<div id="main-status" class="main-col info">
 				<span id="status"></span>
 			</div>
-			<div id="main-score" class="main-col info max"> <!-- onclick="Main.onClickSetUser();"> -->
-				<span id="user"></span>: <span id="score"></span>
+			<div id="main-score" class="main-col info max">
+				<span id="user" onclick="Pref.onClickUser();"></span>: <span id="score" onclick="Pref.onClickLevel();"></span>
 			</div>
 		</div>
     <div class="main-row max">
 			<div id="action-no" class="main-col btn no" onclick="Main.onClickAnswer(false);"></div>
-			<div id="number" class="main-col clickable number" onclick="Main.onClickPlay(false, 'Stopped manually');"></div>
+			<div id="number" class="main-col clickable number" onclick="Main.onClickPlay(false, 'Cancelled');"></div>
 			<div id="play" class="main-col clickable play" onclick="Main.onClickPlay(true);"></div>
 			<div id="action-yes" class="main-col btn yes" onclick="Main.onClickAnswer(true);"></div>
 		</div>
     <div class="main-row">
-			<div id="main-timer" class="main-col info left">
+			<div id="main-timer" class="main-col info left" onclick="Pref.onClickTimeLimit();">
 				<span id="timer"></span>
 			</div>
 			<div class="main-col info max">
 			</div>
-			<div id="main-divisor" class="main-col info max">
+			<div id="main-divisor" class="main-col info max" onclick="Pref.onClickGame();">
 				By: <span id="divisor"></span>
 			</div>
 		</div>
 	</div>
 
-	<!-- PREF & HELP -->
+	<!-- POPUP DIALOG PLACEHOLDER -->
 
-	<div class="popup-container center">
-		<div id="popup-divisors" class="popup-pref">
-			<h4>
-				Divisors
-			</h4>
-			<p>
-				Preset:
-			</p>
-			<p>
-				<select id="pref-divisors-preset">
-					<option value="2">2</option>
-					<option value="3">3</option>
-					<option value="4">4</option>
-					<option value="5">5</option>
-					<option value="10">10</option>
-					<option value="6">6</option>
-					<option value="8">8</option>
-					<option value="9">9</option>
-					<option value="12">12 = 4 * 3</option>
-					<option value="15">15 = 5 * 3</option>
-					<option value="18">18 = 2 * 9</option>
-					<option value="20">20 = 10 * 2</option>
-					<option value="7">7</option>
-					<option value="11">11</option>
-					<option value="13">13</option>
-					<option value="17">17</option>
-					<option value="19">19</option>
-					<option value="23">23</option>
-				</select>
-			</p>
-			<p>
-				Custom:
-			</p>
-			<p>
-				<input id="pref-divisors-custom" type="text" value=""/>
-			</p>
-		</div>
-		<div id="popup-help">
-			<div class="toolbar-help">
-			<div id="help-title">Divisiki</div>
-				<span id="copyright"><a id="homepage" href="https://aiurovet.com/" target="_blank">Alexander Iurovetski</a></span>
-				<div class="buttons">
-					<div class="button tool exit" onclick="Pref.onClickHelp(false);"></div>
-				</div>
+	<div id="dialog" class="ui-dialog"></div>
+
+	<!-- PREF: GAME -->
+
+	<div id="pref-game" style="display: none;"">
+		<div class="ui-dialog-content pref game">
+			<div class="ui-dialog-caption pref game">
+				<h4>Select Divisors</h4>
+				<div class="ui-dialog-filler"></div>
+				<div class="ui-dialog-icon close"></div>
 			</div>
-			<div class="popup-scroll help">
+			<div class="ui-dialog-client pref game">
+				<div id="pref-game-value"></div>
+			</div>
+		</div>
+  </div>
+
+	<!-- PREF: LEVEL -->
+
+	<div id="pref-level" style="display: none;"">
+		<div class="ui-dialog-content pref level">
+			<div class="ui-dialog-caption pref level">
+				<h4>Select Level</h4>
+				<div class="ui-dialog-filler"></div>
+				<div class="ui-dialog-icon close"></div>
+			</div>
+			<div class="ui-dialog-client pref level">
+				<div id="pref-level-value"></div>
+			</div>
+		</div>
+  </div>
+
+	<!-- PREF: TIME LIMIT -->
+
+	<div id="pref-time-limit" style="display: none;"">
+		<div class="ui-dialog-content pref time-limit">
+			<div class="ui-dialog-caption pref time-limit">
+				<h4>Select Time Limit</h4>
+				<div class="ui-dialog-filler"></div>
+				<div class="ui-dialog-icon close"></div>
+			</div>
+			<div class="ui-dialog-client pref time-limit">
+				<div id="pref-time-limit-value"></div>
+			</div>
+		</div>
+  </div>
+
+	<!-- PREF: USER -->
+
+	<div id="pref-user" style="display: none;"">
+		<div class="ui-dialog-content pref user">
+			<div class="ui-dialog-caption pref user">
+				<h4>Select a Player</h4>
+				<div class="ui-dialog-filler"></div>
+				<div class="ui-dialog-icon close"></div>
+			</div>
+			<div class="ui-dialog-client pref user">
+				<div id="pref-user-value"></div>
+			</div>
+		</div>
+  </div>
+
+	<!-- HELP -->
+
+	<div id="help" style="display: none;"">
+		<div class="ui-dialog-content help">
+			<div class="ui-dialog-caption help">
+				<h4>Divisiki</h4>
+				<div id="copyright"></div><a id="help-link" target="_blank" href="https://aiurovet.com">Alexander Iurovetski</a>
+				<div class="ui-dialog-filler"></div>
+				<div class="ui-dialog-icon close"></div>
+			</div>
+			<div class="ui-dialog-client help">
 				<h4 id="version"></h4>
 				<div class="para-help">
-					This web application allows you to teach kids first words, names, birthdays and simple Math.
+					This web application allows you to teach kids how to check a number can be divided by another number
+					(primarily, but not limited to, <em>2, 3, 4, 5, 8, 9, 10 or 11</em>). When they learn that, you can
+					increase the complexity by setting a composite divisor: like <em>6</em> which is <em>2&times;3</em>.
+					Or by setting multiple prime or composite divisors: like <em>3</em> or <em>5</em> or <em>22</em>.
+					The latter though will be automatically converted to <em>2&times;11</em> for better clarity.
 				</div>
 				<div class="para-help">
-          It doesn't collect private information or use cookies, just the browser's local storage to
-					save your preferences.
+					The application neither collects private information, nor uses cookies, nor makes external calls. It
+					just uses the browser's local storage to keep your preferences. Please note: this means that clearing
+					your browser cache will discard the application's preferences too. Even if you install it as an app on
+					your device.
 				</div>
 				<div class="para-help">
-					It is available on any device: tablet (ideal), phone, laptop or desktop. The recommended orientation for the
-					handheld devices is <em>landscape</em> (horizontal). The only requirements are a web browser and an internet
-					connection.
+					The application is available on any device: tablet (ideal), phone, laptop, or desktop. The recommended
+					orientation for the handheld devices is <em>landscape</em> (horizontal). The only requirements are a
+					web browser and an internet	connection to start using or to get updates.
 				</div>
 				<h4>How to Install</h4>
 				<div class="para-help">
-					You can use <em>Divisiki</em> in a browser as is without any installation. However, you can install it on most
-					devices via a browser. This will give you the native app experience and the ability to run offline
-					when the internet connection is intermittent or unavailable. Please note that not all browsers are capable of
-					that. Ideally, use <em>Google Chrome</em> or <em>Microsoft Edge</em>. You should find and click
-					<em>Add to Home screen</em> menu item (or similar), then follow the prompts. On laptops and desktops, an icon
-					with a monitor and an arrow might be displayed at the end of the address bar. If you hover it with the mouse
-					cursor, a tooltip will pop: <em>Install Divisiki</em>. Click the icon and follow the prompts.
+					You can use <em>Divisiki</em> in a browser as is without any installation. However, you can install it
+					on most	devices via a browser. This will give you the native app experience and the ability to run offline
+					when the internet connection is intermittent or unavailable. Please note that not all browsers are capable
+					of web app installation. Ideally, do that using mobile versions of <em>Google Chrome</em> or <em>Microsoft
+					Edge</em>. You should find and click <em>Add to Home screen</em> menu item (or similar), then follow the
+					prompts. On laptops and desktops, an icon with a monitor and an arrow might show up at the end of the
+					address bar. If you hover it with	the mouse	cursor, a tooltip will pop: <em>Install Divisiki</em>. Click
+					the icon and follow the prompts.
 				</div>
 				<h4>How to Use</h4>
 				<div class="para-help">
-					At start, tap or click the large play button in the center, and you'll see a random number. If it is divisible
-					by the one(s) listed at the right bottom corner, click the green tick button. Otherwise, click the red cross
-					button. If your mental calculation is right, you'll get another number, and the score at the right top corner
-					will change. Otherwise, you'll see the large play button again, but the score will stay until you start another
-					game. If the game is timed, every time you give an answer, the timer at the left bottom corner will be
-					reset. The score at the top right corner is in the format of <em>User: CurrentPoints / BestPoints</em>.
+					At the first time, you'll be asked to change the default player name from <em>Anonymous</em> to something
+					more suitable. You can do that by clicking the modify icon (the second from the left above the list of
+					players), then typing in any other text of your choice.
 				</div>
-				<h4>Divisibility Rules</h4>
+        <div class="para-help">
+				  To start playing, tap or click the large play button in the center, and you'll see a random number. If it
+					is divisible by the one(s) listed at the right bottom corner, click the green tick button. Otherwise, click
+					the red cross	button. If your mental calculation is right, you'll get another number, and the score at the
+					right top corner will change. Otherwise, you'll see the large play button again, but the score will stay
+					until you start another	game. You'll also see the text explaining why the game was stopped. The text will
+					be located at the top middle part of the screen. If the game is timed, every time you give an answer, the
+					timer at the left bottom corner will be reset. The score at the top right corner is in the format of
+					<em>User: CurrentPoints / BestPoints</em>. Both user and points are clickable allowing to add, change or
+					delete user(s) or the level (the number of digits in each riddle).
+				</div>
+        <div class="para-help">
+					After a certain number of consecutive successful attempts, the level (number of digits) will be increased.
+					For the lower levels, this will happen after the application can't find more numbers to play, and for the
+					higher levels, after 50 successful attempts in a row. However, you can change that manually	too by clicking
+					the score at the top right corner of the screen.
+				</div>
+				<h4>Preferences</h4>
+        <div class="para-help">
+					You can add, rename or delete player(s) by clicking the name of the current player at the top right corner
+					of the screen. Please note that once a player is deleted, all their game information is lost. By deleting
+					all players, you delete all your preferences, and an anonymous player with the default preferences will be
+					automatically created.
+				</div>
+        <div class="para-help">
+					You can change the level (the number of digits in the number to check divisiblity for) from 1 to 15.
+				</div>
+        <div class="para-help">
+					You can select various time limits by clicking the current time limit at the left bottom corner of the
+					screen.
+				</div>
+        <div class="para-help">
+					You can add, rename or delete game(s) for the current player by clicking the score of the current player
+					at the top right corner of the screen. Essentially, you add or modify divisors. For the new set of divisors,
+					the level will be set to minimal, and the initial score will be zero. Divisors can appear either as plain
+					prime numbers like <em>2</em> or as composite numbers like <em>12</em> or <em>3x4</em> ("and" operation)
+					or as a comma-separated	list of numbers like <em>5, 12, 13</em> meaning that the number being played should
+					be divisible by at least one of those numbers ("or" operation). Once you enter divisors, they'll be
+					automatically converted to the canonical form like <em>5 or 4&times;3 or 13</em>. Please note that composite
+					numbers can be entered either like plain numbers or a product of simpler numbers using *, x, X or
+					&times; as the operator. In any case, the result will be calculated and converted into a product of powers
+					of prime numbers in ascending order (except the powers of 10 that will always appear in the beginning to
+					make your life a bit easier). The list of divisors ("or") can be specified using a comma or the word "or"
+					as the separator.
+				</div>
+				<h4>Divisibility Rules (the cheat sheet)</h4>
 				<div class="para-help">
 					<ul class="rules">
 						<li><strong>2</strong> - the lowest digit should be even (0, 2, 4, 6 or 8):<br>20, 32, 154, 3276, 39158.</li>
@@ -155,50 +242,34 @@
 						<li><strong>4</strong> - the lowest two digits make the number that is divisible by 4:<br>24, 356.</li>
 						<li><strong>5</strong> - the lowest digit is either 0 or 5:<br>10, 135, 2480, 76905.</li>
 						<li><strong>7</strong> - multiply the lowest digit by 2 and subtract the result from the remaining digits; the final result should also be divisible by 7:<br>
-              14 &rArr; 4 * 2 - 1 &rArr; 7, 357 &rArr; 35 - 7 * 2 &rArr; 21.
+							14 &rArr; 4 &times; 2 - 1 &rArr; 7, 357 &rArr; 35 - 7 &times; 2 &rArr; 21.
 						</li>
 						<li><strong>8</strong> - the lowest three digits form a number that is divisible by 8:<br>128, 9008, 25064.</li>
 						<li><strong>9</strong> - the sum of all digits should be divisible by 9:<br>18, 927, 4671.</li>
 						<li><strong>10</strong> - should end with 0:<br>10, 120, 45700.</li>
 						<li><strong>11</strong> - the sum of the even digits should be equal to the sum of the odd digits or the difference between these sums should be divisible by 11:<br>
-              11 &rArr; 1 = 1, 121 &rArr; 2 = 2, 5335 &rArr; 8 = 8, 9020 &rArr; 11 - 0 &rArr; 11.
+							11 &rArr; 1 = 1, 121 &rArr; 2 = 2, 5335 &rArr; 8 = 8, 9020 &rArr; 11 - 0 &rArr; 11.
 						</li>
 						<li><strong>13</strong> - multiply the lowest digit by 4 and add the result to the number formed by remaining digits; the final result should be divisible by 13:<br>
-							13 &rArr; 3 * 4 + 1 = 13, 52 &rArr; 2 * 4 + 5 = 13.
+							13 &rArr; 3 &times; 4 + 1 = 13, 52 &rArr; 2 &times; 4 + 5 = 13.
 						</li>
 						<li><strong>17</strong> - multiply the lowest digit by 5 and subtract the result from the number formed by remaining digits; the final result should be divisible by 17:<br>
-							17 &rArr; 7 * 5 - 1 &rArr; 34 &rArr; 4 * 5 - 3 = 17, 153 &rArr; 3 * 5 - 15 = 0.
+							17 &rArr; 7 &times; 5 - 1 &rArr; 34 &rArr; 4 &times; 5 - 3 = 17, 153 &rArr; 3 &times; 5 - 15 = 0.
 						</li>
 						<li><strong>19</strong> - multiply the lowest digit by 2 and add the result to the number formed by remaining digits; the final result should be divisible by 19:<br>
-							19 &rArr; 9 * 2 + 1 &rArr; 19, 114 &rArr; 4 * 2 + 11 = 19.
+							19 &rArr; 9 &times; 2 + 1 &rArr; 19, 114 &rArr; 4 &times; 2 + 11 = 19.
 						</li>
 						<li><strong>23</strong> - multiply the lowest digit by 7 and add the result to the number formed by remaining digits; the final result should be divisible by 23:<br>
-				      23 &rArr; 3 * 7 + 2 = 23, 115 &rArr; 5 * 7 + 11 = 46 = 23 * 2.
+							23 &rArr; 3 &times; 7 + 2 = 23, 115 &rArr; 5 &times; 7 + 11 = 46 = 23 &times; 2.
 						</li>
 					</ul>
 				</div>
-				<h4>To be Implemented</h4>
+				<h4>Contact</h4>
 				<div class="para-help">
-					<ol>
-						<li>Every corner text should be clickable:
-							<ul>
-								<li>top right - change or rename a user (free text like: "Lily", "Johnny", "Mum", "Dad"),
-									or reset stats</li>
-								<li>bottom left - change the time limit (no limit, 2m, 1m30s, 1m, 45s, 30s, 20s, 15s, 10s, 5s)</li>
-								<li>bottom right - change divisors:
-									<ul>
-										<li>2 - check divisibility by 2</li>
-										<li>6 - check divisibility by 2 and by 3</li>
-										<li>2, 3 - check divisibility either by 2 or by 3</li>
-										<li>6, 5 - check divisibility either by 2 and 3 or by 5</li>
-									</ul>
-								</li>
-							</ul>
-						</li>
-					</ol>
+					You can send your questions or suggestions to: <a href="mailto:aiurovet@gmail.com">aiurovet@gmail.com</a>
 				</div>
 			</div>
 		</div>
-	</div>
+  </div>
 </body>
 </html>

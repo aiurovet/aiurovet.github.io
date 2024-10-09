@@ -14,6 +14,9 @@
 #copyright::before {
   content: "Copyright \00a9  2024";
 }
+#version {
+  margin-top: 0.5em;
+}
 #version::before {
-  content: "Version 0.2.4";
+  content: "Version 0.3.0";
 }
