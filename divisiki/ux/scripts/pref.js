@@ -45,7 +45,7 @@ class PrefClass {
 
     jqControl.listedit({
       items: user.getGames(),
-      rows: 6,
+      rows: 3,
       editorRows: 3,
       insertTitle: "Add Divisors",
       modifyTitle: "Modify Divisors",
@@ -145,7 +145,7 @@ class PrefClass {
       hasDefaultItem: true,
       isEditable: true,
       items: Data.getUsers(),
-      rows: 6,
+      rows: 3,
       insertTitle: "Add a Player",
       modifyTitle: "Rename a Player",
       selectedItemNo: Data.getSelectedUserNo(),
@@ -153,7 +153,17 @@ class PrefClass {
         return itemNo >= 0 ? items[itemNo].userId : "";
       },
       parser: function(items, itemNo, value) {
-        value ||= UserClass.defaultUserId;
+        value = value?.trim() ?? "";
+
+        if (value.length === 0) {
+          if (items.length != 1) {
+            return;
+          }
+          if (items[0] !== null) {
+            return;
+          }
+          value = UserClass.defaultUserId;
+        }
 
         if (items[itemNo]) {
           items[itemNo].userId = value;

@@ -8,6 +8,8 @@
 :root {
   --msgbox-button-bg-color: rgb(192, 192, 192);
   --msgbox-button-fg-color: black;
+  --msgbox-button-sel-bg-color: black;
+  --msgbox-button-sel-fg-color: white;
 
   --msgbox-caption-inf-bg-color: rgb(25, 103, 210);
   --msgbox-caption-inf-fg-color: white;
@@ -58,7 +60,8 @@
   padding: 0.5em 1.5em;
 }
 .ui-msgbox-button:hover {
-  opacity: 0.5;
+  background-color: var(--msgbox-button-sel-bg-color);
+  color: var(--msgbox-button-sel-fg-color);
 }
 .ui-msgbox-message {
   margin: 1em 0;

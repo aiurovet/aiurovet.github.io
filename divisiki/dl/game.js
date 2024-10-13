@@ -19,6 +19,7 @@ class GameClass {
   static minLevel = 1;
   static maxLevel = Number.MAX_SAFE_INTEGER.toString().length - 1;
   static mulSign = "×";
+  static orSign = " or ";
   static timeLimits = [0, 120, 90, 60, 45, 30, 20, 15, 10,];
 
   //////////////////////////////////////////////////////////////////////////////
@@ -198,7 +199,7 @@ class GameClass {
 
   static parseDivisors(value) {
     return value
-      .replaceAll(/\s*(or?|,)\s*/g, ",")
+      .replaceAll(/\s*(∨|v|V|or?)\s*/g, ",")
       .split(",")
       .map(function (divisorStr) {
         let result = 1;
@@ -413,7 +414,7 @@ class GameClass {
   toDivisorsString() {
     return this.divisors
       .map((d) => GameClass.toSimpleDivisors(d))
-      .join(" or ");
+      .join(GameClass.orSign);
   }
 
   //////////////////////////////////////////////////////////////////////////////
@@ -439,7 +440,7 @@ class GameClass {
     let divisors = [];
     let divisor = 10;
   
-    // First find the 10
+    // First find the 10s
 
     while (value >= divisor) {
       if ((value % divisor) == 0) {
@@ -477,6 +478,8 @@ class GameClass {
         ++j;
       }
     }
+
+    result.sort((x, y) => parseInt(x) - parseInt(y));
 
     return result.join(GameClass.mulSign);
   }

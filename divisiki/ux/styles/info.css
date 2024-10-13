@@ -12,11 +12,11 @@
   margin: 0 0 0 1rem;
 }
 #copyright::before {
-  content: "Copyright \00a9  2024";
+  content: "\00a9  2024";
 }
 #version {
   margin-top: 0.5em;
 }
 #version::before {
-  content: "Version 0.3.4";
+  content: "Version 0.4.0";
 }
