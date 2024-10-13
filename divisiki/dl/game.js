@@ -79,7 +79,7 @@ class GameClass {
   static getAllLevels() {
     let result = [];
 
-    for (let i = GameClass.minLevel, n = GameClass.maxLevel; i < n; i++) {
+    for (let i = GameClass.minLevel; i <= GameClass.maxLevel; i++) {
       result.push(i);
     }
 
@@ -391,20 +391,6 @@ class GameClass {
     secs = (secs < 10 ? "0" : "") + secs.toString();
 
     return `${mins}:${secs}`;
-  }
-
-  //////////////////////////////////////////////////////////////////////////////
-  // Convert the whole array of time limits to string array
-  //////////////////////////////////////////////////////////////////////////////
-
-  static timeLimitsToStrings() {
-    let result = [];
-
-    for (let timeLimit of this.timeLimits) {
-      result.push(GameClass.timeLimitToString(timeLimit));
-    }
-
-    return result;
   }
 
   //////////////////////////////////////////////////////////////////////////////

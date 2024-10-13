@@ -96,16 +96,27 @@ class PrefClass {
 
     var jqControl = $("#pref-level-value");
 
-    jqControl.spinner({
+    /*jqControl.spinner({
       value: game.level,
       min: GameClass.minLevel,
       max: GameClass.maxLevel,
       isWrap: false,
+    });*/
+
+    jqControl.listedit({
+      hasDefaultItem: true,
+      isEditable: true,
+      items: GameClass.getAllLevels(),
+      rows: 3,
+      isEditable: false,
+      selectedItem: game.lastTimeLimit,
+      formatter: null, // default
+      parser: null // no need for non-editable lists
     });
 
     this.onClick("#pref-level", function (event) {
       if (event === "after-hide") {
-        Main.setLevel(parseInt(jqControl.value));
+        Main.setLevel(parseInt(jqControl.selectedItem));
         jqControl.empty();
       }
     });
@@ -122,15 +133,22 @@ class PrefClass {
 
     var jqControl = $("#pref-time-limit-value");
 
-    jqControl.spinner({
-      formatter: GameClass.timeLimitToString,
-      value: game.lastTimeLimit,
-      values: GameClass.timeLimits,
+    jqControl.listedit({
+      hasDefaultItem: true,
+      isEditable: true,
+      items: GameClass.timeLimits,
+      rows: 3,
+      isEditable: false,
+      selectedItem: game.lastTimeLimit,
+      formatter: function(items, itemNo) {
+        return itemNo >= 0 ? GameClass.timeLimitToString(items[itemNo]) : "";
+      },
+      parser: null // no need for non-editable lists
     });
 
     this.onClick("#pref-time-limit", function (event) {
       if (event === "after-hide") {
-        Main.setTimer(false, jqControl.value);
+        Main.setTimer(false, jqControl.selectedItem);
         jqControl.empty();
       }
     });
