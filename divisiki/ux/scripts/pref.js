@@ -45,6 +45,7 @@ class PrefClass {
 
     jqControl.listedit({
       items: user.getGames(),
+      maxItemCount: UserClass.maxGameCount,
       rows: 3,
       editorRows: 3,
       insertTitle: "Add Divisors",
@@ -57,7 +58,7 @@ class PrefClass {
         let divisors = GameClass.parseDivisors(value);
 
         if (divisors.length <= 0) {
-          divisors = [...GameClass.defaultDivisors];
+          return;
         }
         if (items[itemNo]) {
           items[itemNo].divisors = divisors;
@@ -95,13 +96,6 @@ class PrefClass {
     }
 
     var jqControl = $("#pref-level-value");
-
-    /*jqControl.spinner({
-      value: game.level,
-      min: GameClass.minLevel,
-      max: GameClass.maxLevel,
-      isWrap: false,
-    });*/
 
     jqControl.listedit({
       hasDefaultItem: true,
@@ -163,6 +157,7 @@ class PrefClass {
       hasDefaultItem: true,
       isEditable: true,
       items: Data.getUsers(),
+      maxItemCount: DataClass.maxUserCount,
       rows: 3,
       insertTitle: "Add a Player",
       modifyTitle: "Rename a Player",

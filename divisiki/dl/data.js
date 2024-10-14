@@ -14,6 +14,7 @@ class DataClass {
   //
   static appName = "divisiki";
   static keyPref = DataClass.appName;
+  static maxUserCount = 50;
   static version = "0.1.0";
 
   //////////////////////////////////////////////////////////////////////////////
@@ -57,7 +58,11 @@ class DataClass {
       this.#users = users;
     } else {
       this.#users = [];
-      for (var i = 0, n = users.length; i < n; i++) {
+      let n = users.length;
+      if (n > DataClass.maxUserCount) {
+        n = DataClass.maxUserCount;
+      }
+      for (let i = 0; i < n; i++) {
         this.#users.push(new UserClass(users[i]));
       }
     }
@@ -167,9 +172,15 @@ class DataClass {
   //////////////////////////////////////////////////////////////////////////////
 
   toSerializable() {
-    var users = [];
+    let users = [];
 
-    for (var i = 0, n = this.#users.length; i < n; i++) {
+    let n = this.#users.length;
+
+    if (n > DataClass.maxUserCount) {
+      n = DataClass.maxUserCount;
+    }
+
+    for (let i = 0; i < n; i++) {
       users[i] = this.#users[i].toSerializable();
     }
 

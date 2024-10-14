@@ -13,6 +13,7 @@ class UserClass {
   // Constants
   //
   static defaultUserId = "Anonymous";
+  static maxGameCount = 50;
 
   //////////////////////////////////////////////////////////////////////////////
 
@@ -80,7 +81,11 @@ class UserClass {
       this.#games = games;
     } else {
       this.#games = [];
-      for (var i = 0, n = games.length; i < n; i++) {
+      let n = games.length;
+      if (n > UserClass.maxGameCount) {
+        n = UserClass.maxGameCount;
+      }
+      for (let i = 0; i < n; i++) {
         this.#games.push(new GameClass(games[i]));
       }
     }
