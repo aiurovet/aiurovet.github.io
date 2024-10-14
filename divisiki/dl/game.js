@@ -20,7 +20,7 @@ class GameClass {
   static maxLevel = Number.MAX_SAFE_INTEGER.toString().length - 1;
   static mulSign = "×";
   static orSign = " or ";
-  static timeLimits = [0, 120, 90, 60, 45, 30, 20, 15, 10,];
+  static timeLimits = [0, 120, 105, 90, 75, 60, 45, 30, 25, 20, 15, 10, 5,];
 
   //////////////////////////////////////////////////////////////////////////////
 
