@@ -141,8 +141,10 @@ class MainClass {
 
     if (value) {
       game.setDivisors(value);
-      Data.save();
     }
+
+    Data.save();
+    this.setLevel();
 
     $("#divisor").text(game.toDivisorsString());
   }
@@ -156,16 +158,12 @@ class MainClass {
       return;
     }
 
-    var oldLevel = game.level;
-
     if ((value !== undefined) && (value !== null)) {
       game.setLevel(value);
     }
 
-    if (game.level != oldLevel) {
-      Data.save();
-      this.setScore();
-    }
+    Data.save();
+    this.setScore();
   }
 
   //////////////////////////////////////////////////////////////////////////////
@@ -195,7 +193,7 @@ class MainClass {
   //////////////////////////////////////////////////////////////////////////////
 
   setNumberHeight() {
-    var jqNumber = $("#number"); 
+    var jqNumber = $("#number");
     var maxHeight = $("#action-no").innerHeight();
     var maxWidth = jqNumber.innerWidth();
     var numLen = (jqNumber.text().length || 1);

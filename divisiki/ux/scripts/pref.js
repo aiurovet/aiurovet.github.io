@@ -60,8 +60,9 @@ class PrefClass {
         if (divisors.length <= 0) {
           return;
         }
+
         if (items[itemNo]) {
-          items[itemNo].divisors = divisors;
+          items[itemNo].init(GameClass.minLevel, divisors, 0, GameClass.defaultTimeLimit);
         } else {
           items[itemNo] = new GameClass(GameClass.minLevel, divisors, 0, GameClass.defaultTimeLimit);
         }
@@ -73,6 +74,7 @@ class PrefClass {
         Data.setSelectedGameNo(jqControl.selectedItemNo);
         Data.save();
         Main.setDivisors();
+        Main.setLevel();
       }
       else if (event === "after-hide") {
         jqControl.empty();
@@ -192,7 +194,6 @@ class PrefClass {
         Data.save();
         Main.setDivisors();
         Main.setLevel();
-        Main.setScore();
         Main.setTimer();
         Main.setUser();
       }
