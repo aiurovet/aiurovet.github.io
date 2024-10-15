@@ -13,7 +13,7 @@ class UserClass {
   // Constants
   //
   static defaultUserId = "Anonymous";
-  static maxGameCount = 50;
+  static maxGameCount = 20;
 
   //////////////////////////////////////////////////////////////////////////////
 

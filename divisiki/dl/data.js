@@ -14,7 +14,7 @@ class DataClass {
   //
   static appName = "divisiki";
   static keyPref = DataClass.appName;
-  static maxUserCount = 50;
+  static maxUserCount = 20;
   static version = "0.1.0";
 
   //////////////////////////////////////////////////////////////////////////////
