@@ -18,5 +18,5 @@
   margin-top: 0.5em;
 }
 #version::before {
-  content: "Version 0.4.6";
+  content: "Version 0.4.7";
 }
