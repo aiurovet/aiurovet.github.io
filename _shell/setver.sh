@@ -52,10 +52,10 @@ else
   # Loop through all relevant files and replace the version
   #
   for inp in $(ls -1\
-      "${DIR}/*.html"\
-      "${DIR}/manifest.json"\
-      "${DIR}/service-worker.js"\
-      "${DIR}/ux/styles/"*.css\
+      "${DIR}"/*.html\
+      "${DIR}"/manifest.json\
+      "${DIR}"/service-worker.js\
+      "${DIR}"/ux/styles/*.css\
   ); do
     sed -r "${SED}" "${inp}" > "${TMF}" && mv -f "${TMF}" "${inp}" || exit 1
   done

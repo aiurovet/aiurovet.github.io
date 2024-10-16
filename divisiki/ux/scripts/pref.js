@@ -24,16 +24,6 @@ class PrefClass {
 
   //////////////////////////////////////////////////////////////////////////////
 
-  async onClickExit() {
-    if (this.onBlurSuperUser() || Data.isChanged) {
-      Data.save(false);
-    }
-
-    Core.setPopup(false);
-  }
-
-  //////////////////////////////////////////////////////////////////////////////
-
   onClickGame() {
     var user = Data.getSelectedUser();
 
