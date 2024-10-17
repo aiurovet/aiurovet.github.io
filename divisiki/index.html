@@ -7,29 +7,29 @@
 <head>
   <meta charset="UTF-8">
   <title>Divisiki</title>
-  <link rel="manifest" href="./manifest.json?v=0.5.9" crossorigin="use-credentials">
-  <link rel="shortcut icon" type="image/x-icon" href="ux/images/divisiki.svg?v=0.5.9">
-  <link rel="stylesheet" href="../lib/ux/styles/dialog.css?v=0.5.9">
-  <link rel="stylesheet" href="../lib/ux/styles/help.css?v=0.5.9">
-  <link rel="stylesheet" href="../lib/ux/styles/listedit.css?v=0.5.9">
-  <link rel="stylesheet" href="../lib/ux/styles/msgbox.css?v=0.5.9">
-  <link rel="stylesheet" href="ux/styles/info.css?v=0.5.9">
-  <link rel="stylesheet" href="ux/styles/main.css?v=0.5.9">
-  <link rel="stylesheet" href="ux/styles/pref.css?v=0.5.9">
+  <link rel="manifest" href="./manifest.json?v=0.6.0" crossorigin="use-credentials">
+  <link rel="shortcut icon" type="image/x-icon" href="ux/images/divisiki.svg?v=0.6.0">
+  <link rel="stylesheet" href="../lib/ux/styles/dialog.css?v=0.6.0">
+  <link rel="stylesheet" href="../lib/ux/styles/help.css?v=0.6.0">
+  <link rel="stylesheet" href="../lib/ux/styles/listedit.css?v=0.6.0">
+  <link rel="stylesheet" href="../lib/ux/styles/msgbox.css?v=0.6.0">
+  <link rel="stylesheet" href="ux/styles/info.css?v=0.6.0">
+  <link rel="stylesheet" href="ux/styles/main.css?v=0.6.0">
+  <link rel="stylesheet" href="ux/styles/pref.css?v=0.6.0">
   <script src="../lib/import/scripts/jquery-3.7.1.slim.min.js"></script>
-  <script src="../lib/dl/extensions.js?v=0.5.9"></script>
-  <script src="../lib/dl/json.js?v=0.5.9"></script>
-  <script src="../lib/ux/scripts/common.js?v=0.5.9"></script>
-  <script src="../lib/ux/scripts/dialog.js?v=0.5.9"></script>
-  <script src="../lib/ux/scripts/listedit.js?v=0.5.9"></script>
-  <script src="../lib/ux/scripts/msgbox.js?v=0.5.9"></script>
-  <script src="dl/data.js?v=0.5.9"></script>
-  <script src="dl/game.js?v=0.5.9"></script>
-  <script src="dl/user.js?v=0.5.9"></script>
-  <script src="ux/scripts/core.js?v=0.5.9"></script>
-  <script src="ux/scripts/main.js?v=0.5.9"></script>
-  <script src="ux/scripts/pref.js?v=0.5.9"></script>
-  <script src="ux/scripts/timer.js?v=0.5.9"></script>
+  <script src="../lib/dl/extensions.js?v=0.6.0"></script>
+  <script src="../lib/dl/json.js?v=0.6.0"></script>
+  <script src="../lib/ux/scripts/common.js?v=0.6.0"></script>
+  <script src="../lib/ux/scripts/dialog.js?v=0.6.0"></script>
+  <script src="../lib/ux/scripts/listedit.js?v=0.6.0"></script>
+  <script src="../lib/ux/scripts/msgbox.js?v=0.6.0"></script>
+  <script src="dl/data.js?v=0.6.0"></script>
+  <script src="dl/game.js?v=0.6.0"></script>
+  <script src="dl/user.js?v=0.6.0"></script>
+  <script src="ux/scripts/core.js?v=0.6.0"></script>
+  <script src="ux/scripts/main.js?v=0.6.0"></script>
+  <script src="ux/scripts/pref.js?v=0.6.0"></script>
+  <script src="ux/scripts/timer.js?v=0.6.0"></script>
   <script>
     let sw = navigator.serviceWorker;
 
@@ -71,7 +71,7 @@
       <div class="main-col info max">
       </div>
       <div id="main-divisor" class="main-col info max" onclick="Pref.onClickGame();">
-        &odiv; <span id="divisor"></span>
+        By: <span id="divisor"></span>
       </div>
     </div>
   </div>
@@ -190,7 +190,7 @@
         </div>
         <div class="para-help">
           To start playing, tap/click the large play button in the center, and you'll see a random number. If it
-          is divisible by the one(s) listed at the right bottom corner past &odiv;, tap/click the green tick button.
+          is divisible by the one(s) listed at the right bottom corner past <em>By:</em>, tap/click the green tick button.
           Otherwise, tap/click the red cross  button. If your mental calculation is right, you'll get another number,
           and the score at the right top corner will change. Otherwise, you'll see the large play button again, but
           the score will stay until you start another game. You'll also see the text explaining why the game was
@@ -228,7 +228,7 @@
         <h4 id="help-pref-divisors">Preferences &ndash; Divisors</h4>
         <div class="para-help">
           You can add, rename or delete games (divisors) for the current player by tapping/clicking the score of the current
-          player at the bottom right corner of the screen where &odiv; is located, then using the icons on top of the list
+          player at the bottom right corner of the screen where <em>By:</em> is located, then using the icons on top of the list
           of existing divisors in the popup dialog. The icons are (in the order of appearance): add, rename, delete, move up
           move down. Essentially, you add or modify divisors. For the new set of divisors, the level will be set to minimal,
           and the initial score will be zero. Divisors can appear either as plain prime numbers like <em>2</em> or as composite
