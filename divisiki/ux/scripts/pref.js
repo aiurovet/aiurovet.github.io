@@ -116,7 +116,7 @@ class PrefClass {
       hasDefaultItem: true,
       isEditable: true,
       items: GameClass.getAllLevels(),
-      rows: 3,
+      rows: 2,
       isEditable: false,
       selectedItem: game.lastTimeLimit,
       formatter: null, // default
@@ -124,7 +124,11 @@ class PrefClass {
     });
 
     this.onClick("#pref-level", function (event) {
-      if (event === "after-hide") {
+      if (event === "after-show") {
+        let width = jqControl.find(".ui-listedit-item:nth-child(10)").outerWidth();
+        jqControl.find(".ui-listedit-item:nth-child(-n + 9)").outerWidth(width);
+      }
+      else if (event === "after-hide") {
         Main.setLevel(parseInt(jqControl.selectedItem));
         jqControl.empty();
       }
