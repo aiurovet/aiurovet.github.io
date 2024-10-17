@@ -91,7 +91,10 @@ ul.rules > li {
   align-self: stretch;
   flex-grow: 1;
 }
-#pref-level-value > .ui-listedit-items > .ui-listedit-item,
+#pref-level-value > .ui-listedit-items > .ui-listedit-item {
+  padding: 1em 0.5em;
+  text-align: center;
+}
 #pref-time-limit-value > .ui-listedit-items > .ui-listedit-item {
   padding: 1em 0.5em;
   text-align: center;
