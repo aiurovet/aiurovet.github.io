@@ -16,7 +16,16 @@ class PrefClass {
   onClick(id, handler) {
     Main.onClickPlay(false);
 
-    $("#dialog").dialog({
+    let dialogId = `dialog-${id.replace("#", "")}`;
+    let jqDialog = $(`#${dialogId}`);
+
+    if (!jqDialog || !jqDialog.length) {
+      jqDialog = $(`
+        <div id="${dialogId}" class="ui-dialog"></div>
+      `).appendTo($("body"));
+    }
+
+    jqDialog.dialog({
       content: $(id),
       handler: handler
     });
@@ -74,8 +83,16 @@ class PrefClass {
 
   //////////////////////////////////////////////////////////////////////////////
 
-  onClickHelp() {
+  onClickHelp(anchor) {
     this.onClick("#help");
+
+    if (!anchor) {
+      return;
+    }
+
+    postAction(function () {
+      $(`#${anchor}`).scrollIntoView();
+    });
   }
 
   //////////////////////////////////////////////////////////////////////////////

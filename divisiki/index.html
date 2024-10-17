@@ -89,6 +89,7 @@
 			<div class="ui-dialog-caption pref game">
 				<h4>Select Divisors</h4>
 				<div class="ui-dialog-filler"></div>
+				<div class="ui-dialog-icon help" onclick="Pref.onClickHelp('help-pref-divisors')"></div>
 				<div class="ui-dialog-icon close"></div>
 			</div>
 			<div class="ui-dialog-client pref game">
@@ -104,6 +105,7 @@
 			<div class="ui-dialog-caption pref level">
 				<h4>Select Level</h4>
 				<div class="ui-dialog-filler"></div>
+				<div class="ui-dialog-icon help" onclick="Pref.onClickHelp('help-pref-level')"></div>
 				<div class="ui-dialog-icon close"></div>
 			</div>
 			<div class="ui-dialog-client pref level">
@@ -119,6 +121,7 @@
 			<div class="ui-dialog-caption pref time-limit">
 				<h4>Select Time Limit</h4>
 				<div class="ui-dialog-filler"></div>
+				<div class="ui-dialog-icon help" onclick="Pref.onClickHelp('help-pref-time-limit')"></div>
 				<div class="ui-dialog-icon close"></div>
 			</div>
 			<div class="ui-dialog-client pref time-limit">
@@ -134,6 +137,7 @@
 			<div class="ui-dialog-caption pref user">
 				<h4>Select a Player</h4>
 				<div class="ui-dialog-filler"></div>
+				<div class="ui-dialog-icon help" onclick="Pref.onClickHelp('help-pref-users')"></div>
 				<div class="ui-dialog-icon close"></div>
 			</div>
 			<div class="ui-dialog-client pref user">
@@ -206,36 +210,39 @@
 					and for the higher levels, after 50 successful attempts in a row. However, you can change that manually	too
 					by clicking the score at the top right corner of the screen.
 				</div>
-				<h4>Preferences</h4>
+				<h4 id="help-pref-users">Preferences - Players</h4>
         <div class="para-help">
 					You can add, rename or delete player(s) by clicking the name of the current player at the top right corner
 					of the screen. Please note that once a player is deleted, all their game information is lost. By deleting
 					all players, you delete all your preferences, and an anonymous player with the default preferences will be
 					automatically created.
 				</div>
+				<h4 id="help-pref-level">Preferences - Level</h4>
         <div class="para-help">
 					You can change the level (the number of digits in the number to check divisiblity for) from 1 to 15.
 				</div>
+				<h4 id="help-pref-time-limit">Preferences - Time Limit</h4>
         <div class="para-help">
 					You can select various time limits by clicking the current time limit at the left bottom corner of the
 					screen.
 				</div>
+				<h4 id="help-pref-divisors">Preferences - Divisors</h4>
         <div class="para-help">
 					You can add, rename or delete game(s) for the current player by clicking the score of the current player
 					at the top right corner of the screen. Essentially, you add or modify divisors. For the new set of divisors,
 					the level will be set to minimal, and the initial score will be zero. Divisors can appear either as plain
 					prime numbers like <em>2</em> or as composite numbers like <em>12</em> or <em>3x4</em> ("and" operation)
-					or as a comma-separated	list of numbers like <em>5, 12, 13</em> meaning that the number being played should
+					or as an "or"-separated list of numbers like <em>5 or 12o13</em> meaning that the number being played should
 					be divisible by at least one of those numbers ("or" operation). Once you enter divisors, they'll be
 					automatically converted to the canonical form like <em>5 or 4&times;3 or 13</em>. Please note that composite
 					numbers can be entered either like plain numbers or a product of simpler numbers using *, x, X or
-					&times; as the operator. In any case, the result will be calculated and converted into a product of powers
-					of prime numbers in ascending order (except the powers of 10 that will always appear in the beginning to
-					make your life a bit easier). The list of divisors ("or") can be specified using a comma or the word "or"
-					as the separator. Please note that once you modify a game (divisors), your level and highest score will
-					reset to minimum.
+					&times; or "a" or "and" as the operator. In any case, the result will be calculated and converted into a
+					product of powers of prime numbers in ascending order (except the powers of 10 that will always appear in the
+					beginning to make your life a bit easier). The list of divisors ("or") can be specified using the "o" or "or"
+					with or without surrounding spaces as the separator. Please note that once you modify a game (divisors), your
+					level and highest score will be reset.
 				</div>
-				<h4>Divisibility Rules (the cheat sheet)</h4>
+				<h4 id="cheat-sheet">Divisibility Rules (the cheat sheet)</h4>
 				<div class="para-help">
 					<ul class="rules">
 						<li><strong>2</strong> - the lowest digit should be even (0, 2, 4, 6 or 8):

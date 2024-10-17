@@ -199,14 +199,14 @@ class GameClass {
 
   static parseDivisors(value) {
     return value
-      .replaceAll(/\s*(∨|v|V|or?)\s*/g, ",")
-      .split(",")
+      .replaceAll(/\s*(∨|v|V|or?)\s*/g, "o")
+      .split("o")
       .map(function (divisorStr) {
         let result = 1;
 
         divisorStr
-          .replaceAll(/\s*(×|x|X|\*|a(nd)?)\s*/g, ",")
-          .split(",")
+          .replaceAll(/\s*(×|x|X|\*|a(nd)?)\s*/g, "x")
+          .split("x")
           .map(function (divisor) {
             let n = parseInt(divisor);
 
