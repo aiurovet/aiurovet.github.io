@@ -104,7 +104,7 @@ class PrefClass {
   //////////////////////////////////////////////////////////////////////////////
 
   onClickLevel() {
-    let game = Data.getSelectedGame();
+    var game = Data.getSelectedGame();
 
     if (!game) {
       return;
@@ -141,13 +141,13 @@ class PrefClass {
   //////////////////////////////////////////////////////////////////////////////
 
   onClickTimeLimit() {
-    let game = Data.getSelectedGame();
+    var game = Data.getSelectedGame();
 
     if (!game) {
       return;
     }
 
-    let jqControl = $("#pref-time-limit-value");
+    var jqControl = $("#pref-time-limit-value");
 
     jqControl.listedit({
       hasDefaultItem: true,
@@ -178,7 +178,7 @@ class PrefClass {
   //////////////////////////////////////////////////////////////////////////////
 
   onClickUser() {
-    let jqControl = $("#pref-user-value");
+    var jqControl = $("#pref-user-value");
 
     jqControl.listedit({
       hasDefaultItem: true,

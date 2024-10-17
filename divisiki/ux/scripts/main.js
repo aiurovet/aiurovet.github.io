@@ -45,6 +45,14 @@ $(document).ready(() => {
 });
 
 ////////////////////////////////////////////////////////////////////////////////
+// Set the event handlers
+////////////////////////////////////////////////////////////////////////////////
+
+$(window).resize(function () {
+  Main.setNumberHeight();
+});
+
+////////////////////////////////////////////////////////////////////////////////
 
 class MainClass {
   constructor() {
@@ -235,8 +243,10 @@ class MainClass {
     Timer.init(null, game.lastTimeLimit);
 
     if (isStart) {
+      var that = this;
+
       Timer.start(() => {
-        this.onClickPlay(false, "Too late!");
+        that.onClickPlay(false, "Too late!");
       });
     } else {
       Timer.stop();

@@ -202,7 +202,7 @@ class GameClass {
       .replaceAll(/\s*(∨|v|V|or?)\s*/g, "o")
       .split("o")
       .map(function (divisorStr) {
-        let result = 1;
+        var result = 1;
 
         divisorStr
           .replaceAll(/\s*(×|x|X|\*|a(nd)?)\s*/g, "x")
