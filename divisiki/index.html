@@ -7,31 +7,31 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Divisiki</title>
-	<link rel="manifest" href="./manifest.json?v=0.5.1" crossorigin="use-credentials">
-	<link rel="shortcut icon" type="image/x-icon" href="ux/images/divisiki.svg?v=0.5.1">
-	<link rel="stylesheet" href="../lib/ux/styles/dialog.css?v=0.5.1">
-	<link rel="stylesheet" href="../lib/ux/styles/help.css?v=0.5.1">
-	<link rel="stylesheet" href="../lib/ux/styles/listedit.css?v=0.5.1">
-	<link rel="stylesheet" href="../lib/ux/styles/msgbox.css?v=0.5.1">
-	<link rel="stylesheet" href="../lib/ux/styles/spinner.css?v=0.5.1">
-	<link rel="stylesheet" href="ux/styles/info.css?v=0.5.1">
-	<link rel="stylesheet" href="ux/styles/main.css?v=0.5.1">
-	<link rel="stylesheet" href="ux/styles/pref.css?v=0.5.1">
+	<link rel="manifest" href="./manifest.json?v=0.5.2" crossorigin="use-credentials">
+	<link rel="shortcut icon" type="image/x-icon" href="ux/images/divisiki.svg?v=0.5.2">
+	<link rel="stylesheet" href="../lib/ux/styles/dialog.css?v=0.5.2">
+	<link rel="stylesheet" href="../lib/ux/styles/help.css?v=0.5.2">
+	<link rel="stylesheet" href="../lib/ux/styles/listedit.css?v=0.5.2">
+	<link rel="stylesheet" href="../lib/ux/styles/msgbox.css?v=0.5.2">
+	<link rel="stylesheet" href="../lib/ux/styles/spinner.css?v=0.5.2">
+	<link rel="stylesheet" href="ux/styles/info.css?v=0.5.2">
+	<link rel="stylesheet" href="ux/styles/main.css?v=0.5.2">
+	<link rel="stylesheet" href="ux/styles/pref.css?v=0.5.2">
 	<script src="../lib/import/scripts/jquery-3.7.1.slim.min.js"></script>
-	<script src="../lib/dl/extensions.js?v=0.5.1"></script>
-	<script src="../lib/ux/scripts/common.js?v=0.5.1"></script>
-	<script src="../lib/ux/scripts/dialog.js?v=0.5.1"></script>
-	<script src="../lib/ux/scripts/listedit.js?v=0.5.1"></script>
-	<script src="../lib/ux/scripts/msgbox.js?v=0.5.1"></script>
-	<script src="../lib/ux/scripts/spinner.js?v=0.5.1"></script>
-	<script src="dl/data.js?v=0.5.1"></script>
-	<script src="dl/game.js?v=0.5.1"></script>
-	<script src="dl/json.js?v=0.5.1"></script>
-	<script src="dl/user.js?v=0.5.1"></script>
-	<script src="ux/scripts/core.js?v=0.5.1"></script>
-	<script src="ux/scripts/main.js?v=0.5.1"></script>
-	<script src="ux/scripts/pref.js?v=0.5.1"></script>
-	<script src="ux/scripts/timer.js?v=0.5.1"></script>
+	<script src="../lib/dl/extensions.js?v=0.5.2"></script>
+	<script src="../lib/ux/scripts/common.js?v=0.5.2"></script>
+	<script src="../lib/ux/scripts/dialog.js?v=0.5.2"></script>
+	<script src="../lib/ux/scripts/listedit.js?v=0.5.2"></script>
+	<script src="../lib/ux/scripts/msgbox.js?v=0.5.2"></script>
+	<script src="../lib/ux/scripts/spinner.js?v=0.5.2"></script>
+	<script src="dl/data.js?v=0.5.2"></script>
+	<script src="dl/game.js?v=0.5.2"></script>
+	<script src="dl/json.js?v=0.5.2"></script>
+	<script src="dl/user.js?v=0.5.2"></script>
+	<script src="ux/scripts/core.js?v=0.5.2"></script>
+	<script src="ux/scripts/main.js?v=0.5.2"></script>
+	<script src="ux/scripts/pref.js?v=0.5.2"></script>
+	<script src="ux/scripts/timer.js?v=0.5.2"></script>
 	<script>
 		var sw = navigator.serviceWorker;
 
@@ -77,10 +77,6 @@
 			</div>
 		</div>
 	</div>
-
-	<!-- POPUP DIALOG PLACEHOLDER -->
-
-	<div id="dialog" class="ui-dialog"></div>
 
 	<!-- PREF: GAME -->
 
@@ -210,39 +206,44 @@
 					and for the higher levels, after 50 successful attempts in a row. However, you can change that manually	too
 					by clicking the score at the top right corner of the screen.
 				</div>
-				<h4 id="help-pref-users">Preferences - Players</h4>
+				<h4 id="help-pref-users">Preferences &ndash; Players</h4>
         <div class="para-help">
-					You can add, rename or delete player(s) by clicking the name of the current player at the top right corner
-					of the screen. Please note that once a player is deleted, all their game information is lost. By deleting
-					all players, you delete all your preferences, and an anonymous player with the default preferences will be
-					automatically created.
+					You can add, rename or delete player(s) by tapping/clicking the name of the current player at the top right
+					corner of the screen, then using the icons on top of the list of existing players in the popup dialog. The
+					icons are (in the order of appearance): add, rename, delete, move up, move down. Please note that once a player
+					is deleted, all their game information is lost. By deleting all players one by one, you delete all your
+					preferences. Anonymous (default) player with the default preferences will be automatically created afterwards.
 				</div>
-				<h4 id="help-pref-level">Preferences - Level</h4>
+				<h4 id="help-pref-level">Preferences &ndash; Level</h4>
         <div class="para-help">
-					You can change the level (the number of digits in the number to check divisiblity for) from 1 to 15.
+					You can change the level (the number of digits in the number being checked) by tapping/clicking the score
+					at the top right corner of the screen (next to the current player name), then navigating through or tapping/clicking
+					an item in the list of levels from 1 to 15 the respective number and closing the dialog or pressing Enter.
 				</div>
-				<h4 id="help-pref-time-limit">Preferences - Time Limit</h4>
+				<h4 id="help-pref-time-limit">Preferences &ndash; Time Limit</h4>
         <div class="para-help">
-					You can select various time limits by clicking the current time limit at the left bottom corner of the
-					screen.
+					You can select various time limits by clicking the current time limit by tapping/clicking the score
+					at the left bottom corner of the screen, then navigating through or tapping/clicking an item in the list of
+					time limits and closing the dialog or pressing Enter.
 				</div>
-				<h4 id="help-pref-divisors">Preferences - Divisors</h4>
+				<h4 id="help-pref-divisors">Preferences &ndash; Divisors</h4>
         <div class="para-help">
-					You can add, rename or delete game(s) for the current player by clicking the score of the current player
-					at the top right corner of the screen. Essentially, you add or modify divisors. For the new set of divisors,
-					the level will be set to minimal, and the initial score will be zero. Divisors can appear either as plain
-					prime numbers like <em>2</em> or as composite numbers like <em>12</em> or <em>3x4</em> ("and" operation)
-					or as an "or"-separated list of numbers like <em>5 or 12o13</em> meaning that the number being played should
-					be divisible by at least one of those numbers ("or" operation). Once you enter divisors, they'll be
-					automatically converted to the canonical form like <em>5 or 4&times;3 or 13</em>. Please note that composite
-					numbers can be entered either like plain numbers or a product of simpler numbers using *, x, X or
-					&times; or "a" or "and" as the operator. In any case, the result will be calculated and converted into a
-					product of powers of prime numbers in ascending order (except the powers of 10 that will always appear in the
-					beginning to make your life a bit easier). The list of divisors ("or") can be specified using the "o" or "or"
-					with or without surrounding spaces as the separator. Please note that once you modify a game (divisors), your
-					level and highest score will be reset.
+					You can add, rename or delete games (divisors) for the current player by clicking the score of the current
+					player at the bottom right corner of the screen where &odiv; is located, then using the icons on top of the
+					list of existing divisors in the popup dialog. The icons are (in the order of appearance): add, rename, delete,
+					move up, move down. Essentially, you add or modify divisors. For the new set of divisors, the level will be set
+					to minimal, and the initial score will be zero. Divisors can appear either as plain prime numbers like <em>2</em>
+					or as composite numbers like <em>12</em> or <em>3x4</em> ("and" operation) or as an "or"-separated list of numbers
+					like <em>5 or 12o13</em> meaning that the number being played should be divisible by at least one of those numbers
+					("or" operation). Once you enter divisors, they'll be automatically converted to the canonical form like
+					<em>5 or 4&times;3 or 13</em>. Please note that composite	numbers can be entered either like plain numbers or a
+					product of simpler numbers using *, x, X or &times; or "a" or "and" as the operator. In any case, the result will
+					be calculated and converted into a product of powers of prime numbers or <em>10</em>. The order is ascending for
+					the base numbers	rather than powers: <em>4 or 3</em>, as <em>4</em> is <em>2<sup>2</sup></em>. The list of divisors
+					("at least one of") can be specified using the "o" or "or" with or without surrounding spaces as the separator.
+					Please note that once you modify a game (divisors), your level and highest score will be reset.
 				</div>
-				<h4 id="cheat-sheet">Divisibility Rules (the cheat sheet)</h4>
+				<h4 id="cheat-sheet">Divisibility Rules &ndash; Cheat Sheet</h4>
 				<div class="para-help">
 					<ul class="rules">
 						<li><strong>2</strong> - the lowest digit should be even (0, 2, 4, 6 or 8):
