@@ -99,3 +99,6 @@ ul.rules > li {
   padding: 0.5em;
   text-align: center;
 }
+#score {
+  margin-left: 1em;
+}

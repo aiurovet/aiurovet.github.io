@@ -217,7 +217,7 @@ class MainClass {
       Data.save();
     }
 
-    $("#score").text(`${game.curScore} / ${game.maxScore}`);
+    $("#score").text(`C:${game.curScore} M:${game.maxScore} L:${game.level}`);
   }
 
   //////////////////////////////////////////////////////////////////////////////
