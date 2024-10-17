@@ -9,7 +9,7 @@
   "theme_color": "#000000",
   "icons": [
       {
-          "src": "/divisiki/ux/images/divisiki.svg?v=0.5.4",
+          "src": "/divisiki/ux/images/divisiki.svg?v=0.5.5",
           "sizes": "any",
           "type": "image/svg+xml"
       }
