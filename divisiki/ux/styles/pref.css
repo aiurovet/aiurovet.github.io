@@ -39,7 +39,6 @@ ui-dialog-client.help .rules {
   overflow: auto;
 }
 .ui-dialog-client.pref.game, .ui-dialog-client.pref.level, .ui-dialog-client.pref.time-limit, .ui-dialog-client.pref.user {
-  padding: 2em;
   overflow: auto;
 }
 .ui-dialog-content.pref {
