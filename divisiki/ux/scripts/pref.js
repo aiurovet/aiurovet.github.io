@@ -160,11 +160,7 @@ class PrefClass {
     });
 
     this.onClick("#pref-time-limit", function (event) {
-      if (event === "after-show") {
-        let jqItems = jqControl.find(".ui-listedit-item:nth-child(-n + 2)");
-        $(jqItems[0]).outerWidth($(jqItems[1]).outerWidth() * 2);
-      }
-      else if (event === "after-hide") {
+      if (event === "after-hide") {
         Main.setTimer(false, jqControl.selectedItem);
         jqControl.empty();
       }
