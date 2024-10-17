@@ -34,7 +34,7 @@ class DataClass {
 
   constructor(version, selectedUserNo, users) {
     if (version instanceof Object) {
-      var from = version;
+      let from = version;
       this.init(from.version, from.selectedUserNo, from.users);
     } else {
       this.init(version, selectedUserNo, users);
@@ -120,14 +120,14 @@ class DataClass {
   //////////////////////////////////////////////////////////////////////////////
 
   load() {
-    var prefContent = localStorage[DataClass.keyPref];
+    let prefContent = localStorage[DataClass.keyPref];
 
     if (!prefContent) {
       this.save(true);
       return this;
     }
 
-    var pref = Json.fromString(prefContent);
+    let pref = Json.fromString(prefContent);
     // Check the saved version here if needed
     this.init(pref.version, pref.selectedUserNo, pref.users);
 
@@ -147,7 +147,7 @@ class DataClass {
 
     // Write to the local storage
     //
-    var pref = this.toSerializable();
+    let pref = this.toSerializable();
     localStorage[DataClass.keyPref] = Json.toString(pref);
   }
 
@@ -163,7 +163,7 @@ class DataClass {
   //////////////////////////////////////////////////////////////////////////////
 
   setSelectedUserNo(value) {
-    var count = this.#users.length;
+    let count = this.#users.length;
     this.#selectedUserNo = count <= 0 ? -1 : !value || (value < 0) ? 0 : value % count;
 
     return this.#selectedUserNo === value;

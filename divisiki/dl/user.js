@@ -36,7 +36,7 @@ class UserClass {
 
   constructor(userId, selectedGameNo, games) {
     if (userId instanceof Object) {
-      var from = userId;
+      let from = userId;
       this.init(from.userId, from.selectedGameNo, from.games)
     } else {
       this.init(userId, selectedGameNo, games);
@@ -101,7 +101,7 @@ class UserClass {
   //////////////////////////////////////////////////////////////////////////////
 
   setSelectedGameNo(value) {
-    var count = this.#games.length;
+    let count = this.#games.length;
     this.#selectedGameNo = !value || (value < 0) ? 0 : value % count;
 
     return this.#selectedGameNo === value;
@@ -114,20 +114,19 @@ class UserClass {
   //////////////////////////////////////////////////////////////////////////////
 
   setSelectedGameNoByDivisors(divisors) {
-    var divisorCount = divisors.length;
-    var games = this.#games;
-    var gameCount = games.length;
-    var gameNo = 0;
+    let divisorCount = divisors.length;
+    let games = this.#games;
+    let gameCount = games.length;
 
-    for (var gameNo = 0; gameNo < gameCount; gameNo++) {
-      var gameDivisors = games[gameNo].divisors;
+    for (let gameNo = 0; gameNo < gameCount; gameNo++) {
+      let gameDivisors = games[gameNo].divisors;
 
-      for (var divisorNo = 0; ; divisorNo++) {
+      for (let divisorNo = 0; ; divisorNo++) {
         if (divisorNo >= divisorCount) {
           return this.setSelectedGameNo(gameNo);
         }
 
-        var divisor = divisors[divisorNo];
+        let divisor = divisors[divisorNo];
 
         if ((divisor > 1) && (gameDivisors.indexOf(divisor) < 0)) {
           break;
@@ -143,9 +142,9 @@ class UserClass {
   //////////////////////////////////////////////////////////////////////////////
 
   toSerializable() {
-    var games = [];
+    let games = [];
 
-    for (var i = 0, n = this.#games.length; i < n; i++) {
+    for (let i = 0, n = this.#games.length; i < n; i++) {
       games[i] = this.#games[i].toSerializable();
     }
 

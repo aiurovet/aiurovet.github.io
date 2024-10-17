@@ -88,7 +88,7 @@ class TimerClass {
 
   show(time) {
     if (this.jqText) {
-      var delta = this.expiresAt && time
+      let delta = this.expiresAt && time
         ? this.expiresAt - time
         : this.duration * TimerClass.millisPerSec;
 
@@ -112,7 +112,7 @@ class TimerClass {
   //////////////////////////////////////////////////////////////////////////////
 
   timerProc(endProc) {
-    var now = Date.now();
+    let now = Date.now();
 
     if ((this.expiresAt !== null) && (now >= this.expiresAt)) {
       this.init();

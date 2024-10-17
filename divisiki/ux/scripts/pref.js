@@ -36,13 +36,13 @@ class PrefClass {
   //////////////////////////////////////////////////////////////////////////////
 
   onClickGame() {
-    var user = Data.getSelectedUser();
+    let user = Data.getSelectedUser();
 
     if (!user) {
       return;
     }
 
-    var jqControl = $("#pref-game-value");
+    let jqControl = $("#pref-game-value");
 
     jqControl.listedit({
       items: user.getGames(),
@@ -104,13 +104,13 @@ class PrefClass {
   //////////////////////////////////////////////////////////////////////////////
 
   onClickLevel() {
-    var game = Data.getSelectedGame();
+    let game = Data.getSelectedGame();
 
     if (!game) {
       return;
     }
 
-    var jqControl = $("#pref-level-value");
+    let jqControl = $("#pref-level-value");
 
     jqControl.listedit({
       hasDefaultItem: true,
@@ -118,7 +118,7 @@ class PrefClass {
       items: GameClass.getAllLevels(),
       rows: 2,
       isEditable: false,
-      selectedItem: game.lastTimeLimit,
+      selectedItem: game.level,
       formatter: null, // default
       parser: null // no need for non-editable lists
     });
@@ -129,7 +129,10 @@ class PrefClass {
         jqControl.find(".ui-listedit-item:nth-child(-n + 9)").outerWidth(width);
       }
       else if (event === "after-hide") {
-        Main.setLevel(parseInt(jqControl.selectedItem));
+        let newLevel = parseInt(jqControl.selectedItem);
+        if (newLevel !== game.level) {
+          Main.setLevel(newLevel);
+        }
         jqControl.empty();
       }
     });
@@ -138,13 +141,13 @@ class PrefClass {
   //////////////////////////////////////////////////////////////////////////////
 
   onClickTimeLimit() {
-    var game = Data.getSelectedGame();
+    let game = Data.getSelectedGame();
 
     if (!game) {
       return;
     }
 
-    var jqControl = $("#pref-time-limit-value");
+    let jqControl = $("#pref-time-limit-value");
 
     jqControl.listedit({
       hasDefaultItem: true,
@@ -161,7 +164,12 @@ class PrefClass {
 
     this.onClick("#pref-time-limit", function (event) {
       if (event === "after-hide") {
-        Main.setTimer(false, jqControl.selectedItem);
+        let newTimeLimit = jqControl.selectedItem;
+        if (newTimeLimit != game.lastTimeLimit) {
+          game.maxScore = 0;
+          Main.setScore(0);
+        }
+        Main.setTimer(false, newTimeLimit);
         jqControl.empty();
       }
     });
@@ -170,7 +178,7 @@ class PrefClass {
   //////////////////////////////////////////////////////////////////////////////
 
   onClickUser() {
-    var jqControl = $("#pref-user-value");
+    let jqControl = $("#pref-user-value");
 
     jqControl.listedit({
       hasDefaultItem: true,

@@ -55,14 +55,14 @@ class MainClass {
   //////////////////////////////////////////////////////////////////////////////
 
   onClickAnswer(isYes) {
-    var game = Data.getSelectedGame();
+    let game = Data.getSelectedGame();
 
     if (!game) {
       return;
     }
 
-    var curNumber = game.curNumber;
-    var nextNumber = game.setResult(isYes);
+    let curNumber = game.curNumber;
+    let nextNumber = game.setResult(isYes);
 
     if (!nextNumber) {
       this.onClickPlay(false, `Failed at ${curNumber}`);
@@ -79,7 +79,7 @@ class MainClass {
   //////////////////////////////////////////////////////////////////////////////
 
   onClickPlay(isPlay, status) {
-    var visibleStyle = "flex";
+    let visibleStyle = "flex";
 
     if (isPlay || !status) {
       this.setStatus(null);
@@ -101,7 +101,7 @@ class MainClass {
 
     this.setNumberHeight();
 
-    var jqButtons = $("#action-no, #action-yes");
+    let jqButtons = $("#action-no, #action-yes");
     jqButtons.css("opacity", (isPlay ? 1.0 : 0.25));
     jqButtons.css("pointer-events", (isPlay ? "auto" : "none"));
 
@@ -115,7 +115,7 @@ class MainClass {
   //////////////////////////////////////////////////////////////////////////////
 
   setDivisors(value) {
-    var game = Data.getSelectedGame();
+    let game = Data.getSelectedGame();
 
     if (!game) {
       return;
@@ -134,7 +134,7 @@ class MainClass {
   //////////////////////////////////////////////////////////////////////////////
 
   setLevel(value) {
-    var game = Data.getSelectedGame();
+    let game = Data.getSelectedGame();
 
     if (!game) {
       return;
@@ -151,13 +151,13 @@ class MainClass {
   //////////////////////////////////////////////////////////////////////////////
 
   setNumber(value) {
-    var game = Data.getSelectedGame();
+    let game = Data.getSelectedGame();
 
     if (!game) {
       return;
     }
 
-    var oldLevel = game.level;
+    let oldLevel = game.level;
 
     if (!value) {
       value = game.setNextNumber();
@@ -175,11 +175,11 @@ class MainClass {
   //////////////////////////////////////////////////////////////////////////////
 
   setNumberHeight() {
-    var jqNumber = $("#number");
-    var maxHeight = $("#action-no").innerHeight();
-    var maxWidth = jqNumber.innerWidth();
-    var numLen = (jqNumber.text().length || 1);
-    var curWidth = ((maxWidth / numLen) * (15. / 12));
+    let jqNumber = $("#number");
+    let maxHeight = $("#action-no").innerHeight();
+    let maxWidth = jqNumber.innerWidth();
+    let numLen = (jqNumber.text().length || 1);
+    let curWidth = ((maxWidth / numLen) * (15. / 12));
 
     if (curWidth > maxWidth) {
       curWidth = maxWidth;
@@ -195,7 +195,7 @@ class MainClass {
   //////////////////////////////////////////////////////////////////////////////
 
   setScore(value) {
-    var game = Data.getSelectedGame();
+    let game = Data.getSelectedGame();
 
     if (!game) {
       return;
@@ -221,7 +221,7 @@ class MainClass {
   //////////////////////////////////////////////////////////////////////////////
 
   setTimer(isStart, timeLimit) {
-    var game = Data.getSelectedGame();
+    let game = Data.getSelectedGame();
 
     if (!game) {
       return;
