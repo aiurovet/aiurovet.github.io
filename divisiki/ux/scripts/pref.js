@@ -22,13 +22,15 @@ class PrefClass {
     if (!jqDialog || !jqDialog.length) {
       jqDialog = $(`
         <div id="${dialogId}" class="ui-dialog"></div>
-      `).appendTo($("body"));
+      `);
     }
 
-    jqDialog.dialog({
-      content: $(id),
-      handler: handler
-    });
+    jqDialog
+      .appendTo($("body"))
+      .dialog({
+        content: $(id),
+        handler: handler
+      });
   }
 
   //////////////////////////////////////////////////////////////////////////////
@@ -83,15 +85,19 @@ class PrefClass {
 
   //////////////////////////////////////////////////////////////////////////////
 
-  onClickHelp(anchor) {
-    this.onClick("#help");
+  onClickHelp(anchor, focusAfterSelector) {
+    this.onClick("#help", function (event) {
+      if (event === "after-show") {
+        let jqElem = anchor ? $(`#${anchor}`) : null;
 
-    if (!anchor) {
-      return;
-    }
-
-    postAction(function () {
-      $(`#${anchor}`).scrollIntoView();
+        if (jqElem && jqElem.length) {
+          jqElem.scrollIntoView();
+        }
+      } else if (event === "after-hide") {
+        if (focusAfterSelector) {
+          $(focusAfterSelector).focus();
+        }
+      }
     });
   }
 
@@ -140,7 +146,7 @@ class PrefClass {
       hasDefaultItem: true,
       isEditable: true,
       items: GameClass.timeLimits,
-      rows: 3,
+      rows: 4,
       isEditable: false,
       selectedItem: game.lastTimeLimit,
       formatter: function(items, itemNo) {
@@ -150,7 +156,11 @@ class PrefClass {
     });
 
     this.onClick("#pref-time-limit", function (event) {
-      if (event === "after-hide") {
+      if (event === "after-show") {
+        let jqItems = jqControl.find(".ui-listedit-item:nth-child(-n + 2)");
+        $(jqItems[0]).outerWidth($(jqItems[1]).outerWidth() * 2);
+      }
+      else if (event === "after-hide") {
         Main.setTimer(false, jqControl.selectedItem);
         jqControl.empty();
       }
