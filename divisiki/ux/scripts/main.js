@@ -73,7 +73,7 @@ class MainClass {
     let nextNumber = game.setResult(isYes);
 
     if (!nextNumber) {
-      this.onClickPlay(false, `Failed at ${curNumber}`);
+      this.onClickPlay(false, `${curNumber}`);
       return;
     }
 
