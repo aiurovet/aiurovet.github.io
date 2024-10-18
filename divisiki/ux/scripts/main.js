@@ -217,7 +217,11 @@ class MainClass {
       Data.save();
     }
 
-    $("#score").text(`C:${game.curScore} M:${game.maxScore} L:${game.level}`);
+    $("#score").html(`
+      C:<span class="score-value cur">${game.curScore}</span>
+      B:<span class="score-value max">${game.maxScore}</span>
+      L:<span class="score-value level">${game.level}</span>
+    `);
   }
 
   //////////////////////////////////////////////////////////////////////////////

@@ -45,6 +45,7 @@ class PrefClass {
     let jqControl = $("#pref-game-value");
 
     jqControl.listedit({
+      hasDefaultItem: true,
       items: user.getGames(),
       maxItemCount: UserClass.maxGameCount,
       rows: 3,
@@ -58,14 +59,13 @@ class PrefClass {
       parser: function(items, itemNo, value) {
         let divisors = GameClass.parseDivisors(value);
 
-        if (divisors.length <= 0) {
-          return;
-        }
-
         if (items[itemNo]) {
+          if (divisors.length <= 0) {
+            return;
+          }
           items[itemNo].init(GameClass.minLevel, divisors, 0, GameClass.defaultTimeLimit);
         } else {
-          items[itemNo] = new GameClass(GameClass.minLevel, divisors, 0, GameClass.defaultTimeLimit);
+          items[itemNo] = new GameClass(GameClass.minLevel, GameClass.defaultDivisors, 0, GameClass.defaultTimeLimit);
         }
       }
     });
@@ -113,7 +113,6 @@ class PrefClass {
     let jqControl = $("#pref-level-value");
 
     jqControl.listedit({
-      hasDefaultItem: true,
       isEditable: true,
       items: GameClass.getAllLevels(),
       rows: 2,
@@ -124,11 +123,7 @@ class PrefClass {
     });
 
     this.onClick("#pref-level", function (event) {
-      if (event === "after-show") {
-        let width = jqControl.find(".ui-listedit-item:nth-child(10)").outerWidth();
-        jqControl.find(".ui-listedit-item:nth-child(-n + 9)").outerWidth(width);
-      }
-      else if (event === "after-hide") {
+      if (event === "after-hide") {
         let newLevel = parseInt(jqControl.selectedItem);
         if (newLevel !== game.level) {
           Main.setLevel(newLevel);
@@ -150,7 +145,6 @@ class PrefClass {
     var jqControl = $("#pref-time-limit-value");
 
     jqControl.listedit({
-      hasDefaultItem: true,
       isEditable: true,
       items: GameClass.timeLimits,
       rows: 4,

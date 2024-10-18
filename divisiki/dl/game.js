@@ -198,6 +198,9 @@ class GameClass {
   //////////////////////////////////////////////////////////////////////////////
 
   static parseDivisors(value) {
+    if ((value === undefined) || (value === null)) {
+      return [];
+    }
     return value
       .replaceAll(/\s*(∨|v|V|or?)\s*/g, "o")
       .split("o")

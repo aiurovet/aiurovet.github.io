@@ -7,29 +7,29 @@
 <head>
   <meta charset="UTF-8">
   <title>Divisiki</title>
-  <link rel="manifest" href="./manifest.json?v=0.6.1" crossorigin="use-credentials">
-  <link rel="shortcut icon" type="image/x-icon" href="ux/images/divisiki.svg?v=0.6.1">
-  <link rel="stylesheet" href="../lib/ux/styles/dialog.css?v=0.6.1">
-  <link rel="stylesheet" href="../lib/ux/styles/help.css?v=0.6.1">
-  <link rel="stylesheet" href="../lib/ux/styles/listedit.css?v=0.6.1">
-  <link rel="stylesheet" href="../lib/ux/styles/msgbox.css?v=0.6.1">
-  <link rel="stylesheet" href="ux/styles/info.css?v=0.6.1">
-  <link rel="stylesheet" href="ux/styles/main.css?v=0.6.1">
-  <link rel="stylesheet" href="ux/styles/pref.css?v=0.6.1">
+  <link rel="manifest" href="./manifest.json?v=0.6.2" crossorigin="use-credentials">
+  <link rel="shortcut icon" type="image/x-icon" href="ux/images/divisiki.svg?v=0.6.2">
+  <link rel="stylesheet" href="../lib/ux/styles/dialog.css?v=0.6.2">
+  <link rel="stylesheet" href="../lib/ux/styles/help.css?v=0.6.2">
+  <link rel="stylesheet" href="../lib/ux/styles/listedit.css?v=0.6.2">
+  <link rel="stylesheet" href="../lib/ux/styles/msgbox.css?v=0.6.2">
+  <link rel="stylesheet" href="ux/styles/info.css?v=0.6.2">
+  <link rel="stylesheet" href="ux/styles/main.css?v=0.6.2">
+  <link rel="stylesheet" href="ux/styles/pref.css?v=0.6.2">
   <script src="../lib/import/scripts/jquery-3.7.1.slim.min.js"></script>
-  <script src="../lib/dl/extensions.js?v=0.6.1"></script>
-  <script src="../lib/dl/json.js?v=0.6.1"></script>
-  <script src="../lib/ux/scripts/common.js?v=0.6.1"></script>
-  <script src="../lib/ux/scripts/dialog.js?v=0.6.1"></script>
-  <script src="../lib/ux/scripts/listedit.js?v=0.6.1"></script>
-  <script src="../lib/ux/scripts/msgbox.js?v=0.6.1"></script>
-  <script src="dl/data.js?v=0.6.1"></script>
-  <script src="dl/game.js?v=0.6.1"></script>
-  <script src="dl/user.js?v=0.6.1"></script>
-  <script src="ux/scripts/core.js?v=0.6.1"></script>
-  <script src="ux/scripts/main.js?v=0.6.1"></script>
-  <script src="ux/scripts/pref.js?v=0.6.1"></script>
-  <script src="ux/scripts/timer.js?v=0.6.1"></script>
+  <script src="../lib/dl/extensions.js?v=0.6.2"></script>
+  <script src="../lib/dl/json.js?v=0.6.2"></script>
+  <script src="../lib/ux/scripts/common.js?v=0.6.2"></script>
+  <script src="../lib/ux/scripts/dialog.js?v=0.6.2"></script>
+  <script src="../lib/ux/scripts/listedit.js?v=0.6.2"></script>
+  <script src="../lib/ux/scripts/msgbox.js?v=0.6.2"></script>
+  <script src="dl/data.js?v=0.6.2"></script>
+  <script src="dl/game.js?v=0.6.2"></script>
+  <script src="dl/user.js?v=0.6.2"></script>
+  <script src="ux/scripts/core.js?v=0.6.2"></script>
+  <script src="ux/scripts/main.js?v=0.6.2"></script>
+  <script src="ux/scripts/pref.js?v=0.6.2"></script>
+  <script src="ux/scripts/timer.js?v=0.6.2"></script>
   <script>
     let sw = navigator.serviceWorker;
 
@@ -47,7 +47,6 @@
 <body>
   <div class="main">
     <div class="main-row">
-      <!-- <div id="main-menu" class="main-col menu"></div> -->
       <div id="main-help" class="main-col clickable info help left" onclick="Pref.onClickHelp();">
         Help
       </div>
@@ -196,8 +195,8 @@
           the score will stay until you start another game. You'll also see the text explaining why the game was
           stopped. The text will be located at the top middle part of the screen. If the game is timed, every time
           you give an answer, the timer at the left bottom corner will be reset. The score at the top right corner
-          is in the format of <em>User: CurrentScore / BestScore</em>. Both user and points are tappable/clickable
-          allowing to add, change or delete user(s), or the level (the current number of digits in the riddle).
+          is in the format of <em>Player C:CurScore B:BestScore L:Level</em>. Both player and points are tappable/clickable
+          allowing to add, change or delete player(s), or the level (the current number of digits in the riddle).
         </div>
         <div class="para-help">
           After a certain number of consecutive successful attempts, the level (the number of digits) will increase

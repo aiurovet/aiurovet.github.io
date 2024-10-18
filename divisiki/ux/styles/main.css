@@ -9,6 +9,7 @@
   --font-size-body: 16px;
   --font-size-help: 48px;
   --font-size-info: 32px;
+  --margin-off-body: 1em;
   --min-margin-help: 1.5%;
   --min-margin-info: 1%;
   --min-margin-left: 1%;
@@ -54,13 +55,13 @@ body, html {
   width: 10%;
 }
 .main-col.btn.no {
-  background-image: url("../images/no.svg?v=0.6.1");
+  background-image: url("../images/no.svg?v=0.6.2");
 }
 .main-col.btn.yes {.bold-off {
   font-weight: normal;
 }
 
-  background-image: url("../images/yes.svg?v=0.6.1");
+  background-image: url("../images/yes.svg?v=0.6.2");
 }
 .main-col.info {
   align-self: center;
@@ -74,7 +75,7 @@ body, html {
 }
 .main-col.menu {
   align-self: stretch;
-  background-image: url("../images/menu.svg?v=0.6.1");
+  background-image: url("../images/menu.svg?v=0.6.2");
   background-position: left center;
   background-size: contain;
   background-repeat: no-repeat;
@@ -93,7 +94,7 @@ body, html {
 }
 .main-col.play {
   align-self: center;
-  background-image: url("../images/play.svg?v=0.6.1");
+  background-image: url("../images/play.svg?v=0.6.2");
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
@@ -114,6 +115,12 @@ body, html {
 .popup-container {
   display: none;
 }
+.score-value.cur {
+  color: green;
+}
+.score-value.max {
+  color: blue;
+}
 
 /* ELEMENTS: */
 
@@ -121,4 +128,10 @@ body, html {
   background-color: var(--dialog-caption-bg-color-1);
   color: var(--dialog-caption-fg-color-1);
   font-weight: bold;
+}
+#main-divisor, #main-score {
+  margin-right: var(--margin-off-body);
+}
+#main-help, #main-timer {
+  margin-left: var(--margin-off-body);
 }
