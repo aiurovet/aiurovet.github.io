@@ -372,7 +372,7 @@ class GameClass {
   // Convert the number of seconds into a text string like mm:ss
   //////////////////////////////////////////////////////////////////////////////
 
-  static timeLimitToString(value, fullDuration) {
+  static timeLimitToString(value, isPref, fullDuration) {
     let seconds = fullDuration ? Math.floor(value / TimerClass.millisPerSec) : value;
 
     if (seconds < 0) {
@@ -383,7 +383,7 @@ class GameClass {
     let mins = Math.floor(seconds / 60);
 
     if ((mins == 0) && (secs == 0) && !fullDuration) {
-      return "No time limit";
+      return isPref ? "None" : "Untimed";
     }
 
     if (mins > 99) {

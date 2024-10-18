@@ -151,7 +151,7 @@ class PrefClass {
       isEditable: false,
       selectedItem: game.lastTimeLimit,
       formatter: function(items, itemNo) {
-        return itemNo >= 0 ? GameClass.timeLimitToString(items[itemNo]) : "";
+        return itemNo >= 0 ? GameClass.timeLimitToString(items[itemNo], true) : "";
       },
       parser: null // no need for non-editable lists
     });

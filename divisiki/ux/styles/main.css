@@ -45,7 +45,7 @@ body, html {
   height: 100%;
   width: 100%;
 }
-.main-col.btn {
+.main-col.btn  {
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
@@ -55,13 +55,13 @@ body, html {
   width: 10%;
 }
 .main-col.btn.no {
-  background-image: url("../images/no.svg?v=0.6.3");
+  background-image: url("../images/no.svg?v=0.6.4");
 }
 .main-col.btn.yes {.bold-off {
   font-weight: normal;
 }
 
-  background-image: url("../images/yes.svg?v=0.6.3");
+  background-image: url("../images/yes.svg?v=0.6.4");
 }
 .main-col.info {
   align-self: center;
@@ -75,7 +75,7 @@ body, html {
 }
 .main-col.menu {
   align-self: stretch;
-  background-image: url("../images/menu.svg?v=0.6.3");
+  background-image: url("../images/menu.svg?v=0.6.4");
   background-position: left center;
   background-size: contain;
   background-repeat: no-repeat;
@@ -94,7 +94,7 @@ body, html {
 }
 .main-col.play {
   align-self: center;
-  background-image: url("../images/play.svg?v=0.6.3");
+  background-image: url("../images/play.svg?v=0.6.4");
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
@@ -111,6 +111,12 @@ body, html {
 }
 .main-row.max {
   flex-grow: 1;
+}
+.main-row:first-child {
+  margin: 0.5em 0 1em 0;
+}
+.main-row:last-child {
+  margin: 1em 0 0.5em 0;
 }
 .popup-container {
   display: none;
