@@ -55,6 +55,8 @@ $(window).resize(function () {
 ////////////////////////////////////////////////////////////////////////////////
 
 class MainClass {
+  static numberWidthToBodyWidthRatio = 0.85;
+
   constructor() {
   }
 
@@ -154,7 +156,6 @@ class MainClass {
 
     Data.save();
     this.setScore();
-    this.setNumber();
   }
 
   //////////////////////////////////////////////////////////////////////////////
@@ -186,7 +187,7 @@ class MainClass {
   setNumberHeight() {
     let jqNumber = $("#number");
     let maxHeight = $("#action-no").innerHeight();
-    let maxWidth = jqNumber.innerWidth();
+    let maxWidth = $("body").innerWidth() * MainClass.numberWidthToBodyWidthRatio;
     let numLen = (jqNumber.text().length || 1);
     let curWidth = ((maxWidth / numLen) * (15. / 12));
 

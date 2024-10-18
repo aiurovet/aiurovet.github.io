@@ -65,7 +65,10 @@ class PrefClass {
           }
           items[itemNo].init(GameClass.minLevel, divisors, 0, GameClass.defaultTimeLimit);
         } else {
-          items[itemNo] = new GameClass(GameClass.minLevel, GameClass.defaultDivisors, 0, GameClass.defaultTimeLimit);
+          if (items.length <= 0) {
+            divisors = GameClass.defaultDivisors;
+          }
+          items[itemNo] = new GameClass(GameClass.minLevel, divisors, 0, GameClass.defaultTimeLimit);
         }
       }
     });

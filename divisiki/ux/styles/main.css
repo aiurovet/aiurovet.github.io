@@ -9,6 +9,8 @@
   --font-size-body: 16px;
   --font-size-help: 48px;
   --font-size-info: 32px;
+  --main-col-btn-size: 10%;
+  --main-col-num-size: 84%;
   --margin-off-body: 1em;
   --min-margin-help: 1.5%;
   --min-margin-info: 1%;
@@ -52,16 +54,13 @@ body, html {
   flex-grow: 0;
   margin: 0 var(--min-margin-menu) 0 var(--min-margin-menu);
   opacity: 0.25;
-  width: 10%;
+  width: var(--main-col-btn-size);
 }
 .main-col.btn.no {
-  background-image: url("../images/no.svg?v=0.6.5");
+  background-image: url("../images/no.svg?v=0.6.6");
 }
-.main-col.btn.yes {.bold-off {
-  font-weight: normal;
-}
-
-  background-image: url("../images/yes.svg?v=0.6.5");
+.main-col.btn.yes {
+  background-image: url("../images/yes.svg?v=0.6.6");
 }
 .main-col.info {
   align-self: center;
@@ -75,7 +74,7 @@ body, html {
 }
 .main-col.menu {
   align-self: stretch;
-  background-image: url("../images/menu.svg?v=0.6.5");
+  background-image: url("../images/menu.svg?v=0.6.6");
   background-position: left center;
   background-size: contain;
   background-repeat: no-repeat;
@@ -94,7 +93,7 @@ body, html {
 }
 .main-col.play {
   align-self: center;
-  background-image: url("../images/play.svg?v=0.6.5");
+  background-image: url("../images/play.svg?v=0.6.6");
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
