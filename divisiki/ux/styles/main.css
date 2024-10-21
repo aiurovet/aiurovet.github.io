@@ -57,10 +57,10 @@ body, html {
   width: var(--main-col-btn-size);
 }
 .main-col.btn.no {
-  background-image: url("../images/no.svg?v=0.6.8");
+  background-image: url("../images/no.svg?v=0.6.9");
 }
 .main-col.btn.yes {
-  background-image: url("../images/yes.svg?v=0.6.8");
+  background-image: url("../images/yes.svg?v=0.6.9");
 }
 .main-col.info {
   align-self: center;
@@ -74,7 +74,7 @@ body, html {
 }
 .main-col.menu {
   align-self: stretch;
-  background-image: url("../images/menu.svg?v=0.6.8");
+  background-image: url("../images/menu.svg?v=0.6.9");
   background-position: left center;
   background-size: contain;
   background-repeat: no-repeat;
@@ -93,7 +93,7 @@ body, html {
 }
 .main-col.play {
   align-self: center;
-  background-image: url("../images/play.svg?v=0.6.8");
+  background-image: url("../images/play.svg?v=0.6.9");
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;

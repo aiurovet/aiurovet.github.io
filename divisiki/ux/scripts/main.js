@@ -89,8 +89,8 @@ class MainClass {
   onClickDivisors() {
     this.onClickPlay(false);
 
-    Pref.onClickDivisors(function() {
-      Data.setSelectedGameNo(jqControl.selectedItemNo);
+    Pref.onClickDivisors(function(jqList) {
+      Data.setSelectedGameNo(jqList.selectedItemNo);
       Data.save();
       this.setDivisors();
       this.setLevel();

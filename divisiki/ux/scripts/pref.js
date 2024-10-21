@@ -73,7 +73,7 @@ class PrefClass {
 
     this.onClick("#pref-divisors", function (event) {
       if (event === "before-hide") {
-        beforeHide();
+        beforeHide(jqControl);
       }
       else if (event === "after-hide") {
         jqControl.empty();
