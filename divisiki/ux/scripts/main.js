@@ -40,7 +40,7 @@ $(document).ready(() => {
   Main.onClickPlay(false);
 
   if (!Data.hasValidUsers()) {
-    Pref.onClickUser();
+    Main.onClickUser();
   }
 });
 
@@ -140,7 +140,7 @@ class MainClass {
 
     if (isPlay) {
       if (!Data.hasValidUsers()) {
-        Pref.onClickUser();
+        this.onClickUser();
         return;
       }
       this.setScore(0);
