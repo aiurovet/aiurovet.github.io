@@ -85,6 +85,33 @@ class MainClass {
   }
 
   //////////////////////////////////////////////////////////////////////////////
+
+  onClickDivisors() {
+    this.onClickPlay(false);
+
+    Pref.onClickDivisors(function() {
+      Data.setSelectedGameNo(jqControl.selectedItemNo);
+      Data.save();
+      this.setDivisors();
+      this.setLevel();
+    });
+  }
+
+  //////////////////////////////////////////////////////////////////////////////
+
+  onClickLevel() {
+    this.onClickPlay(false);
+
+    Pref.onClickLevel(function(jqList) {
+      let newLevel = parseInt(jqList.selectedItem);
+
+      if (newLevel !== game.level) {
+        this.setLevel(newLevel);
+      }
+    });
+  }
+
+  //////////////////////////////////////////////////////////////////////////////
   // Go to the menu
   //////////////////////////////////////////////////////////////////////////////
 
@@ -120,6 +147,38 @@ class MainClass {
     }
 
     this.setTimer(isPlay);
+  }
+
+  //////////////////////////////////////////////////////////////////////////////
+
+  onClickTimeLimit() {
+    this.onClickPlay(false);
+
+    Pref.onClickTimeLimit(function(jqList) {
+      let newTimeLimit = jqList.selectedItem;
+
+      if (newTimeLimit != game.lastTimeLimit) {
+        game.maxScore = 0;
+        this.setScore(0);
+      }
+
+      this.setTimer(false, newTimeLimit);
+    });
+  }
+
+  //////////////////////////////////////////////////////////////////////////////
+
+  onClickUser() {
+    this.onClickPlay(false);
+
+    Pref.onClickUser(function(jqList) {
+      Data.setSelectedUserNo(jqList.selectedItemNo);
+      Data.save();
+      this.setDivisors();
+      this.setLevel();
+      this.setTimer();
+      this.setUser();
+    });
   }
 
   //////////////////////////////////////////////////////////////////////////////

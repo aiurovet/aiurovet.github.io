@@ -38,7 +38,7 @@
   padding: 1em;
   overflow: auto;
 }
-.ui-dialog-client.pref.game, .ui-dialog-client.pref.level, .ui-dialog-client.pref.time-limit, .ui-dialog-client.pref.user {
+.ui-dialog-client.pref.divisors, .ui-dialog-client.pref.level, .ui-dialog-client.pref.time-limit, .ui-dialog-client.pref.user {
   overflow: auto;
 }
 .ui-dialog-content.pref {
@@ -76,18 +76,18 @@ ul.rules > li {
   color: var(--dialog-caption-ln-color);
 }
 
-#pref-game-value, #pref-level-value, #pref-time-limit-value, #pref-user-value {
+#pref-divisors-value, #pref-level-value, #pref-time-limit-value, #pref-user-value {
   align-items: stretch;
   align-content: stretch;
   display: flex;
   flex-direction: row;
   width: 100%;
 }
-#pref-game-value, #pref-user-value {
+#pref-divisors-value, #pref-user-value {
   flex-direction: column;
   flex-grow: 0;
 }
-#pref-game-value > *, #pref-level-value > input, #pref-user-value > * {
+#pref-divisors-value > *, #pref-level-value > input, #pref-user-value > * {
   align-self: stretch;
   flex-grow: 1;
 }

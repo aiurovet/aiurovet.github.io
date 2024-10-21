@@ -54,7 +54,7 @@
         <span id="status"></span>
       </div>
       <div id="main-score" class="main-col info max">
-        <span id="user" onclick="Pref.onClickUser();"></span><span id="score" onclick="Pref.onClickLevel();"></span>
+        <span id="user" onclick="Main.onClickUser();"></span><span id="score" onclick="Main.onClickLevel();"></span>
       </div>
     </div>
     <div class="main-row max">
@@ -64,12 +64,12 @@
       <div id="action-yes" class="main-col btn yes" onclick="Main.onClickAnswer(true);"></div>
     </div>
     <div class="main-row">
-      <div id="main-timer" class="main-col info left" onclick="Pref.onClickTimeLimit();">
+      <div id="main-timer" class="main-col info left" onclick="Main.onClickTimeLimit();">
         <span id="timer"></span>
       </div>
       <div class="main-col info max">
       </div>
-      <div id="main-divisor" class="main-col info max" onclick="Pref.onClickGame();">
+      <div id="main-divisor" class="main-col info max" onclick="Main.onClickDivisors();">
         By: <span id="divisor"></span>
       </div>
     </div>
@@ -77,16 +77,16 @@
 
   <!-- PREF: GAME -->
 
-  <div id="pref-game" style="display: none;"">
-    <div class="ui-dialog-content pref game">
-      <div class="ui-dialog-caption pref game">
+  <div id="pref-divisors" style="display: none;"">
+    <div class="ui-dialog-content pref divisors">
+      <div class="ui-dialog-caption pref divisors">
         <h4>Select Divisors</h4>
         <div class="ui-dialog-filler"></div>
         <div class="ui-dialog-icon help" onclick="Pref.onClickHelp('help-pref-divisors', '.ui-listedit-item[selected]')"></div>
         <div class="ui-dialog-icon close"></div>
       </div>
-      <div class="ui-dialog-client pref game">
-        <div id="pref-game-value"></div>
+      <div class="ui-dialog-client pref divisors">
+        <div id="pref-divisors-value"></div>
       </div>
     </div>
   </div>

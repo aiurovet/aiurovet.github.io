@@ -14,8 +14,6 @@ class PrefClass {
   //////////////////////////////////////////////////////////////////////////////
 
   onClick(id, handler) {
-    Main.onClickPlay(false);
-
     let dialogId = `dialog-${id.replace("#", "")}`;
     let jqDialog = $(`#${dialogId}`);
 
@@ -35,14 +33,14 @@ class PrefClass {
 
   //////////////////////////////////////////////////////////////////////////////
 
-  onClickGame() {
+  onClickDivisors(beforeHide) {
     let user = Data.getSelectedUser();
 
     if (!user) {
       return;
     }
 
-    let jqControl = $("#pref-game-value");
+    let jqControl = $("#pref-divisors-value");
 
     jqControl.listedit({
       hasDefaultItem: true,
@@ -73,12 +71,9 @@ class PrefClass {
       }
     });
 
-    this.onClick("#pref-game", function (event) {
+    this.onClick("#pref-divisors", function (event) {
       if (event === "before-hide") {
-        Data.setSelectedGameNo(jqControl.selectedItemNo);
-        Data.save();
-        Main.setDivisors();
-        Main.setLevel();
+        beforeHide();
       }
       else if (event === "after-hide") {
         jqControl.empty();
@@ -106,7 +101,7 @@ class PrefClass {
 
   //////////////////////////////////////////////////////////////////////////////
 
-  onClickLevel() {
+  onClickLevel(beforeHide) {
     var game = Data.getSelectedGame();
 
     if (!game) {
@@ -126,11 +121,9 @@ class PrefClass {
     });
 
     this.onClick("#pref-level", function (event) {
-      if (event === "after-hide") {
-        let newLevel = parseInt(jqControl.selectedItem);
-        if (newLevel !== game.level) {
-          Main.setLevel(newLevel);
-        }
+      if (event === "before-hide") {
+        beforeHide(jqControl);
+      } else if (event === "after-hide") {
         jqControl.empty();
       }
     });
@@ -138,7 +131,7 @@ class PrefClass {
 
   //////////////////////////////////////////////////////////////////////////////
 
-  onClickTimeLimit() {
+  onClickTimeLimit(beforeHide) {
     var game = Data.getSelectedGame();
 
     if (!game) {
@@ -160,13 +153,9 @@ class PrefClass {
     });
 
     this.onClick("#pref-time-limit", function (event) {
-      if (event === "after-hide") {
-        let newTimeLimit = jqControl.selectedItem;
-        if (newTimeLimit != game.lastTimeLimit) {
-          game.maxScore = 0;
-          Main.setScore(0);
-        }
-        Main.setTimer(false, newTimeLimit);
+      if (event === "before-hide") {
+        beforeHide(jqControl);
+      } else if (event === "after-hide") {
         jqControl.empty();
       }
     });
@@ -174,7 +163,7 @@ class PrefClass {
 
   //////////////////////////////////////////////////////////////////////////////
 
-  onClickUser() {
+  onClickUser(beforeHide) {
     var jqControl = $("#pref-user-value");
 
     jqControl.listedit({
@@ -212,12 +201,7 @@ class PrefClass {
 
     this.onClick("#pref-user", function (event) {
       if (event === "before-hide") {
-        Data.setSelectedUserNo(jqControl.selectedItemNo);
-        Data.save();
-        Main.setDivisors();
-        Main.setLevel();
-        Main.setTimer();
-        Main.setUser();
+        beforeHide(jqControl);
       }
       else if (event === "after-hide") {
         jqControl.empty();
