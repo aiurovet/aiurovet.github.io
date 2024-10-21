@@ -87,26 +87,30 @@ class MainClass {
   //////////////////////////////////////////////////////////////////////////////
 
   onClickDivisors() {
+    let that = this;
+
     this.onClickPlay(false);
 
     Pref.onClickDivisors(function(jqList) {
       Data.setSelectedGameNo(jqList.selectedItemNo);
       Data.save();
-      this.setDivisors();
-      this.setLevel();
+      that.setDivisors();
+      that.setLevel();
     });
   }
 
   //////////////////////////////////////////////////////////////////////////////
 
   onClickLevel() {
+    let that = this;
+
     this.onClickPlay(false);
 
     Pref.onClickLevel(function(jqList) {
       let newLevel = parseInt(jqList.selectedItem);
 
       if (newLevel !== game.level) {
-        this.setLevel(newLevel);
+        that.setLevel(newLevel);
       }
     });
   }
@@ -152,6 +156,8 @@ class MainClass {
   //////////////////////////////////////////////////////////////////////////////
 
   onClickTimeLimit() {
+    let that = this;
+
     this.onClickPlay(false);
 
     Pref.onClickTimeLimit(function(jqList) {
@@ -159,25 +165,27 @@ class MainClass {
 
       if (newTimeLimit != game.lastTimeLimit) {
         game.maxScore = 0;
-        this.setScore(0);
+        that.setScore(0);
       }
 
-      this.setTimer(false, newTimeLimit);
+      that.setTimer(false, newTimeLimit);
     });
   }
 
   //////////////////////////////////////////////////////////////////////////////
 
   onClickUser() {
+    let that = this;
+
     this.onClickPlay(false);
 
     Pref.onClickUser(function(jqList) {
       Data.setSelectedUserNo(jqList.selectedItemNo);
       Data.save();
-      this.setDivisors();
-      this.setLevel();
-      this.setTimer();
-      this.setUser();
+      that.setDivisors();
+      that.setLevel();
+      that.setTimer();
+      that.setUser();
     });
   }
 
