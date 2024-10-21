@@ -33,14 +33,8 @@ class PrefClass {
 
   //////////////////////////////////////////////////////////////////////////////
 
-  onClickDivisors(beforeHide) {
-    let user = Data.getSelectedUser();
-
-    if (!user) {
-      return;
-    }
-
-    let jqControl = $("#pref-divisors-value");
+  onClickDivisors(user, beforeHide) {
+    var jqControl = $("#pref-divisors-value");
 
     jqControl.listedit({
       hasDefaultItem: true,
@@ -101,14 +95,8 @@ class PrefClass {
 
   //////////////////////////////////////////////////////////////////////////////
 
-  onClickLevel(beforeHide) {
-    var game = Data.getSelectedGame();
-
-    if (!game) {
-      return;
-    }
-
-    let jqControl = $("#pref-level-value");
+  onClickLevel(game, beforeHide) {
+    var jqControl = $("#pref-level-value");
 
     jqControl.listedit({
       isEditable: true,
@@ -131,13 +119,7 @@ class PrefClass {
 
   //////////////////////////////////////////////////////////////////////////////
 
-  onClickTimeLimit(beforeHide) {
-    var game = Data.getSelectedGame();
-
-    if (!game) {
-      return;
-    }
-
+  onClickTimeLimit(game, beforeHide) {
     var jqControl = $("#pref-time-limit-value");
 
     jqControl.listedit({
@@ -163,18 +145,18 @@ class PrefClass {
 
   //////////////////////////////////////////////////////////////////////////////
 
-  onClickUser(beforeHide) {
+  onClickUser(users, selectedUserNo, maxUserCount, beforeHide) {
     var jqControl = $("#pref-user-value");
 
     jqControl.listedit({
       hasDefaultItem: true,
       isEditable: true,
-      items: Data.getUsers(),
-      maxItemCount: DataClass.maxUserCount,
+      items: users,
+      maxItemCount: maxUserCount,
       rows: 3,
       insertTitle: "Add a Player",
       modifyTitle: "Rename a Player",
-      selectedItemNo: Data.getSelectedUserNo(),
+      selectedItemNo: selectedUserNo,
       formatter: function(items, itemNo) {
         return itemNo >= 0 ? items[itemNo].userId : "";
       },

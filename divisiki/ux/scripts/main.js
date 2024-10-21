@@ -87,11 +87,17 @@ class MainClass {
   //////////////////////////////////////////////////////////////////////////////
 
   onClickDivisors() {
-    let that = this;
+    let user = Data.getSelectedUser();
+
+    if (!user) {
+      return;
+    }
+
+    var that = this;
 
     this.onClickPlay(false);
 
-    Pref.onClickDivisors(function(jqList) {
+    Pref.onClickDivisors(user, function(jqList) {
       Data.setSelectedGameNo(jqList.selectedItemNo);
       Data.save();
       that.setDivisors();
@@ -102,11 +108,17 @@ class MainClass {
   //////////////////////////////////////////////////////////////////////////////
 
   onClickLevel() {
-    let that = this;
+    var game = Data.getSelectedGame();
+
+    if (!game) {
+      return;
+    }
+
+    var that = this;
 
     this.onClickPlay(false);
 
-    Pref.onClickLevel(function(jqList) {
+    Pref.onClickLevel(game, function(jqList) {
       let newLevel = parseInt(jqList.selectedItem);
 
       if (newLevel !== game.level) {
@@ -156,11 +168,17 @@ class MainClass {
   //////////////////////////////////////////////////////////////////////////////
 
   onClickTimeLimit() {
-    let that = this;
+    var game = Data.getSelectedGame();
+
+    if (!game) {
+      return;
+    }
+
+    var that = this;
 
     this.onClickPlay(false);
 
-    Pref.onClickTimeLimit(function(jqList) {
+    Pref.onClickTimeLimit(game, function(jqList) {
       let newTimeLimit = jqList.selectedItem;
 
       if (newTimeLimit != game.lastTimeLimit) {
@@ -175,18 +193,25 @@ class MainClass {
   //////////////////////////////////////////////////////////////////////////////
 
   onClickUser() {
-    let that = this;
+    let users = Data.getUsers();
+
+    if (!users || !users.length) {
+      return;
+    }
+
+    var that = this;
 
     this.onClickPlay(false);
 
-    Pref.onClickUser(function(jqList) {
-      Data.setSelectedUserNo(jqList.selectedItemNo);
-      Data.save();
-      that.setDivisors();
-      that.setLevel();
-      that.setTimer();
-      that.setUser();
-    });
+    Pref.onClickUser(
+      users, Data.getSelectedUserNo(), DataClass.maxUserCount, function(jqList) {
+        Data.setSelectedUserNo(jqList.selectedItemNo);
+        Data.save();
+        that.setDivisors();
+        that.setLevel();
+        that.setTimer();
+        that.setUser();
+      });
   }
 
   //////////////////////////////////////////////////////////////////////////////
