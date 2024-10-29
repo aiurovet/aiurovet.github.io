@@ -75,7 +75,21 @@ ul.rules > li {
 #help-link {
   color: var(--dialog-caption-ln-color);
 }
-
+#help-print {
+  background-image: url("../../../lib/ux/images/print.svg?v=0.7.4");
+  background-position: right;
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 2em;
+  margin-right: 2em;
+  text-align: right;
+  width: 2em;
+}
+#help-version {
+  display: flex;
+  flex-direction: row;
+  margin-top: 0;
+}
 #pref-divisors-value, #pref-level-value, #pref-time-limit-value, #pref-user-value {
   align-items: stretch;
   align-content: stretch;

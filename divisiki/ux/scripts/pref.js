@@ -94,6 +94,38 @@ class PrefClass {
   }
 
   //////////////////////////////////////////////////////////////////////////////
+  // Customised Example 2 at
+  // https://www.tutorialspoint.com/how-to-print-a-page-using-jquery
+  //////////////////////////////////////////////////////////////////////////////
+  
+  onClickHelpPrint() {
+    var newWnd = window.open("", "print-window");
+    var newDoc = newWnd.document;
+
+    newDoc.open();
+
+    newDoc.write(`
+      <html>
+        <head>
+          <style>
+            .ui-dialog-icon, #help-print {
+              display: none !important;
+            }
+          </style>
+        </head>
+        <body onload="window.print();">
+          ${$(".ui-dialog-content.help").html()}
+          </body>
+        </html>`);
+
+    newDoc.close();
+
+    postAction(function() {
+      newWnd.close();
+    });
+  }
+
+  //////////////////////////////////////////////////////////////////////////////
 
   onClickLevel(game, beforeHide) {
     var jqControl = $("#pref-level-value");
