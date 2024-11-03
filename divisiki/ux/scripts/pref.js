@@ -7,8 +7,28 @@
 
 ////////////////////////////////////////////////////////////////////////////////
 
-class PrefClass {
+class Pref {
+  #jqControlTimeLimit = null;
+
   constructor() {
+  }
+
+  //////////////////////////////////////////////////////////////////////////////
+
+  static createTimeLimitOptions(timeLimits, selectedType) {
+    timeLimits.setSelectedType(selectedType);
+
+    return {
+      isEditable: true,
+      items: timeLimits.getAllValuesOfType(),
+      rows: 2,
+      isEditable: false,
+      selectedItem: timeLimits.getSelectedValue(),
+      formatter: function(items, itemNo) {
+        return itemNo >= 0 ? TimeLimits.valueToString(items[itemNo], true) : "";
+      },
+      parser: null // no need for non-editable lists
+    };
   }
 
   //////////////////////////////////////////////////////////////////////////////
@@ -34,12 +54,10 @@ class PrefClass {
   //////////////////////////////////////////////////////////////////////////////
 
   onClickDivisors(user, beforeHide) {
-    var jqControl = $("#pref-divisors-value");
-
-    jqControl.listedit({
+    var jqControl = $("#pref-divisors-value").listedit({
       hasDefaultItem: true,
       items: user.getGames(),
-      maxItemCount: UserClass.maxGameCount,
+      maxItemCount: User.maxGameCount,
       rows: 3,
       editorRows: 3,
       insertTitle: "Add Divisors",
@@ -49,18 +67,18 @@ class PrefClass {
         return itemNo >= 0 ? items[itemNo].toDivisorsString() : "";
       },
       parser: function(items, itemNo, value) {
-        let divisors = GameClass.parseDivisors(value);
+        let divisors = Game.parseDivisors(value);
 
         if (items[itemNo]) {
           if (divisors.length <= 0) {
             return;
           }
-          items[itemNo].init(GameClass.minLevel, divisors, 0, GameClass.defaultTimeLimit);
+          items[itemNo].init(Game.minLevel, divisors, 0);
         } else {
           if (items.length <= 0) {
-            divisors = GameClass.defaultDivisors;
+            divisors = Game.defaultDivisors;
           }
-          items[itemNo] = new GameClass(GameClass.minLevel, divisors, 0, GameClass.defaultTimeLimit);
+          items[itemNo] = new Game(Game.minLevel, divisors, 0);
         }
       }
     });
@@ -77,62 +95,10 @@ class PrefClass {
 
   //////////////////////////////////////////////////////////////////////////////
 
-  onClickHelp(anchor, focusAfterSelector) {
-    this.onClick("#help", function (event) {
-      if (event === "after-show") {
-        let jqElem = anchor ? $(`#${anchor}`) : null;
-
-        if (jqElem && jqElem.length) {
-          jqElem.scrollIntoView();
-        }
-      } else if (event === "after-hide") {
-        if (focusAfterSelector) {
-          $(focusAfterSelector).focus();
-        }
-      }
-    });
-  }
-
-  //////////////////////////////////////////////////////////////////////////////
-  // Customised Example 2 at
-  // https://www.tutorialspoint.com/how-to-print-a-page-using-jquery
-  //////////////////////////////////////////////////////////////////////////////
-  
-  onClickHelpPrint() {
-    var newWnd = window.open("", "print-window");
-    var newDoc = newWnd.document;
-
-    newDoc.open();
-
-    newDoc.write(`
-      <html>
-        <head>
-          <style>
-            .ui-dialog-icon, #help-print {
-              display: none !important;
-            }
-          </style>
-        </head>
-        <body onload="window.print();">
-          ${$(".ui-dialog-content.help").html()}
-          </body>
-        </html>`);
-
-    newDoc.close();
-
-    postAction(function() {
-      newWnd.close();
-    });
-  }
-
-  //////////////////////////////////////////////////////////////////////////////
-
   onClickLevel(game, beforeHide) {
-    var jqControl = $("#pref-level-value");
-
-    jqControl.listedit({
+    var jqControl = $("#pref-level-value").listedit({
       isEditable: true,
-      items: GameClass.getAllLevels(),
+      items: Game.getAllLevels(),
       rows: 2,
       isEditable: false,
       selectedItem: game.level,
@@ -151,20 +117,14 @@ class PrefClass {
 
   //////////////////////////////////////////////////////////////////////////////
 
-  onClickTimeLimit(game, beforeHide) {
-    var jqControl = $("#pref-time-limit-value");
+  onClickTimeLimit(timeLimits, selectedType, beforeHide) {
+    let o = Pref.createTimeLimitOptions(timeLimits, selectedType);
+    var jqControl = $("#pref-time-limit-value").listedit(o);
+    this.#jqControlTimeLimit = jqControl;
 
-    jqControl.listedit({
-      isEditable: true,
-      items: GameClass.timeLimits,
-      rows: 4,
-      isEditable: false,
-      selectedItem: game.lastTimeLimit,
-      formatter: function(items, itemNo) {
-        return itemNo >= 0 ? GameClass.timeLimitToString(items[itemNo], true) : "";
-      },
-      parser: null // no need for non-editable lists
-    });
+    let isPerGame = timeLimits.getSelectedType() === TimeLimitType.perGame;
+    $("#pref-time-limit-type-per-game").prop("checked", isPerGame);
+    $("#pref-time-limit-type-per-move").prop("checked", !isPerGame);
 
     this.onClick("#pref-time-limit", function (event) {
       if (event === "before-hide") {
@@ -178,9 +138,7 @@ class PrefClass {
   //////////////////////////////////////////////////////////////////////////////
 
   onClickUser(users, selectedUserNo, maxUserCount, beforeHide) {
-    var jqControl = $("#pref-user-value");
-
-    jqControl.listedit({
+    var jqControl = $("#pref-user-value").listedit({
       hasDefaultItem: true,
       isEditable: true,
       items: users,
@@ -202,13 +160,13 @@ class PrefClass {
           if (items[0] !== null) {
             return;
           }
-          value = UserClass.defaultUserId;
+          value = User.defaultUserId;
         }
 
         if (items[itemNo]) {
           items[itemNo].userId = value;
         } else {
-          items[itemNo] = new UserClass(value);
+          items[itemNo] = new User(value);
         }
       }
     });
@@ -221,6 +179,19 @@ class PrefClass {
         jqControl.empty();
       }
     });
+  }
+
+  //////////////////////////////////////////////////////////////////////////////
+
+  resetTimeLimits(timeLimits) {
+    let selectedType = $("#pref-time-limit-type-per-game").prop("checked")
+      ? TimeLimitType.perGame
+      : TimeLimitType.perMove;
+
+    this.#jqControlTimeLimit
+      .init(Pref.createTimeLimitOptions(timeLimits, selectedType))
+      .find(".ui-listedit-items")
+      .focus();
   }
 
   //////////////////////////////////////////////////////////////////////////////

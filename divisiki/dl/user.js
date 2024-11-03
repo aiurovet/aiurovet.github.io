@@ -9,7 +9,7 @@
 
 ////////////////////////////////////////////////////////////////////////////////
 
-class UserClass {
+class User {
   // Constants
   //
   static defaultUserId = "Anonymous";
@@ -19,11 +19,11 @@ class UserClass {
 
   // User id (unique free text)
   //
-  userId = UserClass.defaultUserId;
+  userId = User.defaultUserId;
 
   // List of game stats
   //
-  #games = [new GameClass()];
+  #games = [new Game()];
 
   // An index of a selected game in the list of games
   //
@@ -72,21 +72,21 @@ class UserClass {
   //////////////////////////////////////////////////////////////////////////////
 
   init(userId, selectedGameNo, games) {
-    this.userId = userId ?? UserClass.defaultUserId;
+    this.userId = userId ?? User.defaultUserId;
 
     if ((games === undefined) || (games === null) || !Array.isArray(games) || (games.length == 0)) {
-      this.#games = [new GameClass()];
+      this.#games = [new Game()];
       selectedGameNo = 0;
-    } else if (games[0] instanceof GameClass) {
+    } else if (games[0] instanceof Game) {
       this.#games = games;
     } else {
       this.#games = [];
       let n = games.length;
-      if (n > UserClass.maxGameCount) {
-        n = UserClass.maxGameCount;
+      if (n > User.maxGameCount) {
+        n = User.maxGameCount;
       }
       for (let i = 0; i < n; i++) {
-        this.#games.push(new GameClass(games[i]));
+        this.#games.push(new Game(games[i]));
       }
     }
 

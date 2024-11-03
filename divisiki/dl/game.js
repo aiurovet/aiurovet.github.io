@@ -9,18 +9,16 @@
 
 ////////////////////////////////////////////////////////////////////////////////
 
-class GameClass {
+class Game {
   // Constants
   //
   static defaultDivisors = [2];
-  static defaultTimeLimit = 0;
   static jumpScore = 50;
   static maxAttempts = 100;
   static minLevel = 1;
   static maxLevel = Number.MAX_SAFE_INTEGER.toString().length - 1;
   static mulSign = "×";
   static orSign = " or ";
-  static timeLimits = [0, 120, 105, 90, 75, 60, 45, 30, 25, 20, 15, 10, 5, 4, 3, 2, 1];
 
   //////////////////////////////////////////////////////////////////////////////
 
@@ -34,15 +32,11 @@ class GameClass {
 
   // Array of numbers to check divisbility against (one of to be passed)
   //
-  divisors = GameClass.defaultDivisors;
-
-  // The last selected time period (the number of seconds) to solve each primer (0 - unlimited)
-  //
-  lastTimeLimit = GameClass.defaultTimeLimit;
+  divisors = Game.defaultDivisors;
 
   // Number of digits in the number being played
   //
-  level = GameClass.minLevel;
+  level = Game.minLevel;
 
   // The highest number for the given level
   //
@@ -65,12 +59,12 @@ class GameClass {
   // with its properties: i.e. constructing from a deserialized saved object
   //////////////////////////////////////////////////////////////////////////////
 
-  constructor(level, divisors, maxScore, lastTimeLimit) {
+  constructor(level, divisors, maxScore) {
     if (level instanceof Object) {
       let from = level;
-      this.init(from.level, from.divisors, from.maxScore, from.lastTimeLimit);
+      this.init(from.level, from.divisors, from.maxScore);
     } else {
-      this.init(level, divisors, maxScore, lastTimeLimit);
+      this.init(level, divisors, maxScore);
     }
   }
 
@@ -79,7 +73,7 @@ class GameClass {
   static getAllLevels() {
     let result = [];
 
-    for (let i = GameClass.minLevel; i <= GameClass.maxLevel; i++) {
+    for (let i = Game.minLevel; i <= Game.maxLevel; i++) {
       result.push(i);
     }
 
@@ -101,26 +95,6 @@ class GameClass {
   }
 
   //////////////////////////////////////////////////////////////////////////////
-  // Ensure the level matches the smallest divisor
-  //////////////////////////////////////////////////////////////////////////////
-
-  setMinLevel() {
-    let minDivisor = Number.MAX_SAFE_INTEGER;
-
-    for (let divisor of this.divisors) {
-      if (minDivisor > divisor) {
-        minDivisor = divisor;
-      }
-    }
-
-    let minLevel = minDivisor.toString().length;
-
-    if (this.level < minLevel) {
-      this.setLevel(minLevel);
-    }
-  }
-
-  //////////////////////////////////////////////////////////////////////////////
 
   getRandomInt(minValue, maxValue) {
     minValue ??= this.minNumber;
@@ -131,14 +105,11 @@ class GameClass {
 
   //////////////////////////////////////////////////////////////////////////////
 
-  init(level, divisors, maxScore, lastTimeLimit) {
+  init(level, divisors, maxScore) {
     this.setLevel(level);
 
     if ((divisors !== undefined) && (divisors !== null) && Array.isArray(divisors)) {
-      this.divisors = divisors.length <= 0 ? GameClass.defaultDivisors : divisors;
-    }
-    if ((lastTimeLimit !== undefined) && (lastTimeLimit !== null)) {
-      this.lastTimeLimit = GameClass.timeLimitFromValue(lastTimeLimit);
+      this.divisors = divisors.length <= 0 ? Game.defaultDivisors : divisors;
     }
     if ((maxScore !== undefined) && (maxScore !== null)) {
       this.maxScore = maxScore <= 0 ? 0 : maxScore;
@@ -237,15 +208,35 @@ class GameClass {
   }
 
   //////////////////////////////////////////////////////////////////////////////
+  // Ensure the level matches the smallest divisor
+  //////////////////////////////////////////////////////////////////////////////
+
+  setMinLevel() {
+    let minDivisor = Number.MAX_SAFE_INTEGER;
+
+    for (let divisor of this.divisors) {
+      if (minDivisor > divisor) {
+        minDivisor = divisor;
+      }
+    }
+
+    let minLevel = minDivisor.toString().length;
+
+    if (this.level < minLevel) {
+      this.setLevel(minLevel);
+    }
+  }
+
+  //////////////////////////////////////////////////////////////////////////////
   // Set level as well as dependent properties
   //////////////////////////////////////////////////////////////////////////////
 
   setLevel(value) {
     if ((value !== undefined) && (value !== null)) {
-      if (value < GameClass.minLevel) {
-        this.level = GameClass.minLevel;
-      } else if (value > GameClass.maxLevel) {
-        this.level = GameClass.maxLevel;
+      if (value < Game.minLevel) {
+        this.level = Game.minLevel;
+      } else if (value > Game.maxLevel) {
+        this.level = Game.maxLevel;
       } else {
         this.level = value;
       }
@@ -279,7 +270,7 @@ class GameClass {
     this.setMinLevel();
     let curNumber = this.curNumber;
 
-    if ((this.curScore >= GameClass.jumpScore) && (this.level < GameClass.maxLevel)) {
+    if ((this.curScore >= Game.jumpScore) && (this.level < Game.maxLevel)) {
       this.setLevel(this.level + 1);
     } else if (curNumber && !this.#oldNumbers.includes(curNumber)) {
       this.#oldNumbers.push(curNumber);
@@ -290,8 +281,8 @@ class GameClass {
     let shouldDivide = this.getRandomInt(0, 1) === 1;
 
     for (curNumber = 0; !curNumber || this.#oldNumbers.includes(curNumber);) {
-      if ((++attempts) > GameClass.maxAttempts) {
-        if (this.level >= GameClass.maxLevel) {
+      if ((++attempts) > Game.maxAttempts) {
+        if (this.level >= Game.maxLevel) {
           return 0;
         }
         attempts = 0;
@@ -299,6 +290,10 @@ class GameClass {
       }
 
       curNumber = this.getRandomInt();
+
+      if (curNumber == 0) {
+        continue;
+      }
 
       if (shouldDivide && !this.isDivisible(curNumber)) {
         let divisorNo = lastDivisorNo <= 0 ? lastDivisorNo : this.getRandomInt(0, lastDivisorNo);
@@ -335,75 +330,13 @@ class GameClass {
   }
 
   //////////////////////////////////////////////////////////////////////////////
-
-  static timeLimitFromValue(value) {
-    if (value <= 0) {
-      return GameClass.defaultTimeLimit;
-    }
-
-    let mins = Math.trunc(value / 60);
-
-    if (mins > 99) {
-      return GameClass.defaultTimeLimit;
-    }
-
-    let secs = value % 60;
-    value = mins * 60 + secs;
-
-    if (GameClass.timeLimits.indexOf(value) < 0) {
-      return GameClass.defaultTimeLimit;
-    }
-
-    return value;
-  }
-
-  //////////////////////////////////////////////////////////////////////////////
-  // Convert the number of seconds into a text string like mm:ss
-  //////////////////////////////////////////////////////////////////////////////
-
-  static timeLimitFromString(value) {
-    let mmss = value.split(":");
-    let high = parseInt(mmss[0]);
-
-    return mmss.length <= 1 ? high : (high * 60) + parseInt(mmss[1]);
-  }
-
-  //////////////////////////////////////////////////////////////////////////////
-  // Convert the number of seconds into a text string like mm:ss
-  //////////////////////////////////////////////////////////////////////////////
-
-  static timeLimitToString(value, isPref, fullDuration) {
-    let seconds = fullDuration ? Math.floor(value / TimerClass.millisPerSec) : value;
-
-    if (seconds < 0) {
-      seconds = 0;
-    }
-  
-    let secs = (seconds % 60);
-    let mins = Math.floor(seconds / 60);
-
-    if ((mins == 0) && (secs == 0) && !fullDuration) {
-      return isPref ? "None" : "Untimed";
-    }
-
-    if (mins > 99) {
-      mins = 99;
-    }
-
-    mins = (mins < 10 ? "0" : "") + mins.toString();
-    secs = (secs < 10 ? "0" : "") + secs.toString();
-
-    return `${mins}:${secs}`;
-  }
-
-  //////////////////////////////////////////////////////////////////////////////
   // Convert this object into the one that excludes all irrelevant properties
   //////////////////////////////////////////////////////////////////////////////
 
   toDivisorsString() {
     return this.divisors
-      .map((d) => GameClass.toSimpleDivisors(d))
-      .join(GameClass.orSign);
+      .map((d) => Game.toSimpleDivisors(d))
+      .join(Game.orSign);
   }
 
   //////////////////////////////////////////////////////////////////////////////
@@ -414,7 +347,6 @@ class GameClass {
     return {
       level: this.level,
       divisors: this.divisors,
-      lastTimeLimit: this.lastTimeLimit,
       maxScore: this.maxScore,
     };
   }
@@ -470,7 +402,7 @@ class GameClass {
 
     result.sort((x, y) => parseInt(x) - parseInt(y));
 
-    return result.join(GameClass.mulSign);
+    return result.join(Game.mulSign);
   }
 
   //////////////////////////////////////////////////////////////////////////////

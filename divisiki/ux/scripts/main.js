@@ -11,12 +11,7 @@
 // Global variables (singletons)
 ////////////////////////////////////////////////////////////////////////////////
 
-var Core = null;
-var Data = null;
-var Json = null;
-var Main = null;
-var Pref = null;
-var Timer = null;
+var main = null;
 
 ////////////////////////////////////////////////////////////////////////////////
 // Application entry point
@@ -25,22 +20,17 @@ var Timer = null;
 $(document).ready(() => {
   // Initialize singletons
   //
-  Json = new JsonClass();
-  Data = (new DataClass()).load();
-  Core = new CoreClass();
-  Pref = new PrefClass();
-  Main = new MainClass();
-  Timer = new TimerClass($("#timer"));
+  main ??= new Main();
 
   // Initialize the UI
   //
-  Main.setUser();
-  Main.setScore();
-  Main.setDivisors();
-  Main.onClickPlay(false);
+  main.setUser();
+  main.setScore();
+  main.setDivisors();
+  main.onClickPlay(false);
 
-  if (!Data.hasValidUsers()) {
-    Main.onClickUser();
+  if (!main.data.hasValidUsers()) {
+    main.onClickUser();
   }
 });
 
@@ -49,15 +39,35 @@ $(document).ready(() => {
 ////////////////////////////////////////////////////////////////////////////////
 
 $(window).resize(function () {
-  Main.setNumberHeight();
+  main.setNumberHeight();
 });
 
 ////////////////////////////////////////////////////////////////////////////////
 
-class MainClass {
+class Main {
   static numberWidthToBodyWidthRatio = 0.85;
+  static statusStopped = "Stopped";
+
+  core = new Core();
+  data = (new Data()).load();
+  pref = new Pref();
+  timer = new Timer($("#timer"));
 
   constructor() {
+  }
+
+  //////////////////////////////////////////////////////////////////////////////
+  // Reaction on the time limit change
+  //////////////////////////////////////////////////////////////////////////////
+
+  onChangeTimeLimitType() {
+    let timeLimits = this.data.getTimeLimits();
+
+    let type = timeLimits.setSelectedType($("#pref-time-limit-type-per-game").prop("checked")
+      ? TimeLimitType.perGame
+      : TimeLimitType.perMove);
+
+    this.pref.resetTimeLimits(timeLimits);
   }
 
   //////////////////////////////////////////////////////////////////////////////
@@ -65,7 +75,9 @@ class MainClass {
   //////////////////////////////////////////////////////////////////////////////
 
   onClickAnswer(isYes) {
-    let game = Data.getSelectedGame();
+    let data = this.data;
+    let game = data.getSelectedGame();
+    let timeLimits = data.getTimeLimits();
 
     if (!game) {
       return;
@@ -79,7 +91,10 @@ class MainClass {
       return;
     }
 
-    this.setTimer(true);
+    if (timeLimits.getSelectedType() === TimeLimitType.perMove) {
+      this.setTimer(true);
+    }
+
     this.setNumber(nextNumber);
     this.setScore();
   }
@@ -87,7 +102,7 @@ class MainClass {
   //////////////////////////////////////////////////////////////////////////////
 
   onClickDivisors() {
-    let user = Data.getSelectedUser();
+    let user = this.data.getSelectedUser();
 
     if (!user) {
       return;
@@ -97,9 +112,9 @@ class MainClass {
 
     this.onClickPlay(false);
 
-    Pref.onClickDivisors(user, function(jqList) {
-      Data.setSelectedGameNo(jqList.selectedItemNo);
-      Data.save();
+    this.pref.onClickDivisors(user, function(jqList) {
+      that.data.setSelectedGameNo(jqList.selectedItemNo);
+      that.data.save();
       that.setDivisors();
       that.setLevel();
     });
@@ -107,8 +122,61 @@ class MainClass {
 
   //////////////////////////////////////////////////////////////////////////////
 
+  onClickHelp(anchor, focusAfterSelector) {
+    this.pref.onClick("#help", function (event) {
+      if (event === "after-show") {
+        let jqElem = anchor ? $(`#${anchor}`) : null;
+
+        if (jqElem && jqElem.length) {
+          jqElem.scrollIntoView();
+        }
+      } else if (event === "after-hide") {
+        if (focusAfterSelector) {
+          $(focusAfterSelector).focus();
+        }
+      }
+    });
+  }
+
+  //////////////////////////////////////////////////////////////////////////////
+  // Customised Example 2 at
+  // https://www.tutorialspoint.com/how-to-print-a-page-using-jquery
+  //////////////////////////////////////////////////////////////////////////////
+  
+  onClickHelpPrint() {
+    var newWnd = window.open("", "print-window");
+    var newDoc = newWnd.document;
+
+    newDoc.open();
+
+    newDoc.write(`
+      <html>
+        <head>
+          <style>
+            .para-help {
+              margin: 1rem 0 0 0;
+            }
+            .ui-dialog-icon, #help-print {
+              display: none !important;
+            }
+          </style>
+        </head>
+        <body onload="window.print();">
+          ${$(".ui-dialog-content.help").html()}
+          </body>
+        </html>`);
+
+    newDoc.close();
+
+    postAction(function() {
+      newWnd.close();
+    });
+  }
+
+  //////////////////////////////////////////////////////////////////////////////
+
   onClickLevel() {
-    var game = Data.getSelectedGame();
+    var game = this.data.getSelectedGame();
 
     if (!game) {
       return;
@@ -118,7 +186,7 @@ class MainClass {
 
     this.onClickPlay(false);
 
-    Pref.onClickLevel(game, function(jqList) {
+    this.pref.onClickLevel(game, function(jqList) {
       let newLevel = parseInt(jqList.selectedItem);
 
       if (newLevel !== game.level) {
@@ -139,17 +207,17 @@ class MainClass {
     }
 
     if (isPlay) {
-      if (!Data.hasValidUsers()) {
+      if (!this.data.hasValidUsers()) {
         this.onClickUser();
         return;
       }
       this.setScore(0);
       this.setNumber();
-      Core.setVisible($("#play"), false);
-      Core.setVisible($("#number"), true, visibleStyle);
+      this.core.setVisible($("#play"), false);
+      this.core.setVisible($("#number"), true, visibleStyle);
     } else {
-      Core.setVisible($("#number"), false);
-      Core.setVisible($("#play"), true, visibleStyle);
+      this.core.setVisible($("#number"), false);
+      this.core.setVisible($("#play"), true, visibleStyle);
     }
 
     this.setNumberHeight();
@@ -168,32 +236,36 @@ class MainClass {
   //////////////////////////////////////////////////////////////////////////////
 
   onClickTimeLimit() {
-    var game = Data.getSelectedGame();
+    var game = this.data.getSelectedGame();
 
     if (!game) {
       return;
     }
 
+    var timeLimits = this.data.getTimeLimits();
+    var oldSelectedType = timeLimits.getSelectedType();
+    var oldSelectedValue = timeLimits.getSelectedValue(oldSelectedType);
     var that = this;
 
     this.onClickPlay(false);
 
-    Pref.onClickTimeLimit(game, function(jqList) {
-      let newTimeLimit = jqList.selectedItem;
+    this.pref.onClickTimeLimit(timeLimits, oldSelectedType, function(jqList) {
+      let newTimeLimitType = $("#pref-time-limit-type-per-game").prop("checked") ? TimeLimitType.perGame : TimeLimitType.perMove;
+      let newTimeLimitValue = jqList.selectedItem;
 
-      if (newTimeLimit != game.lastTimeLimit) {
+      if ((newTimeLimitType != oldSelectedType) || (newTimeLimitValue != oldSelectedValue)) {
         game.maxScore = 0;
         that.setScore(0);
       }
 
-      that.setTimer(false, newTimeLimit);
+      that.setTimer(false, newTimeLimitValue, newTimeLimitType);
     });
   }
 
   //////////////////////////////////////////////////////////////////////////////
 
   onClickUser() {
-    let users = Data.getUsers();
+    let users = this.data.getUsers();
 
     if (!users || !users.length) {
       return;
@@ -203,10 +275,10 @@ class MainClass {
 
     this.onClickPlay(false);
 
-    Pref.onClickUser(
-      users, Data.getSelectedUserNo(), DataClass.maxUserCount, function(jqList) {
-        Data.setSelectedUserNo(jqList.selectedItemNo);
-        Data.save();
+    this.pref.onClickUser(
+      users, this.data.getSelectedUserNo(), Data.maxUserCount, function(jqList) {
+        that.data.setSelectedUserNo(jqList.selectedItemNo);
+        that.data.save();
         that.setDivisors();
         that.setLevel();
         that.setTimer();
@@ -217,7 +289,7 @@ class MainClass {
   //////////////////////////////////////////////////////////////////////////////
 
   setDivisors(value) {
-    let game = Data.getSelectedGame();
+    let game = this.data.getSelectedGame();
 
     if (!game) {
       return;
@@ -227,7 +299,7 @@ class MainClass {
       game.setDivisors(value);
     }
 
-    Data.save();
+    this.data.save();
     this.setLevel();
 
     $("#divisor").text(game.toDivisorsString());
@@ -236,7 +308,7 @@ class MainClass {
   //////////////////////////////////////////////////////////////////////////////
 
   setLevel(value) {
-    let game = Data.getSelectedGame();
+    let game = this.data.getSelectedGame();
 
     if (!game) {
       return;
@@ -246,14 +318,14 @@ class MainClass {
       game.setLevel(value);
     }
 
-    Data.save();
+    this.data.save();
     this.setScore();
   }
 
   //////////////////////////////////////////////////////////////////////////////
 
   setNumber(value) {
-    let game = Data.getSelectedGame();
+    let game = this.data.getSelectedGame();
 
     if (!game) {
       return;
@@ -266,7 +338,7 @@ class MainClass {
     }
 
     if (game.level != oldLevel) {
-      Data.save();
+      this.data.save();
       this.setScore();
     }
 
@@ -279,7 +351,7 @@ class MainClass {
   setNumberHeight() {
     let jqNumber = $("#number");
     let maxHeight = $("#action-no").innerHeight();
-    let maxWidth = $("body").innerWidth() * MainClass.numberWidthToBodyWidthRatio;
+    let maxWidth = $("body").innerWidth() * Main.numberWidthToBodyWidthRatio;
     let numLen = (jqNumber.text().length || 1);
     let curWidth = ((maxWidth / numLen) * (15. / 12));
 
@@ -297,7 +369,7 @@ class MainClass {
   //////////////////////////////////////////////////////////////////////////////
 
   setScore(value) {
-    let game = Data.getSelectedGame();
+    let game = this.data.getSelectedGame();
 
     if (!game) {
       return;
@@ -308,7 +380,7 @@ class MainClass {
     }
 
     if (game.setMaxScore(value)) {
-      Data.save();
+      this.data.save();
     }
 
     $("#score").html(`
@@ -326,35 +398,37 @@ class MainClass {
 
   //////////////////////////////////////////////////////////////////////////////
 
-  setTimer(isStart, timeLimit) {
-    let game = Data.getSelectedGame();
+  setTimer(isStart, timeLimitValue, timeLimitType) {
+    let game = this.data.getSelectedGame();
 
     if (!game) {
       return;
     }
 
-    if ((timeLimit !== undefined) && (timeLimit !== null)) {
-      game.lastTimeLimit = timeLimit;
-      Data.save();
+    let timeLimits = this.data.getTimeLimits();
+
+    if ((timeLimitValue !== undefined) && (timeLimitValue !== null)) {
+      timeLimits.setSelectedValue(timeLimitValue, timeLimitType);
+      this.data.save();
     }
 
-    Timer.init(null, game.lastTimeLimit);
+    this.timer.init(null, timeLimits.getSelectedValue());
 
     if (isStart) {
       var that = this;
 
-      Timer.start(() => {
-        that.onClickPlay(false, "Too late!");
+      this.timer.start(function () {
+        that.onClickPlay(false, Main.statusStopped);
       });
     } else {
-      Timer.stop();
+      this.timer.stop();
     }
   }
 
   //////////////////////////////////////////////////////////////////////////////
 
   setUser() {
-    let user = Data.getSelectedUser();
+    let user = this.data.getSelectedUser();
 
     if (!user) {
       return;

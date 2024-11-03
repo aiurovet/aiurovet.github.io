@@ -9,14 +9,14 @@
 
 ////////////////////////////////////////////////////////////////////////////////
 
-class TimerClass {
+class Timer {
+  // Const: how frequently a timer callback should be invoked
+  //
+  static frequency = (Timer.millisPerSec / 2);
+
   // Const: milliseconds in one second
   //
   static millisPerSec = 1000;
-
-  // Const: how frequently a timer callback should be invoked
-  //
-  static frequency = (TimerClass.millisPerSec / 2);
 
   // Maximum number of seconds till the timer expires
   //
@@ -70,14 +70,14 @@ class TimerClass {
 
   start(endProc) {
     this.startedAt = Date.now();
-    this.expiresAt = this.startedAt + (this.duration * TimerClass.millisPerSec);
+    this.expiresAt = this.startedAt + (this.duration * Timer.millisPerSec);
     this.timerProc();
 
     this.intervalId = setInterval(
       () => {
         this.timerProc(endProc);
       },
-      TimerClass.frequency);
+      Timer.frequency);
 
     return this;
   }
@@ -90,9 +90,9 @@ class TimerClass {
     if (this.jqText) {
       let delta = this.expiresAt && time
         ? this.expiresAt - time
-        : this.duration * TimerClass.millisPerSec;
+        : this.duration * Timer.millisPerSec;
 
-        this.jqText.text(GameClass.timeLimitToString(delta, false, this.duration));
+        this.jqText.text(TimeLimits.valueToString(delta, false, this.duration));
     }
 
     return this;

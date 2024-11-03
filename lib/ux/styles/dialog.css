@@ -55,6 +55,18 @@
   position: relative;
   z-index: 0;
 }
+.ui-dialog-filler {
+  flex-grow: 1;
+  flex-shrink: 0;
+}
+.ui-dialog-flex-column {
+  display: flex;
+  flex-direction: column;
+}
+.ui-dialog-flex-row {
+  display: flex;
+  flex-direction: row;
+}
 .ui-dialog-icon {
   background-position: center;
   background-repeat: no-repeat;
@@ -74,8 +86,4 @@
 }
 .ui-dialog-icon.help:hover {
   background-color: rgb(224, 224, 224);
-}
-.ui-dialog-filler {
-  flex-grow: 1;
-  flex-shrink: 0;
 }
