@@ -10,13 +10,14 @@
 #
 JOB=$(basename "${0}")
 
-# Get the project name. Print usage and fail if it is not specified
+# Get the project name (can contain a sub-directory). Print usage and fail if it is not specified
 #
 PRJ="${1}"
 
-# Get the temporary file path
+# Get the temporary file path and ensure its directory exists
 #
 TMF="/tmp/${PRJ:-x}.tmp"
+mkdir -p "$(dirname "${TMF}")"
 
 # Get top input directory
 #
@@ -33,7 +34,7 @@ if [ -z "${PRJ}" ]; then
     # Loop through all relevant files and replace the imports with the one found
     #
     for inp in $(find "${TOP}" -type f | grep -Eiv "\/\.|\/${SKP}" |\
-        grep -Ei "\.css$|\.html?$|\.json$|service-worker\.js$"\
+      grep -Ei "\.css$|\.html?$|\.json$|service-worker\.js$"\
     ); do
       sed -r "${SED}" "${inp}" > "${TMF}" && mv -f "${TMF}" "${inp}" || exit 1
     done
@@ -44,7 +45,7 @@ else
   # Get the pattern for search and replace
   #
   DIR="${TOP}/${PRJ}"
-  VER=$(sed -nr 's/^.*\"[Vv](ersion)?\s*([0-9\.\-]+).*$/\2/p' "${DIR}/ux/styles/info.css")
+  VER=$(sed -nr 's/^.*Version\s*([0-9\.\-][0-9\.\-]*).*$/\1/p' "${DIR}/index.html")
   VST="?v="
   PAT="(\\${VST})[0-9]+(\\.[0-9]+(\\.[0-9]+(\\-[0-9]+)?)?)?"
   SED="s/${PAT}/${VST}${VER}/"

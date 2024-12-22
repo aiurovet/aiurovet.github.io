@@ -1,15 +1,15 @@
 {
-  "name": "Divisiki",
-  "short_name": "Divisiki",
+  "name": "Divisiki-Test",
+  "short_name": "Divisiki-Test",
   "description": "Your child will learn how to check a number is divisible by one or more other numbers",
-  "scope": "/divisiki/",
+  "scope": "/test/divisiki/",
   "start_url": ".",
   "display": "standalone",
   "background_color": "#f4eee4",
   "theme_color": "#000000",
   "icons": [
       {
-          "src": "/divisiki/ux/images/divisiki.svg?v=0.8.1",
+          "src": "/test/divisiki/ux/images/divisiki.svg?v=0.8.1",
           "sizes": "any",
           "type": "image/svg+xml"
       }
