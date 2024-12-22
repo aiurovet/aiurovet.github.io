@@ -1,0 +1,21 @@
+/*
+  Copyright (C) Alexander Iurovetski 2024
+  All rights reserved under MIT license (see LICENSE file)
+
+  Help popup dialog styles
+*/
+
+.ui-dialog-client.help {
+  display: block;
+  padding: 0.5em;
+  height: calc(100% - 2em);
+  overflow: auto;
+  width: calc(100% - 0em);
+}
+.ui-dialog-content.help {
+  background: rgb(237, 255, 237);
+  border: 1px solid black;
+  font-size: 32px;
+  height: calc(100% - 1em);
+  width: calc(100% - 1em);
+}

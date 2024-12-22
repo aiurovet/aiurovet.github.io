@@ -1,0 +1,31 @@
+<!--
+  Copyright (C) Alexander Iurovetski 2024
+  All rights reserved under MIT license (see LICENSE file)
+
+  Close icon
+-->
+
+<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100">
+
+<defs>
+  <style>
+    g {
+      fill: none;
+      stroke: none;
+    }
+    path {
+      fill: none;
+      stroke: black;
+      stroke-linecap: round;
+      stroke-linejoin: miter;
+      stroke-width: 7;
+    }
+  </style>
+</defs>
+
+<g>
+  <path d="M30,25 L30,10 L70,10 L70,25 M30,50 L30,90 L70,90 L70,50 L30,50 M30,65 L15,65 L15,30 L85,30 L85,65 L70,65 M43,63 L57,63 M43,77 L57,77 M30,40 L35,40" />
+  Sorry, your browser does not support SVG!
+</g>
+
+</svg>
