@@ -7,29 +7,31 @@
 <head>
   <meta charset="UTF-8">
   <title>QuotyYoty</title>
-  <link rel="manifest" href="./manifest.json?v=0.8.1" crossorigin="use-credentials">
-  <link rel="shortcut icon" type="image/x-icon" href="ux/images/quotyyoty.svg?v=0.8.1">
-  <link rel="stylesheet" href="../lib/ux/styles/dialog.css?v=0.8.1">
-  <link rel="stylesheet" href="../lib/ux/styles/help.css?v=0.8.1">
-  <link rel="stylesheet" href="../lib/ux/styles/listedit.css?v=0.8.1">
-  <link rel="stylesheet" href="../lib/ux/styles/msgbox.css?v=0.8.1">
-  <link rel="stylesheet" href="ux/styles/info.css?v=0.8.1">
-  <link rel="stylesheet" href="ux/styles/main.css?v=0.8.1">
-  <link rel="stylesheet" href="ux/styles/pref.css?v=0.8.1">
+  <link rel="manifest" href="./manifest.json?v=0.1.0" crossorigin="use-credentials">
+  <link rel="shortcut icon" type="image/x-icon" href="ux/images/quotyyoty.svg?v=0.1.0">
+  <link rel="stylesheet" href="../lib/ux/styles/dialog.css?v=0.1.0">
+  <link rel="stylesheet" href="../lib/ux/styles/help.css?v=0.1.0">
+  <link rel="stylesheet" href="../lib/ux/styles/listedit.css?v=0.1.0">
+  <link rel="stylesheet" href="../lib/ux/styles/msgbox.css?v=0.1.0">
+  <link rel="stylesheet" href="../lib/ux/styles/spinner.css?v=0.1.0">
+  <link rel="stylesheet" href="ux/styles/info.css?v=0.1.0">
+  <link rel="stylesheet" href="ux/styles/main.css?v=0.1.0">
+  <link rel="stylesheet" href="ux/styles/pref.css?v=0.1.0">
   <script src="../lib/import/scripts/html-to-image-1.11.11.min.js"></script>
   <script src="../lib/import/scripts/jquery-3.7.1.slim.min.js"></script>
-  <script src="../lib/dl/extensions.js?v=0.8.1"></script>
-  <script src="../lib/dl/json.js?v=0.8.1"></script>
-  <script src="../lib/ux/scripts/common.js?v=0.8.1"></script>
-  <script src="../lib/ux/scripts/dialog.js?v=0.8.1"></script>
-  <script src="../lib/ux/scripts/listedit.js?v=0.8.1"></script>
-  <script src="../lib/ux/scripts/msgbox.js?v=0.8.1"></script>
-  <script src="dl/data.js?v=0.8.1"></script>
-  <script src="dl/game.js?v=0.8.1"></script>
-  <script src="dl/user.js?v=0.8.1"></script>
-  <script src="ux/scripts/core.js?v=0.8.1"></script>
-  <script src="ux/scripts/main.js?v=0.8.1"></script>
-  <script src="ux/scripts/pref.js?v=0.8.1"></script>
+  <script src="../lib/dl/extensions.js?v=0.1.0"></script>
+  <script src="../lib/dl/json.js?v=0.1.0"></script>
+  <script src="../lib/ux/scripts/common.js?v=0.1.0"></script>
+  <script src="../lib/ux/scripts/dialog.js?v=0.1.0"></script>
+  <script src="../lib/ux/scripts/listedit.js?v=0.1.0"></script>
+  <script src="../lib/ux/scripts/msgbox.js?v=0.1.0"></script>
+  <script src="../lib/ux/scripts/spinner.js?v=0.1.0"></script>
+  <script src="dl/data.js?v=0.1.0"></script>
+  <script src="dl/game.js?v=0.1.0"></script>
+  <script src="dl/user.js?v=0.1.0"></script>
+  <script src="ux/scripts/core.js?v=0.1.0"></script>
+  <script src="ux/scripts/main.js?v=0.1.0"></script>
+  <script src="ux/scripts/pref.js?v=0.1.0"></script>
   <script>
     let sw = navigator.serviceWorker;
 
@@ -47,71 +49,49 @@
 <body>
   <div class="main">
     <div class="main-row sys">
-      <div id="main-help" class="main-col clickable info help left" onclick="main.onClickHelp();">
-        Help
+      <div id="main-help" class="main-col clickable info left">
+        <span id="help" onclick="main.onClickHelp();">Help</span>
       </div>
-      <div id="main-save" class="main-col info" onclick="main.onClickDownload();">
-        <span id="save">Download</span>
+      <div id="main-save" class="main-col info max">
+        <span id="save" onclick="main.onClickSave();">Download</span>
       </div>
-      <div id="main-score" class="main-col info max">
-        <span id="user" onclick="main.onClickUser();"></span><span id="score" onclick="main.onClickAny();"></span>
+      <div id="main-user" class="main-col info right">
+        <span id="user" onclick="main.onClickUser();"></span>
       </div>
     </div>
     <div class="main-row max">
       <div id="action-no" class="main-col btn"></div>
       <div id="quote" class="main-col quote">
-        <div class="main-col quote phrase">
-          <p>Q: What do you call a detention centre for mathematicians?</p>
-          <p>A: A prism.</p>
-        </div>
-        <div class="main-col quote footer">
-          Phrasehacker
-        </div>
+        <div id="phrase" class="main-col quote phrase"><p></p></div>
+        <div id="footer" class="main-col quote footer">Phrasehacker</div>
       </div>
       <div id="action-yes" class="main-col btn"></div>
     </div>
     <div class="main-row sys">
-      <div id="main-timer" class="main-col info left" onclick="main.onClickAny();">
-        <span id="timer">
-          Timer
-        </span>
+      <div id="main-conf" class="main-col info left">
+        <span id="conf" onclick="main.onClickConf();">Conf</span>
       </div>
-      <div class="main-col info max">
+      <div id="main-edit" class="main-col info max">
+        <span id="save" onclick="main.onClickEdit();">Edit</span>
       </div>
-      <div id="main-divisor" class="main-col info max" onclick="main.onClickAny();">
-        By: <span id="divisor"></span> 
-      </div>
-    </div>
-  </div>
-
-  <!-- PREF: GAME -->
-
-  <div id="pref-divisors" style="display: none;"">
-    <div class="ui-dialog-content pref divisors">
-      <div class="ui-dialog-caption pref divisors">
-        <h4>Select Divisors</h4>
-        <div class="ui-dialog-filler"></div>
-        <div class="ui-dialog-icon help" onclick="main.onClickHelp('help-pref-divisors', '.ui-listedit-item[selected]')"></div>
-        <div class="ui-dialog-icon close"></div>
-      </div>
-      <div class="ui-dialog-client pref divisors">
-        <div id="pref-divisors-value"></div>
+      <div id="main-size" class="main-col info right">
+        <span id="size"></span> 
       </div>
     </div>
   </div>
 
-  <!-- PREF: LEVEL -->
+  <!-- EDIT QUOTE -->
 
-  <div id="pref-level" style="display: none;"">
-    <div class="ui-dialog-content pref level">
-      <div class="ui-dialog-caption pref level">
-        <h4>Select Level</h4>
+  <div id="edit-phrase" style="display: none;"">
+    <div class="ui-dialog-content pref">
+      <div class="ui-dialog-caption pref">
+        <h4>Edit Phrase</h4>
         <div class="ui-dialog-filler"></div>
-        <div class="ui-dialog-icon help" onclick="main.onClickHelp('help-pref-level', '.ui-listedit-item[selected]')"></div>
+        <div class="ui-dialog-icon help" onclick="main.onClickHelp('help-pref-edit', '.ui-listedit-item[selected]')"></div>
         <div class="ui-dialog-icon close"></div>
       </div>
-      <div class="ui-dialog-client pref level">
-        <div id="pref-level-value"></div>
+      <div class="ui-dialog-client pref">
+        <textarea id="edit-phrase-value" cols="50" rows="6"></textarea>
       </div>
     </div>
   </div>
@@ -144,13 +124,10 @@
         <div class="ui-dialog-icon close"></div>
       </div>
       <div class="ui-dialog-client help">
-        <h4 id="help-version"><span id="version">Version 0.8.1</span><span class="ui-dialog-filler"></span><span id="help-print" href="#" onclick="main.onClickHelpPrint($(this).parent().parent());">&nbsp;</span></h4>
+        <h4 id="help-version"><span id="version">Version 0.1.0</span><span class="ui-dialog-filler"></span><span id="help-print" href="#" onclick="main.onClickHelpPrint($(this).parent().parent());">&nbsp;</span></h4>
         <div class="para-help">
-          This web application trains kids to check wheter a number can be divided by another number
-          (primarily, but not limited to, <em>2, 3, 4, 5, 8, 9, 10 or 11</em>). When they get confident, the
-          complexity can be increased by setting a composite divisor: like <em>6</em> which is <em>2&times;3</em>.
-          Or by setting multiple prime or composite divisors: like <em>3 or 5 or 22</em>.
-          The latter, though, will be automatically converted to <em>2&times;11</em> for better clarity.
+          This web application allows you to create quotes as visually attractive images and save those in
+          JPEG, PNG or SVG format.
         </div>
         <div class="para-help">
           The application neither collects private information, nor uses cookies, and doesn't even make external
@@ -172,210 +149,34 @@
           Edge</em> on non-Apple devices, and with <em>Safari</em> on Apple devices. You should find and tap <em>Add
           to Home screen</em> menu item (or similar), then follow the prompts. On laptops and desktops, an icon with
           a monitor and an arrow might show up at the end of the address bar. When it is hovered with the mouse
-          cursor, a tooltip will pop: <em>Install QuotyYoty</em>. Click that icon and follow the prompts.
+          cursor, a tooltip will pop: <em>Install QuotyYoty</em>. Tap/click that icon and follow the prompts.
         </div>
         <h4 id="help-use">How to Use</h4>
         <div class="para-help">
-          On the first start, you'll be asked to change the default user name from <em>Anonymous</em> to something
-          more suitable. You can do that by tapping/clicking the modify icon (the second from the left above the list
-          of users), then typing in any other text of your choice.
+          On every start, you'll be prompted to set the phrase (the text of your quote). If you need a signature too,
+          you can create another profile (name). That name will become the signature once you select it. You can
+          also modify the font, size and major effects (bold, italic, underline) for both the phrase and the signature.
+          The last but not the least, you can choose your preferred image file format. Changing this option affects all
+          profiles.
         </div>
         <div class="para-help">
-          To start playing, tap/click the large play button in the center, and you'll see a random number. If it
-          is divisible by the one(s) listed at the right bottom corner past <em>By:</em>, tap/click the green tick button.
-          Otherwise, tap/click the red cross  button. If the mental calculation is right, you'll get another number,
-          and the score at the right top corner will change. Otherwise, you'll see the large play button again, but
-          the score will stay until you start another game. You'll also see the text explaining why the game was
-          stopped. The text will be located at the top middle part of the screen. The profile at the top right corner
-          will be used as a footer, unless it is </em>No name</em>. If you tap/click that, you'll open the profile
-          selection/editing popup dialog.
+          Once the quote is ready, tap/click <em>Download</em> at the top of the screen and choose location/file name.
+          The default filename is in the form of "quote_yyyy-MM-dd_HH-mm-ss.[jpg|png|svg]" that ensures uniqueness and
+          protects the existing quotes from being  overwritten by accident.
         </div>
+        <h4 id="help-pref-edit">Edit</h4>
         <div class="para-help">
-          After a certain number of consecutive successful attempts, the level (the number of digits) will increase
-          automatically For the lower levels, this will happen after the application can't find more numbers to play,
-          and for the higher levels, after 50 successful attempts in a row. However, you can change that manually  too
-          by tapping/clicking the score at the top right corner of the screen.
+          You can set or change the phrase by tapping/clicking <em>Edit</em> at the bottom of the screen, then typing
+          in the new text and pressing <em>Enter</em> (on a keyboard of your laptop/workstation) or closing the window.
+          If you need to insert line breaks using the keyboard of your laptop/workstation, press <em>>Ctrl+Enter</em>.
         </div>
-        <h4 id="help-pref-users">Preferences &ndash; users</h4>
+        <h4 id="help-pref-users">Preferences &ndash; Profiles</h4>
         <div class="para-help">
           You can add, rename or delete user(s) by tapping/clicking the name of the current user at the top right
           corner of the screen, then using the icons on top of the list of existing users in the popup dialog. The
           icons are (in the order of appearance): add, rename, delete, move up, move down. Please note that once a user
           is deleted, all their game information is lost. By deleting all users one by one, you delete all your
           preferences. Anonymous (default) user with the default preferences will be automatically reinstated afterwards.
-        </div>
-        <h4 id="help-pref-level">Preferences &ndash; Level</h4>
-        <div class="para-help">
-          You can change the level (the number of digits in the number being checked) by tapping/clicking the score
-          at the top right corner of the screen (next to the current user name), then navigating through or tapping/clicking
-          an item in the list of levels from 1 to 15 the respective number and closing the dialog or pressing <em>Enter</em>.
-        </div>
-        <h4 id="help-pref-divisors">Preferences &ndash; Divisors</h4>
-        <div class="para-help">
-          You can add, rename or delete games (divisors) for the current user by tapping/clicking the score of the current
-          user at the bottom right corner of the screen where <em>By:</em> is located, then using the icons on top of the list
-          of existing divisors in the popup dialog. The icons are (in the order of appearance): add, rename, delete, move up
-          move down. Essentially, you add or modify divisors. For the new set of divisors, the level will be set to minimal,
-          and the initial score will be zero. Divisors can appear either as plain prime numbers like <em>2</em> or as composite
-          numbers like <em>12</em> or <em>3x4</em> ("and" operation) or as an "or"-separated list of numbers like <em>5 or
-          12o13</em> meaning that the number being played should be divisible by at least one of those numbers ("or" operation).
-          Once you enter divisors, they'll be automatically converted to the canonical form like <em>5 or 3&times;4 or 13</em>.
-          Please note that composite  numbers can be entered either like plain numbers or a product of simpler numbers using *,
-          x, X or &times; or "a" or "and" as the operator. In any case, the result will be calculated and converted into a product
-          of powers of prime numbers or <em>10</em>. The order in the product is ascending for the base numbers  rather than the
-          powers: <em>4 or 3</em>, as <em>4</em> is <em>2<sup>2</sup></em>. The list of divisors ("at least one of") can be
-          specified using the "o" or "or" with or without surrounding spaces as the separator. Please note that once you modify
-          a game (divisors), your level and the highest score all will be reset.
-        </div>
-        <h4 id="cheat-sheet">Divisibility Rules &ndash; Cheat Sheet</h4>
-        <div class="para-help">
-          <ul class="rules">
-            <li><strong>2</strong> &ndash; the lowest digit should be even (0, 2, 4, 6 or 8):
-              <ul>
-                <li>20, 32, 154, 3276, 39158</li>
-              </ul>
-            </li>
-            <li><strong>3</strong> &ndash; the sum of all digits is divisible by 3:
-              <ul>
-                <li>12, 126, 459</li>
-              </ul>
-            </li>
-            <li><strong>4</strong> &ndash; the lowest two digits make the number that is divisible by 4:
-              <ul>
-                <li>24, 356</li>
-              </ul>
-            </li>
-            <li><strong>5</strong> &ndash; the lowest digit is either 0 or 5:
-              <ul>
-                <li>10, 135, 2480, 76905</li>
-              </ul>
-            </li>
-            <li><strong>7</strong> &ndash; multiply the lowest digit by 2 and subtract the result from the remaining digits; the final result should also be divisible by 7:
-              <ul>
-                <li>14 => 1 - 4 &times; 2 = -7</li>
-                <li>357 => 35 - 7 &times; 2 = 21</li>
-              </ul>
-            </li>
-            <li><strong>8</strong> &ndash; the lowest three digits form a number that is divisible by 8:
-              <ul>
-                <li>128, 9008, 25064</li>
-              </ul>
-            </li>
-            <li><strong>9</strong> &ndash; the sum of all digits should be divisible by 9:
-              <ul>
-                <li>18, 927, 4671</li>
-              </ul>
-            </li>
-            <li><strong>10</strong> &ndash; should end with 0:
-              <ul>
-                <li>10, 120, 45700</li>
-              </ul>
-            </li>
-            <li><strong>11</strong> &ndash; the sum of the even digits should be equal to the sum of the odd digits or the difference between these sums should be divisible by 11:
-              <ul>
-                <li>11 => 1 = 1</li>
-                <li>121 => 2 = 2</li>
-                <li>5335 => 8 = 8</li>
-                <li>9020 => 11 - 0 = 11</li>
-              </ul>
-            </li>
-            <li><strong>13</strong> &ndash; multiply the lowest digit by 4 and add the result to the number formed by the remaining digits; the final result should be divisible by 13:
-              <ul>
-                <li>13 => 1 + 3 &times; 4 = 13</li>
-                <li>52 => 5 + 2 &times; 4 = 13</li>
-              </ul>
-            </li>
-            <li><strong>17</strong> &ndash; multiply the lowest digit by 5 and subtract the result from the number formed by the remaining digits; the final result should be divisible by 17:
-              <ul>
-                <li>17 => 1 - 7 &times; 5 = -34
-                <li>34 => 3 - 4 &times; 5 - 3 = -17
-                <li>153 => 3 &times; 5 - 15 = 0</li>
-              </ul>
-            </li>
-            <li><strong>19</strong> &ndash; multiply the lowest digit by 2 and add the result to the number formed by the remaining digits; the final result should be divisible by 19:
-              <ul>
-                <li>19 => 1 + 9 &times; 2 = 19</li>
-                <li>114 => 11 + 4 &times; 2 = 19</li>
-              </ul>
-            </li>
-            <li><strong>23</strong> &ndash; multiply the lowest digit by 7 and add the result to the number formed by the remaining digits; the final result should be divisible by 23:
-              <ul>
-                <li>23 => 2 + 3 &times; 7 = 23</li>
-                <li>115 => 11 + 5 &times; 7 = 46 = 23 &times; 2</li>
-              </ul>
-            </li>
-            <li><strong>25</strong> &ndash; the last two digits should be divisible by 25 (i.e. ending with 00, 25, 50 or 75):
-              <ul>
-                <li>125, 375, 4000, 70075</li>
-              </ul>
-            </li>
-            <li><strong>27</strong> &ndash; break the number into 3-digit numbers (from the lowest digit to the highest one); the sum of those numbers should be divisible by 27:
-              <ul>
-                <li>85293 => 85 + 293 = 377 = 27 &times; 14</li>
-                <li>225990 => 225 + 990 = 1215 => 1 + 215 = 216 = 27 &times; 8</li>
-              </ul>
-            </li>
-            <li><strong>29</strong> &ndash; multiply the lowest digit by 3 and add the result to the number formed by the remaining digits; the final result should be divisible by 29:
-              <ul>
-                <li>29 => 2 + 9 &times; 3 = 29</li>
-                <li>435 => 43 + 5 &times; 3 = 58 = 29 &times; 2</li>
-              </ul>
-            </li>
-            <li><strong>31</strong> &ndash; multiply the lowest digit by 3 and subtract the result from the number formed by the remaining digits; the final result should be divisible by 31:
-              <ul>
-                <li>31 => 3 - 1 &times; 3 = 0</li>
-                <li>713 => 71 - 3 &times; 3 = 62 = 31 &times; 2</li>
-              </ul>
-            </li>
-            <li><strong>37</strong> &ndash; break the number into 3-digit numbers (from the lowest digit to the highest one); the sum of those numbers should be divisible by 37:
-              <ul>
-                <li>89947 => 89 + 947 = 1036 = 37 &times; 28</li>
-                <li>159914 => 159 + 914 = 1073 = 37 &times; 29</li>
-              </ul>
-            </li>
-            <li><strong>41</strong> &ndash; multiply the lowest digit by 4 and subtract the result from the number formed by the remaining digits; the final result should be divisible by 41:
-              <ul>
-                <li>41 => 4 - 1 &times; 4 = 0</li>
-                <li>943 => 94 - 3 &times; 4 = 82 = 41 &times; 2</li>
-              </ul>
-            </li>
-            <li><strong>50</strong> &ndash; the last two digits should be divisible by 50 (i.e. ending with 00 or 50):
-              <ul>
-                <li>550, 2200, 30050</li>
-              </ul>
-            </li>
-            <li><strong>59</strong> &ndash; multiply the lowest digit by 6 and add the result to the number formed by the remaining digits; the final result should be divisible by 59:
-              <ul>
-                <li>59 => 5 + 9 &times; 6 = 59</li>
-                <li>1357 => 135 + 7 &times; 6 = 177 = 59 &times; 3</li>
-              </ul>
-            </li>
-            <li><strong>79</strong> &ndash; multiply the lowest digit by 8 and add the result to the number formed by the remaining digits; the final result should be divisible by 79:
-              <ul>
-                <li>79 => 7 + 9 &times; 8 = 79</li>
-                <li>2923 => 292 + 3 &times; 8 = 316 = 79 &times; 4</li>
-              </ul>
-            </li>
-            <li><strong>99</strong> &ndash; break the number into 2-digit numbers (from the lowest digit to the highest one); the sum of those numbers should be divisible by 99:
-              <ul>
-                <li>2277 => 77 + 22 = 99</li>
-                <li>32175 => 75 + 21 + 3 = 99</li>
-              </ul>
-            </li>
-            <li><strong>101</strong> &ndash; break the number into 2-digit numbers (from the lowest digit to the highest one); the sum of those numbers with the alternating sign should be divisible by 101:
-              <ul>
-                <li>5925771 => 71 - 57 + 92 - 5 = 101</li>
-                <li>11851542 => 42 - 15 + 85 - 11 = 101</li>
-                <li>90002514 => 14 - 25 + 00 - 90 = -101</li>
-              </ul>
-            </li>
-            <li><strong>1091</strong> &ndash; multiply the lowest digit by 109 and subtract the result from the number formed by the remaining digits; the final result should be divisible by 1091:
-              <ul>
-                <li>1091 => 109 - 1 &times; 109 = 0</li>
-                <li>4722939 => 472293 - 9 &times; 109 = 471312 => 47131 - 2 &times; 109 = 46913 => 4691 - 3 &times; 109 = 4364 => 436 - 4 &times; 109 = 0</li>
-              </ul>
-            </li>
-          </ul>
         </div>
         <h4>Contact</h4>
         <div class="para-help">

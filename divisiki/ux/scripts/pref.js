@@ -35,20 +35,11 @@ class Pref {
 
   onClick(id, handler) {
     let dialogId = `dialog-${id.replace("#", "")}`;
-    let jqDialog = $(`#${dialogId}`);
 
-    if (!jqDialog || !jqDialog.length) {
-      jqDialog = $(`
-        <div id="${dialogId}" class="ui-dialog"></div>
-      `);
-    }
-
-    jqDialog
-      .appendTo($("body"))
-      .dialog({
-        content: $(id),
-        handler: handler
-      });
+    createEmptyDialog(dialogId).dialog({
+      content: $(id),
+      handler: handler
+    });
   }
 
   //////////////////////////////////////////////////////////////////////////////

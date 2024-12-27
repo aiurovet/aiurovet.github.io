@@ -13,7 +13,7 @@ class User {
   // Constants
   //
   static defaultFooter = "";
-  static defaultUserId = "No name";
+  static defaultUserId = "No profile";
   static maxGameCount = 20;
 
   //////////////////////////////////////////////////////////////////////////////

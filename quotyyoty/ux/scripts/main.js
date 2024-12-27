@@ -24,7 +24,9 @@ $(document).ready(() => {
 
   // Initialize the UI
   //
+  main.initSize();
   main.setUser();
+  main.onClickEdit();
 });
 
 ////////////////////////////////////////////////////////////////////////////////
@@ -68,30 +70,62 @@ class Main {
 
   //////////////////////////////////////////////////////////////////////////////
 
-  onClickAny() {
-    alert("TBA");
+  initSize() {
+    const jqQuote = $("#quote");
+
+    $("#size").spinner({
+      isReadOnly: true,
+      min: 1,
+      step: 1,
+      value: parseInt(Math.round(parseFloat(jqQuote.css("font-size")) * 3 / 4)),
+      onChange: function (spinner) {
+        jqQuote.css("font-size", `${spinner.value}pt`);
+      },
+      width: "3em",
+    });
   }
 
   //////////////////////////////////////////////////////////////////////////////
 
-  onClickDownload(fileFormat) {
-    fileFormat = Main.adjustFileFormat(fileFormat);
+  onClickAny() {
+    alert("TBA");
+  }
+ 
+  //////////////////////////////////////////////////////////////////////////////
 
-    const proc =
-      fileFormat === Main.fileFormatJpg ? htmlToImage.toJpg :
-      fileFormat === Main.fileFormatSvg ? htmlToImage.toSvg : htmlToImage.toPng;
-    
-    // html2canvas(elem, options).then((canvas) => {   
-    //   const dataUrl = canvas.toDataURL();
+  onClickCopy() {
+    createEmptyDialog().msgbox({
+      title: MsgBoxTitle_Information,
+      buttons: MsgBoxButtons_OK,
+      message: "Configuration has been copied to the clipboard",
+      handler: null
+    });
+  }
 
-    proc($("#quote")[0]).then(function (dataUrl) {
-      const dt = new Date().toLocalDate().getDateParts();
-      const link = document.createElement("a");
+  //////////////////////////////////////////////////////////////////////////////
 
-      link.href = dataUrl;
-      link.download = `quote_${dt.year}-${dt.month}-${dt.day}_${dt.hours}-${dt.minutes}-${dt.seconds}.${fileFormat}`;
+  onClickEdit() {
+    const jqPhrase = $("#phrase");
+    const that = this;
 
-      link.click();
+    that.pref.onClick("#edit-phrase", function (event) {
+      const jqEdit = $("#edit-phrase-value");
+
+      if (event === "before-show") {
+        jqEdit.text(jqPhrase.text());
+      }
+      else if (event === "after-show") {
+        jqEdit.focus();
+      }
+      else if (event === "before-hide") {
+        var content = jqEdit.val();
+
+        if (!content.hasMarkup()) {
+          content = `<p>${content.toHtml().replaceAll("<br>", "</p><p>")}</p>`;
+        }
+
+        jqPhrase.html(content);
+      }
     });
   }
 
@@ -154,6 +188,29 @@ class Main {
 
   //////////////////////////////////////////////////////////////////////////////
 
+  onClickSave(fileFormat) {
+    fileFormat = Main.adjustFileFormat(fileFormat);
+
+    const proc =
+      fileFormat === Main.fileFormatJpg ? htmlToImage.toJpg :
+      fileFormat === Main.fileFormatSvg ? htmlToImage.toSvg : htmlToImage.toPng;
+    
+    // html2canvas(elem, options).then((canvas) => {   
+    //   const dataUrl = canvas.toDataURL();
+
+    proc($("#quote")[0]).then(function (dataUrl) {
+      const dt = new Date().toLocalDate().getDateParts();
+      const link = document.createElement("a");
+
+      link.href = dataUrl;
+      link.download = `quote_${dt.year}-${dt.month}-${dt.day}_${dt.hours}-${dt.minutes}-${dt.seconds}.${fileFormat}`;
+
+      link.click();
+    });
+  }
+
+  //////////////////////////////////////////////////////////////////////////////
+
   onClickUser() {
     let users = this.data.getUsers();
 
@@ -181,6 +238,12 @@ class Main {
     }
 
     $("#user").text(user.userId);
+ 
+    let jqFooter = $("#footer");
+    let isVisible = user.userId && user.userId != User.defaultUserId;
+ 
+    this.core.setVisible(jqFooter, isVisible);
+    jqFooter.text(isVisible ? user.userId : null);
   }
 
   //////////////////////////////////////////////////////////////////////////////

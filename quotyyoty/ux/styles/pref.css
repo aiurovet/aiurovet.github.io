@@ -38,11 +38,8 @@
   padding: 1em;
   overflow: auto;
 }
-.ui-dialog-client.pref.divisors, .ui-dialog-client.pref.level, .ui-dialog-client.pref.time-limit, .ui-dialog-client.pref.user {
+.ui-dialog-client.pref.user {
   overflow: auto;
-}
-.ui-dialog-client.pref.time-limit {
-  flex-direction: column;
 }
 .ui-dialog-content.pref {
   font-size: 32px;
@@ -79,7 +76,7 @@ ul.rules > li {
   color: var(--dialog-caption-ln-color);
 }
 #help-print {
-  background-image: url("../../../lib/ux/images/print.svg?v=0.8.1");
+  background-image: url("../../../lib/ux/images/print.svg?v=0.1.0");
   background-position: right;
   background-repeat: no-repeat;
   background-size: contain;
@@ -92,47 +89,4 @@ ul.rules > li {
   display: flex;
   flex-direction: row;
   margin-top: 0;
-}
-#pref-divisors-value, #pref-level-value, #pref-time-limit-value, #pref-user-value {
-  align-items: stretch;
-  align-content: stretch;
-  display: flex;
-  flex-direction: row;
-  width: 100%;
-}
-#pref-divisors-value, #pref-user-value {
-  flex-direction: column;
-  flex-grow: 0;
-}
-#pref-divisors-value > *, #pref-level-value > input, #pref-user-value > * {
-  align-self: stretch;
-  flex-grow: 1;
-}
-#pref-level-value > .ui-listedit-items {
-  height: 6.5em;
-}
-#pref-level-value > .ui-listedit-items > .ui-listedit-item {
-  padding: 1em 0.5em;
-  text-align: center;
-  width: 2em;
-}
-#pref-time-limit-value > .ui-listedit-items {
-  height: 4.5em;
-  width: 17.75em;
-}
-#pref-time-limit-value > .ui-listedit-items > .ui-listedit-item {
-  padding: 0.5em;
-  text-align: center;
-  width: 3.5em;
-}
-#pref-time-limit-type-per-game, #pref-time-limit-type-per-move {
-  height: 1.5em;
-  margin: 0 0.5em 0 0;
-  width: 1.5em;
-}
-#pref-time-limit-type-per-game-label, #pref-time-limit-type-per-move-label {
-  margin-bottom: 0.5em;
-}
-#score {
-  margin-left: 1em;
 }

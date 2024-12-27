@@ -9,12 +9,9 @@
   --font-size-body: 16px;
   --font-size-help: 48px;
   --font-size-info: 32px;
-  --main-col-btn-size: 10%;
-  --main-col-num-size: 84%;
+  --main-col-info-size: 40%;
   --margin-off-body: 1em;
-  --min-margin-help: 1.5%;
   --min-margin-info: 1%;
-  --min-margin-left: 1%;
   --min-margin-menu: 1.5%;
 }
 
@@ -60,22 +57,24 @@ body, html {
 }
 .main-col.info {
   align-self: center;
-  align-items: center;
+  display: flex;
   font-size: var(--font-size-info);
   justify-content: center;
-  margin: 0 var(--min-margin-info) 0 auto;
+}
+.main-col.info.max {
+  flex-grow: 1;
 }
 .main-col.info.left {
+  align-items: start;
   margin-left: var(--min-margin-info);
+  float: left;
+  text-align: left;
 }
-.main-col.menu {
-  align-self: stretch;
-  background-image: url("../images/menu.svg?v=0.8.1");
-  background-position: left center;
-  background-size: contain;
-  background-repeat: no-repeat;
-  margin-left: var(--min-margin-menu);
-  width: 10%;
+.main-col.info.right {
+  align-items: end;
+  float: right;
+  margin-right: var(--min-margin-info);
+  text-align: right;
 }
 .main-col.quote {
   align-self: center;
@@ -83,7 +82,7 @@ body, html {
   color: rgb(110, 44, 0);
   display: block;
   font-family: sans-serif;
-  font-size: 48pt; /*calc(100vw / 12.5);*/        
+  font-size: 60pt; /*calc(100vw / 12.5);*/        
   font-weight: bold;
   justify-content: center;
   text-align: center;
@@ -95,21 +94,23 @@ body, html {
 .main-col.quote .footer, .main-col.quote.phrase {
   align-self: center;
   display: block;
+  font-size: inherit;
   width: 100%;
 }
 .main-col.quote.footer {
   color: rgba(110, 44, 0, 0.75);
-  font-size: 80%;
+  font-size: 60%;
   font-style: italic;
+  margin-top: 0.75em;
 }
 .main-col.quote > p {
   align-self: center;
   display: flex;
   flex-direction: column;
-  margin: 0 0 0.5em 0;
+  margin: 0;
 }
-.main-col.quote > p:last-child {
-  margin-bottom: 0.75em;
+.main-col.quote > p:not(:last-child) {
+  margin-bottom: 0.5em;
 }
 .main-row {
   align-self: stretch;
@@ -122,29 +123,33 @@ body, html {
   overflow-y: auto;
 }
 .main-row.sys {
-  background-color: black;
+  background-color: rgb(16, 16, 16);
   color: white  ;
 }
 .popup-container {
   display: none;
 }
-.score-value.cur {
-  color: blue;
-}
-.score-value.max {
-  color: green;
-}
 
 /* ELEMENTS: */
 
-#main-divisor:hover, #main-help:hover, #main-save:hover, #main-timer:hover, #score:hover, #user:hover {
+#conf:hover, #size:hover, #help:hover, #save:hover, #user:hover {
   background-color: var(--dialog-caption-bg-color-1);
   color: var(--dialog-caption-fg-color-1);
   font-weight: bold;
 }
-#main-divisor, #main-score {
-  margin-right: var(--margin-off-body); 
-}
-#main-help, #main-timer {
+#main-conf, #main-help {
   margin-left: var(--margin-off-body);
+}
+#edit-phrase-value {
+  font-family: inherit;
+  font-size: 100%;
+  height: 100%;
+  width: 100%;
+}
+#size > .ui-spinner-less, #size > .ui-spinner-more, #size > .ui-spinner-value {
+  float: left;
+}
+#size > .ui-spinner-less, #size > .ui-spinner-more {
+  font-size: 80%;
+  filter: invert(100%);
 }
