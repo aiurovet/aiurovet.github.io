@@ -1,0 +1,17 @@
+{
+  "name": "QuotyYoty",
+  "short_name": "QuotyYoty",
+  "description": "Convert your phrases to images",
+  "scope": "/quotyyoty/",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#f4eee4",
+  "theme_color": "#000000",
+  "icons": [
+      {
+          "src": "/quotyyoty/ux/images/quotyyoty.svg?v=0.8.1",
+          "sizes": "any",
+          "type": "image/svg+xml"
+      }
+  ]
+}
