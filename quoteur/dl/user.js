@@ -1,46 +1,51 @@
 ////////////////////////////////////////////////////////////////////////////////
-// Copyright (C) Alexander Iurovetski 2025
+// Copyright (C) Alexander Iurovetski 2024
 // All rights reserved under MIT license (see LICENSE file)
 //
-// Part of the quote (phrase, footer)
+// Manage application data and preferences
 ////////////////////////////////////////////////////////////////////////////////
 
 "use strict";
 
 ////////////////////////////////////////////////////////////////////////////////
 
-class Part {
-  // The font family used to display text
+class User {
+  // Constants
   //
-  fontFamily = "";
+  static defaultFileFormat = "png";
+  static defaultUserId = "No profile";
 
-  // The font size used to display text (pixels)
-  //
-  fontSize = 0.0;
+  //////////////////////////////////////////////////////////////////////////////
 
-  // The actual text
+  // Graphics file format to save the quote to (global)
   //
-  text = "";
+  static fileFormat = User.defaultFileFormat;
 
-  // Height of each quote element in the selected font size units (ems)
-  //
-  height = {phrase: 0.0, footer: 0.0};
+  //////////////////////////////////////////////////////////////////////////////
 
-  // Horizontal padding in the selected font size units (ems)
+  // User id (unique free text)
   //
-  padding = {horizontal: 0.0, vertical: 0.0};
+  userId = User.defaultUserId;
+
+  // Flag indicating the footer is used
+  //
+  footer = new Look();
+
+  // Flag indicating the footer is used
+  //
+  phrase = new Look();
 
   //////////////////////////////////////////////////////////////////////////////
   // If only one argument passed, and that is an object, initialize parameters
   // with its properties: i.e. constructing from a deserialized saved object
   //////////////////////////////////////////////////////////////////////////////
 
-  constructor(userId, footer) {
+  constructor(userId, phrase, footer) {
     if (userId instanceof Object) {
       let from = userId;
-      this.init(from.userId, from.footer)
+      this.init(from.userId, from.phrase, from.footer)
     } else {
-      this.init(userId, footer);
+      this.init(userId, phrase, footer);
     }
   }
 
@@ -48,18 +53,10 @@ class Part {
   // Initialise properties from the given parameters
   //////////////////////////////////////////////////////////////////////////////
 
-  init(userId, footer) {
+  init(userId, phrase, footer) {
     this.userId = userId ?? User.defaultUserId;
-
-    if ((footer === undefined) || (footer === null)) {
-      if (this.userId === User.defaultUserId) {
-        this.footer = User.defaultFooter;
-      } else {
-        this.footer = this.userId;
-      }
-    } else {
-      this.footer = footer;
-    }
+    this.phrase = phrase;
+    this.footer = footer;
   }
 
   //////////////////////////////////////////////////////////////////////////////
@@ -69,7 +66,8 @@ class Part {
   toSerializable() {
     return {
       userId: this.userId,
-      footer: this.footer
+      phrase: this.phrase?.toSerializable(),
+      footer: this.footer?.toSerializable(),
     };
   }
 

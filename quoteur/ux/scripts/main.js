@@ -61,7 +61,7 @@ class Main {
       case Main.fileFormatJpeg:
         return Main.fileFormatJpg;
       case Main.fileFormatJpg:
-      case Main.fileFormatSvg:
+          case Main.fileFormatSvg:
         return formatLower;
       default:
         return Main.fileFormatPng;
@@ -237,7 +237,7 @@ class Main {
       return;
     }
 
-    $("#user").text(user.userId);
+    //$("#user").text(user.userId);
  
     let jqFooter = $("#footer");
     let isVisible = user.userId && user.userId != User.defaultUserId;

@@ -12,7 +12,7 @@
 class Data {
   // Constants
   //
-  static appName = "quotyyoty";
+  static appName = "quoteur";
   static keyPref = Data.appName;
   static maxUserCount = 20;
   static version = "0.1.0";

@@ -1,0 +1,10 @@
+@font-face {
+  font-family: Akaya_Kanadaka;
+  src: url("../fonts/Akaya_Kanadaka/AkayaKanadaka-Regular.ttf") format("ttf");
+}
+@font-face {
+  font-family: Varela_Round;
+  src:
+    local("Varela Round"),
+    url("https://aiurovet.com/ux/fonts/Varela_Round/Varela_Round-Regular.ttf") format("ttf");
+}

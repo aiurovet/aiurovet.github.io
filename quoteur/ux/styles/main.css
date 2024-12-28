@@ -3,18 +3,6 @@
   All rights reserved under MIT license (see LICENSE file)
 */
 
-/* PARAMETERS */
-
-:root {
-  --font-size-body: 16px;
-  --font-size-help: 48px;
-  --font-size-info: 32px;
-  --main-col-info-size: 40%;
-  --margin-off-body: 1em;
-  --min-margin-info: 1%;
-  --min-margin-menu: 1.5%;
-}
-
 /* NODES */
 
 * {
@@ -51,14 +39,14 @@ body, html {
   background-repeat: no-repeat;
   background-size: contain;
   flex-grow: 1;
-  margin: 0 var(--min-margin-menu) 0 var(--min-margin-menu);
+  margin: 0 1.5% 0 1.5%;
   opacity: 0.25;
-  width: var(--main-col-btn-size);
+  width: 10%;
 }
 .main-col.info {
   align-self: center;
   display: flex;
-  font-size: var(--font-size-info);
+  font-size: 24pt;
   justify-content: center;
 }
 .main-col.info.max {
@@ -66,23 +54,25 @@ body, html {
 }
 .main-col.info.left {
   align-items: start;
-  margin-left: var(--min-margin-info);
   float: left;
   text-align: left;
 }
 .main-col.info.right {
   align-items: end;
   float: right;
-  margin-right: var(--min-margin-info);
   text-align: right;
+}
+.main-col.info > span {
+  height: 100%;
+  padding: 0 1em;
 }
 .main-col.quote {
   align-self: center;
   background: rgb(246, 221, 204);
   color: rgb(110, 44, 0);
   display: block;
-  font-family: sans-serif;
-  font-size: 60pt; /*calc(100vw / 12.5);*/        
+  font-family: Varela_Round; /*sans-serif;*/
+  font-size: 60pt;
   font-weight: bold;
   justify-content: center;
   text-align: center;
@@ -116,7 +106,7 @@ body, html {
   align-self: stretch;
   display: flex;
 	flex-direction: row;
-  height: 10%;
+  height: 4em;
 }
 .main-row.max {
   flex-grow: 1;
@@ -137,12 +127,9 @@ body, html {
   color: var(--dialog-caption-fg-color-1);
   font-weight: bold;
 }
-#main-conf, #main-help {
-  margin-left: var(--margin-off-body);
-}
 #edit-phrase-value {
   font-family: inherit;
-  font-size: 100%;
+  font-size: inherit;
   height: 100%;
   width: 100%;
 }
@@ -152,4 +139,11 @@ body, html {
 #size > .ui-spinner-less, #size > .ui-spinner-more {
   font-size: 80%;
   filter: invert(100%);
+}
+#size > .ui-spinner-value {
+  background: rgb(160, 160, 160);
+  pointer-events: none;
+}
+#user {
+  margin: 0 0.5em;
 }

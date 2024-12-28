@@ -94,9 +94,9 @@ class Pref {
       isEditable: true,
       items: users,
       maxItemCount: maxUserCount,
-      rows: 3,
-      insertTitle: "Add a Profile",
-      modifyTitle: "Rename a Profile",
+      rows: 3,      
+      insertTitle: "Add Profile",
+      modifyTitle: "Rename Profile",
       selectedItemNo: selectedUserNo,
       formatter: function(items, itemNo) {
         return itemNo >= 0 ? items[itemNo].userId : "";
