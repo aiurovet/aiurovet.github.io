@@ -1,40 +1,90 @@
 @font-face {
   font-family: AkayaKanadaka;
-  src: url("../fonts/Akaya_Kanadaka/AkayaKanadaka-Regular.woff") format("woff"); /*
-  src: url("https://aiurovet.github.io/ux/fonts/Akaya_Kanadaka/AkayaKanadaka-Regular.woff") format("woff");*/
+  src: url("../fonts/Akaya_Kanadaka/AkayaKanadaka-Regular.woff") format("woff"),
+       url("https://aiurovet.github.io/ux/fonts/Akaya_Kanadaka/AkayaKanadaka-Regular.woff") format("woff");
 }
 @font-face {
   font-family: BerkshireSwash;
-  src: url("../fonts/Berkshire_Swash/BerkshireSwash-Regular.woff") format("woff"); /*
-  src: url("https://aiurovet.github.io/ux/fonts/Berkshire_Swash/BerkshireSwash-Regular.woff") format("woff");*/
+  src: url("../fonts/Berkshire_Swash/BerkshireSwash-Regular.woff") format("woff"),
+       url("https://aiurovet.github.io/ux/fonts/Berkshire_Swash/BerkshireSwash-Regular.woff") format("woff");
 }
 @font-face {
   font-family: Caveat;
-  src: url("../fonts/Caveat/Caveat-VariableFont_wght.woff") format("woff"); /*
-  src: url("https://aiurovet.github.io/ux/fonts/Caveat/Caveat-VariableFont_wght.woff") format("woff");*/
+  src: url("../fonts/Caveat/Caveat-VariableFont_wght.woff") format("woff"),
+       url("https://aiurovet.github.io/ux/fonts/Caveat/Caveat-VariableFont_wght.woff") format("woff");
 }
 @font-face {
   font-family: Charm;
-  src: url("../fonts/Charm/Charm-Regular.woff") format("woff"); /*
-  src: url("https://aiurovet.github.io/ux/fonts/Charm/Charm-Regular.woff") format("woff");*/
+  src: url("../fonts/Charm/Charm-Regular.woff") format("woff"),
+       url("https://aiurovet.github.io/ux/fonts/Charm/Charm-Regular.woff") format("woff");
 }
 @font-face {
   font-family: Courgette;
-  src: url("../fonts/Courgette/Courgette-Regular.woff") format("woff"); /*
-  src: url("https://aiurovet.github.io/ux/fonts/Courgette/Courgette-Regular.woff") format("woff");*/
+  src: url("../fonts/Courgette/Courgette-Regular.woff") format("woff"),
+       url("https://aiurovet.github.io/ux/fonts/Courgette/Courgette-Regular.woff") format("woff");
 }
 @font-face {
   font-family: HennyPenny;
-  src: url("../fonts/Henny_Penny/HennyPenny-Regular.woff") format("woff"); /*
-  src: url("https://aiurovet.github.io/ux/fonts/Henny_Penny/HennyPenny-Regular.woff") format("woff");*/
+  src: url("../fonts/Henny_Penny/HennyPenny-Regular.woff") format("woff"),
+       url("https://aiurovet.github.io/ux/fonts/Henny_Penny/HennyPenny-Regular.woff") format("woff");
 }
 @font-face {
   font-family: KaushanScript;
-  src: url("../fonts/Kaushan_Script/KaushanScript-Regular.woff") format("woff"); /*
-  src: url("https://aiurovet.github.io/ux/fonts/Kaushan_Script/KaushanScript-Regular.woff") format("woff");*/
+  src: url("../fonts/Kaushan_Script/KaushanScript-Regular.woff") format("woff"),
+       url("https://aiurovet.github.io/ux/fonts/Kaushan_Script/KaushanScript-Regular.woff") format("woff");
+}
+@font-face {
+  font-family: Lobster;
+  src: url("../fonts/Lobster/Lobster-Regular.woff") format("woff"),
+       url("https://aiurovet.github.io/ux/fonts/Lobster/Lobster-Regular.woff") format("woff");
+}
+@font-face {
+  font-family: Merienda;
+  src: url("../fonts/Merienda/Merienda-VariableFont_wght.woff") format("woff"),
+       url("https://aiurovet.github.io/ux/fonts/Merienda/Merienda-VariableFont_wght.woff") format("woff");
+}
+@font-face {
+  font-family: Merriweather;
+  src: url("../fonts/Merriweather/Merriweather-Regular.woff") format("woff"),
+       url("https://aiurovet.github.io/ux/fonts/Merriweather/Merriweather-Regular.woff") format("woff");
+}
+@font-face {
+  font-family: NotoSerif;
+  src: url("../fonts/Noto_Serif/NotoSerif-VariableFont_wdthwght.woff") format("woff"),
+       url("https://aiurovet.github.io/ux/fonts/Noto_Serif/NotoSerif-VariableFont_wdthwght.woff") format("woff");
+}
+@font-face {
+  font-family: Oswald;
+  src: url("../fonts/Oswald/Oswald-VariableFont_wght.woff") format("woff"),
+       url("https://aiurovet.github.io/ux/fonts/Merienda/Merienda-VariableFont_wght.woff") format("woff");
+}
+@font-face {
+  font-family: PlayfairDisplay;
+  src: url("../fonts/Playfair_Display/PlayfairDisplay-VariableFont_wght.woff") format("woff"),
+       url("https://aiurovet.github.io/ux/fonts/Playfair_Display/PlayfairDisplay-VariableFont_wght.woff") format("woff");
+}
+@font-face {
+  font-family: Righteous;
+  src: url("../fonts/Righteous/Righteous-Regular.woff") format("woff"),
+       url("https://aiurovet.github.io/ux/fonts/Righteous/Righteous-Regular.woff") format("woff");
+}
+@font-face {
+  font-family: Roboto;
+  src: url("../fonts/Roboto/Roboto-Regular.woff") format("woff"),
+       url("https://aiurovet.github.io/ux/fonts/Roboto/Roboto-Regular.woff") format("woff");
+}
+@font-face {
+  font-family: SnowburstOne;
+  src: url("../fonts/Snowburst_One/SnowburstOne-Regular.woff") format("woff"),
+       url("https://aiurovet.github.io/ux/fonts/Snowburst_One/SnowburstOne-Regular.woff") format("woff");
+}
+@font-face {
+  font-family: Ubuntu;
+  src: url("../fonts/Ubuntu/Ubuntu-Regular.woff") format("woff"),
+       url("https://aiurovet.github.io/ux/fonts/Ubuntu/Ubuntu-Regular.woff") format("woff");
 }
 @font-face {
   font-family: VarelaRound;
-      src: url("../fonts/Varela_Round/Varela_Round-Regular.woff") format("woff"); /*
-  src: url("https://aiurovet.github.io/ux/fonts/Varela_Round/Varela_Round-Regular.woff") format("woff");*/
+  src: url("../fonts/Varela_Round/VarelaRound-Regular.woff") format("woff"),
+       url("https://aiurovet.github.io/ux/fonts/Varela_Round/VarelaRound-Regular.woff") format("woff");
 }
