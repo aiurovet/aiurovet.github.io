@@ -1,10 +1,40 @@
 @font-face {
-  font-family: Akaya_Kanadaka;
-  src: url("../fonts/Akaya_Kanadaka/AkayaKanadaka-Regular.ttf") format("ttf");
+  font-family: AkayaKanadaka;
+  src: url("../fonts/Akaya_Kanadaka/AkayaKanadaka-Regular.woff") format("woff"); /*
+  src: url("https://aiurovet.github.io/ux/fonts/Akaya_Kanadaka/AkayaKanadaka-Regular.woff") format("woff");*/
 }
 @font-face {
-  font-family: Varela_Round;
-  src:
-    local("Varela Round"),
-    url("https://aiurovet.com/ux/fonts/Varela_Round/Varela_Round-Regular.ttf") format("ttf");
+  font-family: BerkshireSwash;
+  src: url("../fonts/Berkshire_Swash/BerkshireSwash-Regular.woff") format("woff"); /*
+  src: url("https://aiurovet.github.io/ux/fonts/Berkshire_Swash/BerkshireSwash-Regular.woff") format("woff");*/
+}
+@font-face {
+  font-family: Caveat;
+  src: url("../fonts/Caveat/Caveat-VariableFont_wght.woff") format("woff"); /*
+  src: url("https://aiurovet.github.io/ux/fonts/Caveat/Caveat-VariableFont_wght.woff") format("woff");*/
+}
+@font-face {
+  font-family: Charm;
+  src: url("../fonts/Charm/Charm-Regular.woff") format("woff"); /*
+  src: url("https://aiurovet.github.io/ux/fonts/Charm/Charm-Regular.woff") format("woff");*/
+}
+@font-face {
+  font-family: Courgette;
+  src: url("../fonts/Courgette/Courgette-Regular.woff") format("woff"); /*
+  src: url("https://aiurovet.github.io/ux/fonts/Courgette/Courgette-Regular.woff") format("woff");*/
+}
+@font-face {
+  font-family: HennyPenny;
+  src: url("../fonts/Henny_Penny/HennyPenny-Regular.woff") format("woff"); /*
+  src: url("https://aiurovet.github.io/ux/fonts/Henny_Penny/HennyPenny-Regular.woff") format("woff");*/
+}
+@font-face {
+  font-family: KaushanScript;
+  src: url("../fonts/Kaushan_Script/KaushanScript-Regular.woff") format("woff"); /*
+  src: url("https://aiurovet.github.io/ux/fonts/Kaushan_Script/KaushanScript-Regular.woff") format("woff");*/
+}
+@font-face {
+  font-family: VarelaRound;
+      src: url("../fonts/Varela_Round/Varela_Round-Regular.woff") format("woff"); /*
+  src: url("https://aiurovet.github.io/ux/fonts/Varela_Round/Varela_Round-Regular.woff") format("woff");*/
 }
