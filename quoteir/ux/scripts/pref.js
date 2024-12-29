@@ -96,7 +96,7 @@ class Pref {
       maxItemCount: maxUserCount,
       rows: 3,      
       insertTitle: "Add Profile",
-      modifyTitle: "Rename Profile",
+      modifyTitle: "Edit Profile",
       selectedItemNo: selectedUserNo,
       formatter: function(items, itemNo) {
         return itemNo >= 0 ? items[itemNo].userId : "";

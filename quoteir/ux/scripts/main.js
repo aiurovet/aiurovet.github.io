@@ -73,7 +73,7 @@ class Main {
   initSize() {
     const jqQuote = $("#quote");
 
-    $("#size").spinner({
+    $("#menu-size").spinner({
       isReadOnly: true,
       min: 1,
       step: 1,

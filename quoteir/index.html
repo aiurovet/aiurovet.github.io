@@ -6,9 +6,9 @@
 <html>
 <head>
   <meta charset="UTF-8">
-  <title>Quoteur</title>
+  <title>Quoteir</title>
   <link rel="manifest" href="./manifest.json?v=0.1.0" crossorigin="use-credentials">
-  <link rel="shortcut icon" type="image/x-icon" href="ux/images/quoteur.svg?v=0.1.0">
+  <link rel="shortcut icon" type="image/x-icon" href="ux/images/quoteir.svg?v=0.1.0">
   <link rel="stylesheet" href="../lib/ux/styles/dialog.css?v=0.1.0">
   <link rel="stylesheet" href="../lib/ux/styles/help.css?v=0.1.0">
   <link rel="stylesheet" href="../lib/ux/styles/listedit.css?v=0.1.0">
@@ -37,7 +37,7 @@
     let sw = navigator.serviceWorker;
 
     if (sw) {
-      sw.register("/quoteur/service-worker.js")
+      sw.register("/quoteir/service-worker.js")
         .then((reg) => {
           console.log("The service worker registration successfully completed");
         })
@@ -51,13 +51,13 @@
   <div class="main">
     <div class="main-row sys">
       <div id="main-help" class="main-col clickable info left">
-        <span id="help" onclick="main.onClickHelp();">Help</span>
+        <span id="menu-help" onclick="main.onClickHelp();">Help</span>
       </div>
       <div id="main-save" class="main-col info max">
-        <span id="save" onclick="main.onClickSave();">Download</span>
+        <span id="menu-save" onclick="main.onClickSave();">Download</span>
       </div>
       <div id="main-user" class="main-col info right">
-        <span id="user" onclick="main.onClickUser();">Profile</span>
+        <span id="menu-user" onclick="main.onClickUser();">Profile</span>
       </div>
     </div>
     <div class="main-row max">
@@ -69,14 +69,14 @@
       <div id="action-yes" class="main-col btn"></div>
     </div>
     <div class="main-row sys">
-      <div id="main-conf" class="main-col info left">
-        <span id="conf" onclick="main.onClickConf();">Exchange</span>
+      <div id="main-exch" class="main-col info left">
+        <span id="menu-exch" onclick="main.onClickExchange();">Exchange</span>
       </div>
       <div id="main-edit" class="main-col info max">
-        <span id="save" onclick="main.onClickEdit();">Edit</span>
+        <span id="menu-edit" onclick="main.onClickEdit();">Edit</span>
       </div>
       <div id="main-size" class="main-col info right">
-        <span id="size"></span> 
+        <span id="menu-size"></span> 
       </div>
     </div>
   </div>
@@ -134,7 +134,7 @@
   <div id="help" style="display: none;"">
     <div class="ui-dialog-content help">
       <div class="ui-dialog-caption help">
-        <span><strong>Quoteur</strong></span>
+        <span><strong>Quoteir</strong></span>
         <div id="copyright">&nbsp;&copy;&nbsp;2024&nbsp;</div>
 				<a id="help-link" target="_blank" href="https://aiurovet.com/">Alexander Iurovetski</a>
         <div class="ui-dialog-filler"></div>
@@ -159,14 +159,14 @@
         </div>
         <h4 id="help-install">How to Install</h4>
         <div class="para-help">
-          You can use <em>Quoteur</em> in a browser as is without any installation. However, it can be installed
+          You can use <em>Quoteir</em> in a browser as is without any installation. However, it can be installed
           on most  devices via browser. This will give the native app experience and the ability to run offline when
           the internet connection is intermittent or unavailable. Please note that not all browsers are capable of
           web app installation. On handheld devices, ideally, do that with <em>Google Chrome</em> or <em>Microsoft
           Edge</em> on non-Apple devices, and with <em>Safari</em> on Apple devices. You should find and tap <em>Add
           to Home screen</em> menu item (or similar), then follow the prompts. On laptops and desktops, an icon with
           a monitor and an arrow might show up at the end of the address bar. When it is hovered with the mouse
-          cursor, a tooltip will pop: <em>Install Quoteur</em>. Tap/click that icon and follow the prompts.
+          cursor, a tooltip will pop: <em>Install Quoteir</em>. Tap/click that icon and follow the prompts.
         </div>
         <h4 id="help-use">How to Use</h4>
         <div class="para-help">
@@ -206,7 +206,7 @@
             <li>Footer font size ratio to the phrase font size.</li>
           </ul>
         </div>
-        <h4 id="help-pref-conf">Exchange  </h4>
+        <h4 id="help-pref-exch">Exchange</h4>
         <div class="para-help">
           You can export and import all profiles in JSON format (copied to/from clipboard or a file).
           When importing, you can choose whether to append or replace the existing profiles.

@@ -1,90 +1,80 @@
 @font-face {
-  font-family: AkayaKanadaka;
-  src: url("../fonts/Akaya_Kanadaka/AkayaKanadaka-Regular.woff") format("woff"),
-       url("https://aiurovet.github.io/ux/fonts/Akaya_Kanadaka/AkayaKanadaka-Regular.woff") format("woff");
+  font-family: "Akaya Kanadaka";
+  src: url("../fonts/Akaya_Kanadaka/AkayaKanadaka-Regular.woff2") format("woff2");
 }
 @font-face {
-  font-family: BerkshireSwash;
-  src: url("../fonts/Berkshire_Swash/BerkshireSwash-Regular.woff") format("woff"),
-       url("https://aiurovet.github.io/ux/fonts/Berkshire_Swash/BerkshireSwash-Regular.woff") format("woff");
+  font-family: "Berkshire Swash";
+  src: url("../fonts/Berkshire_Swash/BerkshireSwash-Regular.woff2") format("woff2");
 }
 @font-face {
-  font-family: Caveat;
-  src: url("../fonts/Caveat/Caveat-VariableFont_wght.woff") format("woff"),
-       url("https://aiurovet.github.io/ux/fonts/Caveat/Caveat-VariableFont_wght.woff") format("woff");
+  font-family: "Caveat";
+  src: url("../fonts/Caveat/Caveat-VariableFont_wght.woff2") format("woff2");
 }
 @font-face {
-  font-family: Charm;
-  src: url("../fonts/Charm/Charm-Regular.woff") format("woff"),
-       url("https://aiurovet.github.io/ux/fonts/Charm/Charm-Regular.woff") format("woff");
+  font-family: "Charm";
+  src: url("../fonts/Charm/Charm-Regular.woff2") format("woff2");
 }
 @font-face {
-  font-family: Courgette;
-  src: url("../fonts/Courgette/Courgette-Regular.woff") format("woff"),
-       url("https://aiurovet.github.io/ux/fonts/Courgette/Courgette-Regular.woff") format("woff");
+  font-family: "Comic Neue";
+  src: url("../fonts/Comic_Neue/ComicNeue-Regular.woff2") format("woff2");
 }
 @font-face {
-  font-family: HennyPenny;
-  src: url("../fonts/Henny_Penny/HennyPenny-Regular.woff") format("woff"),
-       url("https://aiurovet.github.io/ux/fonts/Henny_Penny/HennyPenny-Regular.woff") format("woff");
+  font-family: "Courgette";
+  src: url("../fonts/Courgette/Courgette-Regular.woff2") format("woff2");
 }
 @font-face {
-  font-family: KaushanScript;
-  src: url("../fonts/Kaushan_Script/KaushanScript-Regular.woff") format("woff"),
-       url("https://aiurovet.github.io/ux/fonts/Kaushan_Script/KaushanScript-Regular.woff") format("woff");
+  font-family: "Gentium Plus";
+  src: url("../fonts/Gentium_Plus/GentiumPlus-Regular.woff2") format("woff2");
 }
 @font-face {
-  font-family: Lobster;
-  src: url("../fonts/Lobster/Lobster-Regular.woff") format("woff"),
-       url("https://aiurovet.github.io/ux/fonts/Lobster/Lobster-Regular.woff") format("woff");
+  font-family: "Henny Penny";
+  src: url("../fonts/Henny_Penny/HennyPenny-Regular.woff2") format("woff2");
 }
 @font-face {
-  font-family: Merienda;
-  src: url("../fonts/Merienda/Merienda-VariableFont_wght.woff") format("woff"),
-       url("https://aiurovet.github.io/ux/fonts/Merienda/Merienda-VariableFont_wght.woff") format("woff");
+  font-family: "Kaushan Script";
+  src: url("../fonts/Kaushan_Script/KaushanScript-Regular.woff2") format("woff2");
 }
 @font-face {
-  font-family: Merriweather;
-  src: url("../fonts/Merriweather/Merriweather-Regular.woff") format("woff"),
-       url("https://aiurovet.github.io/ux/fonts/Merriweather/Merriweather-Regular.woff") format("woff");
+  font-family: "Lobster";
+  src: url("../fonts/Lobster/Lobster-Regular.woff2") format("woff2");
 }
 @font-face {
-  font-family: NotoSerif;
-  src: url("../fonts/Noto_Serif/NotoSerif-VariableFont_wdthwght.woff") format("woff"),
-       url("https://aiurovet.github.io/ux/fonts/Noto_Serif/NotoSerif-VariableFont_wdthwght.woff") format("woff");
+  font-family: "Merienda";
+  src: url("../fonts/Merienda/Merienda-VariableFont_wght.woff2") format("woff2");
 }
 @font-face {
-  font-family: Oswald;
-  src: url("../fonts/Oswald/Oswald-VariableFont_wght.woff") format("woff"),
-       url("https://aiurovet.github.io/ux/fonts/Merienda/Merienda-VariableFont_wght.woff") format("woff");
+  font-family: "Merriweather";
+  src: url("../fonts/Merriweather/Merriweather-Regular.woff2") format("woff2");
 }
 @font-face {
-  font-family: PlayfairDisplay;
-  src: url("../fonts/Playfair_Display/PlayfairDisplay-VariableFont_wght.woff") format("woff"),
-       url("https://aiurovet.github.io/ux/fonts/Playfair_Display/PlayfairDisplay-VariableFont_wght.woff") format("woff");
+  font-family: "Noto Serif";
+  src: url("../fonts/Noto_Serif/NotoSerif-VariableFont_wdth,wght.woff2") format("woff2");
 }
 @font-face {
-  font-family: Righteous;
-  src: url("../fonts/Righteous/Righteous-Regular.woff") format("woff"),
-       url("https://aiurovet.github.io/ux/fonts/Righteous/Righteous-Regular.woff") format("woff");
+  font-family: "Oswald";
+  src: url("../fonts/Oswald/Oswald-VariableFont_wght.woff2") format("woff2");
 }
 @font-face {
-  font-family: Roboto;
-  src: url("../fonts/Roboto/Roboto-Regular.woff") format("woff"),
-       url("https://aiurovet.github.io/ux/fonts/Roboto/Roboto-Regular.woff") format("woff");
+  font-family: "Playfair Display";
+  src: url("../fonts/Playfair_Display/PlayfairDisplay-VariableFont_wght.woff2") format("woff2");
 }
 @font-face {
-  font-family: SnowburstOne;
-  src: url("../fonts/Snowburst_One/SnowburstOne-Regular.woff") format("woff"),
-       url("https://aiurovet.github.io/ux/fonts/Snowburst_One/SnowburstOne-Regular.woff") format("woff");
+  font-family: "Righteous";
+  src: url("../fonts/Righteous/Righteous-Regular.woff2") format("woff2");
 }
 @font-face {
-  font-family: Ubuntu;
-  src: url("../fonts/Ubuntu/Ubuntu-Regular.woff") format("woff"),
-       url("https://aiurovet.github.io/ux/fonts/Ubuntu/Ubuntu-Regular.woff") format("woff");
+  font-family: "Roboto";
+  src: url("../fonts/Roboto/Roboto-Regular.woff2") format("woff2");
 }
 @font-face {
-  font-family: VarelaRound;
-  src: url("../fonts/Varela_Round/VarelaRound-Regular.woff") format("woff"),
-       url("https://aiurovet.github.io/ux/fonts/Varela_Round/VarelaRound-Regular.woff") format("woff");
+  font-family: "Snowburst One";
+  src: url("../fonts/Snowburst_One/SnowburstOne-Regular.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Ubuntu";
+  src: url("../fonts/Ubuntu/Ubuntu-Regular.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Varela Round";
+  src: url("../fonts/Varela_Round/VarelaRound-Regular.woff2") format("woff2");
 }
