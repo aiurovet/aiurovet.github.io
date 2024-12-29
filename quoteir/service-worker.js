@@ -25,6 +25,8 @@ self.addEventListener("install", (event) => {
         "/quoteir/ux/styles/pref.css?v=0.1.0",
         "/lib/dl/extensions.js?v=0.1.0",
         "/lib/dl/json.js?v=0.1.0",
+        "/lib/import/styles/acolorpicker-5.3.2.min.css",
+        "/lib/import/scripts/acolorpicker-5.3.2.min.js",
         "/lib/import/scripts/html-to-image-1.11.11.min.js",
         "/lib/import/scripts/jquery-3.7.1.slim.min.js",
         "/lib/ux/images/close.svg?v=0.1.0",

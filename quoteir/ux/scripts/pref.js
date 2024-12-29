@@ -24,71 +24,9 @@ class Pref {
 
   //////////////////////////////////////////////////////////////////////////////
 
-  onClickDivisors(user, beforeHide) {
-    var jqControl = $("#pref-divisors-value").listedit({
-      hasDefaultItem: true,
-      items: user.getGames(),
-      maxItemCount: User.maxGameCount,
-      rows: 3,
-      editorRows: 3,
-      insertTitle: "Add Divisors",
-      modifyTitle: "Modify Divisors",
-      selectedItemNo: user.getSelectedGameNo(),
-      formatter: function(items, itemNo) {
-        return itemNo >= 0 ? items[itemNo].toDivisorsString() : "";
-      },
-      parser: function(items, itemNo, value) {
-        let divisors = Game.parseDivisors(value);
-
-        if (items[itemNo]) {
-          if (divisors.length <= 0) {
-            return;
-          }
-          items[itemNo].init(Game.minLevel, divisors, 0);
-        } else {
-          if (items.length <= 0) {
-            divisors = Game.defaultDivisors;
-          }
-          items[itemNo] = new Game(Game.minLevel, divisors, 0);
-        }
-      }
-    });
-
-    this.onClick("#pref-divisors", function (event) {
-      if (event === "before-hide") {
-        beforeHide(jqControl);
-      }
-      else if (event === "after-hide") {
-        jqControl.empty();
-      }
-    });
-  }
-
-  //////////////////////////////////////////////////////////////////////////////
-
-  onClickLevel(game, beforeHide) {
-    var jqControl = $("#pref-level-value").listedit({
-      isEditable: true,
-      items: Game.getAllLevels(),
-      rows: 2,
-      isEditable: false,
-      selectedItem: game.level,
-      formatter: null, // default
-      parser: null // no need for non-editable lists
-    });
-
-    this.onClick("#pref-level", function (event) {
-      if (event === "before-hide") {
-        beforeHide(jqControl);
-      } else if (event === "after-hide") {
-        jqControl.empty();
-      }
-    });
-  }
-
-  //////////////////////////////////////////////////////////////////////////////
-
   onClickUser(users, selectedUserNo, maxUserCount, beforeHide) {
+    const that = this;
+
     var jqControl = $("#pref-user-value").listedit({
       hasDefaultItem: true,
       isEditable: true,
@@ -100,6 +38,9 @@ class Pref {
       selectedItemNo: selectedUserNo,
       formatter: function(items, itemNo) {
         return itemNo >= 0 ? items[itemNo].userId : "";
+      },
+      onModify: function(isInsert, jqPopup, selItemNo, selItemText, event) {
+        that.onModifyUser(isInsert, jqPopup, selItemNo, selItemText, event);
       },
       parser: function(items, itemNo, value) {
         value = value?.trim() ?? "";
@@ -130,6 +71,27 @@ class Pref {
         jqControl.empty();
       }
     });
+  }
+
+  //////////////////////////////////////////////////////////////////////////////
+
+  onModifyUser(isInsert, jqPopup, selItemNo, selItemText, event) {
+    if (!event) {
+      AColorPicker.from("#user-edit-color").on("change", (picker, color) => {
+        $(".main-col.quote").css("background-color", color);
+      });
+  
+      jqPopup.dialog({
+        content: $("#pref-user-edit"),
+        handler: function (event) {
+          if (event === "before-show") {
+            $("#user-edit-title").text(`${isInsert ? "Add" : "Edit"} Profile`);
+          } else if (event === "before-hide") {
+          }
+        }
+      });
+      return;
+    }
   }
 
   //////////////////////////////////////////////////////////////////////////////

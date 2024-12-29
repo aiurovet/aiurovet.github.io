@@ -9,6 +9,7 @@
   <title>Quoteir</title>
   <link rel="manifest" href="./manifest.json?v=0.1.0" crossorigin="use-credentials">
   <link rel="shortcut icon" type="image/x-icon" href="ux/images/quoteir.svg?v=0.1.0">
+  <link rel="stylesheet" href="../lib/import/styles/acolorpicker-5.3.2.min.css">
   <link rel="stylesheet" href="../lib/ux/styles/dialog.css?v=0.1.0">
   <link rel="stylesheet" href="../lib/ux/styles/help.css?v=0.1.0">
   <link rel="stylesheet" href="../lib/ux/styles/listedit.css?v=0.1.0">
@@ -18,6 +19,7 @@
   <link rel="stylesheet" href="ux/styles/info.css?v=0.1.0">
   <link rel="stylesheet" href="ux/styles/main.css?v=0.1.0">
   <link rel="stylesheet" href="ux/styles/pref.css?v=0.1.0">
+  <script src="../lib/import/scripts/acolorpicker-5.3.2.min.js"></script>
   <script src="../lib/import/scripts/html-to-image-1.11.11.min.js"></script>
   <script src="../lib/import/scripts/jquery-3.7.1.slim.min.js"></script>
   <script src="../lib/dl/extensions.js?v=0.1.0"></script>
@@ -115,16 +117,19 @@
 
   <!-- PREF: USER EDIT -->
 
-  <div id="pref-user" style="display: none;"">
+  <div id="pref-user-edit" style="display: none;"">
     <div class="ui-dialog-content pref user-edit">
       <div class="ui-dialog-caption pref user-edit">
-        <h4 id="user-edit-title"></h4>
+        <h4 id="user-edit-title">{{TITLE}}</h4>
         <div class="ui-dialog-filler"></div>
         <div class="ui-dialog-icon help" onclick="main.onClickHelp('help-pref-user-edit', '.ui-listedit-item[selected]')"></div>
         <div class="ui-dialog-icon close"></div>
       </div>
       <div class="ui-dialog-client pref user-edit">
-          <div id="pref-user-name"></div>
+          <div id="pref-user-edit-name"></div>
+      </div>
+      <div id="user-edit-color" acp-color="#f6ddcc" acp-show-alpha acp-show-hsl="no"
+           acp-palette="PALETTE_MATERIAL_CHROME" acp-palette-editable="no">
       </div>
     </div>
   </div>
@@ -153,6 +158,11 @@
           happen even if is installed as an app.
         </div>
         <div class="para-help">
+          However, you can export or import all your settings to/from a file or a clipboard by tapping or clicking
+          the <em>Exchange</em> menu and following further options. It is highly recommended to export your changes
+          to a file after every modification.
+        </div>
+        <div class="para-help">
           The application is available on any device: tablet (ideal), phone, laptop, or desktop. The recommended
           orientation for the handheld devices is <em>landscape</em> (horizontal). The only requirements are a
           web browser and an internet  connection to start using or to get updates.
@@ -166,7 +176,7 @@
           Edge</em> on non-Apple devices, and with <em>Safari</em> on Apple devices. You should find and tap <em>Add
           to Home screen</em> menu item (or similar), then follow the prompts. On laptops and desktops, an icon with
           a monitor and an arrow might show up at the end of the address bar. When it is hovered with the mouse
-          cursor, a tooltip will pop: <em>Install Quoteir</em>. Tap/click that icon and follow the prompts.
+          cursor, a tooltip will pop: <em>Install Quoteir</em>. Tap or click that icon and follow the prompts.
         </div>
         <h4 id="help-use">How to Use</h4>
         <div class="para-help">
@@ -177,19 +187,19 @@
           profiles.
         </div>
         <div class="para-help">
-          Once the quote is ready, tap/click <em>Download</em> at the top of the screen and choose location/file name.
-          The default filename is in the form of "quote_yyyy-MM-dd_HH-mm-ss.[jpg|png|svg]" that ensures uniqueness and
+          Once the quote is ready, tap or click <em>Download</em> at the top of the screen and choose folder and filename.
+          The default filename is in the form of <em>quote_yyyy-MM-dd_HH-mm-ss.[jpg|png|svg]</em> that ensures uniqueness and
           protects the existing quotes from being  overwritten by accident.
         </div>
         <h4 id="help-pref-edit">Edit</h4>
         <div class="para-help">
-          You can set or change the phrase by tapping/clicking <em>Edit</em> at the bottom of the screen, then typing
+          You can set or change the phrase by tapping or clicking <em>Edit</em> at the bottom of the screen, then typing
           in the new text and pressing <em>Enter</em> (on a keyboard of your laptop/workstation) or closing the window.
-          If you need to insert line breaks using the keyboard of your laptop/workstation, press <em>>Ctrl+Enter</em>.
+          If you need to insert line breaks using the keyboard of your laptop/workstation, press <em>Shift+Enter</em>.
         </div>
         <h4 id="help-pref-user">Profiles</h4>
         <div class="para-help">
-          You can add, rename or delete profile(s) by tapping/clicking the name of the current profile at the top right
+          You can add, rename or delete profile(s) by tapping or clicking the name of the current profile at the top right
           corner of the screen, then using the icons on top of the list of existing profiles in the popup dialog. The
           icons are (in the order of appearance): add, rename, delete, move up, move down. By deleting all profiles one
           by one, you delete all your preferences. No name (default) profile with the default preferences will be
@@ -197,7 +207,9 @@
         </div>
         <h4 id="help-pref-user-edit">Edit Profile</h4>
         <div class="para-help">
-          You can set the graphics file format for all profiles at once: JPG, PNG (default), SVG.
+          You can set the graphics file format for all profiles at once: <em>JPG</em>, <em>PNG</em> (default), <em>SVG</em>.
+        </div>
+        <div class="para-help">
           You can set the following details for every profile separately:
           <ul>
             <li>Background colour for the whole quote.</li>

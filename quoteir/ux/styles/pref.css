@@ -74,6 +74,7 @@ ul.rules > li {
 
 #help-link {
   color: var(--dialog-caption-ln-color);
+  margin: 0;
 }
 #help-print {
   background-image: url("../../../lib/ux/images/print.svg?v=0.1.0");
