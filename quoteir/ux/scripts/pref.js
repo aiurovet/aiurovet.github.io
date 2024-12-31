@@ -28,6 +28,7 @@ class Pref {
     const that = this;
 
     var jqControl = $("#pref-user-value").listedit({
+      editorContent: $("#pref-user-edit"),
       hasDefaultItem: true,
       isEditable: true,
       items: users,
@@ -38,9 +39,6 @@ class Pref {
       selectedItemNo: selectedUserNo,
       formatter: function(items, itemNo) {
         return itemNo >= 0 ? items[itemNo].userId : "";
-      },
-      onModify: function(isInsert, jqPopup, selItemNo, selItemText, event) {
-        that.onModifyUser(isInsert, jqPopup, selItemNo, selItemText, event);
       },
       parser: function(items, itemNo, value) {
         value = value?.trim() ?? "";
@@ -75,22 +73,28 @@ class Pref {
 
   //////////////////////////////////////////////////////////////////////////////
 
-  onModifyUser(isInsert, jqPopup, selItemNo, selItemText, event) {
+  onModifyUser(owner, event, isInsert, selItemNo, selItemText) {
+    var dlg = null;
+
     if (!event) {
       AColorPicker.from("#user-edit-color").on("change", (picker, color) => {
         $(".main-col.quote").css("background-color", color);
       });
-  
-      jqPopup.dialog({
+      dlg = createEmptyDialog("dialog-pref-user-edit", "ui-listedit-popup", owner).dialog({
         content: $("#pref-user-edit"),
-        handler: function (event) {
-          if (event === "before-show") {
-            $("#user-edit-title").text(`${isInsert ? "Add" : "Edit"} Profile`);
-          } else if (event === "before-hide") {
-          }
+        handler: function(owner, event, isInsert, selItemNo, selItemText) {
+          owner.onModifyDefault(owner, event, isInsert, selItemNo, selItemText);
         }
       });
       return;
+    }
+    
+    dlg.onModifyDefault(isInsert, jqPopup, selItemNo, selItemText, event);
+    
+    if (event === "before-show") {
+      $("#user-edit-title").text(`${isInsert ? "Add" : "Edit"} Profile`);
+    } else if (event === "before-hide") {
+      $("#footer").text($("#user-edit-value").val().toHtml());
     }
   }
 
