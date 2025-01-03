@@ -6,7 +6,7 @@
 <html>
 <head>
   <meta charset="UTF-8">
-  <title>Quoteir</title>
+  <title>QuoteIR</title>
   <link rel="manifest" href="./manifest.json?v=0.1.0" crossorigin="use-credentials">
   <link rel="shortcut icon" type="image/x-icon" href="ux/images/quoteir.svg?v=0.1.0">
   <link rel="stylesheet" href="../lib/import/styles/acolorpicker-5.3.2.min.css">
@@ -29,8 +29,10 @@
   <script src="../lib/ux/scripts/listedit.js?v=0.1.0"></script>
   <script src="../lib/ux/scripts/msgbox.js?v=0.1.0"></script>
   <script src="../lib/ux/scripts/spinner.js?v=0.1.0"></script>
+  <script src="dl/alignment.js?v=0.1.0"></script>
   <script src="dl/data.js?v=0.1.0"></script>
-  <script src="dl/look.js?v=0.1.0"></script>
+  <script src="dl/look_back.js?v=0.1.0"></script>
+  <script src="dl/look_text.js?v=0.1.0"></script>
   <script src="dl/user.js?v=0.1.0"></script>
   <script src="ux/scripts/core.js?v=0.1.0"></script>
   <script src="ux/scripts/main.js?v=0.1.0"></script>
@@ -65,6 +67,7 @@
     <div class="main-row max">
       <div id="action-no" class="main-col btn"></div>
       <div id="quote" class="main-col quote">
+        <div id="header" class="main-col quote header"><p></p></div>
         <div id="phrase" class="main-col quote phrase"><p></p></div>
         <div id="footer" class="main-col quote footer"></div>
       </div>
@@ -75,7 +78,7 @@
         <span id="menu-exch" onclick="main.onClickExchange();">Exchange</span>
       </div>
       <div id="main-edit" class="main-col info max">
-        <span id="menu-edit" onclick="main.onClickEdit();">Edit</span>
+        <span id="menu-edit" onclick="main.onClickEdit();">Edit Phrase</span>
       </div>
       <div id="main-size" class="main-col info right">
         <span id="menu-size"></span> 
@@ -126,10 +129,11 @@
         <div class="ui-dialog-icon close"></div>
       </div>
       <div class="ui-dialog-client pref user-edit">
-          <div id="pref-user-edit-name"></div>
-      </div>
-      <div id="user-edit-color" acp-color="#f6ddcc" acp-show-alpha acp-show-hsl="no"
+        <input class="ui-listedit-modify" type="text">
+        <div id="user-edit-color" acp-color="#f6ddcc" acp-show-alpha acp-show-hsl="no"
            acp-palette="PALETTE_MATERIAL_CHROME" acp-palette-editable="no">
+           &emsp;
+        </div>
       </div>
     </div>
   </div>
@@ -139,7 +143,7 @@
   <div id="help" style="display: none;"">
     <div class="ui-dialog-content help">
       <div class="ui-dialog-caption help">
-        <span><strong>Quoteir</strong></span>
+        <span><strong>QuoteIR</strong></span>
         <div id="copyright">&nbsp;&copy;&nbsp;2024&nbsp;</div>
 				<a id="help-link" target="_blank" href="https://aiurovet.com/">Alexander Iurovetski</a>
         <div class="ui-dialog-filler"></div>
@@ -148,11 +152,10 @@
       <div class="ui-dialog-client help">
         <h4 id="help-version"><span id="version">Version 0.1.0</span><span class="ui-dialog-filler"></span><span id="help-print" href="#" onclick="main.onClickHelpPrint($(this).parent().parent());">&nbsp;</span></h4>
         <div class="para-help">
-          This web application allows you to create quotes as visually attractive images and save those in
-          JPEG, PNG or SVG format.
+          <em>QuoteIR</em>, which stands for <em>Quote Image Renderer</em>, allows you to create quotes as visually attractive images in JPEG, PNG or SVG format.
         </div>
         <div class="para-help">
-          The application neither collects private information, nor uses cookies, and doesn't even make external
+          This web application neither collects private information, nor uses cookies, and doesn't even make external
           calls. It  just uses the browser's local storage to save the preferences. Please note: this means that
           clearing the browser cache will discard the application's preferences too. Unfortunately, this will
           happen even if is installed as an app.
@@ -169,14 +172,14 @@
         </div>
         <h4 id="help-install">How to Install</h4>
         <div class="para-help">
-          You can use <em>Quoteir</em> in a browser as is without any installation. However, it can be installed
+          You can use <em>QuoteIR</em> in a browser as is without any installation. However, it can be installed
           on most  devices via browser. This will give the native app experience and the ability to run offline when
           the internet connection is intermittent or unavailable. Please note that not all browsers are capable of
           web app installation. On handheld devices, ideally, do that with <em>Google Chrome</em> or <em>Microsoft
           Edge</em> on non-Apple devices, and with <em>Safari</em> on Apple devices. You should find and tap <em>Add
           to Home screen</em> menu item (or similar), then follow the prompts. On laptops and desktops, an icon with
           a monitor and an arrow might show up at the end of the address bar. When it is hovered with the mouse
-          cursor, a tooltip will pop: <em>Install Quoteir</em>. Tap or click that icon and follow the prompts.
+          cursor, a tooltip will pop: <em>Install QuoteIR</em>. Tap or click that icon and follow the prompts.
         </div>
         <h4 id="help-use">How to Use</h4>
         <div class="para-help">

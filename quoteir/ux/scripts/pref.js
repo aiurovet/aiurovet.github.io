@@ -58,14 +58,16 @@ class Pref {
         } else {
           items[itemNo] = new User(value);
         }
+      },
+      editorHandler: function(listedit, event) {
+
       }
     });
 
     this.onClick("#pref-user", function (event) {
       if (event === "before-hide") {
         beforeHide(jqControl);
-      }
-      else if (event === "after-hide") {
+      } else if (event === "after-hide") {
         jqControl.empty();
       }
     });

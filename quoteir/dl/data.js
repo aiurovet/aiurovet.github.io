@@ -13,11 +13,23 @@ class Data {
   // Constants
   //
   static appName = "quoteir";
+  static defaultFileFormat = Data.fileFormatPng;
   static keyPref = Data.appName;
   static maxUserCount = 20;
   static version = "0.1.0";
 
   //////////////////////////////////////////////////////////////////////////////
+
+  static fileFormatJpeg = "jpeg";
+  static fileFormatJpg = "jpg";
+  static fileFormatPng = "png";
+  static fileFormatSvg = "svg";
+
+  //////////////////////////////////////////////////////////////////////////////
+
+  // Graphics file format to save the quote to (user-insensitive)
+  //
+  fileFormat = Data.defaultFileFormat;
 
   // List of users with game stats
   //
@@ -32,12 +44,28 @@ class Data {
   // with its properties: i.e. constructing from a deserialized saved object
   //////////////////////////////////////////////////////////////////////////////
 
-  constructor(version, selectedUserNo, users) {
+  constructor(version, fileFormat, selectedUserNo, users) {
     if (version instanceof Object) {
       let from = version;
-      this.init(from.version, from.selectedUserNo, from.users);
+      this.init(from.version, from.fileFormat, from.selectedUserNo, from.users);
     } else {
-      this.init(version, selectedUserNo, users);
+      this.init(version, fileFormat, selectedUserNo, users);
+    }
+  }
+
+  //////////////////////////////////////////////////////////////////////////////
+
+  static adjustFileFormat(format) {
+    var formatLower = format?.toLowerCase() ?? "";
+
+    switch (formatLower) {
+      case Data.fileFormatJpeg:
+        return Data.fileFormatJpg;
+      case Data.fileFormatJpg:
+          case Data.fileFormatSvg:
+        return formatLower;
+      default:
+        return Data.fileFormatPng;
     }
   }
 
@@ -49,12 +77,6 @@ class Data {
     delete localStorage[Data.keyPref];
     this.init();
     this.save();
-  }
-
-  //////////////////////////////////////////////////////////////////////////////
-
-  getSelectedGame() {
-    return this.getSelectedUser()?.getSelectedGame();
   }
 
   //////////////////////////////////////////////////////////////////////////////
@@ -76,22 +98,11 @@ class Data {
   }
 
   //////////////////////////////////////////////////////////////////////////////
-  // Returns true if there are 2 or more users, or one user with non-default id
-  //////////////////////////////////////////////////////////////////////////////
-
-  hasValidUsers() {
-    let users = this.#users;
-    let count = users?.length ?? 0;
-
-    return (count > 1) || (count > 0 && users[0].userId != User.defaultUserId);
-  }
-
-  //////////////////////////////////////////////////////////////////////////////
   // If only one argument passed, and that is an object, initialize parameters
   // with its properties: i.e. constructing from a deserialized saved object
   //////////////////////////////////////////////////////////////////////////////
 
-  init(version, selectedUserNo, users) {
+  init(version, fileFormat, selectedUserNo, users) {
     // Initialize version
     //
     if ((version !== undefined) && (version !== null) && (version.length > 0)) {
@@ -116,6 +127,10 @@ class Data {
       }
     }
 
+    // Set file format to save images to
+    //
+    this.fileFormat = Data.adjustFileFormat(fileFormat);
+
     // Set selected user no to the saved one
     //
     this.setSelectedUserNo(selectedUserNo);
@@ -135,7 +150,7 @@ class Data {
 
     let pref = Json.fromString(prefContent);
     // Check the saved version here if needed
-    this.init(pref.version, pref.selectedUserNo, pref.users);
+    this.init(pref.version, pref.fileFormat, pref.selectedUserNo, pref.users);
 
     return this;
   }
@@ -155,12 +170,6 @@ class Data {
     //
     let pref = this.toSerializable();
     localStorage[Data.keyPref] = Json.toString(pref);
-  }
-
-  //////////////////////////////////////////////////////////////////////////////
-
-  setSelectedGameNo(value) {
-    this.getSelectedUser()?.setSelectedGameNo(value);
   }
 
   //////////////////////////////////////////////////////////////////////////////
@@ -193,6 +202,7 @@ class Data {
 
     return {
       version: Data.version,
+      fileFormat: this.fileFormat,
       selectedUserNo: this.#selectedUserNo,
       users: serUsers
     };

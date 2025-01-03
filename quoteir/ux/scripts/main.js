@@ -39,33 +39,11 @@ $(window).resize(function () {
 ////////////////////////////////////////////////////////////////////////////////
 
 class Main {
-  static defaultFileFormat = Main.fileFormatPng;
-  static fileFormatJpeg = "jpeg";
-  static fileFormatJpg = "jpg";
-  static fileFormatPng = "png";
-  static fileFormatSvg = "svg";
-
   core = new Core();
   data = (new Data()).load();
   pref = new Pref();
 
   constructor() {
-  }
-
-  //////////////////////////////////////////////////////////////////////////////
-
-  static adjustFileFormat(format) {
-    var formatLower = format?.toLowerCase() ?? "";
-
-    switch (formatLower) {
-      case Main.fileFormatJpeg:
-        return Main.fileFormatJpg;
-      case Main.fileFormatJpg:
-          case Main.fileFormatSvg:
-        return formatLower;
-      default:
-        return Main.fileFormatPng;
-    }
   }
 
   //////////////////////////////////////////////////////////////////////////////
@@ -189,14 +167,11 @@ class Main {
   //////////////////////////////////////////////////////////////////////////////
 
   onClickSave(fileFormat) {
-    fileFormat = Main.adjustFileFormat(fileFormat);
+    fileFormat = Data.adjustFileFormat(fileFormat);
 
     const proc =
-      fileFormat === Main.fileFormatJpg ? htmlToImage.toJpg :
-      fileFormat === Main.fileFormatSvg ? htmlToImage.toSvg : htmlToImage.toPng;
-    
-    // html2canvas(elem, options).then((canvas) => {   
-    //   const dataUrl = canvas.toDataURL();
+      fileFormat === Data.fileFormatJpg ? htmlToImage.toJpg :
+      fileFormat === Data.fileFormatSvg ? htmlToImage.toSvg : htmlToImage.toPng;
 
     proc($("#quote")[0]).then(function (dataUrl) {
       const dt = new Date().toLocalDate().getDateParts();
@@ -241,6 +216,11 @@ class Main {
  
     let jqFooter = $("#footer");
     let isVisible = user.userId && user.userId != User.defaultUserId;
+ 
+    this.core.setVisible(jqFooter, isVisible);
+    jqFooter.text(isVisible ? user.userId : null);
+
+    isVisible = user.header.;
  
     this.core.setVisible(jqFooter, isVisible);
     jqFooter.text(isVisible ? user.userId : null);

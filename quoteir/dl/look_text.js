@@ -9,62 +9,81 @@
 
 ////////////////////////////////////////////////////////////////////////////////
 
-class Look {
+class LookText {
   // Constants
   //
+  static defaultColor = "black";
   static defaultFontFamily = "sans-serif";
-  static defaultFontSizePt = 60; // in points
+  static defaultFontEffects = "";
+  static defaultFontSize = 60; // in points
+  static defaultPaddingHorizontal = 0.25; // in ems
+  static defaultPaddingVertical = 0; // in ems
+
+  // Basic font effects
+
+  static bold = "B";
+  static italic = "I";
+  static underline = "U";
 
   //////////////////////////////////////////////////////////////////////////////
 
   // Text color
   //
-  color = "black";
+  color = LookText.defaultColor;
 
   // The font configuration to display text
   //
   font = {
-    family: Look.defaultFontFamily,
-    isBold: false,
-    isItalic: false,
-    isUnderline: false,
-    sizePt: Look.defaultFontSizePt,
+    family: LookText.defaultFontFamily,
+    effects: LookText.defaultFontEffects,
+    size: LookText.defaultFontSize,
     sizeRatio: 1.0,
   };
 
   // Padding in the quote box in the selected font size units (ems)
   //
   padding = {
-    horizontal: 0.25,
-    vertical: 0.0
+    horizontal: LookText.defaultPaddingHorizontal,
+    vertical: LookText.defaultPaddingVertical
   };
+
+  // Text to display
+  //
+  text = "";
 
   //////////////////////////////////////////////////////////////////////////////
   // If only one argument passed, and that is an object, initialize parameters
   // with its properties: i.e. constructing from a deserialized saved object
   //////////////////////////////////////////////////////////////////////////////
 
-  constructor(color, font, padding) {
-    this.init(color, font, padding);
+  constructor(color, font, padding, text) {
+    this.init(color, font, padding, text);
   }
 
   //////////////////////////////////////////////////////////////////////////////
   // Initialise properties from the given parameters
   //////////////////////////////////////////////////////////////////////////////
 
-  init(color, font, padding) {
-    this.color = color;
+  init(color, font, padding, text) {
+    this.color = color ?? LookText.defaultColor;
 
-    if ((font !== undefined) && (font !== null)) {
-      this.font.family = font.family;
-      this.font.isBold = font.isBold;
-      this.font.isItalic = font.isItalic;
-      this.font.isUnderline = font.isUnderline;
-    }
+    this.font.family = font?.family ?? LookText.defaultFontFamily;
+    this.font.effects = font?.effects ?? LookText.defaultFontEffects;
+    this.font.size = font?.size ?? (font?.sizeRatio ? null : LookText.defaultFontSize);
+    this.font.sizeRatio = font?.sizeRatio ?? 1.0;
 
-    if ((padding !== undefined) && (padding !== null)) {
-      this.padding = padding;
-    }
+    this.padding.horizontal = padding?.horizontal ?? LookText.defaultPaddingHorizontal;
+    this.padding.vertical = padding?.vertical ?? LookText.defaultPaddingVertical;
+
+    this.text = text ?? "";
+  }
+
+  //////////////////////////////////////////////////////////////////////////////
+  // Check the text look is active (drawn on screen)
+  //////////////////////////////////////////////////////////////////////////////
+
+  isActive() {
+    return (this.font.size > 0) || (this.font.sizeRatio > 0) ? true : false;
   }
 
   //////////////////////////////////////////////////////////////////////////////
@@ -79,14 +98,15 @@ class Look {
       color: this.color,
       font: {
         family: font.family,
-        isBold: font.isBold,
-        isItalic: font.isItalic,
-        isUnderline: font.isUnderline
+        effects: font.effects,
+        size: font.size,
+        sizeRatio: font.sizeRatio,
       },
       padding: {
         horizontal: padding.horizontal,
         vertical: padding.vertical,
-      }
+      },
+      text: (this.text?.length ?? 0) <= 0 ? null : this.text,
     };
   }
 
@@ -95,8 +115,9 @@ class Look {
   //////////////////////////////////////////////////////////////////////////////
 
   toStyle(isFull) {
-    let font = this.font;
-    let padding = this.padding;
+    const font = this.font;
+    const effects = this.font?.effects ?? LookText.defaultFontEffects;
+    const padding = this.padding;
     let result = "";
 
     if (this.color) {
@@ -105,17 +126,17 @@ class Look {
     if (font?.family) {
       result += `font-family: ${font.family};`;
     }
-    if (font?.isBold) {
+    if (effects.contains(LookText.bold)) {
       result += `font-weight: bold;`;
     }
-    if (font?.isItalic) {
+    if (effects.contains(LookText.italic)) {
       result += `font-style: italic;`;
     }
-    if (font?.isUnderline) {
+    if (effects.contains(LookText.underline)) {
       result += `text-decoration: underline;`;
     }
-    if (font?.sizePt) {
-      result += `font-size: ${font.sizePt}pt;`;
+    if (font?.size) {
+      result += `font-size: ${font.size}pt;`;
     } else if (font.sizeRatio) {
       result += `font-size: ${font.sizeRatio}em;`;
     }

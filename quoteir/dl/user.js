@@ -12,14 +12,9 @@
 class User {
   // Constants
   //
-  static defaultFileFormat = "png";
+  static defaultFontSizeRatio = 0.60;
+  static defaultHeaderText = "";
   static defaultUserId = "No profile";
-
-  //////////////////////////////////////////////////////////////////////////////
-
-  // Graphics file format to save the quote to (global)
-  //
-  static fileFormat = User.defaultFileFormat;
 
   //////////////////////////////////////////////////////////////////////////////
 
@@ -27,25 +22,33 @@ class User {
   //
   userId = User.defaultUserId;
 
-  // Flag indicating the footer is used
+  // The background style
   //
-  footer = new Look();
+  background = new LookBack();
 
-  // Flag indicating the footer is used
+  // The footer style
   //
-  phrase = new Look();
+  footer = new LookText();
+
+  // The header style
+  //
+  header = new LookText();
+
+  // The phrase style
+  //
+  phrase = new LookText();
 
   //////////////////////////////////////////////////////////////////////////////
   // If only one argument passed, and that is an object, initialize parameters
   // with its properties: i.e. constructing from a deserialized saved object
   //////////////////////////////////////////////////////////////////////////////
 
-  constructor(userId, phrase, footer) {
+  constructor(userId, background, header, phrase, footer) {
     if (userId instanceof Object) {
       let from = userId;
-      this.init(from.userId, from.phrase, from.footer)
+      this.init(from.userId, from.background, from.header, from.phrase, from.footer)
     } else {
-      this.init(userId, phrase, footer);
+      this.init(userId, background, header, phrase, footer);
     }
   }
 
@@ -53,10 +56,12 @@ class User {
   // Initialise properties from the given parameters
   //////////////////////////////////////////////////////////////////////////////
 
-  init(userId, phrase, footer) {
+  init(userId, background, header, phrase, footer) {
     this.userId = userId ?? User.defaultUserId;
-    this.phrase = phrase;
-    this.footer = footer;
+    this.background = background ?? new LookBack();
+    this.header = header ?? new LookText(null, {size: 0, sizeRatio: 0});
+    this.phrase = phrase ?? new LookText();
+    this.footer = footer ?? new LookText(null, {sizeRatio: User.defaultFontSizeRatio});
   }
 
   //////////////////////////////////////////////////////////////////////////////
@@ -66,6 +71,8 @@ class User {
   toSerializable() {
     return {
       userId: this.userId,
+      background: this.background?.toSerializable(),
+      header: this.header?.toSerializable(),
       phrase: this.phrase?.toSerializable(),
       footer: this.footer?.toSerializable(),
     };

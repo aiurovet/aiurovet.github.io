@@ -1,6 +1,6 @@
 {
-  "name": "Quoteir",
-  "short_name": "Quoteir",
+  "name": "QuoteIR",
+  "short_name": "QuoteIR",
   "description": "Convert your phrases to images",
   "scope": "/quoteir/",
   "start_url": ".",

@@ -41,6 +41,10 @@
 .ui-dialog-client.pref.user {
   overflow: auto;
 }
+.ui-dialog-client.pref.user-edit {
+  display: flex;
+  flex-direction: column;
+}
 .ui-dialog-content.pref {
   font-size: 32px;
 }
@@ -90,4 +94,8 @@ ul.rules > li {
   display: flex;
   flex-direction: row;
   margin-top: 0;
+}
+#user-edit-color {
+  background: var(--dialog-content-bg-color-1);
+  flex-grow: 1;
 }

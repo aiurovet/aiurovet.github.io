@@ -3,6 +3,14 @@
   All rights reserved under MIT license (see LICENSE file)
 */
 
+/* PARAMETERS */
+
+:root {
+  --quote-back-color: white;
+  --quote-main-color: rgb(0, 0, 0);
+  --quote-side-color: rgb(0, 0, 0, 0.75);
+}
+
 /* NODES */
 
 * {
@@ -68,8 +76,8 @@ body, html {
 }
 .main-col.quote {
   align-self: center;
-  background: rgb(246, 221, 204);
-  color: rgb(110, 44, 0);
+  background: var(--quote-back-color);
+  color: var(--quote-main-color);
   display: block;
   font-family: sans-serif;
   font-size: 60pt;
@@ -81,17 +89,23 @@ body, html {
   max-height: 100%;
   padding: 0.25em 0;
 }
-.main-col.quote .footer, .main-col.quote.phrase {
+.main-col.quote.footer, .main-col.quote.header, .main-col.quote.phrase {
   align-self: center;
   display: block;
   font-size: inherit;
   width: 100%;
 }
-.main-col.quote.footer {
-  color: rgba(110, 44, 0, 0.75);
-  font-size: 60%;
+.main-col.quote.footer, .main-col.quote.header {
+  color: var(--quote-side-color);
   font-style: italic;
+  font-size: 0.60em;
+}
+.main-col.quote.footer {
   margin-top: 0.75em;
+}
+.main-col.quote.header {
+  height: 0;
+  margin-bottom: 0.75em;
 }
 .main-col.quote > p {
   align-self: center;
