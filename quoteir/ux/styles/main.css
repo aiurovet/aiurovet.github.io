@@ -6,9 +6,9 @@
 /* PARAMETERS */
 
 :root {
-  --quote-back-color: white;
+  --quote-back-color: rgb(224, 224, 224);
   --quote-main-color: rgb(0, 0, 0);
-  --quote-side-color: rgb(0, 0, 0, 0.75);
+  --quote-side-color: rgb(64, 64, 64);
 }
 
 /* NODES */

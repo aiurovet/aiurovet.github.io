@@ -31,7 +31,7 @@ class Data {
   //
   fileFormat = Data.defaultFileFormat;
 
-  // List of users with game stats
+  // List of users (profiles)
   //
   #users = [new User()];
 

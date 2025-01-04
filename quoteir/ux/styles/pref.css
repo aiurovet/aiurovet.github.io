@@ -95,6 +95,35 @@ ul.rules > li {
   flex-direction: row;
   margin-top: 0;
 }
+.user-edit-control {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+}
+.user-edit-control:not(.profile) {
+  margin-top: 0.5em;
+}
+.user-edit-control {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+}
+.user-edit-control > .ui-listedit-tool {
+  margin-left: 0.25em;
+}
+.user-edit-control.profile > .ui-listedit-tool {
+  background: none;
+  pointer-events: none;
+}
+.user-edit-input {
+  font-size: 1em;
+}
+.user-edit-label {
+  color: rgb(64, 64, 64);
+  display: inline-block;
+  width: 4em;
+  font-size: 0.75em;
+}
 #user-edit-color {
   background: var(--dialog-content-bg-color-1);
   flex-grow: 1;

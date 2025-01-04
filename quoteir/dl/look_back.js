@@ -12,17 +12,17 @@
 class LookBack {
   // Constants
   //
-  static defaultColor = "white";
+  static defaultColor = null;
 
   //////////////////////////////////////////////////////////////////////////////
 
   // Background color
   //
-  color = LookBack.defaultColor;
+  color = null;
 
   // Background image alignment (not implemented)
   //
-  imageAlignment = new Alignment(Alignment.stretch);
+  imageAlignment = null;
 
   // Background image as data URL (not implemented)
   //
@@ -48,8 +48,8 @@ class LookBack {
 
   init(color, imageAlignment, imageDataUrl) {
     this.color = color ?? LookBack.defaultColor;
-    this.imageAlignment = imageAlignment ?? new Alignment();
-    this.imageDataUrl = imageDataUrl ?? "";
+    this.imageAlignment = new Alignment(imageAlignment?.value ?? Alignment.stretch);
+    this.imageDataUrl = imageDataUrl ? imageDataUrl : null;
   }
 
   //////////////////////////////////////////////////////////////////////////////
@@ -65,23 +65,23 @@ class LookBack {
   }
 
   //////////////////////////////////////////////////////////////////////////////
-  // Convert this object into the style string
+  // Convert this object to the style associative array
   //////////////////////////////////////////////////////////////////////////////
 
   toStyle(isFull) {
-    let result = "";
+    let result = {};
 
     if (this.color) {
-      result += `background-color: ${this.color};`;
+      result["background-color"] = this.color;
     }
     if (this.imageDataUrl) {
-      result += `background-image: url('${this.imageDataUrl}');`;
+      result["background-image"] = "url(" + this.imageDataUrl + ")";
     }
     if (this.imageAlignment) {
       result += this.imageAlignment.toBackStyle(isFull);
     }
 
-    return isFull ? `style="${result}"` : result;
+    return result;
   }
 
   //////////////////////////////////////////////////////////////////////////////

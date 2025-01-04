@@ -14,13 +14,14 @@ class Alignment {
   //
   static bottom = "B";
   static center = "C";
+  static justify = "J";
   static left = "L";
   static middle = "M";
   static right = "R";
   static stretch = "S";
   static top = "T";
 
-  static defaultValue = "";
+  static defaultValue = Alignment.center + Alignment.middle;
 
   //////////////////////////////////////////////////////////////////////////////
 
@@ -51,55 +52,65 @@ class Alignment {
   }
 
   //////////////////////////////////////////////////////////////////////////////
-  // Convert this object into the background style string
+  // Convert this object into the background style associative array
   //////////////////////////////////////////////////////////////////////////////
 
-  toBackStyle(isFull) {
-    let result = "";
+  toBackStyle() {
+    let result = {};
     const value = this.value;
+
+    // Presence check
 
     if ((value === undefined) || (value === null) || (value.length <= 0)) {
       return result;
     }
 
-    if (value.contains(Alignment.stretch)) {
-      result += `background-size: contain;`;
+    if (value.contains(Alignment.justify) || value.contains(Alignment.stretch)) {
+      result["background-size"] = "contain";
     } else {
-      result += "background-position:" +
+      result["background-position"] = (
         (value.contains(Alignment.bottom) ? " bottom" : "") +
         (value.contains(Alignment.center) ? " center" : "") +
         (value.contains(Alignment.left) ? " left" : "") +
         (value.contains(Alignment.middle) ? " middle" : "") +
         (value.contains(Alignment.right) ? " right" : "") +
-        (value.contains(Alignment.top) ? " top" : "");
-  }
+        (value.contains(Alignment.top) ? " top" : "")
+      ).substring(1);
+    }
 
-    return isFull ? `style="${result}"` : result;
+    return result;
   }
 
   //////////////////////////////////////////////////////////////////////////////
   // Convert this object into the background style string
   //////////////////////////////////////////////////////////////////////////////
 
-  toTextStyle(isFull) {
+  toTextStyle() {
     const value = this.value;
-    let result = "";
+    const result = {};
 
-    if ((value === undefined) || (value === null) || (value.length <= 0) || value.contains(Alignment.stretch)) {
+    // Presence check
+
+    if ((value === undefined) || (value === null) || (value.length <= 0)) {
       return result;
     }
 
-    if (value.contains(Alignment.left)) {
-      result += "text-align: left;";
-    } else if (value.contains(Alignment.right)) {
-      result += "text-align: right;";
-    } else if (value.contains(Alignment.top)) {
-      result += "vertical-align: top;";
-    } else if (value.contains(Alignment.bottom)) {
-      result += "vertical-align: bottom;";
-    }
+    // Horizontal alignment
 
-    return isFull ? `style="${result}"` : result;
+    result["text-align"] =
+      (value.contains(Alignment.center) ? "center" : "") +
+      (value.contains(Alignment.justify) || value.contains(Alignment.stretch) ? "justify" : "") +
+      (value.contains(Alignment.left) ? "left" : "") +
+      (value.contains(Alignment.left) ? "right" : "");
+
+    // Vertical alignment
+
+    result["vertical-align"] =
+      (value.contains(Alignment.bottom) ? "bottom" : "") +
+      (value.contains(Alignment.middle) ? "middle" : "") +
+      (value.contains(Alignment.top) ? "top" : "");
+
+    return result;
   }
 
   //////////////////////////////////////////////////////////////////////////////

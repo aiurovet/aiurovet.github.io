@@ -187,43 +187,57 @@ class Main {
   //////////////////////////////////////////////////////////////////////////////
 
   onClickUser() {
-    let users = this.data.getUsers();
+    const users = this.data.getUsers();
 
     if (!users || !users.length) {
       return;
     }
 
-    var that = this;
+    const that = this;
+    const userNo = this.data.getSelectedUserNo();
 
-    this.pref.onClickUser(
-      users, this.data.getSelectedUserNo(), Data.maxUserCount, function(jqList) {
-        that.data.setSelectedUserNo(jqList.selectedItemNo);
-        that.data.save();
-        that.setUser();
-      });
+    this.pref.onClickUser(users, userNo, Data.maxUserCount, function(jqList) {
+      that.data.setSelectedUserNo(jqList.selectedItemNo);
+      that.data.save();
+      that.setUser();
+    });
   }
 
   //////////////////////////////////////////////////////////////////////////////
 
   setUser() {
-    let user = this.data.getSelectedUser();
+    const user = this.data.getSelectedUser();
 
     if (!user) {
       return;
     }
 
-    //$("#user").text(user.userId);
+    let jqElem = $("#header");
+    let look = user.header;
+    let text = look.text;
  
-    let jqFooter = $("#footer");
-    let isVisible = user.userId && user.userId != User.defaultUserId;
- 
-    this.core.setVisible(jqFooter, isVisible);
-    jqFooter.text(isVisible ? user.userId : null);
+    jqElem.css(look.toStyle());
+    this.core.setVisible(jqElem, text ? true : false);
+    jqElem.text(text);
 
-    isVisible = user.header.;
+    jqElem = $("#phrase");
+    look = user.phrase;
+    text = look.text;
  
-    this.core.setVisible(jqFooter, isVisible);
-    jqFooter.text(isVisible ? user.userId : null);
+    let style = look.toStyle();
+    jqElem.parent().css("font-size", style["font-size"]);
+
+    style["font-size"] = "1em";
+    jqElem.css(style);
+    jqElem.text(text);
+
+    jqElem = $("#footer");
+    look = user.footer;
+    text = look.text;
+ 
+    jqElem.css(look.toStyle());
+    this.core.setVisible(jqElem, text ? true : false);
+    jqElem.text(text);
   }
 
   //////////////////////////////////////////////////////////////////////////////

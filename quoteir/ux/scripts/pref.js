@@ -14,9 +14,10 @@ class Pref {
   //////////////////////////////////////////////////////////////////////////////
 
   onClick(id, handler) {
-    let dialogId = `dialog-${id.replace("#", "")}`;
+    const dialogId = `dialog-${id.replace("#", "")}`;
+    const jqElem = createEmptyDialog(dialogId);
 
-    createEmptyDialog(dialogId).dialog({
+    jqElem.dialog({
       content: $(id),
       handler: handler
     });
@@ -54,14 +55,14 @@ class Pref {
         }
 
         if (items[itemNo]) {
-          items[itemNo].userId = value;
+          items[itemNo].setUserId(value);
         } else {
           items[itemNo] = new User(value);
         }
       },
-      editorHandler: function(listedit, event) {
+      editorHandler: null /*function(listedit, event) {
 
-      }
+      }*/
     });
 
     this.onClick("#pref-user", function (event) {

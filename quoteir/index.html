@@ -129,11 +129,30 @@
         <div class="ui-dialog-icon close"></div>
       </div>
       <div class="ui-dialog-client pref user-edit">
-        <input class="ui-listedit-modify" type="text">
-        <div id="user-edit-color" acp-color="#f6ddcc" acp-show-alpha acp-show-hsl="no"
+        <div class="user-edit-control profile">
+          <div class="user-edit-label profile">Profile:</div>
+          <input class="ui-listedit-modify" type="text" style="margin-top: 0;">
+          <div id="user-edit-modify-profile" class="ui-listedit-tool modify"></div>
+        </div>    
+        <div class="user-edit-control">
+          <div class="user-edit-label">Header:</div>
+          <input id="user-edit-header" class="user-edit-input" type="text">
+          <div id="user-edit-modify-header" class="ui-listedit-tool modify"></div>
+        </div>
+        <div class="user-edit-control">
+          <div class="user-edit-label">Phrase:</div>
+          <input id="user-edit-phrase" class="user-edit-input" type="text">
+          <div id="user-edit-modify-phrase" class="ui-listedit-tool modify"></div>
+        </div>
+        <div class="user-edit-control">
+          <div class="user-edit-label">Footer:</div>
+          <input id="user-edit-footer" class="user-edit-input" type="text">
+          <div id="user-edit-modify-footer" class="ui-listedit-tool modify"></div>
+        </div>
+        <!-- <div id="user-edit-color" acp-color="#f6ddcc" acp-show-alpha acp-show-hsl="no"
            acp-palette="PALETTE_MATERIAL_CHROME" acp-palette-editable="no">
            &emsp;
-        </div>
+        </div> -->
       </div>
     </div>
   </div>
@@ -152,7 +171,7 @@
       <div class="ui-dialog-client help">
         <h4 id="help-version"><span id="version">Version 0.1.0</span><span class="ui-dialog-filler"></span><span id="help-print" href="#" onclick="main.onClickHelpPrint($(this).parent().parent());">&nbsp;</span></h4>
         <div class="para-help">
-          <em>QuoteIR</em>, which stands for <em>Quote Image Renderer</em>, allows you to create quotes as visually attractive images in JPEG, PNG or SVG format.
+          <em>QuoteIR</em>, or <em>Quote Image Renderer</em>, allows you to create quotes as visually attractive images in JPEG, PNG or SVG format.
         </div>
         <div class="para-help">
           This web application neither collects private information, nor uses cookies, and doesn't even make external

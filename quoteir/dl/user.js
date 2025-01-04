@@ -13,30 +13,32 @@ class User {
   // Constants
   //
   static defaultFontSizeRatio = 0.60;
+  static defaultFooterText = "Author";
   static defaultHeaderText = "";
-  static defaultUserId = "No profile";
+  static defaultPhraseText = "Insert your phrase here";
+  static defaultUserId = "Default";
 
   //////////////////////////////////////////////////////////////////////////////
 
   // User id (unique free text)
   //
-  userId = User.defaultUserId;
+  userId = null;
 
   // The background style
   //
-  background = new LookBack();
+  background = null;
 
   // The footer style
   //
-  footer = new LookText();
+  footer = null;
 
   // The header style
   //
-  header = new LookText();
+  header = null;
 
   // The phrase style
   //
-  phrase = new LookText();
+  phrase = null;
 
   //////////////////////////////////////////////////////////////////////////////
   // If only one argument passed, and that is an object, initialize parameters
@@ -58,10 +60,39 @@ class User {
 
   init(userId, background, header, phrase, footer) {
     this.userId = userId ?? User.defaultUserId;
-    this.background = background ?? new LookBack();
-    this.header = header ?? new LookText(null, {size: 0, sizeRatio: 0});
-    this.phrase = phrase ?? new LookText();
-    this.footer = footer ?? new LookText(null, {sizeRatio: User.defaultFontSizeRatio});
+    this.background = new LookBack(background);
+
+    this.header = header
+      ? new LookText(header)
+      : new LookText(null, {size: 0, sizeRatio: 0});
+
+    this.phrase = new LookText(phrase); 
+    this.phrase.text ||= User.defaultPhraseText;
+
+    this.footer = footer
+      ? new LookText(footer)
+      : new LookText(null, {sizeRatio: User.defaultFontSizeRatio}, null, this.userId);
+
+    let text = this.footer.text;
+
+    if (!text || (text === User.defaultUserId)) {
+      text = User.defaultFooterText;
+    }
+
+    if ((text === User.defaultFooterText) && userId && (userId != User.defaultUserId)) {
+      text = userId;
+    }
+
+    this.footer.text = text;
+  }
+
+  //////////////////////////////////////////////////////////////////////////////
+  // Assigne new user id
+  //////////////////////////////////////////////////////////////////////////////
+
+  setUserId(value) {
+    this.userId = value ?? User.defaultUserId;
+    this.footer.text = value && (value !== User.defaultUserId) ? value : "";
   }
 
   //////////////////////////////////////////////////////////////////////////////
