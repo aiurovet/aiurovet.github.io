@@ -41,7 +41,7 @@
 .ui-dialog-client.pref.user {
   overflow: auto;
 }
-.ui-dialog-client.pref.look-picker, .ui-dialog-client.pref.user-edit {
+.ui-dialog-client.pref.edit-quote, .ui-dialog-client.pref.look-picker, .ui-dialog-client.pref.user-edit {
   display: flex;
   flex-direction: column;
 }
@@ -76,6 +76,9 @@ ul.rules > li {
 
 /* ELEMENTS */
 
+#edit-phrase {
+  margin-top: 0.5em;
+}
 #help-link {
   color: var(--dialog-caption-ln-color);
   margin: 0;
@@ -95,11 +98,16 @@ ul.rules > li {
   flex-direction: row;
   margin-top: 0;
 }
-#look-picker-font {
+#look-picker-align, #look-picker-font {
   font-size: 1em;
-  width: 9em;
+  width: 11em;
 }
-.user-edit-control {
+.edit-control, .user-edit-control {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+}
+.edit-control, .user-edit-control {
   display: flex;
   align-items: center;
   flex-direction: row;
@@ -107,15 +115,10 @@ ul.rules > li {
 .user-edit-control:not(.profile) {
   margin-top: 0.5em;
 }
-.user-edit-control {
-  display: flex;
-  align-items: center;
-  flex-direction: row;
-}
 .user-edit-control > .ui-listedit-tool {
   margin-left: 0.25em;
 }
-.user-edit-input {
+.edit-input, .user-edit-input {
   font-size: 1em;
 }
 .user-edit-label {
@@ -123,6 +126,15 @@ ul.rules > li {
   display: inline-block;
   width: 4em;
   font-size: 0.75em;
+}
+.user-edit-label {
+  color: rgb(64, 64, 64);
+  display: inline-block;
+  width: 4em;
+  font-size: 0.75em;
+}
+#edit-header {
+  margin-right: 4em;
 }
 #user-edit-color {
   background: var(--dialog-content-bg-color-1);

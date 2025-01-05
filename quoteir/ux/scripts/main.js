@@ -83,20 +83,28 @@ class Main {
   //////////////////////////////////////////////////////////////////////////////
 
   onClickEdit() {
+    const user = this.data.getSelectedUser();
+
+    if (!user) {
+      return;
+    }
+
     const jqPhrase = $("#phrase");
     const that = this;
 
-    that.pref.onClick("#edit-phrase", function (event) {
-      const jqEdit = $("#edit-phrase-value");
+    that.pref.onClick("#edit-quote", function (event) {
+      const jqEditPhrase = $("#edit-phrase");
 
       if (event === "before-show") {
-        jqEdit.text(jqPhrase.text());
-      }
-      else if (event === "after-show") {
-        jqEdit.focus();
-      }
-      else if (event === "before-hide") {
-        var content = jqEdit.val();
+        that.#applyEditElem($("#edit-header"), user.header);
+        that.#applyEditElem($("#edit-footer"), user.footer);
+        jqEditPhrase.prop("placeholder", jqPhrase.text());
+      } else if (event === "before-hide") {
+        that.#acquireEditElem($("#edit-header"), user.header);
+        that.#acquireEditElem($("#edit-footer"), user.footer);
+        that.data.save();
+
+        var content = jqEditPhrase.val();
 
         if (!content.hasMarkup()) {
           content = `<p>${content.toHtml().replaceAll("<br>", "</p><p>")}</p>`;
@@ -238,6 +246,27 @@ class Main {
     jqElem.css(look.toStyle());
     this.core.setVisible(jqElem, text ? true : false);
     jqElem.text(text);
+  }
+
+  //////////////////////////////////////////////////////////////////////////////
+
+  #acquireEditElem(jqEdit, look) {
+    const text = look.text;
+    const hasEdit = text ? true : false;
+
+    if (hasEdit) {
+      look.text = jqEdit.val();
+    }
+  }
+
+  //////////////////////////////////////////////////////////////////////////////
+
+  #applyEditElem(jqEdit, look) {
+    const text = look.text;
+    const hasEdit = text ? true : false;
+
+    //this.core.setVisible(jqEdit, hasEdit);
+    jqEdit.val(text);
   }
 
   //////////////////////////////////////////////////////////////////////////////

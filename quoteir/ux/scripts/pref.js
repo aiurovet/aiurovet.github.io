@@ -114,7 +114,13 @@ class Pref {
     let fontPicker = lookText ? $("#look-picker-font") : null;
 
     if (fontPicker) {
-      fontPicker.fontPicker({value: lookText.font.family});
+      fontPicker.selectFont({value: lookText.font.family});
+    }
+
+    let alignPicker = lookText ? $("#look-picker-align") : null;
+
+    if (alignPicker) {
+      alignPicker.selectAlign({isForImage: false, value: lookText.alignment.value});
     }
 
     let colorPicker = AColorPicker.createPicker("#look-picker-color", {color: oldColor});

@@ -139,7 +139,7 @@ body, html {
   color: var(--dialog-caption-fg-color-1);
   font-weight: bold;
 }
-#edit-phrase-value {
+#edit-phrase {
   font-family: inherit;
   font-size: inherit;
   height: 100%;

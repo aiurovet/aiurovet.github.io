@@ -64,14 +64,14 @@ class User {
 
     this.header = header
       ? new LookText(header)
-      : new LookText(null, {size: 0, sizeRatio: 0});
+      : new LookText(null, null, {size: 0, sizeRatio: 0});
 
     this.phrase = new LookText(phrase); 
     this.phrase.text ||= User.defaultPhraseText;
 
     this.footer = footer
       ? new LookText(footer)
-      : new LookText(null, {sizeRatio: User.defaultFontSizeRatio}, null, this.userId);
+      : new LookText(null, null, {sizeRatio: User.defaultFontSizeRatio}, null, this.userId);
 
     let text = this.footer.text;
 
