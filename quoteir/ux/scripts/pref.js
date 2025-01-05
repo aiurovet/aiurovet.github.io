@@ -113,23 +113,19 @@ class Pref {
 
     colorPicker.on("change", (picker, color) => {
       const rgba = AColorPicker.parseColorToRgba(color);
-      const alpha = rgba[3];  
-      const back = (1 - alpha) * 255;
-      const r = Math.round(back + alpha * rgba[0]);
-      const g = Math.round(back + alpha * rgba[1]);
-      const b = Math.round(back + alpha * rgba[2]);
-
-      color = `rgb(${r},${g},${b})`;
+      const a = rgba[3];  
+      const x = (1 - a) * 255;
+      const rgb = `rgb(${Math.round(x + a * rgba[0])},${Math.round(x + a * rgba[1])},${Math.round(x + a * rgba[2])})`;
       const user = that.selectedUser;
     
       if (isBack) {
-        user.background.color = color;
+        user.background.color = rgb;
       } else if (isFooter) {
-        user.footer.color = color;
+        user.footer.color = rgb;
       } else if (isHeader) {
-        user.header.color = color;
+        user.header.color = rgb;
       } else if (isPhrase) {
-        user.phrase.color = color;
+        user.phrase.color = rgb;
       }
     });
 
