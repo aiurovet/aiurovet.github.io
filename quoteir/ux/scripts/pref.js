@@ -8,7 +8,13 @@
 ////////////////////////////////////////////////////////////////////////////////
 
 class Pref {
-  constructor() {
+  core = null;
+  selectedUser = null;
+
+  //////////////////////////////////////////////////////////////////////////////
+
+  constructor(core) {
+    this.core = core;
   }
 
   //////////////////////////////////////////////////////////////////////////////
@@ -26,6 +32,7 @@ class Pref {
   //////////////////////////////////////////////////////////////////////////////
 
   onClickUser(users, selectedUserNo, maxUserCount, beforeHide) {
+    this.selectedUser = users[selectedUserNo];
     const that = this;
 
     var jqControl = $("#pref-user-value").listedit({
@@ -60,9 +67,21 @@ class Pref {
           items[itemNo] = new User(value);
         }
       },
-      editorHandler: null /*function(listedit, event) {
+      editorHandler: function(listedit, event) {
+        const user = listedit.selectedItem;
+        that.selectedUser = user;
 
-      }*/
+        if (event === "before-show") {
+          $("#user-edit").css("background", user.background.color);
+          $("#user-edit-header").val(user.header.text);
+          $("#user-edit-phrase").val(user.phrase.text);
+          $("#user-edit-footer").val(user.footer.text);
+        } else if (event === "before-hide") {
+          user.header.text = $("#user-edit-header").val();
+          user.phrase.text = $("#user-edit-phrase").val();
+          user.footer.text = $("#user-edit-footer").val();
+        } 
+      }
     });
 
     this.onClick("#pref-user", function (event) {
@@ -70,6 +89,56 @@ class Pref {
         beforeHide(jqControl);
       } else if (event === "after-hide") {
         jqControl.empty();
+      }
+    });
+  }
+
+  //////////////////////////////////////////////////////////////////////////////
+
+  onClickLookPicker(jqElem, title) {
+    const id = jqElem[0].id;
+
+    const isBack = (id === "user-edit-modify-back");
+    const isFooter = (id === "user-edit-modify-footer");
+    const isHeader = (id === "user-edit-modify-header");
+    const isPhrase = (id === "user-edit-modify-phrase");
+
+    this.core.setVisible($("#look-picker-font").parent(), !isBack);
+
+    const jqColorFor = isBack ? $("#quote") : isFooter ? $("#footer") : isHeader ? $("#header") : isPhrase ? $("#phrase") : null;
+    const oldColor = jqColorFor.css("background-color");
+    const that = this;
+
+    let colorPicker = AColorPicker.createPicker("#look-picker-color", {color: oldColor});
+
+    colorPicker.on("change", (picker, color) => {
+      const rgba = AColorPicker.parseColorToRgba(color);
+      const alpha = rgba[3];  
+      const back = (1 - alpha) * 255;
+      const r = Math.round(back + alpha * rgba[0]);
+      const g = Math.round(back + alpha * rgba[1]);
+      const b = Math.round(back + alpha * rgba[2]);
+
+      color = `rgb(${r},${g},${b})`;
+      const user = that.selectedUser;
+    
+      if (isBack) {
+        user.background.color = color;
+      } else if (isFooter) {
+        user.footer.color = color;
+      } else if (isHeader) {
+        user.header.color = color;
+      } else if (isPhrase) {
+        user.phrase.color = color;
+      }
+    });
+
+    this.onClick("#pref-look-picker", function(event) {
+      if (event === "before-show") {
+        $(".ui-dialog-caption.pref.look-picker > .ui-dialog-caption-text").text (title);
+      } else if (event === "after-hide") {
+        colorPicker?.destroy();
+        colorPicker = null;
       }
     });
   }

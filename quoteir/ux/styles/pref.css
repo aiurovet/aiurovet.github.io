@@ -41,7 +41,7 @@
 .ui-dialog-client.pref.user {
   overflow: auto;
 }
-.ui-dialog-client.pref.user-edit {
+.ui-dialog-client.pref.look-picker, .ui-dialog-client.pref.user-edit {
   display: flex;
   flex-direction: column;
 }
@@ -110,10 +110,6 @@ ul.rules > li {
 }
 .user-edit-control > .ui-listedit-tool {
   margin-left: 0.25em;
-}
-.user-edit-control.profile > .ui-listedit-tool {
-  background: none;
-  pointer-events: none;
 }
 .user-edit-input {
   font-size: 1em;

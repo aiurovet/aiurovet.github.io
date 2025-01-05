@@ -12,7 +12,7 @@
 class LookBack {
   // Constants
   //
-  static defaultColor = null;
+  static defaultColor = "rgb(224, 224, 224)";
 
   //////////////////////////////////////////////////////////////////////////////
 

@@ -41,7 +41,7 @@ $(window).resize(function () {
 class Main {
   core = new Core();
   data = (new Data()).load();
-  pref = new Pref();
+  pref = new Pref(this.core);
 
   constructor() {
   }
@@ -220,14 +220,14 @@ class Main {
     this.core.setVisible(jqElem, text ? true : false);
     jqElem.text(text);
 
-    jqElem = $("#phrase");
+    jqElem = $("#quote");
     look = user.phrase;
     text = look.text;
- 
     let style = look.toStyle();
-    jqElem.parent().css("font-size", style["font-size"]);
+    jqElem.css({"background": user.background.color, "font-size": style["font-size"]});
 
     style["font-size"] = "1em";
+    jqElem = $("#phrase");
     jqElem.css(style);
     jqElem.text(text);
 
