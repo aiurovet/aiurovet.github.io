@@ -34,6 +34,7 @@ self.addEventListener("install", (event) => {
         "/lib/ux/images/close.svg?v=0.1.0",
         "/lib/ux/scripts/common.js?v=0.1.0",
         "/lib/ux/scripts/dialog.js?v=0.1.0",
+        "/lib/ux/scripts/fontpicker.js?v=0.1.0",
         "/lib/ux/scripts/listedit.js?v=0.1.0",
         "/lib/ux/scripts/msgbox.js?v=0.1.0",
         "/lib/ux/scripts/spinner.js?v=0.1.0",

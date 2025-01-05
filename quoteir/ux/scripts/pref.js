@@ -97,6 +97,7 @@ class Pref {
 
   onClickLookPicker(jqElem, title) {
     const id = jqElem[0].id;
+    const user = this.selectedUser;
 
     const isBack = (id === "user-edit-modify-back");
     const isFooter = (id === "user-edit-modify-footer");
@@ -106,8 +107,15 @@ class Pref {
     this.core.setVisible($("#look-picker-font").parent(), !isBack);
 
     const jqColorFor = isBack ? $("#quote") : isFooter ? $("#footer") : isHeader ? $("#header") : isPhrase ? $("#phrase") : null;
+    const lookText = isFooter ? user.footer : isHeader ? user.header : isPhrase ? user.phrase : null;
     const oldColor = jqColorFor.css("background-color");
     const that = this;
+
+    let fontPicker = lookText ? $("#look-picker-font") : null;
+
+    if (fontPicker) {
+      fontPicker.fontPicker({value: lookText.font.family});
+    }
 
     let colorPicker = AColorPicker.createPicker("#look-picker-color", {color: oldColor});
 
@@ -135,6 +143,8 @@ class Pref {
       } else if (event === "after-hide") {
         colorPicker?.destroy();
         colorPicker = null;
+        fontPicker?.empty();
+        fontPicker = null;
       }
     });
   }

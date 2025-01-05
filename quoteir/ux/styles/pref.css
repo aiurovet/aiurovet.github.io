@@ -95,6 +95,10 @@ ul.rules > li {
   flex-direction: row;
   margin-top: 0;
 }
+#look-picker-font {
+  font-size: 1em;
+  width: 9em;
+}
 .user-edit-control {
   display: flex;
   align-items: center;
