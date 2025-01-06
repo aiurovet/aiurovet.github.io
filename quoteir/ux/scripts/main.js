@@ -17,7 +17,7 @@ var main = null;
 // Application entry point
 ////////////////////////////////////////////////////////////////////////////////
 
-$(document).ready(() => {
+document.addEventListener("DOMContentLoaded", function() {
   // Initialize singletons
   //
   main ??= new Main();
@@ -26,14 +26,14 @@ $(document).ready(() => {
   //
   main.initSize();
   main.setUser();
-  main.onClickEdit();
+  main.onClickEditQuote();
 });
 
 ////////////////////////////////////////////////////////////////////////////////
 // Set the event handlers
 ////////////////////////////////////////////////////////////////////////////////
 
-$(window).resize(function () {
+$(window).on("resize", function () {
 });
 
 ////////////////////////////////////////////////////////////////////////////////
@@ -65,6 +65,28 @@ class Main {
 
   //////////////////////////////////////////////////////////////////////////////
 
+  onCheckEditQuoteFlag(jqCheck) {
+    const user = this.data.getSelectedUser();
+
+    if (!user) {
+      return;
+    }
+
+    const jqEdit = jqCheck.next();
+    const isChecked = jqCheck.prop("checked") ? true : false;
+
+    jqEdit.enable(isChecked);
+
+    if (isChecked) {
+      jqEdit.postFocus();
+    } else {
+      jqEdit.val(null);
+      $("#edit-phrase").postFocus();
+    }
+  }
+
+  //////////////////////////////////////////////////////////////////////////////
+
   onClickAny() {
     alert("TBA");
   }
@@ -82,7 +104,7 @@ class Main {
 
   //////////////////////////////////////////////////////////////////////////////
 
-  onClickEdit() {
+  onClickEditQuote() {
     const user = this.data.getSelectedUser();
 
     if (!user) {
@@ -98,10 +120,11 @@ class Main {
       if (event === "before-show") {
         that.#applyEditElem($("#edit-header"), user.header);
         that.#applyEditElem($("#edit-footer"), user.footer);
+        $(user.header.text ? "#edit-header" : "#edit-phrase").postFocus();
         jqEditPhrase.prop("placeholder", jqPhrase.text());
       } else if (event === "before-hide") {
-        that.#acquireEditElem($("#edit-header"), user.header);
-        that.#acquireEditElem($("#edit-footer"), user.footer);
+        that.#acquireEditElem($("#edit-header"), user, "header");
+        that.#acquireEditElem($("#edit-footer"), user, "footer");
         that.data.save();
 
         var content = jqEditPhrase.val();
@@ -213,8 +236,8 @@ class Main {
 
   //////////////////////////////////////////////////////////////////////////////
 
-  setUser() {
-    const user = this.data.getSelectedUser();
+  setUser(user) {
+    user ??= this.data.getSelectedUser();
 
     if (!user) {
       return;
@@ -225,7 +248,7 @@ class Main {
     let text = look.text;
  
     jqElem.css(look.toStyle());
-    this.core.setVisible(jqElem, text ? true : false);
+    jqElem.setVisible(text ? true : false);
     jqElem.text(text);
 
     jqElem = $("#quote");
@@ -244,19 +267,15 @@ class Main {
     text = look.text;
  
     jqElem.css(look.toStyle());
-    this.core.setVisible(jqElem, text ? true : false);
+    jqElem.setVisible(text ? true : false);
     jqElem.text(text);
   }
 
   //////////////////////////////////////////////////////////////////////////////
 
-  #acquireEditElem(jqEdit, look) {
-    const text = look.text;
-    const hasEdit = text ? true : false;
-
-    if (hasEdit) {
-      look.text = jqEdit.val();
-    }
+  #acquireEditElem(jqEdit, user, lookName) {
+    user[lookName].text = jqEdit.val();
+    this.setUser(user);
   }
 
   //////////////////////////////////////////////////////////////////////////////
@@ -264,8 +283,10 @@ class Main {
   #applyEditElem(jqEdit, look) {
     const text = look.text;
     const hasEdit = text ? true : false;
+    const jqCheck = jqEdit.prev();
 
-    //this.core.setVisible(jqEdit, hasEdit);
+    jqCheck.prop("checked", hasEdit)
+    jqEdit.enable(hasEdit);
     jqEdit.val(text);
   }
 

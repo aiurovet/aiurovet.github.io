@@ -80,7 +80,7 @@
         <span id="menu-exch" onclick="main.onClickExchange();">Exchange</span>
       </div>
       <div id="main-edit" class="main-col info max">
-        <span id="menu-edit" onclick="main.onClickEdit();">Edit Quote</span>
+        <span id="menu-edit" onclick="main.onClickEditQuote();">Edit Quote</span>
       </div>
       <div id="main-size" class="main-col info right">
         <span id="menu-size"></span> 
@@ -100,11 +100,15 @@
       </div>
       <div class="ui-dialog-client pref edit-quote">
         <div class="edit-control">
+          <input id="edit-header-flag" type="checkbox" onclick="main.onCheckEditQuoteFlag($(this));">
           <input id="edit-header" class="edit-input" type="text" placeholder="Header">
-          <input id="edit-footer" class="edit-input" type="text" placeholder="Footer">
         </div>
         <div class="edit-control">
           <textarea id="edit-phrase" cols="50" rows="6"></textarea>
+        </div>
+        <div class="edit-control">
+          <input id="edit-footer-flag" type="checkbox" onclick="main.onCheckEditQuoteFlag($(this));">
+          <input id="edit-footer" class="edit-input" type="text" placeholder="Footer">
         </div>
       </div>
     </div>

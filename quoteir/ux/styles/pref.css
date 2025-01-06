@@ -76,8 +76,23 @@ ul.rules > li {
 
 /* ELEMENTS */
 
-#edit-phrase {
+#edit-footer {
+  flex-grow: 1;
   margin-top: 0.5em;
+}
+#edit-footer-flag, #edit-header-flag {
+  min-width: 1.5em;
+  min-height: 1.5em;
+}
+#edit-footer-flag {
+  margin: 1em 1em 0 0;
+}
+#edit-header {
+  flex-grow: 1;
+  margin-bottom: 0.5em;
+}
+#edit-header-flag {
+  margin: 0 1em 1em 0;
 }
 #help-link {
   color: var(--dialog-caption-ln-color);
@@ -132,9 +147,6 @@ ul.rules > li {
   display: inline-block;
   width: 4em;
   font-size: 0.75em;
-}
-#edit-header {
-  margin-right: 4em;
 }
 #user-edit-color {
   background: var(--dialog-content-bg-color-1);

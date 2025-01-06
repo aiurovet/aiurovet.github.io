@@ -104,7 +104,7 @@ class Pref {
     const isHeader = (id === "user-edit-modify-header");
     const isPhrase = (id === "user-edit-modify-phrase");
 
-    this.core.setVisible($("#look-picker-font").parent(), !isBack);
+    $("#look-picker-font").parent().setVisible(!isBack);
 
     const jqColorFor = isBack ? $("#quote") : isFooter ? $("#footer") : isHeader ? $("#header") : isPhrase ? $("#phrase") : null;
     const lookText = isFooter ? user.footer : isHeader ? user.header : isPhrase ? user.phrase : null;
