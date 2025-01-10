@@ -119,13 +119,15 @@ class Main {
 
       if (event === "before-show") {
         that.#applyEditElem($("#edit-header"), user.header);
+        that.#applyEditElem($("#edit-phrase"), user.phrase);
         that.#applyEditElem($("#edit-footer"), user.footer);
         $(user.header.text ? "#edit-header" : "#edit-phrase").postFocus();
-        jqEditPhrase.prop("placeholder", jqPhrase.text());
       } else if (event === "before-hide") {
-        that.#acquireEditElem($("#edit-header"), user, "header");
-        that.#acquireEditElem($("#edit-footer"), user, "footer");
+        that.#acquireEditElem($("#edit-header"), user.header);
+        that.#acquireEditElem($("#edit-phrase"), user.phrase);
+        that.#acquireEditElem($("#edit-footer"), user.footer);
         that.data.save();
+        that.setUser(user);
 
         var content = jqEditPhrase.val();
 
@@ -273,9 +275,8 @@ class Main {
 
   //////////////////////////////////////////////////////////////////////////////
 
-  #acquireEditElem(jqEdit, user, lookName) {
-    user[lookName].text = jqEdit.val();
-    this.setUser(user);
+  #acquireEditElem(jqEdit, look) {
+    look.text = jqEdit.val();
   }
 
   //////////////////////////////////////////////////////////////////////////////

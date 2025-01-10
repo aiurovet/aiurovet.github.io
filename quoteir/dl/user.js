@@ -59,29 +59,29 @@ class User {
   //////////////////////////////////////////////////////////////////////////////
 
   init(userId, background, header, phrase, footer) {
-    this.userId = userId ?? User.defaultUserId;
+    const hasVividUserId = userId && (userId != User.defaultUserId);
+
+    this.userId = hasVividUserId ? userId : User.defaultUserId;
     this.background = new LookBack(background);
+
+    let text = header ? header.text : LookText.defaultHeaderText;
 
     this.header = header
       ? new LookText(header)
-      : new LookText(null, null, {size: 0, sizeRatio: 0});
+      : new LookText(null, null, {size: 0, sizeRatio: 0}, text ?? LookText.defaultHeaderText);
 
     this.phrase = new LookText(phrase); 
     this.phrase.text ||= User.defaultPhraseText;
 
+    text = !footer && (userId && (userId != User.defaultUserId) ? userId : text)
+      ? LookText.defaultFooterText
+      : null;
+
+    text = footer ? footer.text : hasVividUserId ? userId : LookText.defaultHeaderText;
+
     this.footer = footer
       ? new LookText(footer)
-      : new LookText(null, null, {sizeRatio: User.defaultFontSizeRatio}, null, this.userId);
-
-    let text = this.footer.text;
-
-    if (!text || (text === User.defaultUserId)) {
-      text = User.defaultFooterText;
-    }
-
-    if ((text === User.defaultFooterText) && userId && (userId != User.defaultUserId)) {
-      text = userId;
-    }
+      : new LookText(null, null, {sizeRatio: User.defaultFontSizeRatio}, text);
 
     this.footer.text = text;
   }
