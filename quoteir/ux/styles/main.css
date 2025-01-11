@@ -102,8 +102,7 @@ body, html {
   margin-top: 0.75em;
 }
 .main-col.quote.header {
-  height: 0;
-  margin-bottom: 0.75em;
+    margin-bottom: 0.60em;
 }
 .main-col.quote > p {
   align-self: center;

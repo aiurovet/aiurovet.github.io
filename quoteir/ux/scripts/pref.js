@@ -73,13 +73,11 @@ class Pref {
 
         if (event === "before-show") {
           $("#user-edit").css("background", user.background.color);
-          $("#user-edit-header").val(user.header.text);
-          $("#user-edit-phrase").val(user.phrase.text);
-          $("#user-edit-footer").val(user.footer.text);
-        } else if (event === "before-hide") {
-          user.header.text = $("#user-edit-header").val();
-          user.phrase.text = $("#user-edit-phrase").val();
-          user.footer.text = $("#user-edit-footer").val();
+          $("#user-edit-header").css("color", user.header.color).text(user.header.text);
+          $("#user-edit-phrase").css("color", user.phrase.color).text(user.phrase.text);
+          $("#user-edit-footer").css("color", user.footer.color).text(user.footer.text);
+        } else if (event === "after-show") {
+          $("#user-edit-footer, #user-edit-header, #user-edit-phrase").outerWidth($("#user-edit").outerWidth());
         } 
       }
     });
@@ -117,16 +115,20 @@ class Pref {
       fontPicker.selectFont({value: lookText.font.family});
     }
 
-    let alignPicker = lookText ? $("#look-picker-align") : null;
+    let alignPicker = $("#look-picker-align");
 
-    if (alignPicker) {
+    if (lookText) {
       alignPicker.selectAlign({isForImage: false, value: lookText.alignment.value});
+    } else {
+      alignPicker.parent().hide(); 
     }
 
-    let colorPicker = AColorPicker.createPicker("#look-picker-color", {color: oldColor});
+    let rgba = AColorPicker.parseColorToRgba(oldColor)
+    rgba[3] ||= 1;
+    let colorPicker = AColorPicker.createPicker("#look-picker-color", {color: rgba});
 
     colorPicker.on("change", (picker, color) => {
-      const rgba = AColorPicker.parseColorToRgba(color);
+      rgba = AColorPicker.parseColorToRgba(color);
       const a = rgba[3];  
       const x = (1 - a) * 255;
       const rgb = `rgb(${Math.round(x + a * rgba[0])},${Math.round(x + a * rgba[1])},${Math.round(x + a * rgba[2])})`;
@@ -134,12 +136,16 @@ class Pref {
     
       if (isBack) {
         user.background.color = rgb;
+        $("#user-edit").css("background-color", user.background.color);
       } else if (isFooter) {
-        user.footer.color = rgb;
+        user.footer.color = rgb;    
+        $("#user-edit-footer").css("color", user.footer.color);
       } else if (isHeader) {
         user.header.color = rgb;
+        $("#user-edit-header").css("color", user.header.color);
       } else if (isPhrase) {
         user.phrase.color = rgb;
+        $("#user-edit-phrase").css("color", user.phrase  .color);
       }
     });
 

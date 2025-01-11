@@ -142,24 +142,20 @@
       </div>
       <div id="user-edit" class="ui-dialog-client pref user-edit">
         <div class="user-edit-control profile">
-          <div class="user-edit-label profile">Profile:</div>
           <input class="ui-listedit-modify" type="text" style="margin-top: 0;">
-          <div id="user-edit-modify-back" class="ui-listedit-tool modify" onclick="main.pref.onClickLookPicker($(this), 'Background Style');"></div>
+          <div id="user-edit-modify-back" class="ui-listedit-tool style" onclick="main.pref.onClickLookPicker($(this), 'Background Style');"></div>
         </div>    
         <div class="user-edit-control">
-          <div class="user-edit-label">Header:</div>
-          <input id="user-edit-header" class="user-edit-input" type="text">
-          <div id="user-edit-modify-header" class="ui-listedit-tool modify" onclick="main.pref.onClickLookPicker($(this), 'Header Style');"></div>
+          <div id="user-edit-header" class="user-edit-text" type="text"></div>
+          <div id="user-edit-modify-header" class="ui-listedit-tool style" onclick="main.pref.onClickLookPicker($(this), 'Header Style');"></div>
         </div>
         <div class="user-edit-control">
-          <div class="user-edit-label">Phrase:</div>
-          <input id="user-edit-phrase" class="user-edit-input" type="text"> 
-          <div id="user-edit-modify-phrase" class="ui-listedit-tool modify" onclick="main.pref.onClickLookPicker($(this), 'Phrase Style');"></div>
+          <div id="user-edit-phrase" class="user-edit-text" type="text"></div>
+          <div id="user-edit-modify-phrase" class="ui-listedit-tool style" onclick="main.pref.onClickLookPicker($(this), 'Phrase Style');"></div>
         </div>
         <div class="user-edit-control">
-          <div class="user-edit-label">Footer:</div>
-          <input id="user-edit-footer" class="user-edit-input" type="text">
-          <div id="user-edit-modify-footer" class="ui-listedit-tool modify" onclick="main.pref.onClickLookPicker($(this), 'Footer Style');"></div>
+          <div id="user-edit-footer" class="user-edit-text" type="text"></div>
+          <div id="user-edit-modify-footer" class="ui-listedit-tool style" onclick="main.pref.onClickLookPicker($(this), 'Footer Style');"></div>
         </div>
       </div>
     </div>

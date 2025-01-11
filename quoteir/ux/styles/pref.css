@@ -54,6 +54,9 @@
 .ui-dialog-icon:not(.msgbox) {
   filter: invert(100%);
 }
+.ui-listedit-tool.style {
+  background-image: url(../../../lib/ux/images/brush.svg);
+}
 
 /* DIALOG: 2ND-LEVEL POPUPS */
 
@@ -133,7 +136,7 @@ ul.rules > li {
 .user-edit-control > .ui-listedit-tool {
   margin-left: 0.25em;
 }
-.edit-input, .user-edit-input {
+.edit-input, .user-edit-text {
   font-size: 1em;
 }
 .user-edit-label {
