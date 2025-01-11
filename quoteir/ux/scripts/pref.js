@@ -19,6 +19,16 @@ class Pref {
 
   //////////////////////////////////////////////////////////////////////////////
 
+  static colorArrayToString(array) {
+    return "#" +
+      array[0].toString(16).padStart(2, "0") +
+      array[1].toString(16).padStart(2, "0") +
+      array[2].toString(16).padStart(2, "0")
+    ;
+  }
+
+      //////////////////////////////////////////////////////////////////////////////
+
   onClick(id, handler) {
     const dialogId = `dialog-${id.replace("#", "")}`;
     const jqElem = createEmptyDialog(dialogId);
@@ -104,28 +114,32 @@ class Pref {
 
     $("#look-picker-font").parent().setVisible(!isBack);
 
-    const jqColorFor = isBack ? $("#quote") : isFooter ? $("#footer") : isHeader ? $("#header") : isPhrase ? $("#phrase") : null;
-    const lookText = isFooter ? user.footer : isHeader ? user.header : isPhrase ? user.phrase : null;
-    const oldColor = jqColorFor.css("background-color");
+    const jqColorFor = isBack ? $("#user-edit") : isFooter ? $("#user-edit-footer") : isHeader ? $("#user-edit-header") : isPhrase ? $("#user-edit-phrase") : null;
+    const look = isHeader ? user.header : isPhrase ? user.phrase : isFooter ? user.footer : null;
+    const lookText = look?.text;
+    const oldColor = jqColorFor.css(isBack ? "background-color" : "color");
     const that = this;
 
     let fontPicker = lookText ? $("#look-picker-font") : null;
 
     if (fontPicker) {
-      fontPicker.selectFont({value: lookText.font.family});
+      fontPicker.selectFont({value: look.font.family});
     }
 
     let alignPicker = $("#look-picker-align");
 
-    if (lookText) {
-      alignPicker.selectAlign({isForImage: false, value: lookText.alignment.value});
+    if (look) {
+      alignPicker.selectAlign({isForImage: false, value: look.alignment.value});
     } else {
       alignPicker.parent().hide(); 
     }
 
     let rgba = AColorPicker.parseColorToRgba(oldColor)
     rgba[3] ||= 1;
-    let colorPicker = AColorPicker.createPicker("#look-picker-color", {color: rgba});
+
+    let colorPicker = AColorPicker.createPicker(
+      "#look-picker-color",
+      {color: Pref.colorArrayToString(rgba)});
 
     colorPicker.on("change", (picker, color) => {
       rgba = AColorPicker.parseColorToRgba(color);
@@ -136,22 +150,28 @@ class Pref {
     
       if (isBack) {
         user.background.color = rgb;
-        $("#user-edit").css("background-color", user.background.color);
+        $(".edit-quote, #user-edit").css("background-color", user.background.color);
       } else if (isFooter) {
         user.footer.color = rgb;    
-        $("#user-edit-footer").css("color", user.footer.color);
+        $("#edit-footer, #user-edit-footer").css("color", user.footer.color);
       } else if (isHeader) {
         user.header.color = rgb;
-        $("#user-edit-header").css("color", user.header.color);
+        $("#edit-header, #user-edit-header").css("color", user.header.color);
       } else if (isPhrase) {
         user.phrase.color = rgb;
-        $("#user-edit-phrase").css("color", user.phrase  .color);
-      }
+        $("#edit-phrase, #user-edit-phrase").css("color", user.phrase.color);
+      } 
     });
 
     this.onClick("#pref-look-picker", function(event) {
       if (event === "before-show") {
-        $(".ui-dialog-caption.pref.look-picker > .ui-dialog-caption-text").text (title);
+        $(".ui-dialog-caption.pref.look-picker > .ui-dialog-caption-text").text(title)
+      } else if (event === "before-hide") {
+        if (lookText) {
+          look.font.family = $("#look-picker-font").val();
+          look.alignment = new Alignment($("#look-picker-align").val());
+          jqElem.prev().css("font-family", look.font.family);
+        }
       } else if (event === "after-hide") {
         colorPicker?.destroy();
         colorPicker = null;
@@ -159,33 +179,6 @@ class Pref {
         fontPicker = null;
       }
     });
-  }
-
-  //////////////////////////////////////////////////////////////////////////////
-
-  onModifyUser(owner, event, isInsert, selItemNo, selItemText) {
-    var dlg = null;
-
-    if (!event) {
-      AColorPicker.from("#user-edit-color").on("change", (picker, color) => {
-        $(".main-col.quote").css("background-color", color);
-      });
-      dlg = createEmptyDialog("dialog-pref-user-edit", "ui-listedit-popup", owner).dialog({
-        content: $("#pref-user-edit"),
-        handler: function(owner, event, isInsert, selItemNo, selItemText) {
-          owner.onModifyDefault(owner, event, isInsert, selItemNo, selItemText);
-        }
-      });
-      return;
-    }
-    
-    dlg.onModifyDefault(isInsert, jqPopup, selItemNo, selItemText, event);
-    
-    if (event === "before-show") {
-      $("#user-edit-title").text(`${isInsert ? "Add" : "Edit"} Profile`);
-    } else if (event === "before-hide") {
-      $("#footer").text($("#user-edit-value").val().toHtml());
-    }
   }
 
   //////////////////////////////////////////////////////////////////////////////

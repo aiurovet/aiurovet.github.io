@@ -257,9 +257,8 @@ class Main {
     look = user.phrase;
     text = look.text;
     let style = look.toStyle();
-    jqElem.css({"background": user.background.color, "font-size": style["font-size"]});
+    jqElem.css({"background": user.background.color});
 
-    style["font-size"] = "1em";
     jqElem = $("#phrase");
     jqElem.css(style);
     jqElem.text(text);
