@@ -85,24 +85,20 @@ body, html {
   width: 1080px;
   max-width: 100%;
   max-height: 100%;
-  padding: 0.25em 0;
+  padding: 0.25em 0.5em;
 }
 .main-col.quote.footer, .main-col.quote.header, .main-col.quote.phrase {
   align-self: center;
   display: block;
-  font-size: inherit;
+  font-size: 100%;
+  margin: 0;
+  padding: 0;
   width: 100%;
 }
 .main-col.quote.footer, .main-col.quote.header {
   color: var(--quote-side-color);
   font-style: italic;
   font-size: 0.60em;
-}
-.main-col.quote.footer {
-  margin-top: 0.75em;
-}
-.main-col.quote.header {
-    margin-bottom: 0.60em;
 }
 .main-col.quote > p {
   align-self: center;

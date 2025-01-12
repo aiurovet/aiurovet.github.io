@@ -8,13 +8,11 @@
 ////////////////////////////////////////////////////////////////////////////////
 
 class Pref {
-  core = null;
   selectedUser = null;
 
   //////////////////////////////////////////////////////////////////////////////
 
-  constructor(core) {
-    this.core = core;
+  constructor() {
   }
 
   //////////////////////////////////////////////////////////////////////////////
@@ -103,35 +101,46 @@ class Pref {
 
   //////////////////////////////////////////////////////////////////////////////
 
-  onClickLookPicker(jqElem, title) {
-    const id = jqElem[0].id;
-    const user = this.selectedUser;
+  onClickLookPicker(clickEvent, title) {
+    var elem = clickEvent.target;
+    var id = elem.id;
+    var user = this.selectedUser;
 
-    const isBack = (id === "user-edit-modify-back");
-    const isFooter = (id === "user-edit-modify-footer");
-    const isHeader = (id === "user-edit-modify-header");
-    const isPhrase = (id === "user-edit-modify-phrase");
+    var isBack = (id === "user-edit-modify-back");
+    var isFooter = (id === "user-edit-modify-footer");
+    var isHeader = (id === "user-edit-modify-header");
+    var isPhrase = (id === "user-edit-modify-phrase");
 
-    $("#look-picker-font").parent().setVisible(!isBack);
+    var jqLookFor =
+      isBack ? $("#quote, #user-edit") :
+      isHeader ? $("#edit-header, #user-edit-header") :
+      isPhrase ? $("#edit-phrase, #user-edit-phrase") :
+      isFooter ? $("#edit-footer, #user-edit-footer") :
+      null;
 
-    const jqColorFor = isBack ? $("#user-edit") : isFooter ? $("#user-edit-footer") : isHeader ? $("#user-edit-header") : isPhrase ? $("#user-edit-phrase") : null;
-    const look = isHeader ? user.header : isPhrase ? user.phrase : isFooter ? user.footer : null;
-    const lookText = look?.text;
-    const oldColor = jqColorFor.css(isBack ? "background-color" : "color");
-    const that = this;
+    var look =
+      isHeader ? user.header :
+      isPhrase ? user.phrase :
+      isFooter ? user.footer :
+      null;
 
-    var fontPicker = lookText ? $("#look-picker-font") : null;
-
-    if (fontPicker) {
-      fontPicker.selectFont({value: look.font.family});
-    }
+    var lookText = look?.text;
+    var oldColor = jqLookFor.css(isBack ? "background-color" : "color");
+    var that = this;
 
     var alignPicker = $("#look-picker-align");
+    alignPicker.parent().setVisible(lookText ? true : false);
 
-    if (look) {
-      alignPicker.selectAlign({isForImage: false, value: look.alignment.value});
-    } else {
-      alignPicker.parent().hide(); 
+    var fontPicker = $("#look-picker-font");
+    fontPicker.parent().setVisible(lookText ? true : false);
+
+    if (lookText) {
+      alignPicker.selectAlign({isForImage: false, value: look.alignment.value, callers: jqLookFor});
+      fontPicker.selectFont({value: look.font.family, callers: jqLookFor});
+    }
+    else {
+      alignPicker = null;
+      fontPicker = null;
     }
 
     let rgba = AColorPicker.parseColorToRgba(oldColor)
@@ -163,21 +172,22 @@ class Pref {
       } 
     });
 
-    this.onClick("#pref-look-picker", function(event) {
-      if (event === "before-show") {
+    var jqElem = $(elem);
+
+    this.onClick("#pref-look-picker", function(dlgEvent) {
+      if (dlgEvent === "before-show") {
         $(".ui-dialog-caption.pref.look-picker > .ui-dialog-caption-text").text(title)
-      } else if (event === "before-hide") {
-        if (lookText) {
-          look.font.family = $("#look-picker-font").val();
-          look.alignment = new Alignment($("#look-picker-align").val());
+      } else if (dlgEvent === "before-hide") {
+        if (lookText && alignPicker && fontPicker) {
+          look.font.family = fontPicker.val();
+          look.alignment = new Alignment(alignPicker.val());
           that.#applyTextElem(jqElem.prev(), look);
         }
-      } else if (event === "after-hide") {
-        alignPicker?.empty();
+        alignPicker?.destroy();
         alignPicker = null;
         colorPicker?.destroy();
         colorPicker = null;
-        fontPicker?.empty();
+        fontPicker?.destroy();
         fontPicker = null;
       }
     });

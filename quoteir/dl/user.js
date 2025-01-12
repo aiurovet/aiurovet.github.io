@@ -12,6 +12,7 @@
 class User {
   // Constants
   //
+  static defaultFontSize = "60pt";
   static defaultFontSizeRatio = 0.60;
   static defaultFooterText = "Author";
   static defaultHeaderText = "";
@@ -68,20 +69,21 @@ class User {
 
     this.header = header
       ? new LookText(header)
-      : new LookText(null, null, {size: 0, sizeRatio: 0}, text ?? LookText.defaultHeaderText);
+      : new LookText(null, null, {sizeRatio: User.defaultFontSizeRatio}, null, text ?? User.defaultHeaderText);
 
-    this.phrase = new LookText(phrase); 
-    this.phrase.text ||= User.defaultPhraseText;
+    this.phrase = phrase
+      ? new LookText(phrase)
+      : new LookText(null, null, {size: User.defaultFontSize}, null, User.defaultPhraseText);
 
     text = !footer && (userId && (userId != User.defaultUserId) ? userId : text)
       ? LookText.defaultFooterText
       : null;
 
-    text = footer ? footer.text : hasVividUserId ? userId : LookText.defaultHeaderText;
+    text = footer ? footer.text : hasVividUserId ? userId : User.defaultFooterText;
 
     this.footer = footer
       ? new LookText(footer)
-      : new LookText(null, null, {sizeRatio: User.defaultFontSizeRatio}, text);
+      : new LookText(null, null, {sizeRatio: User.defaultFontSizeRatio}, null, text);
 
     this.footer.text = text;
   }

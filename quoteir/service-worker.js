@@ -17,7 +17,6 @@ self.addEventListener("install", (event) => {
         "/quoteir/dl/alignment.js?v=0.1.0",
         "/quoteir/dl/data.js?v=0.1.0",
         "/quoteir/dl/user.js?v=0.1.0",
-        "/quoteir/ux/scripts/core.js?v=0.1.0",
         "/quoteir/ux/scripts/main.js?v=0.1.0",
         "/quoteir/ux/scripts/pref.js?v=0.1.0",
         "/quoteir/ux/styles/info.css?v=0.1.0",

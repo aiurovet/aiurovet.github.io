@@ -36,7 +36,6 @@
   <script src="../lib/ux/scripts/spinner.js?v=0.1.0"></script>
   <script src="dl/data.js?v=0.1.0"></script>
   <script src="dl/user.js?v=0.1.0"></script>
-  <script src="ux/scripts/core.js?v=0.1.0"></script>
   <script src="ux/scripts/main.js?v=0.1.0"></script>
   <script src="ux/scripts/pref.js?v=0.1.0"></script>
   <script>
@@ -143,19 +142,19 @@
       <div id="user-edit" class="ui-dialog-client pref user-edit">
         <div class="user-edit-control profile">
           <input class="ui-listedit-modify" type="text" style="margin-top: 0;">
-          <div id="user-edit-modify-back" class="ui-listedit-tool style" onclick="main.pref.onClickLookPicker($(this), 'Background Style');"></div>
+          <div id="user-edit-modify-back" class="ui-listedit-tool style" onclick="main.pref.onClickLookPicker(event, 'Background Style');"></div>
         </div>    
         <div class="user-edit-control">
           <div id="user-edit-header" class="user-edit-text" type="text"></div>
-          <div id="user-edit-modify-header" class="ui-listedit-tool style" onclick="main.pref.onClickLookPicker($(this), 'Header Style');"></div>
+          <div id="user-edit-modify-header" class="ui-listedit-tool style" onclick="main.pref.onClickLookPicker(event, 'Header Style');"></div>
         </div>
         <div class="user-edit-control">
           <div id="user-edit-phrase" class="user-edit-text" type="text"></div>
-          <div id="user-edit-modify-phrase" class="ui-listedit-tool style" onclick="main.pref.onClickLookPicker($(this), 'Phrase Style');"></div>
+          <div id="user-edit-modify-phrase" class="ui-listedit-tool style" onclick="main.pref.onClickLookPicker(event, 'Phrase Style');"></div>
         </div>
         <div class="user-edit-control">
           <div id="user-edit-footer" class="user-edit-text" type="text"></div>
-          <div id="user-edit-modify-footer" class="ui-listedit-tool style" onclick="main.pref.onClickLookPicker($(this), 'Footer Style');"></div>
+          <div id="user-edit-modify-footer" class="ui-listedit-tool style" onclick="main.pref.onClickLookPicker(event, 'Footer Style');"></div>
         </div>
       </div>
     </div>

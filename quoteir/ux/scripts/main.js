@@ -17,7 +17,7 @@ var main = null;
 // Application entry point
 ////////////////////////////////////////////////////////////////////////////////
 
-document.addEventListener("DOMContentLoaded", function() {
+$(document).ready(function() {
   // Initialize singletons
   //
   main ??= new Main();
@@ -39,9 +39,10 @@ $(window).on("resize", function () {
 ////////////////////////////////////////////////////////////////////////////////
 
 class Main {
-  core = new Core();
   data = (new Data()).load();
   pref = new Pref(this.core);
+
+  #jqSpinner = null;
 
   constructor() {
   }
@@ -49,15 +50,25 @@ class Main {
   //////////////////////////////////////////////////////////////////////////////
 
   initSize() {
-    const jqQuote = $("#quote");
+    const user = this.data.getSelectedUser();
 
-    $("#menu-size").spinner({
+    if (!user) {
+      return;
+    }
+
+    const jqElems = $("#quote, #phrase");
+    const that = this;
+
+    this.#jqSpinner = $("#menu-size").spinner({
       isReadOnly: true,
       min: 1,
       step: 1,
-      value: parseInt(Math.round(parseFloat(jqQuote.css("font-size")) * 3 / 4)),
+      value: parseInt(user.phrase.font.size ?? User.defaultFontSize),
       onChange: function (spinner) {
-        jqQuote.css("font-size", `${spinner.value}pt`);
+        let value = `${spinner.value}pt`;
+        jqElems.css("font-size", value);
+        user.phrase.font.size = value;
+        that.data.save();
       },
       width: "3em",
     });
@@ -83,12 +94,6 @@ class Main {
       jqEdit.val(null);
       $("#edit-phrase").postFocus();
     }
-  }
-
-  //////////////////////////////////////////////////////////////////////////////
-
-  onClickAny() {
-    alert("TBA");
   }
  
   //////////////////////////////////////////////////////////////////////////////
@@ -119,7 +124,7 @@ class Main {
 
       if (event === "before-show") {
         that.#applyEditElem($("#edit-header"), user.header);
-        that.#applyEditElem($("#edit-phrase"), user.phrase);
+        that.#applyEditElem($("#edit-phrase"), user.phrase, true);
         that.#applyEditElem($("#edit-footer"), user.footer);
         $(user.header.text ? "#edit-header" : "#edit-phrase").postFocus();
       } else if (event === "before-hide") {
@@ -253,16 +258,6 @@ class Main {
     jqElem.setVisible(text ? true : false);
     jqElem.text(text);
 
-    jqElem = $("#quote");
-    look = user.phrase;
-    text = look.text;
-    let style = look.toStyle();
-    jqElem.css({"background": user.background.color});
-
-    jqElem = $("#phrase");
-    jqElem.css(style);
-    jqElem.text(text);
-
     jqElem = $("#footer");
     look = user.footer;
     text = look.text;
@@ -270,6 +265,26 @@ class Main {
     jqElem.css(look.toStyle());
     jqElem.setVisible(text ? true : false);
     jqElem.text(text);
+
+    look = user.phrase;
+    let fontSize = look.font.size;
+
+    $("#quote").css({
+      "background": user.background.color,
+      "font-size": fontSize,
+    });
+
+    text = look.text;
+    let style = look.toStyle();
+    style["font-size"] = fontSize;
+    style["margin-top"] =  user.header.text ? "0.6em" : "";
+    style["margin-bottom"] = user.footer.text ? "0.75em" : "";
+
+    jqElem = $("#phrase");
+    jqElem.css(style);
+    jqElem.text(text);
+
+    this.#jqSpinner?.setValue(parseInt(fontSize));
   }
 
   //////////////////////////////////////////////////////////////////////////////
@@ -280,10 +295,13 @@ class Main {
 
   //////////////////////////////////////////////////////////////////////////////
 
-  #applyEditElem(jqEdit, look) {
+  #applyEditElem(jqEdit, look, hasEdit) {
     const text = look.text;
-    const hasEdit = text ? true : false;
     const jqCheck = jqEdit.prev();
+
+    if ((hasEdit === undefined) || (hasEdit === null)) {
+      hasEdit = text ? true : false;
+    }
 
     jqCheck.prop("checked", hasEdit)
     jqEdit.enable(hasEdit);
