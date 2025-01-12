@@ -82,10 +82,10 @@ class Pref {
         that.selectedUser = user;
 
         if (event === "before-show") {
-          $("#user-edit").css("background", user.background.color);
-          $("#user-edit-header").css("color", user.header.color).text(user.header.text);
-          $("#user-edit-phrase").css("color", user.phrase.color).text(user.phrase.text);
-          $("#user-edit-footer").css("color", user.footer.color).text(user.footer.text);
+          that.#applyBackElem($("#user-edit"), user.background);
+          that.#applyTextElem($("#user-edit-header"), user.header);
+          that.#applyTextElem($("#user-edit-phrase"), user.phrase);
+          that.#applyTextElem($("#user-edit-footer"), user.footer);
         } else if (event === "after-show") {
           $("#user-edit-footer, #user-edit-header, #user-edit-phrase").outerWidth($("#user-edit").outerWidth());
         } 
@@ -120,13 +120,13 @@ class Pref {
     const oldColor = jqColorFor.css(isBack ? "background-color" : "color");
     const that = this;
 
-    let fontPicker = lookText ? $("#look-picker-font") : null;
+    var fontPicker = lookText ? $("#look-picker-font") : null;
 
     if (fontPicker) {
       fontPicker.selectFont({value: look.font.family});
     }
 
-    let alignPicker = $("#look-picker-align");
+    var alignPicker = $("#look-picker-align");
 
     if (look) {
       alignPicker.selectAlign({isForImage: false, value: look.alignment.value});
@@ -137,17 +137,17 @@ class Pref {
     let rgba = AColorPicker.parseColorToRgba(oldColor)
     rgba[3] ||= 1;
 
-    let colorPicker = AColorPicker.createPicker(
+    var colorPicker = AColorPicker.createPicker(
       "#look-picker-color",
       {color: Pref.colorArrayToString(rgba)});
 
-    colorPicker.on("change", (picker, color) => {
+    colorPicker.on("change", function (picker, color) {
       rgba = AColorPicker.parseColorToRgba(color);
       const a = rgba[3];  
       const x = (1 - a) * 255;
       const rgb = `rgb(${Math.round(x + a * rgba[0])},${Math.round(x + a * rgba[1])},${Math.round(x + a * rgba[2])})`;
       const user = that.selectedUser;
-    
+      
       if (isBack) {
         user.background.color = rgb;
         $(".edit-quote, #user-edit").css("background-color", user.background.color);
@@ -170,15 +170,41 @@ class Pref {
         if (lookText) {
           look.font.family = $("#look-picker-font").val();
           look.alignment = new Alignment($("#look-picker-align").val());
-          jqElem.prev().css("font-family", look.font.family);
+          that.#applyTextElem(jqElem.prev(), look);
         }
       } else if (event === "after-hide") {
+        alignPicker?.empty();
+        alignPicker = null;
         colorPicker?.destroy();
         colorPicker = null;
         fontPicker?.empty();
         fontPicker = null;
       }
     });
+  }
+
+  //////////////////////////////////////////////////////////////////////////////
+
+  #applyBackElem(jqElem, look) {
+    const style = look.toStyle();
+
+    jqElem.css({
+      "background-color": style["background-color"],
+    });
+  }
+
+  //////////////////////////////////////////////////////////////////////////////
+
+  #applyTextElem(jqElem, look) {
+    const style = look.toStyle();
+
+    jqElem.css({
+      "color": style["color"],
+      "font-family": style["font-family"],
+      "text-align": style["text-align"]
+    });
+
+    jqElem.text(look.text);
   }
 
   //////////////////////////////////////////////////////////////////////////////
