@@ -50,7 +50,7 @@ class Main {
   //////////////////////////////////////////////////////////////////////////////
 
   initSize() {
-    const user = this.data.getSelectedUser();
+    let user = this.data.getSelectedUser();
 
     if (!user) {
       return;
@@ -65,6 +65,12 @@ class Main {
       step: 1,
       value: parseInt(user.phrase.font.size ?? User.defaultFontSize),
       onChange: function (spinner) {
+        let user = that.data.getSelectedUser();
+
+        if (!user) {
+          return;
+        }
+
         let value = `${spinner.value}pt`;
         jqElems.css("font-size", value);
         user.phrase.font.size = value;
@@ -283,6 +289,8 @@ class Main {
     jqElem = $("#phrase");
     jqElem.css(style);
     jqElem.text(text);
+
+console.log(`User: ${user.userId}, FontSize: ${fontSize}`);
 
     this.#jqSpinner?.setValue(parseInt(fontSize));
   }
