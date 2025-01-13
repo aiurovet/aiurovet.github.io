@@ -183,11 +183,11 @@ class Pref {
           look.alignment = new Alignment(alignPicker.val());
           that.#applyTextElem(jqElem.prev(), look);
         }
-        alignPicker?.destroy();
+        alignPicker?.clear();
         alignPicker = null;
         colorPicker?.destroy();
         colorPicker = null;
-        fontPicker?.destroy();
+        fontPicker?.clear();
         fontPicker = null;
       }
     });

@@ -69,7 +69,7 @@ class User {
 
     this.header = header
       ? new LookText(header)
-      : new LookText(null, null, {sizeRatio: User.defaultFontSizeRatio}, null, text ?? User.defaultHeaderText);
+      : new LookText(null, null, {sizeRatio: User.defaultFontSizeRatio, effects: LookText.italic}, null, text ?? User.defaultHeaderText);
 
     this.phrase = phrase
       ? new LookText(phrase)
@@ -83,7 +83,7 @@ class User {
 
     this.footer = footer
       ? new LookText(footer)
-      : new LookText(null, null, {sizeRatio: User.defaultFontSizeRatio}, null, text);
+      : new LookText(null, null, {sizeRatio: User.defaultFontSizeRatio, effects: LookText.italic}, null, text);
 
     this.footer.text = text;
   }

@@ -97,7 +97,6 @@ body, html {
 }
 .main-col.quote.footer, .main-col.quote.header {
   color: var(--quote-side-color);
-  font-style: italic;
   font-size: 0.60em;
 }
 .main-col.quote > p {
