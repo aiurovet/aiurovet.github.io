@@ -8,11 +8,13 @@
 ////////////////////////////////////////////////////////////////////////////////
 
 class Pref {
+  owner = null;
   selectedUser = null;
 
   //////////////////////////////////////////////////////////////////////////////
 
-  constructor() {
+  constructor(owner) {
+    this.owner = owner;
   }
 
   //////////////////////////////////////////////////////////////////////////////
@@ -81,8 +83,8 @@ class Pref {
 
         if (event === "before-show") {
           that.#applyBackElem($("#user-edit"), user.background);
+          that.#applyTextElem($("#user-edit-phrase"), user.phrase, $(".text-looks"));
           that.#applyTextElem($("#user-edit-header"), user.header);
-          that.#applyTextElem($("#user-edit-phrase"), user.phrase);
           that.#applyTextElem($("#user-edit-footer"), user.footer);
         } else if (event === "after-show") {
           $("#user-edit-footer, #user-edit-header, #user-edit-phrase").outerWidth($("#user-edit").outerWidth());
@@ -119,29 +121,35 @@ class Pref {
       null;
 
     var look =
+      isBack ? user.background :
       isHeader ? user.header :
       isPhrase ? user.phrase :
       isFooter ? user.footer :
       null;
 
-    var lookText = look?.text;
     var oldColor = jqLookFor.css(isBack ? "background-color" : "color");
     var that = this;
 
     var alignPicker = $("#look-picker-align");
-    alignPicker.parent().setVisible(lookText ? true : false);
+    alignPicker.selectAlign({isForImage: isBack, value: look.alignment.value, callers: jqLookFor});
 
     var fontPicker = $("#look-picker-font");
-    fontPicker.parent().setVisible(lookText ? true : false);
+    fontPicker.parent().setVisible(!isBack);
 
-    if (lookText) {
-      alignPicker.selectAlign({isForImage: false, value: look.alignment.value, callers: jqLookFor});
-      fontPicker.selectFont({value: look.font.family, callers: jqLookFor});
-    }
-    else {
-      alignPicker = null;
-      fontPicker = null;
-    }
+    var ratioSpinner = $("#look-picker-ratio");
+    ratioSpinner.setVisible(!isBack);
+
+    ratioSpinner = isBack ? null : ratioSpinner.spinner({
+      isReadOnly: true,
+      min: 0,
+      step: 0.05,
+      value: parseInt(parseInt(look.font.sizeRatio ?? "1")),
+      width: "3em",
+    });
+
+    $(".user-edit-control.effects").setVisible(!isBack);
+
+    fontPicker = isBack ? null : fontPicker.selectFont({value: look.font.family, callers: jqLookFor});
 
     let rgba = AColorPicker.parseColorToRgba(oldColor)
     rgba[3] ||= 1;
@@ -178,43 +186,50 @@ class Pref {
       if (dlgEvent === "before-show") {
         $(".ui-dialog-caption.pref.look-picker > .ui-dialog-caption-text").text(title)
       } else if (dlgEvent === "before-hide") {
-        if (lookText && alignPicker && fontPicker) {
+        if (isBack) {
+          that.#applyBackElem($("#user-edit"), look);
+        } else if (alignPicker && fontPicker) {
           look.font.family = fontPicker.val();
           look.alignment = new Alignment(alignPicker.val());
           that.#applyTextElem(jqElem.prev(), look);
         }
+
+        that.owner.setUser(true);
+
         alignPicker?.clear();
         alignPicker = null;
         colorPicker?.destroy();
         colorPicker = null;
         fontPicker?.clear();
         fontPicker = null;
+        ratioSpinner?.clear();
+        ratioSpinner = null;
       }
     });
   }
 
   //////////////////////////////////////////////////////////////////////////////
 
-  #applyBackElem(jqElem, look) {
-    const style = look.toStyle();
-
-    jqElem.css({
-      "background-color": style["background-color"],
-    });
+  #applyBackElem(jqBack, look) {
+    jqBack.css(look.toStyle());
   }
 
   //////////////////////////////////////////////////////////////////////////////
 
-  #applyTextElem(jqElem, look) {
-    const style = look.toStyle();
+  #applyTextElem(jqText, look, jqBack) {
+    let style = look.toStyle(); 
+    let hasBack = jqBack && (jqBack.length > 0);
 
-    jqElem.css({
-      "color": style["color"],
-      "font-family": style["font-family"],
-      "text-align": style["text-align"]
-    });
+    if (hasBack) {
+      delete style["font-size"];
+    }
 
-    jqElem.text(look.text);
+    jqText.css(style);
+    jqText.text(look.text);
+
+    if (hasBack) {
+      jqBack.css("font-size", style["font-size"]);
+    }
   }
 
   //////////////////////////////////////////////////////////////////////////////

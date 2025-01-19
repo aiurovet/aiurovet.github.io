@@ -67,6 +67,15 @@
 .ui-dialog.ui-listedit-popup .ui-dialog-content:not(.msgbox) {
   background: var(--dialog-content-bg-color-2);
 }
+.user-edit-control.profile > .ui-listedit-modify {
+  font-size: 1em;
+}
+.user-edit-control.effects > .user-edit-label > input[type="checkbox"] {
+  height: 1.5em;
+  margin-bottom: 0.75em;
+  vertical-align: bottom;
+  width: 2em;
+}
 
 /* HELP */
 
@@ -142,14 +151,13 @@ ul.rules > li {
 .user-edit-label {
   color: rgb(64, 64, 64);
   display: inline-block;
-  width: 4em;
-  font-size: 0.75em;
 }
-.user-edit-label {
-  color: rgb(64, 64, 64);
-  display: inline-block;
-  width: 4em;
+div.user-edit-label {
   font-size: 0.75em;
+  width: 4em;
+}
+label.user-edit-label {
+  margin-right: 0.5em;
 }
 #user-edit-color {
   background: var(--dialog-content-bg-color-1);

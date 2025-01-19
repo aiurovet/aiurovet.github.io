@@ -25,7 +25,7 @@ $(document).ready(function() {
   // Initialize the UI
   //
   main.initSize();
-  main.setUser();
+  main.setUser(false);
   main.onClickEditQuote();
 });
 
@@ -40,7 +40,7 @@ $(window).on("resize", function () {
 
 class Main {
   data = (new Data()).load();
-  pref = new Pref(this.core);
+  pref = new Pref(this);
 
   #jqSpinner = null;
 
@@ -137,8 +137,7 @@ class Main {
         that.#acquireEditElem($("#edit-header"), user.header);
         that.#acquireEditElem($("#edit-phrase"), user.phrase);
         that.#acquireEditElem($("#edit-footer"), user.footer);
-        that.data.save();
-        that.setUser(user);
+        that.setUser(true, user);
 
         var content = jqEditPhrase.val();
 
@@ -242,18 +241,21 @@ class Main {
 
     this.pref.onClickUser(users, userNo, Data.maxUserCount, function(jqList) {
       that.data.setSelectedUserNo(jqList.selectedItemNo);
-      that.data.save();
-      that.setUser();
+      that.setUser(true);
     });
   }
 
   //////////////////////////////////////////////////////////////////////////////
 
-  setUser(user) {
+  setUser(canSave, user) {
     user ??= this.data.getSelectedUser();
 
     if (!user) {
       return;
+    }
+
+    if (canSave) {
+      this.data.save();
     }
 
     let jqElem = $("#header");
@@ -289,8 +291,6 @@ class Main {
     jqElem = $("#phrase");
     jqElem.css(style);
     jqElem.text(text);
-
-console.log(`User: ${user.userId}, FontSize: ${fontSize}`);
 
     this.#jqSpinner?.setValue(parseInt(fontSize));
   }

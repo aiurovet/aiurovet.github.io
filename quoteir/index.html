@@ -100,14 +100,14 @@
       <div class="ui-dialog-client pref edit-quote">
         <div class="edit-control">
           <input id="edit-header-flag" type="checkbox" onclick="main.onCheckEditQuoteFlag($(this));">
-          <input id="edit-header" class="edit-input" type="text" placeholder="Header">
+          <textarea id="edit-header" cols="50" rows="2" placeholder="Header"></textarea>
         </div>
         <div class="edit-control">
-          <textarea id="edit-phrase" cols="50" rows="6" placeholder="Insert your phrase here"></textarea>
+          <textarea id="edit-phrase" cols="50" rows="5" placeholder="Insert your phrase here"></textarea>
         </div>
         <div class="edit-control">
           <input id="edit-footer-flag" type="checkbox" onclick="main.onCheckEditQuoteFlag($(this));">
-          <input id="edit-footer" class="edit-input" type="text" placeholder="Footer">
+          <textarea id="edit-footer" cols="50" rows="2" placeholder="Footer"></textarea>
         </div>
       </div>
     </div>
@@ -143,19 +143,21 @@
         <div class="user-edit-control profile">
           <input class="ui-listedit-modify" type="text" style="margin-top: 0;">
           <div id="user-edit-modify-back" class="ui-listedit-tool style" onclick="main.pref.onClickLookPicker(event, 'Background Style');"></div>
-        </div>    
-        <div class="user-edit-control">
-          <div id="user-edit-header" class="user-edit-text" type="text"></div>
-          <div id="user-edit-modify-header" class="ui-listedit-tool style" onclick="main.pref.onClickLookPicker(event, 'Header Style');"></div>
         </div>
-        <div class="user-edit-control">
-          <div id="user-edit-phrase" class="user-edit-text" type="text"></div>
-          <div id="user-edit-modify-phrase" class="ui-listedit-tool style" onclick="main.pref.onClickLookPicker(event, 'Phrase Style');"></div>
-        </div>
-        <div class="user-edit-control">
-          <div id="user-edit-footer" class="user-edit-text" type="text"></div>
-          <div id="user-edit-modify-footer" class="ui-listedit-tool style" onclick="main.pref.onClickLookPicker(event, 'Footer Style');"></div>
-        </div>
+        <div class="text-looks">
+          <div class="user-edit-control">
+            <div id="user-edit-header" class="user-edit-text" type="text"></div>
+            <div id="user-edit-modify-header" class="ui-listedit-tool style" onclick="main.pref.onClickLookPicker(event, 'Header Style');"></div>
+          </div>
+          <div class="user-edit-control">
+            <div id="user-edit-phrase" class="user-edit-text" type="text"></div>
+            <div id="user-edit-modify-phrase" class="ui-listedit-tool style" onclick="main.pref.onClickLookPicker(event, 'Phrase Style');"></div>
+          </div>
+          <div class="user-edit-control">
+            <div id="user-edit-footer" class="user-edit-text" type="text"></div>
+            <div id="user-edit-modify-footer" class="ui-listedit-tool style" onclick="main.pref.onClickLookPicker(event, 'Footer Style');"></div>
+          </div>
+          </div>
       </div>
     </div>
   </div>
@@ -178,6 +180,13 @@
         <div class="user-edit-control">
           <div class="user-edit-label">Align:</div>
           <select id="look-picker-align"></select>
+        </div>    
+        <div class="user-edit-control effects">
+          <div class="user-edit-label">Effects:</div>
+          <label for="look-picker-bold" class="user-edit-label"><input type="checkbox" id="look-picker-bold"><strong>B</strong></label>
+          <label for="look-picker-italic" class="user-edit-label"><input type="checkbox" id="look-picker-italic"><em>I</em></label>
+          <label for="look-picker-underline" class="user-edit-label"><input type="checkbox" id="look-picker-underline"><u>U</u></label>
+          <input type="text" id="look-picker-ratio">
         </div>    
         <div class="user-edit-control">
           <div class="user-edit-label">Color:</div>

@@ -12,6 +12,8 @@
 class User {
   // Constants
   //
+  static defaultColorMain = "rgb(0, 0, 0)";
+  static defaultColorSide = "rgb(64, 64, 64)";
   static defaultFontSize = "60pt";
   static defaultFontSizeRatio = 0.60;
   static defaultFooterText = "Author";
@@ -69,11 +71,11 @@ class User {
 
     this.header = header
       ? new LookText(header)
-      : new LookText(null, null, {sizeRatio: User.defaultFontSizeRatio, effects: LookText.italic}, null, text ?? User.defaultHeaderText);
+      : new LookText(null, User.defaultColorSide, {sizeRatio: User.defaultFontSizeRatio, effects: LookText.italic}, null, text ?? User.defaultHeaderText);
 
     this.phrase = phrase
       ? new LookText(phrase)
-      : new LookText(null, null, {size: User.defaultFontSize}, null, User.defaultPhraseText);
+      : new LookText(null, User.defaultColorMain, {size: User.defaultFontSize}, null, User.defaultPhraseText);
 
     text = !footer && (userId && (userId != User.defaultUserId) ? userId : text)
       ? LookText.defaultFooterText
@@ -83,7 +85,7 @@ class User {
 
     this.footer = footer
       ? new LookText(footer)
-      : new LookText(null, null, {sizeRatio: User.defaultFontSizeRatio, effects: LookText.italic}, null, text);
+      : new LookText(null, User.defaultColorSide, {sizeRatio: User.defaultFontSizeRatio, effects: LookText.italic}, null, text);
 
     this.footer.text = text;
   }
