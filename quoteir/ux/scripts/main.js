@@ -47,6 +47,26 @@ class Main {
   constructor() {
   }
 
+  static breakTextAndAssign(jqSource, jqTarget, checkMarkup) {
+    var content = jqSource.val();
+
+    if (!checkMarkup || !content.hasMarkup()) {
+      content = `<p>${content.toHtml().replaceAll("<br>", "</p><p>")}</p>`;
+    }
+
+    jqTarget.html(content);
+  }
+
+  //////////////////////////////////////////////////////////////////////////////
+
+  static colorArrayToString(array) {
+    return "#" +
+      array[0].toString(16).padStart(2, "0") +
+      array[1].toString(16).padStart(2, "0") +
+      array[2].toString(16).padStart(2, "0")
+    ;
+  }
+
   //////////////////////////////////////////////////////////////////////////////
 
   initSize() {
@@ -122,30 +142,35 @@ class Main {
       return;
     }
 
-    const jqPhrase = $("#phrase");
     const that = this;
 
     that.pref.onClick("#edit-quote", function (event) {
+      const jqEditHeader = $("#edit-header");
       const jqEditPhrase = $("#edit-phrase");
+      const jqEditFooter = $("#edit-footer");
 
       if (event === "before-show") {
-        that.#applyEditElem($("#edit-header"), user.header);
-        that.#applyEditElem($("#edit-phrase"), user.phrase, true);
-        that.#applyEditElem($("#edit-footer"), user.footer);
-        $(user.header.text ? "#edit-header" : "#edit-phrase").postFocus();
-      } else if (event === "before-hide") {
-        that.#acquireEditElem($("#edit-header"), user.header);
-        that.#acquireEditElem($("#edit-phrase"), user.phrase);
-        that.#acquireEditElem($("#edit-footer"), user.footer);
+        that.#applyEditTextElem(jqEditHeader, user.header);
+        that.#applyEditTextElem(jqEditPhrase, user.phrase, true);
+        that.#applyEditTextElem(jqEditFooter, user.footer);
+
+        jqEditPhrase.postFocus();
+
+        return;
+      }
+      
+      if (event === "before-hide") {
+        that.#acquireEditTextElem(jqEditHeader, user.header);
+        that.#acquireEditTextElem(jqEditPhrase, user.phrase);
+        that.#acquireEditTextElem(jqEditFooter, user.footer);
+
         that.setUser(true, user);
 
-        var content = jqEditPhrase.val();
+        Main.breakTextAndAssign(jqEditHeader, $("#header"));
+        Main.breakTextAndAssign(jqEditPhrase, $("#phrase"));
+        Main.breakTextAndAssign(jqEditFooter, $("#footer"));
 
-        if (!content.hasMarkup()) {
-          content = `<p>${content.toHtml().replaceAll("<br>", "</p><p>")}</p>`;
-        }
-
-        jqPhrase.html(content);
+        return;
       }
     });
   }
@@ -204,6 +229,105 @@ class Main {
 
     postAction(function() {
       newWnd.close();
+    });
+  }
+
+  //////////////////////////////////////////////////////////////////////////////
+
+  onClickLookPicker(clickEvent, title) {
+    let user = this.data.getSelectedUser();
+
+    if (!user) {
+      return;
+    }
+
+    var elem = clickEvent.target;
+    var jqElem = $(elem);
+    var id = elem.id || jqElem.parent()[0].id;
+
+    var isBack = (id === "quote");
+    var isFooter = (id === "footer");
+    var isHeader = (id === "header");
+    var isPhrase = (id === "phrase");
+
+    var jqLookFor =
+      isBack ? $("#quote") :
+      isHeader ? $("#header") :
+      isPhrase ? $("#phrase") :
+      isFooter ? $("#footer") :
+      null;
+
+    var look =
+      isBack ? user.background :
+      isHeader ? user.header :
+      isPhrase ? user.phrase :
+      isFooter ? user.footer :
+      null;
+
+    var oldColor = jqLookFor.css(isBack ? "background-color" : "color");
+    var that = this;
+
+    var alignPicker = $("#look-picker-align");
+    alignPicker.selectAlign({isForImage: isBack, value: look.alignment.value, callers: jqLookFor});
+
+    var fontPicker = $("#look-picker-font");
+    fontPicker.parent().setVisible(!isBack);
+
+    var ratioSpinner = $("#look-picker-ratio");
+    ratioSpinner.setVisible(!isBack);
+
+    ratioSpinner = isBack ? null : ratioSpinner.spinner({
+      isReadOnly: true,
+      min: 0,
+      step: 0.05,
+      value: parseInt(parseInt(look.font.sizeRatio ?? "1")),
+      width: "3em",
+    });
+
+    $(".user-edit-control.effects").setVisible(!isBack);
+
+    fontPicker = isBack ? null : fontPicker.selectFont({value: look.font.family, callers: jqLookFor});
+
+    let rgba = AColorPicker.parseColorToRgba(oldColor)
+    rgba[3] ||= 1;
+
+    var colorPicker = AColorPicker.createPicker(
+      "#look-picker-color",
+      {color: Main.colorArrayToString(rgba)});
+
+    colorPicker.on("change", function (picker, color) {
+      rgba = AColorPicker.parseColorToRgba(color);
+      const a = rgba[3];  
+      const x = (1 - a) * 255;
+      const rgb = `rgb(${Math.round(x + a * rgba[0])},${Math.round(x + a * rgba[1])},${Math.round(x + a * rgba[2])})`;
+      
+      look.color = rgb;
+      jqLookFor.css(isBack ? "background-color" : "color", rgb);
+    });
+
+    this.pref.onClick("#look-picker", function(dlgEvent) {
+      if (dlgEvent === "before-show") {
+        $(".ui-dialog-caption.pref.look-picker > .ui-dialog-caption-text").text(title)
+      } else if (dlgEvent === "before-hide") {
+        if (isBack) {
+          that.#applyLookBackElem($("#quote"), look);
+        } else if (alignPicker && fontPicker) {
+          look.font.family = fontPicker.val();
+          look.alignment = new Alignment(alignPicker.val());
+          that.#applyLookTextElem(jqElem.prev(), look);
+        }
+
+        that.owner.setUser(true);
+
+        alignPicker?.clear();
+        alignPicker = null;
+        colorPicker?.destroy();
+        colorPicker = null;
+        fontPicker?.clear();
+        fontPicker = null;
+        ratioSpinner?.clear();
+        ratioSpinner = null;
+      }
     });
   }
 
@@ -297,13 +421,13 @@ class Main {
 
   //////////////////////////////////////////////////////////////////////////////
 
-  #acquireEditElem(jqEdit, look) {
+  #acquireEditTextElem(jqEdit, look) {
     look.text = jqEdit.val();
   }
 
   //////////////////////////////////////////////////////////////////////////////
 
-  #applyEditElem(jqEdit, look, hasEdit) {
+  #applyEditTextElem(jqEdit, look, hasEdit) {
     const text = look.text;
     const jqCheck = jqEdit.prev();
 
@@ -314,6 +438,30 @@ class Main {
     jqCheck.prop("checked", hasEdit)
     jqEdit.enable(hasEdit);
     jqEdit.val(text);
+  }
+
+  //////////////////////////////////////////////////////////////////////////////
+
+  #applyLookBackElem(jqBack, look) {
+    jqBack.css(look.toStyle());
+  }
+
+  //////////////////////////////////////////////////////////////////////////////
+
+  #applyLookTextElem(jqText, look, jqBack) {
+    let style = look.toStyle(); 
+    let hasBack = jqBack && (jqBack.length > 0);
+
+    if (hasBack) {
+      delete style["font-size"];
+    }
+
+    jqText.css(style);
+    jqText.text(look.text);
+
+    if (hasBack) {
+      jqBack.css("font-size", style["font-size"]);
+    }
   }
 
   //////////////////////////////////////////////////////////////////////////////

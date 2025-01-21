@@ -27,7 +27,6 @@ body, html {
   width: 100%;
 }
 textarea {
-  background: none;
   overflow-y: scroll;
 }
 
@@ -124,16 +123,37 @@ textarea {
 
 /* ELEMENTS: */
 
+#edit-footer {
+  flex-grow: 1;
+  margin-top: 0.5em;
+}
+#edit-footer-flag, #edit-header-flag {
+  min-width: 1.5em;
+  min-height: 1.5em;
+}
+#edit-footer-flag {
+  margin: 1em 1em 0 0;
+}
+#edit-footer, #edit-header, #edit-phrase {
+  font-family: inherit;
+  font-size: inherit;
+}
+#edit-header {
+  flex-grow: 1;
+  margin-bottom: 0.5em;
+}
+#edit-header-flag {
+  margin: 0 1em 1em 0;
+}
+#edit-phrase {
+  height: 100%;
+  margin-left: 1em;
+  width: 100%;
+}
 #menu-edit:hover, #menu-exch:hover, #menu-help:hover, #menu-size:hover, #menu-user:hover {
   background-color: var(--dialog-caption-bg-color-1);
   color: var(--dialog-caption-fg-color-1);
   font-weight: bold;
-}
-#edit-phrase {
-  font-family: inherit;
-  font-size: inherit;
-  height: 100%;
-  width: 100%;
 }
 #menu-size > .ui-spinner-less, #menu-size > .ui-spinner-more, #menu-size > .ui-spinner-value {
   float: left;
@@ -150,5 +170,5 @@ textarea {
   margin: 0 0.5em;
 }
 #quote {
-  overflow-y: scroll;
+  overflow-y: auto;
 }

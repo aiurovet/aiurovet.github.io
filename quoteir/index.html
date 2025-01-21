@@ -67,10 +67,10 @@
     </div>
     <div class="main-row max">
       <div id="action-no" class="main-col btn"></div>
-      <div id="quote" class="main-col quote">
-        <div id="header" class="main-col quote header"><p></p></div>
-        <div id="phrase" class="main-col quote phrase"><p></p></div>
-        <div id="footer" class="main-col quote footer"></div>
+      <div id="quote" class="main-col quote" onclick="main.onClickLookPicker(event, 'Background Style');">
+        <div id="header" class="main-col quote header" onclick="main.onClickLookPicker(event, 'Header Style');"><p></p></div>
+        <div id="phrase" class="main-col quote phrase" onclick="main.onClickLookPicker(event, 'Phrase Style');"><p></p></div>
+        <div id="footer" class="main-col quote footer" onclick="main.onClickLookPicker(event, 'Footer Style');"></div>
       </div>
       <div id="action-yes" class="main-col btn"></div>
     </div>
@@ -79,7 +79,7 @@
         <span id="menu-exch" onclick="main.onClickExchange();">Exchange</span>
       </div>
       <div id="main-edit" class="main-col info max">
-        <span id="menu-edit" onclick="main.onClickEditQuote();">Edit Quote</span>
+        <span id="menu-edit" onclick="main.onClickEditQuote();">Edit Text</span>
       </div>
       <div id="main-size" class="main-col info right">
         <span id="menu-size"></span> 
@@ -92,7 +92,7 @@
   <div id="edit-quote" style="display: none;"">
     <div class="ui-dialog-content pref">
       <div class="ui-dialog-caption pref">
-        <h4 class="ui-dialog-caption-text">Edit Quote</h4>
+        <h4 class="ui-dialog-caption-text">Edit Text</h4>
         <div class="ui-dialog-filler"></div>
         <div class="ui-dialog-icon help" onclick="main.onClickHelp('help-pref-edit', '.ui-listedit-item[selected]')"></div>
         <div class="ui-dialog-icon close"></div>
@@ -109,6 +109,43 @@
           <input id="edit-footer-flag" type="checkbox" onclick="main.onCheckEditQuoteFlag($(this));">
           <textarea id="edit-footer" cols="50" rows="2" placeholder="Footer"></textarea>
         </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- LOOK PICKER -->
+
+  <div id="look-picker" style="display: none;"">
+    <div class="ui-dialog-content pref look-picker">
+      <div class="ui-dialog-caption pref look-picker">
+        <h4 class="ui-dialog-caption-text"></h4>
+        <div class="ui-dialog-filler"></div>
+        <div class="ui-dialog-icon help" onclick="main.onClickHelp('help-look-picker', '.ui-listedit-item[selected]')"></div>
+        <div class="ui-dialog-icon close"></div>
+      </div>
+      <div id="look-picker" class="ui-dialog-client pref look-picker">
+        <div class="user-edit-control">
+          <div class="user-edit-label">Font:</div>
+          <select id="look-picker-font"></select>
+        </div>    
+        <div class="user-edit-control">
+          <div class="user-edit-label">Align:</div>
+          <select id="look-picker-align"></select>
+        </div>    
+        <div class="user-edit-control effects">
+          <div class="user-edit-label">Effects:</div>
+          <label for="look-picker-bold" class="user-edit-label"><input type="checkbox" id="look-picker-bold"><strong>B</strong></label>
+          <label for="look-picker-italic" class="user-edit-label"><input type="checkbox" id="look-picker-italic"><em>I</em></label>
+          <label for="look-picker-underline" class="user-edit-label"><input type="checkbox" id="look-picker-underline"><u>U</u></label>
+          <input type="text" id="look-picker-ratio">
+        </div>    
+        <div class="user-edit-control">
+          <div class="user-edit-label">Color:</div>
+          <div id="look-picker-color" acp-show-alpha acp-show-hsl="no"
+             acp-palette="PALETTE_MATERIAL_CHROME" acp-palette-editable="no">
+             &emsp;
+          </div>
+        </div>    
       </div>
     </div>
   </div>
@@ -158,43 +195,6 @@
             <div id="user-edit-modify-footer" class="ui-listedit-tool style" onclick="main.pref.onClickLookPicker(event, 'Footer Style');"></div>
           </div>
           </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- PREF: LOOK PICKER -->
-
-  <div id="pref-look-picker" style="display: none;"">
-    <div class="ui-dialog-content pref look-picker">
-      <div class="ui-dialog-caption pref look-picker">
-        <h4 class="ui-dialog-caption-text"></h4>
-        <div class="ui-dialog-filler"></div>
-        <div class="ui-dialog-icon help" onclick="main.onClickHelp('help-pref-look-picker', '.ui-listedit-item[selected]')"></div>
-        <div class="ui-dialog-icon close"></div>
-      </div>
-      <div id="look-picker" class="ui-dialog-client pref look-picker">
-        <div class="user-edit-control">
-          <div class="user-edit-label">Font:</div>
-          <select id="look-picker-font"></select>
-        </div>    
-        <div class="user-edit-control">
-          <div class="user-edit-label">Align:</div>
-          <select id="look-picker-align"></select>
-        </div>    
-        <div class="user-edit-control effects">
-          <div class="user-edit-label">Effects:</div>
-          <label for="look-picker-bold" class="user-edit-label"><input type="checkbox" id="look-picker-bold"><strong>B</strong></label>
-          <label for="look-picker-italic" class="user-edit-label"><input type="checkbox" id="look-picker-italic"><em>I</em></label>
-          <label for="look-picker-underline" class="user-edit-label"><input type="checkbox" id="look-picker-underline"><u>U</u></label>
-          <input type="text" id="look-picker-ratio">
-        </div>    
-        <div class="user-edit-control">
-          <div class="user-edit-label">Color:</div>
-          <div id="look-picker-color" acp-show-alpha acp-show-hsl="no"
-             acp-palette="PALETTE_MATERIAL_CHROME" acp-palette-editable="no">
-             &emsp;
-          </div>
-        </div>    
       </div>
     </div>
   </div>
