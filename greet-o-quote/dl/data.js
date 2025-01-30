@@ -12,7 +12,7 @@
 class Data {
   // Constants
   //
-  static appName = "quoteir";
+  static appName = "greet-o-quote";
   static defaultFileFormat = Data.fileFormatPng;
   static keyPref = Data.appName;
   static maxUserCount = 20;

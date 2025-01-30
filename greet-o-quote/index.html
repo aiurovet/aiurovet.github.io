@@ -6,9 +6,9 @@
 <html>
 <head>
   <meta charset="UTF-8">
-  <title>QuoteIR</title>
+  <title>Greet-o-Quote</title>
   <link rel="manifest" href="./manifest.json?v=0.1.0" crossorigin="use-credentials">
-  <link rel="shortcut icon" type="image/x-icon" href="ux/images/quoteir.svg?v=0.1.0">
+  <link rel="shortcut icon" type="image/x-icon" href="ux/images/Greet-o-Quote.svg?v=0.1.0">
   <link rel="stylesheet" href="../lib/import/styles/acolorpicker-5.3.2.min.css">
   <link rel="stylesheet" href="../lib/ux/styles/dialog.css?v=0.1.0">
   <link rel="stylesheet" href="../lib/ux/styles/help.css?v=0.1.0">
@@ -42,7 +42,7 @@
     let sw = navigator.serviceWorker;
 
     if (sw) {
-      sw.register("/quoteir/service-worker.js")
+      sw.register("/Greet-o-Quote/service-worker.js")
         .then((reg) => {
           console.log("The service worker registration successfully completed");
         })
@@ -204,7 +204,7 @@
   <div id="help" style="display: none;"">
     <div class="ui-dialog-content help">
       <div class="ui-dialog-caption help">
-        <span><strong>QuoteIR</strong></span>
+        <span><strong>Greet-o-Quote</strong></span>
         <div id="copyright">&nbsp;&copy;&nbsp;2024&nbsp;</div>
 				<a id="help-link" target="_blank" href="https://aiurovet.com/">Alexander Iurovetski</a>
         <div class="ui-dialog-filler"></div>
@@ -213,7 +213,7 @@
       <div class="ui-dialog-client help">
         <h4 id="help-version"><span id="version">Version 0.1.0</span><span class="ui-dialog-filler"></span><span id="help-print" href="#" onclick="main.onClickHelpPrint($(this).parent().parent());">&nbsp;</span></h4>
         <div class="para-help">
-          <em>QuoteIR</em>, or <em>Quote Image Renderer</em>, allows you to create quotes as visually attractive images in JPEG, PNG or SVG format.
+          <em>Greet-o-Quote</em> allows you to create greeting cards or quotes as visually attractive images in JPEG, PNG or SVG format.
         </div>
         <div class="para-help">
           This web application neither collects private information, nor uses cookies, and doesn't even make external
@@ -233,14 +233,14 @@
         </div>
         <h4 id="help-install">How to Install</h4>
         <div class="para-help">
-          You can use <em>QuoteIR</em> in a browser as is without any installation. However, it can be installed
+          You can use <em>Greet-o-Quote</em> in a browser as is without any installation. However, it can be installed
           on most  devices via browser. This will give the native app experience and the ability to run offline when
           the internet connection is intermittent or unavailable. Please note that not all browsers are capable of
           web app installation. On handheld devices, ideally, do that with <em>Google Chrome</em> or <em>Microsoft
           Edge</em> on non-Apple devices, and with <em>Safari</em> on Apple devices. You should find and tap <em>Add
           to Home screen</em> menu item (or similar), then follow the prompts. On laptops and desktops, an icon with
           a monitor and an arrow might show up at the end of the address bar. When it is hovered with the mouse
-          cursor, a tooltip will pop: <em>Install QuoteIR</em>. Tap or click that icon and follow the prompts.
+          cursor, a tooltip will pop: <em>Install Greet-o-Quote</em>. Tap or click that icon and follow the prompts.
         </div>
         <h4 id="help-use">How to Use</h4>
         <div class="para-help">
