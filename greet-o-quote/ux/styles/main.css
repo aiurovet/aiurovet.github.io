@@ -150,7 +150,7 @@ textarea {
   margin-left: 1em;
   width: 100%;
 }
-#menu-edit:hover, #menu-exch:hover, #menu-help:hover, #menu-size:hover, #menu-user:hover {
+#menu-edit:hover, #menu-exch:hover, #menu-help:hover, #menu-save:hover, #menu-size:hover, #menu-user:hover {
   background-color: var(--dialog-caption-bg-color-1);
   color: var(--dialog-caption-fg-color-1);
   font-weight: bold;
