@@ -6,6 +6,8 @@
 /* PARAMETERS */
 
 :root {
+  --dialog-caption-bg-color-1: rgb(103, 25, 210);
+  --dialog-caption-fg-color-1: white;
 }
 
 /* NODES */
@@ -123,32 +125,23 @@ textarea {
 
 /* ELEMENTS: */
 
-#edit-footer {
+.edit-control.footer, .edit-control.header, .edit-control.phrase {
+  height: 100%;
+  width: 100%;
+}
+#edit-back-file, #edit-back-or, #edit-back-url, #edit-footer, #edit-header, #edit-phrase {
   flex-grow: 1;
-  margin-top: 0.5em;
-}
-#edit-footer-flag, #edit-header-flag {
-  min-width: 1.5em;
-  min-height: 1.5em;
-}
-#edit-footer-flag {
-  margin: 1em 1em 0 0;
-}
-#edit-footer, #edit-header, #edit-phrase {
   font-family: inherit;
   font-size: inherit;
 }
-#edit-header {
-  flex-grow: 1;
-  margin-bottom: 0.5em;
+#edit-back-file, #edit-back-or, #edit-back-url {
+  align-self: center;
 }
-#edit-header-flag {
-  margin: 0 1em 1em 0;
+#edit-back-or {
+  margin: 0 0.5em;
 }
-#edit-phrase {
-  height: 100%;
-  margin-left: 1em;
-  width: 100%;
+#edit-footer, #edit-header, #edit-phrase {
+  align-self: stretch;
 }
 #menu-edit:hover, #menu-exch:hover, #menu-help:hover, #menu-save:hover, #menu-size:hover, #menu-user:hover {
   background-color: var(--dialog-caption-bg-color-1);

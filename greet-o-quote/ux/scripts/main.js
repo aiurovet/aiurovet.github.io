@@ -99,28 +99,6 @@ class Main {
       width: "3em",
     });
   }
-
-  //////////////////////////////////////////////////////////////////////////////
-
-  onCheckEditQuoteFlag(jqCheck) {
-    const user = this.data.getSelectedUser();
-
-    if (!user) {
-      return;
-    }
-
-    const jqEdit = jqCheck.next();
-    const isChecked = jqCheck.prop("checked") ? true : false;
-
-    jqEdit.enable(isChecked);
-
-    if (isChecked) {
-      jqEdit.postFocus();
-    } else {
-      jqEdit.val(null);
-      $("#edit-phrase").postFocus();
-    }
-  }
  
   //////////////////////////////////////////////////////////////////////////////
 
@@ -135,12 +113,16 @@ class Main {
 
   //////////////////////////////////////////////////////////////////////////////
 
-  onClickEditQuote() {
+  onClickEditQuote(tabNo) {
     const user = this.data.getSelectedUser();
 
     if (!user) {
-      return;
+      return null;
     }
+
+    const jqTabCtrl = $("#edit-quote-tabctrl").tabctrl({
+      selectedItemNo: tabNo ?? 2,
+    });
 
     const that = this;
 
@@ -154,7 +136,12 @@ class Main {
         that.#applyEditTextElem(jqEditPhrase, user.phrase, true);
         that.#applyEditTextElem(jqEditFooter, user.footer);
 
+        return;
+      }
+      
+      if (event === "after-show") {
         jqEditPhrase.postFocus();
+        jqTabCtrl.setBounds();
 
         return;
       }
@@ -173,6 +160,8 @@ class Main {
         return;
       }
     });
+
+    return null;
   }
 
   //////////////////////////////////////////////////////////////////////////////
@@ -429,14 +418,11 @@ class Main {
 
   #applyEditTextElem(jqEdit, look, hasEdit) {
     const text = look.text;
-    const jqCheck = jqEdit.prev();
 
     if ((hasEdit === undefined) || (hasEdit === null)) {
       hasEdit = text ? true : false;
     }
 
-    jqCheck.prop("checked", hasEdit)
-    jqEdit.enable(hasEdit);
     jqEdit.val(text);
   }
 

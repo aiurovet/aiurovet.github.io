@@ -15,6 +15,7 @@
   <link rel="stylesheet" href="../lib/ux/styles/listedit.css?v=0.1.0">
   <link rel="stylesheet" href="../lib/ux/styles/msgbox.css?v=0.1.0">
   <link rel="stylesheet" href="../lib/ux/styles/spinner.css?v=0.1.0">
+  <link rel="stylesheet" href="../lib/ux/styles/tabctrl.css?v=0.1.0">
   <link rel="stylesheet" href="../ux/styles/fonts.css?v=0.1.0">
   <link rel="stylesheet" href="ux/styles/info.css?v=0.1.0">
   <link rel="stylesheet" href="ux/styles/main.css?v=0.1.0">
@@ -34,6 +35,7 @@
   <script src="../lib/ux/scripts/looktext.js?v=0.1.0"></script>
   <script src="../lib/ux/scripts/msgbox.js?v=0.1.0"></script>
   <script src="../lib/ux/scripts/spinner.js?v=0.1.0"></script>
+  <script src="../lib/ux/scripts/tabctrl.js?v=0.1.0"></script>
   <script src="dl/data.js?v=0.1.0"></script>
   <script src="dl/user.js?v=0.1.0"></script>
   <script src="ux/scripts/main.js?v=0.1.0"></script>
@@ -67,10 +69,10 @@
     </div>
     <div class="main-row max">
       <div id="action-no" class="main-col btn"></div>
-      <div id="quote" class="main-col quote" onclick="main.onClickLookPicker(event, 'Background Style');">
-        <div id="header" class="main-col quote header" onclick="main.onClickLookPicker(event, 'Header Style');"><p></p></div>
-        <div id="phrase" class="main-col quote phrase" onclick="main.onClickLookPicker(event, 'Phrase Style');"><p></p></div>
-        <div id="footer" class="main-col quote footer" onclick="main.onClickLookPicker(event, 'Footer Style');"></div>
+      <div id="quote" class="main-col quote">
+        <div id="header" class="main-col quote header" onclick="main.onClickEditQuote(1);"><p></p></div>
+        <div id="phrase" class="main-col quote phrase" onclick="main.onClickEditQuote(2);"><p></p></div>
+        <div id="footer" class="main-col quote footer" onclick="main.onClickEditQuote(3);"></div>
       </div>
       <div id="action-yes" class="main-col btn"></div>
     </div>
@@ -79,7 +81,7 @@
         <span id="menu-exch" onclick="main.onClickExchange();">Exchange</span>
       </div>
       <div id="main-edit" class="main-col info max">
-        <span id="menu-edit" onclick="main.onClickEditQuote();">Edit Text</span>
+        <span id="menu-edit" onclick="main.onClickEditQuote(0);">Background</span>
       </div>
       <div id="main-size" class="main-col info right">
         <span id="menu-size"></span> 
@@ -92,22 +94,43 @@
   <div id="edit-quote" style="display: none;"">
     <div class="ui-dialog-content pref">
       <div class="ui-dialog-caption pref">
-        <h4 class="ui-dialog-caption-text">Edit Text</h4>
+        <h4 class="ui-dialog-caption-text">Edit Card</h4>
         <div class="ui-dialog-filler"></div>
         <div class="ui-dialog-icon help" onclick="main.onClickHelp('help-pref-edit', '.ui-listedit-item[selected]')"></div>
         <div class="ui-dialog-icon close"></div>
       </div>
       <div class="ui-dialog-client pref edit-quote">
-        <div class="edit-control">
-          <input id="edit-header-flag" type="checkbox" onclick="main.onCheckEditQuoteFlag($(this));">
-          <textarea id="edit-header" cols="50" rows="2" placeholder="Header"></textarea>
-        </div>
-        <div class="edit-control">
-          <textarea id="edit-phrase" cols="50" rows="5" placeholder="Insert your phrase here"></textarea>
-        </div>
-        <div class="edit-control">
-          <input id="edit-footer-flag" type="checkbox" onclick="main.onCheckEditQuoteFlag($(this));">
-          <textarea id="edit-footer" cols="50" rows="2" placeholder="Footer"></textarea>
+        <div id="edit-quote-tabctrl" class="ui-tabctrl">
+          <div class="ui-tabitem-captions">
+            <div class="ui-tabitem-caption">Background</div>
+            <div class="ui-tabitem-caption">Header</div>
+            <div class="ui-tabitem-caption">Phrase</div>
+            <div class="ui-tabitem-caption">Footer</div>
+          </div>
+          <div class="ui-tabitem-contents">
+            <div class="ui-tabitem-content">
+              <div class="edit-control back-file">
+                <input id="edit-back-file" type="file" placeholder="File"></input>
+                <div id="edit-back-or">or</div>
+                <input id="edit-back-url" type="url" placeholder="URL"></input>
+              </div>
+            </div>
+            <div class="ui-tabitem-content">
+              <div class="edit-control header">
+                <textarea id="edit-header" cols="40" placeholder="Type your header here"></textarea>
+              </div>
+            </div>
+            <div class="ui-tabitem-content phrase">
+              <div class="edit-control phrase">
+                <textarea id="edit-phrase" cols="40" rows="5" placeholder="Type your phrase here"></textarea>
+              </div>
+            </div>
+            <div class="ui-tabitem-content footer">
+              <div class="edit-control footer">
+                <textarea id="edit-footer" cols="40" placeholder="Type your footer here"></textarea>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>

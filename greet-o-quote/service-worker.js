@@ -38,10 +38,12 @@ self.addEventListener("install", (event) => {
         "/lib/ux/scripts/selectalign.js?v=0.1.0",
         "/lib/ux/scripts/selectfont.js?v=0.1.0",
         "/lib/ux/scripts/spinner.js?v=0.1.0",
+        "/lib/ux/scripts/tabctrl.js?v=0.1.0",
         "/lib/ux/styles/dialog.css?v=0.1.0",
         "/lib/ux/styles/help.css?v=0.1.0",
         "/lib/ux/styles/listedit.css?v=0.1.0",
         "/lib/ux/styles/msgbox.css?v=0.1.0",
+        "/lib/ux/styles/tabctrl.css?v=0.1.0",
         "/ux/styles/fonts.css?v=0.1.0",
       ]);
     })
