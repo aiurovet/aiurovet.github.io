@@ -76,7 +76,7 @@ textarea {
   height: 100%;
   padding: 0 1em;
 }
-.main-col.quote {
+.main-col.card {
   align-self: center;
   display: block;
   font-family: sans-serif;
@@ -89,20 +89,20 @@ textarea {
   max-height: 100%;
   padding: 0.25em 0.5em;
 }
-.main-col.quote.footer, .main-col.quote.header, .main-col.quote.phrase {
+.main-col.card.footer, .main-col.card.header, .main-col.card.phrase {
   align-self: center;
   display: block;
   margin: 0;
   padding: 0;
   width: 100%;
 }
-.main-col.quote > p {
+.main-col.card > p {
   align-self: center;
   display: flex;
   flex-direction: column;
   margin: 0;
 }
-.main-col.quote > p:not(:last-child) {
+.main-col.card > p:not(:last-child) {
   margin-bottom: 0.5em;
 }
 .main-row {
@@ -162,6 +162,6 @@ textarea {
 #menu-user {
   margin: 0 0.5em;
 }
-#quote {
+#card {
   overflow-y: auto;
 }

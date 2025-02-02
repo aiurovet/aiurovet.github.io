@@ -26,7 +26,7 @@ $(document).ready(function() {
   //
   main.initSize();
   main.setUser(false);
-  main.onClickEditQuote();
+  main.onClickEditCard();
 });
 
 ////////////////////////////////////////////////////////////////////////////////
@@ -76,7 +76,7 @@ class Main {
       return;
     }
 
-    const jqElems = $("#quote, #phrase");
+    const jqElems = $("#card, #phrase");
     const that = this;
 
     this.#jqSpinner = $("#menu-size").spinner({
@@ -113,20 +113,28 @@ class Main {
 
   //////////////////////////////////////////////////////////////////////////////
 
-  onClickEditQuote(tabNo) {
+  onClickEditCard(tabNo) {
     const user = this.data.getSelectedUser();
 
     if (!user) {
       return null;
     }
 
-    const jqTabCtrl = $("#edit-quote-tabctrl").tabctrl({
-      selectedItemNo: tabNo ?? 2,
+    const jqTabCtrlType = $("#edit-type-tabctrl").tabctrl({
+      selectedItemNo: tabNo ?? 1, // default type: matter
+    });
+
+    const jqTabCtrlMatter = $("#edit-card-tabctrl").tabctrl({
+      selectedItemNo: tabNo ?? 2, // default matter: phrase
+    });
+
+    const jqTabCtrlStyle = $("#edit-style-tabctrl").tabctrl({
+      selectedItemNo: tabNo ?? 0, // default style: background
     });
 
     const that = this;
 
-    that.pref.onClick("#edit-quote", function (event) {
+    that.pref.onClick("#edit-card", function (event) {
       const jqEditHeader = $("#edit-header");
       const jqEditPhrase = $("#edit-phrase");
       const jqEditFooter = $("#edit-footer");
@@ -140,8 +148,10 @@ class Main {
       }
       
       if (event === "after-show") {
-        jqEditPhrase.postFocus();
-        jqTabCtrl.setBounds();
+        //jqEditPhrase.postFocus();
+        jqTabCtrlType.setBounds();
+        jqTabCtrlStyle.setBounds();
+        jqTabCtrlMatter.setBounds();
 
         return;
       }
@@ -156,6 +166,14 @@ class Main {
         Main.breakTextAndAssign(jqEditHeader, $("#header"));
         Main.breakTextAndAssign(jqEditPhrase, $("#phrase"));
         Main.breakTextAndAssign(jqEditFooter, $("#footer"));
+
+        return;
+      }
+      
+      if (event === "after-hide") {
+        jqTabCtrlType.init();
+        jqTabCtrlStyle.init();
+        jqTabCtrlMatter.init();
 
         return;
       }
@@ -234,7 +252,7 @@ class Main {
     var jqElem = $(elem);
     var id = elem.id || jqElem.parent()[0].id;
 
-    var isBack = (id === "quote");
+    var isBack = (id === "card");
     var isFooter = (id === "footer");
     var isHeader = (id === "header");
     var isPhrase = (id === "phrase");

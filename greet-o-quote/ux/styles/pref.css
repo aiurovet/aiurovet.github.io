@@ -41,7 +41,7 @@
 .ui-dialog-client.pref.user {
   overflow: auto;
 }
-.ui-dialog-client.pref.edit-quote, .ui-dialog-client.pref.look-picker, .ui-dialog-client.pref.user-edit {
+.ui-dialog-client.pref.edit-card, .ui-dialog-client.pref.look-picker, .ui-dialog-client.pref.user-edit {
   display: flex;
   flex-direction: column;
 }

@@ -69,10 +69,10 @@
     </div>
     <div class="main-row max">
       <div id="action-no" class="main-col btn"></div>
-      <div id="quote" class="main-col quote">
-        <div id="header" class="main-col quote header" onclick="main.onClickEditQuote(1);"><p></p></div>
-        <div id="phrase" class="main-col quote phrase" onclick="main.onClickEditQuote(2);"><p></p></div>
-        <div id="footer" class="main-col quote footer" onclick="main.onClickEditQuote(3);"></div>
+      <div id="card" class="main-col card">
+        <div id="header" class="main-col card header" onclick="main.onClickEditCard(1);"><p></p></div>
+        <div id="phrase" class="main-col card phrase" onclick="main.onClickEditCard(2);"><p></p></div>
+        <div id="footer" class="main-col card footer" onclick="main.onClickEditCard(3);"></div>
       </div>
       <div id="action-yes" class="main-col btn"></div>
     </div>
@@ -81,7 +81,7 @@
         <span id="menu-exch" onclick="main.onClickExchange();">Exchange</span>
       </div>
       <div id="main-edit" class="main-col info max">
-        <span id="menu-edit" onclick="main.onClickEditQuote(0);">Background</span>
+        <span id="menu-edit" onclick="main.onClickEditCard(0);">Background</span>
       </div>
       <div id="main-size" class="main-col info right">
         <span id="menu-size"></span> 
@@ -89,9 +89,9 @@
     </div>
   </div>
 
-  <!-- EDIT QUOTE -->
+  <!-- EDIT CARD -->
 
-  <div id="edit-quote" style="display: none;"">
+  <div id="edit-card" style="display: none;"">
     <div class="ui-dialog-content pref">
       <div class="ui-dialog-caption pref">
         <h4 class="ui-dialog-caption-text">Edit Card</h4>
@@ -99,35 +99,73 @@
         <div class="ui-dialog-icon help" onclick="main.onClickHelp('help-pref-edit', '.ui-listedit-item[selected]')"></div>
         <div class="ui-dialog-icon close"></div>
       </div>
-      <div class="ui-dialog-client pref edit-quote">
-        <div id="edit-quote-tabctrl" class="ui-tabctrl">
+      <div class="ui-dialog-client pref edit-card">
+        <div id="edit-type-tabctrl" class="ui-tabctrl">
           <div class="ui-tabitem-captions">
-            <div class="ui-tabitem-caption">Background</div>
-            <div class="ui-tabitem-caption">Header</div>
-            <div class="ui-tabitem-caption">Phrase</div>
-            <div class="ui-tabitem-caption">Footer</div>
+            <div class="ui-tabitem-caption">Style</div>
+            <div class="ui-tabitem-caption">Matter</div>
           </div>
           <div class="ui-tabitem-contents">
             <div class="ui-tabitem-content">
-              <div class="edit-control back-file">
-                <input id="edit-back-file" type="file" placeholder="File"></input>
-                <div id="edit-back-or">or</div>
-                <input id="edit-back-url" type="url" placeholder="URL"></input>
+              <div id="edit-style-tabctrl" class="ui-tabctrl">
+                <div class="ui-tabitem-captions">
+                  <div class="ui-tabitem-caption">Background</div>
+                  <div class="ui-tabitem-caption">Header</div>
+                  <div class="ui-tabitem-caption">Phrase</div>
+                  <div class="ui-tabitem-caption">Footer</div>
+                </div>
+                <div class="ui-tabitem-contents">
+                  <div class="ui-tabitem-content">
+                    <div class="edit-control back-style">
+                    </div>
+                  </div>
+                  <div class="ui-tabitem-content">
+                    <div class="edit-control header-style">
+                    </div>
+                  </div>
+                  <div class="ui-tabitem-content phrase">
+                    <div class="edit-control phrase-style">
+                    </div>
+                  </div>
+                  <div class="ui-tabitem-content footer">
+                    <div class="edit-control footer-style">
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
             <div class="ui-tabitem-content">
-              <div class="edit-control header">
-                <textarea id="edit-header" cols="40" placeholder="Type your header here"></textarea>
-              </div>
-            </div>
-            <div class="ui-tabitem-content phrase">
-              <div class="edit-control phrase">
-                <textarea id="edit-phrase" cols="40" rows="5" placeholder="Type your phrase here"></textarea>
-              </div>
-            </div>
-            <div class="ui-tabitem-content footer">
-              <div class="edit-control footer">
-                <textarea id="edit-footer" cols="40" placeholder="Type your footer here"></textarea>
+              <div id="edit-card-tabctrl" class="ui-tabctrl">
+                <div class="ui-tabitem-captions">
+                  <div class="ui-tabitem-caption">Background</div>
+                  <div class="ui-tabitem-caption">Header</div>
+                  <div class="ui-tabitem-caption">Phrase</div>
+                  <div class="ui-tabitem-caption">Footer</div>
+                </div>
+                <div class="ui-tabitem-contents">
+                  <div class="ui-tabitem-content">
+                    <div class="edit-control back-file">
+                      <input id="edit-back-file" type="file" placeholder="File"></input>
+                      <div id="edit-back-or">or</div>
+                      <input id="edit-back-url" type="url" placeholder="URL"></input>
+                    </div>
+                  </div>
+                  <div class="ui-tabitem-content">
+                    <div class="edit-control header">
+                      <textarea id="edit-header" cols="40" placeholder="Type your header here"></textarea>
+                    </div>
+                  </div>
+                  <div class="ui-tabitem-content phrase">
+                    <div class="edit-control phrase">
+                      <textarea id="edit-phrase" cols="40" rows="5" placeholder="Type your phrase here"></textarea>
+                    </div>
+                  </div>
+                  <div class="ui-tabitem-content footer">
+                    <div class="edit-control footer">
+                      <textarea id="edit-footer" cols="40" placeholder="Type your footer here"></textarea>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
