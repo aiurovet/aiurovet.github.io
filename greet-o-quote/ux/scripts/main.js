@@ -67,6 +67,13 @@ class Main {
     ;
   }
 
+  static getSelectedBackFile() {
+    const jqFile = $("#edit-back-file");
+    const files = jqFile.length <= 0 ? null : jqFile[0].files;
+
+    return files && (files.length > 0) ? files[0] : null;
+  }
+
   //////////////////////////////////////////////////////////////////////////////
 
   initSize() {
@@ -102,6 +109,23 @@ class Main {
  
   //////////////////////////////////////////////////////////////////////////////
 
+  onClickBrowse_BackFile() {
+    $("#edit-back-file").click();
+  }
+ 
+  //////////////////////////////////////////////////////////////////////////////
+
+  onClickChange_BackFile() {
+    const jqTarget = $("#edit-back-url");
+    const file = Main.getSelectedBackFile();
+
+    if (file) {
+      jqTarget.val(file.name);
+    }
+  }
+ 
+  //////////////////////////////////////////////////////////////////////////////
+
   onClickCopy() {
     createEmptyDialog().msgbox({
       title: MsgBoxTitle_Information,
@@ -120,6 +144,12 @@ class Main {
       return null;
     }
 
+
+    var jqAlignBack = $("#edit-back-align");
+    jqAlignBack.selectAlign({isForImage: true, value: user.background.alignment.value, callers: $("#card")});
+
+    $("#edit-back-color").val(Colors.toHex(user.background.color));
+
     const jqTabCtrlType = $("#edit-type-tabctrl").tabctrl({
       selectedItemNo: tabNo ?? 1, // default type: matter
     });
@@ -134,7 +164,7 @@ class Main {
 
     const that = this;
 
-    that.pref.onClick("#edit-card", function (event) {
+    this.pref.onClick("#edit-card", function (event) {
       const jqEditHeader = $("#edit-header");
       const jqEditPhrase = $("#edit-phrase");
       const jqEditFooter = $("#edit-footer");
@@ -148,10 +178,9 @@ class Main {
       }
       
       if (event === "after-show") {
-        //jqEditPhrase.postFocus();
-        jqTabCtrlType.setBounds();
-        jqTabCtrlStyle.setBounds();
         jqTabCtrlMatter.setBounds();
+        jqTabCtrlStyle.setBounds();
+        jqTabCtrlType.setBounds();
 
         return;
       }
@@ -171,9 +200,9 @@ class Main {
       }
       
       if (event === "after-hide") {
-        jqTabCtrlType.init();
-        jqTabCtrlStyle.init();
-        jqTabCtrlMatter.init();
+        jqTabCtrlMatter.clear();
+        jqTabCtrlStyle.clear();
+        jqTabCtrlType.clear();
 
         return;
       }
@@ -240,7 +269,7 @@ class Main {
   }
 
   //////////////////////////////////////////////////////////////////////////////
-
+/*
   onClickLookPicker(clickEvent, title) {
     let user = this.data.getSelectedUser();
 
@@ -337,7 +366,7 @@ class Main {
       }
     });
   }
-
+*/
   //////////////////////////////////////////////////////////////////////////////
 
   onClickSave(fileFormat) {

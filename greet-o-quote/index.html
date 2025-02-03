@@ -9,7 +9,6 @@
   <title>Greet-o-Quote</title>
   <link rel="manifest" href="./manifest.json?v=0.1.0" crossorigin="use-credentials">
   <link rel="shortcut icon" type="image/x-icon" href="ux/images/greet-o-quote.svg?v=0.1.0">
-  <link rel="stylesheet" href="../lib/import/styles/acolorpicker-5.3.2.min.css">
   <link rel="stylesheet" href="../lib/ux/styles/dialog.css?v=0.1.0">
   <link rel="stylesheet" href="../lib/ux/styles/help.css?v=0.1.0">
   <link rel="stylesheet" href="../lib/ux/styles/listedit.css?v=0.1.0">
@@ -20,12 +19,12 @@
   <link rel="stylesheet" href="ux/styles/info.css?v=0.1.0">
   <link rel="stylesheet" href="ux/styles/main.css?v=0.1.0">
   <link rel="stylesheet" href="ux/styles/pref.css?v=0.1.0">
-  <script src="../lib/import/scripts/acolorpicker-5.3.2.min.js"></script>
   <script src="../lib/import/scripts/html-to-image-1.11.11.min.js"></script>
   <script src="../lib/import/scripts/jquery-3.7.1.slim.min.js"></script>
   <script src="../lib/dl/extensions.js?v=0.1.0"></script>
   <script src="../lib/dl/json.js?v=0.1.0"></script>
   <script src="../lib/ux/scripts/alignment.js?v=0.1.0"></script>
+  <script src="../lib/ux/scripts/colors.js?v=0.1.0"></script>
   <script src="../lib/ux/scripts/common.js?v=0.1.0"></script>
   <script src="../lib/ux/scripts/dialog.js?v=0.1.0"></script>
   <script src="../lib/ux/scripts/selectalign.js?v=0.1.0"></script>
@@ -144,11 +143,20 @@
                 </div>
                 <div class="ui-tabitem-contents">
                   <div class="ui-tabitem-content">
+                    <div class="edit-control">
+                      <div class="edit-label">Color:</div>
+                      <input id="edit-back-color" type="color"></input>
+                    </div>    
                     <div class="edit-control back-file">
-                      <input id="edit-back-file" type="file" placeholder="File"></input>
-                      <div id="edit-back-or">or</div>
-                      <input id="edit-back-url" type="url" placeholder="URL"></input>
+                      <input id="edit-back-file" type="file" style="display: none;" onchange="main.onClickChange_BackFile();"></input>
+                      <div class="edit-label">File or URL:</div>
+                      <input id="edit-back-url" type="url"></input>
+                      <button id="edit-back-browse" onclick="main.onClickBrowse_BackFile();">&middot;&middot;&middot;</button>
                     </div>
+                    <div class="edit-control">
+                      <div class="edit-label">Align:</div>
+                      <select id="edit-back-align"></select>
+                    </div>    
                   </div>
                   <div class="ui-tabitem-content">
                     <div class="edit-control header">

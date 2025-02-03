@@ -8,10 +8,14 @@
 .ui-tabctrl {
   border: 1px solid black;
   border-top: none;
+  border-top-left-radius: 0.25em;
+  border-top-right-radius: 0.25em;
 }
 .ui-tabitem-caption {
   border: 1px solid black;
   border-left: none;
+  border-top-left-radius: 0.25em;
+  border-top-right-radius: 0.25em;
   flex-grow: 1;
   padding: 0.25em 0.5em;
   text-align: center;
@@ -26,15 +30,14 @@
 }
 .ui-tabitem-caption[selected] {
   border-bottom: none;
-  color: white;
-  background: black;
+  font-weight: bold;
 }
 .ui-tabitem-captions {
   align-items: stretch;
   align-content: stretch;
   display: flex;
   flex-direction: row;
-  font-size: 1em;
+  font-size: 0.75em;
   padding-bottom: 0.25em;
   width: 100%;
 }

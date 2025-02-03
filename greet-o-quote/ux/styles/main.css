@@ -34,6 +34,15 @@ textarea {
 
 /* CLASSES */
 
+.edit-control > button, .edit-control > input, .edit-control > .edit-label, .edit-control > select {
+  margin-bottom: 0.5em;
+}
+.edit-label {
+  color: rgb(64, 64, 64);
+  display: inline-block;
+  font-size: 0.75em;
+  width: 5.5em;
+}
 .main {
   background-color: rgb(64, 64, 64);
   background-image: repeating-linear-gradient(-45deg, rgba(255,255,255, 0.25), rgba(255,255,255, 0.25) 1px, transparent 1px, transparent 8px);
@@ -129,13 +138,21 @@ textarea {
   height: 100%;
   width: 100%;
 }
+#edit-back-align {
+  font-size: 1em;
+  width: 11em;
+}
+#edit-back-browse {
+  margin-left: 0.5em;
+  font-size: 1em;
+}
 #edit-back-file, #edit-back-or, #edit-back-url, #edit-footer, #edit-header, #edit-phrase {
   flex-grow: 1;
   font-family: inherit;
   font-size: inherit;
 }
 #edit-back-file, #edit-back-or, #edit-back-url {
-  align-self: center;
+  align-self: flex-start;
 }
 #edit-back-or {
   margin: 0 0.5em;
@@ -164,4 +181,7 @@ textarea {
 }
 #card {
   overflow-y: auto;
+}
+#edit-card {
+  font-size: 0.75em;
 }
