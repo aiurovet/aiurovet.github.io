@@ -28,6 +28,10 @@ body, html {
   padding: 0;
   width: 100%;
 }
+input[type='color'] {
+  font-size: inherit;
+  width: 1.5em;
+}
 textarea {
   overflow-y: scroll;
 }

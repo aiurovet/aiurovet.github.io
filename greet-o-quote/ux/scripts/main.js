@@ -148,13 +148,9 @@ class Main {
     var jqAlignBack = $("#edit-back-align");
     jqAlignBack.selectAlign({isForImage: true, value: user.background.alignment.value, callers: $("#card")});
 
-    $("#edit-back-color").val(Colors.toHex(user.background.color));
+    $("#edit-back-color").val(Colors.toHex(user.background.color) );
 
-    const jqTabCtrlType = $("#edit-type-tabctrl").tabctrl({
-      selectedItemNo: tabNo ?? 1, // default type: matter
-    });
-
-    const jqTabCtrlMatter = $("#edit-card-tabctrl").tabctrl({
+    const jqTabCtrlContent = $("#edit-content-tabctrl").tabctrl({
       selectedItemNo: tabNo ?? 2, // default matter: phrase
     });
 
@@ -162,7 +158,23 @@ class Main {
       selectedItemNo: tabNo ?? 0, // default style: background
     });
 
+    const jqTabCtrlType = $("#edit-type-tabctrl").tabctrl({
+      selectedItemNo: tabNo ?? 1, // default type: matter
+    });
+
     const that = this;
+
+/*
+Background
+    Style
+        Color
+        To Color
+        Direction (North-South, West-East, NorthWest-SouthEast, SouthWest-NorthEast, Radial)
+        From (%)
+    Content
+        URL
+        Align
+*/
 
     this.pref.onClick("#edit-card", function (event) {
       const jqEditHeader = $("#edit-header");
@@ -176,15 +188,12 @@ class Main {
 
         return;
       }
-      
       if (event === "after-show") {
-        jqTabCtrlMatter.setBounds();
-        jqTabCtrlStyle.setBounds();
-        jqTabCtrlType.setBounds();
+        jqTabCtrlContent.setBounds();
+        jqTabCtrlStyle.setBounds(jqTabCtrlContent);
 
         return;
       }
-      
       if (event === "before-hide") {
         that.#acquireEditTextElem(jqEditHeader, user.header);
         that.#acquireEditTextElem(jqEditPhrase, user.phrase);
@@ -198,9 +207,8 @@ class Main {
 
         return;
       }
-      
       if (event === "after-hide") {
-        jqTabCtrlMatter.clear();
+        jqTabCtrlContent.clear();
         jqTabCtrlStyle.clear();
         jqTabCtrlType.clear();
 

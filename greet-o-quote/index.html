@@ -102,7 +102,7 @@
         <div id="edit-type-tabctrl" class="ui-tabctrl">
           <div class="ui-tabitem-captions">
             <div class="ui-tabitem-caption">Style</div>
-            <div class="ui-tabitem-caption">Matter</div>
+            <div class="ui-tabitem-caption">Content</div>
           </div>
           <div class="ui-tabitem-contents">
             <div class="ui-tabitem-content">
@@ -115,8 +115,14 @@
                 </div>
                 <div class="ui-tabitem-contents">
                   <div class="ui-tabitem-content">
-                    <div class="edit-control back-style">
-                    </div>
+                    <div class="edit-control">
+                      <div class="edit-label">Color:</div>
+                      <input id="edit-back-color" type="color"></input>
+                    </div>    
+                    <div class="edit-control">
+                      <div class="edit-label">To Color:</div>
+                      <input id="edit-back-to-color" type="color"></input>
+                    </div>    
                   </div>
                   <div class="ui-tabitem-content">
                     <div class="edit-control header-style">
@@ -134,7 +140,7 @@
               </div>
             </div>
             <div class="ui-tabitem-content">
-              <div id="edit-card-tabctrl" class="ui-tabctrl">
+              <div id="edit-content-tabctrl" class="ui-tabctrl">
                 <div class="ui-tabitem-captions">
                   <div class="ui-tabitem-caption">Background</div>
                   <div class="ui-tabitem-caption">Header</div>
@@ -143,15 +149,9 @@
                 </div>
                 <div class="ui-tabitem-contents">
                   <div class="ui-tabitem-content">
-                    <div class="edit-control">
-                      <div class="edit-label">Color:</div>
-                      <input id="edit-back-color" type="color"></input>
-                    </div>    
                     <div class="edit-control back-file">
-                      <input id="edit-back-file" type="file" style="display: none;" onchange="main.onClickChange_BackFile();"></input>
-                      <div class="edit-label">File or URL:</div>
+                      <div class="edit-label">Image URL:</div>
                       <input id="edit-back-url" type="url"></input>
-                      <button id="edit-back-browse" onclick="main.onClickBrowse_BackFile();">&middot;&middot;&middot;</button>
                     </div>
                     <div class="edit-control">
                       <div class="edit-label">Align:</div>
