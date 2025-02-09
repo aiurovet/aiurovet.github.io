@@ -30,6 +30,7 @@ self.addEventListener("install", (event) => {
         "/lib/ux/scripts/colors.js?v=0.1.0",
         "/lib/ux/scripts/common.js?v=0.1.0",
         "/lib/ux/scripts/dialog.js?v=0.1.0",
+        "/lib/ux/scripts/gradient.js?v=0.1.0",
         "/lib/ux/scripts/lookback.js?v=0.1.0",
         "/lib/ux/scripts/looktext.js?v=0.1.0",
         "/lib/ux/scripts/listedit.js?v=0.1.0",
