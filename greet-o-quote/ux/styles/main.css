@@ -45,7 +45,17 @@ textarea {
   color: rgb(64, 64, 64);
   display: inline-block;
   font-size: 0.75em;
-  width: 5.5em;
+  width: 6em;
+}
+.edit-control.footer, .edit-control.header, .edit-control.phrase {
+  height: 100%;
+  width: 100%;
+}
+.edit-label > input[type="checkbox"] {
+  height: 1.5em;
+  margin: 0 0.5em 0.3em 0;
+  vertical-align: bottom;
+  width: 2em;
 }
 .main {
   background-color: rgb(64, 64, 64);
@@ -138,10 +148,6 @@ textarea {
 
 /* ELEMENTS: */
 
-.edit-control.footer, .edit-control.header, .edit-control.phrase {
-  height: 100%;
-  width: 100%;
-}
 #edit-back-align {
   font-size: 1em;
   width: 11em;

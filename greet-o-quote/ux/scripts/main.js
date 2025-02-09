@@ -295,7 +295,7 @@ Background
     var isPhrase = (id === "phrase");
 
     var jqLookFor =
-      isBack ? $("#quote") :
+      isBack ? $("#card") :
       isHeader ? $("#header") :
       isPhrase ? $("#phrase") :
       isFooter ? $("#footer") :
@@ -354,7 +354,7 @@ Background
         $(".ui-dialog-caption.pref.look-picker > .ui-dialog-caption-text").text(title)
       } else if (dlgEvent === "before-hide") {
         if (isBack) {
-          that.#applyLookBackElem($("#quote"), look);
+          that.#applyLookBackElem($("#card"), look);
         } else if (alignPicker && fontPicker) {
           look.font.family = fontPicker.val();
           look.alignment = new Alignment(alignPicker.val());
@@ -384,7 +384,7 @@ Background
       fileFormat === Data.fileFormatJpg ? htmlToImage.toJpg :
       fileFormat === Data.fileFormatSvg ? htmlToImage.toSvg : htmlToImage.toPng;
 
-    proc($("#quote")[0]).then(function (dataUrl) {
+    proc($("#caes")[0]).then(function (dataUrl) {
       const dt = new Date().toLocalDate().getDateParts();
       const link = document.createElement("a");
 
@@ -445,7 +445,7 @@ Background
     look = user.phrase;
     let fontSize = look.font.size;
 
-    $("#quote").css({
+    $("#card").css({
       "background": user.background.color,
       "font-size": fontSize,
     });
