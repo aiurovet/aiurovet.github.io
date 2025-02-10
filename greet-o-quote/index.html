@@ -103,81 +103,45 @@
         <div class="ui-dialog-icon close"></div>
       </div>
       <div class="ui-dialog-client pref edit-card">
-        <div id="edit-type-tabctrl" class="ui-tabctrl">
+        <div id="edit-card-tabctrl" class="ui-tabctrl">
           <div class="ui-tabitem-captions">
-            <div class="ui-tabitem-caption">Style</div>
-            <div class="ui-tabitem-caption">Content</div>
+            <div class="ui-tabitem-caption">Background</div>
+            <div class="ui-tabitem-caption">Header</div>
+            <div class="ui-tabitem-caption">Phrase</div>
+            <div class="ui-tabitem-caption">Footer</div>
           </div>
           <div class="ui-tabitem-contents">
             <div class="ui-tabitem-content">
-              <div id="edit-style-tabctrl" class="ui-tabctrl">
-                <div class="ui-tabitem-captions">
-                  <div class="ui-tabitem-caption">Background</div>
-                  <div class="ui-tabitem-caption">Header</div>
-                  <div class="ui-tabitem-caption">Phrase</div>
-                  <div class="ui-tabitem-caption">Footer</div>
-                </div>
-                <div class="ui-tabitem-contents">
-                  <div class="ui-tabitem-content">
-                    <div class="edit-control">
-                      <label for="use-from-color" class="edit-label"><input type="checkbox" id="use-from-color">Color:</label>
-                      <input id="edit-from-color" type="color"></input>
-                    </div>    
-                    <div class="edit-control">
-                      <label for="use-to-color" class="edit-label"><input type="checkbox" id="use-to-color">Gradient:</label>
-                      <input id="edit-to-color" type="color"></input>
-                    </div>    
-                  </div>
-                  <div class="ui-tabitem-content">
-                    <div class="edit-control header-style">
-                    </div>
-                  </div>
-                  <div class="ui-tabitem-content phrase">
-                    <div class="edit-control phrase-style">
-                    </div>
-                  </div>
-                  <div class="ui-tabitem-content footer">
-                    <div class="edit-control footer-style">
-                    </div>
-                  </div>
-                </div>
+              <div class="edit-control">
+                <label for="use-from-color" class="edit-label"><input type="checkbox" id="use-from-color">Color:</label>
+                <input id="edit-from-color" type="color"></input>
+              </div>    
+              <div class="edit-control">
+                <label for="use-to-color" class="edit-label"><input type="checkbox" id="use-to-color">Gradient:</label>
+                <input id="edit-to-color" type="color"></input>
+              </div>    
+              <div class="edit-control back-file">
+                <div class="edit-label">Image URL:</div>
+                <input id="edit-back-url" type="url"></input>
               </div>
+              <div class="edit-control">
+                <div class="edit-label">Align:</div>
+                <select id="edit-back-align"></select>
+              </div>    
             </div>
             <div class="ui-tabitem-content">
-              <div id="edit-content-tabctrl" class="ui-tabctrl">
-                <div class="ui-tabitem-captions">
-                  <div class="ui-tabitem-caption">Background</div>
-                  <div class="ui-tabitem-caption">Header</div>
-                  <div class="ui-tabitem-caption">Phrase</div>
-                  <div class="ui-tabitem-caption">Footer</div>
-                </div>
-                <div class="ui-tabitem-contents">
-                  <div class="ui-tabitem-content">
-                    <div class="edit-control back-file">
-                      <div class="edit-label">Image URL:</div>
-                      <input id="edit-back-url" type="url"></input>
-                    </div>
-                    <div class="edit-control">
-                      <div class="edit-label">Align:</div>
-                      <select id="edit-back-align"></select>
-                    </div>    
-                  </div>
-                  <div class="ui-tabitem-content">
-                    <div class="edit-control header">
-                      <textarea id="edit-header" cols="40" placeholder="Type your header here"></textarea>
-                    </div>
-                  </div>
-                  <div class="ui-tabitem-content phrase">
-                    <div class="edit-control phrase">
-                      <textarea id="edit-phrase" cols="40" rows="5" placeholder="Type your phrase here"></textarea>
-                    </div>
-                  </div>
-                  <div class="ui-tabitem-content footer">
-                    <div class="edit-control footer">
-                      <textarea id="edit-footer" cols="40" placeholder="Type your footer here"></textarea>
-                    </div>
-                  </div>
-                </div>
+              <div class="edit-control header">
+                <textarea id="edit-header" cols="40" placeholder="Type your header here"></textarea>
+              </div>
+            </div>
+            <div class="ui-tabitem-content phrase">
+              <div class="edit-control phrase">
+                <textarea id="edit-phrase" cols="40" rows="5" placeholder="Type your phrase here"></textarea>
+              </div>
+            </div>
+            <div class="ui-tabitem-content footer">
+              <div class="edit-control footer">
+                <textarea id="edit-footer" cols="40" placeholder="Type your footer here"></textarea>
               </div>
             </div>
           </div>

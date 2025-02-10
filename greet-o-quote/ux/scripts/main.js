@@ -150,16 +150,8 @@ class Main {
 
     $("#edit-back-color").val(Colors.toHex(user.background.color) );
 
-    const jqTabCtrlContent = $("#edit-content-tabctrl").tabctrl({
+    const jqTabCtrl = $("#edit-card-tabctrl").tabctrl({
       selectedItemNo: tabNo ?? 2, // default matter: phrase
-    });
-
-    const jqTabCtrlStyle = $("#edit-style-tabctrl").tabctrl({
-      selectedItemNo: tabNo ?? 0, // default style: background
-    });
-
-    const jqTabCtrlType = $("#edit-type-tabctrl").tabctrl({
-      selectedItemNo: tabNo ?? 1, // default type: matter
     });
 
     const that = this;
@@ -189,9 +181,7 @@ Background
         return;
       }
       if (event === "after-show") {
-        jqTabCtrlContent.setBounds();
-        jqTabCtrlStyle.setBounds(jqTabCtrlContent);
-
+        jqTabCtrl.setBounds();
         return;
       }
       if (event === "before-hide") {
@@ -208,10 +198,7 @@ Background
         return;
       }
       if (event === "after-hide") {
-        jqTabCtrlContent.clear();
-        jqTabCtrlStyle.clear();
-        jqTabCtrlType.clear();
-
+        jqTabCtrl.clear();
         return;
       }
     });
