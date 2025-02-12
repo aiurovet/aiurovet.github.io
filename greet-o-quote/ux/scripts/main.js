@@ -151,7 +151,7 @@ class Main {
     $("#edit-back-color").val(Colors.toHex(user.background.color) );
 
     const jqTabCtrl = $("#edit-card-tabctrl").tabctrl({
-      selectedItemNo: tabNo ?? 2, // default matter: phrase
+      selectedItemNo: tabNo ?? 0, // default matter: phrase
     });
 
     const that = this;
@@ -160,9 +160,9 @@ class Main {
 Background
     Style
         Color
-        To Color
-        Direction (North-South, West-East, NorthWest-SouthEast, SouthWest-NorthEast, Radial)
         From (%)
+        Direction (North-South, West-East, NorthWest-SouthEast, SouthWest-NorthEast, Radial)
+        To Color
     Content
         URL
         Align
