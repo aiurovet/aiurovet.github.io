@@ -144,9 +144,27 @@ class Main {
       return null;
     }
 
+    const jqAlignBack = $("#edit-back-align").selectAlign({
+      isForImage: true,
+      value: user.background.alignment.value,
+      callers: $("#card")
+    });
 
-    var jqAlignBack = $("#edit-back-align");
-    jqAlignBack.selectAlign({isForImage: true, value: user.background.alignment.value, callers: $("#card")});
+    const jqDirection = $("#edit-from-direction").selectDirection({
+      value: Direction.northToSouth,
+      callers: $("#card")
+    });
+
+    const jqFromRatio = $("#edit-from-ratio").spinner({
+      isWrap: false,
+      min: 0,
+      max: 100,
+      step: 1,
+      value: 67,
+      formatter: function(value) {
+        return `${value}%`;
+      }
+    });
 
     $("#edit-back-color").val(Colors.toHex(user.background.color) );
 
@@ -198,7 +216,10 @@ Background
         return;
       }
       if (event === "after-hide") {
-        jqTabCtrl.clear();
+        jqAlignBack?.clear();
+        jqDirection?.clear();
+        jqFromRatio?.clear();
+        jqTabCtrl?.clear();
         return;
       }
     });

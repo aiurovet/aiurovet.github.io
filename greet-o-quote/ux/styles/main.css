@@ -38,8 +38,14 @@ textarea {
 
 /* CLASSES */
 
-.edit-control > button, .edit-control > input, .edit-control > .edit-label, .edit-control > select {
+.edit-control.color, .edit-control > button, .edit-control > input, .edit-control > .edit-label, .edit-control > select:not(#edit-from-direction), .edit-control.to-color {
   margin-bottom: 0.5em;
+}
+.edit-control.to-color > label, #edit-to-color {
+  margin-top: 0.5em;
+}
+.edit-label.from-color {
+  margin: 0;
 }
 .edit-label {
   color: rgb(64, 64, 64);
@@ -167,8 +173,29 @@ textarea {
 #edit-back-or {
   margin: 0 0.5em;
 }
+#edit-from-color {
+  height: 1em;
+  margin: -0.2em 1em 0 0;
+}
+#edit-from-direction {
+  font-size: 1em;
+  margin: -0.25em 0 0 1em;
+  width: 12.5em;
+}
+#edit-from-ratio {
+  align-items: start;
+  display: flex;
+  flex-direction: row;
+}
+#edit-from-ratio > input {
+  width: 3.5em !important;
+}
 #edit-footer, #edit-header, #edit-phrase {
   align-self: stretch;
+}
+#edit-to-color {
+  height: 1em;
+  margin: -0.2em 0 0 1em;
 }
 #menu-edit:hover, #menu-exch:hover, #menu-help:hover, #menu-save:hover, #menu-size:hover, #menu-user:hover {
   background-color: var(--dialog-caption-bg-color-1);
