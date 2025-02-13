@@ -42,7 +42,7 @@ class Main {
   data = (new Data()).load();
   pref = new Pref(this);
 
-  #jqSpinner = null;
+  #jqSize = null;
 
   constructor() {
   }
@@ -86,25 +86,44 @@ class Main {
     const jqElems = $("#card, #phrase");
     const that = this;
 
-    this.#jqSpinner = $("#menu-size").spinner({
+    this.#jqSize = $("#menu-size").spinner({
       isReadOnly: true,
       min: 1,
       step: 1,
       value: parseInt(user.phrase.font.size ?? User.defaultFontSize),
-      onChange: function (spinner) {
+      onChange: function (value) {
         let user = that.data.getSelectedUser();
 
         if (!user) {
           return;
         }
 
-        let value = `${spinner.value}pt`;
-        jqElems.css("font-size", value);
-        user.phrase.font.size = value;
+        let strValue = `${value}pt`;
+        jqElems.css("font-size", strValue);
+        user.phrase.font.size = strValue;
         that.data.save();
       },
       width: "3em",
     });
+  }
+
+  //////////////////////////////////////////////////////////////////////////////
+
+  onChange_BackGradientColor(isFrom, value) {
+    const user = this.data.getSelectedUser();
+      const gradient = user?.background.gradient;
+
+    if (!gradient) {
+      return;
+    }
+
+    if (isFrom) {
+      gradient.fromColor = value;
+    } else {
+      gradient.toColor = value;
+    }
+
+    this.setUser(true, user);
   }
  
   //////////////////////////////////////////////////////////////////////////////
@@ -144,47 +163,20 @@ class Main {
       return null;
     }
 
-    const jqAlignBack = $("#edit-back-align").selectAlign({
-      isForImage: true,
-      value: user.background.alignment.value,
-      callers: $("#card")
-    });
+    const that = this;
+    let look = user.background;
+    const gradient = look.gradient;
 
-    const jqDirection = $("#edit-from-direction").selectDirection({
-      value: Direction.northToSouth,
-      callers: $("#card")
-    });
+    const jqBackImageAlign = this.#createBackImageAlignControl(look);
+    const jqBackGradientDirection = this.#createBackGradientDirectionControl(gradient);
+    const jqBackGradientFromRatio = this.#createBackGradientFromRatioControl(gradient);
 
-    const jqFromRatio = $("#edit-from-ratio").spinner({
-      isWrap: false,
-      min: 0,
-      max: 100,
-      step: 1,
-      value: 67,
-      formatter: function(value) {
-        return `${value}%`;
-      }
-    });
-
-    $("#edit-back-color").val(Colors.toHex(user.background.color) );
+    $("#edit-from-color").val(Colors.toHex(gradient.fromColor));
+    $("#edit-to-color").val(Colors.toHex(gradient.toColor ?? gradient.fromColor));
 
     const jqTabCtrl = $("#edit-card-tabctrl").tabctrl({
       selectedItemNo: tabNo ?? 0, // default matter: phrase
     });
-
-    const that = this;
-
-/*
-Background
-    Style
-        Color
-        From (%)
-        Direction (North-South, West-East, NorthWest-SouthEast, SouthWest-NorthEast, Radial)
-        To Color
-    Content
-        URL
-        Align
-*/
 
     this.pref.onClick("#edit-card", function (event) {
       const jqEditHeader = $("#edit-header");
@@ -216,9 +208,9 @@ Background
         return;
       }
       if (event === "after-hide") {
-        jqAlignBack?.clear();
-        jqDirection?.clear();
-        jqFromRatio?.clear();
+        jqBackImageAlign?.clear();
+        jqBackGradientDirection?.clear();
+        jqBackGradientFromRatio?.clear();
         jqTabCtrl?.clear();
         return;
       }
@@ -453,13 +445,12 @@ Background
     look = user.phrase;
     let fontSize = look.font.size;
 
-    $("#card").css({
-      "background": user.background.color,
-      "font-size": fontSize,
-    });
+    let style = user.background.toStyle();
+    style["font-size"] = fontSize;
+    $("#card").css(style);
 
     text = look.text;
-    let style = look.toStyle();
+    style = look.toStyle();
     style["font-size"] = fontSize;
     style["margin-top"] =  user.header.text ? "0.6em" : "";
     style["margin-bottom"] = user.footer.text ? "0.75em" : "";
@@ -468,7 +459,7 @@ Background
     jqElem.css(style);
     jqElem.text(text);
 
-    this.#jqSpinner?.setValue(parseInt(fontSize));
+    this.#jqSize?.setValue(parseInt(fontSize));
   }
 
   //////////////////////////////////////////////////////////////////////////////
@@ -511,6 +502,51 @@ Background
     if (hasBack) {
       jqBack.css("font-size", style["font-size"]);
     }
+  }
+
+  //////////////////////////////////////////////////////////////////////////////
+
+  #createBackGradientDirectionControl(gradient) {
+    return $("#edit-from-direction").selectDirection({
+      value: gradient.direction.value,
+      onChange: function(value) {
+        gradient.direction.value = value;
+        that.setUser(true);
+      }
+   });
+ }
+
+  //////////////////////////////////////////////////////////////////////////////
+
+  #createBackGradientFromRatioControl(gradient) {
+    const that = this;
+
+    return $("#edit-from-ratio").spinner({
+      isWrap: false,
+      min: 0,
+      max: 100,
+      step: 1,
+      value: gradient.fromRatio,
+      formatter: function(  value) {
+        return `${value}%`;
+      },
+      onChange: function(value) {
+        $('#edit-from-direction, #edit-to-color').enable(value < 100);
+        gradient.fromRatio = value;
+        that.setUser(true);
+      }
+    });
+  }
+
+  //////////////////////////////////////////////////////////////////////////////
+
+  #createBackImageAlignControl(look) {
+    return $("#edit-back-align").selectAlign({
+      isForImage: true,
+      value: look.alignment.value,
+      onChange: function(value) {
+      }
+    });
   }
 
   //////////////////////////////////////////////////////////////////////////////
