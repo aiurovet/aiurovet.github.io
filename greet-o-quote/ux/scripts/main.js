@@ -130,7 +130,7 @@ class Main {
 
   //////////////////////////////////////////////////////////////////////////////
 
-  onChange_BackImageUrl(value) {
+  onChange_BackImageUrl(path) {
     const user = this.data.getSelectedUser();
     const look = user?.background;
 
@@ -138,20 +138,11 @@ class Main {
       return;
     }
 
-    let valueEx = value.trim().replaceAll("\\", "/");
-    const length = valueEx.length;
-    const quotes = "\"'";
+    let posixPath = path.toPosixPath();
+    look.imageUrl = posixPath;
 
-    if (((length <= 0) || quotes.includes(valueEx[0])) &&
-        ((length <= 1) || quotes.includes(valueEx[length - 1])))
-    {
-      valueEx = valueEx.substr(1, length - 2);
-    }
-
-    look.imageUrl = valueEx;
-
-    if (valueEx !== value) {
-      $("#edit-back-url").val(valueEx);
+    if (posixPath !== path) {
+      $("#edit-back-url").val(posixPath);
     }
 
     this.setUser(true, user);
