@@ -67,6 +67,8 @@ class Main {
     ;
   }
 
+  //////////////////////////////////////////////////////////////////////////////
+
   static getSelectedBackFile() {
     const jqFile = $("#edit-back-file");
     const files = jqFile.length <= 0 ? null : jqFile[0].files;
@@ -136,7 +138,21 @@ class Main {
       return;
     }
 
-    look.imageUrl = value;
+    let valueEx = value.trim().replaceAll("\\", "/");
+    const length = valueEx.length;
+    const quotes = "\"'";
+
+    if (((length <= 0) || quotes.includes(valueEx[0])) &&
+        ((length <= 1) || quotes.includes(valueEx[length - 1])))
+    {
+      valueEx = valueEx.substr(1, length - 2);
+    }
+
+    look.imageUrl = valueEx;
+
+    if (valueEx !== value) {
+      $("#edit-back-url").val(valueEx);
+    }
 
     this.setUser(true, user);
   }
