@@ -125,6 +125,21 @@ class Main {
 
     this.setUser(true, user);
   }
+
+  //////////////////////////////////////////////////////////////////////////////
+
+  onChange_BackImageUrl(value) {
+    const user = this.data.getSelectedUser();
+    const look = user?.background;
+
+    if (!look) {
+      return;
+    }
+
+    look.imageUrl = value;
+
+    this.setUser(true, user);
+  }
  
   //////////////////////////////////////////////////////////////////////////////
 
@@ -173,6 +188,7 @@ class Main {
 
     $("#edit-from-color").val(Colors.toHex(gradient.fromColor));
     $("#edit-to-color").val(Colors.toHex(gradient.toColor ?? gradient.fromColor));
+    $("#edit-back-url").val(look.imageUrl);
 
     const jqTabCtrl = $("#edit-card-tabctrl").tabctrl({
       selectedItemNo: tabNo ?? 0, // default matter: phrase
@@ -541,10 +557,14 @@ class Main {
   //////////////////////////////////////////////////////////////////////////////
 
   #createBackImageAlignControl(look) {
+    const that = this;
+
     return $("#edit-back-align").selectAlign({
       isForImage: true,
       value: look.alignment.value,
       onChange: function(value) {
+        look.alignment.value   = value;
+        that.setUser(true);
       }
     });
   }
