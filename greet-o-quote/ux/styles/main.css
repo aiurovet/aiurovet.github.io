@@ -38,24 +38,26 @@ textarea {
 
 /* CLASSES */
 
-.edit-control.color, .edit-control > button, .edit-control > input, .edit-control > .edit-label, .edit-control > select:not(#edit-from-direction), .edit-control.to-color {
+.edit-control.back > .edit-label {
+  width: 3.5em;
+}
+.edit-control.footer, .edit-control.header, .edit-control.phrase {
+  height: 100%;
+  width: 100%;
+}
+.edit-control.gradient, .edit-control > button, .edit-control > input, .edit-control > .edit-label, .edit-control > select:not(#edit-from-direction), .edit-control.to-color {
   margin-bottom: 0.5em;
 }
 .edit-control.to-color > label, #edit-to-color {
   margin-top: 0.5em;
 }
-.edit-label.from-color {
-  margin: 0;
-}
 .edit-label {
   color: rgb(64, 64, 64);
   display: inline-block;
   font-size: 0.75em;
-  width: 6em;
 }
-.edit-control.footer, .edit-control.header, .edit-control.phrase {
-  height: 100%;
-  width: 100%;
+.edit-label.from-color {
+  margin: 0;
 }
 .edit-label > input[type="checkbox"] {
   height: 1.5em;
@@ -156,7 +158,7 @@ textarea {
 
 #edit-back-align {
   font-size: 1em;
-  width: 11em;
+  width: 8em;
 }
 #edit-back-browse {
   margin-left: 0.5em;
@@ -180,7 +182,7 @@ textarea {
 #edit-from-direction {
   font-size: 1em;
   margin: -0.25em 0 0 1em;
-  width: 8.5em;
+  width: 9.5em;
 }
 #edit-from-ratio {
   align-items: start;
