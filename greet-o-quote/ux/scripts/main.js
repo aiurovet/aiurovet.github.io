@@ -189,7 +189,8 @@ class Main {
     let look = user.background;
     const gradient = look.gradient;
 
-    const jqBackImageAlign = this.#createBackImageAlignControl(look);
+    const jqBackImageSize = this.#createBackImageSizeControl(look);
+    const jqBackImageSpot = this.#createBackImageSpotControl(look);
     const jqBackGradientDirection = this.#createBackGradientDirectionControl(gradient);
     const jqBackGradientFromRatio = this.#createBackGradientFromRatioControl(gradient);
 
@@ -231,9 +232,10 @@ class Main {
         return;
       }
       if (event === "after-hide") {
-        jqBackImageAlign?.clear();
         jqBackGradientDirection?.clear();
         jqBackGradientFromRatio?.clear();
+        jqBackImageSize?.clear();
+        jqBackImageSpot?.clear();
         jqTabCtrl?.clear();
         return;
       }
@@ -563,14 +565,29 @@ class Main {
 
   //////////////////////////////////////////////////////////////////////////////
 
-  #createBackImageAlignControl(look) {
+  #createBackImageSizeControl(look) {
     const that = this;
 
-    return $("#edit-back-align").selectAlign({
-      isForImage: true,
+    return $("#edit-back-size").selectAlign({
+      isForImageSize: true,
       value: look.alignment.value,
       onChange: function(value) {
-        look.alignment.value   = value;
+        look.alignment.value = value;
+        that.setUser(true);
+      }
+    });
+  }
+
+  //////////////////////////////////////////////////////////////////////////////
+
+  #createBackImageSpotControl(look) {
+    const that = this;
+
+    return $("#edit-back-spot").selectAlign({
+      isForImageSpot: true,
+      value: look.alignment.value,
+      onChange: function(value) {
+        look.alignment.value = value;
         that.setUser(true);
       }
     });

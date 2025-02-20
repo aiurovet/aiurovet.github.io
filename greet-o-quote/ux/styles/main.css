@@ -38,8 +38,11 @@ textarea {
 
 /* CLASSES */
 
-.edit-control.back > .edit-label {
-  width: 3.5em;
+.edit-control.back > .edit-label:not(label[for],.prompt) {
+  width: 4em;
+}
+.edit-control.back.align .edit-label.prompt {
+  margin-left: 1em;
 }
 .edit-control.footer, .edit-control.header, .edit-control.phrase {
   height: 100%;
@@ -156,7 +159,7 @@ textarea {
 
 /* ELEMENTS: */
 
-#edit-back-align {
+#edit-back-size, #edit-back-spot {
   font-size: 1em;
   width: 8em;
 }
@@ -174,6 +177,12 @@ textarea {
 }
 #edit-back-or {
   margin: 0 0.5em;
+}
+#edit-back-size, #edit-back-spot {
+  width: 10.5em;
+}
+#edit-back-size {
+  margin-left: 1em;
 }
 #edit-from-color {
   height: 1em;
