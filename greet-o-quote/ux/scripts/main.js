@@ -165,7 +165,7 @@ class Main {
       isUsed = value < 100 ? true : false;
     } else {
       isUsed = $("#edit-to-color-flag").prop("checked");
-      value = isUsed ? 25 : 100;
+      value = isUsed ? LookBack.defaultGradient.fromRatio : 100;
       this.#jqFromRatio?.setValue(value);
     }
 
