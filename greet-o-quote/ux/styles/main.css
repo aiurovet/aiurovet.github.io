@@ -54,6 +54,13 @@ textarea {
 .edit-control.to-color > label, #edit-to-color {
   margin-top: 0.5em;
 }
+.edit-control input[type='checkbox'] {
+  font-size: inherit;
+  height: 0.67em;
+  margin-top: 0.33em;
+  margin-right: 0.75em;
+  width: 0.67em;
+}
 .edit-label {
   color: rgb(64, 64, 64);
   display: inline-block;
@@ -161,7 +168,7 @@ textarea {
 
 #edit-back-size, #edit-back-spot {
   font-size: 1em;
-  width: 8em;
+  width: 11em;
 }
 #edit-back-browse {
   margin-left: 0.5em;
@@ -178,9 +185,6 @@ textarea {
 #edit-back-or {
   margin: 0 0.5em;
 }
-#edit-back-size, #edit-back-spot {
-  width: 10.5em;
-}
 #edit-back-size {
   margin-left: 1em;
 }
@@ -190,7 +194,7 @@ textarea {
 }
 #edit-from-direction {
   font-size: 1em;
-  margin: -0.25em 0 0 1em;
+  margin: -0.25em 0 0 0.5em;
   width: 9.5em;
 }
 #edit-from-ratio {

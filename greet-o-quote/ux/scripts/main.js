@@ -42,6 +42,7 @@ class Main {
   data = (new Data()).load();
   pref = new Pref(this);
 
+  #jqFromRatio = null;
   #jqSize = null;
 
   constructor() {
@@ -113,7 +114,7 @@ class Main {
 
   onChange_BackGradientColor(isFrom, value) {
     const user = this.data.getSelectedUser();
-      const gradient = user?.background.gradient;
+    const gradient = user?.background.gradient;
 
     if (!gradient) {
       return;
@@ -147,6 +148,34 @@ class Main {
 
     this.setUser(true, user);
   }
+
+  //////////////////////////////////////////////////////////////////////////////
+
+  onChange_FromRatio(value) {
+    const user = this.data.getSelectedUser();
+    const gradient = user?.background.gradient;
+
+    if (!gradient) {
+      return;
+    }
+
+    let isUsed;
+
+    if ((value !== undefined) && (value !== null)) {
+      isUsed = value < 100 ? true : false;
+    } else {
+      isUsed = $("#edit-to-color-flag").prop("checked");
+      value = isUsed ? 25 : 100;
+      this.#jqFromRatio?.setValue(value);
+    }
+
+    $("#edit-to-color-flag").prop("checked", isUsed);
+    $("#edit-from-ratio, #edit-from-direction, #edit-to-color").enable(isUsed);
+
+    gradient.fromRatio = value;
+
+    this.setUser(true);
+}
  
   //////////////////////////////////////////////////////////////////////////////
 
@@ -192,7 +221,7 @@ class Main {
     const jqBackImageSize = this.#createBackImageSizeControl(look);
     const jqBackImageSpot = this.#createBackImageSpotControl(look);
     const jqBackGradientDirection = this.#createBackGradientDirectionControl(gradient);
-    const jqBackGradientFromRatio = this.#createBackGradientFromRatioControl(gradient);
+    this.#createBackGradientFromRatioControl(gradient);
 
     $("#edit-from-color").val(Colors.toHex(gradient.fromColor));
     $("#edit-to-color").val(Colors.toHex(gradient.toColor ?? gradient.fromColor));
@@ -232,8 +261,9 @@ class Main {
         return;
       }
       if (event === "after-hide") {
+        that.#jqFromRatio?.clear();
+        that.#jqFromRatio = null;
         jqBackGradientDirection?.clear();
-        jqBackGradientFromRatio?.clear();
         jqBackImageSize?.clear();
         jqBackImageSpot?.clear();
         jqTabCtrl?.clear();
@@ -544,9 +574,13 @@ class Main {
   //////////////////////////////////////////////////////////////////////////////
 
   #createBackGradientFromRatioControl(gradient) {
+    if (this.#jqFromRatio) {
+      return;
+    }
+
     const that = this;
 
-    return $("#edit-from-ratio").spinner({
+    this.#jqFromRatio = $("#edit-from-ratio").spinner({
       isWrap: false,
       min: 0,
       max: 100,
@@ -556,9 +590,7 @@ class Main {
         return `${value}%`;
       },
       onChange: function(value) {
-        $('#edit-from-direction, #edit-to-color').enable(value < 100);
-        gradient.fromRatio = value;
-        that.setUser(true);
+        that.onChange_FromRatio(value);
       }
     });
   }
