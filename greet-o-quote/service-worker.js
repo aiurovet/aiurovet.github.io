@@ -45,6 +45,8 @@ self.addEventListener("install", (event) => {
         "/lib/ux/styles/help.css?v=0.1.0",
         "/lib/ux/styles/listedit.css?v=0.1.0",
         "/lib/ux/styles/msgbox.css?v=0.1.0",
+        "/lib/ux/styles/select.css?v=0.1.0",
+        "/lib/ux/styles/spinner.css?v=0.1.0",
         "/lib/ux/styles/tabctrl.css?v=0.1.0",
         "/ux/styles/fonts.css?v=0.1.0",
       ]);

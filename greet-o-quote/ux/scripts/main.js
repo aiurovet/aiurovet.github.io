@@ -140,10 +140,22 @@ class Main {
     }
 
     let posixPath = path.toPosixPath();
+    const fileName = posixPath.replace(/^.*\//, "");
     look.imageUrl = posixPath;
 
     if (posixPath !== path) {
       $("#edit-back-url").val(posixPath);
+    }
+
+    const jqSelItem = $("#edit-back-spot > option[selected]");
+    const propName = "takenBy";
+
+    if (jqSelItem && (jqSelItem.length > 0)) {
+      if (posixPath.length > 0) {
+        jqSelItem.prop(propName, fileName);
+      } else {
+        jqSelItem.removeProp(propName);
+      }
     }
 
     this.setUser(true, user);
@@ -601,7 +613,7 @@ class Main {
     const that = this;
 
     return $("#edit-back-size").selectAlign({
-      isForImageSize: true,
+      isForSize: true,
       value: look.alignment.value,
       onChange: function(value) {
         look.alignment.value = value;
@@ -616,7 +628,8 @@ class Main {
     const that = this;
 
     return $("#edit-back-spot").selectAlign({
-      isForImageSpot: true,
+      isForSpot: true,
+      isMultiSelect: true,
       value: look.alignment.value,
       onChange: function(value) {
         look.alignment.value = value;

@@ -1,0 +1,17 @@
+/*
+  Copyright (C) Alexander Iurovetski 2024
+  All rights reserved under MIT license (see LICENSE file)
+
+  Select/options styles
+*/
+
+select > option > .checkmark {
+  width: 1.5em;
+}
+select > option > .checkmark::before {
+  content: "✓";
+  width: 1.5em;
+}
+select > option > .checkmark:not(.taken) {
+  color: transparent;
+}
