@@ -8,10 +8,9 @@
 select > option > .checkmark {
   width: 1.5em;
 }
-select > option > .checkmark::before {
-  content: "✓";
-  width: 1.5em;
+select > option > .checkmark.on::before {
+  content: "🗹";
 }
-select > option > .checkmark:not(.taken) {
-  color: transparent;
+select > option > .checkmark.off::before {
+  content: "☐";
 }
