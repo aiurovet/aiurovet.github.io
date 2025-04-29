@@ -31,11 +31,12 @@
   <script src="../lib/ux/scripts/dialog.js?v=0.1.0"></script>
   <script src="../lib/ux/scripts/gradient.js?v=0.1.0"></script>
   <script src="../lib/ux/scripts/select.js?v=0.1.0"></script>
-  <script src="../lib/ux/scripts/selectalign.js?v=0.1.0"></script>
-  <script src="../lib/ux/scripts/selectdirection.js?v=0.1.0"></script>
-  <script src="../lib/ux/scripts/selectfont.js?v=0.1.0"></script>
+  <script src="../lib/ux/scripts/select-align.js?v=0.1.0"></script>
+  <script src="../lib/ux/scripts/select-direction.js?v=0.1.0"></script>
+  <script src="../lib/ux/scripts/select-font.js?v=0.1.0"></script>
   <script src="../lib/ux/scripts/listedit.js?v=0.1.0"></script>
   <script src="../lib/ux/scripts/lookback.js?v=0.1.0"></script>
+  <script src="../lib/ux/scripts/lookimage.js?v=0.1.0"></script>
   <script src="../lib/ux/scripts/looktext.js?v=0.1.0"></script>
   <script src="../lib/ux/scripts/msgbox.js?v=0.1.0"></script>
   <script src="../lib/ux/scripts/spinner.js?v=0.1.0"></script>
@@ -74,9 +75,9 @@
     <div class="main-row max">
       <div id="action-no" class="main-col btn"></div>
       <div id="card" class="main-col card">
-        <div id="header" class="main-col card header" onclick="main.onClickEditCard(1);"><p></p></div>
-        <div id="phrase" class="main-col card phrase" onclick="main.onClickEditCard(2);"><p></p></div>
-        <div id="footer" class="main-col card footer" onclick="main.onClickEditCard(3);"></div>
+        <div id="header" class="main-col card header" onclick="main.onClickEditCard(3);"><p></p></div>
+        <div id="phrase" class="main-col card phrase" onclick="main.onClickEditCard(4);"><p></p></div>
+        <div id="footer" class="main-col card footer" onclick="main.onClickEditCard(5);"></div>
       </div>
       <div id="action-yes" class="main-col btn"></div>
     </div>
@@ -85,7 +86,7 @@
         <span id="menu-exch" onclick="main.onClickExchange();">Exchange</span>
       </div>
       <div id="main-edit" class="main-col info max">
-        <span id="menu-edit" onclick="main.onClickEditCard(0);">Background</span>
+        <span id="menu-edit" onclick="main.onClickEditCard(0);">Edit Card</span>
       </div>
       <div id="main-size" class="main-col info right">
         <span id="menu-size"></span> 
@@ -107,6 +108,8 @@
         <div id="edit-card-tabctrl" class="ui-tabctrl">
           <div class="ui-tabitem-captions">
             <div class="ui-tabitem-caption">Background</div>
+            <div class="ui-tabitem-caption">Images</div>
+            <div class="ui-tabitem-caption">Fonts</div>
             <div class="ui-tabitem-caption">Header</div>
             <div class="ui-tabitem-caption">Phrase</div>
             <div class="ui-tabitem-caption">Footer</div>
@@ -115,7 +118,7 @@
             <div class="ui-tabitem-content">
               <div class="edit-control back gradient">
                 <div class="edit-label from-color">Color:</div>
-                <input id="edit-from-color" type="color" onchange="main.onChange_BackGradientColor(event.target.value, null);"></input>
+                <input id="edit-from-color" type="color" onchange="main.onChange_BackGradientColor(true, event.target.value);"></input>
                 <input id="edit-to-color-flag" type="checkbox" onclick="main.onChange_FromRatio();"></input>
                 <span id="edit-from-ratio"></span> 
                 <select id="edit-from-direction"></select>
@@ -126,13 +129,17 @@
                 <select id="edit-back-spot"></select>
                 <select id="edit-back-size"></select>
               </div>
-              <div class="edit-control back file">
+              <div class="edit-control images  file">
                 <div class="edit-label">File:</div>
                 <input id="edit-back-url" type="url" onchange="main.onChange_BackImageUrl(event.target.value);"></input>
               </div> -->
               <div class="edit-control back container">
                 <div id="edit-images">
                 </div>
+              </div>
+            </div>
+            <div class="ui-tabitem-content">
+              <div class="edit-control fonts">
               </div>
             </div>
             <div class="ui-tabitem-content">

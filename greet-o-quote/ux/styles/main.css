@@ -39,6 +39,7 @@ textarea {
 /* CLASSES */
 
 .edit-control.back > .edit-label:not(label[for],.prompt) {
+  margin-bottom: 0.25em;
   width: 4em;
 }
 .edit-control.back.align .edit-label.prompt {

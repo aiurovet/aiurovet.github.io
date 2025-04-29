@@ -45,7 +45,7 @@ class Data {
   //////////////////////////////////////////////////////////////////////////////
 
   constructor(version, fileFormat, selectedUserNo, users) {
-    if (version instanceof Object) {
+    if ((version instanceof Object) && ("version" in version)) {
       let from = version;
       this.init(from.version, from.fileFormat, from.selectedUserNo, from.users);
     } else {
@@ -65,7 +65,7 @@ class Data {
           case Data.fileFormatSvg:
         return formatLower;
       default:
-        return Data.fileFormatPng;
+        return Data.defaultFileFormat;
     }
   }
 

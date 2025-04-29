@@ -15,7 +15,7 @@ class User {
   static defaultColorMain = "rgb(0, 0, 0)";
   static defaultColorSide = "rgb(64, 64, 64)";
   static defaultFontSize = "60pt";
-  static defaultFontSizeRatio = 0.60;
+  static defaultFontSizeRatio = 0.80;
   static defaultFooterText = "Author";
   static defaultHeaderText = "";
   static defaultPhraseText = "Insert your phrase here";
@@ -30,6 +30,10 @@ class User {
   // The background style
   //
   background = null;
+
+  // The image file format
+  //
+  fileFormat = Data.defaultFileFormat;
 
   // The footer style
   //
@@ -49,7 +53,7 @@ class User {
   //////////////////////////////////////////////////////////////////////////////
 
   constructor(userId, background, header, phrase, footer) {
-    if (userId instanceof Object) {
+    if ((userId instanceof Object) && ("userId" in userId)) {
       let from = userId;
       this.init(from.userId, from.background, from.header, from.phrase, from.footer)
     } else {
@@ -106,6 +110,7 @@ class User {
   toSerializable() {
     return {
       userId: this.userId,
+      fileFormat: this.fileFormat,
       background: this.background?.toSerializable(),
       header: this.header?.toSerializable(),
       phrase: this.phrase?.toSerializable(),

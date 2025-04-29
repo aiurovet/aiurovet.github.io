@@ -446,17 +446,17 @@ class Main {
 
   onClickSave(fileFormat) {
     fileFormat = Data.adjustFileFormat(fileFormat);
-
+      
     const proc =
       fileFormat === Data.fileFormatJpg ? htmlToImage.toJpg :
       fileFormat === Data.fileFormatSvg ? htmlToImage.toSvg : htmlToImage.toPng;
 
-    proc($("#caes")[0]).then(function (dataUrl) {
+    proc($("#card")[0]).then(function (dataUrl) {
       const dt = new Date().toLocalDate().getDateParts();
       const link = document.createElement("a");
 
       link.href = dataUrl;
-      link.download = `quote_${dt.year}-${dt.month}-${dt.day}_${dt.hours}-${dt.minutes}-${dt.seconds}.${fileFormat}`;
+      link.download = `card_${dt.year}-${dt.month}-${dt.day}_${dt.hours}-${dt.minutes}-${dt.seconds}.${fileFormat}`;
 
       link.click();
     });
@@ -611,6 +611,7 @@ class Main {
 
   #createBackImageSizeControl(look) {
     const that = this;
+    look.alignment ??= new Alignment();
 
     return $("#edit-back-size").selectAlign({
       isForSize: true,
