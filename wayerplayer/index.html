@@ -1,0 +1,122 @@
+  <!--
+  Copyright (C) Alexander Iurovetski 2024
+  All rights reserved under MIT license (see LICENSE file)
+-->
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Wayer Player</title>
+  <link rel="manifest" href="./manifest.json?v=0.1.0" crossorigin="use-credentials">
+  <link rel="shortcut icon" type="image/x-icon" href="ux/images/wayerplayer.svg?v=0.1.0">
+  <link rel="stylesheet" href="../lib/ux/styles/dialog.css?v=0.1.0">
+  <link rel="stylesheet" href="../lib/ux/styles/help.css?v=0.1.0">
+  <link rel="stylesheet" href="../lib/ux/styles/listedit.css?v=0.1.0">
+  <link rel="stylesheet" href="../lib/ux/styles/msgbox.css?v=0.1.0">
+  <link rel="stylesheet" href="ux/styles/info.css?v=0.1.0">
+  <link rel="stylesheet" href="ux/styles/main.css?v=0.1.0">
+  <link rel="stylesheet" href="ux/styles/pref.css?v=0.1.0">
+  <script src="../lib/import/scripts/jquery-3.7.1.slim.min.js"></script>
+  <script src="../lib/dl/extensions.js?v=0.1.0"></script>
+  <script src="../lib/dl/json.js?v=0.1.0"></script>
+  <script src="../lib/ux/scripts/common.js?v=0.1.0"></script>
+  <script src="../lib/ux/scripts/dialog.js?v=0.1.0"></script>
+  <script src="../lib/ux/scripts/listedit.js?v=0.1.0"></script>
+  <script src="../lib/ux/scripts/msgbox.js?v=0.1.0"></script>
+  <script src="dl/data.js?v=0.1.0"></script>
+  <script src="ux/scripts/core.js?v=0.1.0"></script>
+  <script src="ux/scripts/main.js?v=0.1.0"></script>
+  <script src="ux/scripts/pref.js?v=0.1.0"></script>
+  <script>
+    let sw = navigator.serviceWorker;
+
+    if (sw) {
+      sw.register("/wayerplayer/service-worker.js")
+        .then((reg) => {
+          console.log("The service worker registration successfully completed");
+        })
+        .catch((error) => {
+          console.log(error);
+        });
+    }
+  </script>
+</head>
+<body>
+  <div class="main">
+    <div class="main-row">
+      <div id="main-help" class="main-col clickable info help left" onclick="main.onClickHelp();">
+        Help
+      </div>
+    </div>
+    <div class="main-row max">
+      <figcaption >
+        <div>Playing</div>
+        <div onclick="main.onClickFolder();"></div>
+      </figcaption>
+      <audio id="player" controls></audio>
+    </div>
+    <div class="main-row">
+    </div>
+  </div>
+
+  <!-- MSGBOX -->
+
+  <!-- <div id="msgbox" style="display: none;"">
+  </div> -->
+
+  <div id="msgbox" class="ui-dialog" style="display: none;"></div>
+
+  <!-- HELP -->
+
+  <div id="help" style="display: none;"">
+    <div class="ui-dialog-content help">
+      <div class="ui-dialog-caption help">
+        <span><strong>WayerPlayer</strong></span>
+        <div id="copyright">&nbsp;&copy;&nbsp;2024&nbsp;</div>
+				<a id="help-link" target="_blank" href="https://aiurovet.com/">Alexander Iurovetski</a>
+        <div class="ui-dialog-filler"></div>
+        <div class="ui-dialog-icon close"></div>
+      </div>
+      <div class="ui-dialog-client help">
+        <h4 id="help-version"><span id="version">Version 0.1.0</span><span class="ui-dialog-filler"></span><span id="help-print" href="#" onclick="main.onClickHelpPrint($(this).parent().parent());">&nbsp;</span></h4>
+        <div class="para-help">
+          This bare-minimum web application allows you to play your local audio files (MP3, AAC, OGG). That's it.
+          Choose a folder and enjoy the sequential playback of all recognisable audio files there one after another!
+        </div>
+        <div class="para-help">
+          The application neither collects private information, nor uses cookies, and doesn't even make external
+          calls. It  just uses the browser's local storage to save the preferences. Please note: this means that
+          clearing the browser cache will discard the application's preferences too. Unfortunately, this will
+          happen even if is installed as an app.
+        </div>
+        <div class="para-help">
+          The application is available on any device: tablet (ideal), phone, laptop, or desktop. The recommended
+          orientation for the handheld devices is <em>landscape</em> (horizontal). The only requirements are a
+          web browser and an internet  connection to start using or to get updates.
+        </div>
+        <h4 id="help-install">How to Install</h4>
+        <div class="para-help">
+          You can use <em>WayerPlayer</em> in a browser as is without any installation. However, it can be installed
+          on most  devices via browser. This will give the native app experience and the ability to run offline when
+          the internet connection is intermittent or unavailable. Please note that not all browsers are capable of
+          web app installation. On handheld devices, ideally, do that with <em>Google Chrome</em> or <em>Microsoft
+          Edge</em> on non-Apple devices, and with <em>Safari</em> on Apple devices. You should find and tap <em>Add
+          to Home screen</em> menu item (or similar), then follow the prompts. On laptops and desktops, an icon with
+          a monitor and an arrow might show up at the end of the address bar. When it is hovered with the mouse
+          cursor, a tooltip will pop: <em>Install WayerPlayer</em>. Click that icon and follow the prompts.
+        </div>
+        <h4 id="help-use">How to Use</h4>
+        <div class="para-help">
+          On the first start, you'll be asked to change the default player name from <em>Anonymous</em> to something
+          more suitable. You can do that by tapping/clicking the modify icon (the second from the left above the list
+          of players), then typing in any other text of your choice.
+        </div>
+        <h4>Contact</h4>
+        <div class="para-help">
+          Send your feedback to: <a href="mailto:aiurovet@gmail.com">aiurovet@gmail.com</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

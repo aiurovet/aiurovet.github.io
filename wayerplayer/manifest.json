@@ -1,0 +1,27 @@
+{
+  "name": "WayerPlayer",
+  "short_name": "WayerPlayer",
+  "description": "Your child will learn how to check a number is divisible by one or more other numbers",
+  "scope": "/wayerplayer/",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#f4eee4",
+  "theme_color": "#000000",
+  "icons": [
+      {
+          "src": "/wayerplayer/ux/images/wayerplayer.svg?v=0.8.1",
+          "sizes": "any",
+          "type": "image/svg+xml"
+      }
+  ],
+  "file_handlers": [
+    {
+      "action": "/",
+      "accept": {
+        "audio/aac": [".aac"],
+        "audio/mp3": [".mp3"],
+        "audio/ogg": [".ogg"]
+      }
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100">
+  <defs>
+    <style>
+    g {
+      fill: none;
+      stroke: black;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      stroke-width: 11;
+    }
+  </style>
+  </defs>
+  <g><path d="M7,7 L37,7 L47,22 L93,22 L93,93 L7,93 L7,7"/>
+    Sorry, your browser does not support SVG!
+  </g>
+</svg>

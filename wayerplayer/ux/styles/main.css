@@ -1,0 +1,117 @@
+/*
+  Copyright (C) Alexander Iurovetski 2024
+  All rights reserved under MIT license (see LICENSE file)
+*/
+
+/* PARAMETERS */
+
+:root {
+  --font-size-body: 16px;
+  --font-size-help: 48px;
+  --font-size-info: 32px;
+  --main-col-btn-size: 10%;
+  --main-col-num-size: 84%;
+  --margin-off-body: 1em;
+  --min-margin-help: 1.5%;
+  --min-margin-info: 1%;
+  --min-margin-left: 1%;
+  --min-margin-menu: 1.5%;
+}
+
+/* NODES */
+
+* {
+  -webkit-tap-highlight-color: transparent; /* prevent from flickering on click */
+  box-sizing: border-box;
+}
+audio {
+  height: 4em;
+}
+audio, figcaption {
+  width: 95%;
+  margin: 0 0 0 2.5%;
+}
+body {
+  color: black;
+  cursor: default;
+  position: fixed;
+}
+body, html {
+  border: none;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+figcaption {
+  margin-bottom: 0.5em;
+  font-size: var(--font-size-info);
+  display: flex;
+  flex-direction: row;
+}
+figcaption > div:first-child {
+  flex-grow: 1;
+}
+figcaption > div:last-child {
+  background-image: url("../images/folder.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  flex-grow: 0;
+  -webkit-filter: invert(1);  
+          filter: invert(1);
+  width: 2em;
+}
+
+/* CLASSES */
+
+.main {
+  background:  rgb(18, 97, 160);
+  display: flex;
+	flex-direction: column;
+  font-family: monospace;
+  height: 100%;
+  width: 100%;
+}
+.main-col.info {
+  align-self: center;
+  align-items: center;
+  font-size: var(--font-size-info);
+  justify-content: center;
+  margin: 0 var(--min-margin-info) 0 auto;
+}
+.main-col.info.left {
+  margin-left: var(--min-margin-info);
+}
+.main-row {
+  align-self: stretch;
+  color: white;
+  display: flex;
+	flex-direction: row;
+  height: 10%;
+}
+.main-row.max {
+  align-items: center;
+	flex-direction: column;
+  flex-grow: 1;
+  justify-content: center;
+}
+.main-row:first-child {
+  margin: 0.5em 0 1em 0;
+}
+.main-row:last-child {
+  margin: 1em 0 0.5em 0;
+}
+.popup-container {
+  display: none;
+}
+
+/* ELEMENTS: */
+
+#main-help:hover {
+  background-color: var(--dialog-caption-bg-color-1);
+  color: var(--dialog-caption-fg-color-1);
+  font-weight: bold;
+}
+#main-help {
+  margin-left: var(--margin-off-body);
+}

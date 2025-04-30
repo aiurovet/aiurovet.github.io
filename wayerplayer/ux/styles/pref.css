@@ -1,0 +1,138 @@
+/*
+  Copyright (C) Alexander Iurovetski 2024
+  All rights reserved under MIT license (see LICENSE file)
+*/
+
+/* PARAMETERS */
+
+:root {
+  --dialog-caption-bg-color-1: rgb(103, 25, 210);
+  --dialog-caption-bg-color-2: rgb(25, 103, 210);
+  --dialog-caption-bg-color-3: rgb(25, 103, 103);
+  --dialog-caption-fg-color-1: white;
+  --dialog-caption-ln-color: rgb(240, 240, 144);
+  --dialog-content-bg-color-1: rgb(237, 237, 255);
+  --dialog-content-bg-color-2: white;
+}
+
+/* DIALOG: HELP */
+
+.ui-dialog-client.help .rules {
+  line-height: 200%;
+}
+.para-help {
+  margin: 1rem 0 0 0;
+}
+
+/* DIALOG: PREF */
+
+.ui-dialog-caption.help {
+  background-color: var(--dialog-caption-bg-color-3);
+  color: var(--dialog-caption-fg-color-1);
+}
+.ui-dialog-caption.pref:not(.msgbox) {
+  background-color: var(--dialog-caption-bg-color-1);
+  color: var(--dialog-caption-fg-color-1);
+}
+.ui-dialog-client.pref {
+  padding: 1em;
+  overflow: auto;
+}
+.ui-dialog-client.pref.divisors, .ui-dialog-client.pref.level, .ui-dialog-client.pref.time-limit, .ui-dialog-client.pref.user {
+  overflow: auto;
+}
+.ui-dialog-client.pref.time-limit {
+  flex-direction: column;
+}
+.ui-dialog-content.pref {
+  font-size: 32px;
+}
+.ui-dialog-content.pref:not(.msgbox) {
+  background: var(--dialog-content-bg-color-1);
+}
+.ui-dialog-icon:not(.msgbox) {
+  filter: invert(100%);
+}
+
+/* DIALOG: 2ND-LEVEL POPUPS */
+
+.ui-dialog.ui-listedit-popup .ui-dialog-caption:not(.msgbox) {
+  background-color: var(--dialog-caption-bg-color-2);
+  color: var(--dialog-caption-fg-color-1);
+}
+.ui-dialog.ui-listedit-popup .ui-dialog-content:not(.msgbox) {
+  background: var(--dialog-content-bg-color-2);
+}
+
+/* HELP */
+
+.ui-listedit-tool.modify.help {
+  display: inline-block;
+}
+ul.rules > li {
+  margin-top: 0.5em;
+}
+
+/* ELEMENTS */
+
+#help-link {
+  color: var(--dialog-caption-ln-color);
+}
+#help-print {
+  background-image: url("../../../lib/ux/images/print.svg?v=0.8.1");
+  background-position: right;
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 2em;
+  margin-right: 2em;
+  text-align: right;
+  width: 2em;
+}
+#help-version {
+  display: flex;
+  flex-direction: row;
+  margin-top: 0;
+}
+#pref-divisors-value, #pref-level-value, #pref-time-limit-value, #pref-user-value {
+  align-items: stretch;
+  align-content: stretch;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+#pref-divisors-value, #pref-user-value {
+  flex-direction: column;
+  flex-grow: 0;
+}
+#pref-divisors-value > *, #pref-level-value > input, #pref-user-value > * {
+  align-self: stretch;
+  flex-grow: 1;
+}
+#pref-level-value > .ui-listedit-items {
+  height: 6.5em;
+}
+#pref-level-value > .ui-listedit-items > .ui-listedit-item {
+  padding: 1em 0.5em;
+  text-align: center;
+  width: 2em;
+}
+#pref-time-limit-value > .ui-listedit-items {
+  height: 4.5em;
+  width: 17.75em;
+}
+#pref-time-limit-value > .ui-listedit-items > .ui-listedit-item {
+  padding: 0.5em;
+  text-align: center;
+  width: 3.5em;
+}
+#pref-time-limit-type-per-game, #pref-time-limit-type-per-move {
+  height: 1.5em;
+  margin: 0 0.5em 0 0;
+  width: 1.5em;
+}
+#pref-time-limit-type-per-game-label, #pref-time-limit-type-per-move-label {
+  margin-bottom: 0.5em;
+}
+#score {
+  margin-left: 1em;
+}

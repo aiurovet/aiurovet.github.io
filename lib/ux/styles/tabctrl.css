@@ -1,0 +1,46 @@
+/*
+  Copyright (C) Alexander Iurovetski 2024-25
+  All rights reserved under MIT license (see LICENSE file)
+
+  Tab item and container styles
+*/
+
+.ui-tabctrl {
+  border: 1px solid black;
+  border-top: none;
+  border-top-left-radius: 0.25em;
+  border-top-right-radius: 0.25em;
+}
+.ui-tabitem-caption {
+  border: 1px solid black;
+  border-left: none;
+  border-top-left-radius: 0.25em;
+  border-top-right-radius: 0.25em;
+  flex-grow: 1;
+  padding: 0.25em 0.5em;
+  text-align: center;
+  white-space: normal;
+  word-wrap: normal !important;
+}
+.ui-tabitem-caption:first-child {
+  border-left: none;
+}
+.ui-tabitem-caption:last-child {
+  border-right: none;
+}
+.ui-tabitem-caption[selected] {
+  border-bottom: none;
+  font-weight: bold;
+}
+.ui-tabitem-captions {
+  align-items: stretch;
+  align-content: stretch;
+  display: flex;
+  flex-direction: row;
+  font-size: 0.75em;
+  padding-bottom: 0.25em;
+  width: 100%;
+}
+.ui-tabitem-contents {
+  padding: 0.5em;
+}

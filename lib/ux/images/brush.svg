@@ -1,0 +1,43 @@
+<!--
+  Copyright (C) Alexander Iurovetski 2024
+  All rights reserved under MIT license (see LICENSE file)
+
+  Edit icon
+-->
+
+<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100">
+
+<defs>
+  <style>
+    g {
+      fill: yellow;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+    .bristle {
+      fill: none;
+      stroke: black;
+      stroke-width: 3;
+    }
+    .handle {
+      stroke-width: 5;
+    }
+    .handle, .plank {
+      fill: black;
+      stroke: black;
+      stroke-width: 5;
+    }
+    .plank {
+      stroke-width: 11;
+    }
+</style>
+</defs>
+<g>
+  <!-- <rect x="0" y="0" width="100" height="100" /> -->
+  <path class="handle" d="M73,23 L45,53 L52,59 L80,29 L73,23"/>
+  <path class="plank" d="M34,46 L60,68"/>
+  <path class="bristle" d="M32,44 L12,65 L22,65 M37,51 L18,70 L28,70 M43,56 L24,75 L34,75 M50,60 L30,80 L40,80 M56,65 L36,85 L46,85 M62,70 L42,90"/>
+  Sorry, your browser does not support SVG!
+</g>
+
+</svg>

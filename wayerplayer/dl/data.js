@@ -1,0 +1,102 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (C) Alexander Iurovetski 2024
+// All rights reserved under MIT license (see LICENSE file)
+//
+// Manage application data and preferences
+////////////////////////////////////////////////////////////////////////////////
+
+"use strict";
+
+////////////////////////////////////////////////////////////////////////////////
+
+class Data {
+  // Constants
+  //
+  static appName = "wayerplayer";
+  static keyPref = Data.appName;
+  static version = "0.1.0";
+
+  //////////////////////////////////////////////////////////////////////////////
+  // If only one argument passed, and that is an object, initialize parameters
+  // with its properties: i.e. constructing from a deserialized saved object
+  //////////////////////////////////////////////////////////////////////////////
+
+  constructor(version) {
+    if ((version instanceof Object) && ("version" in version)) {
+      let from = version;
+      this.init(from.version);
+    } else {
+      this.init(version);
+    }
+  }
+
+  //////////////////////////////////////////////////////////////////////////////
+  // Delete all saved data and initialize
+  //////////////////////////////////////////////////////////////////////////////
+
+  drop() {
+    delete localStorage[Data.keyPref];
+    this.init();
+    this.save();
+  }
+
+  //////////////////////////////////////////////////////////////////////////////
+  // Initialize the object
+  //////////////////////////////////////////////////////////////////////////////
+
+  init(version) {
+    // Initialize version
+    //
+    if ((version !== undefined) && (version !== null) && (version.length > 0)) {
+      this.version = version;
+    }
+  }
+
+  //////////////////////////////////////////////////////////////////////////////
+  // Load preferences from the local storage, parse those and return this obj
+  //////////////////////////////////////////////////////////////////////////////
+
+  load() {
+    let prefContent = localStorage[Data.keyPref];
+
+    if (!prefContent) {
+      this.save(true);
+      return this;
+    }
+
+    let pref = Json.fromString(prefContent);
+
+    // Check the saved version here if needed
+
+    this.init(pref.version);
+
+    return this;
+  }
+
+  //////////////////////////////////////////////////////////////////////////////
+  // Save preferences to the local storage as a JSON string
+  //////////////////////////////////////////////////////////////////////////////
+
+  save(canSave) {
+    // If no actual save required, return
+    //
+    if ((canSave !== undefined) && !canSave) {
+      return;
+    }
+
+    // Write to the local storage
+    //
+    let pref = this.toSerializable();
+    localStorage[Data.keyPref] = Json.toString(pref);
+  }
+
+  //////////////////////////////////////////////////////////////////////////////
+
+  toSerializable() {
+    return {
+      version: Data.version
+    };
+  }
+
+  //////////////////////////////////////////////////////////////////////////////
+}
