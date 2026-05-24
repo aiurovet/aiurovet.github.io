@@ -1,0 +1,71 @@
+Create file anthkeys.html that lists commonly used anthkey keys for:
+- Linux
+- macOS
+- Windows
+- Hyprland
+- ChromeOS
+Put anthkeys for every platform in a separate tab.
+Make the design more modern.
+Create a new button that says "Advanced anthkeys".
+could you search the web to correct the hyprland anthkey ( e. g. open terminal is super+q)
+actully put hyprland anthkeys in advanced tab
+remove hyprland anthkeys from non-advanced tab
+in the normal section make only linux, windows, macos and chromeos visible while  in the advanced tab show hyprland anthkeys
+once I click on advanced anthkeys can you make the text where it said advanced anthkeys change it to Advanced anthkeys - Linux - Hyprland
+with hyprland remove the copy, paste, redo, undo, select all and save
+change from Advanced anthkeys - Linux - Hyprland to Advanced anthkeys
+when I am in advanced anthkeys could you please change to basic anthkeys
+move the andvanced anthkeys and basic anthkeys close to the top right coner and make the overall site look more colorful
+add a settings button
+for now put in backround options in the settings tab
+add an option for light mode, dark mode or device theme but set it to light mode on default and make the white theme look less pale
+add the theme and color options to settings
+make the design overall look like googles matireal 3 expressive
+add themes
+put light, dark and device theme in a seprate spot
+add more presets that are colorful like and make them sutable for kids
+add pictures to the presets
+when I set the backround it shows plain color. Could you add some pictures please
+ctully just revert to how it was before I asked you to make a section fun
+add a button to the settings to upload a custom wallpaper
+can you put a plus next to it
+can you make the settings page scrollable because when I am in settings and scroll it only scrolls on the webpage
+and an image frame so you can drag and drop an image file into it
+also in settings make an option to have the design look like matireal 3 expressive, ios, windows and linux (with linux distros). also put an option to change text size and text font
+add more presets
+make the sky preset look different from the ocean preset
+in some of the presets the text at the bottom is almost not visible
+ocean, forest, sunset, lavender, coral, mint, sky, slate and cherry
+add gradeint accent colours
+in the settings put all of the stuff you have done and put it in a seprate tab called customization
+add language settings, anthkeys search bar (don't put this in settings instead put it close to the to of the site), key binding style, OS modifier labels and backround blur
+with keybinding style could you move all of the examples a bit to the left because the last one isgoing of the settings page
+could you add device language button in language settings and add all languages in the world
+can you make the languages clickable
+when I click on the language the actual site and text stays at english
+can you make all the languages that don't work and fix them so they work and in settings move general to the left and make it show first please
+in the language tab put languages that do work
+well how could you add a new language if there are ways
+could you put the instructions of doing it in the language settings
+in settings all the sections that are in bold could you please put them in a seprate spot like for language settings it would be language settings
+no I mean list the settings and once one of them is clicked only show that one
+add more design styles
+add text sizes that an old man/woman with blury vision would be able to read and add a dictionary which explains the anthkeys and the keys like ctrl
+in advanced anthkeys remove hyprland but put advanced anthkeys of all the other OS's and so that thy are different
+could you suggest me what I could add now
+do all of them and make a button to download as pdf
+what ever language I select not english it does some of the page on that language but the rest is english. could you please fix this
+could you put the text that shows how to make it that the site shows the language selected in all parts of the site
+for the keyboard anthkeys it says unidentified
+in the anthkey column it says unidentified
+with the languages (except for english) not the full webpage is that language
+in the contrubiute a translation part remove one of the tips
+to make the full site be a certain language can you put the text in language settings so people know how to make the full website a certian langauge
+add a button in customization settings where you can make the backround of the site the the same as on the OS
+remove it
+add a button to remove animations
+also add a button where you can save your settings so that when you refresh the page it saves it.
+make only the list of keys scrollable and the rest should occupy the hieght
+make the bottom of the site where it has the meaning of different win keys for different OS's and the key legend already appear when the site is loaded
+ make the platform buttons like windows stay in visibility while scrolling on the shortrcuts panel
+ 

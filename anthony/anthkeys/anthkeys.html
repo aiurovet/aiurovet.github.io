@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Anthkeys</title>
+  <link rel="manifest" href="manifest.json" id="manifestLink">
+  <link rel="icon" href="icon-192.png" sizes="192x192">
+  <meta name="theme-color" content="#f7971e">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <script>if (location.protocol === 'file:') document.getElementById('manifestLink').remove();</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=Roboto:wght@400;500;600;700&family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/anthkeys.css">
+<body class="light style-m3 size-medium font-google-sans">
+ <div class="container">
+  <div class="top-bar">
+    <h1><span data-i18n="title">Keyboard shortcuts</span></h1>
+    <button class="btn-advanced" id="toggleAdvanced" data-i18n="btn.advanced">Advanced shortcuts</button>
+    <button class="btn-settings" id="btnPrint" title="Print / PDF">&#128424;</button>
+    <button class="btn-settings" id="btnSettings" title="Settings">&#9881;</button>
+  </div>
+
+  <div class="search-bar" style="position:relative"><input type="text" id="searchInput" data-i18n-placeholder="search.placeholder" placeholder="Search actions…" autocomplete="off"><div class="search-history" id="searchHistory"></div></div>
+  <div class="pill-bar" id="pillBar"></div>
+  <div class="collapse-bar"><button class="pill" id="collapseAll" data-i18n="cat.collapse">▾ Collapse all</button></div>
+  <div class="search-count" id="searchCount"></div>
+
+  <div class="tabs">
+    <button class="tab active" data-tab="linux" data-i18n="tab.linux">Linux</button>
+    <button class="tab" data-tab="windows" data-i18n="tab.windows">Windows</button>
+    <button class="tab" data-tab="macos" data-i18n="tab.macos">macOS</button>
+    <button class="tab" data-tab="chromeos" data-i18n="tab.chromeos">ChromeOS</button>
+    <button class="tab" data-tab="apps" data-i18n="tab.apps">Apps</button>
+  </div>
+
+  <div class="scroll-area">
+  <div class="panel active" id="linux">
+    <table>
+      <thead><tr><th data-i18n="th.action">Action</th><th data-i18n="th.anthkey">Shortcut</th></tr></thead>
+      <tbody>
+        <tr class="category"><td colspan="2" data-i18n="cat.editing">Editing</td></tr>
+        <tr><td data-i18n="action.copy">Copy</td><td><kbd>Ctrl</kbd> + <kbd>C</kbd></td></tr>
+        <tr><td data-i18n="action.cut">Cut</td><td><kbd>Ctrl</kbd> + <kbd>X</kbd></td></tr>
+        <tr><td data-i18n="action.paste">Paste</td><td><kbd>Ctrl</kbd> + <kbd>V</kbd></td></tr>
+        <tr><td data-i18n="action.select-all">Select All</td><td><kbd>Ctrl</kbd> + <kbd>A</kbd></td></tr>
+        <tr><td data-i18n="action.undo">Undo</td><td><kbd>Ctrl</kbd> + <kbd>Z</kbd></td></tr>
+        <tr><td data-i18n="action.redo">Redo</td><td><kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>Z</kbd></td></tr>
+        <tr><td data-i18n="action.save">Save</td><td><kbd>Ctrl</kbd> + <kbd>S</kbd></td></tr>
+        <tr><td data-i18n="action.find">Find</td><td><kbd>Ctrl</kbd> + <kbd>F</kbd></td></tr>
+        <tr><td data-i18n="action.paste-plain">Paste Plain Text</td><td><kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>V</kbd></td></tr>
+        <tr><td data-i18n="action.duplicate">Duplicate</td><td><kbd>Ctrl</kbd> + <kbd>D</kbd></td></tr>
+        <tr class="category"><td colspan="2" data-i18n="cat.navigation">Navigation</td></tr>
+        <tr><td data-i18n="action.new-tab">New Tab</td><td><kbd>Ctrl</kbd> + <kbd>T</kbd></td></tr>
+        <tr><td data-i18n="action.close-tab">Close Tab</td><td><kbd>Ctrl</kbd> + <kbd>W</kbd></td></tr>
+        <tr><td data-i18n="action.switch-window">Switch Window</td><td><kbd>Alt</kbd> + <kbd>Tab</kbd></td></tr>
+        <tr><td data-i18n="action.switch-workspace">Switch Workspace</td><td><kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>←</kbd> / <kbd>→</kbd></td></tr>
+        <tr><td data-i18n="action.reopen-tab">Reopen Closed Tab</td><td><kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>T</kbd></td></tr>
+        <tr><td data-i18n="action.next-tab">Next Tab</td><td><kbd>Ctrl</kbd> + <kbd>Tab</kbd></td></tr>
+        <tr><td data-i18n="action.prev-tab">Previous Tab</td><td><kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>Tab</kbd></td></tr>
+        <tr class="category"><td colspan="2" data-i18n="cat.system">System</td></tr>
+        <tr><td data-i18n="action.lock-screen">Lock Screen</td><td><kbd>Super</kbd> + <kbd>L</kbd></td></tr>
+        <tr><td data-i18n="action.screenshot">Screenshot</td><td><kbd>Print Screen</kbd></td></tr>
+        <tr><td data-i18n="action.open-terminal">Open Terminal</td><td><kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>T</kbd></td></tr>
+        <tr><td data-i18n="action.close-window">Close Window</td><td><kbd>Alt</kbd> + <kbd>F4</kbd></td></tr>
+        <tr class="category"><td colspan="2" data-i18n="cat.browser">Browser</td></tr>
+        <tr><td data-i18n="action.browser-new-window">New Browser Window</td><td><kbd>Ctrl</kbd> + <kbd>N</kbd></td></tr>
+        <tr><td data-i18n="action.browser-save-page">Save Page As</td><td><kbd>Ctrl</kbd> + <kbd>S</kbd></td></tr>
+        <tr><td data-i18n="action.browser-bookmarks">Bookmarks Manager</td><td><kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>O</kbd></td></tr>
+        <tr><td data-i18n="action.browser-history">History</td><td><kbd>Ctrl</kbd> + <kbd>H</kbd></td></tr>
+        <tr><td data-i18n="action.browser-devtools">DevTools</td><td><kbd>F12</kbd></td></tr>
+        <tr><td data-i18n="action.browser-zoom-in">Zoom In</td><td><kbd>Ctrl</kbd> + <kbd>+</kbd></td></tr>
+        <tr><td data-i18n="action.browser-zoom-reset">Zoom Reset</td><td><kbd>Ctrl</kbd> + <kbd>0</kbd></td></tr>
+        <tr><td data-i18n="action.browser-zoom-out">Zoom Out</td><td><kbd>Ctrl</kbd> + <kbd>-</kbd></td></tr>
+        <tr><td data-i18n="action.browser-fullscreen">Fullscreen</td><td><kbd>F11</kbd></td></tr>
+        <tr><td data-i18n="action.browser-downloads">Downloads</td><td><kbd>Ctrl</kbd> + <kbd>J</kbd></td></tr>
+        <tr><td data-i18n="action.browser-incognito">New Incognito Window</td><td><kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>N</kbd></td></tr>
+        <tr><td data-i18n="action.browser-address-bar">Focus Address Bar</td><td><kbd>Ctrl</kbd> + <kbd>L</kbd></td></tr>
+        <tr><td data-i18n="action.browser-clear-history">Clear Recent History</td><td><kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>Delete</kbd></td></tr>
+        <tr class="category"><td colspan="2" data-i18n="cat.terminal">Terminal</td></tr>
+        <tr><td data-i18n="action.terminal-clear">Clear Terminal</td><td><kbd>Ctrl</kbd> + <kbd>L</kbd></td></tr>
+        <tr><td data-i18n="action.terminal-new-window">New Terminal Window</td><td><kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>N</kbd></td></tr>
+        <tr><td data-i18n="action.terminal-search">Terminal Search</td><td><kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>F</kbd></td></tr>
+        <tr><td data-i18n="action.terminal-font-zoom">Terminal Font Zoom</td><td><kbd>Ctrl</kbd> + <kbd>+</kbd> / <kbd>-</kbd></td></tr>
+        <tr><td colspan="2" style="font-weight:600;font-size:.75rem;text-transform:uppercase;letter-spacing:.06em;color:var(--text-variant);padding:.6rem .75rem .2rem;border-bottom:none;background:none" data-i18n="cat.code-editor">Code Editor</td></tr>
+        <tr><td data-i18n="action.editor-quick-open">Quick Open</td><td><kbd>Ctrl</kbd> + <kbd>P</kbd></td></tr>
+        <tr><td data-i18n="action.editor-command-palette">Command Palette</td><td><kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>P</kbd></td></tr>
+        <tr><td data-i18n="action.editor-sidebar">Toggle Sidebar</td><td><kbd>Ctrl</kbd> + <kbd>B</kbd></td></tr>
+        <tr><td data-i18n="action.editor-terminal-toggle">Toggle Terminal Panel</td><td><kbd>Ctrl</kbd> + <kbd>`</kbd></td></tr>
+        <tr><td data-i18n="action.editor-multicursor">Multi-Cursor</td><td><kbd>Alt</kbd> + <kbd>Click</kbd></td></tr>
+        <tr><td data-i18n="action.editor-line-comment">Toggle Line Comment</td><td><kbd>Ctrl</kbd> + <kbd>/</kbd></td></tr>
+        <tr><td data-i18n="action.editor-format">Format Document</td><td><kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>I</kbd></td></tr>
+        <tr class="advanced"><td colspan="2" style="font-weight:600;font-size:.75rem;text-transform:uppercase;letter-spacing:.06em;color:var(--text-variant);padding:.6rem .75rem .2rem;border-bottom:none;background:none" data-i18n="cat.desktop">Desktop</td></tr>
+        <tr class="advanced"><td data-i18n="action.workspace-switch">Switch Workspace</td><td><kbd>Super</kbd> + <kbd>Tab</kbd></td></tr>
+        <tr class="advanced"><td data-i18n="action.show-desktop">Show Desktop</td><td><kbd>Super</kbd> + <kbd>D</kbd></td></tr>
+        <tr class="advanced"><td data-i18n="action.activities-overview">Activities Overview</td><td><kbd>Super</kbd></td></tr>
+        <tr class="advanced"><td colspan="2" style="font-weight:600;font-size:.75rem;text-transform:uppercase;letter-spacing:.06em;color:var(--text-variant);padding:.6rem .75rem .2rem;border-bottom:none;background:none" data-i18n="cat.screenshots">Screenshots</td></tr>
+        <tr class="advanced"><td data-i18n="action.screenshot-area">Screenshot Area</td><td><kbd>Shift</kbd> + <kbd>Print</kbd></td></tr>
+        <tr class="advanced"><td data-i18n="action.screenshot-window">Screenshot Window</td><td><kbd>Alt</kbd> + <kbd>Print</kbd></td></tr>
+        <tr class="advanced"><td data-i18n="action.screenshot-clipboard">Screenshot to Clipboard</td><td><kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>Print</kbd></td></tr>
+        <tr class="advanced"><td colspan="2" style="font-weight:600;font-size:.75rem;text-transform:uppercase;letter-spacing:.06em;color:var(--text-variant);padding:.6rem .75rem .2rem;border-bottom:none;background:none" data-i18n="cat.window">Window</td></tr>
+        <tr class="advanced"><td data-i18n="action.switch-window">Switch Window</td><td><kbd>Alt</kbd> + <kbd>Tab</kbd></td></tr>
+        <tr class="advanced"><td data-i18n="action.close-window">Close Window</td><td><kbd>Alt</kbd> + <kbd>F4</kbd></td></tr>
+        <tr class="advanced"><td data-i18n="action.minimize-window">Minimize Window</td><td><kbd>Super</kbd> + <kbd>H</kbd></td></tr>
+        <tr class="advanced"><td data-i18n="action.maximize-window">Maximize Window</td><td><kbd>Super</kbd> + <kbd>↑</kbd></td></tr>
+        <tr class="advanced"><td colspan="2" style="font-weight:600;font-size:.75rem;text-transform:uppercase;letter-spacing:.06em;color:var(--text-variant);padding:.6rem .75rem .2rem;border-bottom:none;background:none" data-i18n="cat.power-user">Power User</td></tr>
+        <tr class="advanced"><td data-i18n="action.run">Run Command</td><td><kbd>Alt</kbd> + <kbd>F2</kbd></td></tr>
+        <tr class="advanced"><td data-i18n="action.file-search">File Search</td><td><kbd>Ctrl</kbd> + <kbd>F</kbd></td></tr>
+        <tr class="advanced"><td data-i18n="action.terminal-launcher">Terminal Launcher</td><td><kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>T</kbd></td></tr>
+        <tr class="advanced"><td data-i18n="action.system-monitor">System Monitor</td><td><kbd>Ctrl</kbd> + <kbd>Escape</kbd></td></tr>
+        <tr class="advanced"><td data-i18n="action.notifications">Notifications</td><td><kbd>Super</kbd> + <kbd>V</kbd></td></tr>
+        <tr class="advanced"><td data-i18n="action.show-file-manager">Show File Manager</td><td><kbd>Super</kbd> + <kbd>E</kbd></td></tr>
+        <tr class="advanced"><td data-i18n="action.app-menu">App Menu</td><td><kbd>Alt</kbd> + <kbd>F1</kbd></td></tr>
+        <tr class="advanced"><td data-i18n="action.app-launcher">Application Launcher</td><td><kbd>Super</kbd> + <kbd>A</kbd></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="panel" id="windows">
+    <table>
+      <thead><tr><th data-i18n="th.action">Action</th><th data-i18n="th.anthkey">Shortcut</th></tr></thead>
+      <tbody>
+        <tr class="category"><td colspan="2" data-i18n="cat.editing">Editing</td></tr>
+        <tr><td data-i18n="action.copy">Copy</td><td><kbd>Ctrl</kbd> + <kbd>C</kbd></td></tr>
+        <tr><td data-i18n="action.cut">Cut</td><td><kbd>Ctrl</kbd> + <kbd>X</kbd></td></tr>
+        <tr><td data-i18n="action.paste">Paste</td><td><kbd>Ctrl</kbd> + <kbd>V</kbd></td></tr>
+        <tr><td data-i18n="action.select-all">Select All</td><td><kbd>Ctrl</kbd> + <kbd>A</kbd></td></tr>
+        <tr><td data-i18n="action.undo">Undo</td><td><kbd>Ctrl</kbd> + <kbd>Z</kbd></td></tr>
+        <tr><td data-i18n="action.redo">Redo</td><td><kbd>Ctrl</kbd> + <kbd>Y</kbd></td></tr>
+        <tr><td data-i18n="action.save">Save</td><td><kbd>Ctrl</kbd> + <kbd>S</kbd></td></tr>
+        <tr><td data-i18n="action.find">Find</td><td><kbd>Ctrl</kbd> + <kbd>F</kbd></td></tr>
+        <tr><td data-i18n="action.paste-plain">Paste Plain Text</td><td><kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>V</kbd></td></tr>
+        <tr><td data-i18n="action.duplicate">Duplicate</td><td><kbd>Ctrl</kbd> + <kbd>D</kbd></td></tr>
+        <tr class="category"><td colspan="2" data-i18n="cat.navigation">Navigation</td></tr>
+        <tr><td data-i18n="action.new-tab">New Tab</td><td><kbd>Ctrl</kbd> + <kbd>T</kbd></td></tr>
+        <tr><td data-i18n="action.close-tab">Close Tab</td><td><kbd>Ctrl</kbd> + <kbd>W</kbd></td></tr>
+        <tr><td data-i18n="action.reopen-tab">Reopen Closed Tab</td><td><kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>T</kbd></td></tr>
+        <tr><td data-i18n="action.next-tab">Next Tab</td><td><kbd>Ctrl</kbd> + <kbd>Tab</kbd></td></tr>
+        <tr><td data-i18n="action.prev-tab">Previous Tab</td><td><kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>Tab</kbd></td></tr>
+        <tr><td data-i18n="action.switch-window">Switch Window</td><td><kbd>Alt</kbd> + <kbd>Tab</kbd></td></tr>
+        <tr class="category"><td colspan="2" data-i18n="cat.system">System</td></tr>
+        <tr><td data-i18n="action.lock-screen">Lock Screen</td><td><kbd>Win</kbd> + <kbd>L</kbd></td></tr>
+        <tr><td data-i18n="action.screenshot">Screenshot</td><td><kbd>Win</kbd> + <kbd>Shift</kbd> + <kbd>S</kbd></td></tr>
+        <tr><td data-i18n="action.run">Run</td><td><kbd>Win</kbd> + <kbd>R</kbd></td></tr>
+        <tr><td data-i18n="action.close-window">Close Window</td><td><kbd>Alt</kbd> + <kbd>F4</kbd></td></tr>
+        <tr class="category"><td colspan="2" data-i18n="cat.browser">Browser</td></tr>
+        <tr><td data-i18n="action.browser-new-window">New Browser Window</td><td><kbd>Ctrl</kbd> + <kbd>N</kbd></td></tr>
+        <tr><td data-i18n="action.browser-save-page">Save Page As</td><td><kbd>Ctrl</kbd> + <kbd>S</kbd></td></tr>
+        <tr><td data-i18n="action.browser-bookmarks">Bookmarks Manager</td><td><kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>O</kbd></td></tr>
+        <tr><td data-i18n="action.browser-history">History</td><td><kbd>Ctrl</kbd> + <kbd>H</kbd></td></tr>
+        <tr><td data-i18n="action.browser-devtools">DevTools</td><td><kbd>F12</kbd></td></tr>
+        <tr><td data-i18n="action.browser-zoom-in">Zoom In</td><td><kbd>Ctrl</kbd> + <kbd>+</kbd></td></tr>
+        <tr><td data-i18n="action.browser-zoom-reset">Zoom Reset</td><td><kbd>Ctrl</kbd> + <kbd>0</kbd></td></tr>
+        <tr><td data-i18n="action.browser-zoom-out">Zoom Out</td><td><kbd>Ctrl</kbd> + <kbd>-</kbd></td></tr>
+        <tr><td data-i18n="action.browser-fullscreen">Fullscreen</td><td><kbd>F11</kbd></td></tr>
+        <tr><td data-i18n="action.browser-downloads">Downloads</td><td><kbd>Ctrl</kbd> + <kbd>J</kbd></td></tr>
+        <tr><td data-i18n="action.browser-incognito">New Incognito Window</td><td><kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>N</kbd></td></tr>
+        <tr><td data-i18n="action.browser-address-bar">Focus Address Bar</td><td><kbd>Ctrl</kbd> + <kbd>L</kbd></td></tr>
+        <tr><td data-i18n="action.browser-clear-history">Clear Recent History</td><td><kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>Delete</kbd></td></tr>
+        <tr class="category"><td colspan="2" data-i18n="cat.terminal">Terminal</td></tr>
+        <tr><td data-i18n="action.terminal-clear">Clear Terminal</td><td><kbd>cls</kbd> + <kbd>Enter</kbd></td></tr>
+        <tr><td data-i18n="action.terminal-new-window">New Terminal Window</td><td><kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>N</kbd></td></tr>
+        <tr><td data-i18n="action.terminal-search">Terminal Search</td><td><kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>F</kbd></td></tr>
+        <tr><td data-i18n="action.terminal-font-zoom">Terminal Font Zoom</td><td><kbd>Ctrl</kbd> + <kbd>+</kbd> / <kbd>-</kbd></td></tr>
+        <tr><td colspan="2" style="font-weight:600;font-size:.75rem;text-transform:uppercase;letter-spacing:.06em;color:var(--text-variant);padding:.6rem .75rem .2rem;border-bottom:none;background:none" data-i18n="cat.code-editor">Code Editor</td></tr>
+        <tr><td data-i18n="action.editor-quick-open">Quick Open</td><td><kbd>Ctrl</kbd> + <kbd>P</kbd></td></tr>
+        <tr><td data-i18n="action.editor-command-palette">Command Palette</td><td><kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>P</kbd></td></tr>
+        <tr><td data-i18n="action.editor-sidebar">Toggle Sidebar</td><td><kbd>Ctrl</kbd> + <kbd>B</kbd></td></tr>
+        <tr><td data-i18n="action.editor-terminal-toggle">Toggle Terminal Panel</td><td><kbd>Ctrl</kbd> + <kbd>`</kbd></td></tr>
+        <tr><td data-i18n="action.editor-multicursor">Multi-Cursor</td><td><kbd>Alt</kbd> + <kbd>Click</kbd></td></tr>
+        <tr><td data-i18n="action.editor-line-comment">Toggle Line Comment</td><td><kbd>Ctrl</kbd> + <kbd>/</kbd></td></tr>
+        <tr><td data-i18n="action.editor-format">Format Document</td><td><kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>I</kbd></td></tr>
+        <tr class="advanced"><td colspan="2" style="font-weight:600;font-size:.75rem;text-transform:uppercase;letter-spacing:.06em;color:var(--text-variant);padding:.6rem .75rem .2rem;border-bottom:none;background:none" data-i18n="cat.desktop">Desktop</td></tr>
+        <tr class="advanced"><td data-i18n="action.task-view">Task View</td><td><kbd>Win</kbd> + <kbd>Tab</kbd></td></tr>
+        <tr class="advanced"><td data-i18n="action.file-explorer">File Explorer</td><td><kbd>Win</kbd> + <kbd>E</kbd></td></tr>
+        <tr class="advanced"><td data-i18n="action.settings">Settings</td><td><kbd>Win</kbd> + <kbd>I</kbd></td></tr>
+        <tr class="advanced"><td data-i18n="action.minimize-all">Minimize All</td><td><kbd>Win</kbd> + <kbd>D</kbd></td></tr>
+        <tr class="advanced"><td data-i18n="action.virtual-desktop-new">New Virtual Desktop</td><td><kbd>Win</kbd> + <kbd>Ctrl</kbd> + <kbd>D</kbd></td></tr>
+        <tr class="advanced"><td data-i18n="action.virtual-desktop-switch">Switch Virtual Desktop</td><td><kbd>Win</kbd> + <kbd>Ctrl</kbd> + <kbd>←</kbd> / <kbd>→</kbd></td></tr>
+        <tr class="advanced"><td data-i18n="action.virtual-desktop-close">Close Virtual Desktop</td><td><kbd>Win</kbd> + <kbd>Ctrl</kbd> + <kbd>F4</kbd></td></tr>
+        <tr class="advanced"><td colspan="2" style="font-weight:600;font-size:.75rem;text-transform:uppercase;letter-spacing:.06em;color:var(--text-variant);padding:.6rem .75rem .2rem;border-bottom:none;background:none" data-i18n="cat.power-user">Power User</td></tr>
+        <tr class="advanced"><td data-i18n="action.dictation">Dictation</td><td><kbd>Win</kbd> + <kbd>H</kbd></td></tr>
+        <tr class="advanced"><td data-i18n="action.screen-recording">Screen Recording</td><td><kbd>Win</kbd> + <kbd>Alt</kbd> + <kbd>R</kbd></td></tr>
+        <tr class="advanced"><td data-i18n="action.widgets">Widgets</td><td><kbd>Win</kbd> + <kbd>W</kbd></td></tr>
+        <tr class="advanced"><td data-i18n="action.game-bar">Game Bar</td><td><kbd>Win</kbd> + <kbd>G</kbd></td></tr>
+        <tr class="advanced"><td data-i18n="action.emoji-picker">Emoji Picker</td><td><kbd>Win</kbd> + <kbd>.</kbd></td></tr>
+        <tr class="advanced"><td data-i18n="action.clipboard-history">Clipboard History</td><td><kbd>Win</kbd> + <kbd>V</kbd></td></tr>
+        <tr class="advanced"><td data-i18n="action.quick-link-menu">Quick Link Menu</td><td><kbd>Win</kbd> + <kbd>X</kbd></td></tr>
+        <tr class="advanced"><td data-i18n="action.project-pane">Project Pane</td><td><kbd>Win</kbd> + <kbd>P</kbd></td></tr>
+        <tr class="advanced"><td data-i18n="action.notifications">Notifications</td><td><kbd>Win</kbd> + <kbd>N</kbd></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="panel" id="macos">
+    <table>
+      <thead><tr><th data-i18n="th.action">Action</th><th data-i18n="th.anthkey">Shortcut</th></tr></thead>
+      <tbody>
+        <tr class="category"><td colspan="2" data-i18n="cat.editing">Editing</td></tr>
+        <tr><td data-i18n="action.copy">Copy</td><td><kbd>Cmd</kbd> + <kbd>C</kbd></td></tr>
+        <tr><td data-i18n="action.cut">Cut</td><td><kbd>Cmd</kbd> + <kbd>X</kbd></td></tr>
+        <tr><td data-i18n="action.paste">Paste</td><td><kbd>Cmd</kbd> + <kbd>V</kbd></td></tr>
+        <tr><td data-i18n="action.select-all">Select All</td><td><kbd>Cmd</kbd> + <kbd>A</kbd></td></tr>
+        <tr><td data-i18n="action.undo">Undo</td><td><kbd>Cmd</kbd> + <kbd>Z</kbd></td></tr>
+        <tr><td data-i18n="action.redo">Redo</td><td><kbd>Cmd</kbd> + <kbd>Shift</kbd> + <kbd>Z</kbd></td></tr>
+        <tr><td data-i18n="action.save">Save</td><td><kbd>Cmd</kbd> + <kbd>S</kbd></td></tr>
+        <tr><td data-i18n="action.find">Find</td><td><kbd>Cmd</kbd> + <kbd>F</kbd></td></tr>
+        <tr><td data-i18n="action.paste-plain">Paste Plain Text</td><td><kbd>Cmd</kbd> + <kbd>Option</kbd> + <kbd>Shift</kbd> + <kbd>V</kbd></td></tr>
+        <tr><td data-i18n="action.duplicate">Duplicate</td><td><kbd>Cmd</kbd> + <kbd>D</kbd></td></tr>
+        <tr class="category"><td colspan="2" data-i18n="cat.navigation">Navigation</td></tr>
+        <tr><td data-i18n="action.new-tab">New Tab</td><td><kbd>Cmd</kbd> + <kbd>T</kbd></td></tr>
+        <tr><td data-i18n="action.close-tab">Close Tab</td><td><kbd>Cmd</kbd> + <kbd>W</kbd></td></tr>
+        <tr><td data-i18n="action.switch-window">Switch Window</td><td><kbd>Cmd</kbd> + <kbd>`</kbd></td></tr>
+        <tr><td data-i18n="action.reopen-tab">Reopen Closed Tab</td><td><kbd>Cmd</kbd> + <kbd>Shift</kbd> + <kbd>T</kbd></td></tr>
+        <tr><td data-i18n="action.next-tab">Next Tab</td><td><kbd>Cmd</kbd> + <kbd>Tab</kbd></td></tr>
+        <tr><td data-i18n="action.prev-tab">Previous Tab</td><td><kbd>Cmd</kbd> + <kbd>Shift</kbd> + <kbd>Tab</kbd></td></tr>
+        <tr class="category"><td colspan="2" data-i18n="cat.system">System</td></tr>
+        <tr><td data-i18n="action.lock-screen">Lock Screen</td><td><kbd>Cmd</kbd> + <kbd>Ctrl</kbd> + <kbd>Q</kbd></td></tr>
+        <tr><td data-i18n="action.screenshot">Screenshot</td><td><kbd>Cmd</kbd> + <kbd>Shift</kbd> + <kbd>3</kbd></td></tr>
+        <tr><td data-i18n="action.screenshot-area">Screenshot Area</td><td><kbd>Cmd</kbd> + <kbd>Shift</kbd> + <kbd>4</kbd></td></tr>
+        <tr><td data-i18n="action.screenshot-window">Screenshot Window</td><td><kbd>Cmd</kbd> + <kbd>Shift</kbd> + <kbd>4</kbd> + <kbd>Space</kbd></td></tr>
+        <tr><td data-i18n="action.open-terminal">Open Terminal</td><td><kbd>Cmd</kbd> + <kbd>Space</kbd> then <kbd>Terminal</kbd></td></tr>
+        <tr><td data-i18n="action.close-window">Close Window</td><td><kbd>Cmd</kbd> + <kbd>W</kbd></td></tr>
+        <tr><td data-i18n="action.minimize">Minimize</td><td><kbd>Cmd</kbd> + <kbd>M</kbd></td></tr>
+        <tr><td data-i18n="action.quit-app">Quit App</td><td><kbd>Cmd</kbd> + <kbd>Q</kbd></td></tr>
+        <tr class="advanced"><td data-i18n="action.force-quit">Force Quit</td><td><kbd>Cmd</kbd> + <kbd>Option</kbd> + <kbd>Esc</kbd></td></tr>
+        <tr class="advanced"><td data-i18n="action.hide-app">Hide App</td><td><kbd>Cmd</kbd> + <kbd>H</kbd></td></tr>
+        <tr class="advanced"><td data-i18n="action.show-desktop">Show Desktop</td><td><kbd>F11</kbd></td></tr>
+        <tr class="advanced"><td data-i18n="action.mission-control">Mission Control</td><td><kbd>Ctrl</kbd> + <kbd>↑</kbd></td></tr>
+        <tr class="category"><td colspan="2" data-i18n="cat.browser">Browser</td></tr>
+        <tr><td data-i18n="action.browser-new-window">New Browser Window</td><td><kbd>Cmd</kbd> + <kbd>N</kbd></td></tr>
+        <tr><td data-i18n="action.browser-bookmarks">Bookmarks Manager</td><td><kbd>Cmd</kbd> + <kbd>Option</kbd> + <kbd>B</kbd></td></tr>
+        <tr><td data-i18n="action.browser-history">History</td><td><kbd>Cmd</kbd> + <kbd>Y</kbd></td></tr>
+        <tr><td data-i18n="action.browser-devtools">DevTools</td><td><kbd>Cmd</kbd> + <kbd>Option</kbd> + <kbd>I</kbd></td></tr>
+        <tr><td data-i18n="action.browser-zoom-in">Zoom In</td><td><kbd>Cmd</kbd> + <kbd>+</kbd></td></tr>
+        <tr><td data-i18n="action.browser-zoom-out">Zoom Out</td><td><kbd>Cmd</kbd> + <kbd>-</kbd></td></tr>
+        <tr><td data-i18n="action.browser-zoom-reset">Zoom Reset</td><td><kbd>Cmd</kbd> + <kbd>0</kbd></td></tr>
+        <tr><td data-i18n="action.browser-fullscreen">Fullscreen</td><td><kbd>Ctrl</kbd> + <kbd>Cmd</kbd> + <kbd>F</kbd></td></tr>
+        <tr><td data-i18n="action.browser-downloads">Downloads</td><td><kbd>Cmd</kbd> + <kbd>Option</kbd> + <kbd>L</kbd></td></tr>
+        <tr class="advanced"><td data-i18n="action.browser-incognito">New Incognito Window</td><td><kbd>Cmd</kbd> + <kbd>Shift</kbd> + <kbd>N</kbd></td></tr>
+        <tr class="advanced"><td data-i18n="action.browser-clear-history">Clear Recent History</td><td><kbd>Cmd</kbd> + <kbd>Shift</kbd> + <kbd>Delete</kbd></td></tr>
+        <tr class="advanced"><td data-i18n="action.browser-address-bar">Focus Address Bar</td><td><kbd>Cmd</kbd> + <kbd>L</kbd></td></tr>
+        <tr class="category"><td colspan="2" data-i18n="cat.terminal">Terminal</td></tr>
+        <tr><td data-i18n="action.terminal-new-window">New Terminal Window</td><td><kbd>Cmd</kbd> + <kbd>N</kbd></td></tr>
+        <tr class="advanced"><td data-i18n="action.terminal-clear">Clear Terminal</td><td><kbd>Cmd</kbd> + <kbd>K</kbd></td></tr>
+        <tr class="advanced"><td data-i18n="action.terminal-search">Terminal Search</td><td><kbd>Cmd</kbd> + <kbd>F</kbd></td></tr>
+        <tr class="advanced"><td data-i18n="action.terminal-font-zoom">Terminal Font Zoom</td><td><kbd>Cmd</kbd> + <kbd>+</kbd></td></tr>
+        <tr class="advanced"><td data-i18n="action.dictation">Dictation</td><td><kbd>Fn</kbd> + <kbd>Fn</kbd></td></tr>
+        <tr class="category"><td colspan="2">Text Editing</td></tr>
+        <tr><td data-i18n="action.text-word-left">Word Left</td><td><kbd>Option</kbd> + <kbd>←</kbd></td></tr>
+        <tr><td data-i18n="action.text-word-right">Word Right</td><td><kbd>Option</kbd> + <kbd>→</kbd></td></tr>
+        <tr><td data-i18n="action.text-line-start">Line Start</td><td><kbd>Cmd</kbd> + <kbd>←</kbd></td></tr>
+        <tr><td data-i18n="action.text-line-end">Line End</td><td><kbd>Cmd</kbd> + <kbd>→</kbd></td></tr>
+        <tr><td data-i18n="action.text-delete-word">Delete Word</td><td><kbd>Option</kbd> + <kbd>Backspace</kbd></td></tr>
+        <tr class="advanced"><td data-i18n="action.emoji-picker">Emoji Picker</td><td><kbd>Cmd</kbd> + <kbd>Ctrl</kbd> + <kbd>Space</kbd></td></tr>
+        <tr class="advanced"><td data-i18n="action.character-picker">Character Picker</td><td><kbd>Option</kbd> + <kbd>Shift</kbd> + <kbd>K</kbd></td></tr>
+        <tr class="advanced"><td data-i18n="action.spotlight-search">Spotlight Search</td><td><kbd>Cmd</kbd> + <kbd>Space</kbd></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="panel" id="chromeos">
+    <table>
+      <thead><tr><th data-i18n="th.action">Action</th><th data-i18n="th.anthkey">Shortcut</th></tr></thead>
+      <tbody>
+        <tr class="category"><td colspan="2" data-i18n="cat.editing">Editing</td></tr>
+        <tr><td data-i18n="action.copy">Copy</td><td><kbd>Ctrl</kbd> + <kbd>C</kbd></td></tr>
+        <tr><td data-i18n="action.cut">Cut</td><td><kbd>Ctrl</kbd> + <kbd>X</kbd></td></tr>
+        <tr><td data-i18n="action.paste">Paste</td><td><kbd>Ctrl</kbd> + <kbd>V</kbd></td></tr>
+        <tr><td data-i18n="action.select-all">Select All</td><td><kbd>Ctrl</kbd> + <kbd>A</kbd></td></tr>
+        <tr><td data-i18n="action.undo">Undo</td><td><kbd>Ctrl</kbd> + <kbd>Z</kbd></td></tr>
+        <tr><td data-i18n="action.redo">Redo</td><td><kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>Z</kbd></td></tr>
+        <tr><td data-i18n="action.save">Save</td><td><kbd>Ctrl</kbd> + <kbd>S</kbd></td></tr>
+        <tr><td data-i18n="action.find">Find</td><td><kbd>Ctrl</kbd> + <kbd>F</kbd></td></tr>
+        <tr><td data-i18n="action.paste-plain">Paste Plain Text</td><td><kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>V</kbd></td></tr>
+        <tr><td data-i18n="action.duplicate">Duplicate</td><td><kbd>Ctrl</kbd> + <kbd>D</kbd></td></tr>
+        <tr class="category"><td colspan="2" data-i18n="cat.navigation">Navigation</td></tr>
+        <tr><td data-i18n="action.new-tab">New Tab</td><td><kbd>Ctrl</kbd> + <kbd>T</kbd></td></tr>
+        <tr><td data-i18n="action.close-tab">Close Tab</td><td><kbd>Ctrl</kbd> + <kbd>W</kbd></td></tr>
+        <tr><td data-i18n="action.switch-window">Switch Window</td><td><kbd>Alt</kbd> + <kbd>Tab</kbd></td></tr>
+        <tr><td data-i18n="action.reopen-tab">Reopen Closed Tab</td><td><kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>T</kbd></td></tr>
+        <tr><td data-i18n="action.next-tab">Next Tab</td><td><kbd>Ctrl</kbd> + <kbd>Tab</kbd></td></tr>
+        <tr><td data-i18n="action.prev-tab">Previous Tab</td><td><kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>Tab</kbd></td></tr>
+        <tr class="category"><td colspan="2" data-i18n="cat.system">System</td></tr>
+        <tr><td data-i18n="action.lock-screen">Lock Screen</td><td><kbd>Search</kbd> + <kbd>L</kbd></td></tr>
+        <tr><td data-i18n="action.screenshot">Screenshot</td><td><kbd>Ctrl</kbd> + <kbd>F5</kbd></td></tr>
+        <tr><td data-i18n="action.open-launcher">Open Launcher</td><td><kbd>Search</kbd></td></tr>
+        <tr><td data-i18n="action.close-window">Close Window</td><td><kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>W</kbd></td></tr>
+        <tr class="category"><td colspan="2" data-i18n="cat.browser">Browser</td></tr>
+        <tr><td data-i18n="action.browser-new-window">New Browser Window</td><td><kbd>Ctrl</kbd> + <kbd>N</kbd></td></tr>
+        <tr><td data-i18n="action.browser-save-page">Save Page As</td><td><kbd>Ctrl</kbd> + <kbd>S</kbd></td></tr>
+        <tr><td data-i18n="action.browser-bookmarks">Bookmarks Manager</td><td><kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>O</kbd></td></tr>
+        <tr><td data-i18n="action.browser-history">History</td><td><kbd>Ctrl</kbd> + <kbd>H</kbd></td></tr>
+        <tr><td data-i18n="action.browser-incognito">New Incognito Window</td><td><kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>N</kbd></td></tr>
+        <tr><td data-i18n="action.browser-address-bar">Focus Address Bar</td><td><kbd>Ctrl</kbd> + <kbd>L</kbd></td></tr>
+        <tr><td data-i18n="action.browser-clear-history">Clear Recent History</td><td><kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>Delete</kbd></td></tr>
+        <tr><td data-i18n="action.browser-devtools">DevTools</td><td><kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>I</kbd></td></tr>
+        <tr><td data-i18n="action.browser-zoom-in">Zoom In</td><td><kbd>Ctrl</kbd> + <kbd>+</kbd></td></tr>
+        <tr><td data-i18n="action.browser-zoom-reset">Zoom Reset</td><td><kbd>Ctrl</kbd> + <kbd>0</kbd></td></tr>
+        <tr><td data-i18n="action.browser-zoom-out">Zoom Out</td><td><kbd>Ctrl</kbd> + <kbd>-</kbd></td></tr>
+        <tr><td data-i18n="action.browser-fullscreen">Fullscreen</td><td><kbd>F11</kbd></td></tr>
+        <tr><td data-i18n="action.browser-downloads">Downloads</td><td><kbd>Ctrl</kbd> + <kbd>J</kbd></td></tr>
+        <tr class="category"><td colspan="2" data-i18n="cat.terminal">Terminal</td></tr>
+        <tr><td data-i18n="action.terminal-clear">Clear Terminal</td><td><kbd>Ctrl</kbd> + <kbd>L</kbd></td></tr>
+        <tr><td data-i18n="action.terminal-new-window">New Terminal Window</td><td><kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>T</kbd></td></tr>
+        <tr><td data-i18n="action.terminal-search">Terminal Search</td><td><kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>F</kbd></td></tr>
+        <tr><td data-i18n="action.terminal-font-zoom">Terminal Font Zoom</td><td><kbd>Ctrl</kbd> + <kbd>+</kbd> / <kbd>-</kbd></td></tr>
+        <tr><td colspan="2" style="font-weight:600;font-size:.75rem;text-transform:uppercase;letter-spacing:.06em;color:var(--text-variant);padding:.6rem .75rem .2rem;border-bottom:none;background:none" data-i18n="cat.code-editor">Code Editor</td></tr>
+        <tr><td data-i18n="action.editor-quick-open">Quick Open</td><td><kbd>Ctrl</kbd> + <kbd>P</kbd></td></tr>
+        <tr><td data-i18n="action.editor-command-palette">Command Palette</td><td><kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>P</kbd></td></tr>
+        <tr><td data-i18n="action.editor-sidebar">Toggle Sidebar</td><td><kbd>Ctrl</kbd> + <kbd>B</kbd></td></tr>
+        <tr><td data-i18n="action.editor-terminal-toggle">Toggle Terminal Panel</td><td><kbd>Ctrl</kbd> + <kbd>`</kbd></td></tr>
+        <tr><td data-i18n="action.editor-multicursor">Multi-Cursor</td><td><kbd>Alt</kbd> + <kbd>Click</kbd></td></tr>
+        <tr><td data-i18n="action.editor-line-comment">Toggle Line Comment</td><td><kbd>Ctrl</kbd> + <kbd>/</kbd></td></tr>
+        <tr><td data-i18n="action.editor-format">Format Document</td><td><kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>I</kbd></td></tr>
+        <tr class="advanced"><td colspan="2" style="font-weight:600;font-size:.75rem;text-transform:uppercase;letter-spacing:.06em;color:var(--text-variant);padding:.6rem .75rem .2rem;border-bottom:none;background:none" data-i18n="cat.desktop">Desktop</td></tr>
+        <tr class="advanced"><td data-i18n="action.overview">Overview</td><td><kbd>Alt</kbd> + <kbd>F3</kbd></td></tr>
+        <tr class="advanced"><td data-i18n="action.show-desktop">Show Desktop</td><td><kbd>Search</kbd> + <kbd>D</kbd></td></tr>
+        <tr class="advanced"><td data-i18n="action.show-files">Show Files</td><td><kbd>Shift</kbd> + <kbd>Alt</kbd> + <kbd>M</kbd></td></tr>
+        <tr class="advanced"><td data-i18n="action.switch-user">Switch User</td><td><kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>S</kbd></td></tr>
+        <tr class="advanced"><td data-i18n="action.caps-lock-toggle">Caps Lock Toggle</td><td><kbd>Alt</kbd> + <kbd>Search</kbd></td></tr>
+        <tr class="advanced"><td data-i18n="action.notifications">Notifications</td><td><kbd>Shift</kbd> + <kbd>Alt</kbd> + <kbd>N</kbd></td></tr>
+        <tr class="advanced"><td data-i18n="action.open-files">Open Files</td><td><kbd>Ctrl</kbd> + <kbd>O</kbd></td></tr>
+        <tr class="advanced"><td colspan="2" style="font-weight:600;font-size:.75rem;text-transform:uppercase;letter-spacing:.06em;color:var(--text-variant);padding:.6rem .75rem .2rem;border-bottom:none;background:none" data-i18n="cat.advanced">Advanced</td></tr>
+        <tr class="advanced"><td data-i18n="action.screenshot-area">Screenshot Area</td><td><kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>F5</kbd></td></tr>
+        <tr class="advanced"><td data-i18n="action.record-screen">Record Screen</td><td><kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>F6</kbd></td></tr>
+        <tr class="advanced"><td data-i18n="action.emoji-picker">Emoji Picker</td><td><kbd>Search</kbd> + <kbd>Shift</kbd> + <kbd>Space</kbd></td></tr>
+        <tr class="advanced"><td data-i18n="action.clipboard-history">Clipboard History</td><td><kbd>Search</kbd> + <kbd>V</kbd></td></tr>
+        <tr class="advanced"><td data-i18n="action.status-area">Status Area</td><td><kbd>Shift</kbd> + <kbd>Alt</kbd> + <kbd>S</kbd></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="panel" id="apps">
+    <table>
+      <thead><tr><th data-i18n="th.action">Action</th><th data-i18n="th.anthkey">Shortcut</th></tr></thead>
+      <tbody>
+        <tr class="category"><td colspan="2" data-i18n="cat.vscode">VS Code</td></tr>
+        <tr><td data-i18n="app.vscode-split">Split Editor</td><td><kbd>Ctrl</kbd> + <kbd>\</kbd></td></tr>
+        <tr><td data-i18n="app.vscode-goto-def">Go to Definition</td><td><kbd>F12</kbd></td></tr>
+        <tr><td data-i18n="app.vscode-peek-def">Peek Definition</td><td><kbd>Alt</kbd> + <kbd>F12</kbd></td></tr>
+        <tr><td data-i18n="app.vscode-rename">Rename Symbol</td><td><kbd>F2</kbd></td></tr>
+        <tr><td data-i18n="app.vscode-goto-line">Go to Line</td><td><kbd>Ctrl</kbd> + <kbd>G</kbd></td></tr>
+        <tr><td data-i18n="app.vscode-goto-symbol">Go to Symbol in File</td><td><kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>O</kbd></td></tr>
+        <tr><td data-i18n="app.vscode-find-files">Find in Files</td><td><kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>F</kbd></td></tr>
+        <tr><td data-i18n="app.vscode-quick-fix">Quick Fix</td><td><kbd>Ctrl</kbd> + <kbd>.</kbd></td></tr>
+        <tr><td data-i18n="app.vscode-go-back">Go Back</td><td><kbd>Alt</kbd> + <kbd>←</kbd></td></tr>
+        <tr><td data-i18n="app.vscode-zen">Zen Mode</td><td><kbd>Ctrl</kbd> + <kbd>K</kbd> <kbd>Z</kbd></td></tr>
+        <tr><td data-i18n="app.vscode-open-recent">Open Recent File</td><td><kbd>Ctrl</kbd> + <kbd>R</kbd></td></tr>
+        <tr><td data-i18n="app.vscode-trigger-suggest">Trigger Suggestion</td><td><kbd>Ctrl</kbd> + <kbd>Space</kbd></td></tr>
+        <tr class="category"><td colspan="2" data-i18n="cat.figma">Figma</td></tr>
+        <tr><td data-i18n="app.figma-move">Move Tool</td><td><kbd>V</kbd></td></tr>
+        <tr><td data-i18n="app.figma-rectangle">Rectangle</td><td><kbd>R</kbd></td></tr>
+        <tr><td data-i18n="app.figma-ellipse">Ellipse</td><td><kbd>O</kbd></td></tr>
+        <tr><td data-i18n="app.figma-text">Text</td><td><kbd>T</kbd></td></tr>
+        <tr><td data-i18n="app.figma-frame">Frame</td><td><kbd>F</kbd></td></tr>
+        <tr><td data-i18n="app.figma-zoom-fit">Zoom to Fit</td><td><kbd>Shift</kbd> + <kbd>1</kbd></td></tr>
+        <tr><td data-i18n="app.figma-group">Group</td><td><kbd>Ctrl</kbd> + <kbd>G</kbd></td></tr>
+        <tr><td data-i18n="app.figma-ungroup">Ungroup</td><td><kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>G</kbd></td></tr>
+        <tr><td data-i18n="app.figma-toggle-ui">Toggle UI</td><td><kbd>Ctrl</kbd> + <kbd>\</kbd></td></tr>
+        <tr><td data-i18n="app.figma-export">Export</td><td><kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>E</kbd></td></tr>
+        <tr><td data-i18n="app.figma-copy-props">Copy Properties</td><td><kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>C</kbd></td></tr>
+        <tr><td data-i18n="app.figma-paste-props">Paste Properties</td><td><kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>V</kbd></td></tr>
+        <tr class="category"><td colspan="2" data-i18n="cat.photoshop">Photoshop</td></tr>
+        <tr><td data-i18n="app.ps-move">Move Tool</td><td><kbd>V</kbd></td></tr>
+        <tr><td data-i18n="app.ps-marquee">Marquee</td><td><kbd>M</kbd></td></tr>
+        <tr><td data-i18n="app.ps-lasso">Lasso</td><td><kbd>L</kbd></td></tr>
+        <tr><td data-i18n="app.ps-brush">Brush</td><td><kbd>B</kbd></td></tr>
+        <tr><td data-i18n="app.ps-eraser">Eraser</td><td><kbd>E</kbd></td></tr>
+        <tr><td data-i18n="app.ps-zoom">Zoom Tool</td><td><kbd>Z</kbd></td></tr>
+        <tr><td data-i18n="app.ps-new-layer">New Layer</td><td><kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>N</kbd></td></tr>
+        <tr><td data-i18n="app.ps-merge-layers">Merge Layers</td><td><kbd>Ctrl</kbd> + <kbd>E</kbd></td></tr>
+        <tr><td data-i18n="app.ps-transform">Free Transform</td><td><kbd>Ctrl</kbd> + <kbd>T</kbd></td></tr>
+        <tr><td data-i18n="app.ps-deselect">Deselect</td><td><kbd>Ctrl</kbd> + <kbd>D</kbd></td></tr>
+        <tr><td data-i18n="app.ps-fill">Fill</td><td><kbd>Shift</kbd> + <kbd>F5</kbd></td></tr>
+        <tr><td data-i18n="app.ps-levels">Levels</td><td><kbd>Ctrl</kbd> + <kbd>L</kbd></td></tr>
+        <tr class="category"><td colspan="2" data-i18n="cat.terminal-app">Terminal</td></tr>
+        <tr><td data-i18n="app.terminal-new-tab">New Tab</td><td><kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>T</kbd></td></tr>
+        <tr><td data-i18n="app.terminal-close-tab">Close Tab</td><td><kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>W</kbd></td></tr>
+        <tr><td data-i18n="app.terminal-next-tab">Next Tab</td><td><kbd>Ctrl</kbd> + <kbd>Tab</kbd></td></tr>
+        <tr><td data-i18n="app.terminal-prev-tab">Previous Tab</td><td><kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>Tab</kbd></td></tr>
+        <tr><td data-i18n="app.terminal-search">Search</td><td><kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>F</kbd></td></tr>
+        <tr><td data-i18n="app.terminal-clear">Clear</td><td><kbd>Ctrl</kbd> + <kbd>L</kbd></td></tr>
+        <tr class="category"><td colspan="2" data-i18n="cat.slack">Slack</td></tr>
+        <tr><td data-i18n="app.slack-quick-switcher">Quick Switcher</td><td><kbd>Ctrl</kbd> + <kbd>K</kbd></td></tr>
+        <tr><td data-i18n="app.slack-mark-read">Mark All Read</td><td><kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>Esc</kbd></td></tr>
+        <tr><td data-i18n="app.slack-sidebar">Toggle Sidebar</td><td><kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>S</kbd></td></tr>
+        <tr><td data-i18n="app.slack-next-unread">Next Unread</td><td><kbd>Alt</kbd> + <kbd>↓</kbd></td></tr>
+        <tr><td data-i18n="app.slack-prev-unread">Previous Unread</td><td><kbd>Alt</kbd> + <kbd>↑</kbd></td></tr>
+        <tr><td data-i18n="app.slack-thread">Open Thread</td><td><kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>T</kbd></td></tr>
+        <tr><td data-i18n="app.slack-search">Search</td><td><kbd>Ctrl</kbd> + <kbd>F</kbd></td></tr>
+        <tr><td data-i18n="app.slack-files">Browse Files</td><td><kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>F</kbd></td></tr>
+        <tr class="category"><td colspan="2" data-i18n="cat.devtools">Chrome DevTools</td></tr>
+        <tr><td data-i18n="app.devtools-inspect">Inspect Element</td><td><kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>C</kbd></td></tr>
+        <tr><td data-i18n="app.devtools-console">Console Panel</td><td><kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>J</kbd></td></tr>
+        <tr><td data-i18n="app.devtools-sources">Search All Files</td><td><kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>F</kbd></td></tr>
+        <tr><td data-i18n="app.devtools-command">Command Menu</td><td><kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>P</kbd></td></tr>
+        <tr><td data-i18n="app.devtools-device">Toggle Device Toolbar</td><td><kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>M</kbd></td></tr>
+        <tr><td data-i18n="app.devtools-drawer">Toggle Drawer</td><td><kbd>Esc</kbd></td></tr>
+        <tr><td data-i18n="app.devtools-screenshot">Capture Screenshot</td><td><kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>P</kbd></td></tr>
+        <tr class="category"><td colspan="2" data-i18n="cat.obsidian">Obsidian</td></tr>
+        <tr><td data-i18n="app.obsidian-quick-switcher">Quick Switcher</td><td><kbd>Ctrl</kbd> + <kbd>P</kbd></td></tr>
+        <tr><td data-i18n="app.obsidian-back">Go Back</td><td><kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>←</kbd></td></tr>
+        <tr><td data-i18n="app.obsidian-forward">Go Forward</td><td><kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>→</kbd></td></tr>
+        <tr><td data-i18n="app.obsidian-search">Search Current File</td><td><kbd>Ctrl</kbd> + <kbd>F</kbd></td></tr>
+        <tr><td data-i18n="app.obsidian-command">Command Palette</td><td><kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>P</kbd></td></tr>
+        <tr><td data-i18n="app.obsidian-graph">Open Graph View</td><td><kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>G</kbd></td></tr>
+        <tr><td data-i18n="app.obsidian-new-note">New Note</td><td><kbd>Ctrl</kbd> + <kbd>N</kbd></td></tr>
+        <tr><td data-i18n="app.obsidian-preview">Toggle Preview</td><td><kbd>Ctrl</kbd> + <kbd>E</kbd></td></tr>
+        <tr><td data-i18n="app.obsidian-pin">Pin Note</td><td><kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>P</kbd></td></tr>
+        <tr><td data-i18n="app.obsidian-tag-pane">Open Tag Pane</td><td><kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>T</kbd></td></tr>
+        <tr class="category"><td colspan="2" data-i18n="cat.jetbrains">JetBrains (IntelliJ IDEA)</td></tr>
+        <tr><td data-i18n="app.jb-search-everywhere">Search Everywhere</td><td><kbd>Shift</kbd> + <kbd>Shift</kbd></td></tr>
+        <tr><td data-i18n="app.jb-goto-file">Go to File</td><td><kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>N</kbd></td></tr>
+        <tr><td data-i18n="app.jb-recent-files">Recent Files</td><td><kbd>Ctrl</kbd> + <kbd>E</kbd></td></tr>
+        <tr><td data-i18n="app.jb-nav-back">Navigate Back</td><td><kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>←</kbd></td></tr>
+        <tr><td data-i18n="app.jb-nav-forward">Navigate Forward</td><td><kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>→</kbd></td></tr>
+        <tr><td data-i18n="app.jb-refactor-rename">Rename</td><td><kbd>Shift</kbd> + <kbd>F6</kbd></td></tr>
+        <tr><td data-i18n="app.jb-extract-method">Extract Method</td><td><kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>M</kbd></td></tr>
+        <tr><td data-i18n="app.jb-format-code">Reformat Code</td><td><kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>L</kbd></td></tr>
+        <tr><td data-i18n="app.jb-goto-implementation">Go to Implementation</td><td><kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>B</kbd></td></tr>
+        <tr><td data-i18n="app.jb-find-usage">Find Usages</td><td><kbd>Alt</kbd> + <kbd>F7</kbd></td></tr>
+        <tr><td data-i18n="app.jb-run">Run</td><td><kbd>Shift</kbd> + <kbd>F10</kbd></td></tr>
+        <tr><td data-i18n="app.jb-debug">Debug</td><td><kbd>Shift</kbd> + <kbd>F9</kbd></td></tr>
+      </tbody>
+    </table>
+  </div>
+  </div>
+  <button class="dict-toggle" id="dictToggle" data-i18n="dict.toggle">&#x2328; Key Legend</button>
+  <div class="dict-panel" id="dictPanel">
+    <table class="dict-table">
+      <tr><th></th><th data-i18n="tab.windows">Windows</th><th data-i18n="tab.linux">Linux</th><th data-i18n="tab.chromeos">ChromeOS</th></tr>
+      <tr><td><kbd>Ctrl</kbd></td><td><kbd>Ctrl</kbd></td><td><kbd>Ctrl</kbd></td><td><kbd>Ctrl</kbd></td></tr>
+      <tr><td><kbd>Alt</kbd></td><td><kbd>Alt</kbd></td><td><kbd>Alt</kbd></td><td><kbd>Alt</kbd></td></tr>
+      <tr><td><kbd>Shift</kbd></td><td><kbd>Shift</kbd></td><td><kbd>Shift</kbd></td><td><kbd>Shift</kbd></td></tr>
+      <tr><td><kbd>Cmd</kbd> / <kbd>Win</kbd> / <kbd>Super</kbd></td><td><kbd>⊞</kbd> Win</td><td><kbd>◆</kbd> Super</td><td><kbd>◆</kbd> Search</td></tr>
+      <tr><td><kbd>Esc</kbd></td><td><kbd>Esc</kbd></td><td><kbd>Esc</kbd></td><td><kbd>Esc</kbd></td></tr>
+      <tr><td><kbd>Return</kbd></td><td><kbd>Enter</kbd> <kbd>↵</kbd></td><td><kbd>Enter</kbd></td><td><kbd>Enter</kbd></td></tr>
+      <tr><td><kbd>Backspace</kbd></td><td><kbd>⌫</kbd> Backspace</td><td><kbd>⌫</kbd> Backspace</td><td><kbd>⌫</kbd> Backspace</td></tr>
+      <tr><td><kbd>Space</kbd></td><td><kbd>␣</kbd> Space</td><td><kbd>␣</kbd> Space</td><td><kbd>␣</kbd> Space</td></tr>
+      <tr><td><kbd>Tab</kbd></td><td><kbd>⇥</kbd> Tab</td><td><kbd>⇥</kbd> Tab</td><td><kbd>⇥</kbd> Tab</td></tr>
+    </table>
+  </div>
+  <p class="note"><kbd>Cmd</kbd> <span data-i18n="note.equals">= Command</span> &nbsp;|&nbsp; <kbd>Win</kbd> <span data-i18n="note.win">= Windows key</span> &nbsp;|&nbsp; <kbd>Super</kbd> <span data-i18n="note.super">= Windows/Command key</span> &nbsp;|&nbsp; <kbd>Search</kbd> <span data-i18n="note.search">= Launcher key</span></p>
+  </div>
+
+<div class="overlay" id="settingsOverlay">
+  <div class="modal">
+    <h2 data-i18n="settings.title">Settings</h2>
+    <div class="settings-tabs">
+      <button class="settings-tab active" data-settings-tab="general"><span data-i18n="settings.general">General</span></button>
+      <button class="settings-tab" data-settings-tab="customization"><span data-i18n="settings.customization">Customize</span></button>
+    </div>
+    <div class="settings-panel active" id="settings-general">
+      <div class="setting-group">
+        <h2 data-i18n="setting.language">Language <button class="reset-btn" data-reset="language" title="Reset to default">↺</button></h2>
+        <div class="setting-body">
+          <button class="theme-opt active" data-lang="auto"><span class="theme-swatch" style="background:linear-gradient(135deg,#667eea,#764ba2)"></span> &#127760; <span data-i18n="lang.auto">Device language</span></button>
+          <div class="lang-grid" id="langGrid"></div>
+            <p style="margin-top:.4rem;font-size:.75rem;color:var(--text-variant);line-height:1.4" data-i18n="lang.note">Not all translations are complete — missing text falls back to English. To add or improve a translation, see below.</p>
+            <details style="margin-top:.4rem;font-size:.75rem;color:var(--text-variant);cursor:pointer">
+            <summary style="font-weight:500" data-i18n="translate.summary">+ Contribute a translation</summary>
+            <p style="margin-top:.4rem;line-height:1.5">
+              Open <code style="background:var(--surface-variant);padding:.1rem .3rem;border-radius:4px">anthkeys.html</code>,
+              find the <code style="background:var(--surface-variant);padding:.1rem .3rem;border-radius:4px">i18n</code> object and <code style="background:var(--surface-variant);padding:.1rem .3rem;border-radius:4px">langMeta</code> right below it.
+              Copy an existing language block, change its code (e.g. <code style="background:var(--surface-variant);padding:.1rem .3rem;border-radius:4px">pt</code> for Portuguese),
+              translate all values, then add one line in <code style="background:var(--surface-variant);padding:.1rem .3rem;border-radius:4px">langMeta</code>.
+              The button appears automatically.
+            </p>
+            <p style="margin-top:.4rem;line-height:1.5">
+              <strong>Tip:</strong> Search for <code style="background:var(--surface-variant);padding:.1rem .3rem;border-radius:4px">data-i18n</code> in the HTML to find every element
+              that shows translatable text. The attribute value (e.g. <code style="background:var(--surface-variant);padding:.1rem .3rem;border-radius:4px">cat.editing</code>)
+              is the key you need to add to your translation block. Any key you don't
+              translate will fall back to English automatically.
+            </p>
+          </details>
+        </div>
+      </div>
+      <div class="setting-group">
+        <h2 data-i18n="setting.mod-style">OS modifier labels <button class="reset-btn" data-reset="modStyle" title="Reset to default">↺</button></h2>
+        <div class="setting-body">
+          <button class="theme-opt active" data-mod-style="text"><span class="theme-swatch" style="background:linear-gradient(135deg,#64748b,#cbd5e1)"></span> <span data-i18n="mod.text">Text (Ctrl, Alt, Shift)</span></button>
+          <button class="theme-opt" data-mod-style="symbol"><span class="theme-swatch" style="background:linear-gradient(135deg,#333,#666)"></span> <span data-i18n="mod.symbol">Symbols (⌫, ⌥, ⇧)</span></button>
+        </div>
+      </div>
+      <div class="setting-group">
+        <h2 data-i18n="setting.compact">Compact mode <button class="reset-btn" data-reset="compact" title="Reset to default">↺</button></h2>
+        <div class="setting-body">
+          <div class="toggle-row">
+            <label for="toggleCompact" data-i18n="compact.label">Compact display</label>
+            <button class="toggle" id="toggleCompact" role="switch" aria-checked="false"></button>
+          </div>
+        </div>
+      </div>
+      <div class="setting-group">
+        <h2 data-i18n="setting.custom-anthkeys">Custom shortcuts</h2>
+        <div class="setting-body">
+          <div id="customAnthkeysList"></div>
+          <div style="display:flex;gap:.4rem;margin-top:.4rem">
+            <input type="text" id="customActionInput" data-i18n-placeholder="custom.action-placeholder" placeholder="Action name" style="flex:2;padding:.5rem;border:1px solid var(--outline-variant);border-radius:var(--radius-sm);background:var(--surface);color:var(--text);font:var(--size) var(--font)">
+            <input type="text" id="customAnthkeyInput" data-i18n-placeholder="custom.anthkey-placeholder" placeholder="Shortcut (e.g. Ctrl+Shift+Z)" style="flex:2;padding:.5rem;border:1px solid var(--outline-variant);border-radius:var(--radius-sm);background:var(--surface);color:var(--text);font:var(--size) var(--font)">
+            <button class="theme-opt" id="btnAddCustom" style="flex:0 0 auto;justify-content:center;padding:.5rem .8rem">+</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="settings-panel" id="settings-customization">
+      <div class="setting-group">
+        <h2 data-i18n="setting.theme">Theme <button class="reset-btn" data-reset="theme" title="Reset to default">↺</button></h2>
+        <div class="setting-body">
+          <button class="theme-opt active" data-theme="light"><span class="theme-swatch" style="background:linear-gradient(135deg,#fef7f0,#fff)"></span> <span data-i18n="theme.light">&#9728;&#65039; Light</span></button>
+          <button class="theme-opt" data-theme="dark"><span class="theme-swatch" style="background:linear-gradient(135deg,#1c1b1f,#2b2930)"></span> <span data-i18n="theme.dark">&#127769; Dark</span></button>
+          <button class="theme-opt" data-theme="device"><span class="theme-swatch" style="background:linear-gradient(135deg,#fef7f0,#1c1b1f)"></span> <span data-i18n="theme.device">&#9000; Device theme</span></button>
+        </div>
+      </div>
+      <div class="setting-group">
+        <h2 data-i18n="setting.presets">Presets</h2>
+        <div class="setting-body">
+          <p style="margin-bottom:.5rem;font-size:.7rem;color:var(--text-variant);line-height:1.4">Style changes may not always apply immediately. If the page doesn't update, do a hard refresh (Ctrl + Shift + R).</p>
+          <button class="theme-opt" data-theme="ocean"><span class="theme-swatch" style="background:linear-gradient(135deg,#eef6fb,#1976d2)"></span> <span data-i18n="theme.ocean">&#127754; Ocean</span></button>
+          <button class="theme-opt" data-theme="forest"><span class="theme-swatch" style="background:linear-gradient(135deg,#eaf5ed,#2e7d32)"></span> <span data-i18n="theme.forest">&#127795; Forest</span></button>
+          <button class="theme-opt" data-theme="sunset"><span class="theme-swatch" style="background:linear-gradient(135deg,#fef0ed,#c44536)"></span> <span data-i18n="theme.sunset">&#127749; Sunset</span></button>
+          <button class="theme-opt" data-theme="lavender"><span class="theme-swatch" style="background:linear-gradient(135deg,#f5f0fb,#7c4dff)"></span> <span data-i18n="theme.lavender">&#128156; Lavender</span></button>
+          <button class="theme-opt" data-theme="midnight"><span class="theme-swatch" style="background:linear-gradient(135deg,#0f172a,#818cf8)"></span> <span data-i18n="theme.midnight">&#127769; Midnight</span></button>
+          <button class="theme-opt" data-theme="coral"><span class="theme-swatch" style="background:linear-gradient(135deg,#fef3f2,#e85d4a)"></span> <span data-i18n="theme.coral">&#127800; Coral</span></button>
+          <button class="theme-opt" data-theme="mint"><span class="theme-swatch" style="background:linear-gradient(135deg,#ecfdf5,#34d399)"></span> <span data-i18n="theme.mint">&#127793; Mint</span></button>
+          <button class="theme-opt" data-theme="sky"><span class="theme-swatch" style="background:linear-gradient(135deg,#f0f9ff,#38bdf8)"></span> <span data-i18n="theme.sky">&#127780; Sky</span></button>
+          <button class="theme-opt" data-theme="rose"><span class="theme-swatch" style="background:linear-gradient(135deg,#fff1f2,#f43f5e)"></span> <span data-i18n="theme.rose">&#127801; Rose</span></button>
+          <button class="theme-opt" data-theme="amber"><span class="theme-swatch" style="background:linear-gradient(135deg,#fffbeb,#f59e0b)"></span> <span data-i18n="theme.amber">&#127775; Amber</span></button>
+          <button class="theme-opt" data-theme="slate"><span class="theme-swatch" style="background:linear-gradient(135deg,#f8fafc,#475569)"></span> <span data-i18n="theme.slate">&#127987; Slate</span></button>
+          <button class="theme-opt" data-theme="cherry"><span class="theme-swatch" style="background:linear-gradient(135deg,#1a0a0a,#dc2626)"></span> <span data-i18n="theme.cherry">&#127826; Cherry</span></button>
+          <button class="theme-opt" data-theme="tundra"><span class="theme-swatch" style="background:linear-gradient(135deg,#e8f0f8,#5b8cb8)"></span> <span data-i18n="theme.tundra">&#127762; Tundra</span></button>
+          <button class="theme-opt" data-theme="nebula"><span class="theme-swatch" style="background:linear-gradient(135deg,#0d0a1a,#b388ff)"></span> <span data-i18n="theme.nebula">&#10024; Nebula</span></button>
+          <button class="theme-opt" data-theme="sakura"><span class="theme-swatch" style="background:linear-gradient(135deg,#fef0f5,#e85d8a)"></span> <span data-i18n="theme.sakura">&#127800; Sakura</span></button>
+          <button class="theme-opt" data-theme="emerald"><span class="theme-swatch" style="background:linear-gradient(135deg,#f0faf2,#0d9488)"></span> <span data-i18n="theme.emerald">&#128142; Emerald</span></button>
+          <button class="theme-opt" data-theme="peach"><span class="theme-swatch" style="background:linear-gradient(135deg,#fef8f0,#f97316)"></span> <span data-i18n="theme.peach">&#127825; Peach</span></button>
+          <button class="theme-opt" data-theme="storm"><span class="theme-swatch" style="background:linear-gradient(135deg,#1a1e2e,#6b7280)"></span> <span data-i18n="theme.storm">&#127769; Storm</span></button>
+          <button class="theme-opt" data-theme="desert"><span class="theme-swatch" style="background:linear-gradient(135deg,#faf0e8,#c2410c)"></span> <span data-i18n="theme.desert">&#127964; Desert</span></button>
+          <button class="theme-opt" data-theme="glade"><span class="theme-swatch" style="background:linear-gradient(135deg,#f0f8f0,#16a34a)"></span> <span data-i18n="theme.glade">&#127794; Glade</span></button>
+          <button class="theme-opt" data-theme="aurora"><span class="theme-swatch" style="background:linear-gradient(135deg,#0a1a1a,#34d399)"></span> <span data-i18n="theme.aurora">&#127752; Aurora</span></button>
+          <button class="theme-opt" data-theme="cocoa"><span class="theme-swatch" style="background:linear-gradient(135deg,#1a1410,#a16207)"></span> <span data-i18n="theme.cocoa">&#9749; Cocoa</span></button>
+          <button class="theme-opt" data-theme="arctic"><span class="theme-swatch" style="background:linear-gradient(135deg,#eef6ff,#fff)"></span> <span data-i18n="theme.arctic">🌊 Arctic</span></button>
+          <button class="theme-opt" data-theme="autumn"><span class="theme-swatch" style="background:linear-gradient(135deg,#fef5e8,#fff)"></span> <span data-i18n="theme.autumn">🍂 Autumn</span></button>
+          <button class="theme-opt" data-theme="blossom"><span class="theme-swatch" style="background:linear-gradient(135deg,#fef8fc,#fff)"></span> <span data-i18n="theme.blossom">🌸 Blossom</span></button>
+          <button class="theme-opt" data-theme="canyon"><span class="theme-swatch" style="background:linear-gradient(135deg,#fef0e0,#fff)"></span> <span data-i18n="theme.canyon">🏔 Canyon</span></button>
+          <button class="theme-opt" data-theme="frost"><span class="theme-swatch" style="background:linear-gradient(135deg,#f0f8ff,#fff)"></span> <span data-i18n="theme.frost">❄ Frost</span></button>
+          <button class="theme-opt" data-theme="galaxy"><span class="theme-swatch" style="background:linear-gradient(135deg,#0a0520,#fff)"></span> <span data-i18n="theme.galaxy">🌌 Galaxy</span></button></div>
+      </div>
+      <div class="setting-group">
+        <h2 data-i18n="setting.style">Design style <button class="reset-btn" data-reset="style" title="Reset to default">↺</button></h2>
+        <div class="setting-body">
+          <div style="display:flex;flex-wrap:wrap;gap:.4rem">
+            <button class="theme-opt active" data-style="m3" style="flex:1;min-width:80px;justify-content:center;font-size:.8rem"><span data-i18n="style.m3">Material 3</span></button>
+            <button class="theme-opt" data-style="ios" style="flex:1;min-width:80px;justify-content:center;font-size:.8rem"><span data-i18n="style.ios">iOS</span></button>
+            <button class="theme-opt" data-style="windows" style="flex:1;min-width:80px;justify-content:center;font-size:.8rem"><span data-i18n="style.windows">Windows</span></button>
+            <button class="theme-opt" data-style="linux" style="flex:1;min-width:80px;justify-content:center;font-size:.8rem"><span data-i18n="style.linux">Linux</span></button>
+            <button class="theme-opt" data-style="android" style="flex:1;min-width:80px;justify-content:center;font-size:.8rem"><span data-i18n="style.android">Android</span></button>
+            <button class="theme-opt" data-style="macos" style="flex:1;min-width:80px;justify-content:center;font-size:.8rem"><span data-i18n="style.macos">macOS</span></button>
+            <button class="theme-opt" data-style="chromeos" style="flex:1;min-width:80px;justify-content:center;font-size:.8rem"><span data-i18n="style.chromeos">ChromeOS</span></button>
+            <button class="theme-opt" data-style="ubuntu" style="flex:1;min-width:80px;justify-content:center;font-size:.8rem"><span data-i18n="style.ubuntu">Ubuntu</span></button>
+          </div>
+          <div id="distroOptions" style="display:none;margin-top:.5rem">
+            <p style="font-size:.75rem;color:var(--text-variant);margin-bottom:.3rem">Desktop environment</p>
+            <div style="display:flex;flex-wrap:wrap;gap:.4rem">
+              <button class="theme-opt active" data-distro="gnome" style="flex:1;min-width:80px;justify-content:center;font-size:.8rem"><span data-i18n="distro.gnome">GNOME</span></button>
+              <button class="theme-opt" data-distro="kde" style="flex:1;min-width:80px;justify-content:center;font-size:.8rem"><span data-i18n="distro.kde">KDE Plasma</span></button>
+              <button class="theme-opt" data-distro="cosmic" style="flex:1;min-width:80px;justify-content:center;font-size:.8rem"><span data-i18n="distro.cosmic">COSMIC</span></button>
+              <button class="theme-opt" data-distro="hyprland" style="flex:1;min-width:80px;justify-content:center;font-size:.8rem"><span data-i18n="distro.hyprland">Hyprland</span></button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="setting-group">
+        <h2 data-i18n="setting.accent">Accent color <button class="reset-btn" data-reset="accent" title="Reset to default">↺</button></h2>
+        <div class="setting-body">
+          <div style="display:flex;flex-wrap:wrap;gap:.4rem;margin-bottom:.5rem">
+            <button class="accent-opt active" data-accent="gold" style="background:#f7971e" title="Gold"></button>
+            <button class="accent-opt" data-accent="blue" style="background:#3b82f6" title="Blue"></button>
+            <button class="accent-opt" data-accent="green" style="background:#16a34a" title="Green"></button>
+            <button class="accent-opt" data-accent="pink" style="background:#ec4899" title="Pink"></button>
+            <button class="accent-opt" data-accent="purple" style="background:#8b5cf6" title="Purple"></button>
+            <button class="accent-opt" data-accent="red" style="background:#dc2626" title="Red"></button>
+            <button class="accent-opt" data-accent="teal" style="background:#0d9488" title="Teal"></button>
+            <button class="accent-opt" data-accent="orange" style="background:#ea580c" title="Orange"></button>
+            <button class="accent-opt" data-accent="indigo" style="background:#4f46e5" title="Indigo"></button>
+            <button class="accent-opt" data-accent="cyan" style="background:#0891b2" title="Cyan"></button>
+            <button class="accent-opt" data-accent="lime" style="background:#65a30d" title="Lime"></button>
+            <button class="accent-opt" data-accent="fuchsia" style="background:#c026d3" title="Fuchsia"></button>
+            <button class="accent-opt" data-accent="grape" style="background:#a855f7" title="Grape"></button>
+            <button class="accent-opt" data-accent="tangerine" style="background:#f97316" title="Tangerine"></button>
+            <button class="accent-opt" data-accent="sky-blue" style="background:#0ea5e9" title="Sky Blue"></button>
+            <button class="accent-opt" data-accent="warm-gray" style="background:#78716c" title="Warm Gray"></button>
+            <button class="accent-opt" data-accent="mocha" style="background:#92400e" title="Mocha"></button>
+            <button class="accent-opt" data-accent="ocean-deep" style="background:#0369a1" title="Ocean Deep"></button>
+          </div>
+          <div style="display:flex;gap:.4rem;align-items:center">
+            <button class="theme-opt" id="customAccentBtn" style="flex:0 0 auto;justify-content:center;padding:.5rem .8rem">Custom</button>
+            <input type="color" id="customAccentInput" value="#f7971e" style="width:36px;height:36px;border:2px solid var(--outline-variant);border-radius:50%;cursor:pointer;padding:0;background:none">
+          </div>
+        </div>
+      </div>
+      <div class="setting-group">
+        <h2 data-i18n="setting.text-size">Text size <button class="reset-btn" data-reset="size" title="Reset to default">↺</button></h2>
+        <div class="setting-body">
+          <div style="display:flex;gap:.4rem">
+            <button class="theme-opt" data-size="small" style="flex:1;justify-content:center;font-size:.65rem"><span data-i18n="size.small">Aa</span></button>
+            <button class="theme-opt active" data-size="medium" style="flex:1;justify-content:center;font-size:.8rem"><span data-i18n="size.medium">Aa</span></button>
+            <button class="theme-opt" data-size="large" style="flex:1;justify-content:center;font-size:1rem"><span data-i18n="size.large">Aa</span></button>
+            <button class="theme-opt" data-size="xlarge" style="flex:1;justify-content:center;font-size:1.3rem"><span data-i18n="size.xlarge">Aa</span></button>
+            <button class="theme-opt" data-size="huge" style="flex:1;justify-content:center;font-size:1.6rem"><span data-i18n="size.huge">Aa</span></button>
+          </div>
+        </div>
+      </div>
+      <div class="setting-group">
+        <h2 data-i18n="setting.font">Font <button class="reset-btn" data-reset="font" title="Reset to default">↺</button></h2>
+        <div class="setting-body">
+          <button class="theme-opt active" data-font="google-sans"><span data-i18n="font.google-sans">Google Sans</span></button>
+          <button class="theme-opt" data-font="inter"><span data-i18n="font.inter">Inter</span></button>
+          <button class="theme-opt" data-font="roboto"><span data-i18n="font.roboto">Roboto</span></button>
+          <button class="theme-opt" data-font="open-sans"><span data-i18n="font.open-sans">Open Sans</span></button>
+        </div>
+      </div>
+      <div class="setting-group">
+        <h2 data-i18n="setting.key-style">Key binding style <button class="reset-btn" data-reset="keyStyle" title="Reset to default">↺</button></h2>
+        <div class="setting-body">
+          <div style="display:flex;gap:.4rem">
+            <button class="theme-opt active" data-key-style="spaced" style="justify-content:center;flex:1;font-size:.8rem"><kbd>Ctrl</kbd> + <kbd>C</kbd></button>
+            <button class="theme-opt" data-key-style="compact" style="justify-content:center;flex:1;font-size:.8rem"><kbd>Ctrl</kbd>+<kbd>C</kbd></button>
+            <button class="theme-opt" data-key-style="hyphen" style="justify-content:center;flex:1;font-size:.8rem"><kbd>Ctrl</kbd>&#8209;<kbd>C</kbd></button>
+          </div>
+        </div>
+      </div>
+      <div class="setting-group">
+        <h2 data-i18n="setting.blur">Background blur <button class="reset-btn" data-reset="blur" title="Reset to default">↺</button></h2>
+        <div class="setting-body">
+          <div class="toggle-row">
+            <label for="toggleBlur" data-i18n="blur.label">Blur overlay background</label>
+            <button class="toggle on" id="toggleBlur" role="switch" aria-checked="true"></button>
+          </div>
+        </div>
+      </div>
+      <div class="setting-group">
+        <h2 data-i18n="setting.wallpaper">Custom wallpaper</h2>
+        <div class="setting-body">
+          <label class="upload-btn" for="wallpaperInput" data-i18n="wallpaper.choose">Choose image</label>
+          <input type="file" id="wallpaperInput" accept="image/*" style="display:none">
+          <div class="drop-zone" id="dropZone" data-i18n="wallpaper.drop">Drop an image here</div>
+        </div>
+      </div>
+      <div class="setting-group">
+        <h2 data-i18n="setting.animations">Animations <button class="reset-btn" data-reset="noAnim" title="Reset to default">↺</button></h2>
+        <div class="setting-body">
+          <div class="toggle-row">
+            <label for="toggleAnim" data-i18n="animations.label">Reduce motion</label>
+            <button class="toggle" id="toggleAnim" role="switch" aria-checked="false"></button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <button class="theme-opt" id="btnReset" style="justify-content:center;color:var(--error,#dc2626);margin-top:.5rem" data-i18n="btn.reset">Reset all</button>
+    <div style="display:flex;gap:.4rem;margin-top:.4rem">
+      <button class="theme-opt" id="btnSave" style="justify-content:center;flex:1;font-size:.8rem" data-i18n="btn.save">Save</button>
+      <button class="theme-opt" id="btnExport" style="justify-content:center;flex:1;font-size:.8rem" data-i18n="btn.export">Export</button>
+      <button class="theme-opt" id="btnImport" style="justify-content:center;flex:1;font-size:.8rem" data-i18n="btn.import">Import</button>
+      <input type="file" id="importFileInput" accept=".json" style="display:none">
+    </div>
+  </div>
+</div>
+<script src="js/anthkeys.js">
+</script>
+<div class="ctx-menu" id="ctxMenu">
+  <button data-action="copy-anthkey" data-i18n="ctx.copy">Copy anthkey</button>
+  <button data-action="copy-action" data-i18n="ctx.copy-action">Copy action + anthkey</button>
+</div>
+<div class="toast" id="toast" data-i18n="msg.copied">Copied!</div>
+</body>
+</html>

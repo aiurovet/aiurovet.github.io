@@ -1,0 +1,15 @@
+{
+  "name": "Keyboard Anthkeys",
+  "short_name": "Anthkeys",
+  "description": "Common keyboard anthkeys for every platform",
+  "start_url": "anthkeys.html",
+  "display": "standalone",
+  "background_color": "#fef7f0",
+  "theme_color": "#f7971e",
+  "categories": ["productivity", "utilities"],
+  "lang": "en",
+  "icons": [
+    { "src": "icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "icon-512.png", "sizes": "512x512", "type": "image/png" }
+  ]
+}
