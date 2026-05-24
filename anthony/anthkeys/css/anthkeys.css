@@ -281,6 +281,8 @@
     .overlay.open { display: flex; }
     .modal { position: relative; background: var(--surface); border-radius: var(--radius); padding: 0 1.75rem 1.75rem; min-width: 300px; max-width: 400px; width: auto; max-height: 90vh; display: flex; flex-direction: column; box-shadow: var(--shadow-lg); transition: background .3s; }
     .modal h2:first-child { padding-top: 1rem; }
+    .modal-close { position: absolute; top: .5rem; right: .5rem; width: 2rem; height: 2rem; border: none; background: none; font-size: 1.4rem; color: var(--text-variant); cursor: pointer; border-radius: 50%; display: flex; align-items: center; justify-content: center; line-height: 1; transition: all .15s; z-index: 1; }
+    .modal-close:hover { background: var(--surface-variant); color: var(--text); }
     .modal kbd, .modal .accent-opt, .modal .drop-zone, .modal button, .modal div:not(.setting-body) { border: none !important; }
     .settings-panel.active { flex: 1; overflow-y: auto; min-height: 0; }
     .settings-tabs { display: flex; gap: .4rem; margin: 1.5rem 0 1rem; }

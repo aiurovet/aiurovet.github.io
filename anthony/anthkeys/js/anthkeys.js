@@ -6854,6 +6854,7 @@ function hideSettings() {
   if (overlay) overlay.classList.remove('open');
 }
 onId('btnSettings', 'click', showSettings);
+onId('settingsClose', 'click', hideSettings);
 onId('settingsOverlay', 'click', e => {
   if (e.target === e.currentTarget) hideSettings();
 });
