@@ -6838,6 +6838,7 @@ document.querySelectorAll('.settings-tab').forEach(tab => {
 function showSettings() {
   const overlay = document.getElementById('settingsOverlay');
   if (overlay) {
+    overlay.querySelectorAll('.setting-group').forEach(g => g.classList.remove('open'));
     overlay.classList.add('open');
     const activeTab = overlay.querySelector('.settings-tab.active');
     if (activeTab) {
