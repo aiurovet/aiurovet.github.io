@@ -17,7 +17,7 @@ const i18n = {
     'msg.saved': 'Settings saved!',
     'msg.copied': 'Copied!',
     'search.placeholder': 'Search actions\u2026',
-    'btn.basic': 'Basic shortcuts',
+    'btn.basic': 'Basic',
     'btn.reset': 'Reset all',
     'btn.export': 'Export',
     'btn.import': 'Import',
