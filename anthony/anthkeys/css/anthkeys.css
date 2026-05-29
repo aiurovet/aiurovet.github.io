@@ -354,3 +354,12 @@
 .panel{overflow:visible!important}
 .panel thead{position:sticky;top:0;z-index:1}
 .panel thead th{background:var(--surface)}
+
+@media (hover: none) and (pointer: coarse) {
+  body { --bg-img: none !important; }
+  body * { backdrop-filter: none !important; -webkit-backdrop-filter: none !important; transition: none !important; }
+  body .panel::before, body .panel::after, body .panel { background: var(--surface) !important; }
+  body .panel::before, body .panel::after { display: none !important; }
+  body .panel { border: 1px solid var(--outline-variant) !important; box-shadow: var(--shadow) !important; }
+  button, .tab, .pill, .btn-advanced, .btn-settings, .settings-tab, .theme-opt, .modal-close { touch-action: manipulation; }
+}
