@@ -6749,6 +6749,7 @@ langCodes.forEach(code => {
     btn.classList.add('active');
     applyLanguage(code);
     saveSettings();
+    setTimeout(() => location.reload(), 100);
   });
 });
 const autoLang = document.querySelector('[data-lang="auto"]');
@@ -6758,6 +6759,7 @@ if (autoLang) {
     this.classList.add('active');
     applyLanguage(navigator.language.split('-')[0] || 'en');
     saveSettings();
+    setTimeout(() => location.reload(), 100);
   });
 }
 
@@ -6897,7 +6899,17 @@ const accents = {
   'sky-blue': ['#0ea5e9','#38bdf8','14,165,233','56,189,248'],
   'warm-gray': ['#78716c','#a8a29e','120,113,108','168,162,158'],
   mocha: ['#92400e','#b45309','146,64,14','180,83,9'],
-  'ocean-deep': ['#0369a1','#0284c7','3,105,161','2,132,199']
+  'ocean-deep': ['#0369a1','#0284c7','3,105,161','2,132,199'],
+  crimson: ['#dc2626','#ef4444','220,38,38','239,68,68'],
+  violet: ['#7c3aed','#8b5cf6','124,58,237','139,92,246'],
+  amber: ['#d97706','#f59e0b','217,119,6','245,158,11'],
+  jade: ['#059669','#10b981','5,150,105','16,185,129'],
+  ruby: ['#e11d48','#fb7185','225,29,72','251,113,133'],
+  candy: ['#f43f5e','#fb7185','244,63,94','251,113,133'],
+  azure: ['#2563eb','#3b82f6','37,99,235','59,130,246'],
+  peach: ['#f59e0b','#fbbf24','245,158,11','251,191,36'],
+  slate: ['#64748b','#94a3b8','100,116,139','148,163,184'],
+  tulip: ['#e879f9','#f0abfc','232,121,249','240,171,252']
 };
 // Expose accents for loadSettings
 window.accents = accents;
