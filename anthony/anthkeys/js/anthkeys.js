@@ -6822,15 +6822,14 @@ document.querySelectorAll('.tab').forEach(tab => {
 });
 
 document.querySelectorAll('.settings-tab').forEach(tab => {
-  tab.addEventListener('click', () => {
+    tab.addEventListener('click', () => {
     document.querySelectorAll('.settings-tab').forEach(t => t.classList.remove('active'));
     document.querySelectorAll('.settings-panel').forEach(p => p.classList.remove('active'));
     tab.classList.add('active');
     const settingsPanel = document.getElementById('settings-' + tab.dataset.settingsTab);
     if (settingsPanel) {
       settingsPanel.classList.add('active');
-      const firstGroup = settingsPanel.querySelector('.setting-group h2');
-      if (firstGroup) firstGroup.click();
+      settingsPanel.querySelectorAll('.setting-group').forEach(g => g.classList.remove('open'));
     }
   });
 });
