@@ -6,6 +6,7 @@ function onId(id, event, handler) {
 const i18n = {
   en: {
     'title': 'Shortcuts',
+    'page.title': 'Shortcuts - Anthkeys',
     'btn.basic': 'Basic',
     'btn.advanced': 'Advanced',
     'cat.all': 'All',
@@ -6426,7 +6427,7 @@ i18n.vi = {
   document.querySelectorAll('[data-i18n]').forEach(el => {
     const key = el.getAttribute('data-i18n');
     const val = langData[key] || fallback[key];
-    if (val && (el.children.length === 0 || el.tagName === 'SPAN' || el.tagName === 'BUTTON' || el.tagName === 'TH' || el.tagName === 'H1' || el.tagName === 'H2' || el.tagName === 'SMALL' || el.tagName === 'LABEL')) {
+    if (val && (el.children.length === 0 || el.tagName === 'SPAN' || el.tagName === 'BUTTON' || el.tagName === 'TH' || el.tagName === 'H1' || el.tagName === 'H2' || el.tagName === 'SMALL' || el.tagName === 'LABEL' || el.tagName === 'TITLE')) {
       el.textContent = val;
     }
   });
