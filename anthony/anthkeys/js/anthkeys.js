@@ -25,6 +25,7 @@ const i18n = {
     'settings.title': 'Settings',
     'settings.customization': 'Customize',
     'settings.general': 'General',
+    'settings.search': 'Search settings\u2026',
     'setting.theme': 'Theme',
     'setting.presets': 'Style',
     'setting.accent': 'Accent color',
@@ -6727,6 +6728,8 @@ document.querySelectorAll('.settings-tab').forEach(tab => {
 function showSettings() {
   const overlay = document.getElementById('settingsOverlay');
   if (overlay) {
+    const searchInput = document.getElementById('settingsSearch');
+    if (searchInput) { searchInput.value = ''; searchInput.dispatchEvent(new Event('input')); }
     overlay.querySelectorAll('.setting-group').forEach(g => g.classList.remove('open'));
     overlay.classList.add('open');
     const activeTab = overlay.querySelector('.settings-tab.active');
@@ -6747,6 +6750,29 @@ onId('btnSettings', 'click', showSettings);
 onId('settingsClose', 'click', hideSettings);
 onId('settingsOverlay', 'click', e => {
   if (e.target === e.currentTarget) hideSettings();
+});
+
+// ---- Dark mode quick toggle ----
+onId('btnThemeToggle', 'click', () => {
+  document.body.classList.remove('light','dark','ocean','forest','sunset','lavender','midnight','coral','mint','sky','rose','amber','slate','cherry','tundra','nebula','sakura','emerald','peach','storm','desert','glade','aurora','cocoa');
+  const isDark = document.body.classList.contains('dark');
+  document.body.classList.add(isDark ? 'light' : 'dark');
+  document.getElementById('btnThemeToggle').innerHTML = isDark ? '&#127769;' : '&#9728;&#65039;';
+});
+
+// ---- Settings search ----
+onId('settingsSearch', 'input', function() {
+  const q = this.value.toLowerCase().trim();
+  document.querySelectorAll('.settings-panel').forEach(panel => {
+    panel.querySelectorAll('.setting-group').forEach(g => {
+      if (!q) {
+        g.style.display = '';
+        return;
+      }
+      const text = (g.querySelector('h2')?.textContent || '') + ' ' + (g.querySelector('.setting-body')?.textContent || '');
+      g.style.display = text.toLowerCase().includes(q) ? '' : 'none';
+    });
+  });
 });
 
 document.querySelectorAll('.theme-opt[data-theme]').forEach(opt => {
@@ -6839,6 +6865,67 @@ if (_customAccentBtn && _customAccentInput) {
     saveSettings();
   });
 }
+
+// ---- Accent color presets ----
+const accentPresetsContainer = document.getElementById('accentPresets');
+let accentPresets = JSON.parse(lsGet('anthkeys-accent-presets') || '[]');
+function saveAccentPresets() { lsSet('anthkeys-accent-presets', JSON.stringify(accentPresets)); }
+function renderAccentPresets() {
+  if (!accentPresetsContainer) return;
+  if (accentPresets.length === 0) { accentPresetsContainer.style.display = 'none'; return; }
+  accentPresetsContainer.style.display = 'flex';
+  accentPresetsContainer.innerHTML = accentPresets.map((p, i) =>
+    '<button class="accent-opt" data-accent-preset="' + i + '" style="background:' + p.hex + ';position:relative" title="' + p.name.replace(/"/g,'&quot;') + '">' +
+    '<span style="position:absolute;top:-2px;right:-2px;font-size:9px;cursor:pointer;background:var(--surface);border-radius:50%;width:14px;height:14px;display:flex;align-items:center;justify-content:center;color:var(--error);line-height:1;border:1px solid var(--outline-variant)" data-remove-preset="' + i + '">&times;</span></button>'
+  ).join('');
+}
+onId('savePresetBtn', 'click', () => {
+  const name = prompt('Preset name:');
+  if (!name || !name.trim()) return;
+  const activeBtn = document.querySelector('.accent-opt.active') || document.querySelector('#customAccentBtn.active');
+  const hex = activeBtn ? (getComputedStyle(document.documentElement).getPropertyValue('--accent-1').trim() || '#f7971e') : '#f7971e';
+  accentPresets = accentPresets.filter(p => p.name !== name.trim());
+  accentPresets.push({ name: name.trim(), hex: hex });
+  saveAccentPresets();
+  renderAccentPresets();
+});
+if (accentPresetsContainer) {
+  accentPresetsContainer.addEventListener('click', e => {
+    const presetBtn = e.target.closest('.accent-opt[data-accent-preset]');
+    const removeBtn = e.target.closest('[data-remove-preset]');
+    if (removeBtn) {
+      const idx = parseInt(removeBtn.dataset.removePreset);
+      accentPresets.splice(idx, 1);
+      saveAccentPresets();
+      renderAccentPresets();
+      return;
+    }
+    if (presetBtn) {
+      const idx = parseInt(presetBtn.dataset.accentPreset);
+      const p = accentPresets[idx];
+      if (!p) return;
+      const hex = p.hex;
+      const r = parseInt(hex.slice(1,3), 16);
+      const g = parseInt(hex.slice(3,5), 16);
+      const b = parseInt(hex.slice(5,7), 16);
+      const r2 = Math.min(255, r + 40);
+      const g2 = Math.min(255, g + 40);
+      const b2 = Math.min(255, b + 40);
+      const hex2 = '#' + [r2,g2,b2].map(v => v.toString(16).padStart(2,'0')).join('');
+      document.querySelectorAll('.accent-opt').forEach(b => b.classList.remove('active'));
+      document.querySelectorAll('#customAccentBtn').forEach(b => b.classList.remove('active'));
+      presetBtn.classList.add('active');
+      document.documentElement.style.setProperty('--accent-1', hex);
+      document.documentElement.style.setProperty('--accent-2', hex2);
+      document.documentElement.style.setProperty('--accent-rgb', [r,g,b].join(','));
+      document.documentElement.style.setProperty('--accent-2-rgb', [r2,g2,b2].join(','));
+      document.documentElement.style.setProperty('--primary', hex);
+      saveSettings();
+    }
+  });
+}
+renderAccentPresets();
+
 const wallpaperInput = document.getElementById('wallpaperInput');
 const dropZone = document.getElementById('dropZone');
 if (wallpaperInput) {
@@ -7225,6 +7312,45 @@ document.querySelectorAll('.panel tbody tr:not(.category)').forEach(tr => {
     if (document.querySelector('[data-fav-active]')) applyCategoryFilter();
   });
   td.insertBefore(star, td.firstChild);
+  // Drag to reorder pinned items
+  tr.draggable = true;
+  tr.addEventListener('dragstart', e => {
+    if (!pinnedIds.includes(getPinId(tr))) { e.preventDefault(); return; }
+    e.dataTransfer.effectAllowed = 'move';
+    e.dataTransfer.setData('text/plain', getPinId(tr));
+    tr.classList.add('dragging');
+  });
+  tr.addEventListener('dragend', () => {
+    tr.classList.remove('dragging');
+    document.querySelectorAll('tr.drag-over').forEach(r => r.classList.remove('drag-over'));
+  });
+  tr.addEventListener('dragover', e => {
+    if (!pinnedIds.includes(getPinId(tr))) return;
+    e.preventDefault();
+    e.dataTransfer.dropEffect = 'move';
+    document.querySelectorAll('tr.drag-over').forEach(r => r.classList.remove('drag-over'));
+    tr.classList.add('drag-over');
+  });
+  tr.addEventListener('dragleave', () => tr.classList.remove('drag-over'));
+  tr.addEventListener('drop', e => {
+    e.preventDefault();
+    tr.classList.remove('drag-over');
+    const fromId = e.dataTransfer.getData('text/plain');
+    const toId = getPinId(tr);
+    if (!fromId || !toId || fromId === toId) return;
+    const fromIdx = pinnedIds.indexOf(fromId);
+    const toIdx = pinnedIds.indexOf(toId);
+    if (fromIdx === -1 || toIdx === -1) return;
+    const draggedTr = document.querySelector('.dragging');
+    pinnedIds.splice(fromIdx, 1);
+    const newToIdx = pinnedIds.indexOf(toId);
+    pinnedIds.splice(newToIdx, 0, fromId);
+    savePinned();
+    if (document.querySelector('[data-fav-active]') && draggedTr && draggedTr.parentNode === tr.parentNode) {
+      const rect = tr.getBoundingClientRect();
+      tr.parentNode.insertBefore(draggedTr, e.clientY > rect.top + rect.height / 2 ? tr.nextSibling : tr);
+    }
+  });
 });
 
 // ---- Search history ----
@@ -7446,5 +7572,10 @@ if (ctxMenu) {
 if (ctxMenu) {
   document.addEventListener('click', () => ctxMenu.classList.remove('show'));
   document.addEventListener('keydown', e => { if (e.key === 'Escape') ctxMenu.classList.remove('show'); });
+}
+// Init theme toggle icon
+const themeToggle = document.getElementById('btnThemeToggle');
+if (themeToggle) {
+  themeToggle.innerHTML = document.body.classList.contains('dark') ? '&#9728;&#65039;' : '&#127769;';
 }
 

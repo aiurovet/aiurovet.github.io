@@ -367,3 +367,6 @@
   body .panel { border: 1px solid var(--outline-variant) !important; box-shadow: var(--shadow) !important; }
   button, .tab, .pill, .btn-advanced, .btn-settings, .settings-tab, .theme-opt, .modal-close { touch-action: manipulation; }
 }
+tr.dragging { opacity: .4; }
+tr.drag-over { outline: 2px dashed var(--accent-1); outline-offset: -2px; }
+#settingsSearch:focus { border-color: var(--accent-1) !important; }

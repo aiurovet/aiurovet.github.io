@@ -20,6 +20,7 @@
     <button class="btn-advanced" id="toggleAdvanced" data-i18n="btn.advanced">Advanced</button>
     <button class="btn-settings" id="btnPrint" title="Print / PDF">&#128424;</button>
     <button class="btn-settings" id="btnSettings" title="Settings">&#9881;</button>
+    <button class="btn-settings" id="btnThemeToggle" title="Toggle dark mode">&#127769;</button>
   </div>
 
   <div class="search-bar" style="position:relative"><input type="text" id="searchInput" data-i18n-placeholder="search.placeholder" placeholder="Search actions…" autocomplete="off"><div class="search-history" id="searchHistory"></div></div>
@@ -451,6 +452,7 @@
       <h2 data-i18n="settings.title">Settings</h2>
       <button class="modal-close" id="settingsClose"><span class="close-x"></span></button>
     </div>
+    <input type="text" id="settingsSearch" data-i18n-placeholder="settings.search" placeholder="Search settings…" autocomplete="off" style="width:100%;padding:.5rem .7rem;border:1px solid var(--outline-variant);border-radius:var(--radius-sm);background:var(--surface);color:var(--text);font:var(--size) var(--font);margin-bottom:.5rem;box-sizing:border-box;outline:none;font-size:.8rem">
     <div class="settings-tabs">
       <button class="settings-tab active" data-settings-tab="general"><span data-i18n="settings.general">General</span></button>
       <button class="settings-tab" data-settings-tab="customization"><span data-i18n="settings.customization">Customize</span></button>
@@ -611,6 +613,8 @@
             <button class="theme-opt" id="customAccentBtn" style="flex:0 0 auto;justify-content:center;padding:.5rem .8rem">Custom</button>
             <input type="color" id="customAccentInput" value="#f7971e" style="width:36px;height:36px;border:2px solid var(--outline-variant);border-radius:50%;cursor:pointer;padding:0;background:none">
           </div>
+          <div style="display:flex;gap:.4rem;flex-wrap:wrap;margin-top:.5rem" id="accentPresets"></div>
+          <button class="theme-opt" id="savePresetBtn" style="justify-content:center;padding:.3rem .6rem;font-size:.75rem;margin-top:.3rem">+ Save current</button>
         </div>
       </div>
       <div class="setting-group">
