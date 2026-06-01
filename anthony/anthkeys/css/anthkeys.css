@@ -283,10 +283,11 @@
     .modal { position: relative; background: var(--surface); border-radius: var(--radius); padding: 0 1.75rem 1.75rem; min-width: 300px; max-width: 400px; width: auto; max-height: 90vh; display: flex; flex-direction: column; box-shadow: var(--shadow-lg); transition: background .3s; }
     .modal-header { display: flex; align-items: center; justify-content: space-between; padding-top: .75rem; }
     .modal-header h2 { padding: 0; }
-    .modal-close { width: 2.4rem; height: 2.4rem; border: none; background: var(--accent-1); cursor: pointer; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; box-shadow: var(--shadow); outline: none; -webkit-tap-highlight-color: transparent; appearance: none; -webkit-appearance: none; position: relative; }
-    .modal-close::before, .modal-close::after { content: ''; position: absolute; width: 55%; height: 2px; background: #fff; border-radius: 1px; }
-    .modal-close::before { transform: rotate(45deg); }
-    .modal-close::after { transform: rotate(-45deg); }
+    .modal-close { width: 2.4rem; height: 2.4rem; border: none; background: var(--accent-1); cursor: pointer; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; box-shadow: var(--shadow); outline: none; -webkit-tap-highlight-color: transparent; appearance: none; -webkit-appearance: none; position: relative; padding: 0; }
+    .close-x { position: relative; width: 60%; height: 60%; display: block; }
+    .close-x::before, .close-x::after { content: ''; position: absolute; left: 0; right: 0; top: 50%; height: 2px; background: #fff; border-radius: 1px; }
+    .close-x::before { transform: rotate(45deg); }
+    .close-x::after { transform: rotate(-45deg); }
     .modal-close:hover { background: var(--accent-2); }
     .modal kbd, .modal .accent-opt, .modal .drop-zone, .modal button, .modal div:not(.setting-body) { border: none !important; }
     .settings-panel.active { flex: 1; overflow-y: auto; min-height: 0; }
