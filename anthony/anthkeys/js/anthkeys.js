@@ -7458,9 +7458,16 @@ if (pillBar) {
         pill.classList.add('active');
       }
     } else {
-      pill.classList.toggle('active');
-      const allActive = [...document.querySelectorAll('.pill[data-cat]:not([data-cat="all"]):not([data-cat="favorites"])')].every(p => p.classList.contains('active'));
-      allBtn.classList.toggle('active', allActive);
+      const catPills = document.querySelectorAll('.pill[data-cat]:not([data-cat="all"]):not([data-cat="favorites"])');
+      const onlyThisActive = [...catPills].every(p => (p === pill) === p.classList.contains('active'));
+      if (onlyThisActive) {
+        catPills.forEach(p => p.classList.add('active'));
+        allBtn.classList.add('active');
+      } else {
+        catPills.forEach(p => p.classList.remove('active'));
+        pill.classList.add('active');
+        allBtn.classList.remove('active');
+      }
     }
     applyCategoryFilter();
   });
