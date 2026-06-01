@@ -7458,9 +7458,16 @@ if (pillBar) {
         pill.classList.add('active');
       }
     } else {
-      pill.classList.toggle('active');
-      const allActive = [...document.querySelectorAll('.pill[data-cat]:not([data-cat="all"]):not([data-cat="favorites"])')].every(p => p.classList.contains('active'));
-      allBtn.classList.toggle('active', allActive);
+      const catPills = document.querySelectorAll('.pill[data-cat]:not([data-cat="all"]):not([data-cat="favorites"])');
+      const onlyThisActive = [...catPills].every(p => (p === pill) === p.classList.contains('active'));
+      if (onlyThisActive) {
+        catPills.forEach(p => p.classList.add('active'));
+        allBtn.classList.add('active');
+      } else {
+        catPills.forEach(p => p.classList.remove('active'));
+        pill.classList.add('active');
+        allBtn.classList.remove('active');
+      }
     }
     applyCategoryFilter();
   });
@@ -7474,8 +7481,7 @@ function applyCategoryFilter() {
   document.querySelectorAll('.panel tbody tr:not(.category)').forEach(tr => {
     const cat = getRowCategory(tr);
     const pinned = pinnedIds.includes(getPinId(tr));
-    const hasPill = cat && PILL_CATS.includes(cat);
-    const show = showAll || (cat && activeCats.has(cat)) || (cat && !hasPill) || (favOnly && pinned);
+    const show = showAll || (cat && activeCats.has(cat)) || (favOnly && pinned);
     tr.dataset.filtered = (show && (!favOnly || pinned)) ? '' : '1';
   });
   // Hide/show category headers based on whether any of their rows are visible
