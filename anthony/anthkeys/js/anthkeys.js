@@ -199,6 +199,16 @@ const i18n = {
     'app.jb-find-usage': 'Find Usages',
     'app.jb-run': 'Run',
     'app.jb-debug': 'Debug',
+    'cat.editing': 'Editing',
+    'cat.navigation': 'Navigation',
+    'cat.system': 'System',
+    'cat.browser': 'Browser',
+    'cat.terminal': 'Terminal',
+    'cat.code-editor': 'Code Editor',
+    'cat.desktop': 'Desktop',
+    'cat.screenshots': 'Screenshots',
+    'cat.window': 'Window',
+    'cat.power-user': 'Power User',
     'ctx.copy': 'Copy shortcut',
     'ctx.copy-action': 'Copy action + shortcut'
   }
