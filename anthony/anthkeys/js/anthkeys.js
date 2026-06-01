@@ -7440,15 +7440,12 @@ if (pillBar) {
     if (pill.dataset.cat === 'all') {
       document.querySelectorAll('.pill[data-cat]').forEach(p => p.classList.add('active'));
     } else if (pill.dataset.cat === 'favorites') {
-      if (document.querySelectorAll('.pill.active').length === 1 && document.querySelector('.pill[data-cat="all"].active')) {
+      if (pill.classList.contains('active')) {
+        document.querySelectorAll('.pill[data-cat]').forEach(p => p.classList.add('active'));
+        pill.classList.remove('active');
+      } else {
         document.querySelectorAll('.pill[data-cat]').forEach(p => p.classList.remove('active'));
         pill.classList.add('active');
-      } else {
-        document.querySelectorAll('.pill[data-cat="favorites"]').forEach(p => p.classList.remove('active'));
-        if (document.querySelectorAll('.pill[data-cat]:not([data-cat="all"]):not([data-cat="favorites"]).active').length === 0) {
-          document.querySelectorAll('.pill[data-cat]').forEach(p => p.classList.add('active'));
-          pill.classList.remove('active');
-        }
       }
     } else {
       pill.classList.toggle('active');
@@ -7466,8 +7463,8 @@ function applyCategoryFilter() {
   const activeCats = new Set([...active].filter(c => c !== 'all' && c !== 'favorites'));
   document.querySelectorAll('.panel tbody tr:not(.category)').forEach(tr => {
     const cat = getRowCategory(tr);
-    const show = showAll || (cat && activeCats.has(cat));
     const pinned = pinnedIds.includes(getPinId(tr));
+    const show = showAll || (cat && activeCats.has(cat)) || (favOnly && pinned);
     tr.dataset.filtered = (show && (!favOnly || pinned)) ? '' : '1';
   });
   document.querySelector('[data-fav-active]')?.removeAttribute('data-fav-active');
