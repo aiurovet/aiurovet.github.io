@@ -7458,16 +7458,9 @@ if (pillBar) {
         pill.classList.add('active');
       }
     } else {
-      const catPills = document.querySelectorAll('.pill[data-cat]:not([data-cat="all"]):not([data-cat="favorites"])');
-      const onlyThisActive = [...catPills].every(p => (p === pill) === p.classList.contains('active'));
-      if (onlyThisActive) {
-        catPills.forEach(p => p.classList.add('active'));
-        allBtn.classList.add('active');
-      } else {
-        catPills.forEach(p => p.classList.remove('active'));
-        pill.classList.add('active');
-        allBtn.classList.remove('active');
-      }
+      pill.classList.toggle('active');
+      const allActive = [...document.querySelectorAll('.pill[data-cat]:not([data-cat="all"]):not([data-cat="favorites"])')].every(p => p.classList.contains('active'));
+      allBtn.classList.toggle('active', allActive);
     }
     applyCategoryFilter();
   });
@@ -7483,6 +7476,18 @@ function applyCategoryFilter() {
     const pinned = pinnedIds.includes(getPinId(tr));
     const show = showAll || (cat && activeCats.has(cat)) || (favOnly && pinned);
     tr.dataset.filtered = (show && (!favOnly || pinned)) ? '' : '1';
+  });
+  // Hide/show category headers based on whether any of their rows are visible
+  document.querySelectorAll('.category').forEach(cat => {
+    if (cat.classList.contains('collapsed')) return;
+    const tbody = cat.closest('tbody');
+    const rows = Array.from(tbody.querySelectorAll('tr'));
+    const idx = rows.indexOf(cat);
+    let end = idx + 1;
+    while (end < rows.length && !rows[end].classList.contains('category')) end++;
+    const children = rows.slice(idx + 1, end);
+    const hasVisible = children.some(r => r.dataset.filtered !== '1');
+    cat.style.display = hasVisible ? '' : 'none';
   });
   document.querySelector('[data-fav-active]')?.removeAttribute('data-fav-active');
   if (favOnly) document.querySelector('.pill[data-cat="favorites"]')?.setAttribute('data-fav-active', '');
@@ -7521,6 +7526,17 @@ onId('searchInput', 'input', function() {
     } else {
       tr.style.display = tr.textContent.toLowerCase().includes(q) ? '' : 'none';
     }
+  });
+  // Hide/show category headers based on whether any of their rows are visible
+  document.querySelectorAll('.category').forEach(cat => {
+    if (cat.classList.contains('collapsed')) return;
+    const tbody = cat.closest('tbody');
+    const rows = Array.from(tbody.querySelectorAll('tr'));
+    const idx = rows.indexOf(cat);
+    let end = idx + 1;
+    while (end < rows.length && !rows[end].classList.contains('category')) end++;
+    const ch = rows.slice(idx + 1, end);
+    cat.style.display = ch.some(r => r.style.display !== 'none') ? '' : 'none';
   });
   document.querySelectorAll('.panel').forEach(p => {
     if (q) {
