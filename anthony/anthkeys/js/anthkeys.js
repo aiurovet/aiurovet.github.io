@@ -7458,12 +7458,18 @@ if (pillBar) {
         pill.classList.add('active');
       }
     } else {
+      console.log('Pill clicked:', pill.dataset.cat, 'active:', pill.classList.contains('active'));
       const catPills = document.querySelectorAll('.pill[data-cat]:not([data-cat="all"]):not([data-cat="favorites"])');
+      console.log('catPills:', catPills.length);
+      console.log('all pills active:', [...catPills].map(p => p.dataset.cat + '=' + p.classList.contains('active')));
       const onlyThisActive = [...catPills].every(p => (p === pill) === p.classList.contains('active'));
+      console.log('onlyThisActive:', onlyThisActive);
       if (onlyThisActive) {
+        console.log('→ reset all');
         catPills.forEach(p => p.classList.add('active'));
         allBtn.classList.add('active');
       } else {
+        console.log('→ exclusive-select:', pill.dataset.cat);
         catPills.forEach(p => p.classList.remove('active'));
         pill.classList.add('active');
         allBtn.classList.remove('active');
@@ -7475,6 +7481,7 @@ if (pillBar) {
 
 function applyCategoryFilter() {
   const active = new Set([...document.querySelectorAll('.pill.active')].map(p => p.dataset.cat));
+  console.log('applyCategoryFilter: active set', [...active]);
   const showAll = active.has('all');
   const favOnly = active.has('favorites');
   const activeCats = new Set([...active].filter(c => c !== 'all' && c !== 'favorites'));
