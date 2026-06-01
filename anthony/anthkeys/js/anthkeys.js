@@ -7474,7 +7474,8 @@ function applyCategoryFilter() {
   document.querySelectorAll('.panel tbody tr:not(.category)').forEach(tr => {
     const cat = getRowCategory(tr);
     const pinned = pinnedIds.includes(getPinId(tr));
-    const show = showAll || (cat && activeCats.has(cat)) || (favOnly && pinned);
+    const hasPill = cat && PILL_CATS.includes(cat);
+    const show = showAll || (cat && activeCats.has(cat)) || (cat && !hasPill) || (favOnly && pinned);
     tr.dataset.filtered = (show && (!favOnly || pinned)) ? '' : '1';
   });
   // Hide/show category headers based on whether any of their rows are visible
