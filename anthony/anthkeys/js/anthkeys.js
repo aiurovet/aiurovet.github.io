@@ -7095,15 +7095,6 @@ window.addEventListener('afterprint', () => {
 });
 
 
-onId('btnSave', 'click', () => {
-  saveSettings();
-  const toast = document.getElementById('toast');
-  toast.classList.remove('show');
-  void toast.offsetHeight;
-  toast.classList.add('show');
-  clearTimeout(toast._timer);
-  toast._timer = setTimeout(() => toast.classList.remove('show'), 1500);
-});
 
 onId('btnExport', 'click', () => {
   const data = {
