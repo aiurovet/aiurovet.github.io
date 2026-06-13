@@ -6455,6 +6455,9 @@ i18n.vi = {
 }
 
 function saveSettings() {
+  const activeAccent = document.querySelector('.accent-opt.active');
+  const customBtn = document.getElementById('customAccentBtn');
+  const isCustom = customBtn?.classList.contains('active');
   const data = {
     theme: document.querySelector('[data-theme].active')?.dataset.theme || 'light',
     style: document.querySelector('[data-style].active')?.dataset.style || 'm3',
@@ -6462,7 +6465,7 @@ function saveSettings() {
     size: document.querySelector('[data-size].active')?.dataset.size || 'medium',
     font: document.querySelector('[data-font].active')?.dataset.font || 'google-sans',
     language: document.querySelector('[data-lang].active')?.dataset.lang || 'auto',
-    accent: document.querySelector('.accent-opt.active')?.dataset.accent || (document.getElementById('customAccentBtn')?.classList.contains('active') ? 'custom' : 'gold'),
+    accent: activeAccent?.dataset.accent || (isCustom ? 'custom' : 'gold'),
     blur: document.getElementById('toggleBlur')?.classList.contains('on') ?? true,
     keyStyle: document.querySelector('[data-key-style].active')?.dataset.keyStyle || 'spaced',
     modStyle: document.querySelector('[data-mod-style].active')?.dataset.modStyle || 'text',
@@ -6470,7 +6473,7 @@ function saveSettings() {
     compact: document.body.classList.contains('compact'),
     noAnim: document.body.classList.contains('no-anim')
   };
-  if (data.accent === 'custom') {
+  if (data.accent === 'custom' || (activeAccent && !activeAccent.dataset.accent)) {
     const el = document.getElementById('customAccentInput');
     if (el) data.customAccentHex = el.value;
   }

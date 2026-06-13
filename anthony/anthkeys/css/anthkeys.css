@@ -325,8 +325,9 @@
     .setting-group.open .setting-body { display: block; }
     .reset-btn { background: none; border: none; color: var(--text-variant); cursor: pointer; font-size: .85rem; padding: .1rem .3rem; border-radius: 4px; opacity: .5; transition: opacity .15s; line-height: 1; position: relative; z-index: 1; }
     .reset-btn:hover { opacity: 1; color: var(--primary); background: rgba(0,0,0,.06); }
-    .accent-opt { width: 32px; height: 32px; border-radius: 50%; cursor: pointer; border: 2px solid transparent !important; transition: all .15s; padding: 0; display: inline-flex; align-items: center; justify-content: center; }
+    .accent-opt { width: 32px; height: 32px; border-radius: 50%; cursor: pointer; border: 2px solid transparent !important; transition: all .15s; padding: 0; display: inline-flex; align-items: center; justify-content: center; outline: none; }
     .accent-opt:hover { transform: scale(1.15); }
+    .accent-opt:focus-visible { outline: 2px solid var(--accent-1); outline-offset: 2px; }
     .accent-opt.active { border-color: var(--text) !important; transform: scale(1.15); box-shadow: 0 0 0 2px var(--surface); }
     .pill-bar { display: flex; gap: .35rem; flex-wrap: wrap; margin-bottom: .4rem; }
     .pill { padding: .3rem .7rem; font-size: .72rem; font-weight: 500; background: var(--surface-variant); color: var(--text-variant); border: none; border-radius: 100px; cursor: pointer; transition: all .15s; white-space: nowrap; font-family: var(--font); }
