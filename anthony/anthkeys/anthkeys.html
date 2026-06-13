@@ -697,20 +697,32 @@
 </div>
 
 <div class="overlay" id="quizOverlay">
-  <div class="modal quiz-modal">
-    <div class="modal-header">
+  <div class="quiz-modal">
+    <div class="quiz-header">
       <h2 data-i18n="quiz.title">Shortcut Quiz</h2>
-      <button class="modal-close" id="quizClose"><span class="close-x"></span></button>
-    </div>
-    <div id="quizBody" style="padding:1rem;text-align:center">
-      <p id="quizQuestion" style="font-size:1.1rem;margin-bottom:1rem;color:var(--text)"></p>
-      <div id="quizOptions" style="display:flex;flex-direction:column;gap:.5rem;margin-bottom:1rem"></div>
-      <p id="quizFeedback" style="font-size:1rem;font-weight:600;margin-bottom:.5rem"></p>
-      <div style="display:flex;justify-content:center;gap:.5rem">
-        <button class="theme-opt" id="quizNext" style="justify-content:center;padding:.5rem 1.2rem;display:none" data-i18n="quiz.next">Next</button>
-        <button class="theme-opt" id="quizRestart" style="justify-content:center;padding:.5rem 1.2rem;display:none" data-i18n="quiz.restart">Restart</button>
+      <div class="quiz-header-right">
+        <span id="quizCounter" class="quiz-counter">1/10</span>
+        <button class="modal-close" id="quizClose"><span class="close-x"></span></button>
       </div>
-      <p id="quizScore" style="margin-top:.8rem;font-size:.9rem;color:var(--text-variant)"></p>
+    </div>
+    <div id="quizBody">
+      <p id="quizPrompt" class="quiz-prompt" data-i18n="quiz.choose">Which shortcut matches this action?</p>
+      <div id="quizActionCard" class="quiz-action-card">
+        <span id="quizCategory" class="quiz-category-badge"></span>
+        <span id="quizQuestion" class="quiz-question-text"></span>
+      </div>
+      <div id="quizOptions" class="quiz-options"></div>
+      <p id="quizFeedback" class="quiz-feedback"></p>
+      <div class="quiz-bottom">
+        <div class="quiz-score-area">
+          <span id="quizScore" class="quiz-score"></span>
+          <span id="quizHighScore" class="quiz-highscore"></span>
+        </div>
+        <div class="quiz-buttons">
+          <button class="theme-opt" id="quizNext" style="display:none" data-i18n="quiz.next">Next</button>
+          <button class="theme-opt" id="quizRestart" style="display:none" data-i18n="quiz.restart">Restart</button>
+        </div>
+      </div>
     </div>
   </div>
 </div>
