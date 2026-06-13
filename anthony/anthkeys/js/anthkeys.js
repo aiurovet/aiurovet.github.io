@@ -6562,21 +6562,21 @@ function loadSettings() {
       const accentInput = document.getElementById('customAccentInput');
       if (accentBtn) accentBtn.classList.add('active');
       if (accentInput) accentInput.value = hex;
-      document.documentElement.style.setProperty('--accent-1', hex);
-      document.documentElement.style.setProperty('--accent-2', hex2);
-      document.documentElement.style.setProperty('--accent-rgb', [r,g,b].join(','));
-      document.documentElement.style.setProperty('--accent-2-rgb', [r2,g2,b2].join(','));
-      document.documentElement.style.setProperty('--primary', hex);
+      document.body.style.setProperty('--accent-1', hex);
+      document.body.style.setProperty('--accent-2', hex2);
+      document.body.style.setProperty('--accent-rgb', [r,g,b].join(','));
+      document.body.style.setProperty('--accent-2-rgb', [r2,g2,b2].join(','));
+      document.body.style.setProperty('--primary', hex);
     } else if (data.accent && accents[data.accent]) {
       document.querySelectorAll('.accent-opt').forEach(a => a.classList.remove('active'));
       const aBtn = document.querySelector('.accent-opt[data-accent="' + data.accent + '"]');
       if (aBtn) aBtn.classList.add('active');
       const c = accents[data.accent];
-      document.documentElement.style.setProperty('--accent-1', c[0]);
-      document.documentElement.style.setProperty('--accent-2', c[1]);
-      document.documentElement.style.setProperty('--accent-rgb', c[2]);
-      document.documentElement.style.setProperty('--accent-2-rgb', c[3]);
-      document.documentElement.style.setProperty('--primary', c[0]);
+      document.body.style.setProperty('--accent-1', c[0]);
+      document.body.style.setProperty('--accent-2', c[1]);
+      document.body.style.setProperty('--accent-rgb', c[2]);
+      document.body.style.setProperty('--accent-2-rgb', c[3]);
+      document.body.style.setProperty('--primary', c[0]);
     }
 
     if (data.blur !== undefined) {
@@ -6871,11 +6871,11 @@ document.querySelectorAll('.accent-opt').forEach(btn => {
     document.querySelectorAll('.accent-opt').forEach(b => b.classList.remove('active'));
     btn.classList.add('active');
     const c = accents[btn.dataset.accent];
-    document.documentElement.style.setProperty('--accent-1', c[0]);
-    document.documentElement.style.setProperty('--accent-2', c[1]);
-    document.documentElement.style.setProperty('--accent-rgb', c[2]);
-    document.documentElement.style.setProperty('--accent-2-rgb', c[3]);
-    document.documentElement.style.setProperty('--primary', c[0]);
+    document.body.style.setProperty('--accent-1', c[0]);
+    document.body.style.setProperty('--accent-2', c[1]);
+    document.body.style.setProperty('--accent-rgb', c[2]);
+    document.body.style.setProperty('--accent-2-rgb', c[3]);
+    document.body.style.setProperty('--primary', c[0]);
     saveSettings();
   });
 });
@@ -6895,11 +6895,11 @@ if (_customAccentBtn && _customAccentInput) {
     const hex2 = '#' + [r2,g2,b2].map(v => v.toString(16).padStart(2,'0')).join('');
     document.querySelectorAll('.accent-opt').forEach(b => b.classList.remove('active'));
     _customAccentBtn.classList.add('active');
-    document.documentElement.style.setProperty('--accent-1', hex);
-    document.documentElement.style.setProperty('--accent-2', hex2);
-    document.documentElement.style.setProperty('--accent-rgb', [r,g,b].join(','));
-    document.documentElement.style.setProperty('--accent-2-rgb', [r2,g2,b2].join(','));
-    document.documentElement.style.setProperty('--primary', hex);
+    document.body.style.setProperty('--accent-1', hex);
+    document.body.style.setProperty('--accent-2', hex2);
+    document.body.style.setProperty('--accent-rgb', [r,g,b].join(','));
+    document.body.style.setProperty('--accent-2-rgb', [r2,g2,b2].join(','));
+    document.body.style.setProperty('--primary', hex);
     saveSettings();
   });
 }
@@ -6953,11 +6953,11 @@ if (accentPresetsContainer) {
       document.querySelectorAll('.accent-opt').forEach(b => b.classList.remove('active'));
       document.querySelectorAll('#customAccentBtn').forEach(b => b.classList.remove('active'));
       presetBtn.classList.add('active');
-      document.documentElement.style.setProperty('--accent-1', hex);
-      document.documentElement.style.setProperty('--accent-2', hex2);
-      document.documentElement.style.setProperty('--accent-rgb', [r,g,b].join(','));
-      document.documentElement.style.setProperty('--accent-2-rgb', [r2,g2,b2].join(','));
-      document.documentElement.style.setProperty('--primary', hex);
+      document.body.style.setProperty('--accent-1', hex);
+      document.body.style.setProperty('--accent-2', hex2);
+      document.body.style.setProperty('--accent-rgb', [r,g,b].join(','));
+      document.body.style.setProperty('--accent-2-rgb', [r2,g2,b2].join(','));
+      document.body.style.setProperty('--primary', hex);
       saveSettings();
     }
   });
