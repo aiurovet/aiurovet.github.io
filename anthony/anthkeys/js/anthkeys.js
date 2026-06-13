@@ -6498,25 +6498,43 @@ function loadSettings() {
     if (data.style) {
       document.querySelectorAll('[data-style]').forEach(b => b.classList.remove('active'));
       const sBtn = document.querySelector('[data-style="' + data.style + '"]');
-      if (sBtn) sBtn.classList.add('active');
+      if (sBtn) {
+        sBtn.classList.add('active');
+        document.body.classList.remove('style-m3','style-ios','style-windows','style-linux','style-android','style-macos','style-chromeos','style-ubuntu');
+        document.body.classList.add('style-' + data.style);
+        const distroOpts = document.getElementById('distroOptions');
+        if (distroOpts) distroOpts.style.display = data.style === 'linux' ? 'block' : 'none';
+      }
     }
 
     if (data.distro) {
       document.querySelectorAll('[data-distro]').forEach(b => b.classList.remove('active'));
       const dBtn = document.querySelector('[data-distro="' + data.distro + '"]');
-      if (dBtn) dBtn.classList.add('active');
+      if (dBtn) {
+        dBtn.classList.add('active');
+        document.body.classList.remove('distro-gnome','distro-kde','distro-cosmic','distro-hyprland');
+        document.body.classList.add('distro-' + data.distro);
+      }
     }
 
     if (data.size) {
       document.querySelectorAll('[data-size]').forEach(b => b.classList.remove('active'));
       const szBtn = document.querySelector('[data-size="' + data.size + '"]');
-      if (szBtn) szBtn.classList.add('active');
+      if (szBtn) {
+        szBtn.classList.add('active');
+        document.body.classList.remove('size-small','size-medium','size-large','size-xlarge','size-huge');
+        document.body.classList.add('size-' + data.size);
+      }
     }
 
     if (data.font) {
       document.querySelectorAll('[data-font]').forEach(b => b.classList.remove('active'));
       const fBtn = document.querySelector('[data-font="' + data.font + '"]');
-      if (fBtn) fBtn.classList.add('active');
+      if (fBtn) {
+        fBtn.classList.add('active');
+        document.body.classList.remove('font-inter','font-roboto','font-open-sans','font-google-sans');
+        document.body.classList.add('font-' + data.font);
+      }
     }
 
     if (data.language) {
