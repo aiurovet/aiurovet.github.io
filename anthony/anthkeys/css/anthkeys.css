@@ -280,7 +280,7 @@
     .btn-settings:hover { background: var(--outline-variant); color: var(--text); }
     .overlay { display: none; position: fixed; inset: 0; background: rgba(0,0,0,.4); backdrop-filter: blur(8px); z-index: 10; align-items: center; justify-content: center; padding: 2rem; }
     .overlay.open { display: flex; }
-    .modal { position: relative; background: var(--surface); border-radius: var(--radius); padding: 0 1.75rem 1.75rem; min-width: 300px; max-width: 400px; width: auto; max-height: 90vh; display: flex; flex-direction: column; box-shadow: var(--shadow-lg); transition: background .3s; }
+    .modal { position: relative; background: var(--surface); border-radius: var(--radius); padding: 0 1.75rem 1.75rem; min-width: 300px; max-width: 400px; width: auto; max-height: 90vh; display: flex; flex-direction: column; overflow: hidden; box-shadow: var(--shadow-lg); transition: background .3s; }
     .modal-header { display: flex; align-items: center; justify-content: space-between; padding-top: .75rem; }
     .modal-header h2 { padding: 0; }
     .modal-close { width: 2.4rem; height: 2.4rem; border: none; background: var(--accent-1); cursor: pointer; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-left: auto; box-shadow: var(--shadow); outline: none; -webkit-tap-highlight-color: transparent; appearance: none; -webkit-appearance: none; position: relative; padding: 0; }
@@ -296,7 +296,7 @@
     .settings-tab:hover { background: var(--outline-variant); color: var(--text); }
     .settings-tab.active { background: var(--primary); color: var(--on-primary); }
     .settings-panel { display: none; }
-    .settings-panel.active { display: block; min-height: 300px; }
+    .settings-panel.active { display: block; min-height: 0; }
     .search-bar { margin-bottom: .5rem; }
     .search-bar input { width: 100%; padding: .6rem 1rem .6rem 2.4rem; font-size: .85rem; background: var(--surface-variant); color: var(--text); border: none; border-radius: var(--radius-tab); outline: none; font-family: var(--font); transition: all .2s; }
     .search-bar input:focus { background: var(--surface); box-shadow: 0 0 0 2px var(--primary); }
