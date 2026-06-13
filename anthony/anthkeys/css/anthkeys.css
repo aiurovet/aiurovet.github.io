@@ -374,3 +374,10 @@
 tr.dragging { opacity: .4; }
 tr.drag-over { outline: 2px dashed var(--accent-1); outline-offset: -2px; }
 #settingsSearch:focus { border-color: var(--accent-1) !important; }
+.quiz-modal { max-width: 480px; }
+.quiz-opt { display:block; width:100%; padding:.7rem 1rem; border:2px solid var(--outline-variant) !important; border-radius:var(--radius-sm); background:var(--surface); color:var(--text); font:var(--size) var(--font); cursor:pointer; text-align:center; font-size:.9rem; transition:border-color .2s,background .2s; }
+.quiz-opt:hover { border-color:var(--accent-1) !important; background:var(--surface-variant); }
+.quiz-opt.correct { border-color:#16a34a !important; background:rgba(22,163,74,.15); }
+.quiz-opt.wrong { border-color:#dc2626 !important; background:rgba(220,38,38,.15); }
+.quiz-opt:disabled { cursor:default; opacity:.7; }
+#cloudToken:focus, #cloudGistId:focus { border-color:var(--accent-1) !important; }

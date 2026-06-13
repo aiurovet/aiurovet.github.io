@@ -45,6 +45,27 @@ const i18n = {
     'custom.none': 'No custom shortcuts yet',
     'custom.action-placeholder': 'Action name',
     'custom.anthkey-placeholder': 'Shortcut (e.g. Ctrl+Shift+Z)',
+    'quiz.title': 'Shortcut Quiz',
+    'quiz.start': 'Start Quiz',
+    'quiz.correct': 'Correct!',
+    'quiz.wrong': 'Wrong!',
+    'quiz.score': 'Score: {0}/{1}',
+    'quiz.highscore': 'Best: {0}',
+    'quiz.next': 'Next',
+    'quiz.done': 'Quiz Complete!',
+    'quiz.restart': 'Restart',
+    'quiz.close': 'Close',
+    'quiz.choose': 'Which shortcut matches this action?',
+    'quiz.no-data': 'No shortcuts available for quiz',
+    'cloud.title': 'Cloud Sync',
+    'cloud.token': 'GitHub Token',
+    'cloud.token-placeholder': 'ghp_...',
+    'cloud.gist-id': 'Gist ID',
+    'cloud.gist-placeholder': 'Paste Gist ID or URL',
+    'cloud.upload': 'Upload to Gist',
+    'cloud.download': 'Download from Gist',
+    'cloud.saved': 'Cloud settings saved!',
+    'cloud.error': 'Sync error',
     'translate.summary': '+ Contribute a translation',
     'theme.light': '\u2600\ufe0f Light',
     'theme.dark': '\ud83c\udf19 Dark',
@@ -7656,4 +7677,252 @@ const themeToggle = document.getElementById('btnThemeToggle');
 if (themeToggle) {
   themeToggle.innerHTML = document.body.classList.contains('dark') ? '&#9728;&#65039;' : '&#127769;';
 }
+
+// ---- Shortcut Quiz ----
+let quizData = [];
+let quizIndex = 0;
+let quizScore = 0;
+let quizAnswered = false;
+let quizTotal = 0;
+const QUIZ_COUNT = 10;
+
+function collectQuizData() {
+  quizData = [];
+  const activePanel = document.querySelector('.panel.active');
+  if (!activePanel) return;
+  const catOrder = [];
+  document.querySelectorAll('.panel.active .category').forEach(c => catOrder.push(c.getAttribute('data-i18n')));
+  document.querySelectorAll('.panel.active tbody tr:not(.category)').forEach(tr => {
+    const actionEl = tr.querySelector('td:first-child');
+    const anthkeyEl = tr.querySelector('td:last-child');
+    if (!actionEl || !anthkeyEl) return;
+    const action = (actionEl.getAttribute('data-i18n') || actionEl.textContent).trim();
+    let anthkey = anthkeyEl.textContent.trim();
+    const curLang = document.querySelector('[data-lang].active')?.dataset.lang || 'en';
+    const langData = i18n[curLang === 'auto' ? 'en' : curLang] || i18n.en;
+    const displayAction = langData[action] || i18n.en[action] || action;
+    const cat = getRowCategory(tr);
+    quizData.push({ action, displayAction, anthkey, category: cat });
+  });
+}
+
+function shuffleArray(arr) {
+  for (let i = arr.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [arr[i], arr[j]] = [arr[j], arr[i]];
+  }
+  return arr;
+}
+
+function getDistractors(correct) {
+  const pool = quizData.filter(d => d.anthkey !== correct);
+  shuffleArray(pool);
+  const distractors = pool.slice(0, 3).map(d => d.anthkey);
+  while (distractors.length < 3) {
+    const fillers = ['Ctrl+Alt+Del', 'Alt+F4', 'Ctrl+Shift+Esc', 'Win+D', 'Ctrl+Z', 'Ctrl+C', 'Ctrl+V', 'Alt+Tab', 'Win+Tab', 'Shift+Del'];
+    shuffleArray(fillers);
+    fillers.forEach(f => { if (distractors.length < 3 && !distractors.includes(f) && f !== correct) distractors.push(f); });
+  }
+  return distractors;
+}
+
+function t(key) {
+  const curLang = document.querySelector('[data-lang].active')?.dataset.lang || 'en';
+  const langData = i18n[curLang === 'auto' ? 'en' : curLang] || i18n.en;
+  return langData[key] || i18n.en[key] || key;
+}
+
+function showQuizQuestion() {
+  if (quizIndex >= quizTotal || quizIndex >= quizData.length) {
+    finishQuiz();
+    return;
+  }
+  quizAnswered = false;
+  const q = quizData[quizIndex];
+  const options = [q.anthkey, ...getDistractors(q.anthkey)];
+  shuffleArray(options);
+
+  document.getElementById('quizQuestion').textContent = q.displayAction;
+  const optsDiv = document.getElementById('quizOptions');
+  optsDiv.innerHTML = options.map(opt =>
+    '<button class="quiz-opt" data-anthkey="' + opt.replace(/"/g,'&quot;') + '">' + escHtml(opt) + '</button>'
+  ).join('');
+  document.getElementById('quizFeedback').textContent = '';
+  document.getElementById('quizFeedback').style.color = '';
+  document.getElementById('quizNext').style.display = 'none';
+  document.getElementById('quizRestart').style.display = 'none';
+  document.getElementById('quizScore').textContent = (quizIndex + 1) + '/' + quizTotal + ' | ' + t('quiz.score').replace('{0}', quizScore).replace('{1}', quizTotal);
+
+  optsDiv.querySelectorAll('.quiz-opt').forEach(btn => {
+    btn.addEventListener('click', function() {
+      if (quizAnswered) return;
+      quizAnswered = true;
+      const selected = this.dataset.anthkey;
+      const correct = q.anthkey;
+      const fb = document.getElementById('quizFeedback');
+      if (selected === correct) {
+        quizScore++;
+        this.classList.add('correct');
+        fb.textContent = '\u2713 ' + t('quiz.correct');
+        fb.style.color = '#16a34a';
+      } else {
+        this.classList.add('wrong');
+        optsDiv.querySelector('[data-anthkey="' + correct.replace(/"/g,'&quot;') + '"]')?.classList.add('correct');
+        fb.textContent = '\u2717 ' + t('quiz.wrong') + ' \u2014 ' + escHtml(correct);
+        fb.style.color = '#dc2626';
+      }
+      optsDiv.querySelectorAll('.quiz-opt').forEach(b => b.disabled = true);
+  document.getElementById('quizScore').textContent = (quizIndex + 1) + '/' + quizTotal + ' | ' + t('quiz.score').replace('{0}', quizScore).replace('{1}', quizTotal);
+      if (quizIndex + 1 >= quizTotal) {
+        document.getElementById('quizRestart').style.display = '';
+      } else {
+        document.getElementById('quizNext').style.display = '';
+      }
+    });
+  });
+}
+
+function finishQuiz() {
+  const highScore = parseInt(lsGet('anthkeys-quiz-high', '0'));
+  const isNew = quizScore > highScore;
+  if (isNew) lsSet('anthkeys-quiz-high', String(quizScore));
+  const best = Math.max(highScore, quizScore);
+  document.getElementById('quizQuestion').textContent = t('quiz.done');
+  document.getElementById('quizOptions').innerHTML = '';
+  document.getElementById('quizFeedback').textContent = t('quiz.score').replace('{0}', quizScore).replace('{1}', quizTotal) + (isNew ? ' (' + t('quiz.highscore').replace('{0}', best) + ')' : '');
+  document.getElementById('quizFeedback').style.color = 'var(--primary)';
+  document.getElementById('quizNext').style.display = 'none';
+  document.getElementById('quizRestart').style.display = '';
+  document.getElementById('quizScore').textContent = '';
+}
+
+function startQuiz() {
+  collectQuizData();
+  const filtered = quizData.filter(d => d.anthkey && d.action);
+  if (filtered.length < 4) {
+    document.getElementById('quizQuestion').textContent = t('quiz.no-data');
+    document.getElementById('quizOptions').innerHTML = '';
+    document.getElementById('quizFeedback').textContent = '';
+    document.getElementById('quizNext').style.display = 'none';
+    document.getElementById('quizRestart').style.display = '';
+    document.getElementById('quizScore').textContent = '';
+    return;
+  }
+  shuffleArray(filtered);
+  quizData = filtered;
+  quizTotal = Math.min(QUIZ_COUNT, quizData.length);
+  quizIndex = 0;
+  quizScore = 0;
+  showQuizQuestion();
+}
+
+onId('btnQuiz', 'click', () => {
+  const overlay = document.getElementById('quizOverlay');
+  if (overlay) {
+    document.querySelectorAll('.setting-group').forEach(g => g.classList.remove('open'));
+    overlay.classList.add('open');
+    startQuiz();
+  }
+});
+onId('quizClose', 'click', () => {
+  document.getElementById('quizOverlay')?.classList.remove('open');
+});
+document.getElementById('quizOverlay')?.addEventListener('click', e => {
+  if (e.target === e.currentTarget) document.getElementById('quizOverlay')?.classList.remove('open');
+});
+onId('quizNext', 'click', () => {
+  quizIndex++;
+  showQuizQuestion();
+});
+onId('quizRestart', 'click', startQuiz);
+
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape') {
+    document.getElementById('quizOverlay')?.classList.remove('open');
+  }
+});
+
+// ---- Cloud Sync via GitHub Gist ----
+function loadCloudCreds() {
+  const token = lsGet('anthkeys-cloud-token', '');
+  const gistId = lsGet('anthkeys-cloud-gist', '');
+  const tokenInput = document.getElementById('cloudToken');
+  const gistInput = document.getElementById('cloudGistId');
+  if (tokenInput) tokenInput.value = token;
+  if (gistInput) gistInput.value = gistId;
+}
+
+function saveCloudCreds() {
+  const tokenInput = document.getElementById('cloudToken');
+  const gistInput = document.getElementById('cloudGistId');
+  if (tokenInput) lsSet('anthkeys-cloud-token', tokenInput.value);
+  if (gistInput) lsSet('anthkeys-cloud-gist', gistInput.value);
+}
+
+onId('cloudToken', 'input', saveCloudCreds);
+onId('cloudGistId', 'input', saveCloudCreds);
+loadCloudCreds();
+
+onId('btnCloudUpload', 'click', async () => {
+  const token = document.getElementById('cloudToken')?.value.trim();
+  if (!token) { alert('Enter a GitHub token first.'); return; }
+  const data = {
+    settings: JSON.parse(lsGet('anthkeys-settings') || '{}'),
+    custom: JSON.parse(lsGet('anthkeys-custom') || '[]')
+  };
+  const content = JSON.stringify(data, null, 2);
+  const gistId = document.getElementById('cloudGistId')?.value.trim();
+  try {
+    let url, method;
+    if (gistId) {
+      url = 'https://api.github.com/gists/' + gistId;
+      method = 'PATCH';
+    } else {
+      url = 'https://api.github.com/gists';
+      method = 'POST';
+    }
+    const body = {
+      description: 'Anthkeys settings backup',
+      public: false,
+      files: { 'anthkeys-settings.json': { content } }
+    };
+    const res = await fetch(url, {
+      method,
+      headers: { 'Authorization': 'token ' + token, 'Content-Type': 'application/json' },
+      body: JSON.stringify(body)
+    });
+    if (!res.ok) { const err = await res.json(); throw new Error(err.message || res.status); }
+    const gist = await res.json();
+    const gistInput = document.getElementById('cloudGistId');
+    if (gistInput) {
+      gistInput.value = gist.id;
+      lsSet('anthkeys-cloud-gist', gist.id);
+    }
+    alert('Uploaded! Gist ID: ' + gist.id);
+  } catch(e) {
+    alert('Upload failed: ' + e.message);
+  }
+});
+
+onId('btnCloudDownload', 'click', async () => {
+  const gistId = document.getElementById('cloudGistId')?.value.trim();
+  if (!gistId) { alert('Enter a Gist ID or URL first.'); return; }
+  const match = gistId.match(/[a-f0-9]{32,}/);
+  const id = match ? match[0] : gistId;
+  try {
+    const res = await fetch('https://api.github.com/gists/' + id);
+    if (!res.ok) throw new Error('Gist not found');
+    const gist = await res.json();
+    const file = gist.files && gist.files['anthkeys-settings.json'];
+    if (!file) throw new Error('No anthkeys-settings.json found in this gist');
+    const raw = await fetch(file.raw_url);
+    const data = await raw.json();
+    if (data.settings) lsSet('anthkeys-settings', JSON.stringify(data.settings));
+    if (data.custom) lsSet('anthkeys-custom', JSON.stringify(data.custom));
+    alert('Settings restored from Gist! Reloading...');
+    location.reload();
+  } catch(e) {
+    alert('Download failed: ' + e.message);
+  }
+});
 

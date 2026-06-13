@@ -12,13 +12,14 @@
   <script>if (location.protocol === 'file:') document.getElementById('manifestLink').remove();</script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=Roboto:wght@400;500;600;700&family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/anthkeys.css?v=3">
+  <link rel="stylesheet" href="css/anthkeys.css?v=4">
 <body class="light style-m3 size-medium font-google-sans">
  <div class="container">
   <div class="top-bar">
     <h1><span data-i18n="title">Shortcuts</span></h1>
     <button class="btn-advanced" id="toggleAdvanced" data-i18n="btn.advanced">Advanced</button>
     <button class="btn-settings" id="btnPrint" title="Print / PDF">&#128424;</button>
+    <button class="btn-settings" id="btnQuiz" title="Shortcut Quiz">&#10067;</button>
     <button class="btn-settings" id="btnThemeToggle" title="Toggle dark mode">&#127769;</button>
     <button class="btn-settings" id="btnSettings" title="Settings">&#9881;</button>
   </div>
@@ -674,6 +675,17 @@
           </div>
         </div>
       </div>
+      <div class="setting-group">
+        <h2 data-i18n="cloud.title">Cloud Sync</h2>
+        <div class="setting-body">
+          <input type="password" id="cloudToken" placeholder="GitHub Token" data-i18n-placeholder="cloud.token-placeholder" style="width:100%;padding:.5rem;border:1px solid var(--outline-variant);border-radius:var(--radius-sm);background:var(--surface);color:var(--text);font:var(--size) var(--font);margin-bottom:.4rem;box-sizing:border-box;outline:none;font-size:.8rem">
+          <div style="display:flex;gap:.4rem;margin-bottom:.4rem">
+            <input type="text" id="cloudGistId" placeholder="Gist ID" data-i18n-placeholder="cloud.gist-placeholder" style="flex:1;padding:.5rem;border:1px solid var(--outline-variant);border-radius:var(--radius-sm);background:var(--surface);color:var(--text);font:var(--size) var(--font);box-sizing:border-box;outline:none;font-size:.8rem">
+            <button class="theme-opt" id="btnCloudUpload" style="justify-content:center;font-size:.8rem;padding:.5rem .8rem" data-i18n="cloud.upload">Upload</button>
+            <button class="theme-opt" id="btnCloudDownload" style="justify-content:center;font-size:.8rem;padding:.5rem .8rem" data-i18n="cloud.download">Download</button>
+          </div>
+        </div>
+      </div>
     </div>
     <button class="theme-opt" id="btnReset" style="justify-content:center;color:var(--error,#dc2626);margin-top:.5rem" data-i18n="btn.reset">Reset all</button>
     <div style="display:flex;gap:.4rem;margin-top:.4rem">
@@ -683,7 +695,27 @@
     </div>
   </div>
 </div>
-<script src="js/anthkeys.js?v=3">
+
+<div class="overlay" id="quizOverlay">
+  <div class="modal quiz-modal">
+    <div class="modal-header">
+      <h2 data-i18n="quiz.title">Shortcut Quiz</h2>
+      <button class="modal-close" id="quizClose"><span class="close-x"></span></button>
+    </div>
+    <div id="quizBody" style="padding:1rem;text-align:center">
+      <p id="quizQuestion" style="font-size:1.1rem;margin-bottom:1rem;color:var(--text)"></p>
+      <div id="quizOptions" style="display:flex;flex-direction:column;gap:.5rem;margin-bottom:1rem"></div>
+      <p id="quizFeedback" style="font-size:1rem;font-weight:600;margin-bottom:.5rem"></p>
+      <div style="display:flex;justify-content:center;gap:.5rem">
+        <button class="theme-opt" id="quizNext" style="justify-content:center;padding:.5rem 1.2rem;display:none" data-i18n="quiz.next">Next</button>
+        <button class="theme-opt" id="quizRestart" style="justify-content:center;padding:.5rem 1.2rem;display:none" data-i18n="quiz.restart">Restart</button>
+      </div>
+      <p id="quizScore" style="margin-top:.8rem;font-size:.9rem;color:var(--text-variant)"></p>
+    </div>
+  </div>
+</div>
+
+<script src="js/anthkeys.js?v=4">
 </script>
 <div class="ctx-menu" id="ctxMenu">
   <button data-action="copy-anthkey" data-i18n="ctx.copy">Copy anthkey</button>
