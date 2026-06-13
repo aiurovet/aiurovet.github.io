@@ -55,7 +55,7 @@ const i18n = {
     'quiz.done': 'Quiz Complete!',
     'quiz.restart': 'Restart',
     'quiz.close': 'Close',
-    'quiz.choose': 'Which shortcut matches this action?',
+    'quiz.choose': 'What does this shortcut do?',
     'quiz.no-data': 'No shortcuts available for quiz',
     'cloud.title': 'Cloud Sync',
     'cloud.token': 'GitHub Token',
@@ -7714,18 +7714,6 @@ function shuffleArray(arr) {
   return arr;
 }
 
-function getDistractors(correct) {
-  const pool = quizData.filter(d => d.anthkey !== correct);
-  shuffleArray(pool);
-  const distractors = pool.slice(0, 3).map(d => d.anthkey);
-  while (distractors.length < 3) {
-    const fillers = ['Ctrl+Alt+Del', 'Alt+F4', 'Ctrl+Shift+Esc', 'Win+D', 'Ctrl+Z', 'Ctrl+C', 'Ctrl+V', 'Alt+Tab', 'Win+Tab', 'Shift+Del'];
-    shuffleArray(fillers);
-    fillers.forEach(f => { if (distractors.length < 3 && !distractors.includes(f) && f !== correct) distractors.push(f); });
-  }
-  return distractors;
-}
-
 function t(key) {
   const curLang = document.querySelector('[data-lang].active')?.dataset.lang || 'en';
   const langData = i18n[curLang === 'auto' ? 'en' : curLang] || i18n.en;
@@ -7739,7 +7727,13 @@ function showQuizQuestion() {
   }
   quizAnswered = false;
   const q = quizData[quizIndex];
-  const options = [q.anthkey, ...getDistractors(q.anthkey)];
+
+  const correctAction = q.displayAction;
+  const distractorActions = quizData
+    .filter(d => d.displayAction !== correctAction)
+    .map(d => d.displayAction);
+  shuffleArray(distractorActions);
+  const options = [correctAction, ...distractorActions.slice(0, 3)];
   shuffleArray(options);
 
   document.getElementById('quizCounter').textContent = (quizIndex + 1) + '/' + quizTotal;
@@ -7750,10 +7744,10 @@ function showQuizQuestion() {
   } else {
     catEl.style.display = 'none';
   }
-  document.getElementById('quizQuestion').textContent = q.displayAction;
+  document.getElementById('quizQuestion').textContent = q.anthkey;
   const optsDiv = document.getElementById('quizOptions');
   optsDiv.innerHTML = options.map(opt =>
-    '<button class="quiz-opt" data-anthkey="' + opt.replace(/"/g,'&quot;') + '">' + escHtml(opt) + '</button>'
+    '<button class="quiz-opt" data-action="' + opt.replace(/"/g,'&quot;') + '">' + escHtml(opt) + '</button>'
   ).join('');
   document.getElementById('quizFeedback').textContent = '';
   document.getElementById('quizFeedback').style.color = '';
@@ -7768,8 +7762,8 @@ function showQuizQuestion() {
     btn.addEventListener('click', function() {
       if (quizAnswered) return;
       quizAnswered = true;
-      const selected = this.dataset.anthkey;
-      const correct = q.anthkey;
+      const selected = this.dataset.action;
+      const correct = correctAction;
       const fb = document.getElementById('quizFeedback');
       if (selected === correct) {
         quizScore++;
@@ -7778,7 +7772,7 @@ function showQuizQuestion() {
         fb.style.color = '#16a34a';
       } else {
         this.classList.add('wrong');
-        optsDiv.querySelector('[data-anthkey="' + correct.replace(/"/g,'&quot;') + '"]')?.classList.add('correct');
+        optsDiv.querySelector('[data-action="' + correct.replace(/"/g,'&quot;') + '"]')?.classList.add('correct');
         fb.textContent = '\u2717 ' + t('quiz.wrong') + ' \u2014 ' + escHtml(correct);
         fb.style.color = '#dc2626';
       }
