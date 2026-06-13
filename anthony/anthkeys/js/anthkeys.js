@@ -6764,10 +6764,14 @@ onId('settingsOverlay', 'click', e => {
 
 // ---- Dark mode quick toggle ----
 onId('btnThemeToggle', 'click', () => {
-  document.body.classList.remove('light','dark','ocean','forest','sunset','lavender','midnight','coral','mint','sky','rose','amber','slate','cherry','tundra','nebula','sakura','emerald','peach','storm','desert','glade','aurora','cocoa');
   const isDark = document.body.classList.contains('dark');
+  document.body.classList.remove('light','dark','ocean','forest','sunset','lavender','midnight','coral','mint','sky','rose','amber','slate','cherry','tundra','nebula','sakura','emerald','peach','storm','desert','glade','aurora','cocoa');
   document.body.classList.add(isDark ? 'light' : 'dark');
   document.getElementById('btnThemeToggle').innerHTML = isDark ? '&#127769;' : '&#9728;&#65039;';
+  document.querySelectorAll('[data-theme].active').forEach(b => b.classList.remove('active'));
+  const themeBtn = document.querySelector('[data-theme="' + (isDark ? 'light' : 'dark') + '"]');
+  if (themeBtn) themeBtn.classList.add('active');
+  saveSettings();
 });
 
 // ---- Settings search ----
