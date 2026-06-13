@@ -289,7 +289,7 @@
     .close-x::before { transform: rotate(45deg); }
     .close-x::after { transform: rotate(-45deg); }
     .modal-close:hover { background: var(--accent-2); }
-    .modal kbd, .modal .drop-zone, .modal button, .modal div:not(.setting-body) { border: none !important; }
+    .modal kbd, .modal .drop-zone, .modal button:not(.accent-opt), .modal div:not(.setting-body) { border: none !important; }
     .settings-panel.active { flex: 1; overflow-y: auto; min-height: 0; }
     .settings-tabs { display: flex; gap: .4rem; margin: 1.5rem 0 1rem; }
     .settings-tab { padding: .4rem .9rem; font-size: .8rem; font-weight: 500; background: var(--surface-variant); color: var(--text-variant); border: none; border-radius: var(--radius-tab); cursor: pointer; transition: all .15s; }
@@ -325,9 +325,9 @@
     .setting-group.open .setting-body { display: block; }
     .reset-btn { background: none; border: none; color: var(--text-variant); cursor: pointer; font-size: .85rem; padding: .1rem .3rem; border-radius: 4px; opacity: .5; transition: opacity .15s; line-height: 1; position: relative; z-index: 1; }
     .reset-btn:hover { opacity: 1; color: var(--primary); background: rgba(0,0,0,.06); }
-    .accent-opt { width: 32px; height: 32px; border-radius: 50%; cursor: pointer; border: 2px solid transparent; transition: all .15s; padding: 0; display: inline-flex; align-items: center; justify-content: center; }
+    .accent-opt { width: 32px; height: 32px; border-radius: 50%; cursor: pointer; border: 2px solid transparent !important; transition: all .15s; padding: 0; display: inline-flex; align-items: center; justify-content: center; }
     .accent-opt:hover { transform: scale(1.15); }
-    .accent-opt.active { border-color: var(--text); transform: scale(1.15); box-shadow: 0 0 0 2px var(--surface); }
+    .accent-opt.active { border-color: var(--text) !important; transform: scale(1.15); box-shadow: 0 0 0 2px var(--surface); }
     .pill-bar { display: flex; gap: .35rem; flex-wrap: wrap; margin-bottom: .4rem; }
     .pill { padding: .3rem .7rem; font-size: .72rem; font-weight: 500; background: var(--surface-variant); color: var(--text-variant); border: none; border-radius: 100px; cursor: pointer; transition: all .15s; white-space: nowrap; font-family: var(--font); }
     .pill:hover { background: var(--outline-variant); color: var(--text); }

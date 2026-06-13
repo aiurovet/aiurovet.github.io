@@ -6462,7 +6462,7 @@ function saveSettings() {
     size: document.querySelector('[data-size].active')?.dataset.size || 'medium',
     font: document.querySelector('[data-font].active')?.dataset.font || 'google-sans',
     language: document.querySelector('[data-lang].active')?.dataset.lang || 'auto',
-    accent: document.querySelector('.accent-opt.active')?.dataset.accent || 'gold',
+    accent: document.querySelector('.accent-opt.active')?.dataset.accent || (document.getElementById('customAccentBtn')?.classList.contains('active') ? 'custom' : 'gold'),
     blur: document.getElementById('toggleBlur')?.classList.contains('on') ?? true,
     keyStyle: document.querySelector('[data-key-style].active')?.dataset.keyStyle || 'spaced',
     modStyle: document.querySelector('[data-mod-style].active')?.dataset.modStyle || 'text',
@@ -6567,10 +6567,16 @@ function loadSettings() {
       document.documentElement.style.setProperty('--accent-rgb', [r,g,b].join(','));
       document.documentElement.style.setProperty('--accent-2-rgb', [r2,g2,b2].join(','));
       document.documentElement.style.setProperty('--primary', hex);
-    } else if (data.accent) {
+    } else if (data.accent && accents[data.accent]) {
       document.querySelectorAll('.accent-opt').forEach(a => a.classList.remove('active'));
       const aBtn = document.querySelector('.accent-opt[data-accent="' + data.accent + '"]');
-      if (aBtn) aBtn.click();
+      if (aBtn) aBtn.classList.add('active');
+      const c = accents[data.accent];
+      document.documentElement.style.setProperty('--accent-1', c[0]);
+      document.documentElement.style.setProperty('--accent-2', c[1]);
+      document.documentElement.style.setProperty('--accent-rgb', c[2]);
+      document.documentElement.style.setProperty('--accent-2-rgb', c[3]);
+      document.documentElement.style.setProperty('--primary', c[0]);
     }
 
     if (data.blur !== undefined) {
@@ -6725,7 +6731,7 @@ document.querySelectorAll('.panel table tr:not(.category) td:last-child, .note k
 renderAnthkeys();
 
 // ---- Load saved settings ----
-loadSettings();
+// (moved below click handlers and accents init)
 
 // ---- Event listeners ----
 document.querySelectorAll('.tab').forEach(tab => {
@@ -6957,6 +6963,9 @@ if (accentPresetsContainer) {
   });
 }
 renderAccentPresets();
+
+// ---- Load saved settings (after accents init & click handlers) ----
+loadSettings();
 
 const wallpaperInput = document.getElementById('wallpaperInput');
 const dropZone = document.getElementById('dropZone');
