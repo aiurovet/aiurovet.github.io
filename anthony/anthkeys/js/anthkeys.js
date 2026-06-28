@@ -130,6 +130,7 @@ const i18n = {
     'lang.note': 'Not all translations are complete \u2014 missing text falls back to English. To add or improve a translation, see below.',
     'wallpaper.choose': 'Choose image',
     'wallpaper.drop': 'Drop an image here',
+    'wallpaper.remove': 'Remove wallpaper',
     'note.equals': '= Command', 'note.win': '= Windows key', 'note.super': '= Windows/Command key', 'note.search': '= Launcher key',
     'dict.toggle': '\u2328 Key Legend',
     'tab.apps': 'Apps',
@@ -7030,6 +7031,15 @@ if (dropZone) {
     reader.readAsDataURL(file);
   });
   dropZone.addEventListener('click', () => { if (wallpaperInput) wallpaperInput.click(); });
+}
+
+const removeBtn = document.getElementById('removeWallpaper');
+if (removeBtn) {
+  removeBtn.addEventListener('click', () => {
+    lsRemove('anthkeys-wallpaper');
+    document.body.style.removeProperty('--bg-img');
+    document.body.style.removeProperty('background');
+  });
 }
 
 document.querySelectorAll('[data-style]').forEach(btn => {
