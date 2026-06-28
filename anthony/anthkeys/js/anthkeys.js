@@ -237,7 +237,7 @@ const i18n = {
 }
 
 i18n.ar = {
-    'title': 'اختصارات لوحة المفاتيح',
+    'title': 'اختصارات',
     'subtitle': 'اختصارات شائعة لكل منصة',
     'cat.editing': 'تحرير',
     'cat.navigation': 'تنقل',
@@ -548,7 +548,7 @@ i18n.ar = {
 };
 
 i18n.cs = {
-    'title': 'Klávesové zkratky',
+    'title': 'Zkratky',
     'subtitle': 'Vanliga genvägar för varje plattform',
     'cat.editing': 'Redigering',
     'cat.navigation': 'Navigering',
@@ -859,7 +859,7 @@ i18n.cs = {
 };
 
 i18n.da = {
-    'title': 'Tastaturgenveje',
+    'title': 'Genveje',
     'subtitle': 'Fælles genveje til hver platform',
     'cat.editing': 'Redigering',
     'cat.navigation': 'Navigation',
@@ -1481,7 +1481,7 @@ i18n.de = {
 };
 
 i18n.es = {
-    'title': 'Atajos de teclado',
+    'title': 'Atajos',
     'subtitle': 'Atajos comunes para cada plataforma',
     'cat.editing': 'Edición',
     'cat.navigation': 'Navegación',
@@ -2103,7 +2103,7 @@ i18n.fi = {
 };
 
 i18n.fr = {
-    'title': 'Raccourcis clavier',
+    'title': 'Raccourcis',
     'subtitle': 'Raccourcis courants pour chaque plateforme',
     'cat.editing': 'Édition',
     'cat.navigation': 'Navigation',
@@ -2414,7 +2414,7 @@ i18n.fr = {
 };
 
 i18n.hi = {
-    'title': 'कुंजीपटल अल्प मार्ग',
+    'title': 'शॉर्टकट',
     'subtitle': 'हर प्लेटफ़ॉर्म के लिए सामान्य शॉर्टकट',
     'cat.editing': 'संपादन',
     'cat.navigation': 'नेविगेशन',
@@ -3036,7 +3036,7 @@ i18n.hu = {
 };
 
 i18n.it = {
-    'title': 'Scorciatoie da tastiera',
+    'title': 'Scorciatoie',
     'subtitle': 'Scorciatoie comuni per ogni piattaforma',
     'cat.editing': 'Modifica',
     'cat.navigation': 'Navigazione',
@@ -3347,7 +3347,7 @@ i18n.it = {
 };
 
 i18n.ja = {
-    'title': 'キーボードショートカット',
+    'title': 'ショートカット',
     'subtitle': '各プラットフォームの一般的なショートカット',
     'cat.editing': '編集',
     'cat.navigation': 'ナビゲーション',
@@ -3658,7 +3658,7 @@ i18n.ja = {
 };
 
 i18n.ko = {
-    'title': '키보드 단축키',
+    'title': '단축키',
     'subtitle': '각 플래폼의 일반적인 단축키',
     'cat.editing': '편집',
     'cat.navigation': '탐색',
@@ -4280,7 +4280,7 @@ i18n.nl = {
 };
 
 i18n.no = {
-    'title': 'Tastatursnarveier',
+    'title': 'Snarveier',
     'subtitle': 'Vanlige snarveier for hver plattform',
     'cat.editing': 'Redigering',
     'cat.navigation': 'Navigasjon',
@@ -4591,7 +4591,7 @@ i18n.no = {
 };
 
 i18n.pl = {
-    'title': 'Skróty klawiaturowe',
+    'title': 'Skróty',
     'subtitle': 'Typowe skróty dla każdej platformy',
     'cat.editing': 'Edycja',
     'cat.navigation': 'Nawigacja',
@@ -4902,7 +4902,7 @@ i18n.pl = {
 };
 
 i18n.pt = {
-    'title': 'Atalhos de teclado',
+    'title': 'Atalhos',
     'subtitle': 'Atalhos comuns para todas as plataformas',
     'cat.editing': 'Edição',
     'cat.navigation': 'Navegação',
@@ -5835,7 +5835,7 @@ i18n.sv = {
 };
 
 i18n.tr = {
-    'title': 'Klavye kısayolları',
+    'title': 'Kısayollar',
     'subtitle': 'Her platform için ortak kısayollar',
     'cat.editing': 'Düzenleme',
     'cat.navigation': 'Gezinme',
@@ -6146,7 +6146,7 @@ i18n.tr = {
 };
 
 i18n.vi = {
-    'title': 'Phím tắt',
+    'title': 'Lối tắt',
     'subtitle': 'Phím tắt phổ biến cho mọi nền tảng',
     'cat.editing': 'Chỉnh sửa',
     'cat.navigation': 'Điều hướng',
