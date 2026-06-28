@@ -6483,8 +6483,6 @@ function saveSettings() {
   const isCustom = customBtn?.classList.contains('active');
   const data = {
     theme: document.querySelector('[data-theme].active')?.dataset.theme || 'light',
-    style: document.querySelector('[data-style].active')?.dataset.style || 'm3',
-    distro: document.querySelector('[data-distro].active')?.dataset.distro || '',
     size: document.querySelector('[data-size].active')?.dataset.size || 'medium',
     font: document.querySelector('[data-font].active')?.dataset.font || 'google-sans',
     language: document.querySelector('[data-lang].active')?.dataset.lang || 'auto',
@@ -6519,26 +6517,6 @@ function loadSettings() {
         else if (data.theme === 'dark') document.body.classList.add('dark');
         else if (data.theme === 'device') document.body.classList.add(window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
         else document.body.classList.add(data.theme);
-      }
-    }
-
-    if (data.style) {
-      document.querySelectorAll('[data-style]').forEach(b => b.classList.remove('active'));
-      const sBtn = document.querySelector('[data-style="' + data.style + '"]');
-      if (sBtn) {
-        sBtn.classList.add('active');
-document.body.classList.remove('style-m3');
-        document.body.classList.add('style-' + data.style);
-      }
-    }
-
-    if (data.distro) {
-      document.querySelectorAll('[data-distro]').forEach(b => b.classList.remove('active'));
-      const dBtn = document.querySelector('[data-distro="' + data.distro + '"]');
-      if (dBtn) {
-        dBtn.classList.add('active');
-        document.body.classList.remove('distro-gnome','distro-kde','distro-cosmic','distro-hyprland');
-        document.body.classList.add('distro-' + data.distro);
       }
     }
 
@@ -7040,27 +7018,6 @@ if (removeBtn) {
   });
 }
 
-document.querySelectorAll('[data-style]').forEach(btn => {
-  btn.addEventListener('click', () => {
-    document.querySelectorAll('[data-style]').forEach(b => b.classList.remove('active'));
-    btn.classList.add('active');
-    document.body.classList.remove('style-m3');
-    document.body.classList.add('style-' + btn.dataset.style);
-    if (btn.dataset.style !== 'linux') {
-      document.body.classList.remove('distro-gnome','distro-kde','distro-cosmic','distro-hyprland');
-    }
-    saveSettings();
-  });
-});
-document.querySelectorAll('[data-distro]').forEach(btn => {
-  btn.addEventListener('click', () => {
-    document.querySelectorAll('[data-distro]').forEach(b => b.classList.remove('active'));
-    btn.classList.add('active');
-    document.body.classList.remove('distro-gnome','distro-kde','distro-cosmic','distro-hyprland');
-    document.body.classList.add('distro-' + btn.dataset.distro);
-    saveSettings();
-  });
-});
 document.querySelectorAll('[data-size]').forEach(btn => {
   btn.addEventListener('click', () => {
     document.querySelectorAll('[data-size]').forEach(b => b.classList.remove('active'));
@@ -7226,10 +7183,6 @@ document.querySelectorAll('.reset-btn').forEach(btn => {
     } else if (setting === 'accent') {
       const goldBtn = document.querySelector('.accent-opt[data-accent="gold"]');
       if (goldBtn) goldBtn.click();
-    } else if (setting === 'style') {
-      document.querySelectorAll('[data-style]').forEach(b => b.classList.remove('active'));
-      const defBtn = document.querySelector('[data-style="m3"]');
-      if (defBtn) defBtn.click();
     } else if (setting === 'size') {
       document.querySelectorAll('[data-size]').forEach(b => b.classList.remove('active'));
       const defBtn = document.querySelector('[data-size="medium"]');
