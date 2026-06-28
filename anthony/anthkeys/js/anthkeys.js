@@ -6513,7 +6513,7 @@ function loadSettings() {
       const tBtn = document.querySelector('.theme-opt[data-theme="' + data.theme + '"]');
       if (tBtn) {
         tBtn.classList.add('active');
-        document.body.classList.remove('light','dark','ocean','forest','sunset','lavender','midnight','coral','mint','sky','rose','amber','slate','cherry','tundra','nebula','sakura','emerald','peach','storm','desert','glade','aurora','cocoa');
+        document.body.classList.remove('light','dark','ocean','forest','sunset','lavender','midnight','coral','mint','sky','rose','amber','slate','cherry','tundra','nebula','sakura','emerald','peach','storm','desert','glade','aurora','cocoa','twilight','arctic','meadow','volcano','lagoon','autumn','blossom','canyon','frost','galaxy');
         if (data.theme === 'light') document.body.classList.add('light');
         else if (data.theme === 'dark') document.body.classList.add('dark');
         else if (data.theme === 'device') document.body.classList.add(window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
@@ -6817,7 +6817,7 @@ onId('settingsOverlay', 'click', e => {
 // ---- Dark mode quick toggle ----
 onId('btnThemeToggle', 'click', () => {
   const isDark = document.body.classList.contains('dark');
-  document.body.classList.remove('light','dark','ocean','forest','sunset','lavender','midnight','coral','mint','sky','rose','amber','slate','cherry','tundra','nebula','sakura','emerald','peach','storm','desert','glade','aurora','cocoa');
+  document.body.classList.remove('light','dark','ocean','forest','sunset','lavender','midnight','coral','mint','sky','rose','amber','slate','cherry','tundra','nebula','sakura','emerald','peach','storm','desert','glade','aurora','cocoa','twilight','arctic','meadow','volcano','lagoon','autumn','blossom','canyon','frost','galaxy');
   document.body.classList.add(isDark ? 'light' : 'dark');
   document.getElementById('btnThemeToggle').innerHTML = isDark ? '&#127769;' : '&#9728;&#65039;';
   document.querySelectorAll('[data-theme].active').forEach(b => b.classList.remove('active'));
@@ -6846,7 +6846,7 @@ document.querySelectorAll('.theme-opt[data-theme]').forEach(opt => {
     document.querySelectorAll('.theme-opt[data-theme]').forEach(t => t.classList.remove('active'));
     opt.classList.add('active');
     const theme = opt.dataset.theme;
-    document.body.classList.remove('light','dark','ocean','forest','sunset','lavender','midnight','coral','mint','sky','rose','amber','slate','cherry','tundra','nebula','sakura','emerald','peach','storm','desert','glade','aurora','cocoa');
+    document.body.classList.remove('light','dark','ocean','forest','sunset','lavender','midnight','coral','mint','sky','rose','amber','slate','cherry','tundra','nebula','sakura','emerald','peach','storm','desert','glade','aurora','cocoa','twilight','arctic','meadow','volcano','lagoon','autumn','blossom','canyon','frost','galaxy');
     if (theme === 'light') {
       document.body.classList.add('light');
     } else if (theme === 'dark') {
@@ -7215,7 +7215,7 @@ document.querySelectorAll('.reset-btn').forEach(btn => {
       document.querySelectorAll('.theme-opt[data-theme]').forEach(t => t.classList.remove('active'));
       const defBtn = document.querySelector('.theme-opt[data-theme="light"]');
       if (defBtn) defBtn.classList.add('active');
-      document.body.classList.remove('light','dark','ocean','forest','sunset','lavender','midnight','coral','mint','sky','rose','amber','slate','cherry','tundra','nebula','sakura','emerald','peach','storm','desert','glade','aurora','cocoa');
+      document.body.classList.remove('light','dark','ocean','forest','sunset','lavender','midnight','coral','mint','sky','rose','amber','slate','cherry','tundra','nebula','sakura','emerald','peach','storm','desert','glade','aurora','cocoa','twilight','arctic','meadow','volcano','lagoon','autumn','blossom','canyon','frost','galaxy');
       document.body.classList.add('light');
     } else if (setting === 'accent') {
       const goldBtn = document.querySelector('.accent-opt[data-accent="gold"]');
