@@ -6527,10 +6527,8 @@ function loadSettings() {
       const sBtn = document.querySelector('[data-style="' + data.style + '"]');
       if (sBtn) {
         sBtn.classList.add('active');
-        document.body.classList.remove('style-m3','style-ios','style-windows','style-linux','style-android','style-macos','style-chromeos','style-ubuntu');
+document.body.classList.remove('style-m3');
         document.body.classList.add('style-' + data.style);
-        const distroOpts = document.getElementById('distroOptions');
-        if (distroOpts) distroOpts.style.display = data.style === 'linux' ? 'block' : 'none';
       }
     }
 
@@ -7046,10 +7044,8 @@ document.querySelectorAll('[data-style]').forEach(btn => {
   btn.addEventListener('click', () => {
     document.querySelectorAll('[data-style]').forEach(b => b.classList.remove('active'));
     btn.classList.add('active');
-    document.body.classList.remove('style-m3','style-ios','style-windows','style-linux','style-android','style-macos','style-chromeos','style-ubuntu');
+    document.body.classList.remove('style-m3');
     document.body.classList.add('style-' + btn.dataset.style);
-    const distroOpts = document.getElementById('distroOptions');
-    if (distroOpts) distroOpts.style.display = btn.dataset.style === 'linux' ? 'block' : 'none';
     if (btn.dataset.style !== 'linux') {
       document.body.classList.remove('distro-gnome','distro-kde','distro-cosmic','distro-hyprland');
     }
