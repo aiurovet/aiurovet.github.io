@@ -230,6 +230,7 @@ const i18n = {
     'cat.screenshots': 'Screenshots',
     'cat.window': 'Window',
     'cat.power-user': 'Power User',
+    'cat.advanced': 'Advanced',
     'ctx.copy': 'Copy shortcut',
     'ctx.copy-action': 'Copy action + shortcut'
   }
@@ -757,10 +758,10 @@ i18n.cs = {
     'mod.symbol': 'Symboly',
     'blur.label': 'Rozostření pozadí překrytí',
     'lang.auto': 'Jazyk zařízení',
-    'lang.note': 'Ne všechny překlady jsou kompletní — chybějící text se vrátí do angličtiny. ',
-    'wallpaper.choose': 'Chcete-li přidat nebo zlepšit překlad, viz níže.',
-    'wallpaper.drop': 'Vyberte obrázek',
-    'note.equals': 'Sem vložte obrázek',
+    'lang.note': 'Ne všechny překlady jsou kompletní — chybějící text se vrátí do angličtiny. Chcete-li přidat nebo zlepšit překlad, viz níže.',
+    'wallpaper.choose': 'Vyberte obrázek',
+    'wallpaper.drop': 'Sem vložte obrázek',
+    'note.equals': '= Command',
     'note.win': '= klíč Windows',
     'note.super': '= Klávesa Windows/Command',
     'note.search': '= Spouštěcí klíč',
@@ -6495,8 +6496,9 @@ function saveSettings() {
     noAnim: document.body.classList.contains('no-anim')
   };
   if (data.accent === 'custom' || (activeAccent && !activeAccent.dataset.accent)) {
-    const el = document.getElementById('customAccentInput');
-    if (el) data.customAccentHex = el.value;
+    const bodyHex = document.body.style.getPropertyValue('--accent-1').trim();
+    if (bodyHex && bodyHex.startsWith('#')) { data.customAccentHex = bodyHex; }
+    else { const el = document.getElementById('customAccentInput'); if (el) data.customAccentHex = el.value; }
   }
   lsSet('anthkeys-settings', JSON.stringify(data));
 }
@@ -6572,7 +6574,7 @@ function loadSettings() {
       }
     }
 
-    if (data.accent === 'custom' && data.customAccentHex) {
+    if (data.customAccentHex) {
       const hex = data.customAccentHex;
       const r = parseInt(hex.slice(1,3), 16);
       const g = parseInt(hex.slice(3,5), 16);
@@ -6667,7 +6669,7 @@ const langMeta = {
   fr: { name: 'Fran\u00e7ais', flag: '\ud83c\uddeb\ud83c\uddf7', swatch: 'linear-gradient(135deg,#002395,#ED2939)' },
   de: { name: 'Deutsch', flag: '\ud83c\udde9\ud83c\uddea', swatch: 'linear-gradient(135deg,#000,#DD0000,#FFCE00)' },
   ja: { name: '\u65e5\u672c\u8a9e', flag: '\ud83c\uddef\ud83c\uddf5', swatch: 'linear-gradient(135deg,#fff,#bc002d)' },
-  zh: { name: '\u4e2d\u6587', flag: '\ud83c\udde8\ud83c\uddf3', swatch: 'linear-gradient(135deg,#DE2910,#FFDE00)' },
+
   it: { name: 'Italiano', flag: '\ud83c\uddee\ud83c\uddf9', swatch: 'linear-gradient(135deg,#009246,#ffffff,#ce2b37)' },
   pt: { name: 'Portugu\u00eas', flag: '\ud83c\uddf5\ud83c\uddf9', swatch: 'linear-gradient(135deg,#009739,#ffce00)' },
   nl: { name: 'Nederlands', flag: '\ud83c\uddf3\ud83c\uddf1', swatch: 'linear-gradient(135deg,#AE1C28,#FFFFFF,#21468B)' },
@@ -6677,8 +6679,11 @@ const langMeta = {
   tr: { name: 'T\u00fcrk\u00e7e', flag: '\ud83c\uddf9\ud83c\uddf7', swatch: 'linear-gradient(135deg,#E30A17,#FFFFFF)' },
   vi: { name: 'Ti\u1ebfng Vi\u1ec7t', flag: '\ud83c\uddfb\ud83c\uddf3', swatch: 'linear-gradient(135deg,#DA251D,#FFDA1F)' },
   ar: { name: '\u0627\u0644\u0639\u0631\u0628\u064a\u0629', flag: '\ud83c\uddf8\ud83c\udde6', swatch: 'linear-gradient(135deg,#006C35,#FFFFFF,#CE1126)' },
-   hi: { name: '\u0939\u093f\u0928\u094d\u0926\u0940', flag: '\ud83c\uddee\ud83c\uddf3', swatch: 'linear-gradient(135deg,#FF9933,#FFFFFF,#138808)' },
+  hi: { name: '\u0939\u093f\u0928\u094d\u0926\u0940', flag: '\ud83c\uddee\ud83c\uddf3', swatch: 'linear-gradient(135deg,#FF9933,#FFFFFF,#138808)' },
   sv: { name: 'Svenska', flag: '\ud83c\uddf8\ud83c\uddea', swatch: 'linear-gradient(135deg,#00599C,#FECC02)' },
+  da: { name: 'Dansk', flag: '\ud83c\udde9\ud83c\uddf0', swatch: 'linear-gradient(135deg,#C8102E,#FFFFFF)' },
+  fi: { name: 'Suomi', flag: '\ud83c\uddeb\ud83c\uddee', swatch: 'linear-gradient(135deg,#FFFFFF,#002F6C)' },
+  no: { name: 'Norsk', flag: '\ud83c\uddf3\ud83c\uddf4', swatch: 'linear-gradient(135deg,#EF2B2D,#FFFFFF,#002868)' },
   cs: { name: '\u010ce\u0161tina', flag: '\ud83c\udde8\ud83c\uddff', swatch: 'linear-gradient(135deg,#11457E,#E8002B)' },
   hu: { name: 'Magyar', flag: '\ud83c\udded\ud83c\uddfa', swatch: 'linear-gradient(135deg,#477050,#FFFFFF,#CE2939)' }
 };
@@ -6742,7 +6747,8 @@ function renderCustomAnthkeys() {
     });
   });
 }
-function escHtml(s) { var d = document.createElement('div'); d.textContent = s; return d.innerHTML; }
+var _escDiv = null;
+function escHtml(s) { if (!_escDiv) _escDiv = document.createElement('div'); _escDiv.textContent = s; return _escDiv.innerHTML; }
 
 // ---- Init ----
 loadCustomAnthkeys();
@@ -6765,8 +6771,6 @@ document.querySelectorAll('.tab').forEach(tab => {
     tab.classList.add('active');
     const pnl = document.getElementById(tab.dataset.tab);
     if (pnl) pnl.classList.add('active');
-    const inp = document.getElementById('searchInput');
-    if (inp && inp.value) { inp.value = ''; inp.dispatchEvent(new Event('input')); }
   });
 });
 
@@ -6945,7 +6949,7 @@ onId('savePresetBtn', 'click', () => {
   const name = prompt('Preset name:');
   if (!name || !name.trim()) return;
   const activeBtn = document.querySelector('.accent-opt.active') || document.querySelector('#customAccentBtn.active');
-  const hex = activeBtn ? (getComputedStyle(document.documentElement).getPropertyValue('--accent-1').trim() || '#f7971e') : '#f7971e';
+  const hex = activeBtn ? (getComputedStyle(document.body).getPropertyValue('--accent-1').trim() || '#f7971e') : '#f7971e';
   accentPresets = accentPresets.filter(p => p.name !== name.trim());
   accentPresets.push({ name: name.trim(), hex: hex });
   saveAccentPresets();
@@ -6991,6 +6995,17 @@ renderAccentPresets();
 // ---- Load saved settings (after accents init & click handlers) ----
 loadSettings();
 
+function applyWallpaper(dataUrl) {
+  document.body.style.setProperty('--bg-img', `url(${dataUrl})`);
+  document.body.style.background = 'var(--bg) var(--bg-img) center/cover fixed';
+  lsSet('anthkeys-wallpaper', dataUrl);
+}
+function loadWallpaper() {
+  const saved = lsGet('anthkeys-wallpaper', '');
+  if (saved) applyWallpaper(saved);
+}
+loadWallpaper();
+
 const wallpaperInput = document.getElementById('wallpaperInput');
 const dropZone = document.getElementById('dropZone');
 if (wallpaperInput) {
@@ -6998,10 +7013,7 @@ if (wallpaperInput) {
     const file = e.target.files[0];
     if (!file) return;
     const reader = new FileReader();
-    reader.onload = function(ev) {
-      document.body.style.setProperty('--bg-img', `url(${ev.target.result})`);
-      document.body.style.background = 'var(--bg) var(--bg-img) center/cover fixed';
-    };
+    reader.onload = function(ev) { applyWallpaper(ev.target.result); };
     reader.readAsDataURL(file);
   });
 }
@@ -7013,13 +7025,10 @@ if (dropZone) {
     dropZone.classList.remove('dragover');
     const file = e.dataTransfer.files[0];
     if (!file || !file.type.startsWith('image/')) return;
-  const reader = new FileReader();
-  reader.onload = function(ev) {
-    document.body.style.setProperty('--bg-img', `url(${ev.target.result})`);
-    document.body.style.background = 'var(--bg) var(--bg-img) center/cover fixed';
-  };
-  reader.readAsDataURL(file);
-});
+    const reader = new FileReader();
+    reader.onload = function(ev) { applyWallpaper(ev.target.result); };
+    reader.readAsDataURL(file);
+  });
   dropZone.addEventListener('click', () => { if (wallpaperInput) wallpaperInput.click(); });
 }
 
@@ -7300,7 +7309,7 @@ document.addEventListener('keydown', e => {
 
 // ---- localStorage safety wrapper (prevents file:// console errors) ----
 function lsGet(key, def) {
-  try { return localStorage.getItem(key); } catch(e) { return null; }
+  try { var v = localStorage.getItem(key); return v !== null ? v : def; } catch(e) { return def; }
 }
 function lsSet(key, val) {
   try { localStorage.setItem(key, val); } catch(e) {}
@@ -7414,6 +7423,25 @@ document.querySelectorAll('.panel tbody tr:not(.category)').forEach(tr => {
     if (document.querySelector('[data-fav-active]') && draggedTr && draggedTr.parentNode === tr.parentNode) {
       const rect = tr.getBoundingClientRect();
       tr.parentNode.insertBefore(draggedTr, e.clientY > rect.top + rect.height / 2 ? tr.nextSibling : tr);
+    }
+  });
+});
+
+// Reorder pinned items to match saved order on load
+document.querySelectorAll('.panel tbody').forEach(tbody => {
+  const panel = tbody.closest('.panel');
+  if (!panel) return;
+  const pinnedRows = [];
+  tbody.querySelectorAll('tr:not(.category)').forEach(tr => {
+    const id = getPinId(tr);
+    const idx = pinnedIds.indexOf(id);
+    if (idx >= 0) pinnedRows.push({ tr, idx });
+  });
+  pinnedRows.sort((a, b) => a.idx - b.idx);
+  pinnedRows.forEach(({ tr }) => {
+    const cat = tr.previousElementSibling;
+    if (cat && cat.classList.contains('category')) {
+      tbody.insertBefore(tr, cat.nextSibling);
     }
   });
 });
@@ -7688,11 +7716,9 @@ const QUIZ_COUNT = 10;
 
 function collectQuizData() {
   quizData = [];
-  const activePanel = document.querySelector('.panel.active');
-  if (!activePanel) return;
   const catOrder = [];
-  document.querySelectorAll('.panel.active .category').forEach(c => catOrder.push(c.getAttribute('data-i18n')));
-  document.querySelectorAll('.panel.active tbody tr:not(.category)').forEach(tr => {
+  document.querySelectorAll('.panel .category').forEach(c => catOrder.push(c.getAttribute('data-i18n')));
+  document.querySelectorAll('.panel tbody tr:not(.category)').forEach(tr => {
     const actionEl = tr.querySelector('td:first-child');
     const anthkeyEl = tr.querySelector('td:last-child');
     if (!actionEl || !anthkeyEl) return;
@@ -7747,7 +7773,7 @@ function showQuizQuestion() {
   document.getElementById('quizQuestion').textContent = q.anthkey;
   const optsDiv = document.getElementById('quizOptions');
   optsDiv.innerHTML = options.map(opt =>
-    '<button class="quiz-opt" data-action="' + opt.replace(/"/g,'&quot;') + '">' + escHtml(opt) + '</button>'
+    '<button class="quiz-opt" data-action="' + escHtml(opt).replace(/"/g,'&quot;') + '">' + escHtml(opt) + '</button>'
   ).join('');
   document.getElementById('quizFeedback').textContent = '';
   document.getElementById('quizFeedback').style.color = '';
@@ -7772,7 +7798,7 @@ function showQuizQuestion() {
         fb.style.color = '#16a34a';
       } else {
         this.classList.add('wrong');
-        optsDiv.querySelector('[data-action="' + correct.replace(/"/g,'&quot;') + '"]')?.classList.add('correct');
+        optsDiv.querySelector('[data-action="' + escHtml(correct).replace(/"/g,'&quot;') + '"]')?.classList.add('correct');
         fb.textContent = '\u2717 ' + t('quiz.wrong') + ' \u2014 ' + escHtml(correct);
         fb.style.color = '#dc2626';
       }
