@@ -1170,7 +1170,7 @@ i18n.da = {
 };
 
 i18n.de = {
-    'title': 'Tastaturkürzel',
+    'title': 'Kurzbefehle',
     'subtitle': 'Häufige Tastenkürzel für jede Plattform',
     'cat.editing': 'Bearbeiten',
     'cat.navigation': 'Navigation',
