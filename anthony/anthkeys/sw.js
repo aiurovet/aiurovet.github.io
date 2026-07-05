@@ -1,5 +1,5 @@
-const CACHE = 'anthkeys-v1';
-const URLS = ['anthkeys.html', 'manifest.json', 'icon-192.png', 'icon-512.png'];
+const CACHE = 'anthkeys-v2';
+const URLS = ['anthkeys.html', 'manifest.json', 'icon-192.png', 'icon-512.png', 'js/anthkeys.js', 'css/anthkeys.css'];
 
 self.addEventListener('install', e => {
   e.waitUntil(
@@ -17,6 +17,15 @@ self.addEventListener('activate', e => {
 
 self.addEventListener('fetch', e => {
   e.respondWith(
-    caches.match(e.request).then(r => r || fetch(e.request))
+    caches.match(e.request).then(r => {
+      if (r) return r;
+      return fetch(e.request).then(res => {
+        if (res && res.ok && res.type === 'basic') {
+          const clone = res.clone();
+          caches.open(CACHE).then(c => c.put(e.request, clone));
+        }
+        return res;
+      });
+    })
   );
 });

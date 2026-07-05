@@ -57,6 +57,12 @@ const i18n = {
     'quiz.close': 'Close',
     'quiz.choose': 'What does this shortcut do?',
     'quiz.no-data': 'No shortcuts available for quiz',
+    'quiz.diff.easy': 'Easy',
+    'quiz.diff.medium': 'Medium',
+    'quiz.diff.hard': 'Hard',
+    'quiz.type-action': 'Type the action name:',
+    'quiz.type-shortcut': 'Type the shortcut:',
+    'tip.label': 'Tip',
     'cloud.title': 'Cloud Sync',
     'cloud.token': 'GitHub Token',
     'cloud.token-placeholder': 'ghp_...',
@@ -6982,6 +6988,7 @@ function loadWallpaper() {
   if (saved) applyWallpaper(saved);
 }
 loadWallpaper();
+showDailyTip();
 
 const wallpaperInput = document.getElementById('wallpaperInput');
 const dropZone = document.getElementById('dropZone');
@@ -7671,6 +7678,7 @@ let quizIndex = 0;
 let quizScore = 0;
 let quizAnswered = false;
 let quizTotal = 0;
+let quizDifficulty = 'easy';
 const QUIZ_COUNT = 10;
 
 function collectQuizData() {
@@ -7713,14 +7721,6 @@ function showQuizQuestion() {
   quizAnswered = false;
   const q = quizData[quizIndex];
 
-  const correctAction = q.displayAction;
-  const distractorActions = quizData
-    .filter(d => d.displayAction !== correctAction)
-    .map(d => d.displayAction);
-  shuffleArray(distractorActions);
-  const options = [correctAction, ...distractorActions.slice(0, 3)];
-  shuffleArray(options);
-
   document.getElementById('quizCounter').textContent = (quizIndex + 1) + '/' + quizTotal;
   const catEl = document.getElementById('quizCategory');
   if (q.category && t(q.category) !== q.category) {
@@ -7729,13 +7729,15 @@ function showQuizQuestion() {
   } else {
     catEl.style.display = 'none';
   }
-  document.getElementById('quizQuestion').textContent = q.anthkey;
+
+  const promptEl = document.getElementById('quizPrompt');
   const optsDiv = document.getElementById('quizOptions');
-  optsDiv.innerHTML = options.map(opt =>
-    '<button class="quiz-opt" data-action="' + escHtml(opt).replace(/"/g,'&quot;') + '">' + escHtml(opt) + '</button>'
-  ).join('');
-  document.getElementById('quizFeedback').textContent = '';
-  document.getElementById('quizFeedback').style.color = '';
+  const inputArea = document.getElementById('quizInputArea');
+  const questionEl = document.getElementById('quizQuestion');
+  const inputEl = document.getElementById('quizInput');
+  const fb = document.getElementById('quizFeedback');
+  fb.textContent = '';
+  fb.style.color = '';
   document.getElementById('quizNext').style.display = 'none';
   document.getElementById('quizRestart').style.display = 'none';
   const score = t('quiz.score').replace('{0}', quizScore).replace('{1}', quizTotal);
@@ -7743,34 +7745,90 @@ function showQuizQuestion() {
   const hs = parseInt(lsGet('anthkeys-quiz-high', '0'));
   document.getElementById('quizHighScore').textContent = hs > 0 ? t('quiz.highscore').replace('{0}', hs) : '';
 
-  optsDiv.querySelectorAll('.quiz-opt').forEach(btn => {
-    btn.addEventListener('click', function() {
-      if (quizAnswered) return;
-      quizAnswered = true;
-      const selected = this.dataset.action;
-      const correct = correctAction;
-      const fb = document.getElementById('quizFeedback');
-      if (selected === correct) {
-        quizScore++;
-        this.classList.add('correct');
-        fb.textContent = '\u2713 ' + t('quiz.correct');
-        fb.style.color = '#16a34a';
-      } else {
-        this.classList.add('wrong');
-        optsDiv.querySelector('[data-action="' + escHtml(correct).replace(/"/g,'&quot;') + '"]')?.classList.add('correct');
-        fb.textContent = '\u2717 ' + t('quiz.wrong') + ' \u2014 ' + escHtml(correct);
-        fb.style.color = '#dc2626';
-      }
-      optsDiv.querySelectorAll('.quiz-opt').forEach(b => b.disabled = true);
-      const ns = t('quiz.score').replace('{0}', quizScore).replace('{1}', quizTotal);
-      document.getElementById('quizScore').textContent = ns;
-      if (quizIndex + 1 >= quizTotal) {
-        document.getElementById('quizRestart').style.display = '';
-      } else {
-        document.getElementById('quizNext').style.display = '';
-      }
+  if (quizDifficulty === 'easy') {
+    promptEl.textContent = t('quiz.choose');
+    optsDiv.style.display = '';
+    inputArea.style.display = 'none';
+    questionEl.textContent = q.anthkey;
+
+    const correctAction = q.displayAction;
+    const distractorActions = quizData
+      .filter(d => d.displayAction !== correctAction)
+      .map(d => d.displayAction);
+    shuffleArray(distractorActions);
+    const options = [correctAction, ...distractorActions.slice(0, 3)];
+    shuffleArray(options);
+
+    optsDiv.innerHTML = options.map(opt =>
+      '<button class="quiz-opt" data-action="' + escHtml(opt).replace(/"/g,'&quot;') + '">' + escHtml(opt) + '</button>'
+    ).join('');
+
+    optsDiv.querySelectorAll('.quiz-opt').forEach(btn => {
+      btn.addEventListener('click', function() {
+        if (quizAnswered) return;
+        quizAnswered = true;
+        const selected = this.dataset.action;
+        const correct = correctAction;
+        if (selected === correct) {
+          quizScore++;
+          this.classList.add('correct');
+          fb.textContent = '\u2713 ' + t('quiz.correct');
+          fb.style.color = '#16a34a';
+        } else {
+          this.classList.add('wrong');
+          optsDiv.querySelector('[data-action="' + escHtml(correct).replace(/"/g,'&quot;') + '"]')?.classList.add('correct');
+          fb.textContent = '\u2717 ' + t('quiz.wrong') + ' \u2014 ' + escHtml(correct);
+          fb.style.color = '#dc2626';
+        }
+        optsDiv.querySelectorAll('.quiz-opt').forEach(b => b.disabled = true);
+        showQuizNextRestart();
+      });
     });
-  });
+  } else {
+    optsDiv.style.display = 'none';
+    inputArea.style.display = '';
+    inputEl.value = '';
+    inputEl.focus();
+
+    if (quizDifficulty === 'medium') {
+      promptEl.textContent = t('quiz.type-action');
+      questionEl.textContent = q.anthkey;
+    } else {
+      promptEl.textContent = t('quiz.type-shortcut');
+      questionEl.textContent = q.displayAction;
+    }
+  }
+}
+
+function submitQuizAnswer() {
+  if (quizAnswered) return;
+  quizAnswered = true;
+  const input = document.getElementById('quizInput');
+  const userAnswer = input.value.trim().replace(/\s+/g, ' ').toLowerCase();
+  const q = quizData[quizIndex];
+  const correctAnswer = (quizDifficulty === 'medium' ? q.displayAction : q.anthkey).replace(/\s+/g, ' ').toLowerCase();
+  const fb = document.getElementById('quizFeedback');
+
+  if (userAnswer === correctAnswer) {
+    quizScore++;
+    fb.textContent = '\u2713 ' + t('quiz.correct');
+    fb.style.color = '#16a34a';
+  } else {
+    fb.textContent = '\u2717 ' + t('quiz.wrong') + ' \u2014 ' + (quizDifficulty === 'medium' ? q.displayAction : q.anthkey);
+    fb.style.color = '#dc2626';
+  }
+  input.disabled = true;
+  showQuizNextRestart();
+}
+
+function showQuizNextRestart() {
+  const ns = t('quiz.score').replace('{0}', quizScore).replace('{1}', quizTotal);
+  document.getElementById('quizScore').textContent = ns;
+  if (quizIndex + 1 >= quizTotal) {
+    document.getElementById('quizRestart').style.display = '';
+  } else {
+    document.getElementById('quizNext').style.display = '';
+  }
 }
 
 function finishQuiz() {
@@ -7783,6 +7841,8 @@ function finishQuiz() {
   document.getElementById('quizQuestion').textContent = t('quiz.done');
   document.getElementById('quizPrompt').textContent = '';
   document.getElementById('quizOptions').innerHTML = '';
+  document.getElementById('quizOptions').style.display = '';
+  document.getElementById('quizInputArea').style.display = 'none';
   document.getElementById('quizFeedback').textContent = t('quiz.score').replace('{0}', quizScore).replace('{1}', quizTotal) + (isNew ? ' \u2014 New Best!' : '');
   document.getElementById('quizFeedback').style.color = 'var(--primary)';
   document.getElementById('quizNext').style.display = 'none';
@@ -7792,6 +7852,8 @@ function finishQuiz() {
 }
 
 function startQuiz() {
+  const activeDiff = document.querySelector('.diff-btn.active');
+  quizDifficulty = activeDiff ? activeDiff.dataset.diff : 'easy';
   collectQuizData();
   const filtered = quizData.filter(d => d.anthkey && d.action);
   if (filtered.length < 4) {
@@ -7800,6 +7862,7 @@ function startQuiz() {
     document.getElementById('quizQuestion').textContent = t('quiz.no-data');
     document.getElementById('quizPrompt').textContent = '';
     document.getElementById('quizOptions').innerHTML = '';
+    document.getElementById('quizInputArea').style.display = 'none';
     document.getElementById('quizFeedback').textContent = '';
     document.getElementById('quizNext').style.display = 'none';
     document.getElementById('quizRestart').style.display = '';
@@ -7812,7 +7875,7 @@ function startQuiz() {
   quizTotal = Math.min(QUIZ_COUNT, quizData.length);
   quizIndex = 0;
   quizScore = 0;
-  document.getElementById('quizPrompt').textContent = t('quiz.choose');
+  document.getElementById('quizInput').disabled = false;
   showQuizQuestion();
 }
 
@@ -7836,10 +7899,60 @@ onId('quizNext', 'click', () => {
 });
 onId('quizRestart', 'click', startQuiz);
 
+document.querySelectorAll('.diff-btn').forEach(btn => {
+  btn.addEventListener('click', function() {
+    if (quizData.length > 0 && quizIndex > 0) return;
+    document.querySelectorAll('.diff-btn').forEach(b => b.classList.remove('active'));
+    this.classList.add('active');
+  });
+});
+
+onId('quizSubmit', 'click', submitQuizAnswer);
+document.getElementById('quizInput')?.addEventListener('keydown', e => {
+  if (e.key === 'Enter') submitQuizAnswer();
+});
+
 document.addEventListener('keydown', e => {
   if (e.key === 'Escape') {
     document.getElementById('quizOverlay')?.classList.remove('open');
   }
+});
+
+// ---- Daily Tip ----
+function showDailyTip() {
+  const tipEl = document.getElementById('dailyTip');
+  const contentEl = document.getElementById('tipContent');
+  if (!tipEl || !contentEl) return;
+
+  const today = new Date().toDateString();
+  const lastDate = lsGet('anthkeys-tip-date', '');
+  const lastTip = lsGet('anthkeys-tip-saved', '');
+  if (lastDate === today && lastTip) {
+    contentEl.textContent = lastTip;
+    tipEl.style.display = '';
+    return;
+  }
+
+  const tips = [];
+  document.querySelectorAll('.panel tbody tr:not(.category)').forEach(tr => {
+    const actionEl = tr.querySelector('td:first-child');
+    const anthkeyEl = tr.querySelector('td:last-child');
+    if (!actionEl || !anthkeyEl) return;
+    const action = actionEl.textContent.trim();
+    const anthkey = anthkeyEl.textContent.trim();
+    if (action && anthkey) tips.push(action + ' \u2014 ' + anthkey);
+  });
+
+  if (tips.length === 0) return;
+  const pick = tips[Math.floor(Math.random() * tips.length)];
+  contentEl.textContent = pick;
+  lsSet('anthkeys-tip-date', today);
+  lsSet('anthkeys-tip-saved', pick);
+  tipEl.style.display = '';
+}
+
+onId('tipClose', 'click', () => {
+  document.getElementById('dailyTip').style.display = 'none';
 });
 
 // ---- Cloud Sync via GitHub Gist ----
