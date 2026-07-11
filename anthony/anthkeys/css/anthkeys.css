@@ -241,7 +241,7 @@
     body.frost { --bg: #f0f8ff; --bg-img: url('https://images.unsplash.com/photo-1483921020237-2ff51e8e4b22'); --surface: rgba(255,255,255,.85); --surface-variant: rgba(240,248,255,.7); --text: #0a1a2a; --text-variant: #3a5a7a; --primary: #38bdf8; --on-primary: #fff; --primary-container: #0c4a6e; --on-primary-container: #e0f2fe; }
     body.galaxy { --bg: #0a0520; --bg-img: url('https://images.unsplash.com/photo-1462331940025-496dfbfc756d?w=1920&q=80&fit=crop&crop=entropy'); --surface: rgba(10,5,32,.88); --surface-variant: rgba(20,10,45,.75); --text: #e0d8f0; --text-variant: #9a8ac0; --primary: #8b5cf6; --on-primary: #fff; --primary-container: #4c1d95; --on-primary-container: #ede9fe; --shadow: 0 1px 3px rgba(0,0,0,.5), 0 4px 16px rgba(0,0,0,.4); --shadow-lg: 0 4px 16px rgba(0,0,0,.6), 0 8px 32px rgba(0,0,0,.5); }
 
-    body { font-family: var(--font); background: var(--bg) var(--bg-img) center/cover fixed; color: var(--text); padding: 1.5rem 2rem; font-size: var(--size); height: 100vh; height: 100dvh; box-sizing: border-box; overflow: hidden; -webkit-tap-highlight-color: transparent; transition: background .3s, color .3s; }
+    body { font-family: var(--font); background: var(--bg) var(--bg-img) center/cover fixed; color: var(--text); padding: 1.5rem 2rem; font-size: var(--size); box-sizing: border-box; position: fixed; inset: 0; overflow: hidden; -webkit-tap-highlight-color: transparent; transition: background .3s, color .3s; }
     h1 { text-align: center; margin: 0; font-size: 1.6rem; font-weight: 600; letter-spacing: -.01em; background: linear-gradient(135deg, var(--accent-1), var(--accent-2)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
 
     span[data-i18n='title'] {
@@ -371,6 +371,9 @@
 @media (hover: none) and (pointer: coarse) {
   body { background-attachment: scroll; }
   button, .tab, .pill, .btn-advanced, .btn-settings, .settings-tab, .theme-opt, .modal-close, .category td { touch-action: manipulation; }
+  .panel { backdrop-filter: none !important; -webkit-backdrop-filter: none !important; background: var(--surface) !important; border-color: var(--outline-variant) !important; }
+  .panel::before { display: none !important; }
+  .panel::after { display: none !important; }
 }
 tr.dragging { opacity: .4; }
 tr.drag-over { outline: 2px dashed var(--accent-1); outline-offset: -2px; }
