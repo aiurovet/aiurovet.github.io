@@ -371,11 +371,28 @@
 @media (hover: none) and (pointer: coarse) {
   body { background-attachment: scroll; }
   html { -webkit-text-size-adjust: 100%; }
-  .scroll-area { -webkit-overflow-scrolling: touch; overflow-y: scroll; }
+  .scroll-area { -webkit-overflow-scrolling: touch; overflow-y: scroll; contain: layout style; }
   button, .tab, .pill, .btn-advanced, .btn-settings, .settings-tab, .theme-opt, .modal-close, .category td { touch-action: manipulation; }
-  .panel { backdrop-filter: none !important; -webkit-backdrop-filter: none !important; background: var(--surface) !important; border-color: var(--outline-variant) !important; }
+  .panel, .tab, .pill, .search-bar input, .dict-toggle, .dict-panel, .note, .setting-group, .top-bar, .hint, .overlay, .modal {
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+  }
+  .panel { background: var(--surface) !important; border-color: var(--outline-variant) !important; }
   .panel::before { display: none !important; }
   .panel::after { display: none !important; }
+  .tab { background: var(--surface-variant) !important; }
+  .tab.active { background: var(--primary) !important; color: var(--on-primary) !important; box-shadow: none !important; border-color: transparent !important; }
+  .pill { background: var(--surface-variant) !important; }
+  .pill.active { background: var(--primary) !important; color: var(--on-primary) !important; border-color: transparent !important; }
+  .search-bar input { background: var(--surface-variant) !important; }
+  .dict-toggle { background: var(--surface-variant) !important; }
+  .dict-panel { background: var(--surface) !important; }
+  .note { background: var(--surface-variant) !important; }
+  .setting-group { background: var(--surface-variant) !important; }
+  .top-bar { background: var(--surface-variant) !important; }
+  .hint { background: var(--surface-variant) !important; }
+  .overlay { background: rgba(0,0,0,.4) !important; }
+  .modal { background: var(--surface) !important; }
 }
 tr.dragging { opacity: .4; }
 tr.drag-over { outline: 2px dashed var(--accent-1); outline-offset: -2px; }
