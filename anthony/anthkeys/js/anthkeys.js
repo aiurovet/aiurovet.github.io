@@ -7575,41 +7575,45 @@ document.querySelectorAll('.panel table tr:not(.category) td:last-child').forEac
 });
 
 // ---- Search (shows all matching panels, respects collapsed state and pill filter) ----
+let _searchTimer = null;
 onId('searchInput', 'input', function() {
-  const q = this.value.toLowerCase().trim();
-  document.querySelectorAll('.panel tbody tr:not(.category)').forEach(tr => {
-    if (tr.dataset.filtered) {
-      tr.style.display = 'none';
-      return;
-    }
-    if (q === '') {
-      const cat = tr.previousElementSibling;
-      const hidden = cat && cat.classList.contains('category') && cat.classList.contains('collapsed');
-      tr.style.display = hidden ? 'none' : '';
-    } else {
-      tr.style.display = tr.textContent.toLowerCase().includes(q) ? '' : 'none';
-    }
-  });
-  // Hide/show category headers based on whether any of their rows are visible
-  document.querySelectorAll('.category').forEach(cat => {
-    if (cat.classList.contains('collapsed')) return;
-    const tbody = cat.closest('tbody');
-    const rows = Array.from(tbody.querySelectorAll('tr'));
-    const idx = rows.indexOf(cat);
-    let end = idx + 1;
-    while (end < rows.length && !rows[end].classList.contains('category')) end++;
-    const ch = rows.slice(idx + 1, end);
-    cat.style.display = ch.some(r => r.style.display !== 'none') ? '' : 'none';
-  });
-  document.querySelectorAll('.panel').forEach(p => {
-    if (q) {
-      const vis = [...p.querySelectorAll('tbody tr:not(.category)')].some(r => r.style.display !== 'none');
-      p.style.display = vis ? 'block' : 'none';
-    } else {
-      p.style.display = '';
-    }
-  });
-  updateSearchCount();
+  const self = this;
+  clearTimeout(_searchTimer);
+  _searchTimer = setTimeout(function() {
+    const q = self.value.toLowerCase().trim();
+    document.querySelectorAll('.panel tbody tr:not(.category)').forEach(tr => {
+      if (tr.dataset.filtered) {
+        tr.style.display = 'none';
+        return;
+      }
+      if (q === '') {
+        const cat = tr.previousElementSibling;
+        const hidden = cat && cat.classList.contains('category') && cat.classList.contains('collapsed');
+        tr.style.display = hidden ? 'none' : '';
+      } else {
+        tr.style.display = tr.textContent.toLowerCase().includes(q) ? '' : 'none';
+      }
+    });
+    document.querySelectorAll('.category').forEach(cat => {
+      if (cat.classList.contains('collapsed')) return;
+      const tbody = cat.closest('tbody');
+      const rows = Array.from(tbody.querySelectorAll('tr'));
+      const idx = rows.indexOf(cat);
+      let end = idx + 1;
+      while (end < rows.length && !rows[end].classList.contains('category')) end++;
+      const ch = rows.slice(idx + 1, end);
+      cat.style.display = ch.some(r => r.style.display !== 'none') ? '' : 'none';
+    });
+    document.querySelectorAll('.panel').forEach(p => {
+      if (q) {
+        const vis = [...p.querySelectorAll('tbody tr:not(.category)')].some(r => r.style.display !== 'none');
+        p.style.display = vis ? 'block' : 'none';
+      } else {
+        p.style.display = '';
+      }
+    });
+    updateSearchCount();
+  }, 150);
 });
 
 function updateSearchCount() {
