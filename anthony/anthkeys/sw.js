@@ -1,4 +1,4 @@
-const CACHE = 'anthkeys-v4';
+const CACHE = 'anthkeys-v5';
 const URLS = ['anthkeys.html', 'manifest.json', 'icon-192.png', 'icon-512.png', 'js/anthkeys.js', 'css/anthkeys.css'];
 
 self.addEventListener('install', e => {

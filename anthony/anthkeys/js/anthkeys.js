@@ -7498,6 +7498,8 @@ if (pillBar) {
     if (!pill) return;
     if (pill.dataset.cat === 'all') {
       document.querySelectorAll('.pill[data-cat]').forEach(p => p.classList.add('active'));
+      const favPill = document.querySelector('.pill[data-cat="favorites"]');
+      if (favPill) favPill.classList.remove('active');
     } else if (pill.dataset.cat === 'favorites') {
       if (pill.classList.contains('active')) {
         document.querySelectorAll('.pill[data-cat]').forEach(p => p.classList.add('active'));
