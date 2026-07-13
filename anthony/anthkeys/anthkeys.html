@@ -3,6 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Expires" content="0">
   <title data-i18n="page.title">Shortcuts</title>
   <link rel="manifest" href="manifest.json" id="manifestLink">
   <link rel="icon" href="icon-192.png" sizes="192x192">
@@ -12,7 +15,8 @@
   <script>if (location.protocol === 'file:') document.getElementById('manifestLink').remove();</script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=Roboto:wght@400;500;600;700&family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/anthkeys.css?v=4">
+  <link rel="stylesheet" href="css/anthkeys.css?v=17">
+</head>
 <body class="light style-m3 size-medium font-google-sans">
  <div class="container">
   <div class="top-bar">
@@ -25,6 +29,7 @@
   </div>
 
   <div class="search-bar" style="position:relative"><input type="text" id="searchInput" data-i18n-placeholder="search.placeholder" placeholder="Search actions…" autocomplete="off"><div class="search-history" id="searchHistory"></div></div>
+  <div class="daily-tip" id="dailyTip" style="display:none"><span class="tip-icon">&#128161;</span><span class="tip-label" data-i18n="tip.label">Tip</span>: <span id="tipContent"></span><button class="tip-close" id="tipClose" title="Dismiss">&times;</button></div>
   <div class="pill-bar" id="pillBar"></div>
   <div class="collapse-bar"><button class="pill" id="collapseAll" data-i18n="cat.collapse">▾ Collapse all</button></div>
   <div class="search-count" id="searchCount"></div>
@@ -554,30 +559,6 @@
           <button class="theme-opt" data-theme="galaxy"><span class="theme-swatch" style="background:linear-gradient(135deg,#0a0520,#fff)"></span> <span data-i18n="theme.galaxy">🌌 Galaxy</span></button></div>
       </div>
       <div class="setting-group">
-        <h2 data-i18n="setting.style">Design style <button class="reset-btn" data-reset="style" title="Reset to default">↺</button></h2>
-        <div class="setting-body">
-          <div style="display:flex;flex-wrap:wrap;gap:.4rem">
-            <button class="theme-opt active" data-style="m3" style="flex:1;min-width:80px;justify-content:center;font-size:.8rem"><span data-i18n="style.m3">Material 3</span></button>
-            <button class="theme-opt" data-style="ios" style="flex:1;min-width:80px;justify-content:center;font-size:.8rem"><span data-i18n="style.ios">iOS</span></button>
-            <button class="theme-opt" data-style="windows" style="flex:1;min-width:80px;justify-content:center;font-size:.8rem"><span data-i18n="style.windows">Windows</span></button>
-            <button class="theme-opt" data-style="linux" style="flex:1;min-width:80px;justify-content:center;font-size:.8rem"><span data-i18n="style.linux">Linux</span></button>
-            <button class="theme-opt" data-style="android" style="flex:1;min-width:80px;justify-content:center;font-size:.8rem"><span data-i18n="style.android">Android</span></button>
-            <button class="theme-opt" data-style="macos" style="flex:1;min-width:80px;justify-content:center;font-size:.8rem"><span data-i18n="style.macos">macOS</span></button>
-            <button class="theme-opt" data-style="chromeos" style="flex:1;min-width:80px;justify-content:center;font-size:.8rem"><span data-i18n="style.chromeos">ChromeOS</span></button>
-            <button class="theme-opt" data-style="ubuntu" style="flex:1;min-width:80px;justify-content:center;font-size:.8rem"><span data-i18n="style.ubuntu">Ubuntu</span></button>
-          </div>
-          <div id="distroOptions" style="display:none;margin-top:.5rem">
-            <p style="font-size:.75rem;color:var(--text-variant);margin-bottom:.3rem">Desktop environment</p>
-            <div style="display:flex;flex-wrap:wrap;gap:.4rem">
-              <button class="theme-opt active" data-distro="gnome" style="flex:1;min-width:80px;justify-content:center;font-size:.8rem"><span data-i18n="distro.gnome">GNOME</span></button>
-              <button class="theme-opt" data-distro="kde" style="flex:1;min-width:80px;justify-content:center;font-size:.8rem"><span data-i18n="distro.kde">KDE Plasma</span></button>
-              <button class="theme-opt" data-distro="cosmic" style="flex:1;min-width:80px;justify-content:center;font-size:.8rem"><span data-i18n="distro.cosmic">COSMIC</span></button>
-              <button class="theme-opt" data-distro="hyprland" style="flex:1;min-width:80px;justify-content:center;font-size:.8rem"><span data-i18n="distro.hyprland">Hyprland</span></button>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="setting-group">
         <h2 data-i18n="setting.accent">Accent color <button class="reset-btn" data-reset="accent" title="Reset to default">↺</button></h2>
         <div class="setting-body">
           <div style="display:flex;flex-wrap:wrap;gap:.4rem;margin-bottom:.5rem">
@@ -666,6 +647,7 @@
           <div class="drop-zone" id="dropZone" data-i18n="wallpaper.drop">Drop an image here</div>
         </div>
       </div>
+      <button class="reset-btn" id="removeWallpaper" data-i18n="wallpaper.remove" style="display:block;margin:0 auto .75rem">Remove wallpaper</button>
       <div class="setting-group">
         <h2 data-i18n="setting.animations">Animations <button class="reset-btn" data-reset="noAnim" title="Reset to default">↺</button></h2>
         <div class="setting-body">
@@ -706,12 +688,21 @@
       </div>
     </div>
     <div id="quizBody">
+      <div class="quiz-diff-bar" id="quizDiffBar">
+        <button class="diff-btn active" data-diff="easy" data-i18n="quiz.diff.easy">Easy</button>
+        <button class="diff-btn" data-diff="medium" data-i18n="quiz.diff.medium">Medium</button>
+        <button class="diff-btn" data-diff="hard" data-i18n="quiz.diff.hard">Hard</button>
+      </div>
       <p id="quizPrompt" class="quiz-prompt" data-i18n="quiz.choose">What does this shortcut do?</p>
       <div id="quizActionCard" class="quiz-action-card">
         <span id="quizCategory" class="quiz-category-badge"></span>
         <span id="quizQuestion" class="quiz-question-text"></span>
       </div>
       <div id="quizOptions" class="quiz-options"></div>
+      <div id="quizInputArea" class="quiz-input-area" style="display:none">
+        <input type="text" id="quizInput" placeholder="Type your answer…" autocomplete="off">
+        <button class="theme-opt" id="quizSubmit">Submit</button>
+      </div>
       <p id="quizFeedback" class="quiz-feedback"></p>
       <div class="quiz-bottom">
         <div class="quiz-score-area">
@@ -727,7 +718,7 @@
   </div>
 </div>
 
-<script src="js/anthkeys.js?v=4">
+<script src="js/anthkeys.js?v=8">
 </script>
 <div class="ctx-menu" id="ctxMenu">
   <button data-action="copy-anthkey" data-i18n="ctx.copy">Copy anthkey</button>
