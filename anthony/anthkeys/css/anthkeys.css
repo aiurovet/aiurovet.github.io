@@ -370,7 +370,6 @@
 .panel thead th{background:var(--surface)}
 
 @media (hover: none) and (pointer: coarse) {
-  body { background-attachment: scroll; }
   html { -webkit-text-size-adjust: 100%; }
   .scroll-area { -webkit-overflow-scrolling: touch; overflow-y: scroll; }
   button, .tab, .pill, .btn-advanced, .btn-settings, .settings-tab, .theme-opt, .modal-close, .category td { touch-action: manipulation; }
