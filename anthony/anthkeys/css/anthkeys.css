@@ -241,7 +241,7 @@
     body.frost { --bg: #f0f8ff; --bg-img: url('https://images.unsplash.com/photo-1483921020237-2ff51e8e4b22'); --surface: rgba(255,255,255,.85); --surface-variant: rgba(240,248,255,.7); --text: #0a1a2a; --text-variant: #3a5a7a; --primary: #38bdf8; --on-primary: #fff; --primary-container: #0c4a6e; --on-primary-container: #e0f2fe; }
     body.galaxy { --bg: #0a0520; --bg-img: url('https://images.unsplash.com/photo-1462331940025-496dfbfc756d?w=1920&q=80&fit=crop&crop=entropy'); --surface: rgba(10,5,32,.88); --surface-variant: rgba(20,10,45,.75); --text: #e0d8f0; --text-variant: #9a8ac0; --primary: #8b5cf6; --on-primary: #fff; --primary-container: #4c1d95; --on-primary-container: #ede9fe; --shadow: 0 1px 3px rgba(0,0,0,.5), 0 4px 16px rgba(0,0,0,.4); --shadow-lg: 0 4px 16px rgba(0,0,0,.6), 0 8px 32px rgba(0,0,0,.5); }
 
-    body { font-family: var(--font); background: var(--bg) var(--bg-img) center/cover fixed; color: var(--text); padding: 1.5rem 2rem; font-size: var(--size); height: 100vh; height: 100dvh; box-sizing: border-box; overflow: hidden; -webkit-tap-highlight-color: transparent; transition: background .3s, color .3s; }
+    body { font-family: var(--font); background-color: var(--bg); background-image: var(--bg-img); background-position: center; background-size: cover; background-repeat: no-repeat; background-attachment: fixed; color: var(--text); padding: 1.5rem 2rem; font-size: var(--size); box-sizing: border-box; position: fixed; top: 0; right: 0; bottom: 0; left: 0; overflow: hidden; -webkit-tap-highlight-color: transparent; transition: background-color .3s, background-image .3s, color .3s; }
     h1 { text-align: center; margin: 0; font-size: 1.6rem; font-weight: 600; letter-spacing: -.01em; background: linear-gradient(135deg, var(--accent-1), var(--accent-2)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
 
     span[data-i18n='title'] {
@@ -370,28 +370,13 @@
 .panel thead th{background:var(--surface)}
 
 @media (hover: none) and (pointer: coarse) {
-  *, *::before, *::after { backdrop-filter: none !important; -webkit-backdrop-filter: none !important; animation: none !important; transition: none !important; }
-  body { background: var(--bg) !important; background-attachment: scroll !important; background-image: none !important; }
+  body { background-attachment: scroll; }
   html { -webkit-text-size-adjust: 100%; }
+  .scroll-area { -webkit-overflow-scrolling: touch; overflow-y: scroll; }
   button, .tab, .pill, .btn-advanced, .btn-settings, .settings-tab, .theme-opt, .modal-close, .category td { touch-action: manipulation; }
-  .panel { background: var(--surface) !important; border-color: var(--outline-variant) !important; box-shadow: none !important; }
+  .panel { backdrop-filter: none !important; -webkit-backdrop-filter: none !important; background: var(--surface) !important; border-color: var(--outline-variant) !important; }
   .panel::before { display: none !important; }
   .panel::after { display: none !important; }
-  .tab { background: var(--surface-variant) !important; box-shadow: none !important; border: 1px solid var(--outline-variant) !important; }
-  .tab.active { background: var(--primary) !important; color: var(--on-primary) !important; box-shadow: none !important; border-color: transparent !important; }
-  .pill { background: var(--surface-variant) !important; box-shadow: none !important; border: 1px solid var(--outline-variant) !important; }
-  .pill.active { background: var(--primary) !important; color: var(--on-primary) !important; border-color: transparent !important; }
-  .search-bar input { background: var(--surface-variant) !important; }
-  .dict-toggle { background: var(--surface-variant) !important; }
-  .dict-panel { background: var(--surface) !important; }
-  .note { background: var(--surface-variant) !important; }
-  .setting-group { background: var(--surface-variant) !important; }
-  .top-bar { background: var(--surface-variant) !important; }
-  .hint { background: var(--surface-variant) !important; }
-  .overlay { background: rgba(0,0,0,.4) !important; }
-  .modal { background: var(--surface) !important; }
-  h1, .btn-advanced, .btn-settings { background-clip: unset !important; -webkit-text-fill-color: unset !important; }
-  h1 { color: var(--accent-1) !important; }
 }
 tr.dragging { opacity: .4; }
 tr.drag-over { outline: 2px dashed var(--accent-1); outline-offset: -2px; }

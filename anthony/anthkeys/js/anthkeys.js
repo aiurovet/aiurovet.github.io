@@ -6980,7 +6980,6 @@ loadSettings();
 
 function applyWallpaper(dataUrl) {
   document.body.style.setProperty('--bg-img', `url(${dataUrl})`);
-  document.body.style.background = 'var(--bg) var(--bg-img) center/cover fixed';
   lsSet('anthkeys-wallpaper', dataUrl);
 }
 function loadWallpaper() {
@@ -7021,7 +7020,6 @@ if (removeBtn) {
   removeBtn.addEventListener('click', () => {
     lsRemove('anthkeys-wallpaper');
     document.body.style.removeProperty('--bg-img');
-    document.body.style.removeProperty('background');
   });
 }
 
