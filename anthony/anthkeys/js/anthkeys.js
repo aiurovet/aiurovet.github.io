@@ -7318,8 +7318,10 @@ function toggleAllCategories(expand) {
 
 function getRowCategory(row) {
   let el = row.previousElementSibling;
-  while (el && !el.classList.contains('category')) el = el.previousElementSibling;
-  return el ? el.getAttribute('data-i18n') : null;
+  while (el && !el.querySelector('td[colspan="2"]')) el = el.previousElementSibling;
+  if (!el) return null;
+  const td = el.querySelector('td[colspan="2"]');
+  return td ? td.getAttribute('data-i18n') : null;
 }
 
 // ---- Favorites / pinned shortcuts ----
@@ -7535,9 +7537,9 @@ function getPanelName(panel) {
 }
 function rowAppName(tr) {
   let el = tr.previousElementSibling;
-  while (el && !el.classList.contains('category')) el = el.previousElementSibling;
+  while (el && !el.querySelector('td[colspan="2"]')) el = el.previousElementSibling;
   if (el) {
-    const t = el.querySelector('td');
+    const t = el.querySelector('td[colspan="2"]');
     if (t && t.textContent.trim()) return t.textContent.trim();
   }
   return null;
