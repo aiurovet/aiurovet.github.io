@@ -15,7 +15,7 @@
   <script>if (location.protocol === 'file:') document.getElementById('manifestLink').remove();</script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=Roboto:wght@400;500;600;700&family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/anthkeys.css?v=18">
+  <link rel="stylesheet" href="css/anthkeys.css?v=19">
 </head>
 <body class="light style-m3 size-medium font-google-sans">
  <div class="container">
@@ -35,96 +35,15 @@
   <div class="search-count" id="searchCount"></div>
 
   <div class="tabs">
-    <button class="tab active" data-tab="linux" data-i18n="tab.linux">Linux</button>
-    <button class="tab" data-tab="windows" data-i18n="tab.windows">Windows</button>
+    <button class="tab active" data-tab="windows" data-i18n="tab.windows">Windows</button>
     <button class="tab" data-tab="macos" data-i18n="tab.macos">macOS</button>
+    <button class="tab" data-tab="linux" data-i18n="tab.linux">Linux</button>
     <button class="tab" data-tab="chromeos" data-i18n="tab.chromeos">ChromeOS</button>
     <button class="tab" data-tab="apps" data-i18n="tab.apps">Apps</button>
   </div>
 
   <div class="scroll-area">
-  <div class="panel active" id="linux">
-    <table>
-      <thead><tr><th data-i18n="th.action">Action</th><th data-i18n="th.anthkey">Shortcut</th></tr></thead>
-      <tbody>
-        <tr class="category"><td colspan="2" data-i18n="cat.editing">Editing</td></tr>
-        <tr><td data-i18n="action.copy">Copy</td><td><kbd>Ctrl</kbd> + <kbd>C</kbd></td></tr>
-        <tr><td data-i18n="action.cut">Cut</td><td><kbd>Ctrl</kbd> + <kbd>X</kbd></td></tr>
-        <tr><td data-i18n="action.paste">Paste</td><td><kbd>Ctrl</kbd> + <kbd>V</kbd></td></tr>
-        <tr><td data-i18n="action.select-all">Select All</td><td><kbd>Ctrl</kbd> + <kbd>A</kbd></td></tr>
-        <tr><td data-i18n="action.undo">Undo</td><td><kbd>Ctrl</kbd> + <kbd>Z</kbd></td></tr>
-        <tr><td data-i18n="action.redo">Redo</td><td><kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>Z</kbd></td></tr>
-        <tr><td data-i18n="action.save">Save</td><td><kbd>Ctrl</kbd> + <kbd>S</kbd></td></tr>
-        <tr><td data-i18n="action.find">Find</td><td><kbd>Ctrl</kbd> + <kbd>F</kbd></td></tr>
-        <tr><td data-i18n="action.paste-plain">Paste Plain Text</td><td><kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>V</kbd></td></tr>
-        <tr><td data-i18n="action.duplicate">Duplicate</td><td><kbd>Ctrl</kbd> + <kbd>D</kbd></td></tr>
-        <tr class="category"><td colspan="2" data-i18n="cat.navigation">Navigation</td></tr>
-        <tr><td data-i18n="action.new-tab">New Tab</td><td><kbd>Ctrl</kbd> + <kbd>T</kbd></td></tr>
-        <tr><td data-i18n="action.close-tab">Close Tab</td><td><kbd>Ctrl</kbd> + <kbd>W</kbd></td></tr>
-        <tr><td data-i18n="action.switch-window">Switch Window</td><td><kbd>Alt</kbd> + <kbd>Tab</kbd></td></tr>
-        <tr><td data-i18n="action.switch-workspace">Switch Workspace</td><td><kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>←</kbd> / <kbd>→</kbd></td></tr>
-        <tr><td data-i18n="action.reopen-tab">Reopen Closed Tab</td><td><kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>T</kbd></td></tr>
-        <tr><td data-i18n="action.next-tab">Next Tab</td><td><kbd>Ctrl</kbd> + <kbd>Tab</kbd></td></tr>
-        <tr><td data-i18n="action.prev-tab">Previous Tab</td><td><kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>Tab</kbd></td></tr>
-        <tr class="category"><td colspan="2" data-i18n="cat.system">System</td></tr>
-        <tr><td data-i18n="action.lock-screen">Lock Screen</td><td><kbd>Super</kbd> + <kbd>L</kbd></td></tr>
-        <tr><td data-i18n="action.screenshot">Screenshot</td><td><kbd>Print Screen</kbd></td></tr>
-        <tr><td data-i18n="action.open-terminal">Open Terminal</td><td><kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>T</kbd></td></tr>
-        <tr><td data-i18n="action.close-window">Close Window</td><td><kbd>Alt</kbd> + <kbd>F4</kbd></td></tr>
-        <tr class="category"><td colspan="2" data-i18n="cat.browser">Browser</td></tr>
-        <tr><td data-i18n="action.browser-new-window">New Browser Window</td><td><kbd>Ctrl</kbd> + <kbd>N</kbd></td></tr>
-        <tr><td data-i18n="action.browser-save-page">Save Page As</td><td><kbd>Ctrl</kbd> + <kbd>S</kbd></td></tr>
-        <tr><td data-i18n="action.browser-bookmarks">Bookmarks Manager</td><td><kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>O</kbd></td></tr>
-        <tr><td data-i18n="action.browser-history">History</td><td><kbd>Ctrl</kbd> + <kbd>H</kbd></td></tr>
-        <tr><td data-i18n="action.browser-devtools">DevTools</td><td><kbd>F12</kbd></td></tr>
-        <tr><td data-i18n="action.browser-zoom-in">Zoom In</td><td><kbd>Ctrl</kbd> + <kbd>+</kbd></td></tr>
-        <tr><td data-i18n="action.browser-zoom-reset">Zoom Reset</td><td><kbd>Ctrl</kbd> + <kbd>0</kbd></td></tr>
-        <tr><td data-i18n="action.browser-zoom-out">Zoom Out</td><td><kbd>Ctrl</kbd> + <kbd>-</kbd></td></tr>
-        <tr><td data-i18n="action.browser-fullscreen">Fullscreen</td><td><kbd>F11</kbd></td></tr>
-        <tr><td data-i18n="action.browser-downloads">Downloads</td><td><kbd>Ctrl</kbd> + <kbd>J</kbd></td></tr>
-        <tr><td data-i18n="action.browser-incognito">New Incognito Window</td><td><kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>N</kbd></td></tr>
-        <tr><td data-i18n="action.browser-address-bar">Focus Address Bar</td><td><kbd>Ctrl</kbd> + <kbd>L</kbd></td></tr>
-        <tr><td data-i18n="action.browser-clear-history">Clear Recent History</td><td><kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>Delete</kbd></td></tr>
-        <tr class="category"><td colspan="2" data-i18n="cat.terminal">Terminal</td></tr>
-        <tr><td data-i18n="action.terminal-clear">Clear Terminal</td><td><kbd>Ctrl</kbd> + <kbd>L</kbd></td></tr>
-        <tr><td data-i18n="action.terminal-new-window">New Terminal Window</td><td><kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>N</kbd></td></tr>
-        <tr><td data-i18n="action.terminal-search">Terminal Search</td><td><kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>F</kbd></td></tr>
-        <tr><td data-i18n="action.terminal-font-zoom">Terminal Font Zoom</td><td><kbd>Ctrl</kbd> + <kbd>+</kbd> / <kbd>-</kbd></td></tr>
-        <tr class="category"><td colspan="2" style="font-weight:600;font-size:.75rem;text-transform:uppercase;letter-spacing:.06em;color:var(--text-variant);padding:.6rem .75rem .2rem;border-bottom:none;background:none" data-i18n="cat.code-editor">Code Editor</td></tr>
-        <tr><td data-i18n="action.editor-quick-open">Quick Open</td><td><kbd>Ctrl</kbd> + <kbd>P</kbd></td></tr>
-        <tr><td data-i18n="action.editor-command-palette">Command Palette</td><td><kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>P</kbd></td></tr>
-        <tr><td data-i18n="action.editor-sidebar">Toggle Sidebar</td><td><kbd>Ctrl</kbd> + <kbd>B</kbd></td></tr>
-        <tr><td data-i18n="action.editor-terminal-toggle">Toggle Terminal Panel</td><td><kbd>Ctrl</kbd> + <kbd>`</kbd></td></tr>
-        <tr><td data-i18n="action.editor-multicursor">Multi-Cursor</td><td><kbd>Alt</kbd> + <kbd>Click</kbd></td></tr>
-        <tr><td data-i18n="action.editor-line-comment">Toggle Line Comment</td><td><kbd>Ctrl</kbd> + <kbd>/</kbd></td></tr>
-        <tr><td data-i18n="action.editor-format">Format Document</td><td><kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>I</kbd></td></tr>
-        <tr class="advanced"><td colspan="2" style="font-weight:600;font-size:.75rem;text-transform:uppercase;letter-spacing:.06em;color:var(--text-variant);padding:.6rem .75rem .2rem;border-bottom:none;background:none" data-i18n="cat.desktop">Desktop</td></tr>
-        <tr class="advanced"><td data-i18n="action.workspace-switch">Switch Workspace</td><td><kbd>Super</kbd> + <kbd>Tab</kbd></td></tr>
-        <tr class="advanced"><td data-i18n="action.show-desktop">Show Desktop</td><td><kbd>Super</kbd> + <kbd>D</kbd></td></tr>
-        <tr class="advanced"><td data-i18n="action.activities-overview">Activities Overview</td><td><kbd>Super</kbd></td></tr>
-        <tr class="advanced"><td colspan="2" style="font-weight:600;font-size:.75rem;text-transform:uppercase;letter-spacing:.06em;color:var(--text-variant);padding:.6rem .75rem .2rem;border-bottom:none;background:none" data-i18n="cat.screenshots">Screenshots</td></tr>
-        <tr class="advanced"><td data-i18n="action.screenshot-area">Screenshot Area</td><td><kbd>Shift</kbd> + <kbd>Print</kbd></td></tr>
-        <tr class="advanced"><td data-i18n="action.screenshot-window">Screenshot Window</td><td><kbd>Alt</kbd> + <kbd>Print</kbd></td></tr>
-        <tr class="advanced"><td data-i18n="action.screenshot-clipboard">Screenshot to Clipboard</td><td><kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>Print</kbd></td></tr>
-        <tr class="advanced"><td colspan="2" style="font-weight:600;font-size:.75rem;text-transform:uppercase;letter-spacing:.06em;color:var(--text-variant);padding:.6rem .75rem .2rem;border-bottom:none;background:none" data-i18n="cat.window">Window</td></tr>
-        <tr class="advanced"><td data-i18n="action.switch-window">Switch Window</td><td><kbd>Alt</kbd> + <kbd>Tab</kbd></td></tr>
-        <tr class="advanced"><td data-i18n="action.close-window">Close Window</td><td><kbd>Alt</kbd> + <kbd>F4</kbd></td></tr>
-        <tr class="advanced"><td data-i18n="action.minimize-window">Minimize Window</td><td><kbd>Super</kbd> + <kbd>H</kbd></td></tr>
-        <tr class="advanced"><td data-i18n="action.maximize-window">Maximize Window</td><td><kbd>Super</kbd> + <kbd>↑</kbd></td></tr>
-        <tr class="advanced"><td colspan="2" style="font-weight:600;font-size:.75rem;text-transform:uppercase;letter-spacing:.06em;color:var(--text-variant);padding:.6rem .75rem .2rem;border-bottom:none;background:none" data-i18n="cat.power-user">Power User</td></tr>
-        <tr class="advanced"><td data-i18n="action.run">Run Command</td><td><kbd>Alt</kbd> + <kbd>F2</kbd></td></tr>
-        <tr class="advanced"><td data-i18n="action.file-search">File Search</td><td><kbd>Ctrl</kbd> + <kbd>F</kbd></td></tr>
-        <tr class="advanced"><td data-i18n="action.terminal-launcher">Terminal Launcher</td><td><kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>T</kbd></td></tr>
-        <tr class="advanced"><td data-i18n="action.system-monitor">System Monitor</td><td><kbd>Ctrl</kbd> + <kbd>Escape</kbd></td></tr>
-        <tr class="advanced"><td data-i18n="action.notifications">Notifications</td><td><kbd>Super</kbd> + <kbd>V</kbd></td></tr>
-        <tr class="advanced"><td data-i18n="action.show-file-manager">Show File Manager</td><td><kbd>Super</kbd> + <kbd>E</kbd></td></tr>
-        <tr class="advanced"><td data-i18n="action.app-menu">App Menu</td><td><kbd>Alt</kbd> + <kbd>F1</kbd></td></tr>
-        <tr class="advanced"><td data-i18n="action.app-launcher">Application Launcher</td><td><kbd>Super</kbd> + <kbd>A</kbd></td></tr>
-      </tbody>
-    </table>
-  </div>
-
-  <div class="panel" id="windows">
+  <div class="panel active" id="windows">
     <table>
       <thead><tr><th data-i18n="th.action">Action</th><th data-i18n="th.anthkey">Shortcut</th></tr></thead>
       <tbody>
@@ -263,6 +182,87 @@
         <tr class="advanced"><td data-i18n="action.emoji-picker">Emoji Picker</td><td><kbd>Cmd</kbd> + <kbd>Ctrl</kbd> + <kbd>Space</kbd></td></tr>
         <tr class="advanced"><td data-i18n="action.character-picker">Character Picker</td><td><kbd>Option</kbd> + <kbd>Shift</kbd> + <kbd>K</kbd></td></tr>
         <tr class="advanced"><td data-i18n="action.spotlight-search">Spotlight Search</td><td><kbd>Cmd</kbd> + <kbd>Space</kbd></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="panel" id="linux">
+    <table>
+      <thead><tr><th data-i18n="th.action">Action</th><th data-i18n="th.anthkey">Shortcut</th></tr></thead>
+      <tbody>
+        <tr class="category"><td colspan="2" data-i18n="cat.editing">Editing</td></tr>
+        <tr><td data-i18n="action.copy">Copy</td><td><kbd>Ctrl</kbd> + <kbd>C</kbd></td></tr>
+        <tr><td data-i18n="action.cut">Cut</td><td><kbd>Ctrl</kbd> + <kbd>X</kbd></td></tr>
+        <tr><td data-i18n="action.paste">Paste</td><td><kbd>Ctrl</kbd> + <kbd>V</kbd></td></tr>
+        <tr><td data-i18n="action.select-all">Select All</td><td><kbd>Ctrl</kbd> + <kbd>A</kbd></td></tr>
+        <tr><td data-i18n="action.undo">Undo</td><td><kbd>Ctrl</kbd> + <kbd>Z</kbd></td></tr>
+        <tr><td data-i18n="action.redo">Redo</td><td><kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>Z</kbd></td></tr>
+        <tr><td data-i18n="action.save">Save</td><td><kbd>Ctrl</kbd> + <kbd>S</kbd></td></tr>
+        <tr><td data-i18n="action.find">Find</td><td><kbd>Ctrl</kbd> + <kbd>F</kbd></td></tr>
+        <tr><td data-i18n="action.paste-plain">Paste Plain Text</td><td><kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>V</kbd></td></tr>
+        <tr><td data-i18n="action.duplicate">Duplicate</td><td><kbd>Ctrl</kbd> + <kbd>D</kbd></td></tr>
+        <tr class="category"><td colspan="2" data-i18n="cat.navigation">Navigation</td></tr>
+        <tr><td data-i18n="action.new-tab">New Tab</td><td><kbd>Ctrl</kbd> + <kbd>T</kbd></td></tr>
+        <tr><td data-i18n="action.close-tab">Close Tab</td><td><kbd>Ctrl</kbd> + <kbd>W</kbd></td></tr>
+        <tr><td data-i18n="action.switch-window">Switch Window</td><td><kbd>Alt</kbd> + <kbd>Tab</kbd></td></tr>
+        <tr><td data-i18n="action.switch-workspace">Switch Workspace</td><td><kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>←</kbd> / <kbd>→</kbd></td></tr>
+        <tr><td data-i18n="action.reopen-tab">Reopen Closed Tab</td><td><kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>T</kbd></td></tr>
+        <tr><td data-i18n="action.next-tab">Next Tab</td><td><kbd>Ctrl</kbd> + <kbd>Tab</kbd></td></tr>
+        <tr><td data-i18n="action.prev-tab">Previous Tab</td><td><kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>Tab</kbd></td></tr>
+        <tr class="category"><td colspan="2" data-i18n="cat.system">System</td></tr>
+        <tr><td data-i18n="action.lock-screen">Lock Screen</td><td><kbd>Super</kbd> + <kbd>L</kbd></td></tr>
+        <tr><td data-i18n="action.screenshot">Screenshot</td><td><kbd>Print Screen</kbd></td></tr>
+        <tr><td data-i18n="action.open-terminal">Open Terminal</td><td><kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>T</kbd></td></tr>
+        <tr><td data-i18n="action.close-window">Close Window</td><td><kbd>Alt</kbd> + <kbd>F4</kbd></td></tr>
+        <tr class="category"><td colspan="2" data-i18n="cat.browser">Browser</td></tr>
+        <tr><td data-i18n="action.browser-new-window">New Browser Window</td><td><kbd>Ctrl</kbd> + <kbd>N</kbd></td></tr>
+        <tr><td data-i18n="action.browser-save-page">Save Page As</td><td><kbd>Ctrl</kbd> + <kbd>S</kbd></td></tr>
+        <tr><td data-i18n="action.browser-bookmarks">Bookmarks Manager</td><td><kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>O</kbd></td></tr>
+        <tr><td data-i18n="action.browser-history">History</td><td><kbd>Ctrl</kbd> + <kbd>H</kbd></td></tr>
+        <tr><td data-i18n="action.browser-devtools">DevTools</td><td><kbd>F12</kbd></td></tr>
+        <tr><td data-i18n="action.browser-zoom-in">Zoom In</td><td><kbd>Ctrl</kbd> + <kbd>+</kbd></td></tr>
+        <tr><td data-i18n="action.browser-zoom-reset">Zoom Reset</td><td><kbd>Ctrl</kbd> + <kbd>0</kbd></td></tr>
+        <tr><td data-i18n="action.browser-zoom-out">Zoom Out</td><td><kbd>Ctrl</kbd> + <kbd>-</kbd></td></tr>
+        <tr><td data-i18n="action.browser-fullscreen">Fullscreen</td><td><kbd>F11</kbd></td></tr>
+        <tr><td data-i18n="action.browser-downloads">Downloads</td><td><kbd>Ctrl</kbd> + <kbd>J</kbd></td></tr>
+        <tr><td data-i18n="action.browser-incognito">New Incognito Window</td><td><kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>N</kbd></td></tr>
+        <tr><td data-i18n="action.browser-address-bar">Focus Address Bar</td><td><kbd>Ctrl</kbd> + <kbd>L</kbd></td></tr>
+        <tr><td data-i18n="action.browser-clear-history">Clear Recent History</td><td><kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>Delete</kbd></td></tr>
+        <tr class="category"><td colspan="2" data-i18n="cat.terminal">Terminal</td></tr>
+        <tr><td data-i18n="action.terminal-clear">Clear Terminal</td><td><kbd>Ctrl</kbd> + <kbd>L</kbd></td></tr>
+        <tr><td data-i18n="action.terminal-new-window">New Terminal Window</td><td><kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>N</kbd></td></tr>
+        <tr><td data-i18n="action.terminal-search">Terminal Search</td><td><kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>F</kbd></td></tr>
+        <tr><td data-i18n="action.terminal-font-zoom">Terminal Font Zoom</td><td><kbd>Ctrl</kbd> + <kbd>+</kbd> / <kbd>-</kbd></td></tr>
+        <tr class="category"><td colspan="2" style="font-weight:600;font-size:.75rem;text-transform:uppercase;letter-spacing:.06em;color:var(--text-variant);padding:.6rem .75rem .2rem;border-bottom:none;background:none" data-i18n="cat.code-editor">Code Editor</td></tr>
+        <tr><td data-i18n="action.editor-quick-open">Quick Open</td><td><kbd>Ctrl</kbd> + <kbd>P</kbd></td></tr>
+        <tr><td data-i18n="action.editor-command-palette">Command Palette</td><td><kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>P</kbd></td></tr>
+        <tr><td data-i18n="action.editor-sidebar">Toggle Sidebar</td><td><kbd>Ctrl</kbd> + <kbd>B</kbd></td></tr>
+        <tr><td data-i18n="action.editor-terminal-toggle">Toggle Terminal Panel</td><td><kbd>Ctrl</kbd> + <kbd>`</kbd></td></tr>
+        <tr><td data-i18n="action.editor-multicursor">Multi-Cursor</td><td><kbd>Alt</kbd> + <kbd>Click</kbd></td></tr>
+        <tr><td data-i18n="action.editor-line-comment">Toggle Line Comment</td><td><kbd>Ctrl</kbd> + <kbd>/</kbd></td></tr>
+        <tr><td data-i18n="action.editor-format">Format Document</td><td><kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>I</kbd></td></tr>
+        <tr class="advanced"><td colspan="2" style="font-weight:600;font-size:.75rem;text-transform:uppercase;letter-spacing:.06em;color:var(--text-variant);padding:.6rem .75rem .2rem;border-bottom:none;background:none" data-i18n="cat.desktop">Desktop</td></tr>
+        <tr class="advanced"><td data-i18n="action.workspace-switch">Switch Workspace</td><td><kbd>Super</kbd> + <kbd>Tab</kbd></td></tr>
+        <tr class="advanced"><td data-i18n="action.show-desktop">Show Desktop</td><td><kbd>Super</kbd> + <kbd>D</kbd></td></tr>
+        <tr class="advanced"><td data-i18n="action.activities-overview">Activities Overview</td><td><kbd>Super</kbd></td></tr>
+        <tr class="advanced"><td colspan="2" style="font-weight:600;font-size:.75rem;text-transform:uppercase;letter-spacing:.06em;color:var(--text-variant);padding:.6rem .75rem .2rem;border-bottom:none;background:none" data-i18n="cat.screenshots">Screenshots</td></tr>
+        <tr class="advanced"><td data-i18n="action.screenshot-area">Screenshot Area</td><td><kbd>Shift</kbd> + <kbd>Print</kbd></td></tr>
+        <tr class="advanced"><td data-i18n="action.screenshot-window">Screenshot Window</td><td><kbd>Alt</kbd> + <kbd>Print</kbd></td></tr>
+        <tr class="advanced"><td data-i18n="action.screenshot-clipboard">Screenshot to Clipboard</td><td><kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>Print</kbd></td></tr>
+        <tr class="advanced"><td colspan="2" style="font-weight:600;font-size:.75rem;text-transform:uppercase;letter-spacing:.06em;color:var(--text-variant);padding:.6rem .75rem .2rem;border-bottom:none;background:none" data-i18n="cat.window">Window</td></tr>
+        <tr class="advanced"><td data-i18n="action.switch-window">Switch Window</td><td><kbd>Alt</kbd> + <kbd>Tab</kbd></td></tr>
+        <tr class="advanced"><td data-i18n="action.close-window">Close Window</td><td><kbd>Alt</kbd> + <kbd>F4</kbd></td></tr>
+        <tr class="advanced"><td data-i18n="action.minimize-window">Minimize Window</td><td><kbd>Super</kbd> + <kbd>H</kbd></td></tr>
+        <tr class="advanced"><td data-i18n="action.maximize-window">Maximize Window</td><td><kbd>Super</kbd> + <kbd>↑</kbd></td></tr>
+        <tr class="advanced"><td colspan="2" style="font-weight:600;font-size:.75rem;text-transform:uppercase;letter-spacing:.06em;color:var(--text-variant);padding:.6rem .75rem .2rem;border-bottom:none;background:none" data-i18n="cat.power-user">Power User</td></tr>
+        <tr class="advanced"><td data-i18n="action.run">Run Command</td><td><kbd>Alt</kbd> + <kbd>F2</kbd></td></tr>
+        <tr class="advanced"><td data-i18n="action.file-search">File Search</td><td><kbd>Ctrl</kbd> + <kbd>F</kbd></td></tr>
+        <tr class="advanced"><td data-i18n="action.terminal-launcher">Terminal Launcher</td><td><kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>T</kbd></td></tr>
+        <tr class="advanced"><td data-i18n="action.system-monitor">System Monitor</td><td><kbd>Ctrl</kbd> + <kbd>Escape</kbd></td></tr>
+        <tr class="advanced"><td data-i18n="action.notifications">Notifications</td><td><kbd>Super</kbd> + <kbd>V</kbd></td></tr>
+        <tr class="advanced"><td data-i18n="action.show-file-manager">Show File Manager</td><td><kbd>Super</kbd> + <kbd>E</kbd></td></tr>
+        <tr class="advanced"><td data-i18n="action.app-menu">App Menu</td><td><kbd>Alt</kbd> + <kbd>F1</kbd></td></tr>
+        <tr class="advanced"><td data-i18n="action.app-launcher">Application Launcher</td><td><kbd>Super</kbd> + <kbd>A</kbd></td></tr>
       </tbody>
     </table>
   </div>
@@ -718,7 +718,7 @@
   </div>
 </div>
 
-<script src="js/anthkeys.js?v=8">
+  <script src="js/anthkeys.js?v=9">
 </script>
 <div class="ctx-menu" id="ctxMenu">
   <button data-action="copy-anthkey" data-i18n="ctx.copy">Copy anthkey</button>
