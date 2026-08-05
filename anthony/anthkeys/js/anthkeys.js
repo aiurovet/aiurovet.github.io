@@ -7524,33 +7524,112 @@ if (pillBar) {
 }
 
 function applyCategoryFilter() {
+  applyView();
+}
+
+// ---- Global view: search + filters span all platform/app panels ----
+function getPanelName(panel) {
+  const tab = document.querySelector('.tab[data-tab="' + panel.id + '"]');
+  if (tab && tab.textContent.trim()) return tab.textContent.trim();
+  return { linux: 'Linux', windows: 'Windows', macos: 'macOS', chromeos: 'ChromeOS', apps: 'Apps' }[panel.id] || panel.id;
+}
+function rowAppName(tr) {
+  let el = tr.previousElementSibling;
+  while (el && !el.classList.contains('category')) el = el.previousElementSibling;
+  if (el) {
+    const t = el.querySelector('td');
+    if (t && t.textContent.trim()) return t.textContent.trim();
+  }
+  return null;
+}
+function isGlobalView() {
+  const input = document.getElementById('searchInput');
+  if (input && input.value.trim()) return true;
+  const active = new Set([...document.querySelectorAll('.pill.active')].map(p => p.dataset.cat));
+  if (active.has('favorites')) return true;
+  return !active.has('all');
+}
+function clearRowLabels() {
+  document.querySelectorAll('.row-src').forEach(b => b.remove());
+}
+function applyView() {
+  const input = document.getElementById('searchInput');
+  const q = input ? input.value.trim().toLowerCase() : '';
   const active = new Set([...document.querySelectorAll('.pill.active')].map(p => p.dataset.cat));
   const showAll = active.has('all');
   const favOnly = active.has('favorites');
   const activeCats = new Set([...active].filter(c => c !== 'all' && c !== 'favorites'));
-  const panel = document.querySelector('.panel.active');
-  if (!panel) return;
-  panel.querySelectorAll('tbody tr:not(.category)').forEach(tr => {
-    const cat = getRowCategory(tr);
-    const pinned = pinnedIds.includes(getPinId(tr));
-    const show = showAll || (cat && activeCats.has(cat)) || (favOnly && pinned);
-    tr.dataset.filtered = (show && (!favOnly || pinned)) ? '' : '1';
+  const global = isGlobalView();
+  const advOn = document.body.classList.contains('advanced-mode');
+  const panels = [...document.querySelectorAll('.panel')];
+
+  if (global) {
+    document.body.classList.add('global-view');
+  } else {
+    document.body.classList.remove('global-view');
+    clearRowLabels();
+    panels.forEach(p => { p.style.display = ''; });
+  }
+
+  panels.forEach(panel => {
+    const isActive = panel.classList.contains('active');
+    const platformName = getPanelName(panel);
+    let anyVisible = false;
+    panel.querySelectorAll('tbody tr:not(.category)').forEach(tr => {
+      const cat = getRowCategory(tr);
+      const pinned = pinnedIds.includes(getPinId(tr));
+      const catOk = favOnly ? pinned : (showAll || (cat && activeCats.has(cat)));
+      const rowOk = catOk && (!favOnly || pinned);
+      tr.dataset.filtered = rowOk ? '' : '1';
+      tr.querySelectorAll('.row-src').forEach(b => b.remove());
+      if (!global) {
+        if (!isActive) return;
+        if (!rowOk) { tr.style.display = 'none'; return; }
+        if (q === '') {
+          const prev = tr.previousElementSibling;
+          const hidden = prev && prev.classList.contains('category') && prev.classList.contains('collapsed');
+          tr.style.display = hidden ? 'none' : '';
+        } else {
+          tr.style.display = tr.textContent.toLowerCase().includes(q) ? '' : 'none';
+        }
+        if (tr.style.display !== 'none') anyVisible = true;
+        return;
+      }
+      if (!rowOk || (!advOn && tr.classList.contains('advanced'))) { tr.style.display = 'none'; return; }
+      if (q) {
+        if (!tr.textContent.toLowerCase().includes(q)) { tr.style.display = 'none'; return; }
+      } else {
+        const prev = tr.previousElementSibling;
+        const hidden = prev && prev.classList.contains('category') && prev.classList.contains('collapsed');
+        if (hidden) { tr.style.display = 'none'; return; }
+      }
+      tr.style.display = '';
+      const td = tr.querySelector('td:first-child');
+      if (td) {
+        const b = document.createElement('b');
+        b.className = 'row-src';
+        b.textContent = panel.id === 'apps' ? (rowAppName(tr) || platformName) : platformName;
+        const star = td.querySelector('.star-btn');
+        td.insertBefore(b, star ? star.nextSibling : td.firstChild);
+      }
+      anyVisible = true;
+    });
+    panel.querySelectorAll('.category').forEach(cat => {
+      if (cat.classList.contains('collapsed')) return;
+      const tbody = cat.closest('tbody');
+      const rows = Array.from(tbody.querySelectorAll('tr'));
+      const idx = rows.indexOf(cat);
+      let end = idx + 1;
+      while (end < rows.length && !rows[end].classList.contains('category')) end++;
+      const ch = rows.slice(idx + 1, end);
+      cat.style.display = ch.some(r => r.style.display !== 'none') ? '' : 'none';
+    });
+    if (global) panel.style.display = anyVisible ? '' : 'none';
   });
-  // Hide/show category headers based on whether any of their rows are visible
-  panel.querySelectorAll('.category').forEach(cat => {
-    if (cat.classList.contains('collapsed')) return;
-    const tbody = cat.closest('tbody');
-    const rows = Array.from(tbody.querySelectorAll('tr'));
-    const idx = rows.indexOf(cat);
-    let end = idx + 1;
-    while (end < rows.length && !rows[end].classList.contains('category')) end++;
-    const children = rows.slice(idx + 1, end);
-    const hasVisible = children.some(r => r.dataset.filtered !== '1');
-    cat.style.display = hasVisible ? '' : 'none';
-  });
+
   document.querySelector('[data-fav-active]')?.removeAttribute('data-fav-active');
   if (favOnly) document.querySelector('.pill[data-cat="favorites"]')?.setAttribute('data-fav-active', '');
-  document.getElementById('searchInput').dispatchEvent(new Event('input'));
+  updateSearchCount();
 }
 
 // ---- Click-to-copy anthkey ----
@@ -7570,39 +7649,12 @@ document.querySelectorAll('.panel table tr:not(.category) td:last-child').forEac
   });
 });
 
-// ---- Search (scoped to the active platform tab, respects collapsed state and pill filter) ----
+// ---- Search (matches across all platforms/apps; each result shows its OS/app name) ----
 let _searchTimer = null;
 onId('searchInput', 'input', function() {
-  const self = this;
   clearTimeout(_searchTimer);
   _searchTimer = setTimeout(function() {
-    const q = self.value.toLowerCase().trim();
-    const panel = document.querySelector('.panel.active');
-    if (!panel) return;
-    panel.querySelectorAll('tbody tr:not(.category)').forEach(tr => {
-      if (tr.dataset.filtered) {
-        tr.style.display = 'none';
-        return;
-      }
-      if (q === '') {
-        const cat = tr.previousElementSibling;
-        const hidden = cat && cat.classList.contains('category') && cat.classList.contains('collapsed');
-        tr.style.display = hidden ? 'none' : '';
-      } else {
-        tr.style.display = tr.textContent.toLowerCase().includes(q) ? '' : 'none';
-      }
-    });
-    panel.querySelectorAll('.category').forEach(cat => {
-      if (cat.classList.contains('collapsed')) return;
-      const tbody = cat.closest('tbody');
-      const rows = Array.from(tbody.querySelectorAll('tr'));
-      const idx = rows.indexOf(cat);
-      let end = idx + 1;
-      while (end < rows.length && !rows[end].classList.contains('category')) end++;
-      const ch = rows.slice(idx + 1, end);
-      cat.style.display = ch.some(r => r.style.display !== 'none') ? '' : 'none';
-    });
-    updateSearchCount();
+    applyView();
   }, 150);
 });
 
@@ -7610,8 +7662,10 @@ function updateSearchCount() {
   const q = document.getElementById('searchInput').value.trim();
   const el = document.getElementById('searchCount');
   if (!q) { el.textContent = ''; return; }
-  const panel = document.querySelector('.panel.active');
-  const allRows = panel ? [...panel.querySelectorAll('tbody tr:not(.category)')] : [];
+  const global = document.body.classList.contains('global-view');
+  const panels = global ? [...document.querySelectorAll('.panel')] : [document.querySelector('.panel.active')];
+  const allRows = [];
+  panels.forEach(p => { if (p) allRows.push(...p.querySelectorAll('tbody tr:not(.category)')); });
   const visible = allRows.filter(r => r.style.display !== 'none').length;
   el.textContent = visible === 0 ? 'No results' : visible + ' result' + (visible !== 1 ? 's' : '');
 }
