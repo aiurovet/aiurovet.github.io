@@ -69,4 +69,4 @@ returning users get the update.
 
 ## License
 
-MIT. Copyright (C) Alexander Iurovetski 2023-26.
+MIT. Copyright (C) Alexander Iurovetski 2023.
