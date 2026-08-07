@@ -17,6 +17,8 @@ const i18n = {
     'btn.save': 'Save',
     'msg.saved': 'Settings saved!',
     'msg.copied': 'Copied!',
+    'install.text': 'Install Anthkeys for offline access',
+    'install.cta': 'Install',
     'search.placeholder': 'Search actions\u2026',
     'btn.basic': 'Basic',
     'btn.reset': 'Reset all',
@@ -227,6 +229,24 @@ const i18n = {
     'app.jb-find-usage': 'Find Usages',
     'app.jb-run': 'Run',
     'app.jb-debug': 'Debug',
+    'cat.gmail': 'Gmail',
+    'app.gmail-compose': 'Compose New Message',
+    'app.gmail-search': 'Search Mail',
+    'app.gmail-archive': 'Archive',
+    'app.gmail-reply': 'Reply',
+    'app.gmail-reply-all': 'Reply All',
+    'app.gmail-forward': 'Forward',
+    'app.gmail-mark-read': 'Mark as Read',
+    'app.gmail-inbox': 'Go to Inbox',
+    'cat.youtube': 'YouTube',
+    'app.yt-play-pause': 'Play / Pause',
+    'app.yt-seek-back': 'Seek Back 10 Seconds',
+    'app.yt-seek-fwd': 'Seek Forward 10 Seconds',
+    'app.yt-mute': 'Mute',
+    'app.yt-fullscreen': 'Fullscreen',
+    'app.yt-captions': 'Toggle Captions',
+    'app.yt-vol-up': 'Increase Volume',
+    'app.yt-vol-down': 'Decrease Volume',
     'cat.editing': 'Editing',
     'cat.navigation': 'Navigation',
     'cat.system': 'System',
@@ -6702,8 +6722,31 @@ applyLanguage('en');
 
 // ---- Register service worker (PWA) ----
 if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('sw.js').catch(() => {});
+  navigator.serviceWorker.register('sw.js?v=10').catch(() => {});
 }
+
+// ---- Install prompt ----
+(function() {
+  const banner = document.getElementById('installBanner');
+  if (!banner) return;
+  if (window.matchMedia('(display-mode: standalone)').matches) return;
+  let deferredPrompt = null;
+  window.addEventListener('beforeinstallprompt', e => {
+    e.preventDefault();
+    deferredPrompt = e;
+    banner.hidden = false;
+  });
+  document.getElementById('btnInstall')?.addEventListener('click', async () => {
+    if (!deferredPrompt) return;
+    deferredPrompt.prompt();
+    await deferredPrompt.userChoice;
+    deferredPrompt = null;
+    banner.hidden = true;
+  });
+  document.getElementById('btnInstallDismiss')?.addEventListener('click', () => {
+    banner.hidden = true;
+  });
+})();
 
 // ---- Custom anthkeys ----
 let customAnthkeys = [];
@@ -8088,5 +8131,10 @@ onId('btnCloudDownload', 'click', async () => {
   } catch(e) {
     alert('Download failed: ' + e.message);
   }
+});
+
+// Accessibility: expose title as aria-label for icon-only buttons
+document.querySelectorAll('button[title]:not([aria-label])').forEach(btn => {
+  if (!btn.textContent.trim()) btn.setAttribute('aria-label', btn.title);
 });
 

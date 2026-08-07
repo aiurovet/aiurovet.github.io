@@ -7,29 +7,50 @@
   <meta http-equiv="Pragma" content="no-cache">
   <meta http-equiv="Expires" content="0">
   <title data-i18n="page.title">Shortcuts</title>
+  <meta name="description" content="Searchable keyboard shortcuts reference for Windows, macOS, Linux, ChromeOS and popular apps, with themes, dark mode, a quiz and multi-language support.">
+  <meta name="author" content="Anthony Iurovetski">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Anthkeys">
+  <meta property="og:title" content="Anthkeys — Keyboard Shortcuts">
+  <meta property="og:description" content="Searchable keyboard shortcuts for Windows, macOS, Linux, ChromeOS and popular apps.">
+  <meta property="og:url" content="https://aiurovet.com/anthony/anthkeys/anthkeys.html">
+  <meta property="og:image" content="https://aiurovet.com/anthony/anthkeys/icon-512.png">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Anthkeys — Keyboard Shortcuts">
+  <meta name="twitter:description" content="Searchable keyboard shortcuts for Windows, macOS, Linux, ChromeOS and popular apps.">
+  <meta name="twitter:image" content="https://aiurovet.com/anthony/anthkeys/icon-512.png">
   <link rel="manifest" href="manifest.json" id="manifestLink">
   <link rel="icon" href="icon-192.png" sizes="192x192">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
   <meta name="theme-color" content="#f7971e">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="default">
   <script>if (location.protocol === 'file:') document.getElementById('manifestLink').remove();</script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=Roboto:wght@400;500;600;700&family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/anthkeys.css?v=20">
+  <link rel="stylesheet" href="css/anthkeys.css?v=21">
 </head>
 <body class="light style-m3 size-medium font-google-sans">
  <div class="container">
   <div class="top-bar">
     <h1><span data-i18n="title">Shortcuts</span></h1>
     <button class="btn-advanced" id="toggleAdvanced" data-i18n="btn.advanced">Advanced</button>
-    <button class="btn-settings" id="btnPrint" title="Print / PDF">&#128424;</button>
-    <button class="btn-settings" id="btnQuiz" title="Shortcut Quiz">&#10067;</button>
-    <button class="btn-settings" id="btnThemeToggle" title="Toggle dark mode">&#127769;</button>
-    <button class="btn-settings" id="btnSettings" title="Settings">&#9881;</button>
+    <button class="btn-settings" id="btnPrint" title="Print / PDF" aria-label="Print / PDF">&#128424;</button>
+    <button class="btn-settings" id="btnQuiz" title="Shortcut Quiz" aria-label="Shortcut Quiz">&#10067;</button>
+    <button class="btn-settings" id="btnThemeToggle" title="Toggle dark mode" aria-label="Toggle dark mode">&#127769;</button>
+    <button class="btn-settings" id="btnSettings" title="Settings" aria-label="Settings">&#9881;</button>
+  </div>
+
+  <div class="install-banner" id="installBanner" hidden>
+    <span class="install-text" data-i18n="install.text">Install Anthkeys for offline access</span>
+    <span class="install-actions">
+      <button class="pill" id="btnInstall" data-i18n="install.cta">Install</button>
+      <button class="install-dismiss" id="btnInstallDismiss" title="Dismiss" aria-label="Dismiss install banner">&times;</button>
+    </span>
   </div>
 
   <div class="search-bar" style="position:relative"><input type="text" id="searchInput" data-i18n-placeholder="search.placeholder" placeholder="Search actions…" autocomplete="off"><div class="search-history" id="searchHistory"></div></div>
-  <div class="daily-tip" id="dailyTip" style="display:none"><span class="tip-icon">&#128161;</span><span class="tip-label" data-i18n="tip.label">Tip</span>: <span id="tipContent"></span><button class="tip-close" id="tipClose" title="Dismiss">&times;</button></div>
+  <div class="daily-tip" id="dailyTip" style="display:none"><span class="tip-icon">&#128161;</span><span class="tip-label" data-i18n="tip.label">Tip</span>: <span id="tipContent"></span><button class="tip-close" id="tipClose" title="Dismiss" aria-label="Dismiss tip">&times;</button></div>
   <div class="pill-bar" id="pillBar"></div>
   <div class="collapse-bar"><button class="pill" id="collapseAll" data-i18n="cat.collapse">▾ Collapse all</button></div>
   <div class="search-count" id="searchCount"></div>
@@ -430,6 +451,24 @@
         <tr><td data-i18n="app.jb-find-usage">Find Usages</td><td><kbd>Alt</kbd> + <kbd>F7</kbd></td></tr>
         <tr><td data-i18n="app.jb-run">Run</td><td><kbd>Shift</kbd> + <kbd>F10</kbd></td></tr>
         <tr><td data-i18n="app.jb-debug">Debug</td><td><kbd>Shift</kbd> + <kbd>F9</kbd></td></tr>
+        <tr class="category"><td colspan="2" data-i18n="cat.gmail">Gmail</td></tr>
+        <tr><td data-i18n="app.gmail-compose">Compose New Message</td><td><kbd>C</kbd></td></tr>
+        <tr><td data-i18n="app.gmail-search">Search Mail</td><td><kbd>/</kbd></td></tr>
+        <tr><td data-i18n="app.gmail-archive">Archive</td><td><kbd>E</kbd></td></tr>
+        <tr><td data-i18n="app.gmail-reply">Reply</td><td><kbd>R</kbd></td></tr>
+        <tr><td data-i18n="app.gmail-reply-all">Reply All</td><td><kbd>A</kbd></td></tr>
+        <tr><td data-i18n="app.gmail-forward">Forward</td><td><kbd>F</kbd></td></tr>
+        <tr><td data-i18n="app.gmail-mark-read">Mark as Read</td><td><kbd>Shift</kbd> + <kbd>I</kbd></td></tr>
+        <tr><td data-i18n="app.gmail-inbox">Go to Inbox</td><td><kbd>G</kbd> <kbd>I</kbd></td></tr>
+        <tr class="category"><td colspan="2" data-i18n="cat.youtube">YouTube</td></tr>
+        <tr><td data-i18n="app.yt-play-pause">Play / Pause</td><td><kbd>K</kbd></td></tr>
+        <tr><td data-i18n="app.yt-seek-back">Seek Back 10 Seconds</td><td><kbd>J</kbd></td></tr>
+        <tr><td data-i18n="app.yt-seek-fwd">Seek Forward 10 Seconds</td><td><kbd>L</kbd></td></tr>
+        <tr><td data-i18n="app.yt-mute">Mute</td><td><kbd>M</kbd></td></tr>
+        <tr><td data-i18n="app.yt-fullscreen">Fullscreen</td><td><kbd>F</kbd></td></tr>
+        <tr><td data-i18n="app.yt-captions">Toggle Captions</td><td><kbd>C</kbd></td></tr>
+        <tr><td data-i18n="app.yt-vol-up">Increase Volume</td><td><kbd>↑</kbd></td></tr>
+        <tr><td data-i18n="app.yt-vol-down">Decrease Volume</td><td><kbd>↓</kbd></td></tr>
       </tbody>
     </table>
   </div>
@@ -456,7 +495,7 @@
   <div class="modal">
     <div class="modal-header">
       <h2 data-i18n="settings.title">Settings</h2>
-      <button class="modal-close" id="settingsClose"><span class="close-x"></span></button>
+      <button class="modal-close" id="settingsClose" aria-label="Close settings"><span class="close-x"></span></button>
     </div>
     <input type="text" id="settingsSearch" data-i18n-placeholder="settings.search" placeholder="Search settings…" autocomplete="off" style="width:100%;padding:.5rem .7rem;border:1px solid var(--outline-variant);border-radius:var(--radius-sm);background:var(--surface);color:var(--text);font:var(--size) var(--font);margin-bottom:.5rem;box-sizing:border-box;outline:none;font-size:.8rem">
     <div class="settings-tabs">
@@ -511,7 +550,7 @@
           <div style="display:flex;gap:.4rem;margin-top:.4rem">
             <input type="text" id="customActionInput" data-i18n-placeholder="custom.action-placeholder" placeholder="Action name" style="flex:2;padding:.5rem;border:1px solid var(--outline-variant);border-radius:var(--radius-sm);background:var(--surface);color:var(--text);font:var(--size) var(--font)">
             <input type="text" id="customAnthkeyInput" data-i18n-placeholder="custom.anthkey-placeholder" placeholder="Shortcut (e.g. Ctrl+Shift+Z)" style="flex:2;padding:.5rem;border:1px solid var(--outline-variant);border-radius:var(--radius-sm);background:var(--surface);color:var(--text);font:var(--size) var(--font)">
-            <button class="theme-opt" id="btnAddCustom" style="flex:0 0 auto;justify-content:center;padding:.5rem .8rem">+</button>
+            <button class="theme-opt" id="btnAddCustom" aria-label="Add custom shortcut" style="flex:0 0 auto;justify-content:center;padding:.5rem .8rem">+</button>
           </div>
         </div>
       </div>
@@ -718,7 +757,7 @@
   </div>
 </div>
 
-  <script src="js/anthkeys.js?v=10">
+  <script src="js/anthkeys.js?v=11">
 </script>
 <div class="ctx-menu" id="ctxMenu">
   <button data-action="copy-anthkey" data-i18n="ctx.copy">Copy anthkey</button>

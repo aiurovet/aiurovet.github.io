@@ -346,6 +346,7 @@
     body.compact .search-bar input { padding: .35rem .75rem .35rem 2rem; }
     body.compact .pill { padding: .2rem .55rem; font-size: .68rem; }
     body.no-anim * { transition: none !important; animation: none !important; }
+    @media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; } }
     .search-count { font-size: .72rem; color: var(--text-variant); text-align: center; min-height: 1rem; margin-bottom: .25rem; }
     .collapse-bar { display: flex; gap: .35rem; margin-bottom: .4rem; }
     .star-btn { cursor: pointer; font-size: 1rem; margin-right: .35rem; user-select: none; color: var(--text-variant); transition: color .15s, transform .15s; display: inline-block; vertical-align: middle; line-height: 1; }
@@ -397,6 +398,12 @@ tr.drag-over { outline: 2px dashed var(--accent-1); outline-offset: -2px; }
 .quiz-input-area input:focus { border-color:var(--accent-1); }
 .quiz-input-area .theme-opt { padding:.7rem 1.2rem; font-size:.85rem; flex-shrink:0; }
 .daily-tip { display:flex; align-items:center; gap:.5rem; padding:.45rem .75rem; background:rgba(var(--accent-rgb),.1); border-radius:var(--radius-sm); font-size:.8rem; color:var(--text-variant); margin-bottom:.4rem; }
+.install-banner { display:flex; align-items:center; gap:.75rem; flex-wrap:wrap; padding:.5rem .8rem; margin-bottom:.4rem; background:var(--primary-container); color:var(--on-primary-container); border-radius:var(--radius-sm); font-size:.8rem; }
+.install-banner[hidden] { display:none; }
+.install-text { flex:1; min-width:10rem; }
+.install-actions { display:flex; align-items:center; gap:.5rem; }
+.install-dismiss { background:none; border:none; color:inherit; cursor:pointer; font-size:1.1rem; line-height:1; padding:0 .2rem; opacity:.7; }
+.install-dismiss:hover { opacity:1; }
 .tip-icon { font-size:1rem; flex-shrink:0; }
 .tip-label { font-weight:600; color:var(--accent-1); }
 .tip-close { margin-left:auto; background:none; border:none; color:var(--text-variant); cursor:pointer; font-size:1.1rem; line-height:1; padding:0 .2rem; opacity:.6; }

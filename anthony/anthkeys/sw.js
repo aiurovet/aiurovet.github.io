@@ -1,5 +1,5 @@
-const CACHE = 'anthkeys-v9';
-const URLS = ['anthkeys.html', 'manifest.json', 'icon-192.png', 'icon-512.png', 'js/anthkeys.js', 'css/anthkeys.css'];
+const CACHE = 'anthkeys-v10';
+const URLS = ['anthkeys.html', '404.html', 'manifest.json', 'icon-192.png', 'icon-512.png', 'icon-maskable-192.png', 'icon-maskable-512.png', 'apple-touch-icon.png', 'js/anthkeys.js', 'css/anthkeys.css'];
 
 self.addEventListener('install', e => {
   e.waitUntil(
@@ -25,6 +25,8 @@ self.addEventListener('fetch', e => {
           caches.open(CACHE).then(c => c.put(e.request, clone));
         }
         return res;
+      }).catch(() => {
+        if (e.request.mode === 'navigate') return caches.match('404.html');
       });
     })
   );
