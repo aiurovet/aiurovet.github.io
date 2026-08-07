@@ -1,4 +1,4 @@
-const CACHE = 'anthkeys-v11';
+const CACHE = 'anthkeys-v12';
 const URLS = ['anthkeys.html', '404.html', 'manifest.json', 'icon-192.png', 'icon-512.png', 'icon-maskable-192.png', 'icon-maskable-512.png', 'apple-touch-icon.png', 'js/anthkeys.js', 'css/anthkeys.css'];
 
 self.addEventListener('install', e => {
@@ -16,17 +16,34 @@ self.addEventListener('activate', e => {
 });
 
 self.addEventListener('fetch', e => {
+  const req = e.request;
+  if (req.mode === 'navigate') {
+    e.respondWith(
+      fetch(req)
+        .then(res => {
+          if (res && res.ok) {
+            const clone = res.clone();
+            caches.open(CACHE).then(c => c.put(req, clone));
+          }
+          return res;
+        })
+        .catch(() =>
+          caches.match(req).then(r => r || caches.match('anthkeys.html')).then(r => r || caches.match('404.html'))
+        )
+    );
+    return;
+  }
   e.respondWith(
-    caches.match(e.request).then(r => {
+    caches.match(req).then(r => {
       if (r) return r;
-      return fetch(e.request).then(res => {
+      return fetch(req).then(res => {
         if (res && res.ok && res.type === 'basic') {
           const clone = res.clone();
-          caches.open(CACHE).then(c => c.put(e.request, clone));
+          caches.open(CACHE).then(c => c.put(req, clone));
         }
         return res;
       }).catch(() => {
-        if (e.request.mode === 'navigate') return caches.match('404.html');
+        if (req.mode === 'navigate') return caches.match('404.html');
       });
     })
   );

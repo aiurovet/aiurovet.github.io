@@ -6797,6 +6797,8 @@ document.querySelectorAll('.tab').forEach(tab => {
     tab.classList.add('active');
     const pnl = document.getElementById(tab.dataset.tab);
     if (pnl) pnl.classList.add('active');
+    const scrollArea = document.querySelector('.scroll-area');
+    if (scrollArea) scrollArea.scrollTo({ top: 0, behavior: 'smooth' });
     applyCategoryFilter();
   });
 });
