@@ -7327,7 +7327,12 @@ function lsSet(key, val) {
 function lsRemove(key) {
   try { localStorage.removeItem(key); } catch(e) {}
 }
-// ---- Collapsible categories (respects pill filter) ----
+// ---- Collapsible categories (respects pill filter and active search) ----
+function searchMatches(r) {
+  const input = document.getElementById('searchInput');
+  const q = input ? input.value.trim().toLowerCase() : '';
+  return !q || r.textContent.toLowerCase().includes(q);
+}
 document.querySelectorAll('.category').forEach(cat => {
   cat.addEventListener('click', () => {
     const rows = Array.from(cat.closest('tbody').querySelectorAll('tr'));
@@ -7338,7 +7343,8 @@ document.querySelectorAll('.category').forEach(cat => {
     const collapsed = cat.classList.toggle('collapsed');
     body.forEach(r => {
       if (r.dataset.filtered) { r.style.display = 'none'; return; }
-      r.style.display = collapsed ? 'none' : '';
+      if (collapsed || !searchMatches(r)) { r.style.display = 'none'; return; }
+      r.style.display = '';
     });
   });
 });
@@ -7353,7 +7359,10 @@ function toggleAllCategories(expand) {
     const body = rows.slice(idx + 1, end);
     if (expand) {
       cat.classList.remove('collapsed');
-      body.forEach(r => { r.style.display = r.dataset.filtered ? 'none' : ''; });
+      body.forEach(r => {
+        if (r.dataset.filtered) { r.style.display = 'none'; return; }
+        r.style.display = searchMatches(r) ? '' : 'none';
+      });
     } else {
       cat.classList.add('collapsed');
       body.forEach(r => { r.style.display = 'none'; });
