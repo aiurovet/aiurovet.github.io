@@ -6848,9 +6848,9 @@ const COMMITS_URL = 'https://github.com/aiurovet/aiurovet.github.io/commits/main
   const verEl = document.getElementById('appVersion');
   const verScript = document.querySelector('script[src*="anthkeys.js"]');
   if (verEl && verScript) {
-    const m = verScript.getAttribute('src').match(/[?&]v=(\d+)/);
+    const m = verScript.getAttribute('src').match(/[?&]v=(\d+(?:\.\d+)?)/);
     if (m) {
-      APP_VERSION = parseInt(m[1], 10);
+      APP_VERSION = parseFloat(m[1]);
       const span = verEl.querySelector('span') || verEl;
       span.textContent = 'v' + APP_VERSION;
     }
@@ -6893,8 +6893,8 @@ function cachedJsVersion() {
     .then(keysArr => {
       for (const keys of keysArr) {
         for (const req of keys) {
-          const m = req.url.match(/js\/anthkeys\.js\?v=(\d+)/);
-          if (m) return parseInt(m[1], 10);
+          const m = req.url.match(/js\/anthkeys\.js\?v=(\d+(?:\.\d+)?)/);
+          if (m) return parseFloat(m[1]);
         }
       }
       return null;
@@ -6914,7 +6914,7 @@ function showUpdateNotification() {
 function checkForUpdate() {
   if (APP_VERSION === 0) return;
   let last = 0;
-  try { last = parseInt(lsGet('anthkeys-last-version'), 10) || 0; } catch(e) { }
+  try { last = parseFloat(lsGet('anthkeys-last-version')) || 0; } catch(e) { }
   if (last >= APP_VERSION) return;
   if (last > 0) { showUpdateNotification(); return; }
   cachedJsVersion().then(seed => {
