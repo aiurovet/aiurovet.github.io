@@ -6740,7 +6740,7 @@ if ('serviceWorker' in navigator) {
     const el = document.querySelector('[data-update-mode].active');
     return el ? el.dataset.updateMode : 'auto';
   };
-  navigator.serviceWorker.register('sw.js?v=12').then(reg => {
+  navigator.serviceWorker.register('sw.js?v=13').then(reg => {
     reg.addEventListener('updatefound', () => {
       const newSW = reg.installing;
       if (!newSW) return;
@@ -6779,6 +6779,7 @@ onId('btnRefresh', 'click', refreshForUpdates);
 onId('btnUpdate', 'click', () => {
   const banner = document.getElementById('updateBanner');
   if (banner) banner.hidden = true;
+  if (APP_VERSION > 0) lsSet('anthkeys-last-version', String(APP_VERSION));
   refreshForUpdates();
 });
 
@@ -6837,17 +6838,47 @@ function escHtml(s) { if (!_escDiv) _escDiv = document.createElement('div'); _es
 loadCustomAnthkeys();
 renderCustomAnthkeys();
 
+// ---- Version badge + update notification ----
+let APP_VERSION = 0;
+const COMMITS_URL = 'https://github.com/aiurovet/aiurovet.github.io/commits/main';
 (function() {
   const verEl = document.getElementById('appVersion');
   const verScript = document.querySelector('script[src*="anthkeys.js"]');
   if (verEl && verScript) {
     const m = verScript.getAttribute('src').match(/[?&]v=(\d+)/);
     if (m) {
+      APP_VERSION = parseInt(m[1], 10);
       const span = verEl.querySelector('span') || verEl;
-      span.textContent = 'v' + m[1];
+      span.textContent = 'v' + APP_VERSION;
     }
+    verEl.addEventListener('click', () => { window.open(COMMITS_URL, '_blank'); });
   }
 })();
+function showUpdateToast(ver) {
+  const toast = document.getElementById('updateToast');
+  const text = document.getElementById('updateToastText');
+  if (!toast) return;
+  if (text) text.textContent = 'Updated to v' + ver + ' \u2014 ';
+  toast.classList.remove('show');
+  void toast.offsetHeight;
+  toast.classList.add('show');
+  clearTimeout(toast._timer);
+  toast._timer = setTimeout(() => toast.classList.remove('show'), 6000);
+}
+function checkForUpdate() {
+  if (APP_VERSION === 0) return;
+  let last = 0;
+  try { last = parseInt(lsGet('anthkeys-last-version'), 10) || 0; } catch(e) { }
+  if (last >= APP_VERSION) return;
+  const mode = (document.querySelector('[data-update-mode].active')?.dataset.updateMode) || 'auto';
+  if (mode === 'ask') {
+    const banner = document.getElementById('updateBanner');
+    if (banner) banner.hidden = false;
+  } else {
+    lsSet('anthkeys-last-version', String(APP_VERSION));
+    showUpdateToast(APP_VERSION);
+  }
+}
 
 document.querySelectorAll('.panel table tr:not(.category) td:last-child, .note kbd').forEach(el => {
   if (el.tagName === 'TD') el.dataset.raw = el.innerHTML;
@@ -7092,6 +7123,7 @@ renderAccentPresets();
 
 // ---- Load saved settings (after accents init & click handlers) ----
 loadSettings();
+checkForUpdate();
 
 function applyWallpaper(dataUrl) {
   document.body.style.setProperty('--bg-img', `url(${dataUrl})`);

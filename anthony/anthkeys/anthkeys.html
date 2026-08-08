@@ -28,7 +28,7 @@
   <script>if (location.protocol === 'file:') document.getElementById('manifestLink').remove();</script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=Roboto:wght@400;500;600;700&family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/anthkeys.css?v=23">
+  <link rel="stylesheet" href="css/anthkeys.css?v=24">
 </head>
 <body class="light style-m3 size-medium font-google-sans">
  <div class="container">
@@ -497,7 +497,7 @@
     </table>
   </div>
   <p class="note"><kbd>Cmd</kbd> <span data-i18n="note.equals">= Command</span> &nbsp;|&nbsp; <kbd>Win</kbd> <span data-i18n="note.win">= Windows key</span> &nbsp;|&nbsp; <kbd>Super</kbd> <span data-i18n="note.super">= Windows/Command key</span> &nbsp;|&nbsp; <kbd>Search</kbd> <span data-i18n="note.search">= Launcher key</span></p>
-  <div id="appVersion" style="text-align:center;padding:.5rem 0 1rem;font-size:.75rem;color:var(--text-variant)"><span style="display:inline-block;padding:.25rem .7rem;border:1px solid var(--outline-variant);border-radius:999px;background:var(--surface-variant);font-weight:500">v0</span></div>
+  <div id="appVersion" style="text-align:center;padding:.5rem 0 1rem;font-size:.75rem;color:var(--text-variant);cursor:pointer" title="See what's new"><span style="display:inline-block;padding:.25rem .7rem;border:1px solid var(--outline-variant);border-radius:999px;background:var(--surface-variant);font-weight:500">v0</span></div>
   </div>
 
 <div class="overlay" id="settingsOverlay">
@@ -774,7 +774,9 @@
   </div>
 </div>
 
-  <script src="js/anthkeys.js?v=17">
+<div class="toast toast-update" id="updateToast"><span id="updateToastText"></span><a id="updateToastLink" href="https://github.com/aiurovet/aiurovet.github.io/commits/main" target="_blank" rel="noopener">What&rsquo;s new &rarr;</a></div>
+
+  <script src="js/anthkeys.js?v=18">
 </script>
 <div class="ctx-menu" id="ctxMenu">
   <button data-action="copy-anthkey" data-i18n="ctx.copy">Copy anthkey</button>

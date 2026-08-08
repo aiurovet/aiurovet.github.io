@@ -345,6 +345,9 @@
     .pill.active { background: var(--primary); color: var(--on-primary); }
     .toast { position: fixed; bottom: 2rem; left: 50%; transform: translateX(-50%) translateY(80px); background: var(--surface-variant); color: var(--text); padding: .5rem 1.2rem; border-radius: 100px; font-size: .8rem; font-weight: 500; opacity: 0; transition: all .25s ease; pointer-events: none; z-index: 1000; box-shadow: var(--shadow-lg); }
     .toast.show { opacity: 1; transform: translateX(-50%) translateY(0); }
+    .toast-update { pointer-events: auto; cursor: pointer; padding: .5rem 1.4rem; }
+    .toast-update a { color: var(--primary); font-weight: 600; text-decoration: none; }
+    .toast-update a:hover { text-decoration: underline; }
     body.compact td, body.compact th { padding: .35rem .5rem; }
     body.compact .panel { padding: .75rem; }
     body.compact .search-bar input { padding: .35rem .75rem .35rem 2rem; }
