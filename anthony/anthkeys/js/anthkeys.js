@@ -6567,6 +6567,7 @@ function loadSettings() {
         else if (data.theme === 'device') document.body.classList.add(window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
         else if (data.theme === 'auto') applyAutoTheme();
         else document.body.classList.add(data.theme);
+        syncAccentWp(data.theme);
       }
     }
 
@@ -7099,6 +7100,11 @@ setInterval(() => {
   }
 }, 60000);
 
+const WP_THEMES = ['ocean','forest','sunset','lavender','midnight','coral','mint','sky','rose','amber','slate','cherry','tundra','nebula','sakura','emerald','peach','storm','desert','glade','aurora','cocoa','twilight','arctic','meadow','volcano','lagoon','autumn','blossom','canyon','frost','galaxy'];
+function syncAccentWp(theme) {
+  document.body.classList.toggle('has-accent-wp', WP_THEMES.includes(theme));
+}
+
 document.querySelectorAll('.theme-opt[data-theme]').forEach(opt => {
   opt.addEventListener('click', () => {
     document.querySelectorAll('.theme-opt[data-theme]').forEach(t => t.classList.remove('active'));
@@ -7117,6 +7123,7 @@ document.querySelectorAll('.theme-opt[data-theme]').forEach(opt => {
     } else {
       document.body.classList.add(theme);
     }
+    syncAccentWp(theme);
     saveSettings();
   });
 });
@@ -7476,6 +7483,7 @@ document.querySelectorAll('.reset-btn').forEach(btn => {
       if (defBtn) defBtn.classList.add('active');
       document.body.classList.remove('light','dark','ocean','forest','sunset','lavender','midnight','coral','mint','sky','rose','amber','slate','cherry','tundra','nebula','sakura','emerald','peach','storm','desert','glade','aurora','cocoa','twilight','arctic','meadow','volcano','lagoon','autumn','blossom','canyon','frost','galaxy');
       document.body.classList.add('light');
+      syncAccentWp('light');
     } else if (setting === 'accent') {
       const goldBtn = document.querySelector('.accent-opt[data-accent="gold"]');
       if (goldBtn) goldBtn.click();
