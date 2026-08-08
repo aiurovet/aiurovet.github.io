@@ -84,6 +84,7 @@ const i18n = {
     'theme.light': '\u2600\ufe0f Light',
     'theme.dark': '\ud83c\udf19 Dark',
     'theme.device': '\ud83d\udcbb Device theme',
+    'theme.auto': '\u23f0 Auto (time)',
     'theme.ocean': '\ud83c\udf0a Ocean',
     'theme.forest': '\ud83c\udf3f Forest',
     'theme.sunset': '\ud83c\udf05 Sunset',
@@ -269,7 +270,18 @@ const i18n = {
     'cat.power-user': 'Power User',
     'cat.advanced': 'Advanced',
     'ctx.copy': 'Copy shortcut',
-    'ctx.copy-action': 'Copy action + shortcut'
+    'ctx.copy-action': 'Copy action + shortcut',
+    'help.title': 'Help',
+    'help.search': 'Focus search',
+    'help.help': 'Show this help',
+    'help.close': 'Close',
+    'help.click-copy': 'Click a shortcut to copy it',
+    'help.legend': 'Collapse / expand categories',
+    'help.whatsnew': 'Open What\u2019s new',
+    'help.compare': 'Compare shortcuts with another platform',
+    'help.settings': 'Open settings',
+    'cmp.btn': '\u21c4 Compare',
+    'cmp.with': 'with'
   }
 }
 
@@ -6553,6 +6565,7 @@ function loadSettings() {
         if (data.theme === 'light') document.body.classList.add('light');
         else if (data.theme === 'dark') document.body.classList.add('dark');
         else if (data.theme === 'device') document.body.classList.add(window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+        else if (data.theme === 'auto') applyAutoTheme();
         else document.body.classList.add(data.theme);
       }
     }
@@ -6889,9 +6902,11 @@ function syncTabChrome() {
   const sb = document.querySelector('.search-bar');
   const cb = document.querySelector('.collapse-bar');
   const pb = document.getElementById('pillBar');
+  const cmp = document.getElementById('compareBar');
   if (sb) sb.style.display = hide;
   if (cb) cb.style.display = hide;
   if (pb) pb.style.display = hide;
+  if (cmp) cmp.style.display = hide;
 }
 document.getElementById('updateToastLink')?.addEventListener('click', e => {
   e.preventDefault();
@@ -6954,6 +6969,34 @@ document.querySelectorAll('.tab').forEach(tab => {
     syncTabChrome();
     const scrollArea = document.querySelector('.scroll-area');
     if (scrollArea) scrollArea.scrollTo({ top: 0, behavior: 'smooth' });
+    updateCompareOptions();
+    applyCategoryFilter();
+  });
+});
+
+// ---- Compare mode ----
+onId('btnCompare', 'click', () => {
+  const btn = document.getElementById('btnCompare');
+  const pick = document.getElementById('comparePick');
+  if (!btn) return;
+  const on = btn.classList.toggle('active');
+  if (pick) pick.hidden = !on;
+  if (on) {
+    const cur = document.querySelector('.tab.active')?.dataset.tab;
+    const first = [...document.querySelectorAll('.cmp-opt')].find(o => o.dataset.cmp !== cur);
+    comparePlatform = first ? first.dataset.cmp : null;
+  } else {
+    comparePlatform = null;
+  }
+  updateCompareOptions();
+  applyCategoryFilter();
+});
+document.querySelectorAll('.cmp-opt').forEach(o => {
+  o.addEventListener('click', () => {
+    if (o.disabled) return;
+    document.querySelectorAll('.cmp-opt').forEach(x => x.classList.remove('active'));
+    o.classList.add('active');
+    comparePlatform = o.dataset.cmp;
     applyCategoryFilter();
   });
 });
@@ -6998,6 +7041,20 @@ onId('settingsOverlay', 'click', e => {
   if (e.target === e.currentTarget) hideSettings();
 });
 
+// ---- Help overlay ----
+function showHelp() { document.getElementById('helpOverlay')?.classList.add('open'); }
+function hideHelp() { document.getElementById('helpOverlay')?.classList.remove('open'); }
+onId('btnHelp', 'click', showHelp);
+onId('helpClose', 'click', hideHelp);
+onId('helpOverlay', 'click', e => { if (e.target === e.currentTarget) hideHelp(); });
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape') hideHelp();
+  if (e.key === '?' && !['INPUT', 'TEXTAREA', 'SELECT'].includes(e.target.tagName)) {
+    e.preventDefault();
+    showHelp();
+  }
+});
+
 // ---- Dark mode quick toggle ----
 onId('btnThemeToggle', 'click', () => {
   const isDark = document.body.classList.contains('dark');
@@ -7025,6 +7082,23 @@ onId('settingsSearch', 'input', function() {
   });
 });
 
+function isAutoDark() {
+  const h = new Date().getHours();
+  return h >= 19 || h < 7;
+}
+function applyAutoTheme() {
+  document.body.classList.add(isAutoDark() ? 'dark' : 'light');
+}
+setInterval(() => {
+  const active = document.querySelector('.theme-opt[data-theme].active');
+  if (!active || active.dataset.theme !== 'auto') return;
+  const wantDark = isAutoDark();
+  if (document.body.classList.contains('dark') !== wantDark) {
+    document.body.classList.remove('light', 'dark');
+    document.body.classList.add(wantDark ? 'dark' : 'light');
+  }
+}, 60000);
+
 document.querySelectorAll('.theme-opt[data-theme]').forEach(opt => {
   opt.addEventListener('click', () => {
     document.querySelectorAll('.theme-opt[data-theme]').forEach(t => t.classList.remove('active'));
@@ -7038,6 +7112,8 @@ document.querySelectorAll('.theme-opt[data-theme]').forEach(opt => {
     } else if (theme === 'device') {
       const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
       document.body.classList.add(prefersDark ? 'dark' : 'light');
+    } else if (theme === 'auto') {
+      applyAutoTheme();
     } else {
       document.body.classList.add(theme);
     }
@@ -7755,6 +7831,46 @@ function applyCategoryFilter() {
 }
 
 // ---- Filtering: search + pills apply to the active tab only ----
+let comparePlatform = null;
+function getActionKey(tr) {
+  return tr.querySelector('td[data-i18n]')?.getAttribute('data-i18n') || null;
+}
+function normalizeShortcut(str) {
+  return (str || '').replace(/<[^>]*>/g, '').replace(/[\s\u00a0]+/g, '').toLowerCase();
+}
+function buildShortcutMap(platformId) {
+  const panel = document.getElementById(platformId);
+  const map = {};
+  if (!panel) return map;
+  panel.querySelectorAll('tbody tr:not(.category)').forEach(tr => {
+    const key = getActionKey(tr);
+    if (!key) return;
+    const td = tr.querySelector('td:last-child');
+    map[key] = normalizeShortcut(td ? (td.dataset.raw || td.textContent) : '');
+  });
+  return map;
+}
+function updateCompareOptions() {
+  const cur = document.querySelector('.tab.active')?.dataset.tab;
+  const opts = document.querySelectorAll('.cmp-opt');
+  let first = null;
+  opts.forEach(o => {
+    o.disabled = o.dataset.cmp === cur;
+    if (o.dataset.cmp !== cur && !first) first = o;
+  });
+  if (comparePlatform && cur && comparePlatform === cur) {
+    comparePlatform = first ? first.dataset.cmp : null;
+  }
+  opts.forEach(o => o.classList.toggle('active', comparePlatform === o.dataset.cmp));
+}
+function updateCompareCount(panel) {
+  const cc = document.getElementById('compareCount');
+  if (!cc) return;
+  if (!comparePlatform) { cc.textContent = ''; return; }
+  const rows = [...panel.querySelectorAll('tbody tr:not(.category)')];
+  const cnt = rows.filter(r => r.style.display !== 'none').length;
+  cc.textContent = cnt + '/' + rows.length + ' differ';
+}
 function applyView() {
   const input = document.getElementById('searchInput');
   const q = input ? input.value.trim().toLowerCase() : '';
@@ -7764,12 +7880,13 @@ function applyView() {
   const activeCats = new Set([...active].filter(c => c !== 'all' && c !== 'favorites'));
   const panel = document.querySelector('.panel.active');
   if (!panel) return;
+  const compareMap = comparePlatform ? buildShortcutMap(comparePlatform) : null;
 
   panel.querySelectorAll('tbody tr:not(.category)').forEach(tr => {
     const cat = getRowCategory(tr);
     const pinned = pinnedIds.includes(getPinId(tr));
     const catOk = favOnly ? pinned : (showAll || (cat && activeCats.has(cat)));
-    const rowOk = catOk && (!favOnly || pinned);
+    const rowOk = catOk && (!favOnly || pinned) && (!compareMap || (compareMap[getActionKey(tr)] !== normalizeShortcut(tr.querySelector('td:last-child')?.dataset.raw || '')));
     tr.dataset.filtered = rowOk ? '' : '1';
     if (!rowOk) { tr.style.display = 'none'; return; }
     if (q) {
@@ -7795,6 +7912,7 @@ function applyView() {
   document.querySelector('[data-fav-active]')?.removeAttribute('data-fav-active');
   if (favOnly) document.querySelector('.pill[data-cat="favorites"]')?.setAttribute('data-fav-active', '');
   updateSearchCount();
+  updateCompareCount(panel);
 }
 
 // ---- Click-to-copy anthkey ----

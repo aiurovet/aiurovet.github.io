@@ -28,7 +28,7 @@
   <script>if (location.protocol === 'file:') document.getElementById('manifestLink').remove();</script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=Roboto:wght@400;500;600;700&family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/anthkeys.css?v=27">
+  <link rel="stylesheet" href="css/anthkeys.css?v=28">
 </head>
 <body class="light style-m3 size-medium font-google-sans">
  <div class="container">
@@ -40,6 +40,7 @@
     <button class="btn-settings" id="btnThemeToggle" title="Toggle dark mode" aria-label="Toggle dark mode">&#127769;</button>
     <button class="btn-settings" id="btnRefresh" title="Refresh for updates" aria-label="Refresh for updates">&#10227;</button>
     <button class="btn-settings" id="btnSettings" title="Settings" aria-label="Settings">&#9881;</button>
+    <button class="btn-settings" id="btnHelp" title="Help (?)" aria-label="Help">?</button>
   </div>
 
   <div class="install-banner" id="installBanner" hidden>
@@ -61,6 +62,17 @@
   <div class="daily-tip" id="dailyTip" style="display:none"><span class="tip-icon">&#128161;</span><span class="tip-label" data-i18n="tip.label">Tip</span>: <span id="tipContent"></span><button class="tip-close" id="tipClose" title="Dismiss" aria-label="Dismiss tip">&times;</button></div>
   <div class="pill-bar" id="pillBar"></div>
   <div class="collapse-bar"><button class="pill" id="collapseAll" data-i18n="cat.collapse">▾ Collapse all</button></div>
+  <div class="compare-bar" id="compareBar">
+    <button class="pill compare-btn" id="btnCompare" data-i18n="cmp.btn">&#8646; Compare</button>
+    <span class="compare-pick" id="comparePick" hidden>
+      <span class="compare-with" data-i18n="cmp.with">with</span>
+      <button class="pill cmp-opt" data-cmp="macos">macOS</button>
+      <button class="pill cmp-opt" data-cmp="linux">Linux</button>
+      <button class="pill cmp-opt" data-cmp="chromeos">ChromeOS</button>
+      <button class="pill cmp-opt" data-cmp="apps">Apps</button>
+    </span>
+    <span class="compare-count" id="compareCount"></span>
+  </div>
   <div class="search-count" id="searchCount"></div>
 
   <div class="tabs">
@@ -486,40 +498,49 @@
       <h2 class="whatsnew-title" data-i18n="whatsnew.title">What's new</h2>
       <p class="whatsnew-sub" data-i18n="whatsnew.sub">Recent changes to Anthkeys</p>
       <div class="wn-entry">
-        <div class="wn-ver">v22</div>
+        <div class="wn-ver">v23 <span class="wn-date">Aug 8, 2026</span></div>
+        <ul>
+          <li>New &ldquo;Compare&rdquo; mode &mdash; pick a second platform to see only the shortcuts that differ.</li>
+          <li>Auto theme that follows the time of day (dark 7PM&ndash;7AM).</li>
+          <li>Press <kbd>?</kbd> or tap the <kbd>?</kbd> button for quick help &amp; tips.</li>
+          <li>Release dates added to every entry on this page.</li>
+        </ul>
+      </div>
+      <div class="wn-entry">
+        <div class="wn-ver">v22 <span class="wn-date">Aug 8, 2026</span></div>
         <ul>
           <li>Fixed: the key legend table was clipped on narrow phones &mdash; it now scrolls horizontally so all columns are reachable.</li>
           <li>The search bar and category pills are hidden on the &ldquo;What's new&rdquo; page since they don't apply there.</li>
         </ul>
       </div>
       <div class="wn-entry">
-        <div class="wn-ver">v21</div>
+        <div class="wn-ver">v21 <span class="wn-date">Aug 8, 2026</span></div>
         <ul>
           <li>The key legend now has a close button, so you can collapse it from within the panel &mdash; handy on mobile where the toggle can scroll out of reach.</li>
           <li>More responsive tap handling for the Key Legend button on touch devices.</li>
         </ul>
       </div>
       <div class="wn-entry">
-        <div class="wn-ver">v20.1</div>
+        <div class="wn-ver">v20.1 <span class="wn-date">Aug 8, 2026</span></div>
         <ul>
           <li>Version numbers now support patch releases &mdash; the footer badge shows e.g. v20.1, and update detection handles them correctly.</li>
           <li>Added the missing v20 entry to this page.</li>
         </ul>
       </div>
       <div class="wn-entry">
-        <div class="wn-ver">v20</div>
+        <div class="wn-ver">v20 <span class="wn-date">Aug 8, 2026</span></div>
         <ul>
           <li>New &ldquo;What's new&rdquo; page right inside Anthkeys &mdash; the update toast link and the version badge in the footer now open it here instead of GitHub.</li>
         </ul>
       </div>
       <div class="wn-entry">
-        <div class="wn-ver">v19</div>
+        <div class="wn-ver">v19 <span class="wn-date">Aug 8, 2026</span></div>
         <ul>
           <li>The update banner now also appears if you're upgrading from a version released before version tracking existed (your previous version is detected from the offline cache).</li>
         </ul>
       </div>
       <div class="wn-entry">
-        <div class="wn-ver">v18</div>
+        <div class="wn-ver">v18 <span class="wn-date">Aug 8, 2026</span></div>
         <ul>
           <li>An &ldquo;Updated to vX &mdash; What's new&rdquo; toast appears when a new version arrives (in auto-update mode).</li>
           <li>The update banner now triggers on content updates, not just service-worker changes.</li>
@@ -528,37 +549,37 @@
         </ul>
       </div>
       <div class="wn-entry">
-        <div class="wn-ver">v16</div>
+        <div class="wn-ver">v16 <span class="wn-date">Aug 8, 2026</span></div>
         <ul>
           <li>Version badge added to the footer showing the current build number.</li>
         </ul>
       </div>
       <div class="wn-entry">
-        <div class="wn-ver">v15</div>
+        <div class="wn-ver">v15 <span class="wn-date">Aug 8, 2026</span></div>
         <ul>
           <li>Refresh button and update preference (auto-update or ask first) powered by the service worker.</li>
         </ul>
       </div>
       <div class="wn-entry">
-        <div class="wn-ver">v14</div>
+        <div class="wn-ver">v14 <span class="wn-date">Aug 8, 2026</span></div>
         <ul>
           <li>Collapsing / expanding a category now respects the active search query.</li>
         </ul>
       </div>
       <div class="wn-entry">
-        <div class="wn-ver">v13</div>
+        <div class="wn-ver">v13 <span class="wn-date">Aug 8, 2026</span></div>
         <ul>
           <li>Network-first page caching so updates show up immediately; smoother desktop scrolling.</li>
         </ul>
       </div>
       <div class="wn-entry">
-        <div class="wn-ver">v12</div>
+        <div class="wn-ver">v12 <span class="wn-date">Aug 7, 2026</span></div>
         <ul>
           <li>Search and filters are now scoped to the active tab.</li>
         </ul>
       </div>
       <div class="wn-entry">
-        <div class="wn-ver">v11</div>
+        <div class="wn-ver">v11 <span class="wn-date">Aug 7, 2026</span></div>
         <ul>
           <li>PWA install support, accessibility labels, reduced-motion support, Gmail &amp; YouTube shortcuts, SEO improvements.</li>
         </ul>
@@ -585,6 +606,25 @@
   <p class="note"><kbd>Cmd</kbd> <span data-i18n="note.equals">= Command</span> &nbsp;|&nbsp; <kbd>Win</kbd> <span data-i18n="note.win">= Windows key</span> &nbsp;|&nbsp; <kbd>Super</kbd> <span data-i18n="note.super">= Windows/Command key</span> &nbsp;|&nbsp; <kbd>Search</kbd> <span data-i18n="note.search">= Launcher key</span></p>
   <div id="appVersion" style="text-align:center;padding:.5rem 0 1rem;font-size:.75rem;color:var(--text-variant);cursor:pointer" title="See what's new"><span style="display:inline-block;padding:.25rem .7rem;border:1px solid var(--outline-variant);border-radius:999px;background:var(--surface-variant);font-weight:500">v0</span></div>
   </div>
+
+<div class="overlay" id="helpOverlay">
+  <div class="modal">
+    <div class="modal-header">
+      <h2 data-i18n="help.title">Help &amp; tips</h2>
+      <button class="modal-close" id="helpClose" aria-label="Close help"><span class="close-x"></span></button>
+    </div>
+    <div class="help-body">
+      <div class="help-tip"><span class="help-keys"><kbd>/</kbd></span><span data-i18n="help.search">Focus the search box</span></div>
+      <div class="help-tip"><span class="help-keys"><kbd>?</kbd></span><span data-i18n="help.help">Open this help</span></div>
+      <div class="help-tip"><span class="help-keys"><kbd>Esc</kbd></span><span data-i18n="help.close">Close overlays and menus</span></div>
+      <div class="help-tip"><span class="help-keys"><kbd>Click</kbd></span><span data-i18n="help.click-copy">Tap any shortcut to copy it</span></div>
+      <div class="help-tip"><span class="help-keys"><kbd>&#x2328;</kbd></span><span data-i18n="help.legend">Open the &#x2328; Key Legend for symbol meanings</span></div>
+      <div class="help-tip"><span class="help-keys"><kbd>v23</kbd></span><span data-i18n="help.whatsnew">Tap the version badge to see what's new</span></div>
+      <div class="help-tip"><span class="help-keys"><kbd>&#8646;</kbd></span><span data-i18n="help.compare">Compare shows what's different between platforms</span></div>
+      <div class="help-tip"><span class="help-keys"><kbd>&#9881;</kbd></span><span data-i18n="help.settings">Settings holds themes, sizes, fonts and update mode</span></div>
+    </div>
+  </div>
+</div>
 
 <div class="overlay" id="settingsOverlay">
   <div class="modal">
@@ -665,6 +705,7 @@
           <button class="theme-opt active" data-theme="light"><span class="theme-swatch" style="background:linear-gradient(135deg,#fef7f0,#fff)"></span> <span data-i18n="theme.light">&#9728;&#65039; Light</span></button>
           <button class="theme-opt" data-theme="dark"><span class="theme-swatch" style="background:linear-gradient(135deg,#1c1b1f,#2b2930)"></span> <span data-i18n="theme.dark">&#127769; Dark</span></button>
           <button class="theme-opt" data-theme="device"><span class="theme-swatch" style="background:linear-gradient(135deg,#fef7f0,#1c1b1f)"></span> <span data-i18n="theme.device">&#9000; Device theme</span></button>
+          <button class="theme-opt" data-theme="auto"><span class="theme-swatch" style="background:linear-gradient(135deg,#fef7f0,#1c1b1f)"></span> <span data-i18n="theme.auto">&#9201; Auto (time)</span></button>
         </div>
       </div>
       <div class="setting-group">
@@ -862,7 +903,7 @@
 
 <div class="toast toast-update" id="updateToast"><span id="updateToastText"></span><a id="updateToastLink" href="#" title="See what's new">What&rsquo;s new &rarr;</a></div>
 
-  <script src="js/anthkeys.js?v=22">
+  <script src="js/anthkeys.js?v=23">
 </script>
 <div class="ctx-menu" id="ctxMenu">
   <button data-action="copy-anthkey" data-i18n="ctx.copy">Copy anthkey</button>
