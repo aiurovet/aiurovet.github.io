@@ -19,6 +19,12 @@ const i18n = {
     'msg.copied': 'Copied!',
     'install.text': 'Install Anthkeys for offline access',
     'install.cta': 'Install',
+    'update.text': 'A new version is available',
+    'update.cta': 'Refresh',
+    'setting.update-mode': 'Updates',
+    'update.auto': 'Auto-update',
+    'update.ask': 'Ask before updating',
+    'update.note': 'Auto-update reloads the page when a new version is available. "Ask" shows a Refresh button instead.',
     'search.placeholder': 'Search actions\u2026',
     'btn.basic': 'Basic',
     'btn.reset': 'Reset all',
@@ -6518,7 +6524,8 @@ function saveSettings() {
     modStyle: document.querySelector('[data-mod-style].active')?.dataset.modStyle || 'text',
     advancedMode: document.body.classList.contains('advanced-mode'),
     compact: document.body.classList.contains('compact'),
-    noAnim: document.body.classList.contains('no-anim')
+    noAnim: document.body.classList.contains('no-anim'),
+    updateMode: document.querySelector('[data-update-mode].active')?.dataset.updateMode || 'auto'
   };
   if (data.accent === 'custom' || (activeAccent && !activeAccent.dataset.accent)) {
     const bodyHex = document.body.style.getPropertyValue('--accent-1').trim();
@@ -6629,6 +6636,12 @@ function loadSettings() {
       if (msBtn) msBtn.classList.add('active');
     }
 
+    if (data.updateMode) {
+      document.querySelectorAll('[data-update-mode]').forEach(b => b.classList.remove('active'));
+      const umBtn = document.querySelector('[data-update-mode="' + data.updateMode + '"]');
+      if (umBtn) umBtn.classList.add('active');
+    }
+
     if (typeof renderAnthkeys === 'function') renderAnthkeys();
 
     if (data.advancedMode) {
@@ -6720,10 +6733,54 @@ if (autoLang) {
 
 applyLanguage('en');
 
-// ---- Register service worker (PWA) ----
+// ---- Register service worker (PWA) + update detection ----
 if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('sw.js?v=11').catch(() => {});
+  let refreshing = false;
+  const updateMode = () => {
+    const el = document.querySelector('[data-update-mode].active');
+    return el ? el.dataset.updateMode : 'auto';
+  };
+  navigator.serviceWorker.register('sw.js?v=12').then(reg => {
+    reg.addEventListener('updatefound', () => {
+      const newSW = reg.installing;
+      if (!newSW) return;
+      newSW.addEventListener('statechange', () => {
+        if (newSW.state !== 'installed' || !navigator.serviceWorker.controller) return;
+        if (updateMode() === 'ask') {
+          const banner = document.getElementById('updateBanner');
+          if (banner) banner.hidden = false;
+        } else if (reg.waiting) {
+          reg.waiting.postMessage({ type: 'SKIP_WAITING' });
+        }
+      });
+    });
+  }).catch(() => {});
+  navigator.serviceWorker.addEventListener('controllerchange', () => {
+    if (refreshing) return;
+    refreshing = true;
+    location.reload();
+  });
 }
+
+// ---- Refresh for updates ----
+function refreshForUpdates() {
+  const reload = () => location.reload();
+  if (!('serviceWorker' in navigator)) { reload(); return; }
+  navigator.serviceWorker.getRegistration().then(reg => {
+    if (!reg) { reload(); return; }
+    if (reg.waiting) {
+      reg.waiting.postMessage({ type: 'SKIP_WAITING' });
+      return;
+    }
+    reg.update().then(reload).catch(reload);
+  }).catch(reload);
+}
+onId('btnRefresh', 'click', refreshForUpdates);
+onId('btnUpdate', 'click', () => {
+  const banner = document.getElementById('updateBanner');
+  if (banner) banner.hidden = true;
+  refreshForUpdates();
+});
 
 // ---- Install prompt ----
 (function() {
@@ -7138,6 +7195,13 @@ document.querySelectorAll('[data-mod-style]').forEach(btn => {
     saveSettings();
   });
 });
+document.querySelectorAll('[data-update-mode]').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('[data-update-mode]').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    saveSettings();
+  });
+});
 
 document.querySelectorAll('.setting-group h2').forEach(h => {
   h.addEventListener('click', () => {
@@ -7202,10 +7266,10 @@ document.querySelectorAll('.reset-btn').forEach(btn => {
     e.stopPropagation();
     const setting = btn.dataset.reset;
     const defaults = {
-      language: 'auto', keyStyle: 'spaced', modStyle: 'text',
+      language: 'auto',       keyStyle: 'spaced', modStyle: 'text',
       blur: true, compact: false, noAnim: false,
       theme: 'light', accent: 'gold', style: 'm3',
-      size: 'medium', font: 'google-sans'
+      size: 'medium', font: 'google-sans', updateMode: 'auto'
     };
     const val = defaults[setting];
     if (val === undefined) return;
@@ -7249,6 +7313,10 @@ document.querySelectorAll('.reset-btn').forEach(btn => {
     } else if (setting === 'modStyle') {
       document.querySelectorAll('[data-mod-style]').forEach(b => b.classList.remove('active'));
       const defBtn = document.querySelector('[data-mod-style="text"]');
+      if (defBtn) defBtn.click();
+    } else if (setting === 'updateMode') {
+      document.querySelectorAll('[data-update-mode]').forEach(b => b.classList.remove('active'));
+      const defBtn = document.querySelector('[data-update-mode="auto"]');
       if (defBtn) defBtn.click();
     }
     saveSettings();

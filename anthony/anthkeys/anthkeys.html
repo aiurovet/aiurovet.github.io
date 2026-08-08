@@ -38,6 +38,7 @@
     <button class="btn-settings" id="btnPrint" title="Print / PDF" aria-label="Print / PDF">&#128424;</button>
     <button class="btn-settings" id="btnQuiz" title="Shortcut Quiz" aria-label="Shortcut Quiz">&#10067;</button>
     <button class="btn-settings" id="btnThemeToggle" title="Toggle dark mode" aria-label="Toggle dark mode">&#127769;</button>
+    <button class="btn-settings" id="btnRefresh" title="Refresh for updates" aria-label="Refresh for updates">&#10227;</button>
     <button class="btn-settings" id="btnSettings" title="Settings" aria-label="Settings">&#9881;</button>
   </div>
 
@@ -46,6 +47,13 @@
     <span class="install-actions">
       <button class="pill" id="btnInstall" data-i18n="install.cta">Install</button>
       <button class="install-dismiss" id="btnInstallDismiss" title="Dismiss" aria-label="Dismiss install banner">&times;</button>
+    </span>
+  </div>
+
+  <div class="install-banner" id="updateBanner" hidden>
+    <span class="install-text" data-i18n="update.text">A new version is available</span>
+    <span class="install-actions">
+      <button class="pill" id="btnUpdate" data-i18n="update.cta">Refresh</button>
     </span>
   </div>
 
@@ -544,6 +552,14 @@
         </div>
       </div>
       <div class="setting-group">
+        <h2 data-i18n="setting.update-mode">Updates <button class="reset-btn" data-reset="updateMode" title="Reset to default">↺</button></h2>
+        <div class="setting-body">
+          <button class="theme-opt active" data-update-mode="auto"><span class="theme-swatch" style="background:linear-gradient(135deg,#16a34a,#4ade80)"></span> <span data-i18n="update.auto">Auto-update</span></button>
+          <button class="theme-opt" data-update-mode="ask"><span class="theme-swatch" style="background:linear-gradient(135deg,#f59e0b,#fbbf24)"></span> <span data-i18n="update.ask">Ask before updating</span></button>
+          <p style="margin-top:.4rem;font-size:.75rem;color:var(--text-variant);line-height:1.4" data-i18n="update.note">Auto-update reloads the page when a new version is available. "Ask" shows a Refresh button instead.</p>
+        </div>
+      </div>
+      <div class="setting-group">
         <h2 data-i18n="setting.custom-anthkeys">Custom shortcuts</h2>
         <div class="setting-body">
           <div id="customAnthkeysList"></div>
@@ -567,7 +583,7 @@
       <div class="setting-group">
         <h2 data-i18n="setting.presets">Presets</h2>
         <div class="setting-body">
-          <p style="margin-bottom:.5rem;font-size:.7rem;color:var(--text-variant);line-height:1.4">Style changes may not always apply immediately. If the page doesn't update, do a hard refresh (Ctrl + Shift + R).</p>
+          <p style="margin-bottom:.5rem;font-size:.7rem;color:var(--text-variant);line-height:1.4">Style changes may not always apply immediately. If the page doesn't update, tap the refresh button (&#10227;) in the top bar or press Ctrl + Shift + R.</p>
           <button class="theme-opt" data-theme="ocean"><span class="theme-swatch" style="background:linear-gradient(135deg,#eef6fb,#1976d2)"></span> <span data-i18n="theme.ocean">&#127754; Ocean</span></button>
           <button class="theme-opt" data-theme="forest"><span class="theme-swatch" style="background:linear-gradient(135deg,#eaf5ed,#2e7d32)"></span> <span data-i18n="theme.forest">&#127795; Forest</span></button>
           <button class="theme-opt" data-theme="sunset"><span class="theme-swatch" style="background:linear-gradient(135deg,#fef0ed,#c44536)"></span> <span data-i18n="theme.sunset">&#127749; Sunset</span></button>
@@ -757,7 +773,7 @@
   </div>
 </div>
 
-  <script src="js/anthkeys.js?v=14">
+  <script src="js/anthkeys.js?v=15">
 </script>
 <div class="ctx-menu" id="ctxMenu">
   <button data-action="copy-anthkey" data-i18n="ctx.copy">Copy anthkey</button>
