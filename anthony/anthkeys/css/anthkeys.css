@@ -202,7 +202,7 @@
     .dict-close { border:none;background:var(--surface-variant);color:var(--text);width:1.5rem;height:1.5rem;border-radius:50%;cursor:pointer;font-size:1rem;line-height:1;display:flex;align-items:center;justify-content:center;padding:0; }
     .dict-close:hover { background:var(--outline-variant); }
     .dict-close:active { transform:scale(.92); }
-    .dict-table { width:100%;border-collapse:collapse;font:var(--size) var(--font);background:var(--surface);border-radius:var(--radius-sm);overflow:hidden;box-shadow:var(--shadow); }
+    .dict-table { width:100%;border-collapse:collapse;font:var(--size) var(--font);background:var(--surface);border-radius:var(--radius-sm);overflow-x:auto;-webkit-overflow-scrolling:touch;box-shadow:var(--shadow); }
     .dict-table th,.dict-table td { padding:.4rem .6rem;text-align:left;border-bottom:1px solid var(--outline-variant);white-space:nowrap; }
     .dict-table th { background:var(--surface-variant);color:var(--text-variant);font-weight:600;font-size:.75rem;text-transform:uppercase;letter-spacing:.04em; }
     .dict-table td:first-child { font-weight:600;color:var(--text); }

@@ -28,7 +28,7 @@
   <script>if (location.protocol === 'file:') document.getElementById('manifestLink').remove();</script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=Roboto:wght@400;500;600;700&family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/anthkeys.css?v=26">
+  <link rel="stylesheet" href="css/anthkeys.css?v=27">
 </head>
 <body class="light style-m3 size-medium font-google-sans">
  <div class="container">
@@ -486,6 +486,13 @@
       <h2 class="whatsnew-title" data-i18n="whatsnew.title">What's new</h2>
       <p class="whatsnew-sub" data-i18n="whatsnew.sub">Recent changes to Anthkeys</p>
       <div class="wn-entry">
+        <div class="wn-ver">v22</div>
+        <ul>
+          <li>Fixed: the key legend table was clipped on narrow phones &mdash; it now scrolls horizontally so all columns are reachable.</li>
+          <li>The search bar and category pills are hidden on the &ldquo;What's new&rdquo; page since they don't apply there.</li>
+        </ul>
+      </div>
+      <div class="wn-entry">
         <div class="wn-ver">v21</div>
         <ul>
           <li>The key legend now has a close button, so you can collapse it from within the panel &mdash; handy on mobile where the toggle can scroll out of reach.</li>
@@ -855,7 +862,7 @@
 
 <div class="toast toast-update" id="updateToast"><span id="updateToastText"></span><a id="updateToastLink" href="#" title="See what's new">What&rsquo;s new &rarr;</a></div>
 
-  <script src="js/anthkeys.js?v=21">
+  <script src="js/anthkeys.js?v=22">
 </script>
 <div class="ctx-menu" id="ctxMenu">
   <button data-action="copy-anthkey" data-i18n="ctx.copy">Copy anthkey</button>

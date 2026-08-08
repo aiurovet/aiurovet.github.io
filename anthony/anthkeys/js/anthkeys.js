@@ -6880,7 +6880,18 @@ function openWhatsNew() {
   if (scrollArea) scrollArea.scrollTo({ top: 0, behavior: 'smooth' });
   const toast = document.getElementById('updateToast');
   if (toast) { toast.classList.remove('show'); clearTimeout(toast._timer); }
+  syncTabChrome();
   applyCategoryFilter();
+}
+function syncTabChrome() {
+  const isWhatsNew = document.querySelector('.panel.active')?.id === 'whatsnew';
+  const hide = isWhatsNew ? 'none' : '';
+  const sb = document.querySelector('.search-bar');
+  const cb = document.querySelector('.collapse-bar');
+  const pb = document.getElementById('pillBar');
+  if (sb) sb.style.display = hide;
+  if (cb) cb.style.display = hide;
+  if (pb) pb.style.display = hide;
 }
 document.getElementById('updateToastLink')?.addEventListener('click', e => {
   e.preventDefault();
@@ -6940,6 +6951,7 @@ document.querySelectorAll('.tab').forEach(tab => {
     tab.classList.add('active');
     const pnl = document.getElementById(tab.dataset.tab);
     if (pnl) pnl.classList.add('active');
+    syncTabChrome();
     const scrollArea = document.querySelector('.scroll-area');
     if (scrollArea) scrollArea.scrollTo({ top: 0, behavior: 'smooth' });
     applyCategoryFilter();
