@@ -148,6 +148,9 @@ const i18n = {
     'note.equals': '= Command', 'note.win': '= Windows key', 'note.super': '= Windows/Command key', 'note.search': '= Launcher key',
     'dict.toggle': '\u2328 Key Legend',
     'tab.apps': 'Apps',
+    'tab.whatsnew': "What's new",
+    'whatsnew.title': "What's new",
+    'whatsnew.sub': 'Recent changes to Anthkeys',
     'cat.vscode': 'VS Code',
     'cat.figma': 'Figma',
     'cat.photoshop': 'Photoshop',
@@ -6851,7 +6854,7 @@ const COMMITS_URL = 'https://github.com/aiurovet/aiurovet.github.io/commits/main
       const span = verEl.querySelector('span') || verEl;
       span.textContent = 'v' + APP_VERSION;
     }
-    verEl.addEventListener('click', () => { window.open(COMMITS_URL, '_blank'); });
+    verEl.addEventListener('click', openWhatsNew);
   }
 })();
 function showUpdateToast(ver) {
@@ -6865,6 +6868,24 @@ function showUpdateToast(ver) {
   clearTimeout(toast._timer);
   toast._timer = setTimeout(() => toast.classList.remove('show'), 6000);
 }
+function openWhatsNew() {
+  const tab = document.querySelector('.tab[data-tab="whatsnew"]');
+  const pnl = document.getElementById('whatsnew');
+  if (!tab || !pnl) return;
+  document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+  document.querySelectorAll('.panel').forEach(p => p.classList.remove('active'));
+  tab.classList.add('active');
+  pnl.classList.add('active');
+  const scrollArea = document.querySelector('.scroll-area');
+  if (scrollArea) scrollArea.scrollTo({ top: 0, behavior: 'smooth' });
+  const toast = document.getElementById('updateToast');
+  if (toast) { toast.classList.remove('show'); clearTimeout(toast._timer); }
+  applyCategoryFilter();
+}
+document.getElementById('updateToastLink')?.addEventListener('click', e => {
+  e.preventDefault();
+  openWhatsNew();
+});
 function cachedJsVersion() {
   if (!('caches' in window)) return Promise.resolve(null);
   return caches.keys()

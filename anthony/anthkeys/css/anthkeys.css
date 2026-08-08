@@ -348,6 +348,14 @@
     .toast-update { pointer-events: auto; cursor: pointer; padding: .5rem 1.4rem; }
     .toast-update a { color: var(--primary); font-weight: 600; text-decoration: none; }
     .toast-update a:hover { text-decoration: underline; }
+    .whatsnew { padding: 1rem 1.25rem 1.25rem; }
+    .whatsnew-title { margin: 0 0 .25rem; font-size: 1.15rem; color: var(--text); }
+    .whatsnew-sub { margin: 0 0 1rem; font-size: .8rem; color: var(--text-variant); }
+    .wn-entry { border-top: 1px solid var(--outline-variant); padding: .9rem 0; }
+    .wn-entry:last-child { border-bottom: 1px solid var(--outline-variant); }
+    .wn-ver { font-weight: 600; color: var(--primary); margin-bottom: .35rem; font-size: .9rem; }
+    .wn-entry ul { margin: 0; padding-left: 1.2rem; font-size: .85rem; line-height: 1.55; color: var(--text); }
+    .wn-entry li + li { margin-top: .3rem; }
     body.compact td, body.compact th { padding: .35rem .5rem; }
     body.compact .panel { padding: .75rem; }
     body.compact .search-bar input { padding: .35rem .75rem .35rem 2rem; }

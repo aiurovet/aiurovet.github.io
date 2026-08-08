@@ -28,7 +28,7 @@
   <script>if (location.protocol === 'file:') document.getElementById('manifestLink').remove();</script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=Roboto:wght@400;500;600;700&family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/anthkeys.css?v=24">
+  <link rel="stylesheet" href="css/anthkeys.css?v=25">
 </head>
 <body class="light style-m3 size-medium font-google-sans">
  <div class="container">
@@ -69,6 +69,7 @@
     <button class="tab" data-tab="linux" data-i18n="tab.linux">Linux</button>
     <button class="tab" data-tab="chromeos" data-i18n="tab.chromeos">ChromeOS</button>
     <button class="tab" data-tab="apps" data-i18n="tab.apps">Apps</button>
+    <button class="tab" data-tab="whatsnew" data-i18n="tab.whatsnew">What's new</button>
   </div>
 
   <div class="scroll-area">
@@ -480,6 +481,63 @@
       </tbody>
     </table>
   </div>
+  <div class="panel" id="whatsnew">
+    <div class="whatsnew">
+      <h2 class="whatsnew-title" data-i18n="whatsnew.title">What's new</h2>
+      <p class="whatsnew-sub" data-i18n="whatsnew.sub">Recent changes to Anthkeys</p>
+      <div class="wn-entry">
+        <div class="wn-ver">v19</div>
+        <ul>
+          <li>The update banner now also appears if you're upgrading from a version released before version tracking existed (your previous version is detected from the offline cache).</li>
+        </ul>
+      </div>
+      <div class="wn-entry">
+        <div class="wn-ver">v18</div>
+        <ul>
+          <li>An &ldquo;Updated to vX &mdash; What's new&rdquo; toast appears when a new version arrives (in auto-update mode).</li>
+          <li>The update banner now triggers on content updates, not just service-worker changes.</li>
+          <li>The version badge in the footer is clickable &mdash; tap it to see what's new.</li>
+          <li>Leaner offline cache (no wasted unversioned files).</li>
+        </ul>
+      </div>
+      <div class="wn-entry">
+        <div class="wn-ver">v16</div>
+        <ul>
+          <li>Version badge added to the footer showing the current build number.</li>
+        </ul>
+      </div>
+      <div class="wn-entry">
+        <div class="wn-ver">v15</div>
+        <ul>
+          <li>Refresh button and update preference (auto-update or ask first) powered by the service worker.</li>
+        </ul>
+      </div>
+      <div class="wn-entry">
+        <div class="wn-ver">v14</div>
+        <ul>
+          <li>Collapsing / expanding a category now respects the active search query.</li>
+        </ul>
+      </div>
+      <div class="wn-entry">
+        <div class="wn-ver">v13</div>
+        <ul>
+          <li>Network-first page caching so updates show up immediately; smoother desktop scrolling.</li>
+        </ul>
+      </div>
+      <div class="wn-entry">
+        <div class="wn-ver">v12</div>
+        <ul>
+          <li>Search and filters are now scoped to the active tab.</li>
+        </ul>
+      </div>
+      <div class="wn-entry">
+        <div class="wn-ver">v11</div>
+        <ul>
+          <li>PWA install support, accessibility labels, reduced-motion support, Gmail &amp; YouTube shortcuts, SEO improvements.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
   </div>
   <button class="dict-toggle" id="dictToggle" data-i18n="dict.toggle">&#x2328; Key Legend</button>
   <div class="dict-panel" id="dictPanel">
@@ -774,9 +832,9 @@
   </div>
 </div>
 
-<div class="toast toast-update" id="updateToast"><span id="updateToastText"></span><a id="updateToastLink" href="https://github.com/aiurovet/aiurovet.github.io/commits/main" target="_blank" rel="noopener">What&rsquo;s new &rarr;</a></div>
+<div class="toast toast-update" id="updateToast"><span id="updateToastText"></span><a id="updateToastLink" href="#" title="See what's new">What&rsquo;s new &rarr;</a></div>
 
-  <script src="js/anthkeys.js?v=19">
+  <script src="js/anthkeys.js?v=20">
 </script>
 <div class="ctx-menu" id="ctxMenu">
   <button data-action="copy-anthkey" data-i18n="ctx.copy">Copy anthkey</button>
