@@ -6843,7 +6843,6 @@ renderCustomAnthkeys();
 
 // ---- Version badge + update notification ----
 let APP_VERSION = 0;
-const COMMITS_URL = 'https://github.com/aiurovet/aiurovet.github.io/commits/main';
 (function() {
   const verEl = document.getElementById('appVersion');
   const verScript = document.querySelector('script[src*="anthkeys.js"]');
