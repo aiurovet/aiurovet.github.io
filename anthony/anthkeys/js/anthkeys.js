@@ -6842,7 +6842,10 @@ renderCustomAnthkeys();
   const verScript = document.querySelector('script[src*="anthkeys.js"]');
   if (verEl && verScript) {
     const m = verScript.getAttribute('src').match(/[?&]v=(\d+)/);
-    if (m) verEl.textContent = 'v' + m[1];
+    if (m) {
+      const span = verEl.querySelector('span') || verEl;
+      span.textContent = 'v' + m[1];
+    }
   }
 })();
 
