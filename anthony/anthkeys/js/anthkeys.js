@@ -6837,6 +6837,15 @@ function escHtml(s) { if (!_escDiv) _escDiv = document.createElement('div'); _es
 loadCustomAnthkeys();
 renderCustomAnthkeys();
 
+(function() {
+  const verEl = document.getElementById('appVersion');
+  const verScript = document.querySelector('script[src*="anthkeys.js"]');
+  if (verEl && verScript) {
+    const m = verScript.getAttribute('src').match(/[?&]v=(\d+)/);
+    if (m) verEl.textContent = 'v' + m[1];
+  }
+})();
+
 document.querySelectorAll('.panel table tr:not(.category) td:last-child, .note kbd').forEach(el => {
   if (el.tagName === 'TD') el.dataset.raw = el.innerHTML;
   else if (el.tagName === 'KBD') el.dataset.raw = el.textContent;
