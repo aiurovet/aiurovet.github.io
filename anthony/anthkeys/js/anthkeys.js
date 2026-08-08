@@ -147,6 +147,7 @@ const i18n = {
     'wallpaper.remove': 'Remove wallpaper',
     'note.equals': '= Command', 'note.win': '= Windows key', 'note.super': '= Windows/Command key', 'note.search': '= Launcher key',
     'dict.toggle': '\u2328 Key Legend',
+    'dict.head': 'Key Legend',
     'tab.apps': 'Apps',
     'tab.whatsnew': "What's new",
     'whatsnew.title': "What's new",
@@ -7303,6 +7304,10 @@ onId('dictToggle', 'click', function() {
   this.classList.toggle('open');
   const dictPanel = document.getElementById('dictPanel');
   if (dictPanel) dictPanel.classList.toggle('open');
+});
+onId('dictClose', 'click', function() {
+  document.getElementById('dictToggle')?.classList.remove('open');
+  document.getElementById('dictPanel')?.classList.remove('open');
 });
 onId('toggleBlur', 'click', function() {
   const on = this.classList.toggle('on');

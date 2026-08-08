@@ -198,6 +198,10 @@
     .dict-toggle.open::after { transform:rotate(90deg); }
     .dict-panel { display:none;margin:0 0 .25rem;max-height:0;overflow:hidden;transition:max-height .3s ease; }
     .dict-panel.open { display:block;max-height:600px; }
+    .dict-head { display:flex;align-items:center;justify-content:space-between;margin:.4rem 0 .25rem;font:500 .75rem var(--font);color:var(--text-variant);text-transform:uppercase;letter-spacing:.04em; }
+    .dict-close { border:none;background:var(--surface-variant);color:var(--text);width:1.5rem;height:1.5rem;border-radius:50%;cursor:pointer;font-size:1rem;line-height:1;display:flex;align-items:center;justify-content:center;padding:0; }
+    .dict-close:hover { background:var(--outline-variant); }
+    .dict-close:active { transform:scale(.92); }
     .dict-table { width:100%;border-collapse:collapse;font:var(--size) var(--font);background:var(--surface);border-radius:var(--radius-sm);overflow:hidden;box-shadow:var(--shadow); }
     .dict-table th,.dict-table td { padding:.4rem .6rem;text-align:left;border-bottom:1px solid var(--outline-variant);white-space:nowrap; }
     .dict-table th { background:var(--surface-variant);color:var(--text-variant);font-weight:600;font-size:.75rem;text-transform:uppercase;letter-spacing:.04em; }
@@ -390,7 +394,7 @@
   *, *::before, *::after { backdrop-filter: none !important; -webkit-backdrop-filter: none !important; animation: none !important; transition: none !important; }
   html { -webkit-text-size-adjust: 100%; }
   .scroll-area { -webkit-overflow-scrolling: touch; overflow-y: scroll; }
-  button, .tab, .pill, .btn-advanced, .btn-settings, .settings-tab, .theme-opt, .modal-close, .category td { touch-action: manipulation; }
+  button, .tab, .pill, .btn-advanced, .btn-settings, .settings-tab, .theme-opt, .modal-close, .category td, .dict-toggle { touch-action: manipulation; }
   .panel { backdrop-filter: none !important; -webkit-backdrop-filter: none !important; background: var(--surface) !important; border-color: var(--outline-variant) !important; }
   .panel::before { display: none !important; }
   .panel::after { display: none !important; }
