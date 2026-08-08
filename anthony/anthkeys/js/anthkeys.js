@@ -6865,11 +6865,22 @@ function showUpdateToast(ver) {
   clearTimeout(toast._timer);
   toast._timer = setTimeout(() => toast.classList.remove('show'), 6000);
 }
-function checkForUpdate() {
-  if (APP_VERSION === 0) return;
-  let last = 0;
-  try { last = parseInt(lsGet('anthkeys-last-version'), 10) || 0; } catch(e) { }
-  if (last >= APP_VERSION) return;
+function cachedJsVersion() {
+  if (!('caches' in window)) return Promise.resolve(null);
+  return caches.keys()
+    .then(names => Promise.all(names.map(n => caches.open(n).then(c => c.keys()))))
+    .then(keysArr => {
+      for (const keys of keysArr) {
+        for (const req of keys) {
+          const m = req.url.match(/js\/anthkeys\.js\?v=(\d+)/);
+          if (m) return parseInt(m[1], 10);
+        }
+      }
+      return null;
+    })
+    .catch(() => null);
+}
+function showUpdateNotification() {
   const mode = (document.querySelector('[data-update-mode].active')?.dataset.updateMode) || 'auto';
   if (mode === 'ask') {
     const banner = document.getElementById('updateBanner');
@@ -6878,6 +6889,17 @@ function checkForUpdate() {
     lsSet('anthkeys-last-version', String(APP_VERSION));
     showUpdateToast(APP_VERSION);
   }
+}
+function checkForUpdate() {
+  if (APP_VERSION === 0) return;
+  let last = 0;
+  try { last = parseInt(lsGet('anthkeys-last-version'), 10) || 0; } catch(e) { }
+  if (last >= APP_VERSION) return;
+  if (last > 0) { showUpdateNotification(); return; }
+  cachedJsVersion().then(seed => {
+    if (seed && seed < APP_VERSION) showUpdateNotification();
+    else lsSet('anthkeys-last-version', String(APP_VERSION));
+  });
 }
 
 document.querySelectorAll('.panel table tr:not(.category) td:last-child, .note kbd').forEach(el => {
