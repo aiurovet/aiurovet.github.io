@@ -6526,6 +6526,7 @@ function saveSettings() {
   const isCustom = customBtn?.classList.contains('active');
   const data = {
     theme: document.querySelector('[data-theme].active')?.dataset.theme || 'light',
+    mode: document.body.classList.contains('dark') ? 'dark' : 'light',
     size: document.querySelector('[data-size].active')?.dataset.size || 'medium',
     font: document.querySelector('[data-font].active')?.dataset.font || 'google-sans',
     language: document.querySelector('[data-lang].active')?.dataset.lang || 'auto',
@@ -6556,11 +6557,19 @@ function loadSettings() {
       if (tBtn) {
         tBtn.classList.add('active');
         document.body.classList.remove('light','dark','ocean','forest','sunset','lavender','midnight','coral','mint','sky','rose','amber','slate','cherry','tundra','nebula','sakura','emerald','peach','storm','desert','glade','aurora','cocoa','twilight','arctic','meadow','volcano','lagoon','autumn','blossom','canyon','frost','galaxy');
-        if (data.theme === 'light') document.body.classList.add('light');
-        else if (data.theme === 'dark') document.body.classList.add('dark');
-        else if (data.theme === 'device') document.body.classList.add(window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
-        else if (data.theme === 'auto') applyAutoTheme();
-        else document.body.classList.add(data.theme);
+        if (WP_THEMES.includes(data.theme)) {
+          if (data.mode === 'dark') document.body.classList.add('dark');
+          else if (data.mode === 'light') document.body.classList.add('light');
+          document.body.classList.add(data.theme);
+        } else if (data.theme === 'light') {
+          document.body.classList.add('light');
+        } else if (data.theme === 'dark') {
+          document.body.classList.add('dark');
+        } else if (data.theme === 'device') {
+          document.body.classList.add(window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+        } else if (data.theme === 'auto') {
+          applyAutoTheme();
+        }
         syncAccentWp(data.theme);
       }
     }
@@ -6852,6 +6861,7 @@ let APP_VERSION = 0;
       APP_VERSION = parseFloat(m[1]);
       const span = verEl.querySelector('span') || verEl;
       span.textContent = 'v' + APP_VERSION;
+      if (parseFloat(lsGet('anthkeys-highlight-version')) === APP_VERSION) verEl.classList.add('pill-new');
     }
     verEl.addEventListener('click', openWhatsNew);
   }
@@ -6879,6 +6889,11 @@ function openWhatsNew() {
   if (scrollArea) scrollArea.scrollTo({ top: 0, behavior: 'smooth' });
   const toast = document.getElementById('updateToast');
   if (toast) { toast.classList.remove('show'); clearTimeout(toast._timer); }
+  const pill = document.getElementById('appVersion');
+  if (pill) {
+    pill.classList.remove('pill-new');
+    lsRemove('anthkeys-highlight-version');
+  }
   syncTabChrome();
   applyCategoryFilter();
 }
@@ -6920,6 +6935,7 @@ function showUpdateNotification() {
     if (banner) banner.hidden = false;
   } else {
     lsSet('anthkeys-last-version', String(APP_VERSION));
+    lsSet('anthkeys-highlight-version', String(APP_VERSION));
     showUpdateToast(APP_VERSION);
   }
 }
@@ -7044,7 +7060,7 @@ document.addEventListener('keydown', e => {
 // ---- Dark mode quick toggle ----
 onId('btnThemeToggle', 'click', () => {
   const isDark = document.body.classList.contains('dark');
-  if (!isDark) preserveWallpaperForDark();
+  preserveWallpaperForDark();
   document.body.classList.remove('light','dark','ocean','forest','sunset','lavender','midnight','coral','mint','sky','rose','amber','slate','cherry','tundra','nebula','sakura','emerald','peach','storm','desert','glade','aurora','cocoa','twilight','arctic','meadow','volcano','lagoon','autumn','blossom','canyon','frost','galaxy');
   document.body.classList.add(isDark ? 'light' : 'dark');
   document.getElementById('btnThemeToggle').innerHTML = isDark ? '&#127769;' : '&#9728;&#65039;';
@@ -7113,8 +7129,18 @@ document.querySelectorAll('.theme-opt[data-theme]').forEach(opt => {
     document.querySelectorAll('.theme-opt[data-theme]').forEach(t => t.classList.remove('active'));
     opt.classList.add('active');
     const theme = opt.dataset.theme;
+    const wasDark = document.body.classList.contains('dark');
+    if (WP_THEMES.includes(theme)) {
+      clearPreservedWp();
+      document.body.classList.remove('light','dark','ocean','forest','sunset','lavender','midnight','coral','mint','sky','rose','amber','slate','cherry','tundra','nebula','sakura','emerald','peach','storm','desert','glade','aurora','cocoa','twilight','arctic','meadow','volcano','lagoon','autumn','blossom','canyon','frost','galaxy');
+      if (wasDark) document.body.classList.add('dark');
+      document.body.classList.add(theme);
+      syncAccentWp(theme);
+      saveSettings();
+      return;
+    }
+    preserveWallpaperForDark();
     const wantDark = theme === 'dark' || (theme === 'device' && window.matchMedia('(prefers-color-scheme: dark)').matches) || (theme === 'auto' && isAutoDark());
-    if (wantDark) preserveWallpaperForDark();
     document.body.classList.remove('light','dark','ocean','forest','sunset','lavender','midnight','coral','mint','sky','rose','amber','slate','cherry','tundra','nebula','sakura','emerald','peach','storm','desert','glade','aurora','cocoa','twilight','arctic','meadow','volcano','lagoon','autumn','blossom','canyon','frost','galaxy');
     if (theme === 'light') {
       document.body.classList.add('light');
@@ -7125,9 +7151,6 @@ document.querySelectorAll('.theme-opt[data-theme]').forEach(opt => {
       document.body.classList.add(prefersDark ? 'dark' : 'light');
     } else if (theme === 'auto') {
       applyAutoTheme();
-    } else {
-      clearPreservedWp();
-      document.body.classList.add(theme);
     }
     syncAccentWp(theme);
     if (preservedWp) document.body.classList.add('has-accent-wp');
