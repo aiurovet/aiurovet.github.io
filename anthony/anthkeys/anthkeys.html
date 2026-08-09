@@ -28,7 +28,7 @@
   <script>if (location.protocol === 'file:') document.getElementById('manifestLink').remove();</script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=Roboto:wght@400;500;600;700&family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/anthkeys.css?v=36">
+  <link rel="stylesheet" href="css/anthkeys.css?v=37">
 </head>
 <body class="light style-m3 size-medium font-google-sans">
  <div class="container">
@@ -497,6 +497,14 @@
       <h2 class="whatsnew-title" data-i18n="whatsnew.title">What's new</h2>
       <p class="whatsnew-sub" data-i18n="whatsnew.sub">Recent changes to Anthkeys</p>
       <div class="wn-entry">
+        <div class="wn-ver">v23.3 <span class="wn-date">Aug 9, 2026</span></div>
+        <ul>
+          <li>The version badge lights up after an auto-update, so you notice the new version on your next launch.</li>
+          <li>Switching between preset wallpapers keeps your dark mode on &mdash; the new wallpaper dims too.</li>
+          <li>On mobile the platform bar (Windows, macOS, Linux, ChromeOS) now looks the same as on desktop.</li>
+        </ul>
+      </div>
+      <div class="wn-entry">
         <div class="wn-ver">v23.2 <span class="wn-date">Aug 9, 2026</span></div>
         <ul>
           <li>Removed the Advanced/Basic toggle &mdash; all shortcuts are shown together.</li>
@@ -633,7 +641,7 @@
       <div class="help-tip"><span class="help-keys"><kbd>Esc</kbd></span><span data-i18n="help.close">Close overlays and menus</span></div>
       <div class="help-tip"><span class="help-keys"><kbd>Click</kbd></span><span data-i18n="help.click-copy">Tap any shortcut to copy it</span></div>
       <div class="help-tip"><span class="help-keys"><kbd>&#x2328;</kbd></span><span data-i18n="help.legend">Open the &#x2328; Key Legend for symbol meanings</span></div>
-      <div class="help-tip"><span class="help-keys"><kbd>v23.2</kbd></span><span data-i18n="help.whatsnew">Tap the version badge to see what's new</span></div>
+      <div class="help-tip"><span class="help-keys"><kbd>v23.3</kbd></span><span data-i18n="help.whatsnew">Tap the version badge to see what's new</span></div>
       <div class="help-tip"><span class="help-keys"><kbd>&#8646;</kbd></span><span data-i18n="help.compare">Compare shows what's different between platforms</span></div>
       <div class="help-tip"><span class="help-keys"><kbd>&#9881;</kbd></span><span data-i18n="help.settings">Settings holds themes, sizes, fonts and update mode</span></div>
     </div>
@@ -917,7 +925,7 @@
 
 <div class="toast toast-update" id="updateToast"><span id="updateToastText"></span><a id="updateToastLink" href="#" title="See what's new">What&rsquo;s new &rarr;</a></div>
 
-  <script src="js/anthkeys.js?v=23.2.2">
+  <script src="js/anthkeys.js?v=23.3">
 </script>
 <div class="ctx-menu" id="ctxMenu">
   <button data-action="copy-anthkey" data-i18n="ctx.copy">Copy anthkey</button>
