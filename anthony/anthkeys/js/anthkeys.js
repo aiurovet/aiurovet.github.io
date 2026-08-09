@@ -7059,6 +7059,7 @@ document.addEventListener('keydown', e => {
 // ---- Dark mode quick toggle ----
 onId('btnThemeToggle', 'click', () => {
   const isDark = document.body.classList.contains('dark');
+  if (!isDark) preserveWallpaperForDark();
   document.body.classList.remove('light','dark','ocean','forest','sunset','lavender','midnight','coral','mint','sky','rose','amber','slate','cherry','tundra','nebula','sakura','emerald','peach','storm','desert','glade','aurora','cocoa','twilight','arctic','meadow','volcano','lagoon','autumn','blossom','canyon','frost','galaxy');
   document.body.classList.add(isDark ? 'light' : 'dark');
   document.getElementById('btnThemeToggle').innerHTML = isDark ? '&#127769;' : '&#9728;&#65039;';
@@ -7104,12 +7105,31 @@ const WP_THEMES = ['ocean','forest','sunset','lavender','midnight','coral','mint
 function syncAccentWp(theme) {
   document.body.classList.toggle('has-accent-wp', WP_THEMES.includes(theme));
 }
+let preservedWp = null;
+function preserveWallpaperForDark() {
+  if (preservedWp) return;
+  const accent = WP_THEMES.find(t => document.body.classList.contains(t));
+  if (!accent) return;
+  const img = getComputedStyle(document.body).getPropertyValue('--bg-img').trim();
+  if (img && img !== 'none') {
+    document.body.style.setProperty('--bg-img', img);
+    preservedWp = img;
+  }
+}
+function clearPreservedWp() {
+  if (preservedWp && document.body.style.getPropertyValue('--bg-img').trim() === preservedWp) {
+    document.body.style.removeProperty('--bg-img');
+  }
+  preservedWp = null;
+}
 
 document.querySelectorAll('.theme-opt[data-theme]').forEach(opt => {
   opt.addEventListener('click', () => {
     document.querySelectorAll('.theme-opt[data-theme]').forEach(t => t.classList.remove('active'));
     opt.classList.add('active');
     const theme = opt.dataset.theme;
+    const wantDark = theme === 'dark' || (theme === 'device' && window.matchMedia('(prefers-color-scheme: dark)').matches) || (theme === 'auto' && isAutoDark());
+    if (wantDark) preserveWallpaperForDark();
     document.body.classList.remove('light','dark','ocean','forest','sunset','lavender','midnight','coral','mint','sky','rose','amber','slate','cherry','tundra','nebula','sakura','emerald','peach','storm','desert','glade','aurora','cocoa','twilight','arctic','meadow','volcano','lagoon','autumn','blossom','canyon','frost','galaxy');
     if (theme === 'light') {
       document.body.classList.add('light');
@@ -7121,9 +7141,11 @@ document.querySelectorAll('.theme-opt[data-theme]').forEach(opt => {
     } else if (theme === 'auto') {
       applyAutoTheme();
     } else {
+      clearPreservedWp();
       document.body.classList.add(theme);
     }
     syncAccentWp(theme);
+    if (preservedWp) document.body.classList.add('has-accent-wp');
     saveSettings();
   });
 });
@@ -7264,6 +7286,7 @@ loadSettings();
 checkForUpdate();
 
 function applyWallpaper(dataUrl) {
+  preservedWp = null;
   document.body.style.setProperty('--bg-img', `url(${dataUrl})`);
   document.body.classList.add('has-wallpaper');
   lsSet('anthkeys-wallpaper', dataUrl);
@@ -7307,6 +7330,7 @@ if (removeBtn) {
     lsRemove('anthkeys-wallpaper');
     document.body.classList.remove('has-wallpaper');
     document.body.style.removeProperty('--bg-img');
+    preservedWp = null;
   });
 }
 
@@ -7483,6 +7507,7 @@ document.querySelectorAll('.reset-btn').forEach(btn => {
       if (defBtn) defBtn.classList.add('active');
       document.body.classList.remove('light','dark','ocean','forest','sunset','lavender','midnight','coral','mint','sky','rose','amber','slate','cherry','tundra','nebula','sakura','emerald','peach','storm','desert','glade','aurora','cocoa','twilight','arctic','meadow','volcano','lagoon','autumn','blossom','canyon','frost','galaxy');
       document.body.classList.add('light');
+      clearPreservedWp();
       syncAccentWp('light');
     } else if (setting === 'accent') {
       const goldBtn = document.querySelector('.accent-opt[data-accent="gold"]');

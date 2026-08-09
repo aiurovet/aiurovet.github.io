@@ -290,7 +290,7 @@
     .btn-advanced:active, .btn-settings:active { transform: scale(.93); }
     .btn-settings { padding: .5rem .75rem; font-size: 1rem; line-height: 1; color: var(--text-variant); background: var(--surface-variant); border: none; border-radius: 100px; cursor: pointer; transition: all .2s; }
     .btn-settings:hover { background: var(--outline-variant); color: var(--text); }
-    .overlay { display: none; position: fixed; inset: 0; background: rgba(0,0,0,.4); backdrop-filter: blur(8px); z-index: 10; align-items: center; justify-content: center; padding: 2rem; }
+    .overlay { display: none; position: fixed; inset: 0; background: rgba(0,0,0,.4); backdrop-filter: blur(8px); z-index: 300; align-items: center; justify-content: center; padding: 2rem; }
     .overlay.open { display: flex; }
     .modal { position: relative; background: var(--surface); border-radius: var(--radius); padding: 0 1.75rem 1.75rem; min-width: 300px; max-width: 400px; width: auto; max-height: 90vh; display: flex; flex-direction: column; overflow: hidden; box-shadow: var(--shadow-lg); transition: background .3s; }
     .modal-header { display: flex; align-items: center; justify-content: space-between; padding: .75rem 0 .5rem; }
