@@ -7046,7 +7046,6 @@ onId('settingsOverlay', 'click', e => {
 // ---- Help overlay ----
 function showHelp() { document.getElementById('helpOverlay')?.classList.add('open'); }
 function hideHelp() { document.getElementById('helpOverlay')?.classList.remove('open'); }
-onId('btnHelp', 'click', showHelp);
 onId('helpClose', 'click', hideHelp);
 onId('helpOverlay', 'click', e => { if (e.target === e.currentTarget) hideHelp(); });
 document.addEventListener('keydown', e => {

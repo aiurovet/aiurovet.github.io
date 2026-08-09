@@ -39,7 +39,6 @@
     <button class="btn-settings" id="btnThemeToggle" title="Toggle dark mode" aria-label="Toggle dark mode">&#127769;</button>
     <button class="btn-settings" id="btnRefresh" title="Refresh for updates" aria-label="Refresh for updates">&#10227;</button>
     <button class="btn-settings" id="btnSettings" title="Settings" aria-label="Settings">&#9881;</button>
-    <button class="btn-settings" id="btnHelp" title="Help (?)" aria-label="Help">?</button>
   </div>
 
   <div class="install-banner" id="installBanner" hidden>
@@ -496,6 +495,12 @@
     <div class="whatsnew">
       <h2 class="whatsnew-title" data-i18n="whatsnew.title">What's new</h2>
       <p class="whatsnew-sub" data-i18n="whatsnew.sub">Recent changes to Anthkeys</p>
+      <div class="wn-entry">
+        <div class="wn-ver">v23.4 <span class="wn-date">Aug 9, 2026</span></div>
+        <ul>
+          <li>Removed the <kbd>?</kbd> help button from the top bar &mdash; press <kbd>?</kbd> to still open Help.</li>
+        </ul>
+      </div>
       <div class="wn-entry">
         <div class="wn-ver">v23.3 <span class="wn-date">Aug 9, 2026</span></div>
         <ul>
@@ -978,7 +983,7 @@
 
 <div class="toast toast-update" id="updateToast"><span id="updateToastText"></span><a id="updateToastLink" href="#" title="See what's new">What&rsquo;s new &rarr;</a></div>
 
-  <script src="js/anthkeys.js?v=23.3">
+  <script src="js/anthkeys.js?v=23.4">
 </script>
 <div class="ctx-menu" id="ctxMenu">
   <button data-action="copy-anthkey" data-i18n="ctx.copy">Copy anthkey</button>
