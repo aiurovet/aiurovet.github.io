@@ -10,6 +10,7 @@ const i18n = {
     'btn.basic': 'Basic',
     'btn.advanced': 'Advanced',
     'cat.all': 'All',
+    'filter.menu': 'Filters',
 
     'cat.favorites': 'Favorites',
     'cat.collapse': 'Collapse all',
@@ -6901,13 +6902,9 @@ function syncTabChrome() {
   const isWhatsNew = document.querySelector('.panel.active')?.id === 'whatsnew';
   const hide = isWhatsNew ? 'none' : '';
   const sb = document.querySelector('.search-bar');
-  const cb = document.querySelector('.collapse-bar');
-  const pb = document.getElementById('pillBar');
-  const cmp = document.getElementById('compareBar');
+  const fm = document.getElementById('filterMenu');
   if (sb) sb.style.display = hide;
-  if (cb) cb.style.display = hide;
-  if (pb) pb.style.display = hide;
-  if (cmp) cmp.style.display = hide;
+  if (fm) fm.style.display = hide;
 }
 document.getElementById('updateToastLink')?.addEventListener('click', e => {
   e.preventDefault();
@@ -7794,6 +7791,29 @@ onId('collapseAll', 'click', () => {
     toggleAllCategories(false);
   }
 });
+
+// ---- Filter menu dropdown ----
+const filterMenuBtn = document.getElementById('filterMenuBtn');
+const filterMenuEl = document.getElementById('filterMenu');
+if (filterMenuBtn && filterMenuEl) {
+  filterMenuBtn.addEventListener('click', e => {
+    e.stopPropagation();
+    const open = filterMenuEl.classList.toggle('open');
+    filterMenuBtn.setAttribute('aria-expanded', open);
+  });
+  document.addEventListener('click', e => {
+    if (filterMenuEl.classList.contains('open') && !filterMenuEl.contains(e.target)) {
+      filterMenuEl.classList.remove('open');
+      filterMenuBtn.setAttribute('aria-expanded', 'false');
+    }
+  });
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape' && filterMenuEl.classList.contains('open')) {
+      filterMenuEl.classList.remove('open');
+      filterMenuBtn.setAttribute('aria-expanded', 'false');
+    }
+  });
+}
 
 // ---- Category filter pills ----
 const PILL_CATS = ['cat.editing', 'cat.navigation', 'cat.system', 'cat.browser', 'cat.terminal', 'cat.code-editor'];

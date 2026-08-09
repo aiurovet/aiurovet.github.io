@@ -28,7 +28,7 @@
   <script>if (location.protocol === 'file:') document.getElementById('manifestLink').remove();</script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=Roboto:wght@400;500;600;700&family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/anthkeys.css?v=40">
+  <link rel="stylesheet" href="css/anthkeys.css?v=41">
 </head>
 <body class="light style-m3 size-medium font-google-sans">
  <div class="container">
@@ -58,18 +58,23 @@
 
   <div class="search-bar" style="position:relative"><input type="text" id="searchInput" data-i18n-placeholder="search.placeholder" placeholder="Search actions…" autocomplete="off"><div class="search-history" id="searchHistory"></div></div>
   <div class="daily-tip" id="dailyTip" style="display:none"><span class="tip-icon">&#128161;</span><span class="tip-label" data-i18n="tip.label">Tip</span>: <span id="tipContent"></span><button class="tip-close" id="tipClose" title="Dismiss" aria-label="Dismiss tip">&times;</button></div>
-  <div class="pill-bar" id="pillBar"></div>
-  <div class="collapse-bar"><button class="pill" id="collapseAll" data-i18n="cat.collapse">▾ Collapse all</button></div>
-  <div class="compare-bar" id="compareBar">
-    <button class="pill compare-btn" id="btnCompare" data-i18n="cmp.btn">&#8646; Compare</button>
-    <span class="compare-pick" id="comparePick" hidden>
-      <span class="compare-with" data-i18n="cmp.with">with</span>
-      <button class="pill cmp-opt" data-cmp="macos">macOS</button>
-      <button class="pill cmp-opt" data-cmp="linux">Linux</button>
-      <button class="pill cmp-opt" data-cmp="chromeos">ChromeOS</button>
-      <button class="pill cmp-opt" data-cmp="apps">Apps</button>
-    </span>
-    <span class="compare-count" id="compareCount"></span>
+  <div class="filter-menu" id="filterMenu">
+    <button class="pill filter-menu-btn" id="filterMenuBtn" aria-haspopup="true" aria-expanded="false"><span class="filter-menu-icon">&#9776;</span><span data-i18n="filter.menu">Filters</span><span class="filter-menu-caret">&#9662;</span></button>
+    <div class="filter-menu-panel" id="filterMenuPanel">
+      <div class="pill-bar" id="pillBar"></div>
+      <div class="collapse-bar"><button class="pill" id="collapseAll" data-i18n="cat.collapse">&#9662; Collapse all</button></div>
+      <div class="compare-bar" id="compareBar">
+        <button class="pill compare-btn" id="btnCompare" data-i18n="cmp.btn">&#8646; Compare</button>
+        <span class="compare-pick" id="comparePick" hidden>
+          <span class="compare-with" data-i18n="cmp.with">with</span>
+          <button class="pill cmp-opt" data-cmp="macos">macOS</button>
+          <button class="pill cmp-opt" data-cmp="linux">Linux</button>
+          <button class="pill cmp-opt" data-cmp="chromeos">ChromeOS</button>
+          <button class="pill cmp-opt" data-cmp="apps">Apps</button>
+        </span>
+        <span class="compare-count" id="compareCount"></span>
+      </div>
+    </div>
   </div>
   <div class="search-count" id="searchCount"></div>
 
@@ -495,6 +500,12 @@
     <div class="whatsnew">
       <h2 class="whatsnew-title" data-i18n="whatsnew.title">What's new</h2>
       <p class="whatsnew-sub" data-i18n="whatsnew.sub">Recent changes to Anthkeys</p>
+      <div class="wn-entry">
+        <div class="wn-ver">v23.5 <span class="wn-date">Aug 10, 2026</span></div>
+        <ul>
+          <li>Filter, favorite, compare and collapse controls now live in one compact <strong>Filters</strong> menu &mdash; more room for the shortcut list on mobile.</li>
+        </ul>
+      </div>
       <div class="wn-entry">
         <div class="wn-ver">v23.4 <span class="wn-date">Aug 9, 2026</span></div>
         <ul>
@@ -983,7 +994,7 @@
 
 <div class="toast toast-update" id="updateToast"><span id="updateToastText"></span><a id="updateToastLink" href="#" title="See what's new">What&rsquo;s new &rarr;</a></div>
 
-  <script src="js/anthkeys.js?v=23.4">
+  <script src="js/anthkeys.js?v=23.5">
 </script>
 <div class="ctx-menu" id="ctxMenu">
   <button data-action="copy-anthkey" data-i18n="ctx.copy">Copy anthkey</button>
