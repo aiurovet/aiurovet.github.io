@@ -6518,11 +6518,6 @@ i18n.vi = {
     const val = langData[key] || fallback[key];
     if (val) el.setAttribute('placeholder', val);
   });
-  const advBtn = document.getElementById('toggleAdvanced');
-  if (advBtn) {
-    const isAdvanced = document.body.classList.contains('advanced-mode');
-    advBtn.textContent = isAdvanced ? (langData['btn.basic'] || fallback['btn.basic']) : (langData['btn.advanced'] || fallback['btn.advanced']);
-  }
 }
 
 function saveSettings() {
@@ -6538,7 +6533,6 @@ function saveSettings() {
     blur: document.getElementById('toggleBlur')?.classList.contains('on') ?? true,
     keyStyle: document.querySelector('[data-key-style].active')?.dataset.keyStyle || 'spaced',
     modStyle: document.querySelector('[data-mod-style].active')?.dataset.modStyle || 'text',
-    advancedMode: document.body.classList.contains('advanced-mode'),
     compact: document.body.classList.contains('compact'),
     noAnim: document.body.classList.contains('no-anim'),
     updateMode: document.querySelector('[data-update-mode].active')?.dataset.updateMode || 'auto'
@@ -6661,15 +6655,6 @@ function loadSettings() {
     }
 
     if (typeof renderAnthkeys === 'function') renderAnthkeys();
-
-    if (data.advancedMode) {
-      document.body.classList.add('advanced-mode');
-      document.querySelectorAll('.panel .advanced').forEach(r => r.classList.add('show'));
-      const curLang = document.querySelector('[data-lang].active')?.dataset.lang || 'en';
-      const langData = i18n[curLang === 'auto' ? 'en' : curLang] || i18n.en;
-      const advBtn = document.getElementById('toggleAdvanced');
-      if (advBtn) advBtn.textContent = data.advancedMode ? (langData['btn.basic'] || 'Basic') : (langData['btn.advanced'] || 'Advanced');
-    }
 
     if (data.compact) {
       document.body.classList.add('compact');
@@ -7353,15 +7338,8 @@ document.querySelectorAll('[data-font]').forEach(btn => {
   });
 });
 
-onId('toggleAdvanced', 'click', function() {
-  const isAdvanced = document.body.classList.toggle('advanced-mode');
-  const show = isAdvanced ? 'show' : '';
-  const hide = isAdvanced ? '' : 'show';
-  document.querySelectorAll('.panel .advanced').forEach(r => r.classList.toggle('show', isAdvanced));
-  document.querySelectorAll('.tab').forEach(t => t.style.display = '');
-  const curLang = document.querySelector('[data-lang].active')?.dataset.lang || 'en';
-  const langData = i18n[curLang === 'auto' ? 'en' : curLang] || i18n.en;
-  this.textContent = isAdvanced ? (langData['btn.basic'] || 'Basic') : (langData['btn.advanced'] || 'Advanced');
+onId('toggleAnim', 'click', function() {
+  document.body.classList.toggle('no-anim');
   saveSettings();
 });
 
@@ -7441,13 +7419,6 @@ onId('toggleCompact', 'click', function() {
   const on = this.classList.toggle('on');
   this.setAttribute('aria-checked', on);
   document.body.classList.toggle('compact', on);
-  saveSettings();
-});
-
-onId('toggleAnim', 'click', function() {
-  const on = this.classList.toggle('on');
-  this.setAttribute('aria-checked', on);
-  document.body.classList.toggle('no-anim', on);
   saveSettings();
 });
 
