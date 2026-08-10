@@ -304,6 +304,7 @@
     .overlay { display: none; position: fixed; inset: 0; background: rgba(0,0,0,.4); backdrop-filter: blur(8px); z-index: 300; align-items: center; justify-content: center; padding: 2rem; }
     .overlay.open { display: flex; }
     .modal { position: relative; background: var(--surface); border-radius: var(--radius); padding: 0 1.75rem 1.75rem; min-width: 300px; max-width: 400px; width: auto; max-height: 90vh; display: flex; flex-direction: column; overflow: hidden; box-shadow: var(--shadow-lg); transition: background .3s; }
+    @media (max-width: 480px) { .overlay { padding: 1rem; } .modal { min-width: 0; max-width: 100%; padding: 0 1.25rem 1.25rem; } }
     .modal-header { display: flex; align-items: center; justify-content: space-between; padding: .75rem 0 .5rem; }
     .modal-header h2 { padding: 0; }
     .modal-close { width: 1.8rem; height: 1.8rem; border: none; background: var(--accent-1); cursor: pointer; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-left: auto; box-shadow: var(--shadow); outline: none; -webkit-tap-highlight-color: transparent; appearance: none; -webkit-appearance: none; position: relative; padding: 0; }
@@ -313,7 +314,9 @@
     .close-x::after { transform: rotate(-45deg); }
     .modal-close:hover { background: var(--accent-2); }
     .modal kbd, .modal .drop-zone, .modal button:not(.accent-opt), .modal div:not(.setting-body) { border: none !important; }
-    .settings-panel.active { flex: 1; overflow-y: auto; min-height: 0; }
+    .settings-panel.active { flex: 1; overflow-y: auto; overflow-x: hidden; min-height: 0; }
+    .settings-panel code { word-break: break-word; overflow-wrap: anywhere; }
+    .settings-panel li, .settings-panel p { overflow-wrap: anywhere; }
     .settings-tabs { display: flex; gap: .4rem; margin: 1.5rem 0 1rem; }
     .settings-tab { padding: .4rem .9rem; font-size: .8rem; font-weight: 500; background: var(--surface-variant); color: var(--text-variant); border: none; border-radius: var(--radius-tab); cursor: pointer; transition: all .15s; }
     .settings-tab:active { transform: scale(.96); }
