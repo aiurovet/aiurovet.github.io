@@ -153,6 +153,7 @@ const i18n = {
     'note.equals': '= Command', 'note.win': '= Windows key', 'note.super': '= Windows/Command key', 'note.search': '= Launcher key',
     'dict.toggle': '\u2328 Key Legend',
     'dict.head': 'Key Legend',
+    'dict.key': 'Key',
     'tab.apps': 'Apps',
     'whatsnew.title': "What's new",
     'whatsnew.sub': 'Recent changes to Anthkeys',
