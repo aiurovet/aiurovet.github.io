@@ -47,6 +47,8 @@ const i18n = {
     'setting.mod-style': 'OS modifier labels',
     'setting.blur': 'Background blur',
     'setting.compact': 'Compact mode',
+    'setting.tip': 'Daily tip',
+    'tip.label': 'Show a daily shortcut tip',
     'setting.animations': 'Animations',
     'animations.label': 'Reduce motion',
     'setting.custom-anthkeys': 'Custom shortcuts',
@@ -6560,6 +6562,7 @@ function saveSettings() {
     modStyle: document.querySelector('[data-mod-style].active')?.dataset.modStyle || 'text',
     compact: document.body.classList.contains('compact'),
     noAnim: document.body.classList.contains('no-anim'),
+    tip: document.getElementById('toggleTip')?.classList.contains('on') ?? true,
     updateMode: document.querySelector('[data-update-mode].active')?.dataset.updateMode || 'auto'
   };
   if (data.accent === 'custom' || (activeAccent && !activeAccent.dataset.accent)) {
@@ -6705,6 +6708,16 @@ function loadSettings() {
         toggleAnim.classList.add('on');
         toggleAnim.setAttribute('aria-checked', 'true');
       }
+    }
+
+    if (data.tip !== undefined && data.tip === false) {
+      const toggleTip = document.getElementById('toggleTip');
+      if (toggleTip) {
+        toggleTip.classList.remove('on');
+        toggleTip.setAttribute('aria-checked', 'false');
+      }
+      const dailyTip = document.getElementById('dailyTip');
+      if (dailyTip) dailyTip.style.display = 'none';
     }
 
   } catch(e) { }
@@ -7491,6 +7504,13 @@ onId('toggleCompact', 'click', function() {
   saveSettings();
 });
 
+onId('toggleTip', 'click', function() {
+  const on = this.classList.toggle('on');
+  this.setAttribute('aria-checked', on);
+  document.getElementById('dailyTip').style.display = on ? '' : 'none';
+  saveSettings();
+});
+
 onId('btnAddCustom', 'click', () => {
   const actionInput = document.getElementById('customActionInput');
   const anthkeyInput = document.getElementById('customAnthkeyInput');
@@ -7519,7 +7539,7 @@ document.querySelectorAll('.reset-btn').forEach(btn => {
     const setting = btn.dataset.reset;
     const defaults = {
       language: 'auto',       keyStyle: 'spaced', modStyle: 'text',
-      blur: true, compact: false, noAnim: false,
+      blur: true, compact: false, noAnim: false, tip: true,
       theme: 'light', accent: 'gold', style: 'm3',
       size: 'medium', font: 'google-sans', updateMode: 'auto'
     };
@@ -7531,8 +7551,8 @@ document.querySelectorAll('.reset-btn').forEach(btn => {
       const autoBtn = document.querySelector('[data-lang="auto"]');
       if (autoBtn) autoBtn.classList.add('active');
       applyLanguage(navigator.language.split('-')[0] || 'en');
-    } else if (setting === 'blur' || setting === 'compact' || setting === 'noAnim') {
-      const toggleId = setting === 'blur' ? 'toggleBlur' : setting === 'compact' ? 'toggleCompact' : 'toggleAnim';
+    } else if (setting === 'blur' || setting === 'compact' || setting === 'noAnim' || setting === 'tip') {
+      const toggleId = setting === 'blur' ? 'toggleBlur' : setting === 'compact' ? 'toggleCompact' : setting === 'noAnim' ? 'toggleAnim' : 'toggleTip';
       const toggle = document.getElementById(toggleId);
       if (toggle) {
         toggle.classList.toggle('on', val);
@@ -7541,6 +7561,10 @@ document.querySelectorAll('.reset-btn').forEach(btn => {
       if (setting === 'blur') document.body.classList.toggle('noblur', !val);
       if (setting === 'compact') document.body.classList.toggle('compact', val);
       if (setting === 'noAnim') document.body.classList.toggle('no-anim', val);
+      if (setting === 'tip') {
+        const dailyTip = document.getElementById('dailyTip');
+        if (dailyTip) dailyTip.style.display = val ? '' : 'none';
+      }
     } else if (setting === 'theme') {
       document.querySelectorAll('.theme-opt[data-theme]').forEach(t => t.classList.remove('active'));
       const defBtn = document.querySelector('.theme-opt[data-theme="light"]');
@@ -8351,6 +8375,12 @@ function showDailyTip() {
   const tipEl = document.getElementById('dailyTip');
   const contentEl = document.getElementById('tipContent');
   if (!tipEl || !contentEl) return;
+
+  let tipEnabled = true;
+  try {
+    tipEnabled = JSON.parse(lsGet('anthkeys-settings') || '{}').tip !== false;
+  } catch(e) { }
+  if (!tipEnabled) return;
 
   const today = new Date().toDateString();
   const lastDate = lsGet('anthkeys-tip-date', '');

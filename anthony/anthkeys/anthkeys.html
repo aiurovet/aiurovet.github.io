@@ -28,7 +28,7 @@
   <script>if (location.protocol === 'file:') document.getElementById('manifestLink').remove();</script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=Roboto:wght@400;500;600;700&family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/anthkeys.css?v=49">
+  <link rel="stylesheet" href="css/anthkeys.css?v=50">
 </head>
 <body class="light style-m3 size-medium font-google-sans">
  <div class="container">
@@ -590,6 +590,15 @@
         </div>
       </div>
       <div class="setting-group">
+        <h2 data-i18n="setting.tip">Daily tip <button class="reset-btn" data-reset="tip" title="Reset to default">↺</button></h2>
+        <div class="setting-body">
+          <div class="toggle-row">
+            <label for="toggleTip" data-i18n="tip.label">Show a daily shortcut tip</label>
+            <button class="toggle on" id="toggleTip" role="switch" aria-checked="true"></button>
+          </div>
+        </div>
+      </div>
+      <div class="setting-group">
         <h2 data-i18n="setting.custom-anthkeys">Custom shortcuts</h2>
         <div class="setting-body">
           <div id="customAnthkeysList"></div>
@@ -1001,7 +1010,7 @@
   </div>
 </div>
 
-  <script src="js/anthkeys.js?v=23.5.9">
+  <script src="js/anthkeys.js?v=23.5.16">
 </script>
 <div class="ctx-menu" id="ctxMenu">
   <button data-action="copy-anthkey" data-i18n="ctx.copy">Copy anthkey</button>
