@@ -51,6 +51,8 @@ const i18n = {
     'animations.label': 'Reduce motion',
     'setting.custom-anthkeys': 'Custom shortcuts',
     'setting.about': 'About',
+    'about.site': 'About the website',
+    'about.site-desc': 'Anthkeys is a searchable keyboard-shortcut reference for Windows, macOS, Linux, ChromeOS and popular apps. It works offline as a PWA.',
     'compact.label': 'Compact display',
     'custom.none': 'No custom shortcuts yet',
     'custom.action-placeholder': 'Action name',
