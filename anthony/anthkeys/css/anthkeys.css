@@ -446,8 +446,7 @@
   .panel { backdrop-filter: none !important; -webkit-backdrop-filter: none !important; background: var(--surface-variant) !important; border-color: var(--outline-variant) !important; }
   .panel::before { display: none !important; }
   .panel::after { display: none !important; }
-  .daily-tip { background: rgba(255,255,255,.85) !important; backdrop-filter: blur(16px) !important; -webkit-backdrop-filter: blur(16px) !important; }
-  body.dark .daily-tip { background: rgba(20,20,26,.88) !important; }
+  .tab, .pill, .note, .setting-group, .top-bar, .hint, .daily-tip { background: var(--surface-variant) !important; backdrop-filter: none !important; -webkit-backdrop-filter: none !important; }
   .tab.active { background: linear-gradient(135deg, var(--accent-1), var(--accent-2)) !important; color: var(--on-primary) !important; }
   .filter-menu-btn, .search-bar input, #searchInput, .dict-toggle, #dictToggle, .dict-panel, #dictPanel { background: rgba(255,255,255,.32) !important; backdrop-filter: blur(16px) !important; -webkit-backdrop-filter: blur(16px) !important; }
   body.dark .filter-menu-btn, body.dark .search-bar input, body.dark #searchInput, body.dark .dict-toggle, body.dark #dictToggle, body.dark .dict-panel, body.dark #dictPanel { background: rgba(20,20,26,.52) !important; }
