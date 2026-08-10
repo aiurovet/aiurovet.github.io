@@ -50,6 +50,7 @@ const i18n = {
     'setting.animations': 'Animations',
     'animations.label': 'Reduce motion',
     'setting.custom-anthkeys': 'Custom shortcuts',
+    'setting.about': 'About',
     'compact.label': 'Compact display',
     'custom.none': 'No custom shortcuts yet',
     'custom.action-placeholder': 'Action name',
@@ -151,7 +152,6 @@ const i18n = {
     'dict.toggle': '\u2328 Key Legend',
     'dict.head': 'Key Legend',
     'tab.apps': 'Apps',
-    'tab.whatsnew': "What's new",
     'whatsnew.title': "What's new",
     'whatsnew.sub': 'Recent changes to Anthkeys',
     'cat.vscode': 'VS Code',
@@ -432,6 +432,7 @@ i18n.ar = {
     'setting.animations': 'الرسوم المتحركة',
     'animations.label': 'تقليل الحركة',
     'setting.custom-anthkeys': 'اختصارات مخصصة',
+    'setting.about': 'حول',
     'compact.label': 'عرض مضغوط',
     'custom.none': 'لا توجد اختصارات مخصصة حتى الآن',
     'custom.action-placeholder': 'اسم الفعل',
@@ -743,6 +744,7 @@ i18n.cs = {
     'setting.animations': 'Animace',
     'animations.label': 'Snižte pohyb',
     'setting.custom-anthkeys': 'Vlastní zkratky',
+    'setting.about': 'O aplikaci',
     'compact.label': 'Kompaktní displej',
     'custom.none': 'Zatím žádné vlastní zkratky',
     'custom.action-placeholder': 'Název akce',
@@ -1054,6 +1056,7 @@ i18n.da = {
     'setting.animations': 'Animationer',
     'animations.label': 'Reducer bevægelse',
     'setting.custom-anthkeys': 'Brugerdefinerede genveje',
+    'setting.about': 'Om',
     'compact.label': 'Kompakt display',
     'custom.none': 'Ingen brugerdefinerede genveje endnu',
     'custom.action-placeholder': 'Handlingsnavn',
@@ -1365,6 +1368,7 @@ i18n.de = {
     'setting.animations': 'Animationen',
     'animations.label': 'Bewegung reduzieren',
     'setting.custom-anthkeys': 'Benutzerdefinierte Kürzel',
+    'setting.about': 'Über',
     'compact.label': 'Kompakte Ansicht',
     'custom.none': 'Keine benutzerdefinierten Kürzel',
     'custom.action-placeholder': 'Aktionsname',
@@ -1676,6 +1680,7 @@ i18n.es = {
     'setting.animations': 'animaciones',
     'animations.label': 'Reducir el movimiento',
     'setting.custom-anthkeys': 'Atajos personalizados',
+    'setting.about': 'Acerca de',
     'compact.label': 'Vista compacta',
     'custom.none': 'No hay atajos personalizados',
     'custom.action-placeholder': 'Nombre de la acción',
@@ -1987,6 +1992,7 @@ i18n.fi = {
     'setting.animations': 'Animaatiot',
     'animations.label': 'Vähennä liikettä',
     'setting.custom-anthkeys': 'Mukautetut pikanäppäimet',
+    'setting.about': 'Tietoja',
     'compact.label': 'Kompakti näyttö',
     'custom.none': 'Ei vielä mukautettuja pikanäppäimiä',
     'custom.action-placeholder': 'Toiminnon nimi',
@@ -2298,6 +2304,7 @@ i18n.fr = {
     'setting.animations': 'Animations',
     'animations.label': 'Réduire les mouvements',
     'setting.custom-anthkeys': 'Raccourcis personnalisés',
+    'setting.about': 'À propos',
     'compact.label': 'Affichage compact',
     'custom.none': 'Aucun raccourci personnalisé',
     'custom.action-placeholder': 'Nom de l’action',
@@ -2609,6 +2616,7 @@ i18n.hi = {
     'setting.animations': 'एनिमेशन',
     'animations.label': 'मोशन घटाएं',
     'setting.custom-anthkeys': 'कस्टम शॉर्टकट',
+    'setting.about': 'इसके बारे में',
     'compact.label': 'कंपैक्ट डिस्प्ले',
     'custom.none': 'अभी तक कोई कस्टम शॉर्टकट नहीं',
     'custom.action-placeholder': 'क्रिया का नाम',
@@ -2920,6 +2928,7 @@ i18n.hu = {
     'setting.animations': 'Animációk',
     'animations.label': 'Csökkentse a mozgást',
     'setting.custom-anthkeys': 'Egyéni parancsikonok',
+    'setting.about': 'Névjegy',
     'compact.label': 'Kompakt kijelző',
     'custom.none': 'Még nincsenek egyéni parancsikonok',
     'custom.action-placeholder': 'Művelet neve',
@@ -3231,6 +3240,7 @@ i18n.it = {
     'setting.animations': 'Animazioni',
     'animations.label': 'Ridurre il movimento',
     'setting.custom-anthkeys': 'Scorciatoie personalizzate',
+    'setting.about': 'Informazioni',
     'compact.label': 'Vista compatta',
     'custom.none': 'Nessuna scorciatoia personalizzata',
     'custom.action-placeholder': 'Nome azione',
@@ -3542,6 +3552,7 @@ i18n.ja = {
     'setting.animations': 'アニメーション',
     'animations.label': '動きを減らす',
     'setting.custom-anthkeys': 'カスタムショートカット',
+    'setting.about': 'このアプリについて',
     'compact.label': 'コンパクト表示',
     'custom.none': 'カスタムショートカットはまだありません',
     'custom.action-placeholder': 'アクション名',
@@ -3853,6 +3864,7 @@ i18n.ko = {
     'setting.animations': '애니메이션',
     'animations.label': '움직임 줄이기',
     'setting.custom-anthkeys': '맞춤 단축키',
+    'setting.about': '정보',
     'compact.label': '압축 표시',
     'custom.none': '아직 맞춤 단축키가 없습니다.',
     'custom.action-placeholder': '액션 이름',
@@ -4164,6 +4176,7 @@ i18n.nl = {
     'setting.animations': 'Animaties',
     'animations.label': 'Verminder beweging',
     'setting.custom-anthkeys': 'Aangepaste snelkoppelingen',
+    'setting.about': 'Over',
     'compact.label': 'Compact scherm',
     'custom.none': 'Nog geen aangepaste snelkoppelingen',
     'custom.action-placeholder': 'Naam van actie',
@@ -4475,6 +4488,7 @@ i18n.no = {
     'setting.animations': 'Animasjoner',
     'animations.label': 'Reduser bevegelse',
     'setting.custom-anthkeys': 'Egendefinerte snarveier',
+    'setting.about': 'Om',
     'compact.label': 'Kompakt display',
     'custom.none': 'Ingen egendefinerte snarveier ennå',
     'custom.action-placeholder': 'Handlingsnavn',
@@ -4786,6 +4800,7 @@ i18n.pl = {
     'settings.title': 'Ustawienia',
     'animations.label': 'Zmniejsz ruch',
     'setting.custom-anthkeys': 'Niestandardowe skróty',
+    'setting.about': 'O aplikacji',
     'compact.label': 'Widok kompaktowy',
     'custom.none': 'Nie ma jeszcze żadnych niestandardowych skrótów',
     'custom.action-placeholder': 'Nazwa akcji',
@@ -5097,6 +5112,7 @@ i18n.pt = {
     'animations.label': 'Reduzir o movimento',
     'settings.title': 'Configurações',
     'setting.custom-anthkeys': 'Atalhos personalizados',
+    'setting.about': 'Sobre',
     'compact.label': 'Exibição compacta',
     'custom.none': 'Nenhum atalho personalizado',
     'custom.action-placeholder': 'Nome da ação',
@@ -5407,6 +5423,7 @@ i18n.ru = {
     'setting.animations': 'Анимации',
     'animations.label': 'Уменьшите движение',
     'setting.custom-anthkeys': 'Пользовательские ярлыки',
+    'setting.about': 'О приложении',
     'settings.title': 'Настройки',
     'compact.label': 'Компактное отображение',
     'custom.none': 'Пользовательских ярлыков пока нет.',
@@ -5718,6 +5735,7 @@ i18n.sv = {
     'setting.animations': 'Animationer',
     'animations.label': 'Minska rörelse',
     'setting.custom-anthkeys': 'Anpassade genvägar',
+    'setting.about': 'Om',
     'compact.label': 'Kompakt display',
     'settings.title': 'Inställningar',
     'custom.none': 'Inga anpassade genvägar ännu',
@@ -6029,6 +6047,7 @@ i18n.tr = {
     'setting.animations': 'Animasyonlar',
     'animations.label': 'Hareketi azalt',
     'setting.custom-anthkeys': 'Özel kısayollar',
+    'setting.about': 'Hakkında',
     'compact.label': 'Kompakt görünüm',
     'custom.none': 'Henüz özel kısayol yok',
     'settings.title': 'Ayarlar',
@@ -6340,6 +6359,7 @@ i18n.vi = {
     'setting.animations': 'Hoạt hình',
     'animations.label': 'Giảm chuyển động',
     'setting.custom-anthkeys': 'Phím tắt tùy chỉnh',
+    'setting.about': 'Giới thiệu',
     'compact.label': 'Hiển thị gọn',
     'custom.none': 'Chưa có phím tắt tùy chỉnh nào',
     'custom.action-placeholder': 'Tên hành động',
@@ -6879,15 +6899,16 @@ function showUpdateToast(ver) {
   toast._timer = setTimeout(() => toast.classList.remove('show'), 6000);
 }
 function openWhatsNew() {
-  const tab = document.querySelector('.tab[data-tab="whatsnew"]');
-  const pnl = document.getElementById('whatsnew');
-  if (!tab || !pnl) return;
-  document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
-  document.querySelectorAll('.panel').forEach(p => p.classList.remove('active'));
-  tab.classList.add('active');
-  pnl.classList.add('active');
-  const scrollArea = document.querySelector('.scroll-area');
-  if (scrollArea) scrollArea.scrollTo({ top: 0, behavior: 'smooth' });
+  showSettings();
+  const generalTab = document.querySelector('.settings-tab[data-settings-tab="general"]');
+  if (generalTab && !generalTab.classList.contains('active')) {
+    generalTab.click();
+  }
+  const about = document.getElementById('setting-about');
+  if (about) {
+    about.classList.add('open');
+    setTimeout(() => about.scrollIntoView({ behavior: 'smooth', block: 'start' }), 50);
+  }
   const toast = document.getElementById('updateToast');
   if (toast) { toast.classList.remove('show'); clearTimeout(toast._timer); }
   const pill = document.getElementById('appVersion');
@@ -6895,16 +6916,6 @@ function openWhatsNew() {
     pill.classList.remove('pill-new');
     lsRemove('anthkeys-highlight-version');
   }
-  syncTabChrome();
-  applyCategoryFilter();
-}
-function syncTabChrome() {
-  const isWhatsNew = document.querySelector('.panel.active')?.id === 'whatsnew';
-  const hide = isWhatsNew ? 'none' : '';
-  const sb = document.querySelector('.search-bar');
-  const fm = document.getElementById('filterMenu');
-  if (sb) sb.style.display = hide;
-  if (fm) fm.style.display = hide;
 }
 document.getElementById('updateToastLink')?.addEventListener('click', e => {
   e.preventDefault();
@@ -6965,7 +6976,6 @@ document.querySelectorAll('.tab').forEach(tab => {
     tab.classList.add('active');
     const pnl = document.getElementById(tab.dataset.tab);
     if (pnl) pnl.classList.add('active');
-    syncTabChrome();
     const scrollArea = document.querySelector('.scroll-area');
     if (scrollArea) scrollArea.scrollTo({ top: 0, behavior: 'smooth' });
     updateCompareOptions();
