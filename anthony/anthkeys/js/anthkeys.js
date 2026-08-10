@@ -6936,6 +6936,9 @@ document.getElementById('updateToastLink')?.addEventListener('click', e => {
   e.preventDefault();
   openWhatsNew();
 });
+document.getElementById('updateToast')?.addEventListener('click', e => {
+  if (e.target.tagName !== 'A') openWhatsNew();
+});
 function initWhatsNewSelect() {
   const sel = document.getElementById('whatsnewSelect');
   if (!sel) return;

@@ -38,7 +38,10 @@
     <button class="btn-settings" id="btnQuiz" title="Shortcut Quiz" aria-label="Shortcut Quiz">&#10067;</button>
     <button class="btn-settings" id="btnThemeToggle" title="Toggle dark mode" aria-label="Toggle dark mode">&#127769;</button>
     <button class="btn-settings" id="btnRefresh" title="Refresh for updates" aria-label="Refresh for updates">&#10227;</button>
-    <button class="btn-settings" id="btnSettings" title="Settings" aria-label="Settings">&#9881;<span class="settings-badge" id="settingsBadge" hidden></span></button>
+    <span class="btn-settings-wrap" style="position:relative;display:inline-flex;justify-content:center">
+      <button class="btn-settings" id="btnSettings" title="Settings" aria-label="Settings" style="flex:1;min-width:0">&#9881;<span class="settings-badge" id="settingsBadge" hidden></span></button>
+      <div class="toast toast-update" id="updateToast"><span id="updateToastText"></span><a id="updateToastLink" href="#" title="See what's new">What&rsquo;s new &rarr;</a></div>
+    </span>
   </div>
 
   <div class="install-banner" id="installBanner" hidden>
@@ -993,9 +996,7 @@
   </div>
 </div>
 
-<div class="toast toast-update" id="updateToast"><span id="updateToastText"></span><a id="updateToastLink" href="#" title="See what's new">What&rsquo;s new &rarr;</a></div>
-
-  <script src="js/anthkeys.js?v=23.5.3">
+  <script src="js/anthkeys.js?v=23.5.4">
 </script>
 <div class="ctx-menu" id="ctxMenu">
   <button data-action="copy-anthkey" data-i18n="ctx.copy">Copy anthkey</button>
