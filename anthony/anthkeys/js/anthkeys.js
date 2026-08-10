@@ -6812,7 +6812,7 @@ onId('btnRefresh', 'click', refreshForUpdates);
 onId('btnUpdate', 'click', () => {
   const banner = document.getElementById('updateBanner');
   if (banner) banner.hidden = true;
-  if (APP_VERSION > 0) lsSet('anthkeys-last-version', String(APP_VERSION));
+  if (APP_VERSION) lsSet('anthkeys-last-version', String(APP_VERSION));
   refreshForUpdates();
 });
 
@@ -6872,17 +6872,26 @@ loadCustomAnthkeys();
 renderCustomAnthkeys();
 
 // ---- Version badge + update notification ----
-let APP_VERSION = 0;
+let APP_VERSION = '';
+function verCmp(a, b) {
+  const pa = String(a || '').split('.').map(x => parseInt(x) || 0);
+  const pb = String(b || '').split('.').map(x => parseInt(x) || 0);
+  for (let i = 0; i < Math.max(pa.length, pb.length); i++) {
+    const d = (pa[i] || 0) - (pb[i] || 0);
+    if (d) return d < 0 ? -1 : 1;
+  }
+  return 0;
+}
 (function() {
   const verEl = document.getElementById('appVersion');
   const verScript = document.querySelector('script[src*="anthkeys.js"]');
   if (verEl && verScript) {
-    const m = verScript.getAttribute('src').match(/[?&]v=(\d+(?:\.\d+)?)/);
+    const m = verScript.getAttribute('src').match(/[?&]v=(\d+(?:\.\d+){0,2})/);
     if (m) {
-      APP_VERSION = parseFloat(m[1]);
+      APP_VERSION = m[1];
       const span = verEl.querySelector('span') || verEl;
       span.textContent = 'v' + APP_VERSION;
-      if (parseFloat(lsGet('anthkeys-highlight-version')) === APP_VERSION) {
+      if (verCmp(lsGet('anthkeys-highlight-version'), APP_VERSION) === 0) {
         verEl.classList.add('pill-new');
         const badge = document.getElementById('settingsBadge');
         if (badge) badge.hidden = false;
@@ -6951,8 +6960,8 @@ function cachedJsVersion() {
     .then(keysArr => {
       for (const keys of keysArr) {
         for (const req of keys) {
-          const m = req.url.match(/js\/anthkeys\.js\?v=(\d+(?:\.\d+)?)/);
-          if (m) return parseFloat(m[1]);
+          const m = req.url.match(/js\/anthkeys\.js\?v=(\d+(?:\.\d+){0,2})/);
+          if (m) return m[1];
         }
       }
       return null;
@@ -6973,13 +6982,13 @@ function showUpdateNotification() {
   }
 }
 function checkForUpdate() {
-  if (APP_VERSION === 0) return;
-  let last = 0;
-  try { last = parseFloat(lsGet('anthkeys-last-version')) || 0; } catch(e) { }
-  if (last >= APP_VERSION) return;
-  if (last > 0) { showUpdateNotification(); return; }
+  if (!APP_VERSION) return;
+  let last = '';
+  try { last = lsGet('anthkeys-last-version') || ''; } catch(e) { }
+  if (last && verCmp(last, APP_VERSION) >= 0) return;
+  if (last) { showUpdateNotification(); return; }
   cachedJsVersion().then(seed => {
-    if (seed && seed < APP_VERSION) showUpdateNotification();
+    if (seed && verCmp(seed, APP_VERSION) < 0) showUpdateNotification();
     else lsSet('anthkeys-last-version', String(APP_VERSION));
   });
 }
