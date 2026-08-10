@@ -6882,7 +6882,11 @@ let APP_VERSION = 0;
       APP_VERSION = parseFloat(m[1]);
       const span = verEl.querySelector('span') || verEl;
       span.textContent = 'v' + APP_VERSION;
-      if (parseFloat(lsGet('anthkeys-highlight-version')) === APP_VERSION) verEl.classList.add('pill-new');
+      if (parseFloat(lsGet('anthkeys-highlight-version')) === APP_VERSION) {
+        verEl.classList.add('pill-new');
+        const badge = document.getElementById('settingsBadge');
+        if (badge) badge.hidden = false;
+      }
     }
     verEl.addEventListener('click', openWhatsNew);
   }
@@ -6916,6 +6920,8 @@ function openWhatsNew() {
     pill.classList.remove('pill-new');
     lsRemove('anthkeys-highlight-version');
   }
+  const badge = document.getElementById('settingsBadge');
+  if (badge) badge.hidden = true;
 }
 document.getElementById('updateToastLink')?.addEventListener('click', e => {
   e.preventDefault();
@@ -6954,6 +6960,8 @@ function cachedJsVersion() {
     .catch(() => null);
 }
 function showUpdateNotification() {
+  const badge = document.getElementById('settingsBadge');
+  if (badge) badge.hidden = false;
   const mode = (document.querySelector('[data-update-mode].active')?.dataset.updateMode) || 'auto';
   if (mode === 'ask') {
     const banner = document.getElementById('updateBanner');

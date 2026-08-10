@@ -293,6 +293,10 @@
 
     kbd { display: inline-block; padding: .15rem .5rem; font-size: .75rem; font-family: 'Google Sans', 'SFMono-Regular', Consolas, monospace; background: var(--surface-variant); border-radius: 6px; white-space: nowrap; color: var(--text); font-weight: 500; }
     .btn-settings { padding: .5rem .75rem; font-size: 1rem; line-height: 1; color: var(--text-variant); background: var(--surface-variant); border: none; border-radius: 100px; cursor: pointer; transition: all .2s; }
+    .btn-settings { position: relative; }
+    .settings-badge { position: absolute; top: -2px; right: -2px; width: .55rem; height: .55rem; background: var(--accent-1); border: 2px solid var(--surface-variant); border-radius: 50%; animation: badge-pop .5s cubic-bezier(.18,.89,.32,1.28); }
+    .settings-badge[hidden] { display: none; }
+    @keyframes badge-pop { 0% { transform: scale(0); } 70% { transform: scale(1.25); } 100% { transform: scale(1); } }
     .btn-settings:active { transform: scale(.93); }
     .btn-settings:hover { background: var(--outline-variant); color: var(--text); }
     #appVersion.pill-new span { border-color: var(--accent-1) !important; background: linear-gradient(135deg, var(--accent-1), var(--accent-2)) !important; color: var(--on-primary) !important; animation: pill-glow 2s ease-in-out infinite; }

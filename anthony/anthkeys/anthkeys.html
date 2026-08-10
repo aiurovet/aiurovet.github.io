@@ -38,7 +38,7 @@
     <button class="btn-settings" id="btnQuiz" title="Shortcut Quiz" aria-label="Shortcut Quiz">&#10067;</button>
     <button class="btn-settings" id="btnThemeToggle" title="Toggle dark mode" aria-label="Toggle dark mode">&#127769;</button>
     <button class="btn-settings" id="btnRefresh" title="Refresh for updates" aria-label="Refresh for updates">&#10227;</button>
-    <button class="btn-settings" id="btnSettings" title="Settings" aria-label="Settings">&#9881;</button>
+    <button class="btn-settings" id="btnSettings" title="Settings" aria-label="Settings">&#9881;<span class="settings-badge" id="settingsBadge" hidden></span></button>
   </div>
 
   <div class="install-banner" id="installBanner" hidden>
@@ -614,6 +614,7 @@
                   <ul>
                     <li>Filter, favorite, compare and collapse controls now live in one compact <strong>Filters</strong> menu &mdash; more room for the shortcut list on mobile.</li>
                     <li>The What's new page, version badge and update settings moved into a new <strong>About</strong> section in Settings.</li>
+                    <li>Update notifications now pop out of the <strong>Settings</strong> button &mdash; the gear icon shows a badge until you've seen what's new.</li>
                   </ul>
                 </div>
                 <div class="wn-entry">
@@ -994,7 +995,7 @@
 
 <div class="toast toast-update" id="updateToast"><span id="updateToastText"></span><a id="updateToastLink" href="#" title="See what's new">What&rsquo;s new &rarr;</a></div>
 
-  <script src="js/anthkeys.js?v=23.5.1">
+  <script src="js/anthkeys.js?v=23.5.2">
 </script>
 <div class="ctx-menu" id="ctxMenu">
   <button data-action="copy-anthkey" data-i18n="ctx.copy">Copy anthkey</button>
