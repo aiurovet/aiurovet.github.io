@@ -451,6 +451,11 @@
   .filter-menu-btn, .search-bar input, #searchInput, .dict-toggle, #dictToggle, .dict-panel, #dictPanel { background: rgba(255,255,255,.55) !important; backdrop-filter: blur(16px) !important; -webkit-backdrop-filter: blur(16px) !important; }
   body.dark .filter-menu-btn, body.dark .search-bar input, body.dark #searchInput, body.dark .dict-toggle, body.dark #dictToggle, body.dark .dict-panel, body.dark #dictPanel { background: rgba(20,20,26,.68) !important; }
 }
+
+@media (hover: hover) and (pointer: fine) {
+  .filter-menu-btn, .search-bar input, #searchInput, .dict-toggle, #dictToggle, .dict-panel, #dictPanel { background: rgba(255,255,255,.55) !important; backdrop-filter: blur(16px) !important; -webkit-backdrop-filter: blur(16px) !important; }
+  body.dark .filter-menu-btn, body.dark .search-bar input, body.dark #searchInput, body.dark .dict-toggle, body.dark #dictToggle, body.dark .dict-panel, body.dark #dictPanel { background: rgba(20,20,26,.68) !important; }
+}
 tr.dragging { opacity: .4; }
 tr.drag-over { outline: 2px dashed var(--accent-1); outline-offset: -2px; }
 #settingsSearch:focus { border-color: var(--accent-1) !important; }
