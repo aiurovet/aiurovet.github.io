@@ -6921,6 +6921,23 @@ document.getElementById('updateToastLink')?.addEventListener('click', e => {
   e.preventDefault();
   openWhatsNew();
 });
+function initWhatsNewSelect() {
+  const sel = document.getElementById('whatsnewSelect');
+  if (!sel) return;
+  const entries = Array.from(sel.parentElement.querySelectorAll('.wn-entry'));
+  if (!entries.length) return;
+  const verOf = e => (e.querySelector('.wn-ver')?.childNodes[0]?.textContent || '').trim();
+  entries.forEach((e, i) => {
+    const opt = document.createElement('option');
+    opt.value = i;
+    opt.textContent = verOf(e);
+    sel.appendChild(opt);
+  });
+  const show = i => entries.forEach((e, idx) => e.style.display = idx === i ? '' : 'none');
+  sel.addEventListener('change', () => show(parseInt(sel.value)));
+  show(0);
+}
+initWhatsNewSelect();
 function cachedJsVersion() {
   if (!('caches' in window)) return Promise.resolve(null);
   return caches.keys()
