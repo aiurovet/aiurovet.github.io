@@ -364,6 +364,11 @@
     .pill:active { transform: scale(.95); }
     .pill:hover { background: var(--outline-variant); color: var(--text); }
     .pill.active { background: var(--primary); color: var(--on-primary); }
+    body .filter-menu .pill { border: 1px solid rgba(var(--accent-rgb), .45); color: var(--accent-1); background: var(--surface); }
+    body .filter-menu .pill:hover { background: rgba(var(--accent-rgb), .1); color: var(--accent-1); }
+    body .filter-menu .pill.active { background: linear-gradient(135deg, var(--accent-1), var(--accent-2)); color: var(--on-primary); border-color: transparent; }
+    body .filter-menu .pill-bar.fav-mode .pill { background: var(--surface-variant) !important; color: var(--text-variant); border-color: var(--outline-variant); }
+    body .filter-menu .pill-bar.fav-mode .pill[data-cat="favorites"] { background: linear-gradient(135deg, var(--accent-1), var(--accent-2)) !important; color: var(--on-primary) !important; border-color: transparent !important; }
     .filter-menu { position: relative; margin-bottom: .4rem; }
     .filter-menu-btn { display: inline-flex; align-items: center; gap: .4rem; }
     .filter-menu-icon { font-size: .85rem; line-height: 1; }
@@ -430,7 +435,7 @@
     .ctx-menu button:hover { background: var(--surface-variant); }
     .ctx-menu .sep { height: 1px; background: var(--outline-variant); margin: .2rem .3rem; }
     @media print { body { padding: .5in; background: #fff !important; --bg-img: none !important; } .top-bar, .search-bar, .dict-toggle, .note, .overlay, .filter-menu, .search-history { display: none !important; } .container { max-width: 100%; } .panel { display: block !important; box-shadow: none; border: 1px solid #ddd; break-inside: avoid; margin-bottom: 1rem; } .panel:not(.active) { display: block !important; } .tabs { display: none !important; } tr:hover td { background: none !important; } }
-    @media (max-width: 480px) { body { padding: .75rem; } h1 { font-size: 1.1rem; margin-left: 0; margin-right: 0; text-align: center; } .top-bar { display: grid; grid-template-columns: repeat(3, 1fr); gap: .35rem; border-radius: 24px; } .top-bar h1 { grid-column: 1 / -1; justify-self: center; } .modal { min-width: unset; width: calc(100vw - 1.5rem); padding: 0 1.25rem 1.25rem; } .modal-header { padding-top: .5rem; } .panel { padding: .75rem; } table { display: block; width: 100%; overflow-x: auto; } th, td { padding: .5rem .4rem; font-size: .72rem; } }
+    @media (max-width: 480px) { body { padding: .75rem; } h1 { font-size: 1.1rem; margin-left: 0; margin-right: 0; text-align: center; } .top-bar { display: grid; grid-template-columns: repeat(3, 1fr); gap: .35rem; border: none; border-radius: 0; background: none; backdrop-filter: none; -webkit-backdrop-filter: none; box-shadow: none; padding: 0; } .top-bar h1 { grid-column: 1 / -1; justify-self: center; } .modal { min-width: unset; width: calc(100vw - 1.5rem); padding: 0 1.25rem 1.25rem; } .modal-header { padding-top: .5rem; } .panel { padding: .75rem; } table { display: block; width: 100%; overflow-x: auto; } th, td { padding: .5rem .4rem; font-size: .72rem; } }
     @media (max-width: 480px) {
       .dict-panel table.dict-table { display: table; width: 100%; overflow-x: visible; }
       .dict-table th, .dict-table td { padding: .3rem .25rem; font-size: .66rem; white-space: nowrap; }
@@ -457,6 +462,7 @@
   .tab.active { background: linear-gradient(135deg, var(--accent-1), var(--accent-2)) !important; color: var(--on-primary) !important; }
   .filter-menu-btn, .search-bar input, #searchInput, .dict-toggle, #dictToggle, .dict-panel, #dictPanel, .dict-table { background: rgba(255,255,255,.55) !important; backdrop-filter: blur(16px) !important; -webkit-backdrop-filter: blur(16px) !important; }
   body.dark .filter-menu-btn, body.dark .search-bar input, body.dark #searchInput, body.dark .dict-toggle, body.dark #dictToggle, body.dark .dict-panel, body.dark #dictPanel, body.dark .dict-table { background: rgba(20,20,26,.68) !important; }
+  @media (max-width: 480px) { .top-bar { background: none !important; border: none !important; border-radius: 0 !important; box-shadow: none !important; padding: 0 !important; } }
 }
 
 @media (hover: hover) and (pointer: fine) {
