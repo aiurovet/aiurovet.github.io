@@ -8625,18 +8625,16 @@ onId('settingsOverlay', 'click', e => {
   if (e.target === e.currentTarget) hideSettings();
 });
 
-// ---- Help overlay ----
-function showHelp() { document.getElementById('helpOverlay')?.classList.add('open'); }
-function hideHelp() { document.getElementById('helpOverlay')?.classList.remove('open'); }
-onId('helpClose', 'click', hideHelp);
-onId('helpOverlay', 'click', e => { if (e.target === e.currentTarget) hideHelp(); });
-document.addEventListener('keydown', e => {
-  if (e.key === 'Escape') hideHelp();
-  if (e.key === '?' && !['INPUT', 'TEXTAREA', 'SELECT'].includes(e.target.tagName)) {
-    e.preventDefault();
-    showHelp();
+// ---- Help (inside Settings) ----
+function showHelp() {
+  showSettings();
+  const g = document.getElementById('setting-help');
+  if (g) {
+    g.closest('.settings-panel').querySelectorAll('.setting-group.open').forEach(x => x.classList.remove('open'));
+    g.classList.add('open');
+    setTimeout(() => g.scrollIntoView({ behavior: 'smooth', block: 'start' }), 60);
   }
-});
+}
 
 // ---- Dark mode quick toggle ----
 onId('btnThemeToggle', 'click', () => {
@@ -9179,6 +9177,8 @@ document.addEventListener('keydown', e => {
     const overlay = document.getElementById('settingsOverlay');
     if (overlay?.classList.contains('open')) {
       hideSettings();
+    } else if (e.key === '?') {
+      showHelp();
     } else {
       showSettings();
     }
