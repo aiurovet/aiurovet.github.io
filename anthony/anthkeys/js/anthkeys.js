@@ -8625,29 +8625,20 @@ onId('settingsOverlay', 'click', e => {
   if (e.target === e.currentTarget) hideSettings();
 });
 
-// ---- Help (in Settings on desktop, popup on touch) ----
+// ---- Help (in Settings on desktop only; removed on mobile) ----
 function isTouchDevice() {
   return window.matchMedia('(hover: none) and (pointer: coarse)').matches;
 }
 function showHelp() {
-  if (isTouchDevice()) {
-    document.getElementById('helpOverlay')?.classList.add('open');
-  } else {
-    showSettings();
-    const g = document.getElementById('setting-help');
-    if (g) {
-      g.closest('.settings-panel').querySelectorAll('.setting-group.open').forEach(x => x.classList.remove('open'));
-      g.classList.add('open');
-      setTimeout(() => g.scrollIntoView({ behavior: 'smooth', block: 'start' }), 60);
-    }
+  if (isTouchDevice()) return;
+  showSettings();
+  const g = document.getElementById('setting-help');
+  if (g) {
+    g.closest('.settings-panel').querySelectorAll('.setting-group.open').forEach(x => x.classList.remove('open'));
+    g.classList.add('open');
+    setTimeout(() => g.scrollIntoView({ behavior: 'smooth', block: 'start' }), 60);
   }
 }
-function hideHelp() { document.getElementById('helpOverlay')?.classList.remove('open'); }
-onId('helpClose', 'click', hideHelp);
-onId('helpOverlay', 'click', e => { if (e.target === e.currentTarget) hideHelp(); });
-document.addEventListener('keydown', e => {
-  if (e.key === 'Escape') document.getElementById('helpOverlay')?.classList.remove('open');
-});
 
 // ---- Dark mode quick toggle ----
 onId('btnThemeToggle', 'click', () => {

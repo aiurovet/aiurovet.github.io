@@ -476,7 +476,6 @@
   body.dark .filter-menu-btn, body.dark .search-bar input, body.dark #searchInput, body.dark .dict-toggle, body.dark #dictToggle, body.dark .dict-panel, body.dark #dictPanel, body.dark .dict-table { background: rgba(20,20,26,.68) !important; }
   .daily-tip, .note { background: rgba(255,255,255,.55) !important; backdrop-filter: blur(16px) !important; -webkit-backdrop-filter: blur(16px) !important; }
   body.dark .daily-tip, body.dark .note, body.midnight .daily-tip, body.midnight .note { background: rgba(20,20,26,.55) !important; }
-  #helpOverlay { display: none !important; }
 }
 tr.dragging { opacity: .4; }
 tr.drag-over { outline: 2px dashed var(--accent-1); outline-offset: -2px; }
