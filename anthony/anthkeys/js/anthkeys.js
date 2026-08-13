@@ -5,6 +5,7 @@ function onId(id, event, handler) {
 
 const i18n = {
   en: {
+    'mod.label': 'Modifier',
     'title': 'Shortcuts',
     'page.title': 'Shortcuts - Anthkeys',
     'btn.basic': 'Basic',
@@ -292,6 +293,7 @@ const i18n = {
 }
 
 i18n.ar = {
+    'mod.label': 'مُعدِّل',
     'title': 'اختصارات',
     'subtitle': 'اختصارات شائعة لكل منصة',
     'cat.editing': 'تحرير',
@@ -680,6 +682,7 @@ i18n.ar = {
 };;
 
 i18n.cs = {
+    'mod.label': 'Modifikátor',
     'title': 'Zkratky',
     'subtitle': 'Vanliga genvägar för varje plattform',
     'cat.editing': 'Redigering',
@@ -1068,6 +1071,7 @@ i18n.cs = {
 };;
 
 i18n.da = {
+    'mod.label': 'Modifikator',
     'title': 'Genveje',
     'subtitle': 'Fælles genveje til hver platform',
     'cat.editing': 'Redigering',
@@ -1456,6 +1460,7 @@ i18n.da = {
 };;
 
 i18n.de = {
+    'mod.label': 'Modifikator',
     'title': 'Kurzbefehle',
     'subtitle': 'Häufige Tastenkürzel für jede Plattform',
     'cat.editing': 'Bearbeiten',
@@ -1844,6 +1849,7 @@ i18n.de = {
 };;
 
 i18n.es = {
+    'mod.label': 'Modificador',
     'title': 'Atajos',
     'subtitle': 'Atajos comunes para cada plataforma',
     'cat.editing': 'Edición',
@@ -2232,6 +2238,7 @@ i18n.es = {
 };;
 
 i18n.fi = {
+    'mod.label': 'Muokkausnäppäin',
     'title': 'Pikanäppäimet',
     'subtitle': 'Yhteiset pikakuvakkeet jokaiselle alustalle',
     'cat.editing': 'Muokkaus',
@@ -2620,6 +2627,7 @@ i18n.fi = {
 };;
 
 i18n.fr = {
+    'mod.label': 'Modificateur',
     'title': 'Raccourcis',
     'subtitle': 'Raccourcis courants pour chaque plateforme',
     'cat.editing': 'Édition',
@@ -3009,6 +3017,7 @@ i18n.fr = {
 };
 
 i18n.hi = {
+    'mod.label': 'संशोधक',
     'title': 'शॉर्टकट',
     'subtitle': 'हर प्लेटफ़ॉर्म के लिए सामान्य शॉर्टकट',
     'cat.editing': 'संपादन',
@@ -3397,6 +3406,7 @@ i18n.hi = {
 };;
 
 i18n.hu = {
+    'mod.label': 'Módosító',
     'title': 'Billentyűparancsok',
     'subtitle': 'Közös parancsikonok minden platformhoz',
     'cat.editing': 'Szerkesztés',
@@ -3785,6 +3795,7 @@ i18n.hu = {
 };;
 
 i18n.it = {
+    'mod.label': 'Modificatore',
     'title': 'Scorciatoie',
     'subtitle': 'Scorciatoie comuni per ogni piattaforma',
     'cat.editing': 'Modifica',
@@ -4173,6 +4184,7 @@ i18n.it = {
 };;
 
 i18n.ja = {
+    'mod.label': '修飾キー',
     'title': 'ショートカット',
     'subtitle': '各プラットフォームの一般的なショートカット',
     'cat.editing': '編集',
@@ -4561,6 +4573,7 @@ i18n.ja = {
 };;
 
 i18n.ko = {
+    'mod.label': '보조 키',
     'title': '단축키',
     'subtitle': '각 플래폼의 일반적인 단축키',
     'cat.editing': '편집',
@@ -4949,6 +4962,7 @@ i18n.ko = {
 };;
 
 i18n.nl = {
+    'mod.label': 'Modifier',
     'title': 'Sneltoetsen',
     'subtitle': 'Algemene snelkoppelingen voor elk platform',
     'cat.editing': 'Bewerken',
@@ -5337,6 +5351,7 @@ i18n.nl = {
 };;
 
 i18n.no = {
+    'mod.label': 'Modifikator',
     'title': 'Snarveier',
     'subtitle': 'Vanlige snarveier for hver plattform',
     'cat.editing': 'Redigering',
@@ -5725,6 +5740,7 @@ i18n.no = {
 };;
 
 i18n.pl = {
+    'mod.label': 'Modyfikator',
     'title': 'Skróty',
     'subtitle': 'Typowe skróty dla każdej platformy',
     'cat.editing': 'Edycja',
@@ -6113,6 +6129,7 @@ i18n.pl = {
 };;
 
 i18n.pt = {
+    'mod.label': 'Modificador',
     'title': 'Atalhos',
     'subtitle': 'Atalhos comuns para todas as plataformas',
     'cat.editing': 'Edição',
@@ -6501,6 +6518,7 @@ i18n.pt = {
 };;
 
 i18n.ru = {
+    'mod.label': 'Модификатор',
     'title': 'Сочетания клавиш',
     'subtitle': 'Основные сочетания для каждой платформы',
     'cat.editing': 'Правка',
@@ -6889,6 +6907,7 @@ i18n.ru = {
 };;
 
 i18n.sv = {
+    'mod.label': 'Modifierare',
     'title': 'Kortkommandon',
     'subtitle': 'Vanliga genvägar för varje plattform',
     'cat.editing': 'Redigering',
@@ -7277,6 +7296,7 @@ i18n.sv = {
 };;
 
 i18n.tr = {
+    'mod.label': 'Değiştirici',
     'title': 'Kısayollar',
     'subtitle': 'Her platform için ortak kısayollar',
     'cat.editing': 'Düzenleme',
@@ -7666,6 +7686,7 @@ i18n.tr = {
 };
 
 i18n.vi = {
+    'mod.label': 'Phím bổ trợ',
     'title': 'Lối tắt',
     'subtitle': 'Phím tắt phổ biến cho mọi nền tảng',
     'cat.editing': 'Chỉnh sửa',
@@ -8554,9 +8575,23 @@ document.querySelectorAll('.tab').forEach(tab => {
     const scrollArea = document.querySelector('.scroll-area');
     if (scrollArea) scrollArea.scrollTo({ top: 0, behavior: 'smooth' });
     updateCompareOptions();
+    buildModBar();
     applyCategoryFilter();
   });
 });
+
+// ---- Back to top ----
+(function () {
+  const btn = document.getElementById('backToTop');
+  const sc = document.querySelector('.scroll-area');
+  if (!btn || !sc) return;
+  sc.addEventListener('scroll', () => {
+    btn.classList.toggle('show', sc.scrollTop > 320);
+  }, { passive: true });
+  btn.addEventListener('click', () => {
+    sc.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+})();
 
 // ---- Compare mode ----
 onId('btnCompare', 'click', () => {
@@ -9478,6 +9513,55 @@ function applyCategoryFilter() {
   applyView();
 }
 
+// ---- Modifier filter pills ----
+const MOD_LABELS = { ctrl: 'Ctrl', cmd: 'Cmd', alt: 'Alt', option: 'Option', shift: 'Shift', win: 'Win', super: 'Super', search: 'Search', fn: 'Fn' };
+const MOD_ORDER = ['ctrl', 'cmd', 'alt', 'option', 'shift', 'win', 'super', 'search', 'fn'];
+const MOD_KNOWN = new Set(MOD_ORDER);
+function rowModifiers(tr) {
+  if (tr.dataset.filterMods) return tr.dataset.filterMods;
+  const td = tr.querySelector('td:last-child');
+  const kbs = ((td && td.dataset.raw) || '').match(/<kbd>[^<]*<\/kbd>/g) || [];
+  if (!kbs.length && td) td.querySelectorAll('kbd').forEach(k => kbs.push('<kbd>' + k.textContent + '</kbd>'));
+  const found = new Set();
+  kbs.forEach(m => {
+    const t = m.replace(/<[^>]*>/g, '').trim().toLowerCase();
+    if (MOD_KNOWN.has(t)) found.add(t);
+  });
+  const mods = MOD_ORDER.filter(m => found.has(m));
+  tr.dataset.filterMods = mods.join(',');
+  return tr.dataset.filterMods;
+}
+function buildModBar() {
+  const bar = document.getElementById('modBar');
+  if (!bar) return;
+  const panel = document.querySelector('.panel.active');
+  const found = new Set();
+  if (panel) {
+    panel.querySelectorAll('tbody tr:not(.category)').forEach(tr => {
+      rowModifiers(tr).split(',').filter(Boolean).forEach(m => found.add(m));
+    });
+  }
+  bar.querySelectorAll('button.pill').forEach(b => b.remove());
+  MOD_ORDER.forEach(m => {
+    if (!found.has(m)) return;
+    const btn = document.createElement('button');
+    btn.className = 'pill';
+    btn.dataset.mod = m;
+    btn.textContent = MOD_LABELS[m] || m;
+    bar.appendChild(btn);
+  });
+}
+const modBarEl = document.getElementById('modBar');
+if (modBarEl) {
+  modBarEl.addEventListener('click', e => {
+    const pill = e.target.closest('.pill');
+    if (!pill || !pill.dataset.mod) return;
+    pill.classList.toggle('active');
+    applyCategoryFilter();
+  });
+}
+buildModBar();
+
 // ---- Filtering: search + pills apply to the active tab only ----
 let comparePlatform = null;
 function getActionKey(tr) {
@@ -9522,10 +9606,11 @@ function updateCompareCount(panel) {
 function applyView() {
   const input = document.getElementById('searchInput');
   const q = input ? input.value.trim().toLowerCase() : '';
-  const active = new Set([...document.querySelectorAll('.pill.active')].map(p => p.dataset.cat));
+  const active = new Set([...document.querySelectorAll('.pill[data-cat].active')].map(p => p.dataset.cat));
   const showAll = active.has('all');
   const favOnly = active.has('favorites');
   const activeCats = new Set([...active].filter(c => c !== 'all' && c !== 'favorites'));
+  const activeMods = new Set([...document.querySelectorAll('#modBar .pill.active')].map(p => p.dataset.mod));
   const panel = document.querySelector('.panel.active');
   if (!panel) return;
   const compareMap = comparePlatform ? buildShortcutMap(comparePlatform) : null;
@@ -9534,7 +9619,8 @@ function applyView() {
     const cat = getRowCategory(tr);
     const pinned = pinnedIds.includes(getPinId(tr));
     const catOk = favOnly ? pinned : (showAll || (cat && activeCats.has(cat)));
-    const rowOk = catOk && (!favOnly || pinned) && (!compareMap || (compareMap[getActionKey(tr)] !== normalizeShortcut(tr.querySelector('td:last-child')?.dataset.raw || '')));
+    const modOk = !activeMods.size || rowModifiers(tr).split(',').filter(Boolean).some(m => activeMods.has(m));
+    const rowOk = catOk && (!favOnly || pinned) && modOk && (!compareMap || (compareMap[getActionKey(tr)] !== normalizeShortcut(tr.querySelector('td:last-child')?.dataset.raw || '')));
     tr.dataset.filtered = rowOk ? '' : '1';
     if (!rowOk) { tr.style.display = 'none'; return; }
     if (q) {
