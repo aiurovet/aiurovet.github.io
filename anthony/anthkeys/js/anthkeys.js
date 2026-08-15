@@ -9932,9 +9932,17 @@ function setOfflineIndicator(off) {
   const pill = document.getElementById('offlinePill');
   if (pill) pill.hidden = !off;
 }
-window.addEventListener('online', function() { setOfflineIndicator(false); });
+function probeConnectivity() {
+  const ctrl = new AbortController();
+  const t = setTimeout(function() { ctrl.abort(); }, 6000);
+  fetch('sw.js?probe=' + Date.now(), { cache: 'no-store', mode: 'no-cors', signal: ctrl.signal })
+    .then(function() { clearTimeout(t); setOfflineIndicator(false); })
+    .catch(function(err) { clearTimeout(t); if (err && err.name === 'AbortError') return; setOfflineIndicator(true); });
+}
+window.addEventListener('online', function() { setOfflineIndicator(false); probeConnectivity(); });
 window.addEventListener('offline', function() { setOfflineIndicator(true); });
-setOfflineIndicator(!navigator.onLine);
+setInterval(probeConnectivity, 15000);
+probeConnectivity();
 onId('offlinePill', 'click', function() {
   showToastMsg(t('offline.toast'));
 });
