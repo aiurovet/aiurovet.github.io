@@ -626,6 +626,12 @@
                 <p class="whatsnew-sub" data-i18n="whatsnew.sub">Recent changes to Anthkeys</p>
                 <select id="whatsnewSelect" aria-label="Version" style="width:100%;padding:.45rem .7rem;border:1px solid var(--outline-variant);border-radius:var(--radius-sm);background:var(--surface);color:var(--text);font:var(--size) var(--font);font-size:.8rem;margin-bottom:.6rem;box-sizing:border-box;outline:none"></select>
                 <div class="wn-entry">
+                  <div class="wn-ver">v24.5.2 <span class="wn-date">Aug 15, 2026</span></div>
+                  <ul>
+                    <li>Fixed: on desktops where Windows drops the connection without firing a browser <em>offline</em> event (or where requests stall instead of failing), the <strong>Offline</strong> pill now also appears when the connectivity probe times out &mdash; not only when the probe request fails outright.</li>
+                  </ul>
+                </div>
+                <div class="wn-entry">
                   <div class="wn-ver">v24.5.1 <span class="wn-date">Aug 15, 2026</span></div>
                   <ul>
                     <li>Fixed: the <strong>Offline</strong> pill now also appears when the connection drops without firing a browser event (e.g. DevTools &ldquo;Offline&rdquo;, some mobile browsers) &mdash; the app now actively probes connectivity every few seconds instead of relying only on browser signals. Still hidden while online.</li>
@@ -1096,7 +1102,7 @@
   </div>
 </div>
 
-  <script src="js/anthkeys.js?v=24.5.1">
+  <script src="js/anthkeys.js?v=24.5.2">
 </script>
 <div class="ctx-menu" id="ctxMenu">
   <button data-action="copy-anthkey" data-i18n="ctx.copy">Copy anthkey</button>

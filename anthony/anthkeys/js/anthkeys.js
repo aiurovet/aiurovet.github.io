@@ -9937,7 +9937,7 @@ function probeConnectivity() {
   const t = setTimeout(function() { ctrl.abort(); }, 6000);
   fetch('sw.js?probe=' + Date.now(), { cache: 'no-store', mode: 'no-cors', signal: ctrl.signal })
     .then(function() { clearTimeout(t); setOfflineIndicator(false); })
-    .catch(function(err) { clearTimeout(t); if (err && err.name === 'AbortError') return; setOfflineIndicator(true); });
+    .catch(function() { clearTimeout(t); setOfflineIndicator(true); });
 }
 window.addEventListener('online', function() { setOfflineIndicator(false); probeConnectivity(); });
 window.addEventListener('offline', function() { setOfflineIndicator(true); });
