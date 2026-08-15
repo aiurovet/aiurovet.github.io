@@ -159,6 +159,10 @@ const i18n = {
     'wallpaper.remove': 'Remove wallpaper',
     'offline.badge': 'Offline',
     'offline.toast': "You're offline \u2014 Anthkeys still works from its cache.",
+    'net.label': 'Connection',
+    'net.online': 'Online',
+    'net.wifi': 'Open Wi-Fi settings',
+    'net.toast': 'Open your device Wi-Fi settings to reconnect.',
     'note.equals': '= Command', 'note.win': '= Windows key', 'note.super': '= Windows/Command key', 'note.search': '= Launcher key',
     'dict.toggle': '\u2328 Key Legend',
     'dict.head': 'Key Legend',
@@ -689,6 +693,10 @@ i18n.ar = {
     'wallpaper.remove': 'إزالة الخلفية',
     'offline.badge': 'غير متصل',
     'offline.toast': 'أنت غير متصل — يعمل Anthkeys من الملف المؤقت.',
+    'net.label': 'الاتصال',
+    'net.online': 'متصل',
+    'net.wifi': 'إعدادات Wi-Fi',
+    'net.toast': 'افتح إعدادات Wi-Fi بجهازك لإعادة الاتصال.',
     'whatsnew.sub': 'التغييرات الأخيرة في أنكييز',
     'whatsnew.title': 'ما الجديد'
 };;
@@ -1084,6 +1092,10 @@ i18n.cs = {
     'wallpaper.remove': 'Odebrat tapetu',
     'offline.badge': 'Offline',
     'offline.toast': 'Jste offline \u2014 Anthkeys funguje z mezipaměti.',
+    'net.label': 'Připojení',
+    'net.online': 'Online',
+    'net.wifi': 'Nastavení Wi-Fi',
+    'net.toast': 'Otevřete nastavení Wi-Fi zařízení pro opětovné připojení.',
     'whatsnew.sub': 'Nedávné změny v Anthkeys',
     'whatsnew.title': 'Co je nového'
 };;
@@ -1479,6 +1491,10 @@ i18n.da = {
     'wallpaper.remove': 'Fjern baggrundsbillede',
     'offline.badge': 'Offline',
     'offline.toast': 'Du er offline \u2014 Anthkeys fungerer fra cachen.',
+    'net.label': 'Forbindelse',
+    'net.online': 'Online',
+    'net.wifi': 'Wi-Fi-indstillinger',
+    'net.toast': 'Åbn enhedens Wi-Fi-indstillinger for at oprette forbindelse igen.',
     'whatsnew.sub': 'Nylige ændringer i Anthkeys',
     'whatsnew.title': 'Hvad er nyt'
 };;
@@ -1874,6 +1890,10 @@ i18n.de = {
     'wallpaper.remove': 'Hintergrundbild entfernen',
     'offline.badge': 'Offline',
     'offline.toast': 'Du bist offline \u2014 Anthkeys funktioniert aus dem Cache.',
+    'net.label': 'Verbindung',
+    'net.online': 'Online',
+    'net.wifi': 'Wi-Fi-Einstellungen öffnen',
+    'net.toast': 'Öffnen Sie die Wi-Fi-Einstellungen Ihres Geräts, um sich erneut zu verbinden.',
     'whatsnew.sub': 'Aktuelle Änderungen an Anthkeys',
     'whatsnew.title': 'Neuigkeiten'
 };;
@@ -2269,6 +2289,10 @@ i18n.es = {
     'wallpaper.remove': 'Quitar fondo de pantalla',
     'offline.badge': 'Sin conexión',
     'offline.toast': 'No tienes conexión \u2014 Anthkeys funciona desde la caché.',
+    'net.label': 'Conexión',
+    'net.online': 'En línea',
+    'net.wifi': 'Abrir ajustes de Wi-Fi',
+    'net.toast': 'Abre los ajustes de Wi-Fi de tu dispositivo para reconectarte.',
     'whatsnew.sub': 'Cambios recientes en Anthkeys',
     'whatsnew.title': 'Novedades'
 };;
@@ -2664,6 +2688,10 @@ i18n.fi = {
     'wallpaper.remove': 'Poista taustakuva',
     'offline.badge': 'Offline',
     'offline.toast': 'Olet offline \u2014 Anthkeys toimii välimuistista.',
+    'net.label': 'Yhteys',
+    'net.online': 'Online',
+    'net.wifi': 'Avaa Wi-Fi-asetukset',
+    'net.toast': 'Avaa laitteen Wi-Fi-asetukset yhdistääksesi uudelleen.',
     'whatsnew.sub': 'Anthkeysin viimeaikaiset muutokset',
     'whatsnew.title': 'Mitä uutta'
 };;
@@ -3060,6 +3088,10 @@ i18n.fr = {
     'wallpaper.remove': 'Supprimer le fond d\'écran',
     'offline.badge': 'Hors ligne',
     'offline.toast': 'Vous êtes hors ligne \u2014 Anthkeys fonctionne depuis le cache.',
+    'net.label': 'Connexion',
+    'net.online': 'En ligne',
+    'net.wifi': 'Ouvrir les réglages Wi-Fi',
+    'net.toast': 'Ouvrez les réglages Wi-Fi de votre appareil pour vous reconnecter.',
     'whatsnew.sub': 'Changements récents d\'Anthkeys',
     'whatsnew.title': 'Quoi de neuf'
 };
@@ -3455,6 +3487,10 @@ i18n.hi = {
     'wallpaper.remove': 'वॉलपेपर हटाएँ',
     'offline.badge': 'ऑफ़लाइन',
     'offline.toast': 'आप ऑफ़लाइन हैं \u2014 Anthkeys कैश से काम करता है।',
+    'net.label': 'कनेक्शन',
+    'net.online': 'ऑनलाइन',
+    'net.wifi': 'Wi-Fi सेटिंग खोलें',
+    'net.toast': 'पुनः कनेक्ट करने के लिए अपनी डिवाइस की Wi-Fi सेटिंग खोलें।',
     'whatsnew.sub': 'Anthkeys में हाल के बदलाव',
     'whatsnew.title': 'नया क्या है'
 };;
@@ -3850,6 +3886,10 @@ i18n.hu = {
     'wallpaper.remove': 'Háttérkép eltávolítása',
     'offline.badge': 'Offline',
     'offline.toast': 'Ön offline \u2014 az Anthkeys a gyorsítótárból működik.',
+    'net.label': 'Kapcsolat',
+    'net.online': 'Online',
+    'net.wifi': 'Wi-Fi beállítások',
+    'net.toast': 'Nyissa meg az eszköz Wi-Fi beállításait az újracsatlakozáshoz.',
     'whatsnew.sub': 'Az Anthkeys legutóbbi változásai',
     'whatsnew.title': 'Mi újság'
 };;
@@ -4245,6 +4285,10 @@ i18n.it = {
     'wallpaper.remove': 'Rimuovi sfondo',
     'offline.badge': 'Offline',
     'offline.toast': 'Sei offline \u2014 Anthkeys funziona dalla cache.',
+    'net.label': 'Connessione',
+    'net.online': 'Online',
+    'net.wifi': 'Apri impostazioni Wi-Fi',
+    'net.toast': 'Apri le impostazioni Wi-Fi del dispositivo per riconnetterti.',
     'whatsnew.sub': 'Ultime modifiche ad Anthkeys',
     'whatsnew.title': 'Novità'
 };;
@@ -4640,6 +4684,10 @@ i18n.ja = {
     'wallpaper.remove': '壁紙を削除',
     'offline.badge': 'オフライン',
     'offline.toast': 'オフラインです \u2014 Anthkeys はキャッシュから動作します。',
+    'net.label': '接続',
+    'net.online': 'オンライン',
+    'net.wifi': 'Wi-Fi設定を開く',
+    'net.toast': '再接続するには、端末のWi-Fi設定を開いてください。',
     'whatsnew.sub': 'Anthkeysの最近の変更',
     'whatsnew.title': '新機能'
 };;
@@ -5035,6 +5083,10 @@ i18n.ko = {
     'wallpaper.remove': '배경화면 제거',
     'offline.badge': '오프라인',
     'offline.toast': '오프라인 상태 \u2014 Anthkeys가 캐시에서 작동합니다.',
+    'net.label': '연결',
+    'net.online': '온라인',
+    'net.wifi': 'Wi-Fi 설정 열기',
+    'net.toast': '다시 연결하려면 기기의 Wi-Fi 설정을 여세요.',
     'whatsnew.sub': 'Anthkeys의 최근 변경 사항',
     'whatsnew.title': '새로운 기능'
 };;
@@ -5430,6 +5482,10 @@ i18n.nl = {
     'wallpaper.remove': 'Achtergrond verwijderen',
     'offline.badge': 'Offline',
     'offline.toast': 'Je bent offline \u2014 Anthkeys werkt vanuit de cache.',
+    'net.label': 'Verbinding',
+    'net.online': 'Online',
+    'net.wifi': 'Wi-Fi-instellingen openen',
+    'net.toast': 'Open de Wi-Fi-instellingen van je apparaat om opnieuw verbinding te maken.',
     'whatsnew.sub': 'Recente wijzigingen aan Anthkeys',
     'whatsnew.title': 'Wat is er nieuw'
 };;
@@ -5825,6 +5881,10 @@ i18n.no = {
     'wallpaper.remove': 'Fjern bakgrunnsbilde',
     'offline.badge': 'Offline',
     'offline.toast': 'Du er offline \u2014 Anthkeys fungerer fra hurtigbufferen.',
+    'net.label': 'Tilkobling',
+    'net.online': 'Online',
+    'net.wifi': 'Åpne Wi-Fi-innstillinger',
+    'net.toast': 'Åpne enhetens Wi-Fi-innstillinger for å koble til igjen.',
     'whatsnew.sub': 'Nylige endringer i Anthkeys',
     'whatsnew.title': 'Hva er nytt'
 };;
@@ -6220,6 +6280,10 @@ i18n.pl = {
     'wallpaper.remove': 'Usuń tapetę',
     'offline.badge': 'Offline',
     'offline.toast': 'Jesteś offline \u2014 Anthkeys działa z pamięci podręcznej.',
+    'net.label': 'Połączenie',
+    'net.online': 'Online',
+    'net.wifi': 'Otwórz ustawienia Wi-Fi',
+    'net.toast': 'Otwórz ustawienia Wi-Fi urządzenia, aby połączyć się ponownie.',
     'whatsnew.sub': 'Ostatnie zmiany w Anthkeys',
     'whatsnew.title': 'Co nowego'
 };;
@@ -6615,6 +6679,10 @@ i18n.pt = {
     'wallpaper.remove': 'Remover papel de parede',
     'offline.badge': 'Offline',
     'offline.toast': 'Você está offline \u2014 o Anthkeys funciona do cache.',
+    'net.label': 'Conexão',
+    'net.online': 'Online',
+    'net.wifi': 'Abrir definições de Wi-Fi',
+    'net.toast': 'Abra as definições de Wi-Fi do dispositivo para voltar a ligar.',
     'whatsnew.sub': 'Mudanças recentes no Anthkeys',
     'whatsnew.title': 'Novidades'
 };;
@@ -7010,6 +7078,10 @@ i18n.ru = {
     'wallpaper.remove': 'Удалить обои',
     'offline.badge': 'Офлайн',
     'offline.toast': 'Вы офлайн \u2014 Anthkeys работает из кэша.',
+    'net.label': 'Соединение',
+    'net.online': 'Онлайн',
+    'net.wifi': 'Открыть настройки Wi-Fi',
+    'net.toast': 'Откройте настройки Wi-Fi устройства, чтобы снова подключиться.',
     'whatsnew.sub': 'Последние изменения в Anthkeys',
     'whatsnew.title': 'Что нового'
 };;
@@ -7405,6 +7477,10 @@ i18n.sv = {
     'wallpaper.remove': 'Ta bort bakgrundsbild',
     'offline.badge': 'Offline',
     'offline.toast': 'Du är offline \u2014 Anthkeys fungerar från cachen.',
+    'net.label': 'Anslutning',
+    'net.online': 'Online',
+    'net.wifi': 'Öppna Wi-Fi-inställningar',
+    'net.toast': 'Öppna enhetens Wi-Fi-inställningar för att återansluta.',
     'whatsnew.sub': 'Senaste ändringarna i Anthkeys',
     'whatsnew.title': 'Nyheter'
 };;
@@ -7801,6 +7877,10 @@ i18n.tr = {
     'wallpaper.remove': 'Duvar kağıdını kaldır',
     'offline.badge': 'Çevrimdışı',
     'offline.toast': 'Çevrimdışısınız \u2014 Anthkeys önbellekten çalışır.',
+    'net.label': 'Bağlantı',
+    'net.online': 'Çevrimiçi',
+    'net.wifi': 'Wi-Fi ayarlarını aç',
+    'net.toast': 'Yeniden bağlanmak için cihazınızın Wi-Fi ayarlarını açın.',
     'whatsnew.sub': 'Anthkeys\'teki son değişiklikler',
     'whatsnew.title': 'Yenilikler'
 };
@@ -8196,6 +8276,10 @@ i18n.vi = {
     'wallpaper.remove': 'Gỡ hình nền',
     'offline.badge': 'Ngoại tuyến',
     'offline.toast': 'Bạn đang ngoại tuyến \u2014 Anthkeys vẫn hoạt động từ bộ nhớ đệm.',
+    'net.label': 'Kết nối',
+    'net.online': 'Trực tuyến',
+    'net.wifi': 'Mở cài đặt Wi-Fi',
+    'net.toast': 'Mở cài đặt Wi-Fi của thiết bị để kết nối lại.',
     'whatsnew.sub': 'Các thay đổi gần đây của Anthkeys',
     'whatsnew.title': 'Có gì mới'
 };;function applyLanguage(lang) {
@@ -9928,9 +10012,33 @@ function showToastMsg(text) {
   toast._timer = setTimeout(function() { toast.classList.remove('show'); }, 2000);
 }
 
+let _offPillTimer = null;
+let _pillSuppressed = false;
+function updateNetStatus(off) {
+  const dot = document.getElementById('netDot');
+  const onT = document.getElementById('netTextOnline');
+  const offT = document.getElementById('netTextOffline');
+  if (dot) dot.style.background = off ? 'var(--error)' : '#34a853';
+  if (onT) onT.hidden = off;
+  if (offT) offT.hidden = !off;
+}
 function setOfflineIndicator(off) {
+  updateNetStatus(off);
   const pill = document.getElementById('offlinePill');
-  if (pill) pill.hidden = !off;
+  if (!pill) return;
+  if (off) {
+    if (_pillSuppressed) return;
+    if (_offPillTimer) clearTimeout(_offPillTimer);
+    pill.hidden = false;
+    _offPillTimer = setTimeout(function() {
+      pill.hidden = true;
+      _pillSuppressed = true;
+    }, 10000);
+  } else {
+    if (_offPillTimer) { clearTimeout(_offPillTimer); _offPillTimer = null; }
+    _pillSuppressed = false;
+    pill.hidden = true;
+  }
 }
 function probeConnectivity() {
   const ctrl = new AbortController();
@@ -9943,9 +10051,25 @@ window.addEventListener('online', function() { setOfflineIndicator(false); probe
 window.addEventListener('offline', function() { setOfflineIndicator(true); });
 setInterval(probeConnectivity, 15000);
 probeConnectivity();
+function openWifiSettings() {
+  var isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
+  if (isIOS) {
+    var a = document.createElement('a');
+    a.href = 'App-Prefs:root=WIFI';
+    document.body.appendChild(a);
+    a.click();
+    a.remove();
+    return;
+  }
+  showToastMsg(t('net.toast'));
+}
 onId('offlinePill', 'click', function() {
   showToastMsg(t('offline.toast'));
+  this.hidden = true;
+  if (_offPillTimer) { clearTimeout(_offPillTimer); _offPillTimer = null; }
+  _pillSuppressed = true;
 });
+onId('btnOpenWifi', 'click', openWifiSettings);
 
 // ---- Right-click context menu ----
 const ctxMenu = document.getElementById('ctxMenu');
