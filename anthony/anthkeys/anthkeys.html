@@ -28,7 +28,7 @@
   <script>if (location.protocol === 'file:') document.getElementById('manifestLink').remove();</script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=Roboto:wght@400;500;600;700&family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/anthkeys.css?v=66">
+  <link rel="stylesheet" href="css/anthkeys.css?v=67">
 </head>
 <body class="light style-m3 size-medium font-google-sans">
  <div class="container">
@@ -625,6 +625,12 @@
                 <p class="whatsnew-sub" data-i18n="whatsnew.sub">Recent changes to Anthkeys</p>
                 <select id="whatsnewSelect" aria-label="Version" style="width:100%;padding:.45rem .7rem;border:1px solid var(--outline-variant);border-radius:var(--radius-sm);background:var(--surface);color:var(--text);font:var(--size) var(--font);font-size:.8rem;margin-bottom:.6rem;box-sizing:border-box;outline:none"></select>
                 <div class="wn-entry">
+                  <div class="wn-ver">v24.2.1 <span class="wn-date">Aug 15, 2026</span></div>
+                  <ul>
+                    <li>Fixed on mobile: tapping the search bar could open the About page &mdash; the hidden &ldquo;What&rsquo;s new&rdquo; toast near the settings button was still clickable and overlapping the search box. It now only reacts while it is visible.</li>
+                  </ul>
+                </div>
+                <div class="wn-entry">
                   <div class="wn-ver">v24.2 <span class="wn-date">Aug 13, 2026</span></div>
                   <ul>
                     <li>New <strong>modifier filter</strong> &mdash; in the Filters menu, pick a key (Ctrl, Shift, Alt, Win, Cmd, &hellip;) to show only shortcuts that use it. The options update per platform.</li>
@@ -1050,7 +1056,7 @@
   </div>
 </div>
 
-  <script src="js/anthkeys.js?v=24.2">
+  <script src="js/anthkeys.js?v=24.2.1">
 </script>
 <div class="ctx-menu" id="ctxMenu">
   <button data-action="copy-anthkey" data-i18n="ctx.copy">Copy anthkey</button>
