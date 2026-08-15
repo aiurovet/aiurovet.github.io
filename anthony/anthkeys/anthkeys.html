@@ -625,6 +625,12 @@
                 <p class="whatsnew-sub" data-i18n="whatsnew.sub">Recent changes to Anthkeys</p>
                 <select id="whatsnewSelect" aria-label="Version" style="width:100%;padding:.45rem .7rem;border:1px solid var(--outline-variant);border-radius:var(--radius-sm);background:var(--surface);color:var(--text);font:var(--size) var(--font);font-size:.8rem;margin-bottom:.6rem;box-sizing:border-box;outline:none"></select>
                 <div class="wn-entry">
+                  <div class="wn-ver">v24.4 <span class="wn-date">Aug 15, 2026</span></div>
+                  <ul>
+                    <li>Removed the experimental <strong>Quiz Streak home-screen widget</strong> &mdash; it relied on a web standard that browsers haven&rsquo;t shipped yet, so it never appeared anywhere. Your quiz streak &amp; stats remain in the app as usual.</li>
+                  </ul>
+                </div>
+                <div class="wn-entry">
                   <div class="wn-ver">v24.3 <span class="wn-date">Aug 15, 2026</span></div>
                   <ul>
                     <li>The <strong>Shortcut Quiz now tracks your stats</strong> &mdash; a daily streak (🔥 days in a row you finished a quiz), best score, accuracy and games played. Stored locally, never uploaded.</li>
@@ -1069,7 +1075,7 @@
   </div>
 </div>
 
-  <script src="js/anthkeys.js?v=24.3">
+  <script src="js/anthkeys.js?v=24.4">
 </script>
 <div class="ctx-menu" id="ctxMenu">
   <button data-action="copy-anthkey" data-i18n="ctx.copy">Copy anthkey</button>
