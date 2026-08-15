@@ -157,6 +157,8 @@ const i18n = {
     'wallpaper.choose': 'Choose image',
     'wallpaper.drop': 'Drop an image here',
     'wallpaper.remove': 'Remove wallpaper',
+    'offline.badge': 'Offline',
+    'offline.toast': "You're offline \u2014 Anthkeys still works from its cache.",
     'note.equals': '= Command', 'note.win': '= Windows key', 'note.super': '= Windows/Command key', 'note.search': '= Launcher key',
     'dict.toggle': '\u2328 Key Legend',
     'dict.head': 'Key Legend',
@@ -685,6 +687,8 @@ i18n.ar = {
     'update.note': 'التحديث التلقائي يعيد تحميل الصفحة عند توفر إصدار جديد. «اسأل» يعرض زر تحديث بدلاً من ذلك.',
     'update.text': 'يتوفر إصدار جديد',
     'wallpaper.remove': 'إزالة الخلفية',
+    'offline.badge': 'غير متصل',
+    'offline.toast': 'أنت غير متصل — يعمل Anthkeys من الملف المؤقت.',
     'whatsnew.sub': 'التغييرات الأخيرة في أنكييز',
     'whatsnew.title': 'ما الجديد'
 };;
@@ -1078,6 +1082,8 @@ i18n.cs = {
     'update.note': 'Automatická aktualizace znovu načte stránku, když je k dispozici nová verze. Volba „Zeptat se“ místo toho zobrazí tlačítko Obnovit.',
     'update.text': 'Je k dispozici nová verze',
     'wallpaper.remove': 'Odebrat tapetu',
+    'offline.badge': 'Offline',
+    'offline.toast': 'Jste offline \u2014 Anthkeys funguje z mezipaměti.',
     'whatsnew.sub': 'Nedávné změny v Anthkeys',
     'whatsnew.title': 'Co je nového'
 };;
@@ -1471,6 +1477,8 @@ i18n.da = {
     'update.note': 'Automatisk opdatering genindlæser siden, når der er en ny version. "Spørg" viser i stedet en Opdater-knap.',
     'update.text': 'Der er en ny version',
     'wallpaper.remove': 'Fjern baggrundsbillede',
+    'offline.badge': 'Offline',
+    'offline.toast': 'Du er offline \u2014 Anthkeys fungerer fra cachen.',
     'whatsnew.sub': 'Nylige ændringer i Anthkeys',
     'whatsnew.title': 'Hvad er nyt'
 };;
@@ -1864,6 +1872,8 @@ i18n.de = {
     'update.note': 'Die automatische Aktualisierung lädt die Seite neu, wenn eine neue Version verfügbar ist. „Fragen“ zeigt stattdessen eine Aktualisieren-Schaltfläche.',
     'update.text': 'Eine neue Version ist verfügbar',
     'wallpaper.remove': 'Hintergrundbild entfernen',
+    'offline.badge': 'Offline',
+    'offline.toast': 'Du bist offline \u2014 Anthkeys funktioniert aus dem Cache.',
     'whatsnew.sub': 'Aktuelle Änderungen an Anthkeys',
     'whatsnew.title': 'Neuigkeiten'
 };;
@@ -2257,6 +2267,8 @@ i18n.es = {
     'update.note': 'La actualización automática recarga la página cuando hay una nueva versión. "Preguntar" muestra en su lugar un botón de Actualizar.',
     'update.text': 'Hay una nueva versión disponible',
     'wallpaper.remove': 'Quitar fondo de pantalla',
+    'offline.badge': 'Sin conexión',
+    'offline.toast': 'No tienes conexión \u2014 Anthkeys funciona desde la caché.',
     'whatsnew.sub': 'Cambios recientes en Anthkeys',
     'whatsnew.title': 'Novedades'
 };;
@@ -2650,6 +2662,8 @@ i18n.fi = {
     'update.note': 'Automaattinen päivitys lataa sivun uudelleen, kun uusi versio on saatavilla. "Kysy" näyttää sen sijaan Päivitä-painikkeen.',
     'update.text': 'Uusi versio on saatavilla',
     'wallpaper.remove': 'Poista taustakuva',
+    'offline.badge': 'Offline',
+    'offline.toast': 'Olet offline \u2014 Anthkeys toimii välimuistista.',
     'whatsnew.sub': 'Anthkeysin viimeaikaiset muutokset',
     'whatsnew.title': 'Mitä uutta'
 };;
@@ -3044,6 +3058,8 @@ i18n.fr = {
     'update.note': 'La mise à jour automatique recharge la page quand une nouvelle version est disponible. « Demander » affiche à la place un bouton Actualiser.',
     'update.text': 'Une nouvelle version est disponible',
     'wallpaper.remove': 'Supprimer le fond d\'écran',
+    'offline.badge': 'Hors ligne',
+    'offline.toast': 'Vous êtes hors ligne \u2014 Anthkeys fonctionne depuis le cache.',
     'whatsnew.sub': 'Changements récents d\'Anthkeys',
     'whatsnew.title': 'Quoi de neuf'
 };
@@ -3437,6 +3453,8 @@ i18n.hi = {
     'update.note': 'नई संस्करण उपलब्ध होने पर स्वचालित अपडेट पेज को फिर से लोड करता है। "पूछें" इसके बजाय अपडेट बटन दिखाता है।',
     'update.text': 'एक नया संस्करण उपलब्ध है',
     'wallpaper.remove': 'वॉलपेपर हटाएँ',
+    'offline.badge': 'ऑफ़लाइन',
+    'offline.toast': 'आप ऑफ़लाइन हैं \u2014 Anthkeys कैश से काम करता है।',
     'whatsnew.sub': 'Anthkeys में हाल के बदलाव',
     'whatsnew.title': 'नया क्या है'
 };;
@@ -3830,6 +3848,8 @@ i18n.hu = {
     'update.note': 'Az automatikus frissítés újratölti az oldalt, ha új verzió érhető el. A Kérdezzen opció ehelyett egy Frissítés gombot mutat.',
     'update.text': 'Új verzió érhető el',
     'wallpaper.remove': 'Háttérkép eltávolítása',
+    'offline.badge': 'Offline',
+    'offline.toast': 'Ön offline \u2014 az Anthkeys a gyorsítótárból működik.',
     'whatsnew.sub': 'Az Anthkeys legutóbbi változásai',
     'whatsnew.title': 'Mi újság'
 };;
@@ -4223,6 +4243,8 @@ i18n.it = {
     'update.note': 'L\'aggiornamento automatico ricarica la pagina quando è disponibile una nuova versione. "Chiedi" mostra invece un pulsante Aggiorna.',
     'update.text': 'È disponibile una nuova versione',
     'wallpaper.remove': 'Rimuovi sfondo',
+    'offline.badge': 'Offline',
+    'offline.toast': 'Sei offline \u2014 Anthkeys funziona dalla cache.',
     'whatsnew.sub': 'Ultime modifiche ad Anthkeys',
     'whatsnew.title': 'Novità'
 };;
@@ -4616,6 +4638,8 @@ i18n.ja = {
     'update.note': '自動更新は新しいバージョンが利用可能になるとページを再読み込みします。「確認する」を選ぶと代わりに更新ボタンが表示されます。',
     'update.text': '新しいバージョンが利用可能です',
     'wallpaper.remove': '壁紙を削除',
+    'offline.badge': 'オフライン',
+    'offline.toast': 'オフラインです \u2014 Anthkeys はキャッシュから動作します。',
     'whatsnew.sub': 'Anthkeysの最近の変更',
     'whatsnew.title': '新機能'
 };;
@@ -5009,6 +5033,8 @@ i18n.ko = {
     'update.note': '새 버전이 있으면 자동 업데이트가 페이지를 다시 로드합니다. 대신 "묻기"가 업데이트 버튼을 표시합니다.',
     'update.text': '새 버전이 있습니다',
     'wallpaper.remove': '배경화면 제거',
+    'offline.badge': '오프라인',
+    'offline.toast': '오프라인 상태 \u2014 Anthkeys가 캐시에서 작동합니다.',
     'whatsnew.sub': 'Anthkeys의 최근 변경 사항',
     'whatsnew.title': '새로운 기능'
 };;
@@ -5402,6 +5428,8 @@ i18n.nl = {
     'update.note': 'Automatisch bijwerken herlaadt de pagina wanneer er een nieuwe versie is. "Vragen" toont in plaats daarvan een Update-knop.',
     'update.text': 'Er is een nieuwe versie beschikbaar',
     'wallpaper.remove': 'Achtergrond verwijderen',
+    'offline.badge': 'Offline',
+    'offline.toast': 'Je bent offline \u2014 Anthkeys werkt vanuit de cache.',
     'whatsnew.sub': 'Recente wijzigingen aan Anthkeys',
     'whatsnew.title': 'Wat is er nieuw'
 };;
@@ -5795,6 +5823,8 @@ i18n.no = {
     'update.note': 'Automatisk oppdatering laster inn siden på nytt når det finnes en ny versjon. "Spør" viser i stedet en Oppdater-knapp.',
     'update.text': 'En ny versjon er tilgjengelig',
     'wallpaper.remove': 'Fjern bakgrunnsbilde',
+    'offline.badge': 'Offline',
+    'offline.toast': 'Du er offline \u2014 Anthkeys fungerer fra hurtigbufferen.',
     'whatsnew.sub': 'Nylige endringer i Anthkeys',
     'whatsnew.title': 'Hva er nytt'
 };;
@@ -6188,6 +6218,8 @@ i18n.pl = {
     'update.note': 'Automatyczna aktualizacja przeładowuje stronę, gdy dostępna jest nowa wersja. "Pytaj" zamiast tego pokazuje przycisk Odśwież.',
     'update.text': 'Dostępna jest nowa wersja',
     'wallpaper.remove': 'Usuń tapetę',
+    'offline.badge': 'Offline',
+    'offline.toast': 'Jesteś offline \u2014 Anthkeys działa z pamięci podręcznej.',
     'whatsnew.sub': 'Ostatnie zmiany w Anthkeys',
     'whatsnew.title': 'Co nowego'
 };;
@@ -6581,6 +6613,8 @@ i18n.pt = {
     'update.note': 'A atualização automática recarrega a página quando há uma nova versão. "Perguntar" mostra em vez disso um botão Atualizar.',
     'update.text': 'Uma nova versão está disponível',
     'wallpaper.remove': 'Remover papel de parede',
+    'offline.badge': 'Offline',
+    'offline.toast': 'Você está offline \u2014 o Anthkeys funciona do cache.',
     'whatsnew.sub': 'Mudanças recentes no Anthkeys',
     'whatsnew.title': 'Novidades'
 };;
@@ -6974,6 +7008,8 @@ i18n.ru = {
     'update.note': 'Автообновление перезагружает страницу, когда доступна новая версия. «Спрашивать» вместо этого показывает кнопку Обновить.',
     'update.text': 'Доступна новая версия',
     'wallpaper.remove': 'Удалить обои',
+    'offline.badge': 'Офлайн',
+    'offline.toast': 'Вы офлайн \u2014 Anthkeys работает из кэша.',
     'whatsnew.sub': 'Последние изменения в Anthkeys',
     'whatsnew.title': 'Что нового'
 };;
@@ -7367,6 +7403,8 @@ i18n.sv = {
     'update.note': 'Automatisk uppdatering laddar om sidan när en ny version finns. "Fråga" visar istället en Uppdatera-knapp.',
     'update.text': 'En ny version finns tillgänglig',
     'wallpaper.remove': 'Ta bort bakgrundsbild',
+    'offline.badge': 'Offline',
+    'offline.toast': 'Du är offline \u2014 Anthkeys fungerar från cachen.',
     'whatsnew.sub': 'Senaste ändringarna i Anthkeys',
     'whatsnew.title': 'Nyheter'
 };;
@@ -7761,6 +7799,8 @@ i18n.tr = {
     'update.note': 'Yeni bir sürüm olduğunda otomatik güncelleme sayfayı yeniden yükler. "Sor" bunun yerine Güncelle düğmesini gösterir.',
     'update.text': 'Yeni bir sürüm mevcut',
     'wallpaper.remove': 'Duvar kağıdını kaldır',
+    'offline.badge': 'Çevrimdışı',
+    'offline.toast': 'Çevrimdışısınız \u2014 Anthkeys önbellekten çalışır.',
     'whatsnew.sub': 'Anthkeys\'teki son değişiklikler',
     'whatsnew.title': 'Yenilikler'
 };
@@ -8154,6 +8194,8 @@ i18n.vi = {
     'update.note': 'Tự động cập nhật sẽ tải lại trang khi có phiên bản mới. "Hỏi" sẽ hiển thị nút Làm mới thay vào đó.',
     'update.text': 'Có phiên bản mới',
     'wallpaper.remove': 'Gỡ hình nền',
+    'offline.badge': 'Ngoại tuyến',
+    'offline.toast': 'Bạn đang ngoại tuyến \u2014 Anthkeys vẫn hoạt động từ bộ nhớ đệm.',
     'whatsnew.sub': 'Các thay đổi gần đây của Anthkeys',
     'whatsnew.title': 'Có gì mới'
 };;function applyLanguage(lang) {
@@ -9687,6 +9729,43 @@ function updateCompareCount(panel) {
   const cnt = rows.filter(r => r.style.display !== 'none').length;
   cc.textContent = cnt + '/' + rows.length + ' differ';
 }
+function applyHighlight(tr, q) {
+  const td = tr.querySelector('td[data-i18n]');
+  if (!td) return;
+  const key = td.getAttribute('data-i18n');
+  const cur = document.querySelector('[data-lang].active')?.dataset.lang || 'en';
+  const base = (i18n[cur === 'auto' ? 'en' : cur] || i18n.en)[key];
+  const text = base || td.textContent;
+  if (!q) {
+    if (td._hl) { td.textContent = text; td._hl = false; }
+    return;
+  }
+  const low = text.toLowerCase();
+  if (!low.includes(q)) {
+    if (td._hl) { td.textContent = text; td._hl = false; }
+    return;
+  }
+  const esc = function(s) {
+    return s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+  };
+  let out = '', i = 0;
+  while (true) {
+    const idx = low.indexOf(q, i);
+    if (idx === -1) { out += esc(text.slice(i)); break; }
+    out += esc(text.slice(i, idx)) + '<mark class="hl">' + esc(text.slice(idx, idx + q.length)) + '</mark>';
+    i = idx + q.length;
+  }
+  td.innerHTML = out;
+  td._hl = true;
+}
+
+function updateSearchClear() {
+  const input = document.getElementById('searchInput');
+  const btn = document.getElementById('searchClear');
+  if (!input || !btn) return;
+  btn.hidden = input.value.trim().length === 0;
+}
+
 function applyView() {
   const input = document.getElementById('searchInput');
   const q = input ? input.value.trim().toLowerCase() : '';
@@ -9715,6 +9794,7 @@ function applyView() {
       if (hidden) { tr.style.display = 'none'; return; }
     }
     tr.style.display = '';
+    applyHighlight(tr, q);
   });
   panel.querySelectorAll('.category').forEach(cat => {
     if (cat.classList.contains('collapsed')) return;
@@ -9736,6 +9816,7 @@ function applyView() {
     if (pillBarEl) pillBarEl.classList.add('fav-mode');
   }
   updateSearchCount();
+  updateSearchClear();
   updateCompareCount(panel);
 }
 
@@ -9802,10 +9883,19 @@ if (_isCoarsePointer) {
 // ---- Search (matches shortcuts in the active tab only) ----
 let _searchTimer = null;
 onId('searchInput', 'input', function() {
+  updateSearchClear();
   clearTimeout(_searchTimer);
   _searchTimer = setTimeout(function() {
     applyView();
   }, 150);
+});
+
+onId('searchClear', 'click', function() {
+  const input = document.getElementById('searchInput');
+  input.value = '';
+  updateSearchClear();
+  applyView();
+  input.focus();
 });
 
 function updateSearchCount() {
@@ -9824,6 +9914,29 @@ document.addEventListener('keydown', e => {
     e.preventDefault();
     document.getElementById('searchInput').focus();
   }
+});
+
+// ---- Offline indicator ----
+function showToastMsg(text) {
+  const toast = document.getElementById('toast');
+  if (!toast) return;
+  toast.textContent = text;
+  toast.classList.remove('show');
+  void toast.offsetHeight;
+  toast.classList.add('show');
+  clearTimeout(toast._timer);
+  toast._timer = setTimeout(function() { toast.classList.remove('show'); }, 2000);
+}
+
+function setOfflineIndicator(off) {
+  const pill = document.getElementById('offlinePill');
+  if (pill) pill.hidden = !off;
+}
+window.addEventListener('online', function() { setOfflineIndicator(false); });
+window.addEventListener('offline', function() { setOfflineIndicator(true); });
+setOfflineIndicator(!navigator.onLine);
+onId('offlinePill', 'click', function() {
+  showToastMsg(t('offline.toast'));
 });
 
 // ---- Right-click context menu ----
