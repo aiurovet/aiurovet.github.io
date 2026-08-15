@@ -68,6 +68,10 @@ const i18n = {
     'quiz.highscore': 'Best: {0}',
     'quiz.next': 'Next',
     'quiz.done': 'Quiz Complete!',
+    'quiz.streak': 'Streak',
+    'quiz.best': 'Best',
+    'quiz.accuracy': 'Accuracy',
+    'quiz.games': 'Games',
     'quiz.restart': 'Restart',
     'quiz.close': 'Close',
     'quiz.choose': 'What does this shortcut do?',
@@ -656,6 +660,10 @@ i18n.ar = {
     'quiz.diff.hard': 'صعب',
     'quiz.diff.medium': 'متوسط',
     'quiz.done': 'اكتمل الاختبار!',
+    'quiz.streak': 'التتابع',
+    'quiz.best': 'الأفضل',
+    'quiz.accuracy': 'الدقة',
+    'quiz.games': 'المرات',
     'quiz.highscore': 'الأفضل: {0}',
     'quiz.next': 'التالي',
     'quiz.no-data': 'لا توجد اختصارات متاحة للاختبار',
@@ -1045,6 +1053,10 @@ i18n.cs = {
     'quiz.diff.hard': 'Těžké',
     'quiz.diff.medium': 'Střední',
     'quiz.done': 'Kvíz dokončen!',
+    'quiz.streak': 'Série',
+    'quiz.best': 'Nejlepší',
+    'quiz.accuracy': 'Přesnost',
+    'quiz.games': 'Hry',
     'quiz.highscore': 'Nejlepší: {0}',
     'quiz.next': 'Další',
     'quiz.no-data': 'Pro kvíz nejsou k dispozici žádné zkratky',
@@ -1434,6 +1446,10 @@ i18n.da = {
     'quiz.diff.hard': 'Svær',
     'quiz.diff.medium': 'Medium',
     'quiz.done': 'Quizzen er færdig!',
+    'quiz.streak': 'Række',
+    'quiz.best': 'Bedste',
+    'quiz.accuracy': 'Nøjagtighed',
+    'quiz.games': 'Spil',
     'quiz.highscore': 'Bedste: {0}',
     'quiz.next': 'Næste',
     'quiz.no-data': 'Ingen genveje tilgængelige til quizzen',
@@ -1823,6 +1839,10 @@ i18n.de = {
     'quiz.diff.hard': 'Schwer',
     'quiz.diff.medium': 'Mittel',
     'quiz.done': 'Quiz abgeschlossen!',
+    'quiz.streak': 'Serie',
+    'quiz.best': 'Bestwert',
+    'quiz.accuracy': 'Genauigkeit',
+    'quiz.games': 'Spiele',
     'quiz.highscore': 'Bestwert: {0}',
     'quiz.next': 'Weiter',
     'quiz.no-data': 'Keine Kürzel für das Quiz verfügbar',
@@ -2212,6 +2232,10 @@ i18n.es = {
     'quiz.diff.hard': 'Difícil',
     'quiz.diff.medium': 'Medio',
     'quiz.done': '¡Quiz completado!',
+    'quiz.streak': 'Racha',
+    'quiz.best': 'Récord',
+    'quiz.accuracy': 'Precisión',
+    'quiz.games': 'Partidas',
     'quiz.highscore': 'Récord: {0}',
     'quiz.next': 'Siguiente',
     'quiz.no-data': 'No hay atajos disponibles para el quiz',
@@ -2601,6 +2625,10 @@ i18n.fi = {
     'quiz.diff.hard': 'Vaikea',
     'quiz.diff.medium': 'Keskitaso',
     'quiz.done': 'Tietovisa valmis!',
+    'quiz.streak': 'Putki',
+    'quiz.best': 'Ennätys',
+    'quiz.accuracy': 'Tarkkuus',
+    'quiz.games': 'Pelit',
     'quiz.highscore': 'Ennätys: {0}',
     'quiz.next': 'Seuraava',
     'quiz.no-data': 'Visaan ei ole saatavilla oikoteitä',
@@ -2991,6 +3019,10 @@ i18n.fr = {
     'quiz.diff.hard': 'Difficile',
     'quiz.diff.medium': 'Moyen',
     'quiz.done': 'Quiz terminé !',
+    'quiz.streak': 'Série',
+    'quiz.best': 'Record',
+    'quiz.accuracy': 'Précision',
+    'quiz.games': 'Parties',
     'quiz.highscore': 'Record : {0}',
     'quiz.next': 'Suivant',
     'quiz.no-data': 'Aucun raccourci disponible pour le quiz',
@@ -3380,6 +3412,10 @@ i18n.hi = {
     'quiz.diff.hard': 'कठिन',
     'quiz.diff.medium': 'मध्यम',
     'quiz.done': 'क्विज़ पूरा हुआ!',
+    'quiz.streak': 'स्ट्रीक',
+    'quiz.best': 'सर्वश्रेष्ठ',
+    'quiz.accuracy': 'सटीकता',
+    'quiz.games': 'खेल',
     'quiz.highscore': 'सर्वश्रेष्ठ: {0}',
     'quiz.next': 'अगला',
     'quiz.no-data': 'क्विज़ के लिए कोई शॉर्टकट उपलब्ध नहीं',
@@ -3769,6 +3805,10 @@ i18n.hu = {
     'quiz.diff.hard': 'Nehéz',
     'quiz.diff.medium': 'Közepes',
     'quiz.done': 'Kvíz kész!',
+    'quiz.streak': 'Sorozat',
+    'quiz.best': 'Rekord',
+    'quiz.accuracy': 'Pontosság',
+    'quiz.games': 'Játékok',
     'quiz.highscore': 'Rekord: {0}',
     'quiz.next': 'Következő',
     'quiz.no-data': 'Nincs elérhető parancs a kvízhez',
@@ -4158,6 +4198,10 @@ i18n.it = {
     'quiz.diff.hard': 'Difficile',
     'quiz.diff.medium': 'Medio',
     'quiz.done': 'Quiz completato!',
+    'quiz.streak': 'Serie',
+    'quiz.best': 'Record',
+    'quiz.accuracy': 'Precisione',
+    'quiz.games': 'Partite',
     'quiz.highscore': 'Record: {0}',
     'quiz.next': 'Avanti',
     'quiz.no-data': 'Nessuna scorciatoia disponibile per il quiz',
@@ -4547,6 +4591,10 @@ i18n.ja = {
     'quiz.diff.hard': '難しい',
     'quiz.diff.medium': '普通',
     'quiz.done': 'クイズ完了！',
+    'quiz.streak': '連勝',
+    'quiz.best': '最高記録',
+    'quiz.accuracy': '正解率',
+    'quiz.games': 'ゲーム数',
     'quiz.highscore': '最高記録：{0}',
     'quiz.next': '次へ',
     'quiz.no-data': 'クイズに使えるショートカットがありません',
@@ -4936,6 +4984,10 @@ i18n.ko = {
     'quiz.diff.hard': '어려움',
     'quiz.diff.medium': '보통',
     'quiz.done': '퀴즈 완료!',
+    'quiz.streak': '연속',
+    'quiz.best': '최고 기록',
+    'quiz.accuracy': '정확도',
+    'quiz.games': '게임 수',
     'quiz.highscore': '최고 기록: {0}',
     'quiz.next': '다음',
     'quiz.no-data': '퀴즈에 사용할 단축키가 없습니다',
@@ -5325,6 +5377,10 @@ i18n.nl = {
     'quiz.diff.hard': 'Moeilijk',
     'quiz.diff.medium': 'Gemiddeld',
     'quiz.done': 'Quiz voltooid!',
+    'quiz.streak': 'Reeks',
+    'quiz.best': 'Record',
+    'quiz.accuracy': 'Nauwkeurigheid',
+    'quiz.games': 'Spellen',
     'quiz.highscore': 'Record: {0}',
     'quiz.next': 'Volgende',
     'quiz.no-data': 'Geen sneltoetsen beschikbaar voor de quiz',
@@ -5714,6 +5770,10 @@ i18n.no = {
     'quiz.diff.hard': 'Vanskelig',
     'quiz.diff.medium': 'Middels',
     'quiz.done': 'Quiz fullført!',
+    'quiz.streak': 'Rekke',
+    'quiz.best': 'Rekord',
+    'quiz.accuracy': 'Nøyaktighet',
+    'quiz.games': 'Spill',
     'quiz.highscore': 'Rekord: {0}',
     'quiz.next': 'Neste',
     'quiz.no-data': 'Ingen snarveier tilgjengelig for quiz',
@@ -6103,6 +6163,10 @@ i18n.pl = {
     'quiz.diff.hard': 'Trudny',
     'quiz.diff.medium': 'Średni',
     'quiz.done': 'Quiz ukończony!',
+    'quiz.streak': 'Seria',
+    'quiz.best': 'Rekord',
+    'quiz.accuracy': 'Dokładność',
+    'quiz.games': 'Gry',
     'quiz.highscore': 'Rekord: {0}',
     'quiz.next': 'Dalej',
     'quiz.no-data': 'Brak skrótów dostępnych do quizu',
@@ -6492,6 +6556,10 @@ i18n.pt = {
     'quiz.diff.hard': 'Difícil',
     'quiz.diff.medium': 'Médio',
     'quiz.done': 'Quiz concluído!',
+    'quiz.streak': 'Sequência',
+    'quiz.best': 'Recorde',
+    'quiz.accuracy': 'Precisão',
+    'quiz.games': 'Jogos',
     'quiz.highscore': 'Recorde: {0}',
     'quiz.next': 'Próximo',
     'quiz.no-data': 'Nenhum atalho disponível para o quiz',
@@ -6881,6 +6949,10 @@ i18n.ru = {
     'quiz.diff.hard': 'Сложный',
     'quiz.diff.medium': 'Средний',
     'quiz.done': 'Викторина завершена!',
+    'quiz.streak': 'Серия',
+    'quiz.best': 'Рекорд',
+    'quiz.accuracy': 'Точность',
+    'quiz.games': 'Игры',
     'quiz.highscore': 'Рекорд: {0}',
     'quiz.next': 'Далее',
     'quiz.no-data': 'Нет доступных сочетаний для викторины',
@@ -7270,6 +7342,10 @@ i18n.sv = {
     'quiz.diff.hard': 'Svår',
     'quiz.diff.medium': 'Medel',
     'quiz.done': 'Quiz klar!',
+    'quiz.streak': 'Rad',
+    'quiz.best': 'Rekord',
+    'quiz.accuracy': 'Noggrannhet',
+    'quiz.games': 'Spel',
     'quiz.highscore': 'Rekord: {0}',
     'quiz.next': 'Nästa',
     'quiz.no-data': 'Inga genvägar tillgängliga för quiz',
@@ -7660,6 +7736,10 @@ i18n.tr = {
     'quiz.diff.hard': 'Zor',
     'quiz.diff.medium': 'Orta',
     'quiz.done': 'Test Tamamlandı!',
+    'quiz.streak': 'Seri',
+    'quiz.best': 'Rekor',
+    'quiz.accuracy': 'Doğruluk',
+    'quiz.games': 'Oyunlar',
     'quiz.highscore': 'Rekor: {0}',
     'quiz.next': 'İleri',
     'quiz.no-data': 'Test için kullanılabilir kısayol yok',
@@ -8049,6 +8129,10 @@ i18n.vi = {
     'quiz.diff.hard': 'Khó',
     'quiz.diff.medium': 'Trung bình',
     'quiz.done': 'Hoàn thành câu đố!',
+    'quiz.streak': 'Chuỗi ngày',
+    'quiz.best': 'Điểm cao nhất',
+    'quiz.accuracy': 'Độ chính xác',
+    'quiz.games': 'Số lần chơi',
     'quiz.highscore': 'Kỷ lục: {0}',
     'quiz.next': 'Tiếp theo',
     'quiz.no-data': 'Không có phím tắt nào cho câu đố',
@@ -8332,7 +8416,7 @@ if ('serviceWorker' in navigator) {
     const el = document.querySelector('[data-update-mode].active');
     return el ? el.dataset.updateMode : 'auto';
   };
-  navigator.serviceWorker.register('sw.js?v=13').then(reg => {
+  navigator.serviceWorker.register('sw.js?v=14').then(reg => {
     reg.addEventListener('updatefound', () => {
       const newSW = reg.installing;
       if (!newSW) return;
@@ -9945,7 +10029,51 @@ function showQuizNextRestart() {
   }
 }
 
+function dayStamp(d) {
+  return d.getFullYear() + '-' + String(d.getMonth() + 1).padStart(2, '0') + '-' + String(d.getDate()).padStart(2, '0');
+}
+
+function getQuizStats() {
+  try {
+    const s = JSON.parse(lsGet('anthkeys-quiz-stats') || 'null');
+    return (s && typeof s === 'object') ? s : {};
+  } catch(e) { return {}; }
+}
+
+function saveQuizStats(s) {
+  lsSet('anthkeys-quiz-stats', JSON.stringify(s));
+}
+
+function renderQuizStats() {
+  const s = getQuizStats();
+  const streak = s.streak || 0;
+  const best = Math.max(s.best || 0, parseInt(lsGet('anthkeys-quiz-high', '0'), 10) || 0);
+  const acc = s.total ? Math.round(100 * (s.correct || 0) / s.total) : 0;
+  const set = (id, txt) => { const n = document.getElementById(id); if (n) n.textContent = txt; };
+  set('statStreak', (streak > 0 ? '\uD83D\uDD25 ' : '') + streak);
+  set('statBest', String(best));
+  set('statAcc', acc + '%');
+  set('statGames', String(s.games || 0));
+}
+
+function recordQuizStats() {
+  const s = getQuizStats();
+  const today = dayStamp(new Date());
+  const yest = new Date(); yest.setDate(yest.getDate() - 1);
+  if (s.last !== today) {
+    s.streak = (s.last === dayStamp(yest)) ? (s.streak || 0) + 1 : 1;
+    s.last = today;
+  }
+  s.games = (s.games || 0) + 1;
+  s.correct = (s.correct || 0) + quizScore;
+  s.total = (s.total || 0) + quizTotal;
+  s.best = Math.max(s.best || 0, quizScore);
+  saveQuizStats(s);
+  renderQuizStats();
+}
+
 function finishQuiz() {
+  recordQuizStats();
   const highScore = parseInt(lsGet('anthkeys-quiz-high', '0'));
   const isNew = quizScore > highScore;
   if (isNew) lsSet('anthkeys-quiz-high', String(quizScore));
@@ -9998,6 +10126,7 @@ onId('btnQuiz', 'click', () => {
   if (overlay) {
     document.querySelectorAll('.setting-group').forEach(g => g.classList.remove('open'));
     overlay.classList.add('open');
+    renderQuizStats();
     startQuiz();
   }
 });
@@ -10012,6 +10141,7 @@ onId('quizNext', 'click', () => {
   showQuizQuestion();
 });
 onId('quizRestart', 'click', startQuiz);
+renderQuizStats();
 
 document.querySelectorAll('.diff-btn').forEach(btn => {
   btn.addEventListener('click', function() {

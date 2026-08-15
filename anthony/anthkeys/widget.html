@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Anthkeys Quiz Streak</title>
+<style>
+  :root {
+    --bg: #fef7f0; --surface: #ffffff; --text: #1f2328; --muted: #6b7280; --accent: #f7971e;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg: #15171a; --surface: #1f2328; --text: #f2f4f7; --muted: #9aa0a6; }
+  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body {
+    font-family: -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background: var(--bg); color: var(--text); padding: 10px; min-height: 100%;
+  }
+  a { text-decoration:none; color:inherit; display:block; }
+  .card {
+    background: var(--surface); border-radius: 16px; padding: 14px 16px;
+    box-shadow: 0 1px 3px rgba(0,0,0,.08); height: 100%;
+  }
+  .head { display:flex; align-items:center; gap:8px; margin-bottom:10px; }
+  .flame { font-size:18px; line-height:1; }
+  .streak { font-size:28px; font-weight:800; line-height:1; }
+  .sub { font-size:11px; font-weight:600; color:var(--muted); }
+  .grid { display:grid; grid-template-columns:repeat(3,1fr); gap:8px; }
+  .stat { text-align:center; }
+  .stat b { display:block; font-size:16px; font-weight:700; color:var(--accent); }
+  .stat span { font-size:10px; text-transform:uppercase; letter-spacing:.04em; color:var(--muted); }
+  .empty { margin-top:10px; font-size:12px; color:var(--muted); line-height:1.4; }
+</style>
+</head>
+<body>
+<a href="anthkeys.html" class="card">
+  <div class="head">
+    <span class="flame">&#128293;</span>
+    <span class="streak" id="streak">0</span>
+    <span class="sub">day streak</span>
+  </div>
+  <div class="grid">
+    <div class="stat"><b id="best">0</b><span>Best</span></div>
+    <div class="stat"><b id="acc">0%</b><span>Accuracy</span></div>
+    <div class="stat"><b id="games">0</b><span>Games</span></div>
+  </div>
+  <div class="empty" id="empty" hidden>Play the Anthkeys quiz to start your streak.</div>
+</a>
+<script>
+(function() {
+  var key = 'anthkeys-quiz-stats';
+  function get() {
+    try {
+      var s = JSON.parse(localStorage.getItem(key) || 'null');
+      return (s && typeof s === 'object') ? s : {};
+    } catch (e) { return {}; }
+  }
+  function pct(s) { return s.total ? Math.round(100 * (s.correct || 0) / s.total) : 0; }
+  function render() {
+    var s = get();
+    var best = Math.max(s.best || 0, parseInt(localStorage.getItem('anthkeys-quiz-high') || '0', 10) || 0);
+    document.getElementById('streak').textContent = s.streak || 0;
+    document.getElementById('best').textContent = best;
+    document.getElementById('acc').textContent = pct(s) + '%';
+    document.getElementById('games').textContent = s.games || 0;
+    document.getElementById('empty').hidden = !!(s.games);
+  }
+  render();
+  window.addEventListener('storage', render);
+  window.addEventListener('focus', render);
+  document.addEventListener('visibilitychange', function() { if (!document.hidden) render(); });
+})();
+</script>
+</body>
+</html>

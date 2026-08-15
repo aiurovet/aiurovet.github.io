@@ -489,6 +489,10 @@ tr.drag-over { outline: 2px dashed var(--accent-1); outline-offset: -2px; }
 .quiz-header h2 { margin:0; font-size:1.1rem; }
 .quiz-header-right { display:flex; align-items:center; gap:.75rem; }
 .quiz-counter { font-size:.85rem; font-weight:600; color:var(--text-variant); background:var(--surface-variant); padding:.25rem .65rem; border-radius:100px; }
+.quiz-stats { display:flex; gap:.5rem; padding:.6rem 1.5rem; background:var(--surface-variant); border-bottom:1px solid var(--outline-variant); flex-shrink:0; }
+.quiz-stat { flex:1; display:flex; flex-direction:column; align-items:center; gap:.1rem; min-width:0; }
+.quiz-stat b { font-size:1.05rem; font-weight:700; color:var(--accent-1); line-height:1; white-space:nowrap; }
+.quiz-stat i { font-style:normal; font-size:.62rem; font-weight:600; text-transform:uppercase; letter-spacing:.04em; color:var(--text-variant); white-space:nowrap; }
 .quiz-diff-bar { display:flex; gap:.4rem; justify-content:center; flex-shrink:0; }
 .diff-btn { padding:.35rem .9rem; border:1px solid var(--outline-variant); border-radius:100px; background:transparent; color:var(--text-variant); cursor:pointer; font-size:.8rem; font-weight:500; transition:all .15s; }
 .diff-btn:hover { border-color:var(--accent-1); color:var(--accent-1); }
