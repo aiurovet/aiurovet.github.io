@@ -163,7 +163,7 @@ const i18n = {
     'net.online': 'Online',
     'net.wifi': 'Open Wi-Fi settings',
     'net.toast': 'Open your device Wi-Fi settings to reconnect.',
-    'net.pwa': 'Android installed apps can\'t open system settings. Open the site in a Chrome tab and try again.',
+    'net.android': 'Android doesn\'t let websites open system settings. Open the Wi-Fi settings from your device\'s Settings app.',
     'note.equals': '= Command', 'note.win': '= Windows key', 'note.super': '= Windows/Command key', 'note.search': '= Launcher key',
     'dict.toggle': '\u2328 Key Legend',
     'dict.head': 'Key Legend',
@@ -698,7 +698,7 @@ i18n.ar = {
     'net.online': 'متصل',
     'net.wifi': 'إعدادات Wi-Fi',
     'net.toast': 'افتح إعدادات Wi-Fi بجهازك لإعادة الاتصال.',
-    'net.pwa': 'تطبيقات Android المثبتة لا يمكنها فتح إعدادات النظام. افتح الموقع في تبويب Chrome وحاول مرة أخرى.',
+    'net.android': 'لا يسمح Android لمواقع الويب بفتح إعدادات النظام. افتح إعدادات Wi-Fi من تطبيق الإعدادات بجهازك.',
     'whatsnew.sub': 'التغييرات الأخيرة في أنكييز',
     'whatsnew.title': 'ما الجديد'
 };;
@@ -1098,7 +1098,7 @@ i18n.cs = {
     'net.online': 'Online',
     'net.wifi': 'Nastavení Wi-Fi',
     'net.toast': 'Otevřete nastavení Wi-Fi zařízení pro opětovné připojení.',
-    'net.pwa': 'Nainstalované aplikace Android nemohou otevřít systémová nastavení. Otevřete web v kartě Chrome a zkuste to znovu.',
+    'net.android': 'Android nedovoluje webům otevírat systémová nastavení. Otevřete nastavení Wi-Fi v aplikaci Nastavení zařízení.',
     'whatsnew.sub': 'Nedávné změny v Anthkeys',
     'whatsnew.title': 'Co je nového'
 };;
@@ -1498,7 +1498,7 @@ i18n.da = {
     'net.online': 'Online',
     'net.wifi': 'Wi-Fi-indstillinger',
     'net.toast': 'Åbn enhedens Wi-Fi-indstillinger for at oprette forbindelse igen.',
-    'net.pwa': 'Installerede Android-apps kan ikke åbne systemindstillinger. Åbn siden i en Chrome-fane og prøv igen.',
+    'net.android': 'Android tillader ikke websteder at åbne systemindstillinger. Åbn Wi-Fi-indstillingerne i enhedens Indstillinger-app.',
     'whatsnew.sub': 'Nylige ændringer i Anthkeys',
     'whatsnew.title': 'Hvad er nyt'
 };;
@@ -1898,7 +1898,7 @@ i18n.de = {
     'net.online': 'Online',
     'net.wifi': 'Wi-Fi-Einstellungen öffnen',
     'net.toast': 'Öffnen Sie die Wi-Fi-Einstellungen Ihres Geräts, um sich erneut zu verbinden.',
-    'net.pwa': 'Installierte Android-Apps können die Systemeinstellungen nicht öffnen. Öffnen Sie die Seite in einem Chrome-Tab und versuchen Sie es erneut.',
+    'net.android': 'Android erlaubt es Websites nicht, Systemeinstellungen zu öffnen. Öffnen Sie die Wi-Fi-Einstellungen in der Einstellungen-App Ihres Geräts.',
     'whatsnew.sub': 'Aktuelle Änderungen an Anthkeys',
     'whatsnew.title': 'Neuigkeiten'
 };;
@@ -2298,7 +2298,7 @@ i18n.es = {
     'net.online': 'En línea',
     'net.wifi': 'Abrir ajustes de Wi-Fi',
     'net.toast': 'Abre los ajustes de Wi-Fi de tu dispositivo para reconectarte.',
-    'net.pwa': 'Las apps de Android instaladas no pueden abrir la configuración del sistema. Abre el sitio en una pestaña de Chrome e inténtalo de nuevo.',
+    'net.android': 'Android no permite que los sitios web abran la configuración del sistema. Abre la configuración de Wi-Fi en la app de Ajustes de tu dispositivo.',
     'whatsnew.sub': 'Cambios recientes en Anthkeys',
     'whatsnew.title': 'Novedades'
 };;
@@ -2698,7 +2698,7 @@ i18n.fi = {
     'net.online': 'Online',
     'net.wifi': 'Avaa Wi-Fi-asetukset',
     'net.toast': 'Avaa laitteen Wi-Fi-asetukset yhdistääksesi uudelleen.',
-    'net.pwa': 'Asennetut Android-sovellukset eivät voi avata järjestelmän asetuksia. Avaa sivusto Chrome-välilehdellä ja yritä uudelleen.',
+    'net.android': 'Android ei salli verkkosivustojen avata järjestelmän asetuksia. Avaa Wi-Fi-asetukset laitteesi Asetukset-sovelluksesta.',
     'whatsnew.sub': 'Anthkeysin viimeaikaiset muutokset',
     'whatsnew.title': 'Mitä uutta'
 };;
@@ -3099,7 +3099,7 @@ i18n.fr = {
     'net.online': 'En ligne',
     'net.wifi': 'Ouvrir les réglages Wi-Fi',
     'net.toast': 'Ouvrez les réglages Wi-Fi de votre appareil pour vous reconnecter.',
-    'net.pwa': 'Les applications Android installées ne peuvent pas ouvrir les paramètres système. Ouvrez le site dans un onglet Chrome et réessayez.',
+    'net.android': 'Android n\'autorise pas les sites web à ouvrir les paramètres système. Ouvrez les paramètres Wi-Fi dans l\'application Réglages de votre appareil.',
     'whatsnew.sub': 'Changements récents d\'Anthkeys',
     'whatsnew.title': 'Quoi de neuf'
 };
@@ -3499,7 +3499,7 @@ i18n.hi = {
     'net.online': 'ऑनलाइन',
     'net.wifi': 'Wi-Fi सेटिंग खोलें',
     'net.toast': 'पुनः कनेक्ट करने के लिए अपनी डिवाइस की Wi-Fi सेटिंग खोलें।',
-    'net.pwa': 'इंस्टॉल किए गए Android ऐप सिस्टम सेटिंग्स नहीं खोल सकते। साइट को Chrome टैब में खोलें और फिर से कोशिश करें।',
+    'net.android': 'एंड्रॉइड वेबसाइटों को सिस्टम सेटिंग्स खोलने की अनुमति नहीं देता। अपने डिवाइस की Settings ऐप से Wi-Fi सेटिंग्स खोलें।',
     'whatsnew.sub': 'Anthkeys में हाल के बदलाव',
     'whatsnew.title': 'नया क्या है'
 };;
@@ -3899,7 +3899,7 @@ i18n.hu = {
     'net.online': 'Online',
     'net.wifi': 'Wi-Fi beállítások',
     'net.toast': 'Nyissa meg az eszköz Wi-Fi beállításait az újracsatlakozáshoz.',
-    'net.pwa': 'A telepített Android-alkalmazások nem nyithatják meg a rendszerbeállításokat. Nyissa meg az oldalt egy Chrome-fülön, és próbálja újra.',
+    'net.android': 'Az Android nem engedi, hogy a weboldalak megnyissák a rendszerbeállításokat. Nyissa meg a Wi-Fi-beállításokat az eszköz Beállítások alkalmazásában.',
     'whatsnew.sub': 'Az Anthkeys legutóbbi változásai',
     'whatsnew.title': 'Mi újság'
 };;
@@ -4299,7 +4299,7 @@ i18n.it = {
     'net.online': 'Online',
     'net.wifi': 'Apri impostazioni Wi-Fi',
     'net.toast': 'Apri le impostazioni Wi-Fi del dispositivo per riconnetterti.',
-    'net.pwa': 'Le app Android installate non possono aprire le impostazioni di sistema. Apri il sito in una scheda di Chrome e riprova.',
+    'net.android': 'Android non consente ai siti web di aprire le impostazioni di sistema. Apri le impostazioni Wi-Fi nell\'app Impostazioni del dispositivo.',
     'whatsnew.sub': 'Ultime modifiche ad Anthkeys',
     'whatsnew.title': 'Novità'
 };;
@@ -4699,7 +4699,7 @@ i18n.ja = {
     'net.online': 'オンライン',
     'net.wifi': 'Wi-Fi設定を開く',
     'net.toast': '再接続するには、端末のWi-Fi設定を開いてください。',
-    'net.pwa': 'インストール済みのAndroidアプリはシステム設定を開けません。Chromeタブでサイトを開いて、もう一度お試しください。',
+    'net.android': 'Androidではウェブサイトからシステム設定を開くことはできません。端末の設定アプリからWi-Fi設定を開いてください。',
     'whatsnew.sub': 'Anthkeysの最近の変更',
     'whatsnew.title': '新機能'
 };;
@@ -5099,7 +5099,7 @@ i18n.ko = {
     'net.online': '온라인',
     'net.wifi': 'Wi-Fi 설정 열기',
     'net.toast': '다시 연결하려면 기기의 Wi-Fi 설정을 여세요.',
-    'net.pwa': '설치된 Android 앱은 시스템 설정을 열 수 없습니다. Chrome 탭에서 사이트를 열고 다시 시도하세요.',
+    'net.android': 'Android에서는 웹사이트가 시스템 설정을 열 수 없습니다. 기기의 설정 앱에서 Wi-Fi 설정을 여세요.',
     'whatsnew.sub': 'Anthkeys의 최근 변경 사항',
     'whatsnew.title': '새로운 기능'
 };;
@@ -5499,7 +5499,7 @@ i18n.nl = {
     'net.online': 'Online',
     'net.wifi': 'Wi-Fi-instellingen openen',
     'net.toast': 'Open de Wi-Fi-instellingen van je apparaat om opnieuw verbinding te maken.',
-    'net.pwa': 'Geïnstalleerde Android-apps kunnen de systeeminstellingen niet openen. Open de site in een Chrome-tabblad en probeer het opnieuw.',
+    'net.android': 'Android staat websites niet toe om systeeminstellingen te openen. Open de Wi-Fi-instellingen in de Instellingen-app van je apparaat.',
     'whatsnew.sub': 'Recente wijzigingen aan Anthkeys',
     'whatsnew.title': 'Wat is er nieuw'
 };;
@@ -5899,7 +5899,7 @@ i18n.no = {
     'net.online': 'Online',
     'net.wifi': 'Åpne Wi-Fi-innstillinger',
     'net.toast': 'Åpne enhetens Wi-Fi-innstillinger for å koble til igjen.',
-    'net.pwa': 'Installerte Android-apper kan ikke åpne systeminnstillinger. Åpne nettstedet i en Chrome-fane og prøv igjen.',
+    'net.android': 'Android tillater ikke nettsteder å åpne systeminnstillinger. Åpne Wi-Fi-innstillingene i enhetens Innstillinger-app.',
     'whatsnew.sub': 'Nylige endringer i Anthkeys',
     'whatsnew.title': 'Hva er nytt'
 };;
@@ -6299,7 +6299,7 @@ i18n.pl = {
     'net.online': 'Online',
     'net.wifi': 'Otwórz ustawienia Wi-Fi',
     'net.toast': 'Otwórz ustawienia Wi-Fi urządzenia, aby połączyć się ponownie.',
-    'net.pwa': 'Zainstalowane aplikacje Android nie mogą otwierać ustawień systemowych. Otwórz witrynę w karcie Chrome i spróbuj ponownie.',
+    'net.android': 'Android nie pozwala stronom internetowym otwierać ustawień systemowych. Otwórz ustawienia Wi-Fi w aplikacji Ustawienia na urządzeniu.',
     'whatsnew.sub': 'Ostatnie zmiany w Anthkeys',
     'whatsnew.title': 'Co nowego'
 };;
@@ -6699,7 +6699,7 @@ i18n.pt = {
     'net.online': 'Online',
     'net.wifi': 'Abrir definições de Wi-Fi',
     'net.toast': 'Abra as definições de Wi-Fi do dispositivo para voltar a ligar.',
-    'net.pwa': 'Os aplicativos Android instalados não podem abrir as definições do sistema. Abra o site num separador do Chrome e tente novamente.',
+    'net.android': 'O Android não permite que os sites abram as definições do sistema. Abra as definições de Wi-Fi na aplicação Definições do dispositivo.',
     'whatsnew.sub': 'Mudanças recentes no Anthkeys',
     'whatsnew.title': 'Novidades'
 };;
@@ -7099,7 +7099,7 @@ i18n.ru = {
     'net.online': 'Онлайн',
     'net.wifi': 'Открыть настройки Wi-Fi',
     'net.toast': 'Откройте настройки Wi-Fi устройства, чтобы снова подключиться.',
-    'net.pwa': 'Установленные приложения Android не могут открыть системные настройки. Откройте сайт во вкладке Chrome и попробуйте снова.',
+    'net.android': 'Android не позволяет веб-сайтам открывать системные настройки. Откройте настройки Wi-Fi в приложении Настройки на устройстве.',
     'whatsnew.sub': 'Последние изменения в Anthkeys',
     'whatsnew.title': 'Что нового'
 };;
@@ -7499,7 +7499,7 @@ i18n.sv = {
     'net.online': 'Online',
     'net.wifi': 'Öppna Wi-Fi-inställningar',
     'net.toast': 'Öppna enhetens Wi-Fi-inställningar för att återansluta.',
-    'net.pwa': 'Installerade Android-appar kan inte öppna systeminställningarna. Öppna webbplatsen i en Chrome-flik och försök igen.',
+    'net.android': 'Android tillåter inte webbplatser att öppna systeminställningarna. Öppna Wi-Fi-inställningarna i enhetens Inställningar-app.',
     'whatsnew.sub': 'Senaste ändringarna i Anthkeys',
     'whatsnew.title': 'Nyheter'
 };;
@@ -7900,7 +7900,7 @@ i18n.tr = {
     'net.online': 'Çevrimiçi',
     'net.wifi': 'Wi-Fi ayarlarını aç',
     'net.toast': 'Yeniden bağlanmak için cihazınızın Wi-Fi ayarlarını açın.',
-    'net.pwa': 'Yüklü Android uygulamaları sistem ayarlarını açamaz. Siteyi bir Chrome sekmesinde açın ve tekrar deneyin.',
+    'net.android': 'Android, web sitelerinin sistem ayarlarını açmasına izin vermez. Cihazınızın Ayarlar uygulamasından Wi-Fi ayarlarını açın.',
     'whatsnew.sub': 'Anthkeys\'teki son değişiklikler',
     'whatsnew.title': 'Yenilikler'
 };
@@ -8300,7 +8300,7 @@ i18n.vi = {
     'net.online': 'Trực tuyến',
     'net.wifi': 'Mở cài đặt Wi-Fi',
     'net.toast': 'Mở cài đặt Wi-Fi của thiết bị để kết nối lại.',
-    'net.pwa': 'Ứng dụng Android đã cài đặt không thể mở cài đặt hệ thống. Hãy mở trang web trong tab Chrome và thử lại.',
+    'net.android': 'Android không cho phép các trang web mở cài đặt hệ thống. Hãy mở cài đặt Wi-Fi trong ứng dụng Cài đặt của thiết bị.',
     'whatsnew.sub': 'Các thay đổi gần đây của Anthkeys',
     'whatsnew.title': 'Có gì mới'
 };;function applyLanguage(lang) {
@@ -10075,7 +10075,6 @@ probeConnectivity();
 function openWifiSettings() {
   var ua = navigator.userAgent;
   var isIOS = /iPad|iPhone|iPod/.test(ua) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
-  var isAndroid = /Android/i.test(ua);
   var isMac = !isIOS && /Mac/.test(navigator.platform);
   if (isIOS) {
     var a = document.createElement('a');
@@ -10085,21 +10084,16 @@ function openWifiSettings() {
     a.remove();
     return;
   }
-  if (isAndroid) {
-    var standalone = window.matchMedia && (window.matchMedia('(display-mode: standalone)').matches || window.matchMedia('(display-mode: fullscreen)').matches || window.matchMedia('(display-mode: minimal-ui)').matches);
-    if (standalone) {
-      showToastMsg(t('net.pwa'));
-      return;
-    }
-    window.location.href = 'intent:#Intent;action=android.settings.WIFI_SETTINGS;end';
-    return;
-  }
   if (isMac) {
     var b = document.createElement('a');
     b.href = 'x-apple.systempreferences:com.apple.settings.Wi-Fi';
     document.body.appendChild(b);
     b.click();
     b.remove();
+    return;
+  }
+  if (/Android/i.test(ua)) {
+    showToastMsg(t('net.android'));
     return;
   }
   showToastMsg(t('net.toast'));

@@ -637,6 +637,12 @@
                 <p class="whatsnew-sub" data-i18n="whatsnew.sub">Recent changes to Anthkeys</p>
                 <select id="whatsnewSelect" aria-label="Version" style="width:100%;padding:.45rem .7rem;border:1px solid var(--outline-variant);border-radius:var(--radius-sm);background:var(--surface);color:var(--text);font:var(--size) var(--font);font-size:.8rem;margin-bottom:.6rem;box-sizing:border-box;outline:none"></select>
                 <div class="wn-entry">
+                  <div class="wn-ver">v24.7.3 <span class="wn-date">Aug 16, 2026</span></div>
+                  <ul>
+                    <li>Fixed: <strong>Open Wi-Fi settings</strong> on <strong>Android</strong> did nothing &mdash; modern Chrome won&rsquo;t let websites launch Android&rsquo;s system settings at all. The button now shows a short message telling you to open Wi-Fi settings from your device&rsquo;s Settings app (it still opens directly on iOS and macOS).</li>
+                  </ul>
+                </div>
+                <div class="wn-entry">
                   <div class="wn-ver">v24.7.2 <span class="wn-date">Aug 16, 2026</span></div>
                   <ul>
                     <li>Fixed: on an installed Android app (PWA), tapping <strong>Open Wi-Fi settings</strong> did nothing &mdash; Android blocks apps from launching system settings directly. It now explains this and tells you to open the site in a Chrome tab, where the button works.</li>
@@ -645,14 +651,14 @@
                 <div class="wn-entry">
                   <div class="wn-ver">v24.7.1 <span class="wn-date">Aug 16, 2026</span></div>
                   <ul>
-                    <li>Fixed: <strong>Open Wi-Fi settings</strong> now actually opens the Wi-Fi settings on <strong>Android</strong> (Chrome) instead of silently doing nothing.</li>
+                    <li>Fixed: <strong>Open Wi-Fi settings</strong> on <strong>Android</strong> used a JS-triggered anchor click, which Chrome blocks for <code>intent:</code> links &mdash; switched to a user-gesture navigation.</li>
                   </ul>
                 </div>
                 <div class="wn-entry">
                   <div class="wn-ver">v24.7 <span class="wn-date">Aug 16, 2026</span></div>
                   <ul>
                     <li>The <strong>connection status</strong> now lives at the top of <strong>Settings &rarr; General</strong> (moved out of About).</li>
-                    <li>The <strong>Open Wi-Fi settings</strong> button now opens the actual Wi-Fi settings on <strong>Android</strong> (Chrome), <strong>iOS</strong> (Settings app) and <strong>macOS</strong> (System Settings). On Windows and Linux, where browsers can&rsquo;t deep-link into system settings, it shows quick instructions instead.</li>
+                    <li>The <strong>Open Wi-Fi settings</strong> button now opens the actual Wi-Fi settings on <strong>iOS</strong> (Settings app) and <strong>macOS</strong> (System Settings). On Android, Windows and Linux, where browsers can&rsquo;t deep-link into system settings, it shows quick instructions instead.</li>
                   </ul>
                 </div>
                 <div class="wn-entry">
@@ -1139,7 +1145,7 @@
   </div>
 </div>
 
-  <script src="js/anthkeys.js?v=24.7.2">
+  <script src="js/anthkeys.js?v=24.7.3">
 </script>
 <div class="ctx-menu" id="ctxMenu">
   <button data-action="copy-anthkey" data-i18n="ctx.copy">Copy anthkey</button>
