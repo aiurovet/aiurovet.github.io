@@ -10056,20 +10056,24 @@ function openWifiSettings() {
   var isIOS = /iPad|iPhone|iPod/.test(ua) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
   var isAndroid = /Android/i.test(ua);
   var isMac = !isIOS && /Mac/.test(navigator.platform);
-  var url = null;
   if (isIOS) {
-    url = 'App-Prefs:root=WIFI';
-  } else if (isAndroid) {
-    url = 'intent:#Intent;action=android.settings.WIFI_SETTINGS;end';
-  } else if (isMac) {
-    url = 'x-apple.systempreferences:com.apple.settings.Wi-Fi';
-  }
-  if (url) {
     var a = document.createElement('a');
-    a.href = url;
+    a.href = 'App-Prefs:root=WIFI';
     document.body.appendChild(a);
     a.click();
     a.remove();
+    return;
+  }
+  if (isAndroid) {
+    window.location.href = 'intent:#Intent;action=android.settings.WIFI_SETTINGS;end';
+    return;
+  }
+  if (isMac) {
+    var b = document.createElement('a');
+    b.href = 'x-apple.systempreferences:com.apple.settings.Wi-Fi';
+    document.body.appendChild(b);
+    b.click();
+    b.remove();
     return;
   }
   showToastMsg(t('net.toast'));
