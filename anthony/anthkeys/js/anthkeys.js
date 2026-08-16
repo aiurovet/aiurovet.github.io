@@ -10052,10 +10052,21 @@ window.addEventListener('offline', function() { setOfflineIndicator(true); });
 setInterval(probeConnectivity, 15000);
 probeConnectivity();
 function openWifiSettings() {
-  var isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
+  var ua = navigator.userAgent;
+  var isIOS = /iPad|iPhone|iPod/.test(ua) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
+  var isAndroid = /Android/i.test(ua);
+  var isMac = !isIOS && /Mac/.test(navigator.platform);
+  var url = null;
   if (isIOS) {
+    url = 'App-Prefs:root=WIFI';
+  } else if (isAndroid) {
+    url = 'intent:#Intent;action=android.settings.WIFI_SETTINGS;end';
+  } else if (isMac) {
+    url = 'x-apple.systempreferences:com.apple.settings.Wi-Fi';
+  }
+  if (url) {
     var a = document.createElement('a');
-    a.href = 'App-Prefs:root=WIFI';
+    a.href = url;
     document.body.appendChild(a);
     a.click();
     a.remove();
