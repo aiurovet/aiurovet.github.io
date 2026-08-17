@@ -10574,3 +10574,46 @@ document.querySelectorAll('button[title]:not([aria-label])').forEach(btn => {
   if (!btn.textContent.trim()) btn.setAttribute('aria-label', btn.title);
 });
 
+// ---- Custom scroll indicator (mobile) ----
+(function () {
+  if (!matchMedia('(hover:none) and (pointer:coarse)').matches) return;
+  const area = document.getElementById('scrollArea');
+  const track = document.getElementById('scrollTrack');
+  const thumb = document.getElementById('scrollThumb');
+  if (!area || !track || !thumb) return;
+  function updateThumb() {
+    const ratio = area.clientHeight / area.scrollHeight;
+    if (ratio >= 1) { track.style.display = 'none'; return; }
+    track.style.display = '';
+    const h = Math.max(24, area.clientHeight * ratio);
+    thumb.style.height = h + 'px';
+    thumb.style.top = (area.scrollTop / (area.scrollHeight - area.clientHeight)) * (area.clientHeight - h) + 'px';
+  }
+  area.addEventListener('scroll', updateThumb, { passive: true });
+  updateThumb();
+  let dragging = false, startY, startScroll;
+  thumb.addEventListener('touchstart', e => {
+    dragging = true;
+    startY = e.touches[0].clientY;
+    startScroll = area.scrollTop;
+    thumb.style.background = 'rgba(0,0,0,.55)';
+    e.preventDefault();
+  }, { passive: false });
+  document.addEventListener('touchmove', e => {
+    if (!dragging) return;
+    const dy = e.touches[0].clientY - startY;
+    const ratio = area.clientHeight / area.scrollHeight;
+    const thumbH = parseFloat(thumb.style.height);
+    area.scrollTop = startScroll + (dy / (area.clientHeight - thumbH)) * (area.scrollHeight - area.clientHeight);
+  }, { passive: true });
+  document.addEventListener('touchend', () => {
+    if (dragging) { dragging = false; thumb.style.background = ''; }
+  });
+  track.addEventListener('touchstart', e => {
+    const rect = track.getBoundingClientRect();
+    const y = e.touches[0].clientY - rect.top;
+    const ratio = y / rect.height;
+    area.scrollTop = ratio * (area.scrollHeight - area.clientHeight);
+  }, { passive: true });
+})();
+
