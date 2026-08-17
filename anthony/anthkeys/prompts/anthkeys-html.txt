@@ -67,5 +67,30 @@ add a button to remove animations
 also add a button where you can save your settings so that when you refresh the page it saves it.
 make only the list of keys scrollable and the rest should occupy the hieght
 make the bottom of the site where it has the meaning of different win keys for different OS's and the key legend already appear when the site is loaded
- make the platform buttons like windows stay in visibility while scrolling on the shortrcuts panel
+make the platform buttons like windows stay in visibility while scrolling on the shortrcuts panel
+the connection status should be at the start of general settings and can you make it the clicking open wifi settings on android, mac and Linux it actully opens the wifi settings not just on ios
+in the quiz there are sometimes answers that are like action.editor-quick-open. Please make it just like a simple word or 2
+if in the search what ever the result is you can put a word that says filter: and then what ever it matches it to
+the tap the shortcut on mobile to copy should be a long press
+yes and the java script does not work on the site
+in the what is new page add what we just did like removing the border on mobile fix the filters acent color ect and when I mean that the filters all should be in the current accent color do it like on desktopgive me all the words for cloud sync in the other 20 languages
+move help to settings in general
+no help in settings on mobile
+the action and shortcut bar should stay visible on screen while scrolling do this v24.0
+Back-to-top pill — floats in the corner of the list, appears after scrolling a bit.
+Modifier filter — filter pills like "Ctrl", "Alt", "Shift" to show only shortcuts using that key.
+the action shortcut bar doesn't stay when scrolling the shortcuts please fix this
+on mobile sometimes when pressing the search actions button it goes to about
+Quiz streaks + stats 
+the action shortcut bar doesn't stay when scrolling the shortcuts please fix this
+Highlight search matches, clear x button in search actions and offline indicator
+for v24.6 when you get the offline indicator it should stay for 10 seconds and then disapear and appear in settings
+and also with that offline indicator button in settings add a button to open the wifi settings
+
+
+
+
+
+
+the quix button needs to be changed
  
