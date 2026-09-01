@@ -9297,6 +9297,7 @@ document.querySelectorAll('.tab').forEach(tab => {
     updateCompareOptions();
     buildModBar();
     applyCategoryFilter();
+    showDailyTip();
   });
 });
 
