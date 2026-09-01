@@ -11098,7 +11098,7 @@ document.querySelectorAll('button[title]:not([aria-label])').forEach(btn => {
     textEl.textContent = t(steps[idx].text);
     prevBtn.style.visibility = idx === 0 ? 'hidden' : 'visible';
     nextBtn.style.display = idx === total - 1 ? 'none' : '';
-    doneBtn.style.display = idx === total - 1 ? '' : 'none';
+    doneBtn.style.display = idx === total - 1 ? 'inline-block' : 'none';
     dotsEl.textContent = '';
     for (let i = 0; i < total; i++) {
       const d = document.createElement('button');
