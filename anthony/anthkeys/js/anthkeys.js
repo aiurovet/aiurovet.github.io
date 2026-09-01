@@ -10949,6 +10949,7 @@ document.addEventListener('keydown', e => {
 });
 
 // ---- Daily Tip ----
+var lastShownTip = null;
 function showDailyTip() {
   const tipEl = document.getElementById('dailyTip');
   const contentEl = document.getElementById('tipContent');
@@ -10959,15 +10960,6 @@ function showDailyTip() {
     tipEnabled = JSON.parse(lsGet('anthkeys-settings') || '{}').tip !== false;
   } catch(e) { }
   if (!tipEnabled) return;
-
-  const today = new Date().toDateString();
-  const lastDate = lsGet('anthkeys-tip-date', '');
-  const lastTip = lsGet('anthkeys-tip-saved', '');
-  if (lastDate === today && lastTip) {
-    contentEl.textContent = lastTip;
-    tipEl.style.display = '';
-    return;
-  }
 
   const tips = [];
   document.querySelectorAll('.panel.active tbody tr:not(.category)').forEach(tr => {
@@ -10980,10 +10972,14 @@ function showDailyTip() {
   });
 
   if (tips.length === 0) return;
-  const pick = tips[Math.floor(Math.random() * tips.length)];
+  let pick = tips[Math.floor(Math.random() * tips.length)];
+  let guard = 0;
+  while (pick === lastShownTip && tips.length > 1 && guard < 8) {
+    pick = tips[Math.floor(Math.random() * tips.length)];
+    guard++;
+  }
+  lastShownTip = pick;
   contentEl.textContent = pick;
-  lsSet('anthkeys-tip-date', today);
-  lsSet('anthkeys-tip-saved', pick);
   tipEl.style.display = '';
 }
 
