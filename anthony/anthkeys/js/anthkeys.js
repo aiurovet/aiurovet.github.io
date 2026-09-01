@@ -9392,13 +9392,16 @@ function showHelp() {
 // ---- Dark mode quick toggle ----
 onId('btnThemeToggle', 'click', () => {
   const isDark = document.body.classList.contains('dark');
-  preserveWallpaperForDark();
-  document.body.classList.remove('light','dark','ocean','forest','sunset','lavender','midnight','coral','mint','sky','rose','amber','slate','cherry','tundra','nebula','sakura','emerald','peach','storm','desert','glade','aurora','cocoa','twilight','arctic','meadow','volcano','lagoon','autumn','blossom','canyon','frost','galaxy');
+  const wp = WP_THEMES.find(t => document.body.classList.contains(t));
+  document.body.classList.remove('light','dark');
   document.body.classList.add(isDark ? 'light' : 'dark');
+  if (wp) document.body.classList.add('has-accent-wp');
   document.getElementById('btnThemeToggle').innerHTML = isDark ? '&#127769;' : '&#9728;&#65039;';
-  document.querySelectorAll('[data-theme].active').forEach(b => b.classList.remove('active'));
-  const themeBtn = document.querySelector('[data-theme="' + (isDark ? 'light' : 'dark') + '"]');
-  if (themeBtn) themeBtn.classList.add('active');
+  if (!wp) {
+    document.querySelectorAll('[data-theme].active').forEach(b => b.classList.remove('active'));
+    const themeBtn = document.querySelector('[data-theme="' + (isDark ? 'light' : 'dark') + '"]');
+    if (themeBtn) themeBtn.classList.add('active');
+  }
   saveSettings();
 });
 
@@ -9458,11 +9461,11 @@ function clearPreservedWp() {
 
 document.querySelectorAll('.theme-opt[data-theme]').forEach(opt => {
   opt.addEventListener('click', () => {
-    document.querySelectorAll('.theme-opt[data-theme]').forEach(t => t.classList.remove('active'));
-    opt.classList.add('active');
     const theme = opt.dataset.theme;
-    const wasDark = document.body.classList.contains('dark');
     if (WP_THEMES.includes(theme)) {
+      document.querySelectorAll('.theme-opt[data-theme]').forEach(t => t.classList.remove('active'));
+      opt.classList.add('active');
+      const wasDark = document.body.classList.contains('dark');
       clearPreservedWp();
       document.body.classList.remove('light','dark','ocean','forest','sunset','lavender','midnight','coral','mint','sky','rose','amber','slate','cherry','tundra','nebula','sakura','emerald','peach','storm','desert','glade','aurora','cocoa','twilight','arctic','meadow','volcano','lagoon','autumn','blossom','canyon','frost','galaxy');
       if (wasDark) document.body.classList.add('dark');
@@ -9471,6 +9474,20 @@ document.querySelectorAll('.theme-opt[data-theme]').forEach(opt => {
       saveSettings();
       return;
     }
+    const wp = WP_THEMES.find(t => document.body.classList.contains(t));
+    if (wp) {
+      const wantDark = theme === 'dark' || (theme === 'device' && window.matchMedia('(prefers-color-scheme: dark)').matches) || (theme === 'auto' && isAutoDark());
+      document.body.classList.remove('light','dark');
+      document.body.classList.add(wantDark ? 'dark' : 'light');
+      document.body.classList.add('has-accent-wp');
+      document.querySelectorAll('.theme-opt[data-theme]').forEach(t => t.classList.remove('active'));
+      const wpBtn = document.querySelector('.theme-opt[data-theme="' + wp + '"]');
+      if (wpBtn) wpBtn.classList.add('active');
+      saveSettings();
+      return;
+    }
+    document.querySelectorAll('.theme-opt[data-theme]').forEach(t => t.classList.remove('active'));
+    opt.classList.add('active');
     preserveWallpaperForDark();
     const wantDark = theme === 'dark' || (theme === 'device' && window.matchMedia('(prefers-color-scheme: dark)').matches) || (theme === 'auto' && isAutoDark());
     document.body.classList.remove('light','dark','ocean','forest','sunset','lavender','midnight','coral','mint','sky','rose','amber','slate','cherry','tundra','nebula','sakura','emerald','peach','storm','desert','glade','aurora','cocoa','twilight','arctic','meadow','volcano','lagoon','autumn','blossom','canyon','frost','galaxy');
