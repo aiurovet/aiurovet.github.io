@@ -10962,14 +10962,27 @@ function showDailyTip() {
   } catch(e) { }
   if (!tipEnabled) return;
 
+  const activePanel = document.querySelector('.panel.active');
+  if (!activePanel) return;
+  const inApps = activePanel.id === 'apps';
   const tips = [];
-  document.querySelectorAll('.panel.active tbody tr:not(.category)').forEach(tr => {
+  let curApp = '';
+  activePanel.querySelectorAll('tbody tr').forEach(tr => {
+    if (tr.classList.contains('category')) {
+      if (inApps) {
+        const c = tr.querySelector('td');
+        if (c) curApp = c.textContent.trim();
+      }
+      return;
+    }
     const actionEl = tr.querySelector('td:first-child');
     const anthkeyEl = tr.querySelector('td:last-child');
     if (!actionEl || !anthkeyEl) return;
     const action = actionEl.textContent.trim();
     const anthkey = anthkeyEl.textContent.trim();
-    if (action && anthkey) tips.push(action + ' \u2014 ' + anthkey);
+    if (action && anthkey) {
+      tips.push(inApps && curApp ? curApp + ' \u2014 ' + action + ' \u2014 ' + anthkey : action + ' \u2014 ' + anthkey);
+    }
   });
 
   if (tips.length === 0) return;
