@@ -9166,6 +9166,10 @@ function verCmp(a, b) {
       APP_VERSION = m[1];
       const span = verEl.querySelector('span') || verEl;
       span.textContent = 'v' + APP_VERSION;
+      const helpChip = Array.from(document.querySelectorAll('.help-tip kbd')).find(k => /^v\d/.test(k.textContent));
+      if (helpChip) {
+        helpChip.textContent = 'v' + APP_VERSION;
+      }
       if (verCmp(lsGet('anthkeys-highlight-version'), APP_VERSION) === 0) {
         verEl.classList.add('pill-new');
         const badge = document.getElementById('settingsBadge');
@@ -10966,7 +10970,7 @@ function showDailyTip() {
   }
 
   const tips = [];
-  document.querySelectorAll('.panel tbody tr:not(.category)').forEach(tr => {
+  document.querySelectorAll('.panel.active tbody tr:not(.category)').forEach(tr => {
     const actionEl = tr.querySelector('td:first-child');
     const anthkeyEl = tr.querySelector('td:last-child');
     if (!actionEl || !anthkeyEl) return;
