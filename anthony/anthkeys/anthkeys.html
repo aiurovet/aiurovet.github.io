@@ -28,7 +28,7 @@
   <script>if (location.protocol === 'file:') document.getElementById('manifestLink').remove();</script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=Roboto:wght@400;500;600;700&family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/anthkeys.css?v=78">
+  <link rel="stylesheet" href="css/anthkeys.css?v=79">
 </head>
 <body class="light style-m3 size-medium font-google-sans">
  <div class="container">
@@ -639,6 +639,12 @@
                 <div class="whatsnew-title" data-i18n="whatsnew.title">What's new</div>
                 <p class="whatsnew-sub" data-i18n="whatsnew.sub">Recent changes to Anthkeys</p>
                 <select id="whatsnewSelect" aria-label="Version" style="width:100%;padding:.45rem .7rem;border:1px solid var(--outline-variant);border-radius:var(--radius-sm);background:var(--surface);color:var(--text);font:var(--size) var(--font);font-size:.8rem;margin-bottom:.6rem;box-sizing:border-box;outline:none"></select>
+                <div class="wn-entry">
+                  <div class="wn-ver">v29 <span class="wn-date">Sep 6, 2026</span></div>
+                  <ul>
+                    <li>Fixed: on <strong>mobile</strong>, tapping the version badge now plays the random bounce/spin/squash animation instead of being blocked by the touch-device animation reset.</li>
+                  </ul>
+                </div>
                 <div class="wn-entry">
                   <div class="wn-ver">v28 <span class="wn-date">Sep 6, 2026</span></div>
                   <ul>
@@ -1258,7 +1264,7 @@
   </div>
 </div>
 
-  <script src="js/anthkeys.js?v=28">
+  <script src="js/anthkeys.js?v=29">
 </script>
 </body>
 </html>

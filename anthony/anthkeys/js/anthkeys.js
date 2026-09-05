@@ -9197,9 +9197,12 @@ function onVersionBadgeClick() {
   if (pill) {
     const span = pill.querySelector('span') || pill;
     const anim = VERSION_ANIMS[Math.floor(Math.random() * VERSION_ANIMS.length)];
+    const v = anim + ' .6s cubic-bezier(.34,1.56,.64,1)';
     span.style.animation = 'none';
+    span.style.setProperty('--vx-anim', 'none');
     void span.offsetWidth;
-    span.style.animation = anim + ' .6s cubic-bezier(.34,1.56,.64,1)';
+    span.style.animation = v;
+    span.style.setProperty('--vx-anim', v);
   }
   openWhatsNew();
 }
