@@ -11286,12 +11286,53 @@ function synDeviceId() {
 function synDeviceName() {
   let n = lsGet('anthkeys-sync-name', '');
   if (!n) {
-    const adj = ['Swift', 'Nifty', 'Lucky', 'Cosmic', 'Fuzzy', 'Golden', 'Turbo', 'Mellow', 'Clever', 'Rapid'];
-    const noun = ['Falcon', 'Panda', 'Comet', 'Pixel', 'Nova', 'Wombat', 'Tiger', 'Bolt', 'Beacon', 'Sphinx'];
-    n = adj[Math.floor(Math.random() * adj.length)] + ' ' + noun[Math.floor(Math.random() * noun.length)];
+    n = 'Anthkeys ' + Math.floor(100 + Math.random() * 900);
     lsSet('anthkeys-sync-name', n);
   }
   return n;
+}
+
+function detectDeviceName() {
+  const ua = navigator.userAgent || '';
+  let m = ua.match(/;\s*([^;()]+?)\s+Build\/[A-Z]{1,20}/i);
+  if (m && m[1].trim().length >= 2) {
+    const nm = m[1].trim().split('/')[0].trim();
+    if (nm.length <= 40) return nm;
+  }
+  m = ua.match(/Android [\d.]+;\s*([\w ]{2,40})/i);
+  if (m && m[1].trim().length >= 2) {
+    const nm = m[1].trim().split(/\s+(?:Build|V|RV|SP1A)/i)[0].trim();
+    if (nm.length <= 40 && !/^(en|en-|zh|de|fr|es|pt|it|ja|ko|ru|tr|nl|no|da|sv|fi|hi|cs|pl|vi|ar)\b/i.test(nm)) return nm;
+  }
+  m = ua.match(/\((iPhone|iPad|iPod)[A-Za-z0-9,]+/i);
+  if (m) return m[1];
+  if (/Macintosh|Mac OS X/i.test(ua)) return 'Mac';
+  if (/Windows/i.test(ua)) return 'Windows PC';
+  return '';
+}
+
+let _deviceNameReady = null;
+function ensureDeviceName() {
+  if (_deviceNameReady) return _deviceNameReady;
+  _deviceNameReady = new Promise(resolve => {
+    if (navigator.userAgentData && navigator.userAgentData.getHighEntropyValues) {
+      navigator.userAgentData.getHighEntropyValues(['model']).then(sug => {
+        let real = (sug && sug.model) ? sug.model : detectDeviceName();
+        if (!real) real = detectDeviceName();
+        if (real) lsSet('anthkeys-sync-name', real);
+        resolve();
+      }).catch(() => {
+        const real = detectDeviceName();
+        if (real) lsSet('anthkeys-sync-name', real);
+        resolve();
+      });
+      return;
+    }
+    const real = detectDeviceName();
+    if (real) lsSet('anthkeys-sync-name', real);
+    resolve();
+  });
+  return _deviceNameReady;
 }
 
 function tx(key) {
@@ -11444,23 +11485,25 @@ function syncConnect(code) {
     if (!syncConnected && syncRoom) syncSetStatus('#dc2626', tx('sync.error'));
   }, 15000);
   client.on('connect', () => {
-    syncConnected = true;
-    syncClient = client;
-    clearTimeout(failTimer);
-    client.subscribe(syncTopic('updates'), { qos: 1 });
-    client.subscribe(syncTopic('state'), { qos: 1 });
-    client.subscribe(syncTopic('presence') + '/#', { qos: 1 });
-    syncPublishPresence();
-    syncPublishAnnounce();
-    clearInterval(syncPresenceTimer);
-    syncPresenceTimer = setInterval(() => {
-      if (syncConnected && syncRoom) { syncPublishPresence(); syncPrunePeers(); syncUpdatePeers(); }
-    }, 15000);
-    syncSetStatus('#34a853', tx('sync.online'));
-    syncRenderPanel();
-    setTimeout(() => {
-      if (syncConnected && syncRoom && syncRetainedT === 0) syncPublishNow();
-    }, 1800);
+    ensureDeviceName().then(() => {
+      if (!syncClient || syncRoom !== syncNormCode(syncRoom) || !syncRoom) return;
+      syncConnected = true;
+      clearTimeout(failTimer);
+      client.subscribe(syncTopic('updates'), { qos: 1 });
+      client.subscribe(syncTopic('state'), { qos: 1 });
+      client.subscribe(syncTopic('presence') + '/#', { qos: 1 });
+      syncPublishPresence();
+      syncPublishAnnounce();
+      clearInterval(syncPresenceTimer);
+      syncPresenceTimer = setInterval(() => {
+        if (syncConnected && syncRoom) { syncPublishPresence(); syncPrunePeers(); syncUpdatePeers(); }
+      }, 15000);
+      syncSetStatus('#34a853', tx('sync.online'));
+      syncRenderPanel();
+      setTimeout(() => {
+        if (syncConnected && syncRoom && syncRetainedT === 0) syncPublishNow();
+      }, 1800);
+    });
   });
   client.on('message', (topic, payload) => {
     const t = String(topic == null ? '' : topic);
