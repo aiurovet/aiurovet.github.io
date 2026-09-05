@@ -9179,208 +9179,17 @@ function verCmp(a, b) {
     verEl.addEventListener('click', onVersionBadgeClick);
   }
 })();
+var VERSION_ANIMS = ['vx-squash', 'vx-wiggle', 'vx-spin', 'vx-flip', 'vx-flop', 'vx-pulse', 'vx-jiggle', 'vx-swing', 'vx-bounce', 'vx-teeter', 'vx-squeeze', 'vx-stretch', 'vx-shakex', 'vx-shakey', 'vx-flash', 'vx-heart', 'vx-wobble', 'vx-rattle', 'vx-zoom', 'vx-roll', 'vx-leap', 'vx-blob'];
 function onVersionBadgeClick() {
-  let count = 0;
-  try { count = parseInt(lsGet('anthkeys-egg-clicks', '0'), 10) || 0; } catch(e) {}
-  count++;
-  lsSet('anthkeys-egg-clicks', '' + count);
-  if (count >= 10) {
-    openEasterGame();
+  const pill = document.getElementById('appVersion');
+  if (pill) {
+    const span = pill.querySelector('span') || pill;
+    const anim = VERSION_ANIMS[Math.floor(Math.random() * VERSION_ANIMS.length)];
+    span.style.animation = 'none';
+    void span.offsetWidth;
+    span.style.animation = anim + ' .6s cubic-bezier(.34,1.56,.64,1)';
   }
   openWhatsNew();
-}
-// ---- Easter egg: football penalty shootout ----
-var EGG_PLAYERS = [
-  { name: 'Ronaldo', num: '7',  kit: '#e11d48' },
-  { name: 'Messi',   num: '10', kit: '#059669' },
-  { name: 'Mbapp\u00e9', num: '10', kit: '#2563eb' },
-  { name: 'Neymar',  num: '10', kit: '#f59e0b' },
-  { name: 'Haaland', num: '9',  kit: '#7c3aed' }
-];
-var eggOverlay = null, eggGoalSound = null;
-function eggPlaySound() {
-  try {
-    if (eggGoalSound) { eggGoalSound.currentTime = 0; eggGoalSound.play(); }
-  } catch(e) {}
-}
-function showEggBanner(text) {
-  const b = document.querySelector('.easter-banner');
-  if (!b) return;
-  b.textContent = text;
-  b.style.color = '#fff';
-  b.classList.remove('show');
-  void b.offsetWidth;
-  b.classList.add('show');
-}
-function spawnConfetti() {
-  const colors = ['var(--accent-1)', 'var(--accent-2)', '#34d399', '#60a5fa', '#f472b6'];
-  for (let i = 0; i < 60; i++) {
-    const p = document.createElement('i');
-    p.className = 'confetti-piece';
-    p.style.left = Math.random() * 100 + 'vw';
-    p.style.background = colors[Math.floor(Math.random() * colors.length)];
-    p.style.width = (6 + Math.random() * 8) + 'px';
-    p.style.height = (8 + Math.random() * 8) + 'px';
-    p.style.animationDuration = (1.2 + Math.random() * 1.6) + 's';
-    p.style.animationDelay = (Math.random() * .6) + 's';
-    document.body.appendChild(p);
-    setTimeout(() => p.remove(), 4200);
-  }
-}
-function openEasterGame() {
-  if (eggOverlay) { eggOverlay.classList.add('open'); return; }
-  const ov = document.createElement('div');
-  ov.className = 'easter-full';
-  ov.innerHTML =
-    '<div class="easter-surface">' +
-      '<div class="easter-hud">' +
-        '<button class="easter-close" aria-label="Close">✕</button>' +
-        '<div class="easter-score">Goals <span class="eg-goals">0</span>/5 &mdash; Round <span class="eg-round">1</span></div>' +
-        '<span class="easter-hs">Best <span class="eg-hs">0</span></span>' +
-      '</div>' +
-      '<div class="easter-pitch">' +
-        '<div class="easter-goal"></div>' +
-        '<div class="easter-net"></div>' +
-        '<div class="easter-keeper"></div>' +
-        '<div class="easter-ball"></div>' +
-        '<div class="easter-callout"></div>' +
-        '<div class="easter-banner"></div>' +
-      '</div>' +
-      '<div class="easter-players-bar"></div>' +
-      '<div class="easter-aim"><button class="easter-aim-btn" data-aim="left">Left</button><button class="easter-aim-btn" data-aim="center">Center</button><button class="easter-aim-btn" data-aim="right">Right</button></div>' +
-    '</div>';
-  document.body.appendChild(ov);
-  eggOverlay = ov;
-  eggGoalSound = new Audio('audio/siuuuu.mp3');
-  const closeBtn = ov.querySelector('.easter-close');
-  closeBtn.addEventListener('click', () => ov.classList.remove('open'));
-  const bar = ov.querySelector('.easter-players-bar');
-  EGG_PLAYERS.forEach(p => {
-    const card = document.createElement('div');
-    card.className = 'easter-player';
-    card.innerHTML = '<div class="easter-kit" style="background:' + p.kit + '"></div><div class="easter-name">' + p.name + '</div><div class="easter-num">#' + p.num + '</div>';
-    card.dataset.pid = p.name;
-    bar.appendChild(card);
-  });
-  ov.querySelectorAll('.easter-aim-btn').forEach(b => b.addEventListener('click', () => eggShoot(b.dataset.aim)));
-  ov.classList.add('open');
-  eggRound = 1; eggGoals = 0;
-  updateEggHud();
-  eggSetupRound();
-}
-var eggRound = 1, eggGoals = 0;
-function updateEggHud() {
-  const ov = eggOverlay; if (!ov) return;
-  const g = ov.querySelector('.eg-goals'); if (g) g.textContent = eggGoals;
-  const r = ov.querySelector('.eg-round'); if (r) r.textContent = eggRound;
-  let best = 0; try { best = parseInt(lsGet('anthkeys-egg-hs', '0'), 10) || 0; } catch(e) {}
-  const hs = ov.querySelector('.eg-hs'); if (hs) hs.textContent = best;
-  ov.querySelectorAll('.easter-player').forEach(c => c.classList.toggle('easter-shooter', c.dataset.pid === eggShooter));
-}
-function eggSetupRound() {
-  const ov = eggOverlay; if (!ov) return;
-  const shooter = EGG_PLAYERS[(eggRound - 1) % EGG_PLAYERS.length];
-  eggShooter = shooter.name;
-  const keeper = ov.querySelector('.easter-keeper');
-  const ball = ov.querySelector('.easter-ball');
-  const pitch = ov.querySelector('.easter-pitch');
-  const net = ov.querySelector('.easter-net');
-  keeper.className = 'easter-keeper';
-  keeper.style.left = '50%'; keeper.style.top = '70%';
-  ball.style.left = '50%';
-  ball.style.top = '82%';
-  ball.style.transform = 'translate(-50%,-50%)';
-  ball.classList.remove('goal-net');
-  if (net) net.classList.remove('hit');
-  if (pitch) pitch.classList.remove('shake');
-  const callout = ov.querySelector('.easter-callout');
-  if (callout) {
-    callout.textContent = shooter.name + ' steps up to take it\u2026';
-    callout.style.background = shooter.kit;
-    callout.classList.add('show');
-    callout.style.opacity = '1';
-  }
-  updateEggHud();
-  const aim = ov.querySelector('.easter-aim');
-  if (aim) { aim.style.visibility = 'visible'; aim.style.pointerEvents = 'auto'; }
-}
-var eggShooter = '';
-function eggShoot(aim) {
-  const ov = eggOverlay; if (!ov) return;
-  ov.querySelector('.easter-aim').style.visibility = 'hidden';
-  ov.querySelector('.easter-aim').style.pointerEvents = 'none';
-  const shooter = EGG_PLAYERS.find(p => p.name === eggShooter);
-  const keeper = ov.querySelector('.easter-keeper');
-  const ball = ov.querySelector('.easter-ball');
-  const pitch = ov.querySelector('.easter-pitch');
-  const net = ov.querySelector('.easter-net');
-  const goalArea = ov.querySelector('.easter-goal').getBoundingClientRect();
-  const pitchRect = ov.querySelector('.easter-pitch').getBoundingClientRect();
-  // Keeper reads the run-up: skills make him guess more often
-  const sides = ['left','center','right'];
-  const guess = Math.random() < (0.45 + 0.08 * (eggRound - 1)) ? aim : sides[Math.floor(Math.random() * 3)];
-  const keeperClass = { left: 'dive-left', center: 'dive-center', right: 'dive-right' }[guess];
-  // Ball lands at a random spot inside the chosen zone of the goal
-  const zone = {
-    left:   { minX: goalArea.left + goalArea.width * .08, maxX: goalArea.left + goalArea.width * .34 },
-    center: { minX: goalArea.left + goalArea.width * .38, maxX: goalArea.left + goalArea.width * .62 },
-    right:  { minX: goalArea.left + goalArea.width * .66, maxX: goalArea.left + goalArea.width * .92 }
-  }[aim];
-  const tgtX = zone.minX + Math.random() * (zone.maxX - zone.minX);
-  const tgtY = goalArea.top + goalArea.height * (0.15 + Math.random() * 0.55);
-  const fx = tgtX - pitchRect.left, fy = tgtY - pitchRect.top;
-  const px = (fx / pitchRect.width * 100).toFixed(2);
-  const py = (fy / pitchRect.height * 100).toFixed(2);
-  // Strike: keeper dives and ball flies together
-  setTimeout(() => keeper.classList.add(keeperClass), 380);
-  setTimeout(() => {
-    ball.style.left = px + '%';
-    ball.style.top = py + '%';
-  }, 420);
-  // Rare post/bar: keeper wrong but shot rattles off the frame
-  const hitPost = Math.random() < 0.10;
-  const blocked = guess !== aim;
-  const goal = !blocked && !hitPost;
-  const applyResult = () => {
-    if (hitPost) {
-      pitch.classList.add('shake');
-      showEggBanner('OFF THE POST! \ud83d\udea8');
-    } else if (blocked) {
-      keeper.classList.add('dive-block');
-      ball.classList.add('ball-save');
-      showEggBanner('SAVED! \ud83e\udde4');
-    } else {
-      ball.classList.add('goal-net');
-      if (net) net.classList.add('hit');
-      pitch.classList.add('shake');
-      eggGoals++;
-      if (shooter && shooter.name === 'Ronaldo') {
-        eggPlaySound();
-        showEggBanner('SIIIIUUUU!! \u26bd');
-        spawnConfetti();
-      } else {
-        spawnConfetti();
-        showEggBanner('GOOOAL! \u26bd');
-      }
-    }
-    updateEggHud();
-    const best = parseInt(lsGet('anthkeys-egg-hs', '0'), 10) || 0;
-    if (eggGoals > best) lsSet('anthkeys-egg-hs', '' + eggGoals);
-    setTimeout(() => {
-      const callout = ov.querySelector('.easter-callout');
-      if (callout) callout.style.opacity = '0';
-      if (eggRound >= 5) {
-        const total = eggGoals;
-        showEggBanner(total >= 3 ? 'YOU WIN! \ud83c\udfc6' : 'FINAL: ' + total + ' goals');
-        if (total >= 3) spawnConfetti();
-        setTimeout(() => { eggRound = 1; eggGoals = 0; updateEggHud(); eggSetupRound(); }, 3200);
-        return;
-      }
-      eggRound++;
-      eggSetupRound();
-    }, 2100);
-  };
-  setTimeout(applyResult, 1750);
 }
 function showUpdateToast(ver) {
   const toast = document.getElementById('updateToast');
@@ -9395,14 +9204,9 @@ function showUpdateToast(ver) {
 }
 function openWhatsNew() {
   showSettings();
-  const generalTab = document.querySelector('.settings-tab[data-settings-tab="general"]');
-  if (generalTab && !generalTab.classList.contains('active')) {
-    generalTab.click();
-  }
-  const about = document.getElementById('setting-about');
-  if (about) {
-    about.classList.add('open');
-    setTimeout(() => about.scrollIntoView({ behavior: 'smooth', block: 'start' }), 50);
+  const aboutTab = document.querySelector('.settings-tab[data-settings-tab="about"]');
+  if (aboutTab && !aboutTab.classList.contains('active')) {
+    aboutTab.click();
   }
   const toast = document.getElementById('updateToast');
   if (toast) { toast.classList.remove('show'); clearTimeout(toast._timer); }
