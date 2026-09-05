@@ -9043,6 +9043,7 @@ if (autoLang) {
 applyLanguage('en');
 
 // ---- Register service worker (PWA) + update detection ----
+let reloadOnUpdate = false;
 if ('serviceWorker' in navigator) {
   let refreshing = false;
   const updateMode = () => {
@@ -9065,14 +9066,16 @@ if ('serviceWorker' in navigator) {
     });
   }).catch(() => {});
   navigator.serviceWorker.addEventListener('controllerchange', () => {
-    if (refreshing) return;
+    if (!reloadOnUpdate || refreshing) return;
     refreshing = true;
+    reloadOnUpdate = false;
     location.reload();
   });
 }
 
 // ---- Refresh for updates ----
 function refreshForUpdates() {
+  reloadOnUpdate = true;
   const reload = () => location.reload();
   if (!('serviceWorker' in navigator)) { reload(); return; }
   navigator.serviceWorker.getRegistration().then(reg => {

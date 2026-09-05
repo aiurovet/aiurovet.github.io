@@ -28,7 +28,7 @@
   <script>if (location.protocol === 'file:') document.getElementById('manifestLink').remove();</script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=Roboto:wght@400;500;600;700&family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/anthkeys.css?v=76">
+  <link rel="stylesheet" href="css/anthkeys.css?v=77">
 </head>
 <body class="light style-m3 size-medium font-google-sans">
  <div class="container">
@@ -640,6 +640,12 @@
                 <p class="whatsnew-sub" data-i18n="whatsnew.sub">Recent changes to Anthkeys</p>
                 <select id="whatsnewSelect" aria-label="Version" style="width:100%;padding:.45rem .7rem;border:1px solid var(--outline-variant);border-radius:var(--radius-sm);background:var(--surface);color:var(--text);font:var(--size) var(--font);font-size:.8rem;margin-bottom:.6rem;box-sizing:border-box;outline:none"></select>
                 <div class="wn-entry">
+                  <div class="wn-ver">v27 <span class="wn-date">Sep 6, 2026</span></div>
+                  <ul>
+                    <li>Fixed: opening the page right after a <strong>new version</strong> no longer resets it with a surprise reload a few seconds later &mdash; the update now applies in the background. The Refresh button and the &ldquo;Ask before updating&rdquo; option still reload on demand.</li>
+                  </ul>
+                </div>
+                <div class="wn-entry">
                   <div class="wn-ver">v26.9 <span class="wn-date">Sep 5, 2026</span></div>
                   <ul>
                     <li>Playful: tapping the <strong>version badge</strong> now plays a random bounce/spin/squash animation each time, gets a <strong>shimmer</strong> while a new version is highlighted, and the About section moved to its own <strong>About tab</strong> in Settings so it&rsquo;s faster to reach.</li>
@@ -1246,7 +1252,7 @@
   </div>
 </div>
 
-  <script src="js/anthkeys.js?v=26.9">
+  <script src="js/anthkeys.js?v=27">
 </script>
 </body>
 </html>
