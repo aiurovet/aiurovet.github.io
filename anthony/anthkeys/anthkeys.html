@@ -28,7 +28,7 @@
   <script>if (location.protocol === 'file:') document.getElementById('manifestLink').remove();</script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=Roboto:wght@400;500;600;700&family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/anthkeys.css?v=79">
+  <link rel="stylesheet" href="css/anthkeys.css?v=80">
 </head>
 <body class="light style-m3 size-medium font-google-sans">
  <div class="container">
@@ -606,6 +606,49 @@
           </div>
         </div>
       </div>
+      <div class="setting-group">
+        <h2 data-i18n="sync.title">Live rooms</h2>
+        <div class="setting-body">
+          <div style="display:flex;align-items:center;gap:.5rem;padding:.5rem .6rem;border:1px solid var(--outline-variant);border-radius:var(--radius-sm);background:var(--surface-variant)">
+            <span id="syncDot" style="width:.55rem;height:.55rem;border-radius:50%;background:var(--text-variant,#9e9e9e);flex:none"></span>
+            <span id="syncStatus" style="font-size:.78rem;color:var(--text-variant)" data-i18n="sync.idle">Not connected</span>
+          </div>
+          <div id="syncRoomPanel" hidden>
+            <div style="display:flex;gap:.4rem;align-items:center;margin-top:.5rem">
+              <code id="syncRoomCode" style="flex:1;min-width:0;padding:.5rem;border:1px solid var(--outline-variant);border-radius:var(--radius-sm);background:var(--surface);color:var(--primary);font-size:.95rem;text-align:center;letter-spacing:.12em"></code>
+              <button class="theme-opt" id="btnSyncCopyCode" style="flex:0 0 auto;width:auto;justify-content:center;font-size:.78rem;padding:.5rem .8rem" data-i18n="sync.copy">Copy</button>
+            </div>
+            <div id="syncDevices" style="margin-top:.4rem;font-size:.75rem;color:var(--text-variant);line-height:1.5"></div>
+          </div>
+          <div id="syncJoinWrap" style="display:flex;gap:.4rem;margin-top:.5rem">
+            <input type="text" id="syncJoinInput" data-i18n-placeholder="sync.join-placeholder" placeholder="Room code (AK-XXX-YYY)" style="flex:1;min-width:0;padding:.5rem;border:1px solid var(--outline-variant);border-radius:var(--radius-sm);background:var(--surface);color:var(--text);font:var(--size) var(--font);box-sizing:border-box;outline:none;font-size:.8rem">
+            <button class="theme-opt" id="btnSyncJoin" style="flex:0 0 auto;width:auto;justify-content:center;font-size:.8rem;padding:.5rem .8rem" data-i18n="sync.join">Join room</button>
+          </div>
+          <div style="display:flex;gap:.4rem;margin-top:.4rem">
+            <button class="theme-opt" id="btnSyncHost" style="flex:1;justify-content:center;font-size:.8rem" data-i18n="sync.host">Start a room</button>
+            <button class="theme-opt" id="btnSyncLeave" style="flex:1;justify-content:center;font-size:.8rem;color:var(--error,#dc2626)" data-i18n="sync.leave" hidden>Leave room</button>
+          </div>
+          <p style="margin-top:.45rem;font-size:.72rem;color:var(--text-variant);line-height:1.4" data-i18n="sync.note">Start a room, share the code, and any device that enters it syncs settings and custom shortcuts automatically. Uses a free public MQTT broker &mdash; requires an internet connection.</p>
+        </div>
+      </div>
+      <div class="setting-group">
+        <h2 data-i18n="sync.manual-title">Offline sync code</h2>
+        <div class="setting-body">
+          <div style="display:flex;gap:.4rem">
+            <button class="theme-opt" id="btnManualMake" style="flex:1;justify-content:center;font-size:.8rem" data-i18n="sync.manual-make">Create a code</button>
+            <button class="theme-opt" id="btnManualApply" style="flex:1;justify-content:center;font-size:.8rem" data-i18n="sync.manual-apply">Apply a code</button>
+          </div>
+          <div id="syncManualPanel" hidden>
+            <div id="syncManualQr" style="text-align:center;background:#fff;border-radius:var(--radius-sm);padding:.4rem;width:max-content;margin:.6rem auto 0"></div>
+            <div style="display:flex;gap:.4rem;align-items:center;margin-top:.4rem">
+              <code id="syncManualCode" style="flex:1;min-width:0;padding:.5rem;border:1px solid var(--outline-variant);border-radius:var(--radius-sm);background:var(--surface);color:var(--text);font-size:.68rem;word-break:break-all;line-height:1.4"></code>
+              <button class="theme-opt" id="btnManualCopy" style="flex:0 0 auto;width:auto;justify-content:center;font-size:.78rem;padding:.5rem .8rem" data-i18n="sync.copy">Copy</button>
+              <button class="theme-opt" id="btnManualShare" style="flex:0 0 auto;width:auto;justify-content:center;font-size:.78rem;padding:.5rem .8rem" data-i18n="sync.share" hidden>Share</button>
+            </div>
+          </div>
+          <input type="text" id="syncManualInput" data-i18n-placeholder="sync.manual-placeholder" placeholder="Paste the code from the other device" style="width:100%;box-sizing:border-box;padding:.5rem;border:1px solid var(--outline-variant);border-radius:var(--radius-sm);background:var(--surface);color:var(--text);font:var(--size) var(--font);margin-top:.5rem;outline:none;font-size:.8rem">
+        </div>
+      </div>
     </div>
     <div class="settings-panel" id="settings-about">
       <div class="setting-group" id="setting-help">
@@ -639,6 +682,13 @@
                 <div class="whatsnew-title" data-i18n="whatsnew.title">What's new</div>
                 <p class="whatsnew-sub" data-i18n="whatsnew.sub">Recent changes to Anthkeys</p>
                 <select id="whatsnewSelect" aria-label="Version" style="width:100%;padding:.45rem .7rem;border:1px solid var(--outline-variant);border-radius:var(--radius-sm);background:var(--surface);color:var(--text);font:var(--size) var(--font);font-size:.8rem;margin-bottom:.6rem;box-sizing:border-box;outline:none"></select>
+                <div class="wn-entry">
+                  <div class="wn-ver">v30 <span class="wn-date">Sep 6, 2026</span></div>
+                  <ul>
+                    <li><strong>Live rooms:</strong> start a room and share its code &mdash; any device that enters it syncs your settings and custom shortcuts in real time.</li>
+                    <li><strong>Offline sync codes:</strong> create a one-time code (or QR) with your settings on one device and apply it on another, even without internet.</li>
+                  </ul>
+                </div>
                 <div class="wn-entry">
                   <div class="wn-ver">v29 <span class="wn-date">Sep 6, 2026</span></div>
                   <ul>
@@ -1264,7 +1314,9 @@
   </div>
 </div>
 
-  <script src="js/anthkeys.js?v=29">
+  <script src="js/mqtt.min.js"></script>
+  <script src="js/qrcode.js"></script>
+  <script src="js/anthkeys.js?v=30">
 </script>
 </body>
 </html>

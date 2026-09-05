@@ -117,6 +117,30 @@ const i18n = {
     'cloud.download': 'Download from Gist',
     'cloud.saved': 'Cloud settings saved!',
     'cloud.error': 'Sync error',
+    'sync.title': 'Live rooms',
+    'sync.join': 'Join room',
+    'sync.host': 'Start a room',
+    'sync.leave': 'Leave room',
+    'sync.copy': 'Copy',
+    'sync.share': 'Share',
+    'sync.idle': 'Not connected',
+    'sync.connecting': 'Connecting\u2026',
+    'sync.online': 'Live sync on',
+    'sync.peers': '{0} device(s) in room',
+    'sync.none': 'Only this device so far',
+    'sync.join-placeholder': 'Room code (AK-XXX-YYY)',
+    'sync.badcode': 'Enter a valid room code (AK-XXX-YYY)',
+    'sync.error': 'Could not connect to the sync broker. Check your connection and try again.',
+    'sync.updated': 'Settings synced from another device',
+    'sync.leaving': 'Left the room',
+    'sync.note': 'Start a room, share the code, and any device that enters it syncs settings and custom shortcuts automatically. Uses a free public MQTT broker - requires an internet connection.',
+    'sync.manual-title': 'Offline sync code',
+    'sync.manual-make': 'Create a code',
+    'sync.manual-apply': 'Apply a code',
+    'sync.manual-placeholder': 'Paste the code from the other device',
+    'sync.manual-copied': 'Code copied',
+    'sync.manual-applied': 'Settings imported from code',
+    'sync.manual-bad': 'That does not look like a valid code',
     'translate.summary': '+ Contribute a translation',
     'theme.light': '\u2600\ufe0f Light',
     'theme.dark': '\ud83c\udf19 Dark',
@@ -8831,6 +8855,7 @@ function saveSettings() {
     else { const el = document.getElementById('customAccentInput'); if (el) data.customAccentHex = el.value; }
   }
   lsSet('anthkeys-settings', JSON.stringify(data));
+  scheduleSyncPublish();
 }
 
 function loadSettings() {
@@ -9131,7 +9156,7 @@ let customAnthkeys = [];
 function loadCustomAnthkeys() {
   try { customAnthkeys = JSON.parse(lsGet('anthkeys-custom') || '[]'); } catch(e) { customAnthkeys = []; }
 }
-function saveCustomAnthkeys() { lsSet('anthkeys-custom', JSON.stringify(customAnthkeys)); }
+function saveCustomAnthkeys() { lsSet('anthkeys-custom', JSON.stringify(customAnthkeys)); scheduleSyncPublish(); }
 function renderCustomAnthkeys() {
   const list = document.getElementById('customAnthkeysList');
   if (!list) return;
@@ -11232,4 +11257,368 @@ document.querySelectorAll('button[title]:not([aria-label])').forEach(btn => {
   });
   addEventListener('resize', () => { if (!overlay.hidden) place(); });
 })();
+
+// ---- Live sync rooms (MQTT) + offline sync codes ----
+const SYNC_BROKERS = [
+  'wss://broker.emqx.io:8084/mqtt',
+  'wss://test.mosquitto.org:8081/mqtt'
+];
+const SYNC_CODE_ALPHABET = 'ABCDEFGHJKMNPQRSTUVWXYZ23456789';
+let syncClient = null;
+let syncRoom = '';
+let syncConnected = false;
+let syncRetainedT = 0;
+let syncPeers = {};
+let syncPresenceTimer = null;
+let syncPublishTimer = null;
+
+function synDeviceId() {
+  let id = lsGet('anthkeys-sync-device', '');
+  if (!id) {
+    id = 'd' + Math.random().toString(36).slice(2, 10) + Math.random().toString(36).slice(2, 6);
+    lsSet('anthkeys-sync-device', id);
+  }
+  return id;
+}
+
+function synDeviceName() {
+  let n = lsGet('anthkeys-sync-name', '');
+  if (!n) {
+    const adj = ['Swift', 'Nifty', 'Lucky', 'Cosmic', 'Fuzzy', 'Golden', 'Turbo', 'Mellow', 'Clever', 'Rapid'];
+    const noun = ['Falcon', 'Panda', 'Comet', 'Pixel', 'Nova', 'Wombat', 'Tiger', 'Bolt', 'Beacon', 'Sphinx'];
+    n = adj[Math.floor(Math.random() * adj.length)] + ' ' + noun[Math.floor(Math.random() * noun.length)];
+    lsSet('anthkeys-sync-name', n);
+  }
+  return n;
+}
+
+function tx(key) {
+  const langBtn = document.querySelector('[data-lang].active');
+  const lang = langBtn ? langBtn.dataset.lang : 'auto';
+  const l = lang === 'auto' ? (navigator.language || 'en').split('-')[0] : lang;
+  return (i18n[l] && i18n[l][key]) || i18n.en[key] || key;
+}
+
+function syncNormCode(input) {
+  const c = String(input || '').trim().toUpperCase().replace(/[^A-Z0-9]/g, '');
+  if (c.length >= 6) return c.slice(0, 3) + '-' + c.slice(3, 6);
+  return c;
+}
+function syncCodeValid(code) { return /^[A-Z0-9]{3}-[A-Z0-9]{3}$/.test(code || ''); }
+function syncGenCode() {
+  const pick = () => Array.from({ length: 3 }, () => SYNC_CODE_ALPHABET[Math.floor(Math.random() * SYNC_CODE_ALPHABET.length)]).join('');
+  return pick() + '-' + pick();
+}
+function syncTopic(sub) { return 'anthkeys/room/' + syncRoom + '/' + sub; }
+
+function syncSnap() {
+  let settings = {}, custom = [];
+  try { settings = JSON.parse(lsGet('anthkeys-settings') || '{}'); } catch (e) {}
+  try { custom = JSON.parse(lsGet('anthkeys-custom') || '[]'); } catch (e) {}
+  return { v: 1, t: Date.now(), d: synDeviceId(), n: synDeviceName(), settings: settings, custom: custom };
+}
+
+function syncSetStatus(color, text) {
+  const dot = document.getElementById('syncDot');
+  const st = document.getElementById('syncStatus');
+  if (dot) dot.style.background = color;
+  if (st) st.textContent = text;
+}
+
+function syncPrunePeers() {
+  const now = Date.now();
+  Object.keys(syncPeers).forEach(id => {
+    if (id !== synDeviceId() && now - syncPeers[id].t > 45000) delete syncPeers[id];
+  });
+}
+function syncUpdatePeers() {
+  const box = document.getElementById('syncDevices');
+  if (!box) return;
+  syncPeers[synDeviceId()] = { n: synDeviceName(), t: Date.now() };
+  const now = Date.now();
+  const names = Object.keys(syncPeers).filter(id => now - syncPeers[id].t < 45000);
+  if (!names.length) { box.textContent = tx('sync.none'); return; }
+  if (names.length === 1) { box.textContent = syncPeers[names[0]].n; return; }
+  box.textContent = tx('sync.peers').replace('{0}', names.length) + ': ' + names.map(id => syncPeers[id].n).join(', ');
+}
+
+function syncPublishPresence() {
+  if (!syncClient || !syncConnected || !syncRoom) return;
+  const p = { d: synDeviceId(), n: synDeviceName(), t: Date.now() };
+  syncClient.publish(syncTopic('presence') + '/' + synDeviceId(), JSON.stringify(p), { qos: 1, retain: true });
+}
+
+function syncPublishNow() {
+  if (!syncClient || !syncConnected || !syncRoom) return;
+  const snap = syncSnap();
+  syncClient.publish(syncTopic('updates'), JSON.stringify(snap), { qos: 1 });
+  if (syncRetainedT < snap.t) {
+    syncClient.publish(syncTopic('state'), JSON.stringify(snap), { qos: 1, retain: true });
+    syncRetainedT = snap.t;
+  }
+  lsSet('anthkeys-sync-ts', String(snap.t));
+}
+
+function syncPublishAnnounce() {
+  if (!syncClient || !syncConnected || !syncRoom) return;
+  syncClient.publish(syncTopic('updates'), JSON.stringify(syncSnap()), { qos: 1 });
+}
+
+function scheduleSyncPublish() {
+  clearTimeout(syncPublishTimer);
+  syncPublishTimer = setTimeout(syncPublishNow, 350);
+}
+
+function syncMergeApply(m) {
+  if (!m) return false;
+  let localS = {}, localC = [];
+  try { localS = JSON.parse(lsGet('anthkeys-settings') || '{}'); } catch (e) {}
+  try { localC = JSON.parse(lsGet('anthkeys-custom') || '[]'); } catch (e) {}
+  let changed = false;
+  if (m.settings && typeof m.settings === 'object') {
+    const merged = Object.assign({}, localS, m.settings);
+    const sJson = JSON.stringify(merged);
+    if (sJson !== JSON.stringify(localS)) { lsSet('anthkeys-settings', sJson); changed = true; }
+  }
+  if (Array.isArray(m.custom)) {
+    const known = new Set(localC.map(c => String(c.action || '').toLowerCase()));
+    const added = m.custom.filter(c => !known.has(String(c.action || '').toLowerCase()));
+    if (added.length) { lsSet('anthkeys-custom', JSON.stringify(localC.concat(added))); changed = true; }
+  }
+  if (!changed) return false;
+  lsSet('anthkeys-sync-ts', String(parseInt(m.t, 10) || Date.now()));
+  loadCustomAnthkeys();
+  loadSettings();
+  renderCustomAnthkeys();
+  if (typeof renderAnthkeys === 'function') renderAnthkeys();
+  return true;
+}
+
+function syncApplyRemote(m) {
+  if (!m || m.d === synDeviceId()) return;
+  const mts = parseInt(m.t, 10) || 0;
+  const local = parseInt(lsGet('anthkeys-sync-ts', '0'), 10) || 0;
+  if (mts <= local) return;
+  if (syncMergeApply(m)) showToastMsg(tx('sync.updated'));
+}
+
+function syncConnect(code) {
+  syncRoom = syncNormCode(code);
+  if (!syncRoom) return;
+  if (!window.mqtt || !mqtt.connect) {
+    syncSetStatus('#dc2626', tx('sync.error'));
+    return;
+  }
+  if (syncClient) { try { syncClient.end(true); } catch (e) {} syncClient = null; }
+  syncConnected = false;
+  syncRetainedT = 0;
+  syncPeers = {};
+  syncSetStatus('#f59e0b', tx('sync.connecting'));
+  let client = null;
+  try {
+    client = mqtt.connect(SYNC_BROKERS[0], {
+      clientId: 'anthkeys-' + synDeviceId(),
+      clean: true,
+      connectTimeout: 8000,
+      reconnectPeriod: 4000,
+      keepalive: 30,
+      will: { topic: 'anthkeys/room/' + syncRoom + '/presence/' + synDeviceId(), payload: '', qos: 1, retain: true }
+    });
+  } catch (e) {
+    syncSetStatus('#dc2626', tx('sync.error'));
+    return;
+  }
+  const failTimer = setTimeout(() => {
+    if (!syncConnected && syncRoom) syncSetStatus('#dc2626', tx('sync.error'));
+  }, 15000);
+  client.on('connect', () => {
+    syncConnected = true;
+    syncClient = client;
+    clearTimeout(failTimer);
+    client.subscribe(syncTopic('updates'), { qos: 1 });
+    client.subscribe(syncTopic('state'), { qos: 1 });
+    client.subscribe(syncTopic('presence') + '/#', { qos: 1 });
+    syncPublishPresence();
+    syncPublishAnnounce();
+    clearInterval(syncPresenceTimer);
+    syncPresenceTimer = setInterval(() => {
+      if (syncConnected && syncRoom) { syncPublishPresence(); syncPrunePeers(); syncUpdatePeers(); }
+    }, 15000);
+    syncSetStatus('#34a853', tx('sync.online'));
+    syncRenderPanel();
+    setTimeout(() => {
+      if (syncConnected && syncRoom && syncRetainedT === 0) syncPublishNow();
+    }, 1800);
+  });
+  client.on('message', (topic, payload) => {
+    const t = String(topic == null ? '' : topic);
+    const body = String(payload || '');
+    if (t.indexOf('/presence/') !== -1) {
+      const pId = t.split('/').pop();
+      if (pId !== synDeviceId()) {
+        if (!body) delete syncPeers[pId];
+        else {
+          try {
+            const p = JSON.parse(body);
+            if (p && p.d) syncPeers[pId] = { n: p.n || p.d, t: Date.now() };
+          } catch (e) {}
+        }
+        syncUpdatePeers();
+      }
+      return;
+    }
+    if (t.endsWith('/state')) {
+      try {
+        const m = JSON.parse(body);
+        if (m) syncRetainedT = Math.max(syncRetainedT, parseInt(m.t, 10) || 0);
+        syncApplyRemote(m);
+      } catch (e) {}
+      return;
+    }
+    if (t.endsWith('/updates')) {
+      try { syncApplyRemote(JSON.parse(body)); } catch (e) {}
+    }
+  });
+  client.on('close', () => {
+    syncConnected = false;
+    syncRenderPanel();
+    if (syncRoom) syncSetStatus('#f59e0b', tx('sync.connecting'));
+  });
+  client.on('error', () => {});
+  syncClient = client;
+}
+
+function syncLeave() {
+  lsRemove('anthkeys-sync-room');
+  syncRoom = '';
+  syncPeers = {};
+  syncConnected = false;
+  syncRetainedT = 0;
+  clearInterval(syncPresenceTimer);
+  syncPresenceTimer = null;
+  if (syncClient) { try { syncClient.end(true); } catch (e) {} syncClient = null; }
+  syncSetStatus('#9e9e9e', tx('sync.idle'));
+  syncRenderPanel();
+  showToastMsg(tx('sync.leaving'));
+}
+
+function syncRenderPanel() {
+  const connected = !!(syncClient && syncConnected);
+  const codeEl = document.getElementById('syncRoomCode');
+  const panel = document.getElementById('syncRoomPanel');
+  const joinWrap = document.getElementById('syncJoinWrap');
+  const hostBtn = document.getElementById('btnSyncHost');
+  const joinBtn = document.getElementById('btnSyncJoin');
+  const leaveBtn = document.getElementById('btnSyncLeave');
+  if (codeEl) codeEl.textContent = syncRoom || '';
+  if (panel) panel.hidden = !syncRoom;
+  if (joinWrap) joinWrap.hidden = !!syncRoom;
+  if (hostBtn) hostBtn.hidden = connected || !!syncRoom;
+  if (joinBtn) joinBtn.hidden = !!syncRoom;
+  if (leaveBtn) leaveBtn.hidden = !connected;
+  syncUpdatePeers();
+}
+
+onId('btnSyncHost', 'click', () => {
+  syncRoom = syncGenCode();
+  lsSet('anthkeys-sync-room', syncRoom);
+  syncConnect(syncRoom);
+  syncRenderPanel();
+});
+onId('btnSyncJoin', 'click', () => {
+  const inp = document.getElementById('syncJoinInput');
+  const code = syncNormCode(inp ? inp.value : '');
+  if (!syncCodeValid(code)) { showToastMsg(tx('sync.badcode')); return; }
+  syncRoom = code;
+  lsSet('anthkeys-sync-room', syncRoom);
+  syncConnect(syncRoom);
+  syncRenderPanel();
+});
+const _syncJoinInput = document.getElementById('syncJoinInput');
+if (_syncJoinInput) {
+  _syncJoinInput.addEventListener('keydown', e => {
+    if (e.key === 'Enter') { e.preventDefault(); document.getElementById('btnSyncJoin')?.click(); }
+  });
+}
+onId('btnSyncLeave', 'click', syncLeave);
+onId('btnSyncCopyCode', 'click', () => {
+  const el = document.getElementById('syncRoomCode');
+  if (el && el.textContent) {
+    navigator.clipboard.writeText(el.textContent).then(() => showToastMsg(tx('msg.copied'))).catch(() => {});
+  }
+});
+
+// ---- Offline sync codes (base64url + QR) ----
+function syncB64Url(s) {
+  const b = btoa(unescape(encodeURIComponent(s)));
+  return b.replace(/\+/g, '-').replace(/\//g, '_').replace(/=+$/, '');
+}
+function syncB64UrlDecode(s) {
+  let x = s.replace(/-/g, '+').replace(/_/g, '/');
+  while (x.length % 4) x += '=';
+  return decodeURIComponent(escape(atob(x)));
+}
+function syncManualEncode() {
+  const snap = syncSnap();
+  const str = JSON.stringify({ v: snap.v, t: snap.t, settings: snap.settings, custom: snap.custom });
+  return 'AK1.' + syncB64Url(str);
+}
+function syncManualDecode(raw) {
+  const s = String(raw || '').replace(/\s+/g, '');
+  if (!s.startsWith('AK1.')) return null;
+  try { return JSON.parse(syncB64UrlDecode(s.slice(4))); } catch (e) { return null; }
+}
+
+onId('btnManualMake', 'click', () => {
+  const code = syncManualEncode();
+  const codeEl = document.getElementById('syncManualCode');
+  const panel = document.getElementById('syncManualPanel');
+  if (codeEl) codeEl.textContent = code;
+  if (panel) panel.hidden = false;
+  const qrEl = document.getElementById('syncManualQr');
+  if (qrEl) {
+    qrEl.innerHTML = '';
+    if (typeof qrcode === 'function') {
+      try {
+        const qr = qrcode(0, 'M');
+        qr.addData(code);
+        qr.make();
+        qrEl.innerHTML = qr.createSvgTag({ cellSize: 3, margin: 2, scalable: true });
+      } catch (e) {}
+    }
+  }
+});
+onId('btnManualCopy', 'click', () => {
+  const el = document.getElementById('syncManualCode');
+  if (el && el.textContent) {
+    navigator.clipboard.writeText(el.textContent).then(() => showToastMsg(tx('sync.manual-copied'))).catch(() => {});
+  }
+});
+onId('btnManualApply', 'click', () => {
+  const inp = document.getElementById('syncManualInput');
+  const m = syncManualDecode(inp ? inp.value : '');
+  if (!m) { showToastMsg(tx('sync.manual-bad')); return; }
+  if (syncMergeApply(m)) {
+    showToastMsg(tx('sync.manual-applied'));
+    if (inp) inp.value = '';
+    scheduleSyncPublish();
+  }
+});
+const _shareBtn = document.getElementById('btnManualShare');
+if (_shareBtn) {
+  _shareBtn.hidden = !navigator.share;
+  _shareBtn.addEventListener('click', () => {
+    const el = document.getElementById('syncManualCode');
+    if (el && el.textContent && navigator.share) {
+      navigator.share({ title: 'Anthkeys sync code', text: el.textContent }).catch(() => {});
+    }
+  });
+}
+
+const _savedRoom = lsGet('anthkeys-sync-room', '');
+if (_savedRoom && syncCodeValid(_savedRoom)) {
+  syncRoom = _savedRoom;
+  syncConnect(_savedRoom);
+}
+syncRenderPanel();
 
