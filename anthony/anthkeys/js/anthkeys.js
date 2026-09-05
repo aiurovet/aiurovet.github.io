@@ -9040,6 +9040,14 @@ if (autoLang) {
   });
 }
 
+// ---- Settings "Help / About" tab: on touch devices Help is hidden, so label the tab "About" ----
+(function() {
+  if (isTouchDevice()) {
+    const aboutTabLabel = document.querySelector('.settings-tab[data-settings-tab="about"] [data-i18n]');
+    if (aboutTabLabel) aboutTabLabel.setAttribute('data-i18n', 'setting.about');
+  }
+})();
+
 applyLanguage('en');
 
 // ---- Register service worker (PWA) + update detection ----
@@ -9365,6 +9373,10 @@ document.querySelectorAll('.settings-tab').forEach(tab => {
     if (settingsPanel) {
       settingsPanel.classList.add('active');
       settingsPanel.querySelectorAll('.setting-group').forEach(g => g.classList.remove('open'));
+      if (tab.dataset.settingsTab === 'about' && isTouchDevice()) {
+        const aboutGroup = document.getElementById('setting-about');
+        if (aboutGroup) aboutGroup.classList.add('open');
+      }
     }
   });
 });
