@@ -9404,7 +9404,7 @@ function showHelp() {
   if (aboutTab && !aboutTab.classList.contains('active')) {
     aboutTab.click();
   }
-  const g = document.getElementById('setting-about');
+  const g = document.getElementById('setting-help');
   if (g) {
     g.classList.remove('open');
     void g.offsetHeight;
