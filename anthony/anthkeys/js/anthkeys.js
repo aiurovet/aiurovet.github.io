@@ -129,6 +129,7 @@ const i18n = {
     'sync.peers': '{0} device(s) in room',
     'sync.linked': '{0} device(s) linked',
     'sync.self': 'This device',
+    'sync.charging': 'charging',
     'sync.none': 'Only this device so far',
     'sync.join-placeholder': 'Room code (AK-XXX-YYY)',
     'sync.badcode': 'Enter a valid room code (AK-XXX-YYY)',
@@ -11378,7 +11379,7 @@ function syncUpdatePeers() {
   const box = document.getElementById('syncDevices');
   if (!box) return;
   const myId = synDeviceId();
-  syncPeers[myId] = { n: synDeviceName(), t: Date.now() };
+  syncPeers[myId] = { n: synDeviceName(), t: Date.now(), b: (syncPeers[myId] && syncPeers[myId].b != null) ? syncPeers[myId].b : null, c: !!(syncPeers[myId] && syncPeers[myId].c) };
   const now = Date.now();
   const ids = Object.keys(syncPeers)
     .filter(id => now - syncPeers[id].t < 45000)
@@ -11386,19 +11387,36 @@ function syncUpdatePeers() {
   if (!ids.length) { box.textContent = tx('sync.none'); return; }
   const rows = ids.map(id => {
     const self = id === myId;
+    const batt = (syncPeers[id].b != null) ? (syncPeers[id].b + '%' + (syncPeers[id].c ? ' ' + escHtml(tx('sync.charging')) : '')) : '';
     return '<div style="display:flex;align-items:center;gap:.4rem;padding:.15rem 0">'
       + '<span style="width:.4rem;height:.4rem;border-radius:50%;background:' + (self ? '#34a853' : 'var(--accent-1,#f7971e)') + ';flex:none"></span>'
       + '<span style="flex:1;color:var(--text)">' + escHtml(syncPeers[id].n) + '</span>'
       + (self ? '<span style="font-size:.68rem;color:var(--text-variant)">' + escHtml(tx('sync.self')) + '</span>' : '')
+      + '<span style="font-size:.68rem;color:var(--text-variant);min-width:4rem;text-align:right">' + batt + '</span>'
       + '</div>';
   }).join('');
   box.innerHTML = '<div style="font-size:.7rem;color:var(--text-variant);margin-bottom:.2rem">' + escHtml(tx('sync.linked').replace('{0}', ids.length)) + '</div>' + rows;
 }
 
+function getBatteryInfo() {
+  if (!navigator.getBattery || typeof navigator.getBattery !== 'function') return Promise.resolve(null);
+  try {
+    return navigator.getBattery().then(bm => ({
+      lv: Math.min(100, Math.max(0, Math.round((bm.level || 0) * 100))),
+      ch: !!bm.charging
+    })).catch(() => null);
+  } catch (e) { return Promise.resolve(null); }
+}
+
 function syncPublishPresence() {
   if (!syncClient || !syncConnected || !syncRoom) return;
-  const p = { d: synDeviceId(), n: synDeviceName(), t: Date.now() };
-  syncClient.publish(syncTopic('presence') + '/' + synDeviceId(), JSON.stringify(p), { qos: 1, retain: true });
+  getBatteryInfo().then(bt => {
+    const myId = synDeviceId();
+    syncPeers[myId] = { n: synDeviceName(), t: Date.now(), b: bt ? bt.lv : null, c: bt ? bt.ch : false };
+    if (!syncClient || !syncConnected || !syncRoom) return;
+    syncClient.publish(syncTopic('presence') + '/' + myId, JSON.stringify({ d: myId, n: synDeviceName(), t: Date.now(), b: bt ? bt.lv : null, c: bt ? bt.ch : null }), { qos: 1, retain: true });
+    syncUpdatePeers();
+  });
 }
 
 function syncPublishNow() {
@@ -11515,7 +11533,7 @@ function syncConnect(code) {
         else {
           try {
             const p = JSON.parse(body);
-            if (p && p.d) syncPeers[pId] = { n: p.n || p.d, t: Date.now() };
+            if (p && p.d) syncPeers[pId] = { n: p.n || p.d, t: Date.now(), b: p.b != null ? p.b : null, c: !!p.c };
           } catch (e) {}
         }
         syncUpdatePeers();
