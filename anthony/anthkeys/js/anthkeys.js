@@ -127,6 +127,8 @@ const i18n = {
     'sync.connecting': 'Connecting\u2026',
     'sync.online': 'Live sync on',
     'sync.peers': '{0} device(s) in room',
+    'sync.linked': '{0} device(s) linked',
+    'sync.self': 'This device',
     'sync.none': 'Only this device so far',
     'sync.join-placeholder': 'Room code (AK-XXX-YYY)',
     'sync.badcode': 'Enter a valid room code (AK-XXX-YYY)',
@@ -11334,12 +11336,22 @@ function syncPrunePeers() {
 function syncUpdatePeers() {
   const box = document.getElementById('syncDevices');
   if (!box) return;
-  syncPeers[synDeviceId()] = { n: synDeviceName(), t: Date.now() };
+  const myId = synDeviceId();
+  syncPeers[myId] = { n: synDeviceName(), t: Date.now() };
   const now = Date.now();
-  const names = Object.keys(syncPeers).filter(id => now - syncPeers[id].t < 45000);
-  if (!names.length) { box.textContent = tx('sync.none'); return; }
-  if (names.length === 1) { box.textContent = syncPeers[names[0]].n; return; }
-  box.textContent = tx('sync.peers').replace('{0}', names.length) + ': ' + names.map(id => syncPeers[id].n).join(', ');
+  const ids = Object.keys(syncPeers)
+    .filter(id => now - syncPeers[id].t < 45000)
+    .sort((a, b) => (a === myId ? -1 : (b === myId ? 1 : 0)));
+  if (!ids.length) { box.textContent = tx('sync.none'); return; }
+  const rows = ids.map(id => {
+    const self = id === myId;
+    return '<div style="display:flex;align-items:center;gap:.4rem;padding:.15rem 0">'
+      + '<span style="width:.4rem;height:.4rem;border-radius:50%;background:' + (self ? '#34a853' : 'var(--accent-1,#f7971e)') + ';flex:none"></span>'
+      + '<span style="flex:1;color:var(--text)">' + escHtml(syncPeers[id].n) + '</span>'
+      + (self ? '<span style="font-size:.68rem;color:var(--text-variant)">' + escHtml(tx('sync.self')) + '</span>' : '')
+      + '</div>';
+  }).join('');
+  box.innerHTML = '<div style="font-size:.7rem;color:var(--text-variant);margin-bottom:.2rem">' + escHtml(tx('sync.linked').replace('{0}', ids.length)) + '</div>' + rows;
 }
 
 function syncPublishPresence() {
