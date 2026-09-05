@@ -28,7 +28,7 @@
   <script>if (location.protocol === 'file:') document.getElementById('manifestLink').remove();</script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=Roboto:wght@400;500;600;700&family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/anthkeys.css?v=83">
+  <link rel="stylesheet" href="css/anthkeys.css?v=84">
 </head>
 <body class="light style-m3 size-medium font-google-sans">
  <div class="container">
@@ -617,13 +617,26 @@
             <div style="display:flex;gap:.4rem;align-items:center;margin-top:.5rem">
               <code id="syncRoomCode" style="flex:1;min-width:0;padding:.5rem;border:1px solid var(--outline-variant);border-radius:var(--radius-sm);background:var(--surface);color:var(--primary);font-size:.95rem;text-align:center;letter-spacing:.12em"></code>
               <button class="theme-opt" id="btnSyncCopyCode" style="flex:0 0 auto;width:auto;justify-content:center;font-size:.78rem;padding:.5rem .8rem" data-i18n="sync.copy">Copy</button>
+              <button class="theme-opt" id="btnSyncQr" style="flex:0 0 auto;width:auto;justify-content:center;font-size:.78rem;padding:.5rem .8rem" data-i18n="sync.qr" title="Room QR">QR</button>
             </div>
+            <div id="syncRoomQr" hidden style="text-align:center;background:#fff;border-radius:var(--radius-sm);padding:.4rem;width:max-content;margin:.5rem auto 0"></div>
             <div id="syncDevices" style="margin-top:.4rem;font-size:.75rem;color:var(--text-variant);line-height:1.5"></div>
+            <div style="display:flex;gap:.4rem;align-items:center;margin-top:.5rem">
+              <input type="text" id="syncNoteInput" data-i18n-placeholder="sync.note-placeholder" placeholder="Send a note to the room" style="flex:1;min-width:0;padding:.5rem;border:1px solid var(--outline-variant);border-radius:var(--radius-sm);background:var(--surface);color:var(--text);font:var(--size) var(--font);box-sizing:border-box;outline:none;font-size:.8rem">
+              <button class="theme-opt" id="btnSyncSendNote" style="flex:0 0 auto;width:auto;justify-content:center;font-size:.8rem;padding:.5rem .8rem" data-i18n="sync.send">Send</button>
+            </div>
           </div>
           <div id="syncJoinWrap" style="display:flex;gap:.4rem;margin-top:.5rem">
             <input type="text" id="syncJoinInput" data-i18n-placeholder="sync.join-placeholder" placeholder="Room code (AK-XXX-YYY)" style="flex:1;min-width:0;padding:.5rem;border:1px solid var(--outline-variant);border-radius:var(--radius-sm);background:var(--surface);color:var(--text);font:var(--size) var(--font);box-sizing:border-box;outline:none;font-size:.8rem">
             <button class="theme-opt" id="btnSyncJoin" style="flex:0 0 auto;width:auto;justify-content:center;font-size:.8rem;padding:.5rem .8rem" data-i18n="sync.join">Join room</button>
+            <button class="theme-opt" id="btnSyncScan" style="flex:0 0 auto;width:auto;justify-content:center;font-size:.8rem;padding:.5rem .8rem" data-i18n="sync.scan" hidden>QR</button>
           </div>
+          <input type="file" id="syncScanInput" accept="image/*" capture="environment" hidden>
+          <input type="text" id="syncPassInput" data-i18n-placeholder="sync.pass-placeholder" placeholder="Room passphrase (optional)" style="width:100%;box-sizing:border-box;padding:.5rem;border:1px solid var(--outline-variant);border-radius:var(--radius-sm);background:var(--surface);color:var(--text);font:var(--size) var(--font);margin-top:.4rem;outline:none;font-size:.8rem">
+          <label style="display:flex;align-items:center;gap:.4rem;margin-top:.4rem;font-size:.72rem;color:var(--text-variant);cursor:pointer">
+            <input type="checkbox" id="syncLockCheck" style="accent-color:var(--accent-1,#f7971e)">
+            <span data-i18n="sync.lock-label">Protect this room with encryption</span>
+          </label>
           <div style="display:flex;gap:.4rem;margin-top:.4rem">
             <button class="theme-opt" id="btnSyncHost" style="flex:1;justify-content:center;font-size:.8rem" data-i18n="sync.host">Start a room</button>
             <button class="theme-opt" id="btnSyncLeave" style="flex:1;justify-content:center;font-size:.8rem;color:var(--error,#dc2626)" data-i18n="sync.leave" hidden>Leave room</button>
@@ -682,6 +695,18 @@
                 <div class="whatsnew-title" data-i18n="whatsnew.title">What's new</div>
                 <p class="whatsnew-sub" data-i18n="whatsnew.sub">Recent changes to Anthkeys</p>
                 <select id="whatsnewSelect" aria-label="Version" style="width:100%;padding:.45rem .7rem;border:1px solid var(--outline-variant);border-radius:var(--radius-sm);background:var(--surface);color:var(--text);font:var(--size) var(--font);font-size:.8rem;margin-bottom:.6rem;box-sizing:border-box;outline:none"></select>
+                <div class="wn-entry">
+                  <div class="wn-ver">v34 <span class="wn-date">Sep 6, 2026</span></div>
+                  <ul>
+                    <li><strong>Ring a device</strong> &mdash; each other device has a Ring button that sounds and vibrates it, so you can find your phone.</li>
+                    <li><strong>Send a note</strong> &mdash; share text with every linked device; it pops up instantly and is copied to their clipboard.</li>
+                    <li><strong>Battery watch</strong> &mdash; you are warned when a linked device drops below 20% battery.</li>
+                    <li><strong>Rename devices</strong> &mdash; tap a device name to give it a custom name.</li>
+                    <li><strong>Join by scanning</strong> &mdash; the host can show a QR of the room code; scan it with the camera (or scan an offline sync code).</li>
+                    <li><strong>Protected rooms</strong> &mdash; tick "Protect this room" and set a passphrase; all room data is then encrypted so only members with the passphrase can read it.</li>
+                    <li><strong>Last seen</strong> &mdash; each device now shows how long ago it was online.</li>
+                  </ul>
+                </div>
                 <div class="wn-entry">
                   <div class="wn-ver">v33 <span class="wn-date">Sep 6, 2026</span></div>
                   <ul>
@@ -1345,7 +1370,7 @@
 
   <script src="js/mqtt.min.js"></script>
   <script src="js/qrcode.js"></script>
-  <script src="js/anthkeys.js?v=33">
+  <script src="js/anthkeys.js?v=34">
 </script>
 </body>
 </html>

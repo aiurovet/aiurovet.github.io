@@ -144,6 +144,28 @@ const i18n = {
     'sync.manual-copied': 'Code copied',
     'sync.manual-applied': 'Settings imported from code',
     'sync.manual-bad': 'That does not look like a valid code',
+    'sync.protected': 'protected',
+    'sync.pass-placeholder': 'Room passphrase (optional)',
+    'sync.lock-label': 'Protect this room with encryption',
+    'sync.qr': 'QR',
+    'sync.scan': 'QR',
+    'sync.scan-bad': 'The QR did not contain a valid code',
+    'sync.scan-fail': 'Could not read the QR',
+    'sync.send': 'Send',
+    'sync.note-placeholder': 'Send a note to the room',
+    'sync.note-sent': 'Note sent',
+    'sync.note-recv': '{0} shared: {1}',
+    'sync.ping': 'Ring',
+    'sync.ping-sent': 'Ringing {0}',
+    'sync.ping-recv': 'Ring! You are being pinged',
+    'sync.rename': 'Rename',
+    'sync.rename-prompt': 'Device name in this room:',
+    'sync.renamed': 'Device renamed',
+    'sync.batt-warn': '{0} battery is low: {1}%',
+    'sync.locked': 'This room is protected - enter the passphrase to view devices',
+    'sync.notconnected': 'Join a room first',
+    'sync.unknown': 'a device',
+    'sync.justnow': 'now',
     'translate.summary': '+ Contribute a translation',
     'theme.light': '\u2600\ufe0f Light',
     'theme.dark': '\ud83c\udf19 Dark',
@@ -11274,6 +11296,12 @@ let syncRetainedT = 0;
 let syncPeers = {};
 let syncPresenceTimer = null;
 let syncPublishTimer = null;
+let syncPass = lsGet('anthkeys-sync-pass', '');
+let syncWarned = {};
+let syncLockedFlagged = false;
+let _syncKeyCache = null;
+let _syncKeyRoom = '';
+let _syncKeyPass = '';
 
 function synDeviceId() {
   let id = lsGet('anthkeys-sync-device', '');
@@ -11387,15 +11415,24 @@ function syncUpdatePeers() {
   if (!ids.length) { box.textContent = tx('sync.none'); return; }
   const rows = ids.map(id => {
     const self = id === myId;
+    const showName = syncPeerName(id);
     const batt = (syncPeers[id].b != null) ? (syncPeers[id].b + '%' + (syncPeers[id].c ? ' ' + escHtml(tx('sync.charging')) : '')) : '';
-    return '<div style="display:flex;align-items:center;gap:.4rem;padding:.15rem 0">'
-      + '<span style="width:.4rem;height:.4rem;border-radius:50%;background:' + (self ? '#34a853' : 'var(--accent-1,#f7971e)') + ';flex:none"></span>'
-      + '<span style="flex:1;color:var(--text)">' + escHtml(syncPeers[id].n) + '</span>'
-      + (self ? '<span style="font-size:.68rem;color:var(--text-variant)">' + escHtml(tx('sync.self')) + '</span>' : '')
-      + '<span style="font-size:.68rem;color:var(--text-variant);min-width:4rem;text-align:right">' + batt + '</span>'
+    const ago = self ? tx('sync.justnow') : fmtAgo(syncPeers[id].t);
+    return '<div style="display:flex;align-items:flex-start;gap:.4rem;padding:.15rem 0">'
+      + '<span style="width:.4rem;height:.4rem;border-radius:50%;background:' + (self ? '#34a853' : 'var(--accent-1,#f7971e)') + ';flex:none;margin-top:.3rem"></span>'
+      + '<div style="flex:1;min-width:0">'
+      + '<div style="display:flex;align-items:center;gap:.45rem">'
+      + '<span data-name="' + id + '" title="' + escHtml(tx('sync.rename')) + '" style="color:var(--text);cursor:pointer;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;min-width:0">' + escHtml(showName) + '</span>'
+      + (self ? '<span style="font-size:.66rem;color:var(--text-variant);flex:none">' + escHtml(tx('sync.self')) + '</span>' : '')
+      + (self ? '' : '<button data-ping="' + id + '" style="flex:none;font-size:.66rem;padding:.1rem .4rem;border:1px solid var(--outline-variant);border-radius:8px;background:var(--surface-variant);color:var(--accent-1,#f7971e);cursor:pointer">' + escHtml(tx('sync.ping')) + '</button>')
+      + '<span style="margin-left:auto;flex:none;font-size:.66rem;color:var(--text-variant)">' + batt + '</span>'
+      + '</div>'
+      + '<div style="font-size:.62rem;color:var(--text-variant);opacity:.8">' + escHtml(ago) + '</div>'
+      + '</div>'
       + '</div>';
   }).join('');
   box.innerHTML = '<div style="font-size:.7rem;color:var(--text-variant);margin-bottom:.2rem">' + escHtml(tx('sync.linked').replace('{0}', ids.length)) + '</div>' + rows;
+  syncCheckBattery();
 }
 
 function getBatteryInfo() {
@@ -11408,31 +11445,197 @@ function getBatteryInfo() {
   } catch (e) { return Promise.resolve(null); }
 }
 
+function syncBytesToB64u(bytes) {
+  let bin = '';
+  for (let i = 0; i < bytes.length; i++) bin += String.fromCharCode(bytes[i]);
+  return btoa(bin).replace(/\+/g, '-').replace(/\//g, '_').replace(/=+$/, '');
+}
+function syncB64uToBytes(s) {
+  let x = String(s).replace(/-/g, '+').replace(/_/g, '/');
+  while (x.length % 4) x += '=';
+  const bin = atob(x);
+  const out = new Uint8Array(bin.length);
+  for (let i = 0; i < bin.length; i++) out[i] = bin.charCodeAt(i);
+  return out;
+}
+async function syncGetKey() {
+  const code = syncRoom, pass = syncPass || '';
+  if (_syncKeyCache && _syncKeyRoom === code && _syncKeyPass === pass) return _syncKeyCache;
+  _syncKeyCache = null;
+  if (!pass || !crypto || !crypto.subtle) return null;
+  try {
+    const enc = new TextEncoder();
+    const material = await crypto.subtle.importKey('raw', enc.encode('anthkeys-room:' + code), 'PBKDF2', false, ['deriveKey']);
+    const key = await crypto.subtle.deriveKey(
+      { name: 'PBKDF2', salt: enc.encode('anthkeys-salt-' + code), iterations: 100000, hash: 'SHA-256' },
+      material, { name: 'AES-GCM', length: 256 }, false, ['encrypt', 'decrypt']);
+    _syncKeyCache = key; _syncKeyRoom = code; _syncKeyPass = pass;
+    return key;
+  } catch (e) { return null; }
+}
+async function syncEncryptStr(str) {
+  const key = await syncGetKey();
+  if (!key) return null;
+  try {
+    const iv = crypto.getRandomValues(new Uint8Array(12));
+    const ct = await crypto.subtle.encrypt({ name: 'AES-GCM', iv }, key, new TextEncoder().encode(str));
+    const buf = new Uint8Array(ct);
+    const out = new Uint8Array(iv.length + buf.length);
+    out.set(iv, 0); out.set(buf, iv.length);
+    return JSON.stringify({ e: syncBytesToB64u(out) });
+  } catch (e) { return null; }
+}
+function syncJson(body) {
+  try { return JSON.parse(body); } catch (e) { return null; }
+}
+function syncMarkLocked() {
+  if (syncLockedFlagged) return;
+  syncLockedFlagged = true;
+  showToastMsg(tx('sync.locked'));
+}
+async function syncDecryptObj(obj) {
+  if (!obj || !obj.e) return obj;
+  if (!syncPass) { syncMarkLocked(); return null; }
+  const key = await syncGetKey();
+  if (!key) { syncMarkLocked(); return null; }
+  try {
+    const bytes = syncB64uToBytes(obj.e);
+    const pt = await crypto.subtle.decrypt({ name: 'AES-GCM', iv: bytes.subarray(0, 12) }, key, bytes.subarray(12));
+    return JSON.parse(new TextDecoder().decode(pt));
+  } catch (e) { syncMarkLocked(); return null; }
+}
+function syncPeerName(id) {
+  if (id === synDeviceId()) return synDeviceName();
+  let aliases = {};
+  try { aliases = JSON.parse(lsGet('anthkeys-sync-aliases', '{}')); } catch (e) {}
+  const a = aliases[id];
+  if (a && String(a).trim()) return String(a).trim();
+  return (syncPeers[id] && (syncPeers[id].n || syncPeers[id].d)) || '';
+}
 function syncPublishPresence() {
   if (!syncClient || !syncConnected || !syncRoom) return;
   getBatteryInfo().then(bt => {
     const myId = synDeviceId();
     syncPeers[myId] = { n: synDeviceName(), t: Date.now(), b: bt ? bt.lv : null, c: bt ? bt.ch : false };
     if (!syncClient || !syncConnected || !syncRoom) return;
-    syncClient.publish(syncTopic('presence') + '/' + myId, JSON.stringify({ d: myId, n: synDeviceName(), t: Date.now(), b: bt ? bt.lv : null, c: bt ? bt.ch : null }), { qos: 1, retain: true });
-    syncUpdatePeers();
+    const raw = JSON.stringify({ d: myId, n: synDeviceName(), t: Date.now(), b: bt ? bt.lv : null, c: bt ? bt.ch : null });
+    const send = payload => {
+      if (syncClient && syncConnected && syncRoom) {
+        syncClient.publish(syncTopic('presence') + '/' + myId, payload, { qos: 1, retain: true });
+        syncUpdatePeers();
+      }
+    };
+    if (syncPass) syncEncryptStr(raw).then(enc => { send(enc || raw); });
+    else send(raw);
   });
 }
-
-function syncPublishNow() {
+async function syncPublishNow() {
   if (!syncClient || !syncConnected || !syncRoom) return;
   const snap = syncSnap();
-  syncClient.publish(syncTopic('updates'), JSON.stringify(snap), { qos: 1 });
+  const raw = JSON.stringify(snap);
+  let payload = raw;
+  if (syncPass) { const enc = await syncEncryptStr(raw); payload = enc || raw; }
+  syncClient.publish(syncTopic('updates'), payload, { qos: 1 });
   if (syncRetainedT < snap.t) {
-    syncClient.publish(syncTopic('state'), JSON.stringify(snap), { qos: 1, retain: true });
+    syncClient.publish(syncTopic('state'), payload, { qos: 1, retain: true });
     syncRetainedT = snap.t;
   }
   lsSet('anthkeys-sync-ts', String(snap.t));
 }
-
-function syncPublishAnnounce() {
+async function syncPublishAnnounce() {
   if (!syncClient || !syncConnected || !syncRoom) return;
-  syncClient.publish(syncTopic('updates'), JSON.stringify(syncSnap()), { qos: 1 });
+  const raw = JSON.stringify(syncSnap());
+  let payload = raw;
+  if (syncPass) { const enc = await syncEncryptStr(raw); payload = enc || raw; }
+  syncClient.publish(syncTopic('updates'), payload, { qos: 1 });
+}
+async function syncPublishNote(text) {
+  if (!syncClient || !syncConnected || !syncRoom) return;
+  const raw = JSON.stringify({ d: synDeviceId(), n: synDeviceName(), t: Date.now(), text: text });
+  let payload = raw;
+  if (syncPass) { const enc = await syncEncryptStr(raw); payload = enc || raw; }
+  syncClient.publish(syncTopic('note'), payload, { qos: 1 });
+}
+function syncPublishPing(targetId) {
+  if (!syncClient || !syncConnected || !syncRoom) { showToastMsg(tx('sync.notconnected')); return; }
+  syncClient.publish(syncTopic('ping') + '/' + targetId, JSON.stringify({ d: synDeviceId(), n: synDeviceName(), t: Date.now() }), { qos: 1 });
+  showToastMsg(tx('sync.ping-sent').replace('{0}', syncPeerName(targetId) || tx('sync.unknown')));
+}
+let _audioCtx = null;
+function playRingSound() {
+  try {
+    if (!_audioCtx) _audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+    if (_audioCtx.state === 'suspended') _audioCtx.resume();
+    const t0 = _audioCtx.currentTime;
+    [0, 0.3, 0.6].forEach((off, i) => {
+      const o = _audioCtx.createOscillator();
+      const g = _audioCtx.createGain();
+      o.type = 'sine';
+      o.frequency.setValueAtTime(i === 1 ? 880 : 660, t0 + off);
+      g.gain.setValueAtTime(0.001, t0 + off);
+      g.gain.exponentialRampToValueAtTime(0.25, t0 + off + 0.02);
+      g.gain.exponentialRampToValueAtTime(0.001, t0 + off + 0.18);
+      o.connect(g); g.connect(_audioCtx.destination);
+      o.start(t0 + off); o.stop(t0 + off + 0.2);
+    });
+  } catch (e) {}
+}
+function fmtAgo(t) {
+  const s = Math.max(0, ((Date.now() - t) / 1000) | 0);
+  if (s < 10) return tx('sync.justnow');
+  if (s < 60) return s + 's';
+  const m = (s / 60) | 0;
+  if (m < 60) return m + 'm';
+  const h = (m / 60) | 0;
+  if (h < 24) return h + 'h';
+  return ((h / 24) | 0) + 'd';
+}
+function syncCheckBattery() {
+  if (!syncRoom) return;
+  const now = Date.now();
+  Object.keys(syncPeers).forEach(id => {
+    const p = syncPeers[id];
+    if (!p || now - p.t > 45000) return;
+    if (p.b == null || p.c) return;
+    if (p.b < 20 && !syncWarned[id]) {
+      syncWarned[id] = true;
+      showToastMsg(tx('sync.batt-warn').replace('{0}', syncPeerName(id) || tx('sync.unknown')).replace('{1}', String(p.b)));
+    } else if (p.b >= 25 && syncWarned[id]) syncWarned[id] = false;
+  });
+}
+function syncPromptRename(id) {
+  const self = id === synDeviceId();
+  const current = self ? synDeviceName() : syncPeerName(id);
+  const val = prompt(tx('sync.rename-prompt'), current);
+  if (val == null) return;
+  const v = String(val).trim();
+  if (!v || v === current) return;
+  if (self) {
+    lsSet('anthkeys-sync-name', v);
+    showToastMsg(tx('sync.renamed'));
+    syncPublishPresence();
+  } else {
+    let aliases = {};
+    try { aliases = JSON.parse(lsGet('anthkeys-sync-aliases', '{}')); } catch (e) {}
+    aliases[id] = v;
+    lsSet('anthkeys-sync-aliases', JSON.stringify(aliases));
+    showToastMsg(tx('sync.renamed'));
+    syncUpdatePeers();
+  }
+}
+function syncHandleNote(m) {
+  if (!m || !m.text) return;
+  const from = m.n || tx('sync.unknown');
+  if (navigator.clipboard && navigator.clipboard.writeText) {
+    navigator.clipboard.writeText(m.text).catch(() => {});
+  }
+  showToastMsg(tx('sync.note-recv').replace('{0}', from).replace('{1}', m.text));
+}
+function syncHandlePing(m) {
+  const from = (m && m.n) || tx('sync.unknown');
+  if (navigator.vibrate) { try { navigator.vibrate([350, 150, 350, 150, 700]); } catch (e) {} }
+  playRingSound();
+  showToastMsg(tx('sync.ping-recv') + ' - ' + from);
 }
 
 function scheduleSyncPublish() {
@@ -11506,10 +11709,14 @@ function syncConnect(code) {
     ensureDeviceName().then(() => {
       if (!syncClient || syncRoom !== syncNormCode(syncRoom) || !syncRoom) return;
       syncConnected = true;
+      syncWarned = {};
+      syncLockedFlagged = false;
       clearTimeout(failTimer);
       client.subscribe(syncTopic('updates'), { qos: 1 });
       client.subscribe(syncTopic('state'), { qos: 1 });
       client.subscribe(syncTopic('presence') + '/#', { qos: 1 });
+      client.subscribe(syncTopic('note'), { qos: 1 });
+      client.subscribe(syncTopic('ping') + '/#', { qos: 1 });
       syncPublishPresence();
       syncPublishAnnounce();
       clearInterval(syncPresenceTimer);
@@ -11523,33 +11730,43 @@ function syncConnect(code) {
       }, 1800);
     });
   });
-  client.on('message', (topic, payload) => {
+  client.on('message', async (topic, payload) => {
     const t = String(topic == null ? '' : topic);
     const body = String(payload || '');
     if (t.indexOf('/presence/') !== -1) {
       const pId = t.split('/').pop();
       if (pId !== synDeviceId()) {
-        if (!body) delete syncPeers[pId];
+        if (!body) { delete syncPeers[pId]; }
         else {
-          try {
-            const p = JSON.parse(body);
-            if (p && p.d) syncPeers[pId] = { n: p.n || p.d, t: Date.now(), b: p.b != null ? p.b : null, c: !!p.c };
-          } catch (e) {}
+          const p = await syncDecryptObj(syncJson(body));
+          if (p && p.d) syncPeers[pId] = { n: p.n || p.d, t: Date.now(), b: p.b != null ? p.b : null, c: !!p.c };
         }
         syncUpdatePeers();
+        syncCheckBattery();
       }
       return;
     }
     if (t.endsWith('/state')) {
-      try {
-        const m = JSON.parse(body);
-        if (m) syncRetainedT = Math.max(syncRetainedT, parseInt(m.t, 10) || 0);
-        syncApplyRemote(m);
-      } catch (e) {}
+      const m = await syncDecryptObj(syncJson(body));
+      if (m) syncRetainedT = Math.max(syncRetainedT, parseInt(m.t, 10) || 0);
+      if (m) syncApplyRemote(m);
       return;
     }
     if (t.endsWith('/updates')) {
-      try { syncApplyRemote(JSON.parse(body)); } catch (e) {}
+      const m = await syncDecryptObj(syncJson(body));
+      if (m) syncApplyRemote(m);
+      return;
+    }
+    if (t.endsWith('/note')) {
+      const m = await syncDecryptObj(syncJson(body));
+      if (m) syncHandleNote(m);
+      return;
+    }
+    if (t.indexOf('/ping/') !== -1) {
+      const target = t.split('/').pop();
+      if (target !== synDeviceId()) return;
+      const m = await syncDecryptObj(syncJson(body));
+      syncHandlePing(m);
     }
   });
   client.on('close', () => {
@@ -11567,6 +11784,8 @@ function syncLeave() {
   syncPeers = {};
   syncConnected = false;
   syncRetainedT = 0;
+  syncWarned = {};
+  syncLockedFlagged = false;
   clearInterval(syncPresenceTimer);
   syncPresenceTimer = null;
   if (syncClient) { try { syncClient.end(true); } catch (e) {} syncClient = null; }
@@ -11583,22 +11802,41 @@ function syncRenderPanel() {
   const hostBtn = document.getElementById('btnSyncHost');
   const joinBtn = document.getElementById('btnSyncJoin');
   const leaveBtn = document.getElementById('btnSyncLeave');
+  const scanBtn = document.getElementById('btnSyncScan');
+  const qrHidden = document.getElementById('syncRoomQr');
   if (codeEl) codeEl.textContent = syncRoom || '';
   if (panel) panel.hidden = !syncRoom;
   if (joinWrap) joinWrap.hidden = !!syncRoom;
   if (hostBtn) hostBtn.hidden = connected || !!syncRoom;
   if (joinBtn) joinBtn.hidden = !!syncRoom;
   if (leaveBtn) leaveBtn.hidden = !connected;
+  if (scanBtn) scanBtn.hidden = !window.BarcodeDetector;
+  if (qrHidden) qrHidden.hidden = true;
+  if (syncRoom && connected && syncPass) syncSetStatus('#34a853', tx('sync.online') + ' (' + tx('sync.protected') + ')');
   syncUpdatePeers();
 }
 
+function syncReadPassphrase() {
+  const passInp = document.getElementById('syncPassInput');
+  const lockCb = document.getElementById('syncLockCheck');
+  const typed = passInp ? passInp.value.trim() : '';
+  if (passInp) passInp.value = '';
+  if (lockCb && !lockCb.checked) {
+    syncPass = '';
+    lsRemove('anthkeys-sync-pass');
+    return;
+  }
+  if (typed) { syncPass = typed; lsSet('anthkeys-sync-pass', typed); }
+}
 onId('btnSyncHost', 'click', () => {
+  syncReadPassphrase();
   syncRoom = syncGenCode();
   lsSet('anthkeys-sync-room', syncRoom);
   syncConnect(syncRoom);
   syncRenderPanel();
 });
 onId('btnSyncJoin', 'click', () => {
+  syncReadPassphrase();
   const inp = document.getElementById('syncJoinInput');
   const code = syncNormCode(inp ? inp.value : '');
   if (!syncCodeValid(code)) { showToastMsg(tx('sync.badcode')); return; }
@@ -11607,6 +11845,66 @@ onId('btnSyncJoin', 'click', () => {
   syncConnect(syncRoom);
   syncRenderPanel();
 });
+onId('btnSyncQr', 'click', () => {
+  const qrEl = document.getElementById('syncRoomQr');
+  if (!qrEl) return;
+  if (!qrEl.hidden) { qrEl.hidden = true; return; }
+  qrEl.innerHTML = '';
+  if (typeof qrcode === 'function' && syncRoom) {
+    try {
+      const qr = qrcode(0, 'M');
+      qr.addData(syncRoom);
+      qr.make();
+      qrEl.innerHTML = qr.createSvgTag({ cellSize: 4, margin: 2, scalable: true });
+    } catch (e) {}
+  }
+  qrEl.hidden = false;
+});
+onId('btnSyncSendNote', 'click', () => {
+  const inp = document.getElementById('syncNoteInput');
+  const txt = inp ? inp.value.trim() : '';
+  if (!txt) return;
+  if (inp) inp.value = '';
+  syncPublishNote(txt).then(() => showToastMsg(tx('sync.note-sent'))).catch(() => {});
+});
+const _syncNoteInput = document.getElementById('syncNoteInput');
+if (_syncNoteInput) {
+  _syncNoteInput.addEventListener('keydown', e => {
+    if (e.key === 'Enter') { e.preventDefault(); document.getElementById('btnSyncSendNote')?.click(); }
+  });
+}
+const _scanInput = document.getElementById('syncScanInput');
+if (_scanInput) {
+  _scanInput.addEventListener('change', async () => {
+    const f = _scanInput.files && _scanInput.files[0];
+    _scanInput.value = '';
+    if (!f) return;
+    try {
+      const img = new Image();
+      const url = URL.createObjectURL(f);
+      await new Promise((res, rej) => { img.onload = res; img.onerror = rej; img.src = url; });
+      const bd = new BarcodeDetector({ formats: ['qr_code'] });
+      const codes = await bd.detect(img);
+      URL.revokeObjectURL(url);
+      const raw = codes && codes.length && codes[0].rawValue ? String(codes[0].rawValue).trim() : '';
+      if (!raw) { showToastMsg(tx('sync.scan-bad')); return; }
+      const code = syncNormCode(raw);
+      const manual = syncManualDecode(raw);
+      if (syncCodeValid(code) && !manual) {
+        const inp = document.getElementById('syncJoinInput');
+        if (inp) inp.value = code;
+        document.getElementById('btnSyncJoin')?.click();
+      } else if (manual) {
+        if (syncMergeApply(manual)) {
+          showToastMsg(tx('sync.manual-applied'));
+          scheduleSyncPublish();
+        }
+      } else showToastMsg(tx('sync.scan-bad'));
+    } catch (e) { showToastMsg(tx('sync.scan-fail')); }
+  });
+  const scanBtn = document.getElementById('btnSyncScan');
+  if (scanBtn) scanBtn.addEventListener('click', () => { _scanInput.click(); });
+}
 const _syncJoinInput = document.getElementById('syncJoinInput');
 if (_syncJoinInput) {
   _syncJoinInput.addEventListener('keydown', e => {
@@ -11620,6 +11918,15 @@ onId('btnSyncCopyCode', 'click', () => {
     navigator.clipboard.writeText(el.textContent).then(() => showToastMsg(tx('msg.copied'))).catch(() => {});
   }
 });
+const _syncDevBox = document.getElementById('syncDevices');
+if (_syncDevBox) {
+  _syncDevBox.addEventListener('click', ev => {
+    const ringBtn = ev.target && ev.target.closest ? ev.target.closest('[data-ping]') : null;
+    if (ringBtn) { syncPublishPing(ringBtn.dataset.ping); return; }
+    const nameEl = ev.target && ev.target.closest ? ev.target.closest('[data-name]') : null;
+    if (nameEl) syncPromptRename(nameEl.dataset.name);
+  });
+}
 
 // ---- Offline sync codes (base64url + QR) ----
 function syncB64Url(s) {
