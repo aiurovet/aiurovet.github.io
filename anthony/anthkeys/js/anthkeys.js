@@ -54,6 +54,7 @@ const i18n = {
     'animations.label': 'Reduce motion',
     'setting.custom-anthkeys': 'Custom shortcuts',
     'setting.about': 'About',
+    'setting.help-about': 'Help / About',
     'about.site': 'About the website',
     'about.site-desc': 'Anthkeys is a searchable keyboard-shortcut reference for Windows, macOS, Linux, ChromeOS and popular apps. It works offline as a PWA.',
     'tour.prev': 'Back',
@@ -9208,6 +9209,10 @@ function openWhatsNew() {
   if (aboutTab && !aboutTab.classList.contains('active')) {
     aboutTab.click();
   }
+  const about = document.getElementById('setting-about');
+  if (about) {
+    about.classList.add('open');
+  }
   const toast = document.getElementById('updateToast');
   if (toast) { toast.classList.remove('show'); clearTimeout(toast._timer); }
   const pill = document.getElementById('appVersion');
@@ -9395,9 +9400,14 @@ function isTouchDevice() {
 function showHelp() {
   if (isTouchDevice()) return;
   showSettings();
-  const g = document.getElementById('setting-help');
+  const aboutTab = document.querySelector('.settings-tab[data-settings-tab="about"]');
+  if (aboutTab && !aboutTab.classList.contains('active')) {
+    aboutTab.click();
+  }
+  const g = document.getElementById('setting-about');
   if (g) {
-    g.closest('.settings-panel').querySelectorAll('.setting-group.open').forEach(x => x.classList.remove('open'));
+    g.classList.remove('open');
+    void g.offsetHeight;
     g.classList.add('open');
     setTimeout(() => g.scrollIntoView({ behavior: 'smooth', block: 'start' }), 60);
   }
@@ -9956,7 +9966,7 @@ if (btnImport && importFileInput) {
 }
 
 document.addEventListener('keydown', e => {
-  if ((e.key === '?' || (e.key === ',' && (e.ctrlKey || e.metaKey))) && !e.target.closest('input,textarea,button')) {
+  if ((e.key === '?' || (e.key === ',' && (e.ctrlKey || e.metaKey))) && (!e.target || typeof e.target.closest !== 'function' || !e.target.closest('input,textarea,button'))) {
     e.preventDefault();
     const overlay = document.getElementById('settingsOverlay');
     if (overlay?.classList.contains('open')) {
