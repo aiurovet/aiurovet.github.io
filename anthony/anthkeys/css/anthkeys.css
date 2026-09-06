@@ -490,8 +490,13 @@ body.no-anim :not(#appVersion):not(#appVersion *) { transition: none !important;
 
 
 @media (hover: none) and (pointer: coarse) {
-  *, *::before, *::after { backdrop-filter: none !important; -webkit-backdrop-filter: none !important; animation: none !important; transition: none !important; }
+*, *::before, *::after { backdrop-filter: none !important; -webkit-backdrop-filter: none !important; animation: none !important; transition: none !important; }
   #appVersion, #appVersion * { animation: var(--vx-anim, none) !important; }
+  body { transition: color .3s !important; }
+  body::before { transition: background-color .3s, background-image .3s, filter .3s !important; }
+  .panel { transition: background .3s !important; }
+  .tour-spot { transition: all .25s ease !important; }
+  .tour-dot { transition: background .2s, transform .2s !important; }
   html { -webkit-text-size-adjust: 100%; }
   .scroll-area { -webkit-overflow-scrolling: touch; overflow-y: scroll; scrollbar-width: auto; }
   button, .tab, .pill, .btn-settings, .settings-tab, .theme-opt, .modal-close, .category td, .dict-toggle { touch-action: manipulation; }
