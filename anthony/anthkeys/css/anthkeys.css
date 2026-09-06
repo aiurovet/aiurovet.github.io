@@ -451,8 +451,8 @@
     body.compact .panel { padding: .75rem; }
     body.compact .search-bar input { padding: .35rem .75rem .35rem 2rem; }
     body.compact .pill { padding: .2rem .55rem; font-size: .68rem; }
-    body.no-anim * { transition: none !important; animation: none !important; }
-    @media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; } }
+body.no-anim :not(#appVersion):not(#appVersion *) { transition: none !important; animation: none !important; }
+    @media (prefers-reduced-motion: reduce) { *:not(#appVersion):not(#appVersion *), *:not(#appVersion):not(#appVersion *)::before, *:not(#appVersion):not(#appVersion *)::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; } }
     .search-count { font-size: .72rem; color: var(--text-variant); text-align: center; min-height: 1rem; margin-bottom: .25rem; }
     .collapse-bar { display: flex; gap: .35rem; margin-bottom: .4rem; }
 .mod-bar .pill-bar-label { font-size: .75rem; color: var(--text-variant); align-self: center; }

@@ -28,7 +28,7 @@
   <script>if (location.protocol === 'file:') document.getElementById('manifestLink').remove();</script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=Roboto:wght@400;500;600;700&family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/anthkeys.css?v=92">
+  <link rel="stylesheet" href="css/anthkeys.css?v=93">
 </head>
 <body class="light style-m3 size-medium font-google-sans">
  <div class="container">
@@ -736,6 +736,12 @@
                 <div class="whatsnew-title" data-i18n="whatsnew.title">What's new</div>
                 <p class="whatsnew-sub" data-i18n="whatsnew.sub">Recent changes to Anthkeys</p>
                 <select id="whatsnewSelect" aria-label="Version" style="width:100%;padding:.45rem .7rem;border:1px solid var(--outline-variant);border-radius:var(--radius-sm);background:var(--surface);color:var(--text);font:var(--size) var(--font);font-size:.8rem;margin-bottom:.6rem;box-sizing:border-box;outline:none"></select>
+                <div class="wn-entry">
+                  <div class="wn-ver">v39.4 <span class="wn-date">Sep 6, 2026</span></div>
+                  <ul>
+                    <li>The version pill's glow and shimmer now animate on desktop even when "reduce motion" is on in the OS or animations are disabled in settings &mdash; it's treated as an update signal, not a decoration.</li>
+                  </ul>
+                </div>
                 <div class="wn-entry">
                   <div class="wn-ver">v39.3 <span class="wn-date">Sep 6, 2026</span></div>
                   <ul>
@@ -1469,7 +1475,7 @@
 
   <script src="js/mqtt.min.js"></script>
   <script src="js/qrcode.js"></script>
-  <script src="js/anthkeys.js?v=39.3">
+  <script src="js/anthkeys.js?v=39.4">
 </script>
 </body>
 </html>
