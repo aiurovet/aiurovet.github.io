@@ -9261,11 +9261,19 @@ function verCmp(a, b) {
       if (helpChip) {
         helpChip.textContent = 'v' + APP_VERSION;
       }
-      if (verCmp(lsGet('anthkeys-highlight-version'), APP_VERSION) === 0) {
+      let hl = lsGet('anthkeys-highlight-version', '');
+      if (verCmp(hl, APP_VERSION) !== 0 && lsGet('anthkeys-last-version') === String(APP_VERSION)) {
+        hl = String(APP_VERSION);
+        lsSet('anthkeys-highlight-version', hl);
+        lsSet('anthkeys-highlight-at', String(Date.now()));
+      }
+      if (verCmp(hl, APP_VERSION) === 0) {
         const hlAt = parseInt(lsGet('anthkeys-highlight-at', '0'), 10) || 0;
-        if (!hlAt || Date.now() - hlAt < 259200000) verEl.classList.add('pill-new');
-        const badge = document.getElementById('settingsBadge');
-        if (badge && lsGet('anthkeys-seen-version') !== String(APP_VERSION)) badge.hidden = false;
+        if (!hlAt || Date.now() - hlAt < 259200000) {
+          verEl.classList.add('pill-new');
+          const badge = document.getElementById('settingsBadge');
+          if (badge) badge.hidden = false;
+        }
       }
     }
     verEl.addEventListener('click', onVersionBadgeClick);
