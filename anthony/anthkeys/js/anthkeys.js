@@ -148,7 +148,7 @@ const i18n = {
     'sync.pass-placeholder': 'Room passphrase (optional)',
     'sync.lock-label': 'Protect this room with encryption',
     'sync.qr': 'QR',
-    'sync.scan': 'QR',
+    'sync.scan': 'Scan',
     'sync.scan-bad': 'The QR did not contain a valid code',
     'sync.scan-fail': 'Could not read the QR',
     'sync.send': 'Send',
