@@ -162,6 +162,16 @@ const i18n = {
     'sync.rename-prompt': 'Device name in this room:',
     'sync.renamed': 'Device renamed',
     'sync.batt-warn': '{0} battery is low: {1}%',
+    'sync.batt-ok': '{0} battery is back above 25%: {1}%',
+    'sync.batt-toggle': 'Battery alerts',
+    'sync.ping-prompt': 'Message to send with the ring (optional):',
+    'sync.ping-recv-with': '{0} pinged you: {1}',
+    'sync.to': 'To',
+    'sync.to-all': 'Everyone',
+    'sync.color-title': 'Room colour',
+    'sync.color-clear': 'Clear',
+    'sync.color-set': 'Room colour set',
+    'sync.manual-preview': 'Import from {0} - {1}: {2} setting(s), {3} shortcut(s). Apply?',
     'sync.locked': 'This room is protected - enter the passphrase to view devices',
     'sync.notconnected': 'Join a room first',
     'sync.unknown': 'a device',
@@ -11444,6 +11454,13 @@ function syncUpdatePeers() {
   }).join('');
   box.innerHTML = '<div style="font-size:.7rem;color:var(--text-variant);margin-bottom:.2rem">' + escHtml(tx('sync.linked').replace('{0}', ids.length)) + '</div>' + rows;
   syncCheckBattery();
+  const noteSel = document.getElementById('syncNoteTo');
+  if (noteSel) {
+    const cur = noteSel.value;
+    const opts = '<option value="">' + escHtml(tx('sync.to-all')) + '</option>'
+      + ids.filter(id => id !== myId).map(id => '<option value="' + id + '">' + escHtml(syncPeerName(id)) + '</option>').join('');
+    if (noteSel.innerHTML !== opts) { noteSel.innerHTML = opts; if (cur) noteSel.value = cur; }
+  }
 }
 
 function getBatteryInfo() {
@@ -11560,16 +11577,21 @@ async function syncPublishAnnounce() {
   if (syncPass) { const enc = await syncEncryptStr(raw); payload = enc || raw; }
   syncClient.publish(syncTopic('updates'), payload, { qos: 1 });
 }
-async function syncPublishNote(text) {
+async function syncPublishNote(text, target) {
   if (!syncClient || !syncConnected || !syncRoom) return;
   const raw = JSON.stringify({ d: synDeviceId(), n: synDeviceName(), t: Date.now(), text: text });
   let payload = raw;
   if (syncPass) { const enc = await syncEncryptStr(raw); payload = enc || raw; }
-  syncClient.publish(syncTopic('note'), payload, { qos: 1 });
+  syncClient.publish(syncTopic('note') + (target ? '/' + target : ''), payload, { qos: 1 });
 }
 function syncPublishPing(targetId) {
   if (!syncClient || !syncConnected || !syncRoom) { showToastMsg(tx('sync.notconnected')); return; }
-  syncClient.publish(syncTopic('ping') + '/' + targetId, JSON.stringify({ d: synDeviceId(), n: synDeviceName(), t: Date.now() }), { qos: 1 });
+  const msg = prompt(tx('sync.ping-prompt'), '');
+  if (msg == null) return;
+  const text = String(msg).trim();
+  const p = { d: synDeviceId(), n: synDeviceName(), t: Date.now() };
+  if (text) p.text = text;
+  syncClient.publish(syncTopic('ping') + '/' + targetId, JSON.stringify(p), { qos: 1 });
   showToastMsg(tx('sync.ping-sent').replace('{0}', syncPeerName(targetId) || tx('sync.unknown')));
 }
 let _audioCtx = null;
@@ -11601,8 +11623,9 @@ function fmtAgo(t) {
   if (h < 24) return h + 'h';
   return ((h / 24) | 0) + 'd';
 }
+function syncBattWatchOn() { return lsGet('anthkeys-sync-battwatch', '1') !== '0'; }
 function syncCheckBattery() {
-  if (!syncRoom) return;
+  if (!syncRoom || !syncBattWatchOn()) return;
   const now = Date.now();
   Object.keys(syncPeers).forEach(id => {
     const p = syncPeers[id];
@@ -11611,7 +11634,10 @@ function syncCheckBattery() {
     if (p.b < 20 && !syncWarned[id]) {
       syncWarned[id] = true;
       showToastMsg(tx('sync.batt-warn').replace('{0}', syncPeerName(id) || tx('sync.unknown')).replace('{1}', String(p.b)));
-    } else if (p.b >= 25 && syncWarned[id]) syncWarned[id] = false;
+    } else if (p.b >= 25 && syncWarned[id]) {
+      syncWarned[id] = false;
+      showToastMsg(tx('sync.batt-ok').replace('{0}', syncPeerName(id) || tx('sync.unknown')).replace('{1}', String(p.b)));
+    }
   });
 }
 function syncPromptRename(id) {
@@ -11646,7 +11672,12 @@ function syncHandlePing(m) {
   const from = (m && m.n) || tx('sync.unknown');
   if (navigator.vibrate) { try { navigator.vibrate([350, 150, 350, 150, 700]); } catch (e) {} }
   playRingSound();
-  showToastMsg(tx('sync.ping-recv') + ' - ' + from);
+  if (m && m.text) {
+    if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(m.text).catch(() => {});
+    showToastMsg(tx('sync.ping-recv-with').replace('{0}', from).replace('{1}', m.text));
+  } else {
+    showToastMsg(tx('sync.ping-recv') + ' - ' + from);
+  }
 }
 
 function scheduleSyncPublish() {
@@ -11677,6 +11708,18 @@ function syncMergeApply(m) {
   renderCustomAnthkeys();
   if (typeof renderAnthkeys === 'function') renderAnthkeys();
   return true;
+}
+
+function syncConfirmManual(m) {
+  if (!m) return false;
+  const sCount = (m.settings && typeof m.settings === 'object') ? Object.keys(m.settings).length : 0;
+  const cCount = Array.isArray(m.custom) ? m.custom.length : 0;
+  const when = m.t ? new Date(parseInt(m.t, 10)).toLocaleString() : '?';
+  const from = (m.n || m.d || tx('sync.unknown'));
+  const summary = tx('sync.manual-preview')
+    .replace('{0}', from).replace('{1}', when)
+    .replace('{2}', String(sCount)).replace('{3}', String(cCount));
+  return confirm(summary);
 }
 
 function syncApplyRemote(m) {
@@ -11726,7 +11769,7 @@ function syncConnect(code) {
       client.subscribe(syncTopic('updates'), { qos: 1 });
       client.subscribe(syncTopic('state'), { qos: 1 });
       client.subscribe(syncTopic('presence') + '/#', { qos: 1 });
-      client.subscribe(syncTopic('note'), { qos: 1 });
+      client.subscribe(syncTopic('note') + '/#', { qos: 1 });
       client.subscribe(syncTopic('ping') + '/#', { qos: 1 });
       syncPublishPresence();
       syncPublishAnnounce();
@@ -11768,7 +11811,11 @@ function syncConnect(code) {
       if (m) syncApplyRemote(m);
       return;
     }
-    if (t.endsWith('/note')) {
+    if (t.indexOf('/note/') === t.lastIndexOf('/note/') && t.indexOf('/note') !== -1) {
+      const widx = t.indexOf('/note');
+      const tail = t.slice(widx + 5);
+      const target = tail.replace(/^\//, '');
+      if (target && target !== synDeviceId()) return;
       const m = await syncDecryptObj(syncJson(body));
       if (m) syncHandleNote(m);
       return;
@@ -11825,6 +11872,36 @@ function syncRenderPanel() {
   if (qrHidden) qrHidden.hidden = true;
   if (syncRoom && connected && syncPass) syncSetStatus('#34a853', tx('sync.online') + ' (' + tx('sync.protected') + ')');
   syncUpdatePeers();
+  syncRenderColor();
+}
+
+function syncRoomColorGet() {
+  const map = syncColorLs();
+  return (syncRoom && map[syncRoom]) || '';
+}
+function syncColorLs() {
+  try { return JSON.parse(lsGet('anthkeys-sync-color', '{}')) || {}; } catch (e) { return {}; }
+}
+function syncRoomColorSet(c) {
+  if (!syncRoom) return;
+  const map = syncColorLs();
+  const v = String(c || '').trim();
+  if (v) map[syncRoom] = v; else delete map[syncRoom];
+  lsSet('anthkeys-sync-color', JSON.stringify(map));
+  syncRenderColor();
+  showToastMsg(tx('sync.color-set'));
+}
+function syncRenderColor() {
+  const tag = document.getElementById('syncRoomTag');
+  if (!tag) return;
+  if (!document.getElementById('syncRoomPanel') || document.getElementById('syncRoomPanel').hidden) { tag.hidden = true; }
+  const c = syncRoomColorGet();
+  tag.hidden = !c;
+  if (c) tag.style.background = c;
+  document.querySelectorAll('.sync-color-tag').forEach(el => {
+    const active = c && el.dataset.syncColor === c;
+    el.style.boxShadow = active ? '0 0 0 2px var(--surface), 0 0 0 4px ' + c : '';
+  });
 }
 
 function syncReadPassphrase() {
@@ -11876,7 +11953,9 @@ onId('btnSyncSendNote', 'click', () => {
   const txt = inp ? inp.value.trim() : '';
   if (!txt) return;
   if (inp) inp.value = '';
-  syncPublishNote(txt).then(() => showToastMsg(tx('sync.note-sent'))).catch(() => {});
+  const to = document.getElementById('syncNoteTo');
+  const target = (to && to.value) ? to.value : '';
+  syncPublishNote(txt, target).then(() => showToastMsg(tx('sync.note-sent'))).catch(() => {});
 });
 const _syncNoteInput = document.getElementById('syncNoteInput');
 if (_syncNoteInput) {
@@ -11906,7 +11985,7 @@ if (_scanInput) {
         if (inp) inp.value = code;
         document.getElementById('btnSyncJoin')?.click();
       } else if (manual) {
-        if (syncMergeApply(manual)) {
+        if (syncConfirmManual(manual) && syncMergeApply(manual)) {
           showToastMsg(tx('sync.manual-applied'));
           scheduleSyncPublish();
         }
@@ -11923,6 +12002,18 @@ if (_syncJoinInput) {
   });
 }
 onId('btnSyncLeave', 'click', syncLeave);
+onId('btnSyncColorClear', 'click', () => syncRoomColorSet(''));
+document.querySelectorAll('.sync-color-tag').forEach(el => {
+  el.addEventListener('click', () => { if (el.dataset.syncColor) syncRoomColorSet(el.dataset.syncColor); });
+});
+const _syncBattWatch = document.getElementById('syncBattWatch');
+if (_syncBattWatch) {
+  _syncBattWatch.checked = syncBattWatchOn();
+  _syncBattWatch.addEventListener('change', () => {
+    lsSet('anthkeys-sync-battwatch', _syncBattWatch.checked ? '1' : '0');
+    syncCheckBattery();
+  });
+}
 onId('btnSyncCopyCode', 'click', () => {
   const el = document.getElementById('syncRoomCode');
   if (el && el.textContent) {
@@ -11989,6 +12080,7 @@ onId('btnManualApply', 'click', () => {
   const inp = document.getElementById('syncManualInput');
   const m = syncManualDecode(inp ? inp.value : '');
   if (!m) { showToastMsg(tx('sync.manual-bad')); return; }
+  if (!syncConfirmManual(m)) return;
   if (syncMergeApply(m)) {
     showToastMsg(tx('sync.manual-applied'));
     if (inp) inp.value = '';

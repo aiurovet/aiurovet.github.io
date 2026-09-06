@@ -28,7 +28,7 @@
   <script>if (location.protocol === 'file:') document.getElementById('manifestLink').remove();</script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=Roboto:wght@400;500;600;700&family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/anthkeys.css?v=88.1">
+  <link rel="stylesheet" href="css/anthkeys.css?v=89">
 </head>
 <body class="light style-m3 size-medium font-google-sans">
  <div class="container">
@@ -615,6 +615,7 @@
           </div>
           <div id="syncRoomPanel" hidden>
             <div style="display:flex;gap:.4rem;align-items:center;margin-top:.5rem">
+              <span id="syncRoomTag" hidden style="width:.6rem;height:.6rem;border-radius:50%;flex:none"></span>
               <code id="syncRoomCode" style="flex:1;min-width:0;padding:.5rem;border:1px solid var(--outline-variant);border-radius:var(--radius-sm);background:var(--surface);color:var(--primary);font-size:.95rem;text-align:center;letter-spacing:.12em"></code>
               <button class="theme-opt" id="btnSyncCopyCode" style="flex:0 0 auto;width:auto;justify-content:center;font-size:.78rem;padding:.5rem .8rem" data-i18n="sync.copy">Copy</button>
               <button class="theme-opt" id="btnSyncQr" style="flex:0 0 auto;width:auto;justify-content:center;font-size:.78rem;padding:.5rem .8rem" data-i18n="sync.qr" title="Room QR">QR</button>
@@ -622,9 +623,24 @@
             <div id="syncRoomQr" hidden style="text-align:center;background:#fff;border-radius:var(--radius-sm);padding:.4rem;width:max-content;margin:.5rem auto 0"></div>
             <div id="syncDevices" style="margin-top:.4rem;font-size:.75rem;color:var(--text-variant);line-height:1.5"></div>
             <div style="display:flex;gap:.4rem;align-items:center;margin-top:.5rem">
+              <select id="syncNoteTo" aria-label="Note to" style="flex:0 0 auto;padding:.5rem;border:1px solid var(--outline-variant);border-radius:var(--radius-sm);background:var(--surface);color:var(--text);font:var(--size) var(--font);font-size:.75rem;outline:none;max-width:8rem"><option value="" data-i18n="sync.to-all">Everyone</option></select>
               <input type="text" id="syncNoteInput" data-i18n-placeholder="sync.note-placeholder" placeholder="Send a note to the room" style="flex:1;min-width:0;padding:.5rem;border:1px solid var(--outline-variant);border-radius:var(--radius-sm);background:var(--surface);color:var(--text);font:var(--size) var(--font);box-sizing:border-box;outline:none;font-size:.8rem">
               <button class="theme-opt" id="btnSyncSendNote" style="flex:0 0 auto;width:auto;justify-content:center;font-size:.8rem;padding:.5rem .8rem" data-i18n="sync.send">Send</button>
             </div>
+            <div style="display:flex;align-items:center;gap:.45rem;margin-top:.5rem;flex-wrap:wrap">
+              <span style="font-size:.7rem;color:var(--text-variant)" data-i18n="sync.color-title">Room colour</span>
+              <span class="theme-swatch sync-color-tag" data-sync-color="#34a853" title="#34a853"></span>
+              <span class="theme-swatch sync-color-tag" data-sync-color="#f7971e" title="#f7971e"></span>
+              <span class="theme-swatch sync-color-tag" data-sync-color="#dc2626" title="#dc2626"></span>
+              <span class="theme-swatch sync-color-tag" data-sync-color="#3b82f6" title="#3b82f6"></span>
+              <span class="theme-swatch sync-color-tag" data-sync-color="#8b5cf6" title="#8b5cf6"></span>
+              <span class="theme-swatch sync-color-tag" data-sync-color="#06b6d4" title="#06b6d4"></span>
+              <button class="theme-opt" id="btnSyncColorClear" style="flex:0 0 auto;width:auto;justify-content:center;font-size:.7rem;padding:.35rem .6rem" data-i18n="sync.color-clear">Clear</button>
+            </div>
+            <label style="display:flex;align-items:center;gap:.4rem;margin-top:.45rem;font-size:.72rem;color:var(--text-variant);cursor:pointer">
+              <input type="checkbox" id="syncBattWatch" style="accent-color:var(--accent-1,#f7971e)" checked>
+              <span data-i18n="sync.batt-toggle">Battery alerts</span>
+            </label>
           </div>
           <div id="syncJoinWrap" style="display:flex;gap:.4rem;margin-top:.5rem">
             <input type="text" id="syncJoinInput" data-i18n-placeholder="sync.join-placeholder" placeholder="Room code (AK-XXX-YYY)" style="flex:1;min-width:0;padding:.5rem;border:1px solid var(--outline-variant);border-radius:var(--radius-sm);background:var(--surface);color:var(--text);font:var(--size) var(--font);box-sizing:border-box;outline:none;font-size:.8rem">
@@ -720,6 +736,16 @@
                 <div class="whatsnew-title" data-i18n="whatsnew.title">What's new</div>
                 <p class="whatsnew-sub" data-i18n="whatsnew.sub">Recent changes to Anthkeys</p>
                 <select id="whatsnewSelect" aria-label="Version" style="width:100%;padding:.45rem .7rem;border:1px solid var(--outline-variant);border-radius:var(--radius-sm);background:var(--surface);color:var(--text);font:var(--size) var(--font);font-size:.8rem;margin-bottom:.6rem;box-sizing:border-box;outline:none"></select>
+                <div class="wn-entry">
+                  <div class="wn-ver">v39 <span class="wn-date">Sep 6, 2026</span></div>
+                  <ul>
+                    <li>Ring now lets you attach a quick message to the ping &mdash; the ringing device hears it and copies it to the clipboard.</li>
+                    <li>Battery alerts: you get a "recovered" toast when a device climbs back above 25%, and you can turn the battery alarm off or on.</li>
+                    <li>Notes can be addressed to a single device via a "To:" selector next to the note field.</li>
+                    <li>Each room can have a colour tag so you can tell rooms apart at a glance.</li>
+                    <li>Offline sync codes now show a preview (device, time, number of settings and shortcuts) and ask before importing.</li>
+                  </ul>
+                </div>
                 <div class="wn-entry">
                   <div class="wn-ver">v38.1 <span class="wn-date">Sep 6, 2026</span></div>
                   <ul>
@@ -1425,7 +1451,7 @@
 
   <script src="js/mqtt.min.js"></script>
   <script src="js/qrcode.js"></script>
-  <script src="js/anthkeys.js?v=38.1">
+  <script src="js/anthkeys.js?v=39">
 </script>
 </body>
 </html>
