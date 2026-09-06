@@ -585,3 +585,6 @@ tr.drag-over { outline: 2px dashed var(--accent-1); outline-offset: -2px; }
 .tour-done { display: none; }
 .tour-actions .button { font: 600 .8rem var(--font); color: var(--on-primary); background: linear-gradient(135deg, var(--accent-1), var(--accent-2)); border: none; border-radius: var(--radius-sm); padding: .45rem 1.1rem; }
 .tour-actions .button:hover { filter: brightness(1.05); }
+
+#syncRoomQr svg, #syncManualQr svg { display: block; width: 220px; max-width: 100%; height: auto; margin: 0 auto; }
+
