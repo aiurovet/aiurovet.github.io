@@ -28,7 +28,7 @@
   <script>if (location.protocol === 'file:') document.getElementById('manifestLink').remove();</script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=Roboto:wght@400;500;600;700&family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/anthkeys.css?v=86">
+  <link rel="stylesheet" href="css/anthkeys.css?v=87">
 </head>
 <body class="light style-m3 size-medium font-google-sans">
  <div class="container">
@@ -664,6 +664,31 @@
       </div>
     </div>
     <div class="settings-panel" id="settings-about">
+      <div class="setting-group" id="setting-help-sync">
+        <h2 data-i18n="sync-help.title">Live rooms &amp; offline sync</h2>
+        <div class="setting-body">
+          <div class="sync-help-sub" data-i18n="sync-help.live-title">Live rooms (real-time sync across devices)</div>
+          <ol class="sync-help-ol">
+            <li data-i18n="sync-help.live-1">On the device with your settings, open <strong>Settings &rarr; Live rooms</strong> and tap <strong>Start a room</strong>. A room code like AK-ABC-123 appears (shown also as a QR).</li>
+            <li data-i18n="sync-help.live-2">Send the code to your other devices &mdash; copy it, share it, or let them scan the QR.</li>
+            <li data-i18n="sync-help.live-3">On each receiving device, open <strong>Settings &rarr; Live rooms</strong>, type the same code and tap <strong>Join room</strong>.</li>
+            <li data-i18n="sync-help.live-4">Connected devices sync settings and custom shortcuts automatically and stay linked for notes, ringing, battery level and last-seen.</li>
+          </ol>
+          <div class="sync-help-sub" data-i18n="sync-help.off-title">Offline sync codes (no internet needed)</div>
+          <ol class="sync-help-ol">
+            <li data-i18n="sync-help.off-1">Open <strong>Settings &rarr; Offline sync code</strong> and tap <strong>Create a code</strong>.</li>
+            <li data-i18n="sync-help.off-2">Copy the code (or scan the QR it shows) to the other device.</li>
+            <li data-i18n="sync-help.off-3">On the other device, open <strong>Settings &rarr; Offline sync code</strong>, paste the code and tap <strong>Apply a code</strong>.</li>
+            <li data-i18n="sync-help.off-4">Everything merges: each setting keeps the newest value and new custom shortcuts are added.</li>
+          </ol>
+          <div class="sync-help-sub" data-i18n="sync-help.tips-title">Tips</div>
+          <ul class="sync-help-ol">
+            <li data-i18n="sync-help.tip-1">In a live room, tap any device name to rename it. Tap <strong>Ring</strong> to make another device sound and vibrate.</li>
+            <li data-i18n="sync-help.tip-2">Tick <strong>Protect this room</strong> and set a passphrase to encrypt all room data &mdash; only devices with the passphrase can read it.</li>
+            <li data-i18n="sync-help.tip-3">Use the <strong>Scan</strong> button next to Join to read a room or sync code from a QR image.</li>
+          </ul>
+        </div>
+      </div>
       <div class="setting-group" id="setting-help">
         <h2 data-i18n="help.title">Help &amp; tips</h2>
         <div class="setting-body">
@@ -695,6 +720,12 @@
                 <div class="whatsnew-title" data-i18n="whatsnew.title">What's new</div>
                 <p class="whatsnew-sub" data-i18n="whatsnew.sub">Recent changes to Anthkeys</p>
                 <select id="whatsnewSelect" aria-label="Version" style="width:100%;padding:.45rem .7rem;border:1px solid var(--outline-variant);border-radius:var(--radius-sm);background:var(--surface);color:var(--text);font:var(--size) var(--font);font-size:.8rem;margin-bottom:.6rem;box-sizing:border-box;outline:none"></select>
+                <div class="wn-entry">
+                  <div class="wn-ver">v37 <span class="wn-date">Sep 6, 2026</span></div>
+                  <ul>
+                    <li>Help now includes full instructions for <strong>Live rooms</strong> and <strong>Offline sync codes</strong>, and this help is also available on mobile.</li>
+                  </ul>
+                </div>
                 <div class="wn-entry">
                   <div class="wn-ver">v36 <span class="wn-date">Sep 6, 2026</span></div>
                   <ul>
@@ -1382,7 +1413,7 @@
 
   <script src="js/mqtt.min.js"></script>
   <script src="js/qrcode.js"></script>
-  <script src="js/anthkeys.js?v=36">
+  <script src="js/anthkeys.js?v=37">
 </script>
 </body>
 </html>

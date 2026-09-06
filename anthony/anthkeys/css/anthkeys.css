@@ -587,4 +587,7 @@ tr.drag-over { outline: 2px dashed var(--accent-1); outline-offset: -2px; }
 .tour-actions .button:hover { filter: brightness(1.05); }
 
 #syncRoomQr svg, #syncManualQr svg { display: block; width: 220px; max-width: 100%; height: auto; margin: 0 auto; }
+.sync-help-sub { font-weight: 600; font-size: .78rem; margin: .55rem 0 .2rem; color: var(--text); }
+.sync-help-ol { margin: 0 0 .5rem; padding-left: 1.25rem; font-size: .78rem; line-height: 1.5; color: var(--text); }
+.sync-help-ol li + li { margin-top: .2rem; }
 

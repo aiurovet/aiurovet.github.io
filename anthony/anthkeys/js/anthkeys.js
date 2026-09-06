@@ -166,6 +166,21 @@ const i18n = {
     'sync.notconnected': 'Join a room first',
     'sync.unknown': 'a device',
     'sync.justnow': 'now',
+    'sync-help.title': 'Live rooms & offline sync',
+    'sync-help.live-title': 'Live rooms (real-time sync across devices)',
+    'sync-help.live-1': 'On the device with your settings, open Settings - Live rooms and tap Start a room. A room code like AK-ABC-123 appears (shown also as a QR).',
+    'sync-help.live-2': 'Send the code to your other devices - copy it, share it, or let them scan the QR.',
+    'sync-help.live-3': 'On each receiving device, open Settings - Live rooms, type the same code and tap Join room.',
+    'sync-help.live-4': 'Connected devices sync settings and custom shortcuts automatically and stay linked for notes, ringing, battery level and last-seen.',
+    'sync-help.off-title': 'Offline sync codes (no internet needed)',
+    'sync-help.off-1': 'Open Settings - Offline sync code and tap Create a code.',
+    'sync-help.off-2': 'Copy the code (or scan the QR it shows) to the other device.',
+    'sync-help.off-3': 'On the other device, open Settings - Offline sync code, paste the code and tap Apply a code.',
+    'sync-help.off-4': 'Everything merges: each setting keeps the newest value and new custom shortcuts are added.',
+    'sync-help.tips-title': 'Tips',
+    'sync-help.tip-1': 'In a live room, tap any device name to rename it. Tap Ring to make another device sound and vibrate.',
+    'sync-help.tip-2': 'Tick Protect this room and set a passphrase to encrypt all room data - only devices with the passphrase can read it.',
+    'sync-help.tip-3': 'Use the Scan button next to Join to read a room or sync code from a QR image.',
     'translate.summary': '+ Contribute a translation',
     'theme.light': '\u2600\ufe0f Light',
     'theme.dark': '\ud83c\udf19 Dark',
@@ -9427,8 +9442,10 @@ document.querySelectorAll('.settings-tab').forEach(tab => {
       settingsPanel.classList.add('active');
       settingsPanel.querySelectorAll('.setting-group').forEach(g => g.classList.remove('open'));
       if (tab.dataset.settingsTab === 'about' && isTouchDevice()) {
-        const aboutGroup = document.getElementById('setting-about');
-        if (aboutGroup) aboutGroup.classList.add('open');
+        ['setting-about', 'setting-help-sync'].forEach(id => {
+          const g = document.getElementById(id);
+          if (g) g.classList.add('open');
+        });
       }
     }
   });
