@@ -9441,10 +9441,6 @@ document.querySelectorAll('.settings-tab').forEach(tab => {
     if (settingsPanel) {
       settingsPanel.classList.add('active');
       settingsPanel.querySelectorAll('.setting-group').forEach(g => g.classList.remove('open'));
-      if (tab.dataset.settingsTab === 'about' && isTouchDevice()) {
-        const aboutGroup = document.getElementById('setting-about');
-        if (aboutGroup) aboutGroup.classList.add('open');
-      }
     }
   });
 });
