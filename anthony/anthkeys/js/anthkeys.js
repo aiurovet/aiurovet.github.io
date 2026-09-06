@@ -9174,7 +9174,11 @@ onId('btnRefresh', 'click', refreshForUpdates);
 onId('btnUpdate', 'click', () => {
   const banner = document.getElementById('updateBanner');
   if (banner) banner.hidden = true;
-  if (APP_VERSION) lsSet('anthkeys-last-version', String(APP_VERSION));
+  if (APP_VERSION) {
+    lsSet('anthkeys-last-version', String(APP_VERSION));
+    lsSet('anthkeys-highlight-version', String(APP_VERSION));
+    lsSet('anthkeys-highlight-at', String(Date.now()));
+  }
   refreshForUpdates();
 });
 
@@ -9258,9 +9262,10 @@ function verCmp(a, b) {
         helpChip.textContent = 'v' + APP_VERSION;
       }
       if (verCmp(lsGet('anthkeys-highlight-version'), APP_VERSION) === 0) {
-        verEl.classList.add('pill-new');
+        const hlAt = parseInt(lsGet('anthkeys-highlight-at', '0'), 10) || 0;
+        if (!hlAt || Date.now() - hlAt < 259200000) verEl.classList.add('pill-new');
         const badge = document.getElementById('settingsBadge');
-        if (badge) badge.hidden = false;
+        if (badge && lsGet('anthkeys-seen-version') !== String(APP_VERSION)) badge.hidden = false;
       }
     }
     verEl.addEventListener('click', onVersionBadgeClick);
@@ -9307,8 +9312,8 @@ function openWhatsNew() {
   const pill = document.getElementById('appVersion');
   if (pill) {
     pill.classList.remove('pill-new');
-    lsRemove('anthkeys-highlight-version');
   }
+  if (APP_VERSION) lsSet('anthkeys-seen-version', String(APP_VERSION));
   const badge = document.getElementById('settingsBadge');
   if (badge) badge.hidden = true;
 }
@@ -9361,6 +9366,9 @@ function showUpdateNotification() {
   } else {
     lsSet('anthkeys-last-version', String(APP_VERSION));
     lsSet('anthkeys-highlight-version', String(APP_VERSION));
+    lsSet('anthkeys-highlight-at', String(Date.now()));
+    const pill = document.getElementById('appVersion');
+    if (pill) pill.classList.add('pill-new');
     showUpdateToast(APP_VERSION);
   }
 }
