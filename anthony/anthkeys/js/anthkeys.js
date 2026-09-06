@@ -148,6 +148,7 @@ const i18n = {
     'sync.pass-placeholder': 'Room passphrase (optional)',
     'sync.lock-label': 'Protect this room with encryption',
     'sync.qr': 'QR',
+    'sync.share': 'Share',
     'sync.scan': 'Scan',
     'sync.scan-bad': 'The QR did not contain a valid code',
     'sync.scan-fail': 'Could not read the QR',
@@ -11885,6 +11886,8 @@ function syncRenderPanel() {
   if (joinBtn) joinBtn.hidden = !!syncRoom;
   if (leaveBtn) leaveBtn.hidden = !connected;
   if (scanBtn) scanBtn.hidden = !window.BarcodeDetector;
+  const shareBtn = document.getElementById('btnSyncShare');
+  if (shareBtn) shareBtn.hidden = !navigator.share;
   if (qrHidden) qrHidden.hidden = true;
   if (syncRoom && connected && syncPass) syncSetStatus('#34a853', tx('sync.online') + ' (' + tx('sync.protected') + ')');
   syncUpdatePeers();
@@ -12036,6 +12039,13 @@ onId('btnSyncCopyCode', 'click', () => {
     navigator.clipboard.writeText(el.textContent).then(() => showToastMsg(tx('msg.copied'))).catch(() => {});
   }
 });
+onId('btnSyncShare', 'click', () => {
+  if (!navigator.share || !syncRoom) return;
+  const url = location.origin + location.pathname + '?sync=' + encodeURIComponent(syncRoom);
+  navigator.share({ title: 'Anthkeys room', text: 'Join my Anthkeys room: ' + syncRoom, url: url })
+    .then(() => {})
+    .catch(() => {});
+});
 const _syncDevBox = document.getElementById('syncDevices');
 if (_syncDevBox) {
   _syncDevBox.addEventListener('click', ev => {
@@ -12119,5 +12129,19 @@ if (_savedRoom && syncCodeValid(_savedRoom)) {
   syncRoom = _savedRoom;
   syncConnect(_savedRoom);
 }
+(function applyDeepLink() {
+  try {
+    const dst = (new URLSearchParams(location.search)).get('sync');
+    if (!dst) return;
+    const linked = syncNormCode(String(dst).trim());
+    if (syncCodeValid(linked) && linked !== syncRoom) {
+      const inp = document.getElementById('syncJoinInput');
+      if (inp) inp.value = linked;
+      const joinBtn = document.getElementById('btnSyncJoin');
+      if (joinBtn) joinBtn.click();
+      else { syncRoom = linked; syncConnect(linked); }
+    }
+  } catch (e) {}
+})();
 syncRenderPanel();
 
