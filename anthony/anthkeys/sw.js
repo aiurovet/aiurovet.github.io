@@ -1,4 +1,4 @@
-const CACHE = 'anthkeys-v39.6';
+const CACHE = 'anthkeys-v39.7';
 const URLS = ['anthkeys.html', '404.html', 'manifest.json', 'js/mqtt.min.js', 'js/qrcode.js', 'icon-192.png', 'icon-512.png', 'icon-maskable-192.png', 'icon-maskable-512.png', 'apple-touch-icon.png'];
 
 self.addEventListener('install', e => {
