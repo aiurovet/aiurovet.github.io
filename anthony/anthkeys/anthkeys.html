@@ -28,7 +28,7 @@
   <script>if (location.protocol === 'file:') document.getElementById('manifestLink').remove();</script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=Roboto:wght@400;500;600;700&family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/anthkeys.css?v=96">
+  <link rel="stylesheet" href="css/anthkeys.css?v=97">
 </head>
 <body class="light style-m3 size-medium font-google-sans">
  <div class="container">
@@ -642,12 +642,14 @@
               <input type="checkbox" id="syncBattWatch" style="accent-color:var(--accent-1,#f7971e)" checked>
               <span data-i18n="sync.batt-toggle">Battery alerts</span>
             </label>
+            <button class="theme-opt" id="btnSyncPushProfile" style="width:100%;margin-top:.5rem;justify-content:center;font-size:.78rem" data-i18n="sync.push-profile" title="Apply your settings and custom shortcuts to every device in this room">Push my profile</button>
           </div>
           <div id="syncJoinWrap" style="display:flex;gap:.4rem;margin-top:.5rem">
             <input type="text" id="syncJoinInput" data-i18n-placeholder="sync.join-placeholder" placeholder="Room code (AK-XXX-YYY)" style="flex:1;min-width:0;padding:.5rem;border:1px solid var(--outline-variant);border-radius:var(--radius-sm);background:var(--surface);color:var(--text);font:var(--size) var(--font);box-sizing:border-box;outline:none;font-size:.8rem">
             <button class="theme-opt" id="btnSyncJoin" style="flex:0 0 auto;width:auto;justify-content:center;font-size:.8rem;padding:.5rem .8rem" data-i18n="sync.join">Join room</button>
             <button class="theme-opt" id="btnSyncScan" style="flex:0 0 auto;width:auto;justify-content:center;font-size:.8rem;padding:.5rem .8rem" data-i18n="sync.scan" title="Scan a QR code from the camera or a photo" hidden>Scan</button>
           </div>
+          <div id="syncRecent" hidden style="margin-top:.45rem;display:flex;gap:.35rem;flex-wrap:wrap;align-items:center;font-family:var(--font)"></div>
           <input type="file" id="syncScanInput" accept="image/*" capture="environment" hidden>
           <input type="text" id="syncPassInput" data-i18n-placeholder="sync.pass-placeholder" placeholder="Room passphrase (optional)" style="width:100%;box-sizing:border-box;padding:.5rem;border:1px solid var(--outline-variant);border-radius:var(--radius-sm);background:var(--surface);color:var(--text);font:var(--size) var(--font);margin-top:.4rem;outline:none;font-size:.8rem">
           <label style="display:flex;align-items:center;gap:.4rem;margin-top:.4rem;font-size:.72rem;color:var(--text-variant);cursor:pointer">
@@ -737,6 +739,15 @@
                 <div class="whatsnew-title" data-i18n="whatsnew.title">What's new</div>
                 <p class="whatsnew-sub" data-i18n="whatsnew.sub">Recent changes to Anthkeys</p>
                 <select id="whatsnewSelect" aria-label="Version" style="width:100%;padding:.45rem .7rem;border:1px solid var(--outline-variant);border-radius:var(--radius-sm);background:var(--surface);color:var(--text);font:var(--size) var(--font);font-size:.8rem;margin-bottom:.6rem;box-sizing:border-box;outline:none"></select>
+                <div class="wn-entry">
+                  <div class="wn-ver">v39.8 <span class="wn-date">Sep 6, 2026</span></div>
+                  <ul>
+                    <li>Recent rooms: the last six rooms you joined appear as one-tap chips on the join screen (with their room colours), plus a clear button.</li>
+                    <li>Push my profile: sends your settings and custom shortcuts to the whole room as a one-way snapshot — other devices apply it instantly.</li>
+                    <li>Wallpaper gallery: six built-in gradients with auto light/dark variants, a Randomize button, and an optional daily shuffle.</li>
+                    <li>Search: shortcuts you copy are remembered as "Recently copied" in the search popover, alongside your search history.</li>
+                  </ul>
+                </div>
                 <div class="wn-entry">
                   <div class="wn-ver">v39.7 <span class="wn-date">Sep 6, 2026</span></div>
                   <ul>
@@ -1397,6 +1408,26 @@
       </div>
       <button class="reset-btn" id="removeWallpaper" data-i18n="wallpaper.remove" style="display:block;margin:0 auto .75rem">Remove wallpaper</button>
       <div class="setting-group">
+        <h2 data-i18n="wp.gallery-title">Wallpaper gallery</h2>
+        <div class="setting-body">
+          <div id="wpGallery" style="display:flex;gap:.5rem;flex-wrap:wrap;align-items:center;margin-bottom:.5rem">
+            <span class="wp-gallery-tag" data-wp-idx="0" title="Sunrise" style="width:2rem;height:2rem;border-radius:.5rem;display:inline-block;cursor:pointer;border:1px solid var(--outline-variant)"></span>
+            <span class="wp-gallery-tag" data-wp-idx="1" title="Ocean" style="width:2rem;height:2rem;border-radius:.5rem;display:inline-block;cursor:pointer;border:1px solid var(--outline-variant)"></span>
+            <span class="wp-gallery-tag" data-wp-idx="2" title="Meadow" style="width:2rem;height:2rem;border-radius:.5rem;display:inline-block;cursor:pointer;border:1px solid var(--outline-variant)"></span>
+            <span class="wp-gallery-tag" data-wp-idx="3" title="Lavender" style="width:2rem;height:2rem;border-radius:.5rem;display:inline-block;cursor:pointer;border:1px solid var(--outline-variant)"></span>
+            <span class="wp-gallery-tag" data-wp-idx="4" title="Rose" style="width:2rem;height:2rem;border-radius:.5rem;display:inline-block;cursor:pointer;border:1px solid var(--outline-variant)"></span>
+            <span class="wp-gallery-tag" data-wp-idx="5" title="Lagoon" style="width:2rem;height:2rem;border-radius:.5rem;display:inline-block;cursor:pointer;border:1px solid var(--outline-variant)"></span>
+          </div>
+          <div style="display:flex;gap:.4rem;align-items:center">
+            <button class="theme-opt" id="btnWpRandom" style="flex:1;justify-content:center;font-size:.78rem" data-i18n="wp.randomize">Randomize</button>
+            <label style="display:flex;align-items:center;gap:.4rem;font-size:.72rem;color:var(--text-variant);cursor:pointer;flex:1">
+              <input type="checkbox" id="toggleWpShuffle" style="accent-color:var(--accent-1,#f7971e)">
+              <span data-i18n="wp.shuffle-label">Shuffle wallpaper daily</span>
+            </label>
+          </div>
+        </div>
+      </div>
+      <div class="setting-group">
         <h2 data-i18n="setting.animations">Animations <button class="reset-btn" data-reset="noAnim" title="Reset to default">↺</button></h2>
         <div class="setting-body">
           <div class="toggle-row">
@@ -1494,7 +1525,7 @@
 
   <script src="js/mqtt.min.js"></script>
   <script src="js/qrcode.js"></script>
-  <script src="js/anthkeys.js?v=39.7">
+  <script src="js/anthkeys.js?v=39.8">
 </script>
 </body>
 </html>

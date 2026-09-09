@@ -469,6 +469,8 @@ body.no-anim :not(#appVersion):not(#appVersion *) { transition: none !important;
     .search-history-item:hover { background: var(--surface-variant); color: var(--text); }
     .search-history-item:first-child { border-radius: var(--radius-sm) var(--radius-sm) 0 0; }
     .search-history-item:last-child { border-radius: 0 0 var(--radius-sm) var(--radius-sm); }
+    .search-history-title { padding: .4rem .75rem; font-size: .68rem; font-weight: 600; letter-spacing: .04em; text-transform: uppercase; color: var(--text-variant); opacity: .85; border-bottom: 1px solid var(--outline-variant); }
+    .search-history-item[data-action="clear"] { border-top: 1px solid var(--outline-variant); border-bottom: 0; }
     .ctx-menu { position: fixed; background: var(--surface); border: 1px solid var(--outline-variant); border-radius: var(--radius-sm); box-shadow: var(--shadow-lg); padding: .3rem; z-index: 2000; opacity: 0; pointer-events: none; transition: opacity .15s; min-width: 160px; }
     .ctx-menu.show { opacity: 1; pointer-events: auto; }
     .ctx-menu button { display: block; width: 100%; padding: .5rem .7rem; font-size: .8rem; background: none; border: none; color: var(--text); text-align: left; font-family: var(--font); border-radius: 4px; cursor: pointer; }

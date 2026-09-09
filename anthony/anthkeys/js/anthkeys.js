@@ -172,6 +172,16 @@ const i18n = {
     'sync.color-title': 'Room colour',
     'sync.color-clear': 'Clear',
     'sync.color-set': 'Room colour set',
+    'sync.recent-title': 'Recent rooms',
+    'sync.recent-clear': 'Clear',
+    'sync.push-profile': 'Push my profile',
+    'sync.profile-sent': 'Profile sent to the room',
+    'sync.profile-recv': '{0}\u2019s profile applied',
+    'wp.gallery-title': 'Wallpaper gallery',
+    'wp.randomize': 'Randomize',
+    'wp.shuffle-label': 'Shuffle wallpaper daily',
+    'wp.gallery-set': 'Wallpaper applied',
+    'recent.copied': 'Recently copied',
     'sync.manual-preview': 'Import from {0} - {1}: {2} setting(s), {3} shortcut(s). Apply?',
     'sync.locked': 'This room is protected - enter the passphrase to view devices',
     'sync.notconnected': 'Join a room first',
@@ -9556,6 +9566,7 @@ function isAutoDark() {
 }
 function applyAutoTheme() {
   document.body.classList.add(isAutoDark() ? 'dark' : 'light');
+  reapplyGalleryWall();
 }
 setInterval(() => {
   const active = document.querySelector('.theme-opt[data-theme].active');
@@ -9564,6 +9575,7 @@ setInterval(() => {
   if (document.body.classList.contains('dark') !== wantDark) {
     document.body.classList.remove('light', 'dark');
     document.body.classList.add(wantDark ? 'dark' : 'light');
+    reapplyGalleryWall();
   }
 }, 60000);
 
@@ -9634,6 +9646,7 @@ document.querySelectorAll('.theme-opt[data-theme]').forEach(opt => {
     syncAccentWp(theme);
     if (preservedWp) document.body.classList.add('has-accent-wp');
     saveSettings();
+    reapplyGalleryWall();
   });
 });
 
@@ -9772,17 +9785,93 @@ renderAccentPresets();
 loadSettings();
 checkForUpdate();
 
+const WP_GALLERY = [
+  { l: 'linear-gradient(160deg,#ffe8c8 0%,#ffcf9e 35%,#ffb37e 70%,#f7971e 100%)', d: 'linear-gradient(160deg,#3a2410 0%,#5a3a18 40%,#7a4a1c 75%,#3a2410 100%)' },
+  { l: 'linear-gradient(160deg,#d7f2ff 0%,#a8dcf7 40%,#63b3ed 75%,#2563eb 100%)', d: 'linear-gradient(160deg,#0b2233 0%,#123a5a 45%,#1c4a75 75%,#0b2233 100%)' },
+  { l: 'linear-gradient(160deg,#e7fbe7 0%,#bbf7d0 40%,#74d6a8 75%,#16a34a 100%)', d: 'linear-gradient(160deg,#0c2d1c 0%,#14532d 45%,#1c6a3a 75%,#0c2d1c 100%)' },
+  { l: 'linear-gradient(160deg,#f3e8ff 0%,#ddd0ff 40%,#b491ff 75%,#8b5cf6 100%)', d: 'linear-gradient(160deg,#231040 0%,#3b1d6e 45%,#5429a3 75%,#231040 100%)' },
+  { l: 'linear-gradient(160deg,#ffe4e6 0%,#fecdd3 35%,#fb8aa2 70%,#f43f5e 100%)', d: 'linear-gradient(160deg,#3b0a1c 0%,#5f1130 45%,#8b1e42 75%,#3b0a1c 100%)' },
+  { l: 'linear-gradient(160deg,#d9f7f9 0%,#a5e8ef 40%,#56d3e0 75%,#06b6d4 100%)', d: 'linear-gradient(160deg,#072a30 0%,#0c3f4a 45%,#12576b 75%,#072a30 100%)' }
+];
+function wpGrad(i, dark) {
+  const g = WP_GALLERY[i] || WP_GALLERY[0];
+  return dark ? g.d : g.l;
+}
+function wpRenderSwatches() {
+  document.querySelectorAll('.wp-gallery-tag').forEach(el => {
+    const i = parseInt(el.dataset.wpIdx, 10) || 0;
+    el.style.background = wpGrad(i, false);
+  });
+  wpRenderActive();
+}
+function wpRenderActive() {
+  const saved = lsGet('anthkeys-wallpaper', '');
+  const cur = (saved.indexOf('gallery:') === 0) ? parseInt(saved.slice(8), 10) : -1;
+  document.querySelectorAll('.wp-gallery-tag').forEach(el => {
+    const i = parseInt(el.dataset.wpIdx, 10) || 0;
+    el.style.boxShadow = i === cur ? '0 0 0 2px var(--surface), 0 0 0 4px var(--accent-1,#f7971e)' : '';
+  });
+}
 function applyWallpaper(dataUrl) {
   preservedWp = null;
-  document.body.style.setProperty('--bg-img', `url(${dataUrl})`);
-  document.body.classList.add('has-wallpaper');
-  lsSet('anthkeys-wallpaper', dataUrl);
+  if (String(dataUrl).indexOf('gallery:') === 0) {
+    const i = parseInt(String(dataUrl).slice(8), 10) || 0;
+    document.body.style.setProperty('--bg-img', wpGrad(i, document.body.classList.contains('dark')));
+    document.body.classList.add('has-wallpaper');
+    lsSet('anthkeys-wallpaper', String(dataUrl));
+  } else {
+    document.body.style.setProperty('--bg-img', `url(${dataUrl})`);
+    document.body.classList.add('has-wallpaper');
+    lsSet('anthkeys-wallpaper', dataUrl);
+  }
+  wpRenderActive();
 }
 function loadWallpaper() {
   const saved = lsGet('anthkeys-wallpaper', '');
   if (saved) applyWallpaper(saved);
 }
+function reapplyGalleryWall() {
+  const saved = lsGet('anthkeys-wallpaper', '');
+  if (saved.indexOf('gallery:') === 0) {
+    const i = parseInt(saved.slice(8), 10) || 0;
+    document.body.style.setProperty('--bg-img', wpGrad(i, document.body.classList.contains('dark')));
+  }
+}
+function maybeWpShuffleDaily() {
+  if (lsGet('anthkeys-wall-shuffle', '0') !== '1') return;
+  const day = Math.floor(Date.now() / 86400000);
+  const i = day % WP_GALLERY.length;
+  const saved = lsGet('anthkeys-wallpaper', '');
+  if (saved !== 'gallery:' + i) applyWallpaper('gallery:' + i);
+}
 loadWallpaper();
+wpRenderSwatches();
+maybeWpShuffleDaily();
+onId('btnWpRandom', 'click', () => {
+  const i = Math.floor(Math.random() * WP_GALLERY.length);
+  applyWallpaper('gallery:' + i);
+  showToastMsg(tx('wp.gallery-set'));
+});
+const _wpShuffleToggle = document.getElementById('toggleWpShuffle');
+if (_wpShuffleToggle) {
+  _wpShuffleToggle.addEventListener('change', () => {
+    const on = _wpShuffleToggle.checked;
+    lsSet('anthkeys-wall-shuffle', on ? '1' : '0');
+    _wpShuffleToggle.classList.toggle('on', on);
+    maybeWpShuffleDaily();
+  });
+  _wpShuffleToggle.classList.toggle('on', lsGet('anthkeys-wall-shuffle', '0') === '1');
+  _wpShuffleToggle.checked = lsGet('anthkeys-wall-shuffle', '0') === '1';
+}
+const _wpGallery = document.getElementById('wpGallery');
+if (_wpGallery) {
+  _wpGallery.addEventListener('click', e => {
+    const tag = e.target.closest('.wp-gallery-tag');
+    if (!tag) return;
+    applyWallpaper('gallery:' + (parseInt(tag.dataset.wpIdx, 10) || 0));
+    showToastMsg(tx('wp.gallery-set'));
+  });
+}
 showDailyTip();
 
 const wallpaperInput = document.getElementById('wallpaperInput');
@@ -10238,16 +10327,38 @@ document.querySelectorAll('.panel tbody').forEach(tbody => {
 // ---- Search history ----
 const searchHistory = document.getElementById('searchHistory');
 let searchTerms = JSON.parse(lsGet('anthkeys-search-history') || '[]');
+let recentShortcuts = JSON.parse(lsGet('anthkeys-recent-shortcuts') || '[]');
 function saveSearchHistory() { lsSet('anthkeys-search-history', JSON.stringify(searchTerms.slice(0, 10))); }
+function saveRecentShortcuts() { lsSet('anthkeys-recent-shortcuts', JSON.stringify(recentShortcuts.slice(0, 6))); }
+function recordCopiedShortcut(key, desc) {
+  if (!key) return;
+  recentShortcuts = recentShortcuts.filter(s => s.k !== key);
+  recentShortcuts.unshift({ k: key, d: desc || '' });
+  saveRecentShortcuts();
+}
 function renderSearchHistory() {
   if (!searchHistory) return;
-  if (searchTerms.length === 0 || !document.getElementById('searchInput').value.trim()) {
-    searchHistory.classList.remove('show');
-    return;
+  const value = document.getElementById('searchInput').value.trim();
+  if (!value) {
+    const hasR = recentShortcuts.length > 0;
+    const terms = searchTerms;
+    if (!hasR && terms.length === 0) { searchHistory.classList.remove('show'); return; }
+    let html = '';
+    if (hasR) {
+      html += '<div class="search-history-title">' + escHtml(tx('recent.copied')) + '</div>' +
+        recentShortcuts.map(s => '<div class="search-history-item" data-recent="1" data-shortcut="' + escHtml(s.k) + '" title="' + escHtml(s.d) + '" style="display:flex;gap:.5rem;align-items:center"><span style="color:var(--accent-1,#f7971e);flex:none">' + escHtml(s.k) + '</span><span style="min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">' + escHtml(s.d) + '</span></div>').join('');
+    }
+    if (terms.length) {
+      html += terms.map(t => '<div class="search-history-item">' + t.replace(/</g, '&lt;') + '</div>').join('');
+    }
+    html += '<div class="search-history-item" data-action="clear" style="color:var(--error);font-size:.75rem;border-bottom:0">' + '<strong>Clear history</strong>' + '</div>';
+    searchHistory.innerHTML = html;
+    searchHistory.classList.add('show');
+  } else {
+    if (searchTerms.length === 0) { searchHistory.classList.remove('show'); return; }
+    searchHistory.innerHTML = searchTerms.filter(t => t.toLowerCase().indexOf(value.toLowerCase()) !== -1).map(t => '<div class="search-history-item">' + t.replace(/</g, '&lt;') + '</div>').join('');
+    searchHistory.classList.add('show');
   }
-  searchHistory.innerHTML = '<div class="search-history-item" data-action="clear" style="color:var(--error);font-size:.75rem;border-bottom:1px solid var(--outline-variant)">Clear history</div>' +
-    searchTerms.map(t => '<div class="search-history-item">' + t.replace(/</g,'&lt;') + '</div>').join('');
-  searchHistory.classList.add('show');
 }
 onId('searchInput', 'focus', renderSearchHistory);
 onId('searchInput', 'blur', () => setTimeout(() => searchHistory?.classList.remove('show'), 200));
@@ -10255,10 +10366,19 @@ if (searchHistory) {
   searchHistory.addEventListener('click', e => {
     const item = e.target.closest('.search-history-item');
     if (!item) return;
-    if (item.dataset.action === 'clear') { searchTerms = []; saveSearchHistory(); searchHistory.classList.remove('show'); return; }
-    document.getElementById('searchInput').value = item.textContent;
+    if (item.dataset.action === 'clear') { searchTerms = []; recentShortcuts = []; saveSearchHistory(); saveRecentShortcuts(); searchHistory.classList.remove('show'); return; }
     searchHistory.classList.remove('show');
-    document.getElementById('searchInput').dispatchEvent(new Event('input'));
+    if (item.dataset.recent === '1') {
+      const k = item.dataset.shortcut || '';
+      const rec = recentShortcuts.find(r => r.k === k) || { d: '' };
+      const q = rec.d || k || '';
+      const qi = document.getElementById('searchInput');
+      qi.value = q;
+      qi.dispatchEvent(new Event('input'));
+    } else {
+      document.getElementById('searchInput').value = item.textContent;
+      document.getElementById('searchInput').dispatchEvent(new Event('input'));
+    }
   });
 }
 // Save search term on enter
@@ -10563,7 +10683,10 @@ document.querySelectorAll('.panel table tr:not(.category) td:last-child').forEac
 
   function copyAnthkey() {
     const text = td.textContent.trim();
+    const row = td.closest('tr');
+    const desc = row && row.cells && row.cells[0] ? row.cells[0].textContent.trim() : '';
     navigator.clipboard.writeText(text).catch(() => {});
+    recordCopiedShortcut(text, desc);
     const toast = document.getElementById('toast');
     if (toast) {
       toast.classList.remove('show');
@@ -11747,9 +11870,43 @@ function syncApplyRemote(m) {
   if (syncMergeApply(m)) showToastMsg(tx('sync.updated'));
 }
 
+async function syncPublishProfile() {
+  if (!syncClient || !syncConnected || !syncRoom) { showToastMsg(tx('sync.notconnected')); return; }
+  const raw = JSON.stringify(syncSnap());
+  let payload = raw;
+  if (syncPass) { const enc = await syncEncryptStr(raw); payload = enc || raw; }
+  syncClient.publish(syncTopic('profile'), payload, { qos: 1 });
+  showToastMsg(tx('sync.profile-sent'));
+}
+
+function syncApplyProfile(m) {
+  if (!m || m.d === synDeviceId()) return;
+  let changed = false;
+  if (m.settings && typeof m.settings === 'object') {
+    lsSet('anthkeys-settings', JSON.stringify(m.settings));
+    changed = true;
+  }
+  if (Array.isArray(m.custom) && m.custom.length) {
+    let localC = [];
+    try { localC = JSON.parse(lsGet('anthkeys-custom') || '[]'); } catch (e) {}
+    const incoming = new Map(localC.map(c => [String(c.action || '').toLowerCase(), c]));
+    m.custom.forEach(c => incoming.set(String(c.action || '').toLowerCase(), c));
+    lsSet('anthkeys-custom', JSON.stringify(Array.from(incoming.values())));
+    changed = true;
+  }
+  if (!changed) return;
+  lsSet('anthkeys-sync-ts', String(parseInt(m.t, 10) || Date.now()));
+  loadCustomAnthkeys();
+  loadSettings();
+  renderCustomAnthkeys();
+  if (typeof renderAnthkeys === 'function') renderAnthkeys();
+  showToastMsg(tx('sync.profile-recv').replace('{0}', (m.n || m.d || tx('sync.unknown'))));
+}
+
 function syncConnect(code) {
   syncRoom = syncNormCode(code);
   if (!syncRoom) return;
+  syncRecentAdd(syncRoom);
   if (!window.mqtt || !mqtt.connect) {
     syncSetStatus('#dc2626', tx('sync.error'));
     return;
@@ -11785,6 +11942,7 @@ function syncConnect(code) {
       clearTimeout(failTimer);
       client.subscribe(syncTopic('updates'), { qos: 1 });
       client.subscribe(syncTopic('state'), { qos: 1 });
+      client.subscribe(syncTopic('profile'), { qos: 1 });
       client.subscribe(syncTopic('presence') + '/#', { qos: 1 });
       client.subscribe(syncTopic('note') + '/#', { qos: 1 });
       client.subscribe(syncTopic('ping') + '/#', { qos: 1 });
@@ -11826,6 +11984,11 @@ function syncConnect(code) {
     if (t.endsWith('/updates')) {
       const m = await syncDecryptObj(syncJson(body));
       if (m) syncApplyRemote(m);
+      return;
+    }
+    if (t.endsWith('/profile') && t.indexOf('/profile') !== -1) {
+      const m = await syncDecryptObj(syncJson(body));
+      if (m) syncApplyProfile(m);
       return;
     }
     if (t.indexOf('/note/') === t.lastIndexOf('/note/') && t.indexOf('/note') !== -1) {
@@ -11892,6 +12055,7 @@ function syncRenderPanel() {
   if (syncRoom && connected && syncPass) syncSetStatus('#34a853', tx('sync.online') + ' (' + tx('sync.protected') + ')');
   syncUpdatePeers();
   syncRenderColor();
+  syncRenderRecent();
 }
 
 function syncRoomColorGet() {
@@ -11923,6 +12087,46 @@ function syncRenderColor() {
   });
 }
 
+function syncRecentsLs() {
+  try { return JSON.parse(lsGet('anthkeys-recent-rooms', '[]')) || []; } catch (e) { return []; }
+}
+function syncRecentAdd(code) {
+  if (!code) return;
+  let r = syncRecentsLs().filter(c => c !== code);
+  r.unshift(code);
+  lsSet('anthkeys-recent-rooms', JSON.stringify(r.slice(0, 6)));
+  syncRenderRecent();
+}
+function syncRenderRecent() {
+  const wrap = document.getElementById('syncRecent');
+  if (!wrap) return;
+  const panel = document.getElementById('syncRoomPanel');
+  const inRoom = panel && !panel.hidden;
+  const r = syncRecentsLs();
+  if (!r.length || inRoom) { wrap.hidden = true; return; }
+  const colors = syncColorLs();
+  const chips = r.map(c => {
+    const col = colors[c] || '';
+    return '<button data-recent-room="' + c + '" title="' + escHtml(tx('sync.recent-title')) + '" style="flex:0 0 auto;display:inline-flex;align-items:center;gap:.35rem;padding:.3rem .6rem;font-size:.72rem;border:1px solid var(--outline-variant);border-radius:14px;background:var(--surface-variant);color:var(--text);cursor:pointer">'
+      + (col ? '<span style="width:.45rem;height:.45rem;border-radius:50%;background:' + col + ';flex:none"></span>' : '')
+      + c + '</button>';
+  }).join('');
+  wrap.innerHTML = '<span style="font-size:.7rem;color:var(--text-variant)">' + escHtml(tx('sync.recent-title')) + '</span> ' + chips
+    + '<button data-clear-recent title="' + escHtml(tx('sync.recent-clear')) + '" style="flex:0 0 auto;padding:.3rem .6rem;font-size:.7rem;border:1px solid var(--outline-variant);border-radius:14px;background:none;color:var(--error,#dc2626);cursor:pointer">' + escHtml(tx('sync.recent-clear')) + '</button>';
+  wrap.hidden = false;
+}
+onId('syncRecent', 'click', e => {
+  const chip = e.target.closest('[data-recent-room]');
+  if (chip) {
+    const inp = document.getElementById('syncJoinInput');
+    if (inp) inp.value = chip.dataset.recentRoom;
+    document.getElementById('btnSyncJoin')?.click();
+  } else if (e.target.closest('[data-clear-recent]')) {
+    lsRemove('anthkeys-recent-rooms');
+    syncRenderRecent();
+  }
+});
+
 function syncReadPassphrase() {
   const passInp = document.getElementById('syncPassInput');
   const lockCb = document.getElementById('syncLockCheck');
@@ -11951,6 +12155,9 @@ onId('btnSyncJoin', 'click', () => {
   lsSet('anthkeys-sync-room', syncRoom);
   syncConnect(syncRoom);
   syncRenderPanel();
+});
+onId('btnSyncPushProfile', 'click', () => {
+  syncPublishProfile();
 });
 onId('btnSyncQr', 'click', () => {
   const qrEl = document.getElementById('syncRoomQr');
