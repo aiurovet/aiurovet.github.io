@@ -182,6 +182,10 @@ const i18n = {
     'wp.shuffle-label': 'Shuffle wallpaper daily',
     'wp.gallery-set': 'Wallpaper applied',
     'recent.copied': 'Recently copied',
+    'sync.chat-title': 'Chat',
+    'sync.chat-clear': 'Clear',
+    'sync.chat-empty': 'Say hello to the room',
+    'sync.chat-cleared': 'Chat cleared',
     'sync.manual-preview': 'Import from {0} - {1}: {2} setting(s), {3} shortcut(s). Apply?',
     'sync.locked': 'This room is protected - enter the passphrase to view devices',
     'sync.notconnected': 'Join a room first',
@@ -11723,7 +11727,65 @@ async function syncPublishNote(text, target) {
   let payload = raw;
   if (syncPass) { const enc = await syncEncryptStr(raw); payload = enc || raw; }
   syncClient.publish(syncTopic('note') + (target ? '/' + target : ''), payload, { qos: 1 });
+  syncChatPush({ d: synDeviceId(), n: synDeviceName(), t: Date.now(), text: text });
 }
+function syncChatAll() {
+  try { return JSON.parse(lsGet('anthkeys-sync-chat', '{}')) || {}; } catch (e) { return {}; }
+}
+function syncChatGet() {
+  return syncChatAll()[syncRoom] || [];
+}
+function syncChatPush(msg) {
+  if (!syncRoom || !msg || !msg.text) return;
+  const all = syncChatAll();
+  const list = all[syncRoom] || [];
+  list.push(msg);
+  if (list.length > 60) list.splice(0, list.length - 60);
+  all[syncRoom] = list;
+  const rooms = Object.keys(all);
+  if (rooms.length > 10) {
+    rooms.sort((a, b) => {
+      const la = all[a], lb = all[b];
+      return (la.length ? la[la.length - 1].t : 0) - (lb.length ? lb[lb.length - 1].t : 0);
+    });
+    delete all[rooms[0]];
+  }
+  lsSet('anthkeys-sync-chat', JSON.stringify(all));
+  syncChatRender();
+}
+function syncChatClear() {
+  if (!syncRoom) return;
+  const all = syncChatAll();
+  delete all[syncRoom];
+  lsSet('anthkeys-sync-chat', JSON.stringify(all));
+  syncChatRender();
+  showToastMsg(tx('sync.chat-cleared'));
+}
+function syncChatRender() {
+  const log = document.getElementById('syncChatLog');
+  if (!log) return;
+  const list = syncChatGet();
+  if (!list.length) {
+    log.innerHTML = '<div style="color:var(--text-variant);opacity:.7;font-size:.7rem">' + escHtml(tx('sync.chat-empty')) + '</div>';
+    return;
+  }
+  log.innerHTML = list.map(m => {
+    const me = m.d === synDeviceId();
+    const when = m.t ? new Date(parseInt(m.t, 10)).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }) : '';
+    return '<div data-chat-text="' + escHtml(String(m.text)) + '" title="' + escHtml(tx('sync.copy')) + '" style="margin-bottom:.35rem;word-break:break-word;cursor:pointer">'
+      + '<span style="font-weight:600;color:' + (me ? 'var(--accent-1,#f7971e)' : 'var(--primary,#f7971e)') + '">' + escHtml(m.n || tx('sync.unknown')) + (me ? ' (' + escHtml(tx('sync.self')) + ')' : '') + '</span>'
+      + '<span style="color:var(--text-variant);font-size:.62rem;margin-left:.35rem">' + escHtml(when) + '</span>'
+      + '<br><span style="color:var(--text)">' + escHtml(m.text) + '</span></div>';
+  }).join('');
+  log.scrollTop = log.scrollHeight;
+}
+onId('btnSyncChatClear', 'click', syncChatClear);
+onId('syncChatLog', 'click', e => {
+  const msg = e.target.closest('[data-chat-text]');
+  if (!msg) return;
+  const text = msg.dataset.chatText;
+  if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(text).then(() => showToastMsg(tx('msg.copied')));
+});
 function syncPublishPing(targetId) {
   if (!syncClient || !syncConnected || !syncRoom) { showToastMsg(tx('sync.notconnected')); return; }
   const msg = prompt(tx('sync.ping-prompt'), '');
@@ -11800,13 +11862,14 @@ function syncPromptRename(id) {
     syncUpdatePeers();
   }
 }
-function syncHandleNote(m) {
-  if (!m || !m.text) return;
+function syncHandleNote(m, isPrivate) {
+  if (!m || !m.text || m.d === synDeviceId()) return;
   const from = m.n || tx('sync.unknown');
-  if (navigator.clipboard && navigator.clipboard.writeText) {
+  if (isPrivate && navigator.clipboard && navigator.clipboard.writeText) {
     navigator.clipboard.writeText(m.text).catch(() => {});
   }
   showToastMsg(tx('sync.note-recv').replace('{0}', from).replace('{1}', m.text));
+  syncChatPush({ d: m.d, n: m.n, t: m.t, text: m.text });
 }
 function syncHandlePing(m) {
   const from = (m && m.n) || tx('sync.unknown');
@@ -11997,7 +12060,7 @@ function syncConnect(code) {
       const target = tail.replace(/^\//, '');
       if (target && target !== synDeviceId()) return;
       const m = await syncDecryptObj(syncJson(body));
-      if (m) syncHandleNote(m);
+      if (m) syncHandleNote(m, !!target);
       return;
     }
     if (t.indexOf('/ping/') !== -1) {
@@ -12056,6 +12119,7 @@ function syncRenderPanel() {
   syncUpdatePeers();
   syncRenderColor();
   syncRenderRecent();
+  syncChatRender();
 }
 
 function syncRoomColorGet() {
