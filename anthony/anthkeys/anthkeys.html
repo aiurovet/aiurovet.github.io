@@ -28,7 +28,7 @@
   <script>if (location.protocol === 'file:') document.getElementById('manifestLink').remove();</script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=Roboto:wght@400;500;600;700&family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/anthkeys.css?v=105">
+  <link rel="stylesheet" href="css/anthkeys.css?v=106">
 </head>
 <body class="light style-m3 size-medium font-google-sans">
  <div class="container">
@@ -747,6 +747,12 @@
                 <p class="whatsnew-sub" data-i18n="whatsnew.sub">Recent changes to Anthkeys</p>
                 <select id="whatsnewSelect" aria-label="Version" style="width:100%;padding:.45rem .7rem;border:1px solid var(--outline-variant);border-radius:var(--radius-sm);background:var(--surface);color:var(--text);font:var(--size) var(--font);font-size:.8rem;margin-bottom:.6rem;box-sizing:border-box;outline:none"></select>
                 <div class="wn-entry">
+                  <div class="wn-ver">v40.7 <span class="wn-date">Sep 6, 2026</span></div>
+                  <ul>
+                    <li>Accent settings now show a live preview bar with the exact hex of the applied color, so you see every pick change instantly.</li>
+                  </ul>
+                </div>
+                <div class="wn-entry">
                   <div class="wn-ver">v40.6 <span class="wn-date">Sep 6, 2026</span></div>
                   <ul>
                     <li>Removed the "Pick from screen" eyedropper.</li>
@@ -1377,6 +1383,10 @@
       <div class="setting-group">
         <h2 data-i18n="setting.accent">Accent color <button class="reset-btn" data-reset="accent" title="Reset to default">↺</button></h2>
         <div class="setting-body">
+          <div id="accentPreview" style="display:flex;align-items:center;gap:.6rem;padding:.5rem .65rem;border-radius:12px;background:var(--surface-variant);margin-bottom:.6rem;border:1px solid var(--outline-variant)">
+            <span id="accentPreviewBar" style="flex:1;height:38px;border-radius:10px;background:linear-gradient(135deg,var(--accent-1),var(--accent-2));border:1px solid rgba(0,0,0,.12)"></span>
+            <span id="accentPreviewHex" style="font:600 .9rem Consolas,monospace;color:var(--text-variant);min-width:5.6rem;text-align:center">#D87C08</span>
+          </div>
           <div style="display:flex;flex-wrap:wrap;gap:.4rem;margin-bottom:.5rem">
             <div class="accent-item"><button class="accent-opt active" data-accent="gold" style="background:#D87C08" title="Gold"></button><span>Gold</span></div>
             <div class="accent-item"><button class="accent-opt" data-accent="blue" style="background:#0A59DA" title="Blue"></button><span>Blue</span></div>
@@ -1565,7 +1575,7 @@
 
   <script src="js/mqtt.min.js"></script>
   <script src="js/qrcode.js"></script>
-  <script src="js/anthkeys.js?v=40.6">
+  <script src="js/anthkeys.js?v=40.7">
 </script>
 </body>
 </html>

@@ -9003,6 +9003,7 @@ function loadSettings() {
       document.body.style.setProperty('--accent-rgb', [r,g,b].join(','));
       document.body.style.setProperty('--accent-2-rgb', [r2,g2,b2].join(','));
       document.body.style.setProperty('--primary', hex);
+      updateAccentPreview();
     } else if (data.accent && accents[data.accent]) {
       document.querySelectorAll('.accent-opt').forEach(a => a.classList.remove('active'));
       const aBtn = document.querySelector('.accent-opt[data-accent="' + data.accent + '"]');
@@ -9013,6 +9014,7 @@ function loadSettings() {
       document.body.style.setProperty('--accent-rgb', c[2]);
       document.body.style.setProperty('--accent-2-rgb', c[3]);
       document.body.style.setProperty('--primary', c[0]);
+      updateAccentPreview();
     }
 
     if (data.blur !== undefined) {
@@ -9696,9 +9698,18 @@ document.querySelectorAll('.accent-opt').forEach(btn => {
     document.body.style.setProperty('--accent-rgb', c[2]);
     document.body.style.setProperty('--accent-2-rgb', c[3]);
     document.body.style.setProperty('--primary', c[0]);
+    updateAccentPreview();
     saveSettings();
   });
 });
+
+function updateAccentPreview() {
+  const el = document.getElementById('accentPreviewHex');
+  if (!el) return;
+  const c = getComputedStyle(document.body).getPropertyValue('--accent-1').trim() || '#D87C08';
+  el.textContent = c.toUpperCase();
+}
+updateAccentPreview();
 
 const _customAccentBtn = document.getElementById('customAccentBtn');
 const _customAccentInput = document.getElementById('customAccentInput');
@@ -9717,13 +9728,14 @@ function applyCustomAccent(hex) {
   _customAccentBtn.classList.add('active');
   document.body.style.setProperty('--accent-1', hex);
   document.body.style.setProperty('--accent-2', hex2);
-  document.body.style.setProperty('--accent-rgb', [r,g,b].join(','));
-  document.body.style.setProperty('--accent-2-rgb', [r2,g2,b2].join(','));
-  document.body.style.setProperty('--primary', hex);
-  if (_customAccentInput) _customAccentInput.value = hex;
-  if (_customAccentHex) _customAccentHex.value = hex.toUpperCase();
-  saveSettings();
-  return true;
+document.body.style.setProperty('--accent-rgb', [r,g,b].join(','));
+    document.body.style.setProperty('--accent-2-rgb', [r2,g2,b2].join(','));
+    document.body.style.setProperty('--primary', hex);
+    if (_customAccentInput) _customAccentInput.value = hex;
+    if (_customAccentHex) _customAccentHex.value = hex.toUpperCase();
+    updateAccentPreview();
+    saveSettings();
+    return true;
 }
 if (_customAccentBtn && _customAccentInput) {
   _customAccentBtn.addEventListener('click', () => _customAccentInput.click());
@@ -9923,6 +9935,7 @@ if (accentPresetsContainer) {
       document.body.style.setProperty('--accent-rgb', [r,g,b].join(','));
       document.body.style.setProperty('--accent-2-rgb', [r2,g2,b2].join(','));
       document.body.style.setProperty('--primary', hex);
+      updateAccentPreview();
       saveSettings();
     }
   });
