@@ -37,6 +37,9 @@ const i18n = {
     'settings.general': 'General',
     'settings.search': 'Search settings\u2026',
     'accent.copy': 'Copy',
+    'accent.match-device': 'Match my device',
+    'accent.device-applied': 'Device accent applied',
+    'accent.device-fail': 'Couldn\u2019t read the device accent',
     'setting.theme': 'Theme',
     'setting.presets': 'Style',
     'setting.accent': 'Accent color',
@@ -9740,6 +9743,28 @@ if (_customAccentCopy) {
     if (navigator.clipboard && navigator.clipboard.writeText) {
       navigator.clipboard.writeText(hex.toUpperCase()).then(() => showToastMsg(tx('msg.copied'))).catch(() => {});
     }
+  });
+}
+function detectDeviceAccent() {
+  const probe = document.createElement('div');
+  probe.style.cssText = 'position:absolute;left:-9999px;top:-9999px;width:1px;height:1px;background-color:AccentColor;color:AccentColorText';
+  document.body.appendChild(probe);
+  const c = getComputedStyle(probe).backgroundColor;
+  probe.remove();
+  const m = String(c).match(/rgba?\((\d+)[,\s]+(\d+)[,\s]+(\d+)/);
+  if (!m) return null;
+  const r = +m[1], g = +m[2], b = +m[3];
+  if (r === 0 && g === 0 && b === 0) return null;
+  if (r === 0 && g === 255 && b === 0) return null;
+  if (r === 0 && g === 128 && b === 0) return null;
+  return '#' + [r, g, b].map(v => v.toString(16).padStart(2, '0')).join('');
+}
+const _btnMatchDeviceAccent = document.getElementById('btnMatchDeviceAccent');
+if (_btnMatchDeviceAccent) {
+  _btnMatchDeviceAccent.addEventListener('click', () => {
+    const hex = detectDeviceAccent();
+    if (hex && applyCustomAccent(hex)) showToastMsg(tx('accent.device-applied'));
+    else showToastMsg(tx('accent.device-fail'));
   });
 }
 
