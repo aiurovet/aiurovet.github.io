@@ -178,10 +178,6 @@ const i18n = {
     'sync.push-profile': 'Push my profile',
     'sync.profile-sent': 'Profile sent to the room',
     'sync.profile-recv': '{0}\u2019s profile applied',
-    'wp.gallery-title': 'Wallpaper gallery',
-    'wp.randomize': 'Randomize',
-    'wp.shuffle-label': 'Shuffle wallpaper daily',
-    'wp.gallery-set': 'Wallpaper applied',
     'recent.copied': 'Recently copied',
     'sync.chat-title': 'Chat',
     'sync.chat-clear': 'Clear',
@@ -9573,7 +9569,6 @@ function isAutoDark() {
 }
 function applyAutoTheme() {
   document.body.classList.add(isAutoDark() ? 'dark' : 'light');
-  reapplyGalleryWall();
 }
 setInterval(() => {
   const active = document.querySelector('.theme-opt[data-theme].active');
@@ -9582,7 +9577,6 @@ setInterval(() => {
   if (document.body.classList.contains('dark') !== wantDark) {
     document.body.classList.remove('light', 'dark');
     document.body.classList.add(wantDark ? 'dark' : 'light');
-    reapplyGalleryWall();
   }
 }, 60000);
 
@@ -9653,7 +9647,6 @@ document.querySelectorAll('.theme-opt[data-theme]').forEach(opt => {
     syncAccentWp(theme);
     if (preservedWp) document.body.classList.add('has-accent-wp');
     saveSettings();
-    reapplyGalleryWall();
   });
 });
 
@@ -9814,93 +9807,18 @@ renderAccentPresets();
 loadSettings();
 checkForUpdate();
 
-const WP_GALLERY = [
-  { l: 'linear-gradient(160deg,#ffe8c8 0%,#ffcf9e 35%,#ffb37e 70%,#f7971e 100%)', d: 'linear-gradient(160deg,#3a2410 0%,#5a3a18 40%,#7a4a1c 75%,#3a2410 100%)' },
-  { l: 'linear-gradient(160deg,#d7f2ff 0%,#a8dcf7 40%,#63b3ed 75%,#2563eb 100%)', d: 'linear-gradient(160deg,#0b2233 0%,#123a5a 45%,#1c4a75 75%,#0b2233 100%)' },
-  { l: 'linear-gradient(160deg,#e7fbe7 0%,#bbf7d0 40%,#74d6a8 75%,#16a34a 100%)', d: 'linear-gradient(160deg,#0c2d1c 0%,#14532d 45%,#1c6a3a 75%,#0c2d1c 100%)' },
-  { l: 'linear-gradient(160deg,#f3e8ff 0%,#ddd0ff 40%,#b491ff 75%,#8b5cf6 100%)', d: 'linear-gradient(160deg,#231040 0%,#3b1d6e 45%,#5429a3 75%,#231040 100%)' },
-  { l: 'linear-gradient(160deg,#ffe4e6 0%,#fecdd3 35%,#fb8aa2 70%,#f43f5e 100%)', d: 'linear-gradient(160deg,#3b0a1c 0%,#5f1130 45%,#8b1e42 75%,#3b0a1c 100%)' },
-  { l: 'linear-gradient(160deg,#d9f7f9 0%,#a5e8ef 40%,#56d3e0 75%,#06b6d4 100%)', d: 'linear-gradient(160deg,#072a30 0%,#0c3f4a 45%,#12576b 75%,#072a30 100%)' }
-];
-function wpGrad(i, dark) {
-  const g = WP_GALLERY[i] || WP_GALLERY[0];
-  return dark ? g.d : g.l;
-}
-function wpRenderSwatches() {
-  document.querySelectorAll('.wp-gallery-tag').forEach(el => {
-    const i = parseInt(el.dataset.wpIdx, 10) || 0;
-    el.style.background = wpGrad(i, false);
-  });
-  wpRenderActive();
-}
-function wpRenderActive() {
-  const saved = lsGet('anthkeys-wallpaper', '');
-  const cur = (saved.indexOf('gallery:') === 0) ? parseInt(saved.slice(8), 10) : -1;
-  document.querySelectorAll('.wp-gallery-tag').forEach(el => {
-    const i = parseInt(el.dataset.wpIdx, 10) || 0;
-    el.style.boxShadow = i === cur ? '0 0 0 2px var(--surface), 0 0 0 4px var(--accent-1,#f7971e)' : '';
-  });
-}
 function applyWallpaper(dataUrl) {
   preservedWp = null;
-  if (String(dataUrl).indexOf('gallery:') === 0) {
-    const i = parseInt(String(dataUrl).slice(8), 10) || 0;
-    document.body.style.setProperty('--bg-img', wpGrad(i, document.body.classList.contains('dark')));
-    document.body.classList.add('has-wallpaper');
-    lsSet('anthkeys-wallpaper', String(dataUrl));
-  } else {
-    document.body.style.setProperty('--bg-img', `url(${dataUrl})`);
-    document.body.classList.add('has-wallpaper');
-    lsSet('anthkeys-wallpaper', dataUrl);
-  }
-  wpRenderActive();
+  document.body.style.setProperty('--bg-img', `url(${dataUrl})`);
+  document.body.classList.add('has-wallpaper');
+  lsSet('anthkeys-wallpaper', dataUrl);
 }
 function loadWallpaper() {
   const saved = lsGet('anthkeys-wallpaper', '');
-  if (saved) applyWallpaper(saved);
-}
-function reapplyGalleryWall() {
-  const saved = lsGet('anthkeys-wallpaper', '');
-  if (saved.indexOf('gallery:') === 0) {
-    const i = parseInt(saved.slice(8), 10) || 0;
-    document.body.style.setProperty('--bg-img', wpGrad(i, document.body.classList.contains('dark')));
-  }
-}
-function maybeWpShuffleDaily() {
-  if (lsGet('anthkeys-wall-shuffle', '0') !== '1') return;
-  const day = Math.floor(Date.now() / 86400000);
-  const i = day % WP_GALLERY.length;
-  const saved = lsGet('anthkeys-wallpaper', '');
-  if (saved !== 'gallery:' + i) applyWallpaper('gallery:' + i);
+  if (saved && saved.indexOf('gallery:') !== 0) applyWallpaper(saved);
+  else if (saved) lsRemove('anthkeys-wallpaper');
 }
 loadWallpaper();
-wpRenderSwatches();
-maybeWpShuffleDaily();
-onId('btnWpRandom', 'click', () => {
-  const i = Math.floor(Math.random() * WP_GALLERY.length);
-  applyWallpaper('gallery:' + i);
-  showToastMsg(tx('wp.gallery-set'));
-});
-const _wpShuffleToggle = document.getElementById('toggleWpShuffle');
-if (_wpShuffleToggle) {
-  _wpShuffleToggle.addEventListener('change', () => {
-    const on = _wpShuffleToggle.checked;
-    lsSet('anthkeys-wall-shuffle', on ? '1' : '0');
-    _wpShuffleToggle.classList.toggle('on', on);
-    maybeWpShuffleDaily();
-  });
-  _wpShuffleToggle.classList.toggle('on', lsGet('anthkeys-wall-shuffle', '0') === '1');
-  _wpShuffleToggle.checked = lsGet('anthkeys-wall-shuffle', '0') === '1';
-}
-const _wpGallery = document.getElementById('wpGallery');
-if (_wpGallery) {
-  _wpGallery.addEventListener('click', e => {
-    const tag = e.target.closest('.wp-gallery-tag');
-    if (!tag) return;
-    applyWallpaper('gallery:' + (parseInt(tag.dataset.wpIdx, 10) || 0));
-    showToastMsg(tx('wp.gallery-set'));
-  });
-}
 showDailyTip();
 
 const wallpaperInput = document.getElementById('wallpaperInput');
