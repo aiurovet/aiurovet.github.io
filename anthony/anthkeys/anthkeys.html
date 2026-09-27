@@ -28,7 +28,7 @@
   <script>if (location.protocol === 'file:') document.getElementById('manifestLink').remove();</script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=Roboto:wght@400;500;600;700&family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/anthkeys.css?v=98">
+  <link rel="stylesheet" href="css/anthkeys.css?v=99">
 </head>
 <body class="light style-m3 size-medium font-google-sans">
  <div class="container">
@@ -747,6 +747,12 @@
                 <p class="whatsnew-sub" data-i18n="whatsnew.sub">Recent changes to Anthkeys</p>
                 <select id="whatsnewSelect" aria-label="Version" style="width:100%;padding:.45rem .7rem;border:1px solid var(--outline-variant);border-radius:var(--radius-sm);background:var(--surface);color:var(--text);font:var(--size) var(--font);font-size:.8rem;margin-bottom:.6rem;box-sizing:border-box;outline:none"></select>
                 <div class="wn-entry">
+                  <div class="wn-ver">v40.0 <span class="wn-date">Sep 6, 2026</span></div>
+                  <ul>
+                    <li>Accent color picker: the custom color now has a hex text box (type any color, 3 or 6 digits) plus a Copy button — the exact same layout on desktop and mobile.</li>
+                  </ul>
+                </div>
+                <div class="wn-entry">
                   <div class="wn-ver">v39.9 <span class="wn-date">Sep 6, 2026</span></div>
                   <ul>
                     <li>In-room chat: room notes now appear as a scrollback Chat panel (60 messages kept per room, restored when you rejoin). Public notes post to the log; private notes still copy straight to your clipboard. Tap any message to re-copy it.</li>
@@ -1363,9 +1369,11 @@
             <div class="accent-item"><button class="accent-opt" data-accent="slate" style="background:#64748b" title="Slate"></button><span>Slate</span></div>
             <div class="accent-item"><button class="accent-opt" data-accent="tulip" style="background:#e879f9" title="Tulip"></button><span>Tulip</span></div>
           </div>
-          <div style="display:flex;gap:.4rem;align-items:center">
+          <div style="display:flex;gap:.4rem;align-items:center;flex-wrap:wrap">
             <button class="theme-opt" id="customAccentBtn" style="flex:0 0 auto;justify-content:center;padding:.5rem .8rem">Custom</button>
-            <input type="color" id="customAccentInput" value="#f7971e" style="width:36px;height:36px;border:2px solid var(--outline-variant);border-radius:50%;cursor:pointer;padding:0;background:none">
+            <input type="color" id="customAccentInput" value="#f7971e" style="width:36px;height:36px;border:2px solid var(--outline-variant);border-radius:50%;cursor:pointer;padding:0;background:none;flex:0 0 auto">
+            <input type="text" id="customAccentHexInput" value="#f7971e" maxlength="7" placeholder="#RRGGBB" spellcheck="false" autocapitalize="none" style="flex:1;min-width:6.5rem;padding:.5rem .6rem;border:1px solid var(--outline-variant);border-radius:var(--radius-sm);background:var(--surface);color:var(--text);font:var(--size) var(--font);font-size:.8rem;outline:none;text-transform:uppercase;box-sizing:border-box">
+            <button class="theme-opt" id="customAccentCopy" data-i18n="accent.copy" title="Copy hex colour" style="flex:0 0 auto;width:auto;justify-content:center;font-size:.78rem;padding:.5rem .8rem">Copy</button>
           </div>
           <div style="display:flex;gap:.4rem;flex-wrap:wrap;margin-top:.5rem" id="accentPresets"></div>
           <button class="theme-opt" id="savePresetBtn" style="justify-content:center;padding:.3rem .6rem;font-size:.75rem;margin-top:.3rem">+ Save current</button>
@@ -1538,7 +1546,7 @@
 
   <script src="js/mqtt.min.js"></script>
   <script src="js/qrcode.js"></script>
-  <script src="js/anthkeys.js?v=39.9">
+  <script src="js/anthkeys.js?v=40.0">
 </script>
 </body>
 </html>

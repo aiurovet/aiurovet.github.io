@@ -36,6 +36,7 @@ const i18n = {
     'settings.customization': 'Customize',
     'settings.general': 'General',
     'settings.search': 'Search settings\u2026',
+    'accent.copy': 'Copy',
     'setting.theme': 'Theme',
     'setting.presets': 'Style',
     'setting.accent': 'Accent color',
@@ -8996,6 +8997,8 @@ function loadSettings() {
       const accentInput = document.getElementById('customAccentInput');
       if (accentBtn) accentBtn.classList.add('active');
       if (accentInput) accentInput.value = hex;
+      const hexBox = document.getElementById('customAccentHexInput');
+      if (hexBox) hexBox.value = hex.toUpperCase();
       document.body.style.setProperty('--accent-1', hex);
       document.body.style.setProperty('--accent-2', hex2);
       document.body.style.setProperty('--accent-rgb', [r,g,b].join(','));
@@ -9703,25 +9706,47 @@ document.querySelectorAll('.accent-opt').forEach(btn => {
 
 const _customAccentBtn = document.getElementById('customAccentBtn');
 const _customAccentInput = document.getElementById('customAccentInput');
+const _customAccentHex = document.getElementById('customAccentHexInput');
+const _customAccentCopy = document.getElementById('customAccentCopy');
+function applyCustomAccent(hex) {
+  if (!/^#[0-9a-fA-F]{6}$/.test(hex)) return false;
+  const r = parseInt(hex.slice(1,3), 16);
+  const g = parseInt(hex.slice(3,5), 16);
+  const b = parseInt(hex.slice(5,7), 16);
+  const r2 = Math.min(255, r + 40);
+  const g2 = Math.min(255, g + 40);
+  const b2 = Math.min(255, b + 40);
+  const hex2 = '#' + [r2,g2,b2].map(v => v.toString(16).padStart(2,'0')).join('');
+  document.querySelectorAll('.accent-opt').forEach(b => b.classList.remove('active'));
+  _customAccentBtn.classList.add('active');
+  document.body.style.setProperty('--accent-1', hex);
+  document.body.style.setProperty('--accent-2', hex2);
+  document.body.style.setProperty('--accent-rgb', [r,g,b].join(','));
+  document.body.style.setProperty('--accent-2-rgb', [r2,g2,b2].join(','));
+  document.body.style.setProperty('--primary', hex);
+  if (_customAccentInput) _customAccentInput.value = hex;
+  if (_customAccentHex) _customAccentHex.value = hex.toUpperCase();
+  saveSettings();
+  return true;
+}
 if (_customAccentBtn && _customAccentInput) {
   _customAccentBtn.addEventListener('click', () => _customAccentInput.click());
-  _customAccentInput.addEventListener('input', function() {
-    const hex = this.value;
-    const r = parseInt(hex.slice(1,3), 16);
-    const g = parseInt(hex.slice(3,5), 16);
-    const b = parseInt(hex.slice(5,7), 16);
-    const r2 = Math.min(255, r + 40);
-    const g2 = Math.min(255, g + 40);
-    const b2 = Math.min(255, b + 40);
-    const hex2 = '#' + [r2,g2,b2].map(v => v.toString(16).padStart(2,'0')).join('');
-    document.querySelectorAll('.accent-opt').forEach(b => b.classList.remove('active'));
-    _customAccentBtn.classList.add('active');
-    document.body.style.setProperty('--accent-1', hex);
-    document.body.style.setProperty('--accent-2', hex2);
-    document.body.style.setProperty('--accent-rgb', [r,g,b].join(','));
-    document.body.style.setProperty('--accent-2-rgb', [r2,g2,b2].join(','));
-    document.body.style.setProperty('--primary', hex);
-    saveSettings();
+  _customAccentInput.addEventListener('input', function() { applyCustomAccent(this.value); });
+}
+if (_customAccentHex) {
+  _customAccentHex.addEventListener('input', function() {
+    let v = this.value.trim();
+    if (v && v.charAt(0) !== '#') v = '#' + v;
+    if (/^#[0-9a-fA-F]{6}$/.test(v)) applyCustomAccent(v);
+    else if (/^#[0-9a-fA-F]{3}$/.test(v)) applyCustomAccent('#' + v[1] + v[1] + v[2] + v[2] + v[3] + v[3]);
+  });
+}
+if (_customAccentCopy) {
+  _customAccentCopy.addEventListener('click', () => {
+    const hex = document.body.style.getPropertyValue('--accent-1').trim() || (_customAccentHex ? _customAccentHex.value : '') || '#f7971e';
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(hex.toUpperCase()).then(() => showToastMsg(tx('msg.copied'))).catch(() => {});
+    }
   });
 }
 
