@@ -39,7 +39,7 @@ const i18n = {
     'accent.copy': 'Copy',
     'accent.match-device': 'Match my device',
     'accent.device-applied': 'Device accent applied',
-    'accent.device-fail': 'Couldn\u2019t read the device accent',
+    'accent.device-fail': 'Device accent not available here \u2014 open the installed app',
     'setting.theme': 'Theme',
     'setting.presets': 'Style',
     'setting.accent': 'Accent color',
@@ -9745,14 +9745,92 @@ if (_customAccentCopy) {
     }
   });
 }
-function normalizeColorToHex(c) {
-  const m = String(c).match(/rgba?\((\d+)[,\s]+(\d+)[,\s]+(\d+)/);
-  if (!m) return null;
-  const r = +m[1], g = +m[2], b = +m[3];
-  if (r === 0 && g === 0 && b === 0) return null;
-  if (r === 0 && g === 255 && b === 0) return null;
-  if (r === 0 && g === 128 && b === 0) return null;
-  return '#' + [r, g, b].map(v => v.toString(16).padStart(2, '0')).join('');
+function _clamp255(v) { return Math.max(0, Math.min(255, Math.round(v))); }
+function _toHex(r, g, b) {
+  const rr = _clamp255(r), gg = _clamp255(g), bb = _clamp255(b);
+  if (rr === 0 && gg === 0 && bb === 0) return null;
+  if (rr === 0 && gg === 255 && bb === 0) return null;
+  if (rr === 0 && gg === 128 && bb === 0) return null;
+  return '#' + [rr, gg, bb].map(v => v.toString(16).padStart(2, '0')).join('');
+}
+function _srgbFromLinear(v) {
+  return v > 0.0031308 ? (1.055 * Math.pow(v, 1 / 2.4) - 0.055) : (12.92 * v);
+}
+function _labToRgb(L, a, b) {
+  const fy = (L + 16) / 116, fx = fy + a / 500, fz = fy - b / 200;
+  const fx3 = Math.pow(fx, 3), fz3 = Math.pow(fz, 3);
+  const xr = fx3 > 0.008856 ? fx3 : (fx - 16 / 116) / 7.787;
+  const yr = L > 8 ? Math.pow(fy, 3) : L / 903.3;
+  const zr = fz3 > 0.008856 ? fz3 : (fz - 16 / 116) / 7.787;
+  let X = xr * 0.96422, Y = yr, Z = zr * 0.82521;
+  const X65 = 0.9554734527042182 * X + -0.023098536874261423 * Y + 0.0632593086610217 * Z;
+  const Y65 = -0.028369706963208136 * X + 1.0099954580058226 * Y + 0.021041398966943008 * Z;
+  const Z65 = 0.012314001688319899 * X + -0.020507696433477912 * Y + 1.3303659366080753 * Z;
+  const r = 3.2404542 * X65 - 1.5371385 * Y65 - 0.4985314 * Z65;
+  const g = -0.9692660 * X65 + 1.8760108 * Y65 + 0.0415560 * Z65;
+  const b2 = 0.0556434 * X65 - 0.2040259 * Y65 + 1.0572252 * Z65;
+  return [_srgbFromLinear(r), _srgbFromLinear(g), _srgbFromLinear(b2)].map(v => v * 255);
+}
+function _oklabToRgb(L, a, b) {
+  const l = L + 0.3963377774 * a + 0.2158037573 * b;
+  const m = L - 0.1055613458 * a - 0.0638541728 * b;
+  const s = L - 0.0894841775 * a - 1.2914855480 * b;
+  const ll = Math.pow(l, 3), mm = Math.pow(m, 3), ss = Math.pow(s, 3);
+  const r = 4.0767416621 * ll - 3.3077115913 * mm + 0.2309699292 * ss;
+  const g = -1.2684380046 * ll + 2.6097574011 * mm - 0.3413193965 * ss;
+  const b2 = -0.0041960863 * ll - 0.7034186147 * mm + 1.7076147010 * ss;
+  return [_srgbFromLinear(r), _srgbFromLinear(g), _srgbFromLinear(b2)].map(v => v * 255);
+}
+function _hslToRgb(h, s, l) {
+  s /= 100; l /= 100;
+  const k = n => (n + h / 30) % 12;
+  const a = s * Math.min(l, 1 - l);
+  const f = n => l - a * Math.max(-1, Math.min(k(n) - 3, Math.min(9 - k(n), 1)));
+  return [f(0) * 255, f(8) * 255, f(4) * 255];
+}
+function _hwbToRgb(h, w, b) {
+  w /= 100; b /= 100;
+  const pure = _hslToRgb(h, 100, 50).map(v => v / 255);
+  if (w + b >= 1) {
+    const gray = w / (w + b + 1e-9);
+    return [gray * 255, gray * 255, gray * 255];
+  }
+  const f = 1 - w - b;
+  return pure.map(v => (v * f + w) * 255);
+}
+function convertColorToHex(str) {
+  const c = String(str).trim().toLowerCase();
+  const args = c.substring(c.indexOf('(') + 1, c.lastIndexOf(')'));
+  const parts = args.split(/[,/\s]+/).map(s => s.trim()).filter(s => s !== '');
+  const num = i => parseFloat(parts[i]);
+  if (/^rgb/.test(c)) {
+    const r = /%/.test(parts[0]) ? num(0) / 100 * 255 : num(0);
+    const g = /%/.test(parts[1]) ? num(1) / 100 * 255 : num(1);
+    const b = /%/.test(parts[2]) ? num(2) / 100 * 255 : num(2);
+    return _toHex(r, g, b);
+  }
+  if (/^hsl/.test(c)) {
+    const h = parseFloat(parts[0].replace(/deg$/i, ''));
+    return _toHex.apply(null, _hslToRgb(h, parseFloat(parts[1]), parseFloat(parts[2])).map(v => v * 1));
+  }
+  if (/^hwb/.test(c)) return _toHex.apply(null, _hwbToRgb(parseFloat(parts[0]), parseFloat(parts[1]), parseFloat(parts[2])).map(v => v * 1));
+  if (/^oklch/.test(c)) {
+    const h = parseFloat(parts[2]) * Math.PI / 180;
+    return _toHex.apply(null, _oklabToRgb(parseFloat(parts[0]), parseFloat(parts[1]) * Math.cos(h), parseFloat(parts[1]) * Math.sin(h)));
+  }
+  if (/^oklab/.test(c)) return _toHex.apply(null, _oklabToRgb(parseFloat(parts[0]), parseFloat(parts[1]), parseFloat(parts[2])));
+  if (/^lch/.test(c)) {
+    const h = parseFloat(parts[2]) * Math.PI / 180;
+    return _toHex.apply(null, _labToRgb(parseFloat(parts[0]), parseFloat(parts[1]) * Math.cos(h), parseFloat(parts[1]) * Math.sin(h)));
+  }
+  if (/^lab/.test(c)) return _toHex.apply(null, _labToRgb(parseFloat(parts[0]), parseFloat(parts[1]), parseFloat(parts[2])));
+  if (/^color\(/.test(c)) {
+    let cs = parts[0];
+    const rgb01 = [parts[1], parts[2], parts[3]].map(p => /%$/.test(p) ? parseFloat(p) / 100 : parseFloat(p));
+    if (/srgb-linear/.test(cs)) return _toHex.apply(null, rgb01.map(_srgbFromLinear).map(v => v * 255));
+    return _toHex.apply(null, rgb01.map(v => v * 255));
+  }
+  return null;
 }
 function detectDeviceAccent() {
   const candidates = ['AccentColor', 'Highlight'];
@@ -9762,10 +9840,25 @@ function detectDeviceAccent() {
     document.body.appendChild(probe);
     const c = getComputedStyle(probe).backgroundColor;
     probe.remove();
-    const hex = normalizeColorToHex(c);
+    const hex = convertColorToHex(c);
     if (hex) return hex;
   }
-  return null;
+  const el = document.createElement('span');
+  el.textContent = 'Aa';
+  el.style.cssText = 'position:absolute;top:-9999px;left:-9999px';
+  document.body.appendChild(el);
+  const range = document.createRange();
+  range.selectNodeContents(el);
+  const sel = window.getSelection();
+  let bg = null;
+  if (sel) {
+    sel.removeAllRanges();
+    sel.addRange(range);
+    bg = getComputedStyle(el, '::selection').backgroundColor;
+    sel.removeAllRanges();
+  }
+  el.remove();
+  return convertColorToHex(bg);
 }
 const _btnMatchDeviceAccent = document.getElementById('btnMatchDeviceAccent');
 if (_btnMatchDeviceAccent) {
