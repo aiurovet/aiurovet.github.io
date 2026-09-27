@@ -40,8 +40,6 @@ const i18n = {
     'accent.match-device': 'Match my device',
     'accent.device-applied': 'Device accent applied',
     'accent.device-fail': 'Device accent not available here \u2014 open the installed app',
-    'accent.pick-screen': 'Pick from screen',
-    'accent.picked': 'Color picked',
     'setting.theme': 'Theme',
     'setting.presets': 'Style',
     'setting.accent': 'Accent color',
@@ -9656,34 +9654,34 @@ document.querySelectorAll('.theme-opt[data-theme]').forEach(opt => {
 });
 
 const accents = {
-  gold: ['#D88215','#E5B77C','216,130,21','229,183,124'],
-  blue: ['#1863DC','#81A7E5','24,99,220','129,167,229'],
-  green: ['#23B358','#7BD99E','35,179,88','123,217,158'],
-  pink: ['#D2237A','#DF87B3','210,35,122','223,135,179'],
-  purple: ['#581BE2','#A386E5','88,27,226','163,134,229'],
-  red: ['#BE2A2A','#D98686','190,42,42','217,134,134'],
-  teal: ['#1BB5A8','#74DDD3','27,181,168','116,221,211'],
-  orange: ['#CE5618','#E39E7A','206,86,24','227,158,122'],
-  indigo: ['#3229CA','#8E89DC','50,41,202','142,137,220'],
-  cyan: ['#15A0C2','#72CCE2','21,160,194','114,204,226'],
-  lime: ['#78BA1B','#B2DE75','120,186,27','178,222,117'],
-  fuchsia: ['#AA2DBA','#CE87D7','170,45,186','206,135,215'],
-  grape: ['#8019E2','#B684E5','128,25,226','182,132,229'],
-  tangerine: ['#D96413','#E6A77B','217,100,19','230,167,123'],
-  'sky-blue': ['#1995CD','#7BC2E2','25,149,205','123,194,226'],
-  'warm-gray': ['#956B4D','#BFAA9B','149,107,77','191,170,155'],
-  mocha: ['#B4561D','#DC9C74','180,86,29','220,156,116'],
-  'ocean-deep': ['#1082C1','#6CBAE4','16,130,193','108,186,228'],
-  crimson: ['#BE2A2A','#D98686','190,42,42','217,134,134'],
-  violet: ['#6220D2','#A684E0','98,32,210','166,132,224'],
-  amber: ['#CD7713','#E5B175','205,119,19','229,177,117'],
-  jade: ['#12BD88','#6DE2BE','18,189,136','109,226,190'],
-  ruby: ['#C32548','#DB8396','195,37,72','219,131,150'],
-  candy: ['#DB1A3B','#E48293','219,26,59','228,130,147'],
-  azure: ['#2056CD','#819FE0','32,86,205','129,159,224'],
-  peach: ['#EC243D','#EA8D98','236,36,61','234,141,152'],
-  slate: ['#4E6B97','#9CABC0','78,107,151','156,171,192'],
-  tulip: ['#CC1EE7','#DA89E7','204,30,231','218,137,231']
+  gold: ['#D87C08','#F5C383','216,124,8','245,195,131'],
+  blue: ['#0A59DA','#87B0F4','10,89,218','135,176,244'],
+  green: ['#17BB53','#86EAAB','23,187,83','134,234,171'],
+  pink: ['#CF1571','#EF8DBD','207,21,113','239,141,189'],
+  purple: ['#4C0CDD','#AB8BF4','76,12,221','171,139,244'],
+  red: ['#C41818','#E88E8E','196,24,24','232,142,142'],
+  teal: ['#11BEAE','#7FEEE4','17,190,174','127,238,228'],
+  orange: ['#D04E0B','#F3A982','208,78,11','243,169,130'],
+  indigo: ['#2319CA','#9590EB','35,25,202','149,144,235'],
+  cyan: ['#09A4C9','#7CDCF4','9,164,201','124,220,244'],
+  lime: ['#78C10F','#C1F07F','120,193,15','193,240,127'],
+  fuchsia: ['#B018C3','#DD8FE6','176,24,195','221,143,230'],
+  grape: ['#770ADD','#C089F5','119,10,221','192,137,245'],
+  tangerine: ['#D95C06','#F7B181','217,92,6','247,177,129'],
+  'sky-blue': ['#0C92CF','#83D0F2','12,146,207','131,208,242'],
+  'warm-gray': ['#8F664A','#CAB7A9','143,102,74','202,183,169'],
+  mocha: ['#BC5212','#EEA97F','188,82,18','238,169,127'],
+  'ocean-deep': ['#0484CB','#76C9F7','4,132,203','118,201,247'],
+  crimson: ['#C41818','#E88E8E','196,24,24','232,142,142'],
+  violet: ['#5813CF','#B08BF0','88,19,207','176,139,240'],
+  amber: ['#D27306','#F6BE7D','210,115,6','246,190,125'],
+  jade: ['#07C78B','#77F5CE','7,199,139','119,245,206'],
+  ruby: ['#C4183E','#EB8BA0','196,24,62','235,139,160'],
+  candy: ['#D80C2F','#F3889B','216,12,47','243,136,155'],
+  azure: ['#134DCC','#89A9EF','19,77,204','137,169,239'],
+  peach: ['#EF0522','#F88F9C','239,5,34','248,143,156'],
+  slate: ['#4A6790','#AAB7CB','74,103,144','170,183,203'],
+  tulip: ['#C70AE3','#E78DF5','199,10,227','231,141,245']
 };
 // Expose accents for loadSettings
 window.accents = accents;
@@ -9868,84 +9866,6 @@ if (_btnMatchDeviceAccent) {
     const hex = detectDeviceAccent();
     if (hex && applyCustomAccent(hex)) showToastMsg(tx('accent.device-applied'));
     else showToastMsg(tx('accent.device-fail'));
-  });
-}
-
-// ---- Pick accent from screen ----
-function startPagePicker() {
-  if (document.getElementById('anthkeysPicker')) return;
-  const ov = document.createElement('div');
-  ov.id = 'anthkeysPicker';
-  ov.style.cssText = 'position:fixed;inset:0;z-index:2147483647;pointer-events:none;cursor:crosshair;background:rgba(0,0,0,0.08);transition:none';
-  ov.innerHTML = '<div id="anthkeysPickerDropper" style="position:fixed;left:-80px;top:-80px;width:44px;height:44px;border-radius:50%;border:3px solid #fff;box-shadow:0 2px 10px rgba(0,0,0,0.45), inset 0 0 0 2px rgba(0,0,0,0.18);background:#fff;pointer-events:none"></div>' +
-    '<div id="anthkeysPickerHex" style="position:fixed;left:0;top:0;background:rgba(0,0,0,0.75);color:#fff;font:600 12px/1.4 Consolas,monospace;padding:3px 8px;border-radius:8px;pointer-events:none"></div>' +
-    '<div id="anthkeysPickerHint" style="position:fixed;left:50%;bottom:18px;transform:translateX(-50%);background:rgba(0,0,0,0.75);color:#fff;font:12px/1.4 sans-serif;padding:6px 12px;border-radius:10px;pointer-events:none">Move the pointer and click, or tap a spot. Esc cancels.</div>';
-  document.body.appendChild(ov);
-  const dropper = document.getElementById('anthkeysPickerDropper');
-  const hexEl = document.getElementById('anthkeysPickerHex');
-  function hexAt(x, y) {
-    let el = document.elementFromPoint(x, y);
-    while (el && el !== document.body) {
-      const hex = convertColorToHex(getComputedStyle(el).backgroundColor);
-      if (hex) return hex;
-      el = el.parentElement;
-    }
-    return null;
-  }
-  function move(x, y) {
-    dropper.style.left = (x - 22) + 'px';
-    dropper.style.top = (y - 22) + 'px';
-    hexEl.style.left = (x + 18) + 'px';
-    hexEl.style.top = (y - 18) + 'px';
-    const h = hexAt(x, y);
-    hexEl.textContent = h ? h.toUpperCase() : 'no color';
-  }
-  function pickAt(x, y) {
-    const h = hexAt(x, y);
-    stopPicker();
-    if (h && applyCustomAccent(h)) showToastMsg(tx('accent.picked'));
-  }
-  function onMove(e) { move(e.clientX, e.clientY); }
-  function onClick(e) { e.preventDefault(); e.stopPropagation(); pickAt(e.clientX, e.clientY); }
-  function onKey(e) { if (e.key === 'Escape') stopPicker(); }
-  function onTouchMove(e) {
-    if (e.touches.length) { const t = e.touches[0]; move(t.clientX, t.clientY); }
-    e.preventDefault();
-  }
-  function onTouchEnd(e) {
-    if (e.changedTouches.length) {
-      const t = e.changedTouches[0];
-      pickAt(t.clientX, t.clientY);
-    }
-  }
-  function stopPicker() {
-    ov.remove();
-    document.removeEventListener('mousemove', onMove);
-    document.removeEventListener('click', onClick, true);
-    document.removeEventListener('keydown', onKey);
-    document.removeEventListener('touchmove', onTouchMove, { capture: true });
-    document.removeEventListener('touchend', onTouchEnd);
-  }
-  document.addEventListener('mousemove', onMove);
-  document.addEventListener('click', onClick, true);
-  document.addEventListener('keydown', onKey);
-  document.addEventListener('touchmove', onTouchMove, { passive: false, capture: true });
-  document.addEventListener('touchend', onTouchEnd);
-}
-const _btnPickScreen = document.getElementById('btnPickScreen');
-if (_btnPickScreen) {
-  _btnPickScreen.addEventListener('click', () => {
-    let used = false;
-    try {
-      if (window.EyeDropper) {
-        used = true;
-        const ed = new window.EyeDropper();
-        ed.open().then(r => {
-          if (r && r.sRGBHex && applyCustomAccent(r.sRGBHex)) showToastMsg(tx('accent.picked'));
-        }).catch(() => {});
-      }
-    } catch (e) { used = false; }
-    if (!used) startPagePicker();
   });
 }
 
