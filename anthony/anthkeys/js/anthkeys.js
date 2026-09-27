@@ -9654,34 +9654,34 @@ document.querySelectorAll('.theme-opt[data-theme]').forEach(opt => {
 });
 
 const accents = {
-  gold: ['#f7971e','#ffd200','247,151,30','255,210,0'],
-  blue: ['#3b82f6','#60a5fa','59,130,246','96,165,250'],
-  green: ['#16a34a','#4ade80','22,163,74','74,222,128'],
-  pink: ['#ec4899','#f472b6','236,72,153','244,114,182'],
-  purple: ['#8b5cf6','#a78bfa','139,92,246','167,139,250'],
-  red: ['#dc2626','#f87171','220,38,38','248,113,113'],
-  teal: ['#0d9488','#2dd4bf','13,148,136','45,212,191'],
-  orange: ['#ea580c','#fb923c','234,88,12','251,146,60'],
-  indigo: ['#4f46e5','#818cf8','79,70,229','129,140,248'],
-  cyan: ['#0891b2','#22d3ee','8,145,178','34,211,238'],
-  lime: ['#65a30d','#a3e635','101,163,13','163,230,53'],
-  fuchsia: ['#c026d3','#e879f9','192,38,211','232,121,249'],
-  grape: ['#a855f7','#c084fc','168,85,247','192,132,252'],
-  tangerine: ['#f97316','#fb923c','249,115,22','251,146,60'],
-  'sky-blue': ['#0ea5e9','#38bdf8','14,165,233','56,189,248'],
-  'warm-gray': ['#78716c','#a8a29e','120,113,108','168,162,158'],
-  mocha: ['#92400e','#b45309','146,64,14','180,83,9'],
-  'ocean-deep': ['#0369a1','#0284c7','3,105,161','2,132,199'],
-  crimson: ['#dc2626','#ef4444','220,38,38','239,68,68'],
-  violet: ['#7c3aed','#8b5cf6','124,58,237','139,92,246'],
-  amber: ['#d97706','#f59e0b','217,119,6','245,158,11'],
-  jade: ['#059669','#10b981','5,150,105','16,185,129'],
-  ruby: ['#e11d48','#fb7185','225,29,72','251,113,133'],
-  candy: ['#f43f5e','#fb7185','244,63,94','251,113,133'],
-  azure: ['#2563eb','#3b82f6','37,99,235','59,130,246'],
-  peach: ['#fda4af','#fecdd3','253,164,175','254,205,211'],
-  slate: ['#64748b','#94a3b8','100,116,139','148,163,184'],
-  tulip: ['#e879f9','#f0abfc','232,121,249','240,171,252']
+  gold: ['#C68027','#DEC099','198,128,39','222,192,153'],
+  blue: ['#2A67CB','#9DB6DE','42,103,203','157,182,222'],
+  green: ['#30A65C','#96D4AD','48,166,92','150,212,173'],
+  pink: ['#C2337A','#DBA1BE','194,51,122','219,161,190'],
+  purple: ['#5F2DD0','#B4A1DF','95,45,208','180,161,223'],
+  red: ['#B13838','#D69F9F','177,56,56','214,159,159'],
+  teal: ['#29A79C','#90D6D0','41,167,156','144,214,208'],
+  orange: ['#BE5B28','#DCAE97','190,91,40','220,174,151'],
+  indigo: ['#3F38BB','#A5A2D9','63,56,187','165,162,217'],
+  cyan: ['#2597B2','#90CCDA','37,151,178','144,204,218'],
+  lime: ['#75AB29','#BAD791','117,171,41','186,215,145'],
+  fuchsia: ['#A03AAD','#CE9FD4','160,58,173','206,159,212'],
+  grape: ['#802BD0','#C1A0DF','128,43,208','193,160,223'],
+  tangerine: ['#C76725','#DFB598','199,103,37','223,181,152'],
+  'sky-blue': ['#2A8FBC','#97C6DB','42,143,188','151,198,219'],
+  'warm-gray': ['#956B4D','#C8B5A8','149,107,77','200,181,168'],
+  mocha: ['#A6592A','#D5AB90','166,89,42','213,171,144'],
+  'ocean-deep': ['#207EB1','#8BBFDB','32,126,177','139,191,219'],
+  crimson: ['#B13838','#D69F9F','177,56,56','214,159,159'],
+  violet: ['#6630C2','#B59FDB','102,48,194','181,159,219'],
+  amber: ['#BC7524','#DDBA92','188,117,36','221,186,146'],
+  jade: ['#22AD82','#8BDAC1','34,173,130','139,218,193'],
+  ruby: ['#B43450','#D79DA9','180,52,80','215,157,169'],
+  candy: ['#C92C47','#DE9EA9','201,44,71','222,158,169'],
+  azure: ['#2F5CBD','#9CB0DA','47,92,189','156,176,218'],
+  peach: ['#DA364B','#E4A8B0','218,54,75','228,168,176'],
+  slate: ['#4E6B97','#A9B6C8','78,107,151','169,182,200'],
+  tulip: ['#BF30D4','#D9A4E1','191,48,212','217,164,225']
 };
 // Expose accents for loadSettings
 window.accents = accents;
@@ -9745,12 +9745,7 @@ if (_customAccentCopy) {
     }
   });
 }
-function detectDeviceAccent() {
-  const probe = document.createElement('div');
-  probe.style.cssText = 'position:absolute;left:-9999px;top:-9999px;width:1px;height:1px;background-color:AccentColor;color:AccentColorText';
-  document.body.appendChild(probe);
-  const c = getComputedStyle(probe).backgroundColor;
-  probe.remove();
+function normalizeColorToHex(c) {
   const m = String(c).match(/rgba?\((\d+)[,\s]+(\d+)[,\s]+(\d+)/);
   if (!m) return null;
   const r = +m[1], g = +m[2], b = +m[3];
@@ -9758,6 +9753,19 @@ function detectDeviceAccent() {
   if (r === 0 && g === 255 && b === 0) return null;
   if (r === 0 && g === 128 && b === 0) return null;
   return '#' + [r, g, b].map(v => v.toString(16).padStart(2, '0')).join('');
+}
+function detectDeviceAccent() {
+  const candidates = ['AccentColor', 'Highlight'];
+  for (const kw of candidates) {
+    const probe = document.createElement('div');
+    probe.style.cssText = 'position:absolute;left:-9999px;top:-9999px;width:1px;height:1px;background-color:' + kw;
+    document.body.appendChild(probe);
+    const c = getComputedStyle(probe).backgroundColor;
+    probe.remove();
+    const hex = normalizeColorToHex(c);
+    if (hex) return hex;
+  }
+  return null;
 }
 const _btnMatchDeviceAccent = document.getElementById('btnMatchDeviceAccent');
 if (_btnMatchDeviceAccent) {
