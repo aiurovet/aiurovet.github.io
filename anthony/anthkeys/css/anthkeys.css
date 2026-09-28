@@ -280,6 +280,9 @@
     .tab:hover { background: var(--outline-variant); }
     .tab:active { transform: scale(.97); }
     .tab.active { background: linear-gradient(135deg, var(--accent-1), var(--accent-2)); color: var(--on-primary); }
+    .linux-distro-option { display: flex; width: 100%; justify-content: flex-start; align-items: center; gap: .5rem; padding: .45rem .6rem; font-size: .75rem; border: none; border-radius: 8px; background: transparent; color: var(--text); cursor: pointer; text-align: left; }
+    .linux-distro-option:hover { background: var(--outline-variant); }
+    .linux-distro-option.active { background: linear-gradient(135deg, var(--accent-1), var(--accent-2)); color: var(--on-primary); }
     .panel { display: none; background: var(--surface); border-radius: var(--radius); box-shadow: var(--shadow); overflow: hidden; padding: 1.25rem; transition: background .3s; }
     .panel.active { display: block; }
     table { width: 100%; border-collapse: collapse; }

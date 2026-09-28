@@ -8926,6 +8926,54 @@ const linuxDistros = [
   { id: 'almalinux', label: 'AlmaLinux' }
 ];
 let linuxDistroState = null;
+function renderLinuxDistroMenu() {
+  const menu = document.getElementById('linuxDistroMenu');
+  if (!menu) return;
+  if (!menu.dataset.rendered) {
+    menu.dataset.rendered = '1';
+    const head = document.createElement('div');
+    head.style.cssText = 'padding:.25rem .6rem;font-size:.65rem;text-transform:uppercase;letter-spacing:.05em;color:var(--text-variant)';
+    head.setAttribute('data-i18n', 'linux.distro');
+    head.textContent = tx('linux.distro');
+    menu.appendChild(head);
+  }
+  const existing = menu.querySelectorAll('.linux-distro-option');
+  if (existing.length === linuxDistros.length) {
+    existing.forEach(b => {
+      const on = b.dataset.linuxDistro === linuxDistroState;
+      b.classList.toggle('active', on);
+    });
+    return;
+  } else if (existing.length) {
+    existing.forEach(b => b.remove());
+  }
+  linuxDistros.forEach(d => {
+    const b = document.createElement('button');
+    b.type = 'button';
+    b.className = 'linux-distro-option';
+    b.dataset.linuxDistro = d.id;
+    b.textContent = d.label;
+    if (d.id === linuxDistroState) b.classList.add('active');
+    b.addEventListener('click', () => {
+      applyLinuxDistro(d.id);
+      hideLinuxDistroMenu();
+      saveSettings();
+      const t = document.querySelector('.tab[data-tab="linux"]');
+      if (t && !t.classList.contains('active')) t.click();
+    });
+    menu.appendChild(b);
+  });
+}
+function toggleLinuxDistroMenu() {
+  const menu = document.getElementById('linuxDistroMenu');
+  if (!menu) return;
+  renderLinuxDistroMenu();
+  menu.hidden = !menu.hidden;
+}
+function hideLinuxDistroMenu() {
+  const menu = document.getElementById('linuxDistroMenu');
+  if (menu) menu.hidden = true;
+}
 function applyLinuxDistro(id) {
   linuxDistroState = (id && linuxDistros.some(d => d.id === id)) ? id : 'ubuntu';
   if (!document.querySelector('#linux [data-kbd]')) {
@@ -8934,29 +8982,29 @@ function applyLinuxDistro(id) {
       if (k in LINUX_KBD_DEFAULTS) { const kb = td.parentElement.querySelectorAll('td')[1]; if (kb) kb.dataset.kbd = k; }
     });
   }
-  const sel = document.getElementById('linuxDistroSelect');
-  if (sel) {
-    if (!sel.options.length) linuxDistros.forEach(d => {
-      const o = document.createElement('option');
-      o.value = d.id;
-      o.textContent = d.label;
-      sel.appendChild(o);
-    });
-    sel.value = linuxDistroState;
-  }
   const dist = linuxDistros.find(d => d.id === linuxDistroState) || linuxDistros[0];
   const overrides = dist.overrides || {};
   document.querySelectorAll('#linux [data-kbd]').forEach(td => {
     td.innerHTML = overrides[td.dataset.kbd] || LINUX_KBD_DEFAULTS[td.dataset.kbd];
   });
+  renderLinuxDistroMenu();
 }
-const _linuxDistroSelect = document.getElementById('linuxDistroSelect');
-if (_linuxDistroSelect) {
-  _linuxDistroSelect.addEventListener('change', () => {
-    applyLinuxDistro(_linuxDistroSelect.value);
-    saveSettings();
+const _linuxChev = document.getElementById('linuxChev');
+if (_linuxChev) {
+  _linuxChev.addEventListener('click', e => {
+    e.preventDefault();
+    toggleLinuxDistroMenu();
   });
 }
+document.addEventListener('click', e => {
+  const menu = document.getElementById('linuxDistroMenu');
+  if (!menu || menu.hidden) return;
+  const wrap = document.getElementById('linuxTabWrap');
+  if (wrap && !wrap.contains(e.target)) hideLinuxDistroMenu();
+});
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape') hideLinuxDistroMenu();
+});
 
 function saveSettings() {
   const activeAccent = document.querySelector('.accent-opt.active');
@@ -8976,7 +9024,7 @@ function saveSettings() {
     noAnim: document.body.classList.contains('no-anim'),
     tip: document.getElementById('toggleTip')?.classList.contains('on') ?? true,
     updateMode: document.querySelector('[data-update-mode].active')?.dataset.updateMode || 'auto',
-    linuxDistro: document.getElementById('linuxDistroSelect')?.value || 'ubuntu'
+    linuxDistro: linuxDistroState || 'ubuntu'
   };
   if (data.accent === 'custom' || (activeAccent && !activeAccent.dataset.accent)) {
     const bodyHex = document.body.style.getPropertyValue('--accent-1').trim();
