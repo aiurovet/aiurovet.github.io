@@ -2235,3 +2235,226 @@ I18N_WN.pl = {
   'v1': ['Pierwsza wersja Anthkeys: wszystkie codzienne skróty klawiszowe dla Windows, macOS, Linux i ChromeOS na jednej stronie.']
 };
 
+I18N_WN.tr = {
+  'v52.1': [
+    'Yeni: &laquo;Yenilikler&raquo; sayfası artık 20 dilin tamamında eksiksiz çevrildi — her sürüm notu kendi dilinizde gösteriliyor.'
+  ],
+  'v52': [
+    'Düzeltme: v51 uygulamanın yüklenmesini engelleyebiliyordu; Danca çevirisinde kaçırılmamış bir kesme işareti bulunuyordu ve bu da dil dosyasının tamamını geçersiz kılıyordu. Dosya artık doğru ayrıştırılıyor ve 20 dilin tamamı yeniden yükleniyor.'
+  ],
+  'v51': [
+    '20 dilin tamamı için çeviriler tamamlandı — ayarlar, canlı odalar, çevrimdışı eşitleme ve eşitleme kılavuzu artık eksiksiz çevrildi (son eklenenler yalnızca İngilizceydi).',
+    'Yeni: Anthkeys yavaş geliyorsa bir bildirim, performans modunu tek dokunuşla açmanızı önerir. Kapatabilirsiniz, bir daha görünmez.'
+  ],
+  'v50.7': ['Performans modu, ayarlardaki Genel sekmesine taşındı.'],
+  'v50.6': ['Üst çubuk simgeleri yeniden v50 ile aynı renkli emojilere döndü: kitap, yazıcı, şimşek, ay/güneş, yenileme ve dişli.'],
+  'v50.5': ['Üst çubuk simgeleri yeniden vurgu rengini kullanıyor (varsayılan), böylece beyaz veya gri görünmüyor.'],
+  'v50.4': ['Simgeyi vurgu rengine boyama özelliği kaldırıldı: favicon, ana ekran simgesi ve kurulu PWA simgesi yeniden varsayılan simgeyi kullanıyor (simgeyi vurgu rengine boyamak yalnızca yerel uygulamalarda anlamlıdır).'],
+  'v50.3': [
+    'Üst çubuk simgeleri, tüm cihazlarda güvenilir görünmeleri için yeniden kuruldu (tur, yazdırma, test, tema, yenileme ve ayarlar artık gerçek simgeler kullanıyor).',
+    'Tema düğmesi simgesi yeniden gerçek bir simge ve açık/koyu durumuna uyuyor.'
+  ],
+  'v50.2': ['v50.1 hatası giderildi: üst çubuk simgeleri ve ayarlar açılışta çalışmıyordu.'],
+  'v50.1': [
+    'Özelleştirmede yeni Performans modu: Windows’ta uygulamayı yavaşlatabilecek bulanıklaştırma efektlerini ve animasyonları kapatır.',
+    'Üst çubuk artık gerçek simgeler kullanıyor ve yeni Simgeler ayarı bunları vurgu renginize boyar.',
+    'Uygulamalar sekmesi Linux sekmesi gibi çalışır: bir uygulama (VS Code, Figma, Gmail ve diğerleri) seçmek için herhangi bir yere tıklayın, sekme seçiminizi gösterir, örneğin &laquo;Uygulamalar - Gmail&raquo;.',
+    'Özelleştir düğmesinin altındaki onaltılık alan kaldırıldı: renkler yalnızca kaydırıcılarla seçilir.',
+    'Degrade vurgu seçenekleri iki katına çıkarıldı ve sekiz yeni iki renkli kombinasyon eklendi.'
+  ],
+  'v50': [
+    'Dağıtım listesini açmak için Linux sekmesinde herhangi bir yere tıklayın; sekme artık seçiminizi gösterir, örneğin &laquo;Linux - Ubuntu (GNOME)&raquo;.',
+    'Özel renk seçici yeniden kuruldu: yuvarlak örnek; ton, doygunluk ve parlaklık kaydırıcılarını açar (her birinin üstünde değeri yazılıdır) ve 0/0/0 yerine mevcut renkten başlar.',
+    'Yeni Degrade vurgular bölümü: vurgu rengi olarak hemen uygulanabilecek sekiz iki renkli degrade.',
+    'Vurgu ön ayarları daha temiz ve belirgin bir palet için iyileştirildi.'
+  ],
+  'v40.9': ['Dağıtım listesi artık doğrudan Linux sekmesinde: kendi dağıtımınızı seçmek için sekmedeki küçük oka tıklayın.'],
+  'v40.8': ['Linux sekmesinde artık bir dağıtım listesi var (Ubuntu, Debian, Fedora, Arch, Mint, KDE ve diğerleri). Sistem kısayollarını her dağıtımın varsayılan ayarlarına göre uyarlar ve seçiminizi hatırlar.'],
+  'v40.7': ['Vurgu ayarları artık uygulanan rengin tam onaltılık kodunu gösteren canlı bir önizleme çubuğu içeriyor; böylece her seçimi anında görüyorsunuz.'],
+  'v40.6': [
+    '&laquo;Ekrandan al&raquo; özelliği kaldırıldı.',
+    'Vurgu ön ayarları Material 3 Expressive’nin tam yoğunluğuna ayarlandı: derin ve canlı, gerçek neon renkler (gri tonlar yine sakin kalıyor).'
+  ],
+  'v40.5': ['Vurgu paleti Material 3 Expressive üslubuna göre yeniden dengelendi: daha canlı tonal renkler.'],
+  'v40.4': ['&laquo;Cihazımla eşleştir&raquo; artık gerçek sistem rengini okuyor (Chrome’un oklch/color() çıktısı dahil) ve işletim sisteminin metin seçim rengini de yokluyor; böylece gerçek dinamik vurgu renginiz uygulanıyor.'],
+  'v40.3': [
+    'Tüm vurgu renkleri Material You ton üslubuna göre yeniden dengelendi (yumuşak orta tonlar ve yumuşak kap tonlarıyla).',
+    '&laquo;Cihazımla eşleştir&raquo; artık sistem seçim rengini de alternatif olarak okuyor; bu sayede daha çok tarayıcı ve profilde çalışıyor.'
+  ],
+  'v40.2': ['Vurgu rengi ayarları: yeni &laquo;Cihazımla eşleştir&raquo; düğmesi sistem vurgu rengini okur (Chrome 150+, kurulu uygulama) ve bir onay bildirimiyle uygular.'],
+  'v40.1': ['Duvar kağıdı galerisi kaldırıldı (galeriye kaydedilen arka planlar silinir; yüklediğiniz arka plan çalışmaya devam eder).'],
+  'v40.0': ['Vurgu rengi seçici: özel renk artık bir onaltılık alana (3 veya 6 hane ile istediğiniz rengi yazın) ve Kopyala düğmesine sahip; masaüstü ve mobilde birebir aynı düzen.'],
+  'v39.9': ['Oda sohbeti: oda notları artık geçmişin tutulduğu bir Sohbet panelinde görünüyor (her oda için 60 mesaj saklanıyor ve geri döndüğünüzde geri yükleniyor). Herkese açık notlar günlüğe yazılıyor; özel notlar hâlâ doğrudan panoya kopyalanıyor. Bir mesaja dokunarak kopyalayabilirsiniz.'],
+  'v39.8': [
+    'Son odalar: katıldığınız son altı oda, renkleriyle birlikte ana ekranda tek dokunuşlu düğmeler olarak görünüyor; ayrıca temizleme düğmesi var.',
+    'Profilimi gönder: ayarlarınızı ve özel kısayollarınızı odaya tek seferlik bir anlık görüntü olarak gönderir; diğer cihazlar bunu anında uygular.',
+    'Duvar kağıdı galerisi: otomatik açık/koyu sürümleri olan altı yerleşik degrade, Rastgele düğmesi ve isteğe bağlı günlük karışım.',
+    'Arama: kopyalanan kısayollar, arama geçmişiyle birlikte arama menüsünde &laquo;Yeni kopyalananlar&raquo; olarak hatırlanıyor.'
+  ],
+  'v39.7': ['Mobil animasyonlar artık masaüstüyle aynı temel CSS’i kullanıyor: dokunmatik cihaz kuralı geçişleri artık genel olarak kapatmıyor. Tur projektörü ve sekmeler adımlar arasında akıcı geçiyor, tema ve arka plan değişimleri soluyor (telefonlarda da).'],
+  'v39.6': ['Mobilde denge sağlandı: tema ve arka plan değişimleri masaüstü gibi akıcı, site turu dokunmatik cihazlarda da adımlar arasında animasyon yapıyor.'],
+  'v39.5': ['AirDrop ve Quick Share: oda kodunun yanındaki &laquo;Paylaş&raquo; düğmesi, tek dokunuşluk katılma bağlantısıyla birlikte telefonun paylaşım sayfasını açar (Apple cihazlarda AirDrop); diğer cihaz sadece dokunup odaya katılır.'],
+  'v39.4': ['Sürüm hapının parlaklığı ve ışıltısı, sistemde &laquo;hareketi azalt&raquo; açıkken veya ayarlarda animasyonlar kapalıyken de masaüstünde animasyon yapar: süs değil, bir güncelleme sinyali olarak değerlendirilir.'],
+  'v39.3': ['Sürüm hapının parlaklığı ve ayarlardaki rozet artık masaüstünde güvenilir görünüyor: çalışan sürüm, güncelleme bildirimi atlanmış olsa bile açılışta her zaman birkaç günlük yeni vurgu penceresi alır.'],
+  'v39.2': ['Sürüm hapındaki yeni sürüm parlaklığı artık bir kez baktıktan sonra sonsuza dek kaybolmuyor: vurgu birkaç gün sürüyor ve her ziyarette geri dönüyor.'],
+  'v39.1': ['Renk örnekleri artık görünür: örnekler (oda rengi, tema ve vurgu örnekleri) boş ve görünmez öğeler yerine gerçek daireler olarak çiziliyor.'],
+  'v39': [
+    'Ring artık zil sesine kısa bir mesaj eklemenizi sağlıyor: çalan cihaz bunu duyuyor ve panoya kopyalıyor.',
+    'Pil uyarıları: bir cihaz tekrar %25’in üzerine çıktığında &laquo;kurtarıldı&raquo; bildirimi alıyorsunuz ve pil alarmını açıp kapatabiliyorsunuz.',
+    'Notlar, not alanının yanındaki &laquo;Kime:&raquo; seçicisiyle tek bir cihaza gönderilebiliyor.',
+    'Her oda, odaları bir bakışta ayırt etmek için bir renk etiketi alabiliyor.',
+    'Çevrimdışı eşitleme kodları artık bir önizleme gösteriyor (cihaz, saat, ayar ve kısayol sayısı) ve içe aktarmadan önce onay istiyor.'
+  ],
+  'v38.1': ['Mobilde Bilgi sekmesine dokunmak bölümleri artık otomatik açmıyor: bir bölümü açmak için başlığına dokunun.'],
+  'v38': ['Mobilde Bilgi sekmesini açmak eşitleme talimatlarını artık otomatik genişletmiyor: &laquo;Canlı odalar ve çevrimdışı eşitleme&raquo; bölümüne dokunun.'],
+  'v37': ['Kılavuz artık <strong>Canlı odalar</strong> ve <strong>Çevrimdışı eşitleme kodları</strong> için eksiksiz talimatlar içeriyor ve mobilde de kullanılabiliyor.'],
+  'v36': ['Giriş alanındaki düğmenin adı artık <strong>Tara</strong> (bir QR okumak için kamerayı veya dosya seçiciyi açar); böylece oda kodunu gösteren <strong>QR</strong> düğmesiyle karıştırılmıyor.'],
+  'v35': ['Düzeltme: oda ve çevrimdışı kod QR kodları artık boş bir kutu yerine doğru gösteriliyor.'],
+  'v34': [
+    '<strong>Bir cihazı ara</strong> &mdash; diğer her cihazda telefonu bulmanızı sağlayan, onu çaldıran ve titreşim ettiren bir Ring düğmesi var.',
+    '<strong>Not gönder</strong> &mdash; metni bağlı her cihazla paylaşın; anında görünür ve o cihazın panosuna kopyalanır.',
+    '<strong>Pil izleme</strong> &mdash; bağlı bir cihazın pili %20’nin altına düştüğünde uyarı alırsınız.',
+    '<strong>Cihazları yeniden adlandır</strong> &mdash; bir cihazın adına dokunarak kendi adınızı verebilirsiniz.',
+    '<strong>Okutarak katıl</strong> &mdash; ev sahibi oda kodunun QR kodunu gösterebilir; kamerayla okutun (ya da bir çevrimdışı eşitleme kodu okutun).',
+    '<strong>Korunan odalar</strong> &mdash; &laquo;Bu odayı koru&raquo; seçeneğini açıp bir parola belirleyin; odadaki tüm veriler şifrelenir, böylece yalnızca parolayı bilen üyeler okuyabilir.',
+    '<strong>Son görülme</strong> &mdash; her cihaz artık ne zamandır çevrimiçi olduğunu gösteriyor.'
+  ],
+  'v33': ['Bağlı cihazlar artık <strong>pil düzeylerini</strong> de (şarj sırasında dahil) paylaşıyor ve odada gerçek zamanlı güncelleniyor.'],
+  'v32': ['Canlı odalar artık her cihazın gerçek adını (örneğin &laquo;Mi 9T Pro&raquo;) gösteriyor; cihazın kendi uydurduğu rastgele bir ad değil.'],
+  'v31': ['Canlı odalar artık bağlı her cihazı adıyla listeliyor; bu cihazda yeşil bir nokta ve toplam sayı görünüyor.'],
+  'v30': [
+    '<strong>Canlı odalar</strong> &mdash; önce ayarları ve özel kısayolları gerçek zamanlı eşitlemek için:<ol><li>Ayarlarınızın bulunduğu cihazda <strong>Ayarlar &rarr; Canlı odalar</strong> bölümünü açın ve <strong>Oda başlat</strong> düğmesine dokunun. AK-XXX-YYY gibi bir oda kodu görünür.</li><li>Bu kodu diğer cihazlarınıza gönderin (kopyalayın veya istediğiniz gibi paylaşın).</li><li>Alan her cihazda <strong>Ayarlar &rarr; Canlı odalar</strong> bölümünü açın, aynı kodu yazın ve <strong>Odaya katıl</strong> düğmesine dokunun.</li></ol>',
+    '<strong>Çevrimdışı eşitleme kodları</strong> &mdash; ardından, internet yokken tek seferlik aktarım için:<ol><li><strong>Ayarlar &rarr; Çevrimdışı eşitleme kodu</strong> bölümünü açın ve <strong>Kod oluştur</strong> düğmesine dokunun. Kodu kopyalayın veya görünen QR kodunu okutun.</li><li>Diğer cihazda <strong>Ayarlar &rarr; Çevrimdışı eşitleme kodu</strong> bölümünü açın, kodu yapıştırın ve <strong>Kodu uygula</strong> düğmesine dokunun.</li></ol>'
+  ],
+  'v29': ['Düzeltme: <strong>mobilde</strong> sürüm rozetine dokunmak artık dokunmatik cihaz animasyon sıfırlamasıyla engellenmiyor ve her seferinde rastgele zıplama, dönme ve sıkışma animasyonunu başlatıyor.'],
+  'v28': ['Mobilde Özelleştir’in yanındaki ayarlar sekmesi artık yalnızca <strong>Bilgi</strong> (kılavuz yalnızca masaüstünde var) ve dokunulduğunda Bilgi bölümünü otomatik açıyor.'],
+  'v27': ['Düzeltme: <strong>yeni bir sürümden</strong> hemen sonra sayfayı açmak, birkaç saniye sonra sürpriz bir yeniden yüklemeyle sayfayı sıfırlamıyor &mdash; güncelleme artık arka planda uygulanıyor. Yenile düğmesi ve &laquo;Güncellemeden önce sor&raquo; seçeneği yine isteğe bağlı olarak yeniden yüklüyor.'],
+  'v26.9': ['Eğlenceli: <strong>sürüm rozetine</strong> dokunmak her seferinde rastgele zıplama, dönme ve sıkışma animasyonu başlatıyor; yeni bir sürüm vurgulandığında bir <strong>pırıltı</strong> ile parlıyor ve Bilgi bölümü daha hızlı erişmek için ayarlardaki <strong>Bilgi</strong> sekmesine taşındı.'],
+  'v26.8': ['İyileştirme: Bilgi bölümündeki <strong>sürüm rozeti</strong> artık kendiliğinden güncelleniyor ve Yenilikler sayfasını açıyor.'],
+  'v26.7': ['İyileştirme: günün ipucundaki <strong>uygulama kısayolları</strong> artık önce hangi uygulamaya ait olduklarını gösteriyor, örneğin <em>Figma &mdash; Move Tool &mdash; V</em>.'],
+  'v26.6': ['İyileştirme: <strong>günün ipucu</strong> artık platform sekmesi değiştirildiğinde güncelleniyor: Windows, macOS, Linux, ChromeOS veya Uygulamalar seçildiğinde o bölümün kısayolu gösteriliyor.'],
+  'v26.5': ['Düzeltme: <strong>günün ipucu</strong> artık tek bir kısayolda takılı kalmıyor: sayfa her yüklendiğinde baktığınız platform sekmesinden yeni bir rastgele kısayol gösteriyor.'],
+  'v26.4': ['Düzeltme: <strong>günün ipucu</strong> artık yalnızca baktığınız platform sekmesinin kısayollarını gösteriyor (önceden tüm platformların kısayolları karışıyordu). Kılavuzdaki sürüm rozeti de kendiliğinden güncelleniyor.'],
+  'v26.3': ['<strong>Tur</strong> düğmesi artık <strong>açık kitap</strong> simgesi gösteriyor.'],
+  'v26.2': ['<strong>Tur</strong> düğmesi artık pusula simgesi gösteriyor ve tura <strong>yenileme düğmesinin</strong> ne işe yaradığını anlatan bir adım eklendi.'],
+  'v26.1': ['Düzeltme: <strong>koyu &harr; açık</strong> arasında geçiş yapmak (üstteki düğmeden veya ayarlardan) artık bir <strong>arka plan temasının</strong> renklerini soymuyor: vurgu, çubuk düğmeleri ve kısayol tuşları tema renklerini korurken arka plan yerinde kalıyor.'],
+  'v26': ['Yeni <strong>site turu</strong> &mdash; arama çubuğu, filtreler, sekmeler, kısayol listesi, test, ayarlar, yazdırma ve tema düğmesi için üstteki <strong>?</strong> düğmesine dokunun. Düğmeler, oklar veya noktalarla ilerleyin.'],
+  'v25': ['Bilgi bölümünden <strong>GitHub’da gör</strong> bağlantısı kaldırıldı.'],
+  'v24.8': ['Düzeltme: mobildeki <strong>«Güncellendi»</strong> bildirimi artık ekranda kalıyor (önceden küçük cihazlarda sağ kenardan taşıyordu).'],
+  'v24.7.4': ['Köşe yuvarlaklığı artık tüm temalarda <strong>16&thinsp;px</strong> ile sınırlı: haplar, sekmeler, arama çubukları ve bildirimler artık tamamen yuvarlak değil (önceden 100&thinsp;px’e kadar). Köşeler yumuşak kalıyor, sadece daha sakin.'],
+  'v24.7.3': ['Düzeltme: <strong>Android</strong>’da <strong>Wi-Fi ayarlarını aç</strong> hiçbir şey yapmıyordu: yeni Chrome, sitelerin Android sistem ayarlarını açmasına izin vermiyor. Düğme artık kısa bir mesajla cihazınızın Ayarlar uygulamasından Wi-Fi ayarlarını açmanızı istiyor (iOS ve macOS’ta hâlâ doğrudan açıyor).'],
+  'v24.7.2': ['Düzeltme: kurulu bir Android uygulamasında (PWA) <strong>Wi-Fi ayarlarını aç</strong> düğmesine dokunmak hiçbir şey yapmıyordu: Android uygulamaların sistem ayarlarını doğrudan açmasına izin vermiyor. Şimdi düğme bunu açıklıyor ve düğmenin çalıştığı Chrome sekmesinde siteyi açmanızı istiyor.'],
+  'v24.7.1': ['Düzeltme: <strong>Android</strong>’da <strong>Wi-Fi ayarlarını aç</strong>, Chrome’un <code>intent:</code> bağlantılarında engellediği JavaScript ile tetiklenen bağlantı tıklamasını kullanıyordu: artık kullanıcı hareketiyle başlayan bir gezinme kullanıyor.'],
+  'v24.7': [
+    '<strong>Bağlantı durumu</strong> artık <strong>Ayarlar &rarr; Genel</strong> bölümünün en üstünde (Bilgi bölümünden taşındı).',
+    '<strong>Wi-Fi ayarlarını aç</strong> düğmesi artık <strong>iOS</strong>’ta (Ayarlar uygulaması) ve <strong>macOS</strong>’ta (Sistem Ayarları) gerçek Wi-Fi ayarlarını açıyor. Tarayıcıların sistem ayarlarına giremediği Android, Windows ve Linux’ta kısa talimatlar gösteriyor.'
+  ],
+  'v24.6': [
+    '<strong>Çevrimdışı</strong> hapı artık <strong>10 saniye</strong> kalıyor ve sonra kayboluyor (bağlantı hâlâ kopukken sizi rahatsız etmiyor).',
+    'Ayarlar &rarr; Bilgi artık her zaman <strong>bağlantı durumunuzu</strong> (Çevrimiçi/Çevrimdışı) ve <strong>Wi-Fi ayarlarınızı</strong> açan bir düğmeyi gösteriyor: iOS’ta doğrudan Ayarlar uygulamasını açıyor, diğer cihazlarda kısa talimatlar gösteriyor.'
+  ],
+  'v24.5.2': ['Düzeltme: Windows’ın tarayıcının <em>offline</em> olayını tetiklemeden bağlantıyı kaybettiği (ya da isteklerin başarısız olmak yerine takıldığı) masaüstlerinde <strong>Çevrimdışı</strong> hapı artık bağlantı denemesi zaman aşımına uğradığında da görünüyor: yalnızca istek tamamen başarısız olduğunda değil.'],
+  'v24.5.1': ['Düzeltme: <strong>Çevrimdışı</strong> hapı artık tarayıcı olayı oluşmadan bağlantı kesildiğinde de (örneğin geliştirici araçlarındaki çevrimdışı modu, bazı mobil tarayıcılar) görünüyor: uygulama yalnızca tarayıcı sinyallerine güvenmek yerine birkaç saniyede bir bağlantıyı kendisi denetliyor. Çevrimiçi olduğunuz sürece gizli kalıyor.'],
+  'v24.5': [
+    'Arama yaparken aramanızla eşleşen kelimeler artık sonuçlarda <strong>vurgulanıyor</strong>: her satırın neden eşleştiğini anlamak daha kolay.',
+    'Arama kutusunda yazdığınız anda görünen bir <strong>temizleme düğmesi (&times;)</strong> var.',
+    'Bağlantı kesildiğinde küçük bir <strong>Çevrimdışı</strong> hapı görünüyor: Anthkeys’in önbellekten çalışmaya devam ettiğini doğrulamak için dokunun.'
+  ],
+  'v24.4.1': ['Mobilde düzeltme: <strong>Eylem &mdash; Kısayol</strong> başlığı artık ekrandan kaymıyor: dar ekranlarda kısayol tablosu kendi yatay kaydırma alanına dönüşüyor ve sabit başlığı bozuyordu. Artık masaüstünde olduğu gibi üstte sabit.'],
+  'v24.4': ['Ana ekrandaki <strong>test serisi araç takımı</strong> kaldırıldı: tarayıcıların henüz uygulamadığı bir web standardına dayanıyordu, bu yüzden hiçbir yerde görünmüyordu. Test seriniz ve istatistikleriniz uygulamada kalıyor.'],
+  'v24.3': [
+    '<strong>Kısayol testi artık istatistiklerinizi tutuyor</strong>: günlük seri (🔥 üst üste testi tamamladığınız gün sayısı), en iyi skor, doğruluk ve oynanan tur sayısı. Yalnızca yerel olarak saklanır, hiçbir zaman yüklenmez.',
+    'Android için yeni <strong>ana ekran test serisi araç takımı</strong> (web uygulaması araç takımları: deneysel, Chrome ve Firefox’ta kullanıma açılıyor; iOS’ta yok). Serinizi ve istatistiklerinizi gösterir; teste açmak için dokunun.'
+  ],
+  'v24.2.1': ['Mobilde düzeltme: arama çubuğuna dokunmak Bilgi sayfasını açabiliyordu: ayarlar düğmesinin yanındaki gizli &laquo;Yenilikler&raquo; bildirimi hâlâ tıklanabilir durumdaydı ve arama kutusunun üzerine biniyordu. Artık yalnızca görünürken tepki veriyor.'],
+  'v24.2': [
+    'Yeni <strong>değiştirici filtresi</strong>: Filtreler menüsünde bir tuş (Ctrl, Shift, Alt, Win, Cmd ve diğerleri) seçerek yalnızca onu kullanan kısayolları gösterin. Seçenekler platforma göre değişir.',
+    'Kaydırırken kısayol listesinin üzerinde yüzen bir <strong>başa dön</strong> düğmesi var: listenin en başına dönmek için dokunun.'
+  ],
+  'v24.1': ['<strong>Eylem &mdash; Kısayol</strong> çubuğu kaydırırken listenin en üstünde sabit kalıyor: mobilde ve Safari’de daha önce ekrandan kayıyordu.'],
+  'v23.9': ['Mobilde kılavuz ve ipuçları açılır penceresi kaldırıldı: yalnızca masaüstü kısayollarını listeliyordu. Kılavuz masaüstündeki ayarlarda kalıyor; <kbd>?</kbd> doğrudan oraya götürür.'],
+  'v23.8': ['Mobilde kılavuz artık ayarlarda değil: sayfayı hafif tutmak için gizli. Açılır pencere olarak açmak için <kbd>?</kbd> tuşuna basın.'],
+  'v23.7': ['Kılavuz ve ipuçları masaüstünde <strong>ayarlara</strong> taşındı (Genel bölümü): doğrudan gitmek için <kbd>?</kbd> tuşuna basın.'],
+  'v23.6': [
+    '20 dilin tamamı artık eksiksiz çevrildi: test, bulut eşitleme ve kılavuz gibi yeni özelliklerde artık İngilizceye geri dönülmüyor.',
+    'Mobilde kısayolu dokunarak değil, basılı tutarak kopyalıyorsunuz: kaydırırken kazara kopyalamak sona erdi.',
+    'Filtre hapları mobilde de masaüstündeki gibi vurgu renginizi kullanıyor; Sık kullanılanlar seçildiğinde yalnızca o öne çıkıyor.',
+    'Mobilde üst çubuktaki beş düğmenin çevresindeki çerçeve kaldırıldı: artık sayfayla bütünleşiyor.',
+    'Test düğmesinde yeni bir şimşek simgesi var ve yanıtlar ham tuş adları yerine okunabilir adlar gösteriyor.',
+    'Düzeltme: güncellemeden sonra uygulamanın JavaScript’i yüklenmeyebiliyor ve site tepki vermiyordu.'
+  ],
+  'v23.5': [
+    'Filtre, sık kullanılanlar, karşılaştırma ve daraltma denetimleri tek bir kompakt <strong>Filtreler</strong> menüsünde toplandı: mobilde kısayol listesine daha çok yer kalıyor.',
+    'Yenilikler sayfası, sürüm rozeti ve güncelleme ayarları, ayarlardaki yeni <strong>Bilgi</strong> bölümüne taşındı.',
+    'Güncelleme bildirimleri artık <strong>Ayarlar</strong> düğmesinden gösteriliyor: yenilikleri görmeden dişli simgesinde rozet kalıyor.'
+  ],
+  'v23.4': ['Üst çubuktaki yardım düğmesi <kbd>?</kbd> kaldırıldı: kılavuzu açmak için yine <kbd>?</kbd> tuşuna basabilirsiniz.'],
+  'v23.3': [
+    'Sürüm rozeti otomatik güncellemeden sonra yanıyor, böylece bir sonraki açılışta yeni sürümü fark ediyorsunuz.',
+    'Varsayılan arka planlar arasında geçiş yapmak koyu modu koruyor: yeni arka plan da koyulaştırılıyor.',
+    'Mobilde platform çubuğu (Windows, macOS, Linux, ChromeOS) artık masaüstüyle aynı görünüyor.'
+  ],
+  'v23.2': [
+    'Gelişmiş/Basit düğmesi kaldırıldı: tüm kısayollar birlikte gösteriliyor.',
+    'Mobilde üst çubuk düğmeleri artık düzenli bir 2&times;3 ızgarada.',
+    'Varsayılan arka planlar uygulanmaya devam ediyor ve koyu moda geçince doğru şekilde koyulaştırılıyor.',
+    'Katmanlar (ayarlar, kılavuz, test) artık mobildeki sabit sekmelerin üzerini kapatıyor.'
+  ],
+  'v23.1': ['Arka planlar koyu mod için iyileştirildi: koyuya geçince hem kendi görselleriniz hem de varsayılan arka planlar (okyanus, orman, gün batımı ve diğerleri) koyulaştırılıyor ve doygunluğu düşürülüyor; böylece paneller okunur kalıyor.'],
+  'v23': [
+    'Yeni &laquo;Karşılaştır&raquo; modu: yalnızca farklı olan kısayolları görmek için ikinci bir platform seçin.',
+    'Günün saatine göre değişen otomatik tema (saat 19.00 ile 07.00 arası koyu).',
+    'Kısa bir kılavuz ve ipuçları için <kbd>?</kbd> tuşuna basın veya <kbd>?</kbd> düğmesine dokunun.',
+    'Bu sayfadaki her kayda sürüm tarihleri eklendi.'
+  ],
+  'v22': [
+    'Düzeltme: tuş açıklaması tablosu dar telefonlarda kesiliyordu: artık yatay kaydırılıyor, böylece tüm sütunlara ulaşılabiliyor.',
+    'Arama çubuğu ve kategori hapları &laquo;Yenilikler&raquo; sayfasında kullanılmadığı için gizleniyor.'
+  ],
+  'v21': [
+    'Tuş açıklaması artık bir kapatma düğmesine sahip, böylece panelin içinden katlayabilirsiniz: düğmenin ekran dışına kayabildiği mobilde kullanışlı.',
+    'Dokunmatik cihazlarda tuş açıklaması düğmesine dokunma tepkisi hızlandı.'
+  ],
+  'v20.1': [
+    'Sürüm numaraları artık yama sürümlerini de destekliyor: alt bilgideki rozet örneğin v20.1 gösteriyor ve güncelleme algılama bunları doğru işliyor.',
+    'Bu sayfaya eksik olan v20 kaydı eklendi.'
+  ],
+  'v20': ['Anthkeys içinde yeni bir &laquo;Yenilikler&raquo; sayfası: güncelleme bildirimindeki bağlantı ve alttaki sürüm rozeti onu GitHub yerine burada açıyor.'],
+  'v19': ['Güncelleme bildirisi artık sürüm takibinden önceki bir sürümden güncelleme yaptığınızda da görünüyor (önceki sürüm çevrimdışı önbellekten algılanıyor).'],
+  'v18': [
+    'Otomatik güncelleme kipinde yeni bir sürüm geldiğinde &laquo;vX sürümüne güncellendi &mdash; Yenilikler&raquo; bildirimi görünüyor.',
+    'Güncelleme bildirisi artık yalnızca hizmet çalışanı değişiklikleriyle değil, içerik güncellemeleriyle de tetikleniyor.',
+    'Alttaki sürüm rozeti tıklanabilir: yenilikleri görmek için dokunun.',
+    'Daha küçük çevrimdışı önbellek (sürümsüz dosyalar artık atılmıyor).'
+  ],
+  'v16': ['Alt bilgide mevcut derleme numarasını gösteren bir sürüm rozeti eklendi.'],
+  'v15': ['Hizmet çalışanına dayalı yenileme düğmesi ve tercih (otomatik güncelle veya sor) eklendi.'],
+  'v14': ['Bir kategoriyi katlamak veya açmak artık etkin aramayı dikkate alıyor.'],
+  'v13': ['Ağ öncelikli sayfa önbelleği sayesinde güncellemeler anında görünüyor; masaüstünde kaydırma çok daha akıcı.'],
+  'v12': ['Arama ve filtreler artık yalnızca açık sekmeye uygulanıyor.'],
+  'v11': ['PWA yükleme desteği, erişilebilirlik etiketleri, azaltılmış hareket desteği, Gmail ve YouTube kısayolları, SEO iyileştirmeleri.'],
+  'v10': [
+    'Düzeltme: kategori filtresi bir kategori başlık satırıyla eşleştiğinde tüm kısayolları gizleyebiliyordu: artık yalnızca filtrelediğiniz satırları gizliyor.',
+    'Arka plan mobilde artık ekranın tamamını kaplıyor.'
+  ],
+  'v9': ['Windows artık varsayılan platform sekmesi ve sekmelerin sırası daha anlaşılır.'],
+  'v8': [
+    'Test zorluk düzeyleri ve günün ipucu.',
+    'Çevrimdışı önbelleğe ek olarak mobilde çok daha akıcı kaydırma.',
+    'Arama ve filtreler tüm platformlarda aynı anda çalışıyor; işletim sistemi adları kalın yazılı.'
+  ],
+  'v7': ['Tasarım stilleri kaldırıldı: artık tek görünüm Material 3.'],
+  'v6': [
+    'Tasarım stilleri Material 3’e indirgendi ve varsayılan temaya dönmek için &laquo;Arka planı kaldır&raquo; düğmesi eklendi.',
+    'Güncellemelerin daha hızlı gelmesi için önbellek denetimi başlıkları eklendi.'
+  ],
+  'v5': ['Sayfa başlıkları 14 dilin tamamında yalnızca &laquo;Kısayollar&raquo; olacak şekilde sadeleştirildi.'],
+  'v4': [
+    'Kısayol testi kipi: kısayolu veya eylemi tahmin ederek çalışın, ayrıca GitHub Gist ile bulut eşitlemesi.',
+    'Vurgu örnekleri, tema değişimi ve mobil arka planlar için geniş bir düzeltme dizisi.'
+  ],
+  'v3': ['Kaydedip yeniden kullanabileceğiniz vurgu rengi ön ayarları ve güncellemelerin güvenilir görünmesi için önbellek geçersiz kılma eklendi.'],
+  'v2': ['Vurgu renkli açık ve koyu temalar ile kısayol başvurusunun çevirileri.'],
+  'v1': ['Anthkeys’in ilk sürümü: Windows, macOS, Linux ve ChromeOS için günlük klavye kısayollarının tamamı tek bir sayfada.']
+};
+
