@@ -2458,3 +2458,226 @@ I18N_WN.tr = {
   'v1': ['Anthkeys’in ilk sürümü: Windows, macOS, Linux ve ChromeOS için günlük klavye kısayollarının tamamı tek bir sayfada.']
 };
 
+I18N_WN.vi = {
+  'v52.1': [
+    'Mới: trang &laquo;Có gì mới&raquo; hiện đã được dịch đầy đủ cho cả 20 ngôn ngữ — mọi ghi chú phát hành đều hiển thị bằng ngôn ngữ của bạn.'
+  ],
+  'v52': [
+    'Sửa lỗi: bản v51 có thể khiến ứng dụng không tải được; bản dịch tiếng Đan Mạch chứa dấu nháy đơn chưa thoát khiến toàn bộ tệp ngôn ngữ không hợp lệ. Tệp giờ được phân tích đúng cách và cả 20 ngôn ngữ đều tải lại được.'
+  ],
+  'v51': [
+    'Hoàn tất bản dịch cho cả 20 ngôn ngữ — cài đặt, phòng trực tiếp, đồng bộ ngoại tuyến và hướng dẫn đồng bộ giờ đã được dịch đầy đủ (các mục mới trước đây chỉ có tiếng Anh).',
+    'Mới: nếu Anthkeys có vẻ chậm, một thanh thông báo cho phép bật Chế độ hiệu năng chỉ bằng một cú chạm. Bạn có thể đóng thanh đó và nó sẽ không quay lại.'
+  ],
+  'v50.7': ['Chế độ hiệu năng đã được chuyển sang thẻ Chung trong cài đặt.'],
+  'v50.6': ['Biểu tượng trên thanh trên cùng lại là emoji màu như ở bản v50: sách, máy in, tia chớp, mặt trăng/mặt trời, làm mới và bánh răng.'],
+  'v50.5': ['Biểu tượng trên thanh trên cùng lại dùng màu nhấn (mặc định), nên không còn trông trắng hoặc xám.'],
+  'v50.4': ['Đã bỏ tính năng tô màu biểu tượng theo màu nhấn: favicon, biểu tượng màn hình chính và biểu tượng PWA đã cài đặt lại dùng biểu tượng mặc định (tô màu biểu tượng theo màu nhấn chỉ có ý nghĩa với ứng dụng gốc).'],
+  'v50.3': [
+    'Biểu tượng trên thanh trên cùng được dựng lại để hiển thị ổn định trên mọi thiết bị (tham quan, in, câu đố, giao diện, làm mới và cài đặt giờ dùng biểu tượng thật).',
+    'Biểu tượng chuyển đổi giao diện lại là biểu tượng thật và khớp với trạng thái sáng/tối.'
+  ],
+  'v50.2': ['Đã sửa lỗi của bản v50.1 khiến biểu tượng thanh trên cùng và cài đặt không hoạt động lúc khởi động.'],
+  'v50.1': [
+    'Chế độ hiệu năng mới trong mục Tùy chỉnh: tắt hiệu ứng làm mờ và hiệu ứng động có thể khiến ứng dụng chậm trên Windows.',
+    'Thanh trên cùng giờ dùng biểu tượng thật và cài đặt Biểu tượng mới cho phép tô chúng theo màu nhấn của bạn.',
+    'Thẻ Ứng dụng hoạt động giống thẻ Linux: bấm vào bất kỳ đâu để chọn một ứng dụng (VS Code, Figma, Gmail và nhiều ứng dụng khác), và thẻ sẽ hiện lựa chọn của bạn, ví dụ &laquo;Ứng dụng - Gmail&raquo;.',
+    'Đã bỏ ô nhập mã hex bên dưới nút Tùy chỉnh: chỉ chọn màu bằng các thanh trượt.',
+    'Nhân đôi các lựa chọn màu nhấn chuyển màu và thêm tám tổ hợp hai màu mới.'
+  ],
+  'v50': [
+    'Bấm vào bất kỳ đâu trên thẻ Linux để mở danh sách bản phân phối, và thẻ giờ hiện lựa chọn của bạn, ví dụ &laquo;Linux - Ubuntu (GNOME)&raquo;.',
+    'Bộ chọn màu tùy chỉnh được dựng lại: mẫu tròn mở các thanh trượt HUE, Độ bão hòa và Độ sáng (có giá trị hiển thị ngay phía trên mỗi thanh), bắt đầu từ màu hiện tại thay vì 0/0/0.',
+    'Mục Màu nhấn chuyển màu mới: tám chuyển màu hai màu sẵn sàng áp dụng làm màu nhấn.',
+    'Các bộ màu nhấn cài sẵn được tinh chỉnh theo bảng màu gọn gàng và rõ nét hơn.'
+  ],
+  'v40.9': ['Danh sách bản phân phối giờ nằm ngay trên thẻ Linux: bấm mũi tên nhỏ trên thẻ để chọn bản phân phối của bạn.'],
+  'v40.8': ['Thẻ Linux giờ có danh sách bản phân phối (Ubuntu, Debian, Fedora, Arch, Mint, KDE và nhiều bản khác), giúp điều chỉnh phím tắt hệ thống theo cấu hình mặc định của từng bản phân phối và ghi nhớ lựa chọn của bạn.'],
+  'v40.7': ['Cài đặt màu nhấn giờ hiện thanh xem trước trực tiếp với mã hex chính xác của màu đang áp dụng, để bạn thấy mọi lựa chọn thay đổi ngay lập tức.'],
+  'v40.6': [
+    'Đã bỏ công cụ &laquo;Lấy màu từ màn hình&raquo;.',
+    'Các bộ màu nhấn cài sẵn được chỉnh theo cường độ đầy đủ của Material 3 Expressive: màu sâu và rực rỡ, neon thật sự (các sắc xám vẫn dịu).'
+  ],
+  'v40.5': ['Bảng màu nhấn được cân bằng lại theo phong cách Material 3 Expressive: màu sắc tông tươi sáng hơn.'],
+  'v40.4': ['&laquo;Khớp với thiết bị của tôi&raquo; giờ đọc màu hệ thống thật (bao gồm cả đầu ra oklch/color() của Chrome) và cả màu vùng chọn văn bản của hệ điều hành, nên màu nhấn động thật của bạn được áp dụng.'],
+  'v40.3': [
+    'Tất cả màu nhấn được cân bằng lại theo tông màu Material You (tông trung bình dịu nhẹ cùng tông vùng chứa mềm mại).',
+    '&laquo;Khớp với thiết bị của tôi&raquo; giờ còn đọc màu vùng chọn của hệ thống làm phương án thay thế, nên hoạt động trên nhiều trình duyệt và hồ sơ hơn.'
+  ],
+  'v40.2': ['Cài đặt màu nhấn: nút mới &laquo;Khớp với thiết bị của tôi&raquo; đọc màu nhấn của hệ thống (Chrome 150 trở lên, ứng dụng đã cài) rồi áp dụng, kèm thông báo xác nhận.'],
+  'v40.1': ['Đã bỏ thư viện nền (nền lưu trong thư viện sẽ bị xóa; nền bạn tải lên vẫn hoạt động).'],
+  'v40.0': ['Bộ chọn màu nhấn: màu tùy chỉnh giờ có ô nhập mã hex (gõ màu bất kỳ, 3 hoặc 6 ký tự) và nút Sao chép — cùng một bố cục trên máy tính lẫn điện thoại.'],
+  'v39.9': ['Trò chuyện trong phòng: ghi chú phòng giờ hiện trong bảng Trò chuyện kèm lịch sử (lưu 60 tin nhắn cho mỗi phòng và khôi phục khi quay lại). Ghi chú công khai được đăng vào nhật ký; ghi chú riêng vẫn được sao chép thẳng vào bảng nhớ tạm. Chạm vào một tin nhắn để sao chép.'],
+  'v39.8': [
+    'Phòng gần đây: sáu phòng bạn tham gia gần nhất hiện trên màn hình chính dưới dạng nút chạm một lần kèm màu của từng phòng, cùng nút để xóa.',
+    'Gửi hồ sơ của tôi: gửi cài đặt và phím tắt tùy chỉnh của bạn cho toàn phòng dưới dạng ảnh chụp một lần; các thiết bị khác áp dụng ngay lập tức.',
+    'Thư viện nền: sáu dải chuyển màu tích hợp có bản sáng/tối tự động, nút Ngẫu nhiên và lựa chọn phối trộn hằng ngày.',
+    'Tìm kiếm: các phím tắt đã sao chép được ghi nhớ là &laquo;Đã sao chép gần đây&raquo; trong menu tìm kiếm, cùng lịch sử tìm kiếm.'
+  ],
+  'v39.7': ['Hiệu ứng động trên di động giờ dùng cùng CSS nền với máy tính: quy tắc cho thiết bị cảm ứng không còn tắt toàn bộ hiệu ứng chuyển tiếp. Đèn chiếu của tham quan và các thẻ trượt mượt giữa từng bước, đổi giao diện và nền chuyển dần, kể cả trên điện thoại.'],
+  'v39.6': ['Điện thoại đã ngang bằng máy tính: đổi giao diện và nền diễn ra mượt mà như trên máy tính, và tham quan trang cũng chuyển động giữa các bước trên thiết bị cảm ứng.'],
+  'v39.5': ['AirDrop và Quick Share: nút &laquo;Chia sẻ&raquo; cạnh mã phòng mở bảng chia sẻ của điện thoại (AirDrop trên Apple) kèm liên kết vào phòng dùng một lần: thiết bị bên kia chỉ cần chạm là vào phòng.'],
+  'v39.4': ['Ánh sáng và tia lấp lánh trên viên thẻ phiên bản giờ chuyển động trên máy tính ngay cả khi hệ thống bật &laquo;giảm chuyển động&raquo; hoặc tắt hiệu ứng động trong cài đặt: vì nó được coi là tín hiệu cập nhật chứ không phải để trang trí.'],
+  'v39.3': ['Ánh sáng viên thẻ phiên bản và huy hiệu trong cài đặt giờ hiện ổn định trên máy tính: phiên bản đang chạy luôn nhận được khung làm nổi mới trong vài ngày khi khởi động, kể cả khi đã bỏ qua thông báo cập nhật.'],
+  'v39.2': ['Hiệu ứng phiên bản mới trên viên thẻ không còn biến mất vĩnh viễn sau một lần nhìn: hiệu ứng làm nổi kéo dài vài ngày và trở lại mỗi lần truy cập.'],
+  'v39.1': ['Cuối cùng các mẫu màu đã nhìn thấy được: các mẫu (màu phòng, mẫu giao diện và màu nhấn) giờ được vẽ thành hình tròn rõ ràng thay vì là các phần tử rỗng vô hình.'],
+  'v39': [
+    'Ring giờ cho phép đính kèm một lời nhắn ngắn vào chuông: thiết bị reo sẽ nghe thấy và sao chép vào bảng nhớ tạm.',
+    'Cảnh báo pin: bạn nhận được thông báo &laquo;đã hồi phục&raquo; khi thiết bị vượt trên 25% và có thể bật hoặc tắt cảnh báo pin.',
+    'Ghi chú có thể gửi tới một thiết bị duy nhất bằng bộ chọn &laquo;Đến:&raquo; cạnh ô ghi chú.',
+    'Mỗi phòng có thể có nhãn màu để phân biệt các phòng ngay lập tức.',
+    'Mã đồng bộ ngoại tuyến giờ hiện bản xem trước (thiết bị, thời gian, số cài đặt và phím tắt) và yêu cầu xác nhận trước khi nhập.'
+  ],
+  'v38.1': ['Trên di động, chạm vào thẻ Giới thiệu sẽ không còn tự động mở các mục: hãy chạm vào tiêu đề mục để mở.'],
+  'v38': ['Trên di động, mở thẻ Giới thiệu sẽ không còn tự động mở hướng dẫn đồng bộ: hãy chạm vào mục &laquo;Phòng trực tiếp và đồng bộ ngoại tuyến&raquo; để mở.'],
+  'v37': ['Hướng dẫn giờ có đầy đủ chỉ dẫn về <strong>phòng trực tiếp</strong> và <strong>mã đồng bộ ngoại tuyến</strong>, và cũng dùng được trên di động.'],
+  'v36': ['Nút trong khu vực đăng nhập giờ tên là <strong>Quét</strong> (mở máy ảnh hoặc hộp chọn tệp để đọc mã QR), tránh nhầm với nút <strong>QR</strong> hiển thị mã phòng.'],
+  'v35': ['Đã sửa: mã QR của phòng và mã ngoại tuyến giờ hiển thị đúng thay vì là khung trống.'],
+  'v34': [
+    '<strong>Gọi một thiết bị</strong> — mỗi thiết bị khác có nút Ring khiến nó reo và rung để bạn tìm điện thoại.',
+    '<strong>Gửi một ghi chú</strong> — chia sẻ văn bản với mọi thiết bị đang kết nối; nội dung xuất hiện ngay và được sao chép vào bảng nhớ tạm của thiết bị đó.',
+    '<strong>Theo dõi pin</strong> — bạn được cảnh báo khi thiết bị đang kết nối xuống dưới 20% pin.',
+    '<strong>Đổi tên thiết bị</strong> — chạm vào tên thiết bị để đặt tên riêng.',
+    '<strong>Tham gia bằng cách quét</strong> — máy chủ có thể hiện mã QR của mã phòng; quét bằng máy ảnh (hoặc quét một mã đồng bộ ngoại tuyến).',
+    '<strong>Phòng được bảo vệ</strong> — chọn &laquo;Bảo vệ phòng này&raquo; và đặt mật khẩu; mọi dữ liệu phòng đều được mã hóa nên chỉ thành viên có mật khẩu mới đọc được.',
+    '<strong>Hoạt động lần cuối</strong> — mỗi thiết bị giờ hiện đã ở trực tuyến bao lâu.'
+  ],
+  'v33': ['Các thiết bị đang kết nối cũng chia sẻ <strong>mức pin</strong> (kể cả khi đang sạc) và được cập nhật theo thời gian thực trong phòng.'],
+  'v32': ['Phòng trực tiếp giờ hiện tên thật của từng thiết bị (ví dụ &laquo;Mi 9T Pro&raquo;) thay vì tên ngẫu nhiên do chính thiết bị tự nghĩ ra.'],
+  'v31': ['Phòng trực tiếp giờ liệt kê từng thiết bị đang kết nối theo tên, có chấm xanh trên thiết bị này và tổng số.'],
+  'v30': [
+    '<strong>Phòng trực tiếp</strong> — trước tiên, để đồng bộ cài đặt và phím tắt tùy chỉnh theo thời gian thực:<ol><li>Trên thiết bị đang có cài đặt của bạn, mở <strong>Cài đặt &rarr; Phòng trực tiếp</strong> và chạm <strong>Bắt đầu phòng</strong>. Một mã phòng dạng AK-XXX-YYY sẽ xuất hiện.</li><li>Gửi mã đó tới các thiết bị khác của bạn (sao chép hoặc chia sẻ tùy ý).</li><li>Trên mỗi thiết bị nhận, mở <strong>Cài đặt &rarr; Phòng trực tiếp</strong>, nhập cùng mã đó và chạm <strong>Tham gia phòng</strong>.</li></ol>',
+    '<strong>Mã đồng bộ ngoại tuyến</strong> — sau đó, dùng để chuyển một lần khi không có internet:<ol><li>Mở <strong>Cài đặt &rarr; Mã đồng bộ ngoại tuyến</strong> và chạm <strong>Tạo mã</strong>. Sao chép mã hoặc quét mã QR xuất hiện.</li><li>Trên thiết bị còn lại, mở <strong>Cài đặt &rarr; Mã đồng bộ ngoại tuyến</strong>, dán mã và chạm <strong>Áp dụng mã</strong>.</li></ol>'
+  ],
+  'v29': ['Đã sửa: trên <strong>di động</strong>, chạm vào huy hiệu phiên bản giờ luôn chạy hiệu ứng ngẫu nhiên bật lên, xoay và nén thay vì bị chặn bởi việc đặt lại hiệu ứng trên thiết bị cảm ứng.'],
+  'v28': ['Trên di động: thẻ cài đặt cạnh mục Tùy chỉnh giờ chỉ tên là <strong>Giới thiệu</strong> (hướng dẫn chỉ có trên máy tính) và mở tự động mục Giới thiệu khi được chạm.'],
+  'v27': ['Đã sửa: mở trang ngay sau một <strong>phiên bản mới</strong> không còn tự tải lại bất ngờ vài giây sau — bản cập nhật giờ được áp dụng ở nền. Nút Làm mới và tùy chọn &laquo;Hỏi trước khi cập nhật&raquo; vẫn tải lại khi có yêu cầu.'],
+  'v26.9': ['Thú vị: chạm vào <strong>huy hiệu phiên bản</strong> giờ luôn chạy hiệu ứng ngẫu nhiên bật lên, xoay và nén, sáng lên với <strong>ánh lấp lánh</strong> khi có phiên bản mới được làm nổi, và mục Giới thiệu đã được chuyển sang thẻ <strong>Giới thiệu</strong> trong cài đặt để mở nhanh hơn.'],
+  'v26.8': ['Cải thiện: <strong>huy hiệu phiên bản</strong> trong mục Giới thiệu giờ tự cập nhật và mở trang Có gì mới.'],
+  'v26.7': ['Cải thiện: các <strong>phím tắt ứng dụng</strong> trong mẹo trong ngày giờ cho biết thuộc ứng dụng nào trước, ví dụ <em>Figma &mdash; Move Tool &mdash; V</em>.'],
+  'v26.6': ['Cải thiện: <strong>mẹo trong ngày</strong> giờ làm mới khi bạn đổi thẻ nền tảng: chọn Windows, macOS, Linux, ChromeOS hoặc Ứng dụng sẽ hiện phím tắt của mục đó.'],
+  'v26.5': ['Đã sửa: <strong>mẹo trong ngày</strong> không còn bị kẹt ở một phím tắt: mỗi lần tải trang nó hiện một phím tắt ngẫu nhiên mới từ thẻ nền tảng bạn đang xem.'],
+  'v26.4': ['Đã sửa: <strong>mẹo trong ngày</strong> giờ chỉ hiện phím tắt của thẻ nền tảng bạn đang xem (trước đây trộn lẫn phím tắt của mọi nền tảng). Huy hiệu phiên bản trong hướng dẫn cũng tự cập nhật.'],
+  'v26.3': ['Nút <strong>tham quan</strong> giờ hiện biểu tượng <strong>quyển sách mở</strong>.'],
+  'v26.2': ['Nút <strong>tham quan</strong> giờ hiện biểu tượng la bàn, và tham quan có thêm một bước giải thích <strong>nút làm mới</strong> dùng để làm gì.'],
+  'v26.1': ['Đã sửa: chuyển qua lại giữa <strong>tối và sáng</strong> (bằng công tắc trên cùng hoặc trong cài đặt) không còn làm mất màu của một <strong>giao diện nền</strong>: màu nhấn, nút trên thanh và phím tắt vẫn giữ màu giao diện trong khi phần nền đứng yên.'],
+  'v26': ['<strong>Tham quan trang mới</strong> — chạm nút <strong>?</strong> trên cùng để được dẫn qua thanh tìm kiếm, bộ lọc, các thẻ, danh sách phím tắt, câu đố, cài đặt, in và nút chuyển giao diện. Dùng các nút, mũi tên hoặc các chấm để di chuyển.'],
+  'v25': ['Đã bỏ liên kết <strong>Xem trên GitHub</strong> khỏi mục Giới thiệu.'],
+  'v24.8': ['Đã sửa: thông báo <strong>&laquo;Đã cập nhật&raquo;</strong> trên di động nay nằm gọn trong màn hình (trước đây tràn ra ngoài mép phải trên thiết bị nhỏ).'],
+  'v24.7.4': ['Bán kính bo góc nay được giới hạn ở <strong>16&thinsp;px</strong> trong mọi giao diện: viên nút, thẻ, thanh tìm kiếm và thông báo không còn tròn trọn vẹn (trước đây tới 100&thinsp;px). Các góc vẫn mềm, chỉ tiết chế hơn.'],
+  'v24.7.3': ['Đã sửa: <strong>Mở cài đặt Wi-Fi</strong> trên <strong>Android</strong> không làm gì: Chrome đời mới không cho phép website mở cài đặt hệ thống của Android. Nút giờ hiện thông báo ngắn nhắc bạn mở cài đặt Wi-Fi trong ứng dụng Cài đặt của thiết bị (trên iOS và macOS vẫn mở thẳng).'],
+  'v24.7.2': ['Đã sửa: trong ứng dụng Android đã cài (PWA), chạm <strong>Mở cài đặt Wi-Fi</strong> không làm gì: Android không cho ứng dụng mở thẳng cài đặt hệ thống. Giờ nút giải thích điều đó và nhắc bạn mở trang trong một thẻ Chrome, nơi nút hoạt động.'],
+  'v24.7.1': ['Đã sửa: <strong>Mở cài đặt Wi-Fi</strong> trên <strong>Android</strong> dùng thao tác nhấp liên kết do JavaScript kích hoạt, mà Chrome chặn với liên kết <code>intent:</code>: nay dùng thao tác điều hướng khởi tạo từ cử chỉ của người dùng.'],
+  'v24.7': [
+    '<strong>Trạng thái kết nối</strong> nay nằm ở đầu <strong>Cài đặt &rarr; Chung</strong> (chuyển từ Giới thiệu).',
+    'Nút <strong>Mở cài đặt Wi-Fi</strong> nay mở đúng cài đặt Wi-Fi trên <strong>iOS</strong> (ứng dụng Cài đặt) và <strong>macOS</strong> (Cài đặt hệ thống). Trên Android, Windows và Linux, nơi trình duyệt không mở được cài đặt hệ thống, nút hiện hướng dẫn ngắn.'
+  ],
+  'v24.6': [
+    'Viên nút <strong>Ngoại tuyến</strong> nay chỉ giữ <strong>10 giây</strong> rồi biến mất (không làm phiền bạn khi kết nối vẫn đang mất).',
+    'Cài đặt &rarr; Giới thiệu nay luôn hiện <strong>trạng thái kết nối</strong> của bạn (Trực tuyến/Ngoại tuyến), kèm nút mở <strong>cài đặt Wi-Fi</strong>: trên iOS mở thẳng ứng dụng Cài đặt; trên thiết bị khác hiện hướng dẫn ngắn.'
+  ],
+  'v24.5.2': ['Đã sửa: trên máy tính bàn nơi Windows mất kết nối mà không phát sự kiện <em>offline</em> của trình duyệt (hoặc nơi các yêu cầu bị treo thay vì thất bại), viên nút <strong>Ngoại tuyến</strong> nay cũng hiện khi bài kiểm tra kết nối hết thời gian chờ, không chỉ khi yêu cầu thất bại hoàn toàn.'],
+  'v24.5.1': ['Đã sửa: viên nút <strong>Ngoại tuyến</strong> nay cũng hiện khi kết nối rớt mà không có sự kiện nào từ trình duyệt (ví dụ chế độ ngoại tuyến trong DevTools, một số trình duyệt di động): ứng dụng chủ động kiểm tra kết nối vài giây một lần thay vì chỉ dựa vào tín hiệu trình duyệt. Nó ẩn đi khi bạn đang trực tuyến.'],
+  'v24.5': [
+    'Trong lúc tìm kiếm, những từ khớp với từ khóa giờ được <strong>làm nổi bật</strong> trong kết quả: dễ thấy vì sao từng dòng lại khớp.',
+    'Ô tìm kiếm có nút <strong>xóa (&times;)</strong> xuất hiện khi bạn đã gõ nội dung.',
+    'Một viên nút nhỏ <strong>Ngoại tuyến</strong> hiện khi mất kết nối: chạm vào để xác nhận Anthkeys vẫn chạy được từ bộ nhớ đệm.'
+  ],
+  'v24.4.1': ['Đã sửa trên di động: tiêu đề <strong>Thao tác &mdash; Phím tắt</strong> không còn trượt khỏi màn hình: trên màn hình hẹp, bảng phím tắt bị biến thành vùng cuộn ngang riêng khiến tiêu đề cố định vỡ ra. Nay nó được ghim ở trên cùng, y hệt trên máy tính.'],
+  'v24.4': ['Đã bỏ <strong>tiện ích chuỗi câu đố trên màn hình chính</strong>: nó dựa vào một tiêu chuẩn web mà trình duyệt chưa triển khai nên chưa từng hiện ở bất cứ đâu. Chuỗi và thống kê câu đố của bạn vẫn còn trong ứng dụng.'],
+  'v24.3': [
+    '<strong>Câu đố phím tắt giờ ghi lại thống kê của bạn</strong>: chuỗi ngày liên tiếp (🔥 ngày liên tiếp hoàn thành câu đố), điểm cao nhất, độ chính xác và số vòng đã chơi. Lưu cục bộ, không bao giờ tải lên.',
+    'Tiện ích <strong>chuỗi câu đố trên màn hình chính</strong> mới cho Android (tiện ích ứng dụng web: thử nghiệm, đang được triển khai trên Chrome và Firefox; không có trên iOS). Hiện chuỗi và thống kê của bạn; chạm để mở câu đố.'
+  ],
+  'v24.2.1': ['Đã sửa trên di động: chạm vào thanh tìm kiếm có thể mở trang Giới thiệu: thông báo ẩn &laquo;Có gì mới&raquo; cạnh nút cài đặt vẫn bấm được và nằm đè lên ô tìm kiếm. Nay nó chỉ phản hồi khi đang hiện.'],
+  'v24.2': [
+    'Bộ lọc phím bổ trợ mới: trong menu Bộ lọc, chọn một phím (Ctrl, Shift, Alt, Win, Cmd và nhiều phím khác) để chỉ hiện những phím tắt dùng phím đó. Các lựa chọn thay đổi theo nền tảng.',
+    'Nút <strong>lên đầu trang</strong> nổi lên trên danh sách phím tắt khi bạn cuộn: chạm để lập tức quay về đầu trang.'
+  ],
+  'v24.1': ['Thanh <strong>Thao tác &mdash; Phím tắt</strong> nay ghim ở đầu danh sách khi bạn cuộn: trước đây trên di động và Safari nó trượt khỏi màn hình.'],
+  'v23.9': ['Đã bỏ cửa sổ bật lên hướng dẫn và mẹo trên di động: nó chỉ liệt kê phím tắt cho máy tính. Hướng dẫn vẫn nằm trong cài đặt trên máy tính, nơi <kbd>?</kbd> đưa bạn tới thẳng.'],
+  'v23.8': ['Trên di động, hướng dẫn không còn nằm trong cài đặt: nó được giấu đi để trang không bị nặng. Nhấn <kbd>?</kbd> để mở dưới dạng cửa sổ bật lên.'],
+  'v23.7': ['Hướng dẫn và mẹo đã chuyển vào <strong>Cài đặt</strong> (mục Chung) trên máy tính: nhấn <kbd>?</kbd> để tới thẳng.'],
+  'v23.6': [
+    'Cả 20 ngôn ngữ giờ đã được dịch đầy đủ: không còn rơi về tiếng Anh ở các tính năng mới như câu đố, đồng bộ đám mây và hướng dẫn.',
+    'Trên di động, giữ phím tắt để sao chép thay vì chạm: không còn sao chép nhầm khi đang cuộn.',
+    'Các nút nhóm giờ dùng màu nhấn của bạn trên di động như trên máy tính; khi chọn Yêu thích, chỉ nút đó nổi bật.',
+    'Đã bỏ đường viền quanh năm nút trên thanh trên cùng ở di động: nay chúng hòa vào trang.',
+    'Nút câu đố có biểu tượng tia chớp mới và các câu trả lời hiện tên dễ đọc thay vì tên phím thô.',
+    'Đã sửa: JavaScript của ứng dụng có thể không tải sau khi cập nhật, khiến trang không phản hồi.'
+  ],
+  'v23.5': [
+    'Bộ lọc, yêu thích, so sánh và thu gọn gom vào một menu <strong>Bộ lọc</strong> gọn gàng: nhiều không gian hơn cho danh sách phím tắt trên di động.',
+    'Trang Có gì mới, huy hiệu phiên bản và cài đặt cập nhật được chuyển sang mục <strong>Giới thiệu</strong> mới trong cài đặt.',
+    'Thông báo cập nhật giờ hiện qua nút <strong>Cài đặt</strong>: biểu tượng bánh răng có huy hiệu cho tới khi bạn xem tin mới.'
+  ],
+  'v23.4': ['Đã bỏ nút trợ giúp <kbd>?</kbd> khỏi thanh trên cùng: nhấn <kbd>?</kbd> để mở hướng dẫn.'],
+  'v23.3': [
+    'Huy hiệu phiên bản sáng lên sau khi cập nhật tự động, giúp bạn nhận ra phiên bản mới ở lần khởi động kế tiếp.',
+    'Chuyển giữa các nền mặc định vẫn giữ chế độ tối: nền mới cũng được làm tối.',
+    'Trên di động, thanh nền tảng (Windows, macOS, Linux, ChromeOS) giờ trông giống máy tính.'
+  ],
+  'v23.2': [
+    'Đã bỏ nút chuyển Nâng cao/Cơ bản: mọi phím tắt đều hiển thị cùng nhau.',
+    'Trên di động, các nút trên thanh trên cùng giờ xếp gọn trong lưới 2&times;3.',
+    'Nền mặc định vẫn được áp dụng và được làm tối đúng khi bạn chuyển sang chế độ tối.',
+    'Các lớp phủ (cài đặt, hướng dẫn, câu đố) giờ che các thẻ cố định trên di động.'
+  ],
+  'v23.1': ['Nền được tối ưu cho chế độ tối: khi chuyển sang tối, cả ảnh bạn tải lên lẫn nền mặc định (đại dương, rừng, hoàng hôn và nhiều nền khác) đều được làm tối và giảm bão hòa để các bảng vẫn dễ đọc.'],
+  'v23': [
+    'Chế độ &laquo;So sánh&raquo; mới: chọn nền tảng thứ hai để chỉ xem những phím tắt khác nhau.',
+    'Giao diện tự động theo giờ trong ngày (tối từ 19h đến 7h).',
+    'Nhấn <kbd>?</kbd> hoặc chạm nút <kbd>?</kbd> để xem hướng dẫn nhanh và mẹo.',
+    'Đã thêm ngày phát hành vào từng mục trên trang này.'
+  ],
+  'v22': [
+    'Đã sửa: bảng tra cứu phím bị cắt trên điện thoại hẹp: giờ bảng cuộn ngang nên mọi cột đều truy cập được.',
+    'Thanh tìm kiếm và các nút nhóm bị ẩn trên trang &laquo;Có gì mới&raquo; vì không áp dụng ở đó.'
+  ],
+  'v21': [
+    'Bảng tra cứu phím giờ có nút đóng để bạn thu gọn ngay trong bảng: tiện trên di động khi công tắc có thể trượt khỏi tầm với.',
+    'Phản hồi chạm nhanh hơn cho nút tra cứu phím trên thiết bị cảm ứng.'
+  ],
+  'v20.1': [
+    'Số phiên bản nay hỗ trợ bản vá: huy hiệu ở chân trang hiện ví dụ v20.1 và phát hiện cập nhật xử lý đúng.',
+    'Đã thêm mục v20 còn thiếu vào trang này.'
+  ],
+  'v20': ['Trang &laquo;Có gì mới&raquo; mới trong Anthkeys: liên kết trong thông báo cập nhật và huy hiệu phiên bản ở chân trang mở trang này thay vì mở GitHub.'],
+  'v19': ['Thanh cập nhật giờ cũng hiện khi bạn cập nhật từ phiên bản trước khi có tính năng theo dõi phiên bản (phiên bản cũ được nhận diện từ bộ nhớ đệm ngoại tuyến).'],
+  'v18': [
+    'Hiện thông báo &laquo;Đã cập nhật lên vX &mdash; Có gì mới&raquo; khi có phiên bản mới (ở chế độ cập nhật tự động).',
+    'Thanh cập nhật giờ được kích hoạt bởi cập nhật nội dung, không chỉ bởi thay đổi của service worker.',
+    'Huy hiệu phiên bản ở chân trang có thể bấm: chạm để xem tin mới.',
+    'Bộ nhớ đệm ngoại tuyến gọn hơn (không còn loại bỏ tệp không có số phiên bản).'
+  ],
+  'v16': ['Thêm huy hiệu phiên bản ở chân trang hiển thị số bản dựng hiện tại.'],
+  'v15': ['Thêm nút làm mới và tùy chọn (tự động cập nhật hoặc hỏi trước), dựa trên service worker.'],
+  'v14': ['Thu gọn và mở rộng một nhóm giờ tôn trọng từ khóa đang tìm.'],
+  'v13': ['Bộ nhớ đệm trang ưu tiên mạng nên bản cập nhật xuất hiện ngay; cuộn mượt hơn nhiều trên máy tính.'],
+  'v12': ['Tìm kiếm và bộ lọc giờ chỉ áp dụng cho thẻ đang mở.'],
+  'v11': ['Hỗ trợ cài đặt PWA, nhãn trợ năng, hỗ trợ giảm chuyển động, phím tắt Gmail và YouTube, cải thiện SEO.'],
+  'v10': [
+    'Đã sửa: bộ lọc nhóm có thể ẩn toàn bộ phím tắt khi trùng với dòng tiêu đề nhóm: nay chỉ ẩn những dòng bạn đã lọc.',
+    'Nền nay phủ kín màn hình trên di động.'
+  ],
+  'v9': ['Windows giờ là thẻ nền tảng mặc định và thứ tự các thẻ dễ hiểu hơn.'],
+  'v8': [
+    'Các mức độ khó của câu đố và mẹo trong ngày.',
+    'Cuộn mượt hơn nhiều trên di động, cùng bộ nhớ đệm ngoại tuyến.',
+    'Tìm kiếm và bộ lọc hoạt động đồng thời trên mọi nền tảng, với tên hệ điều hành in đậm.'
+  ],
+  'v7': ['Đã bỏ các kiểu giao diện: giờ chỉ còn Material 3.'],
+  'v6': [
+    'Rút gọn kiểu giao diện về Material 3, thêm nút &laquo;Bỏ nền&raquo; để trở về giao diện mặc định.',
+    'Thêm tiêu đề điều khiển bộ nhớ đệm để bản cập nhật đến nhanh hơn.'
+  ],
+  'v5': ['Rút gọn tiêu đề trang chỉ còn &laquo;Phím tắt&raquo; trong cả 14 ngôn ngữ.'],
+  'v4': [
+    'Chế độ câu đố phím tắt: luyện tập bằng cách đoán phím tắt hoặc thao tác, cùng đồng bộ đám mây qua GitHub Gist.',
+    'Một loạt sửa lỗi lớn về mẫu màu nhấn, đổi giao diện và nền trên di động.'
+  ],
+  'v3': ['Thêm bộ màu nhấn cài sẵn có thể lưu và dùng lại, cùng cơ chế vô hiệu bộ nhớ đệm để bản cập nhật xuất hiện đáng tin cậy.'],
+  'v2': ['Giao diện sáng và tối với màu nhấn, cùng bản dịch tra cứu phím tắt.'],
+  'v1': ['Bản đầu tiên của Anthkeys: toàn bộ phím tắt bàn phím hằng ngày cho Windows, macOS, Linux và ChromeOS trong một trang.']
+};
+
