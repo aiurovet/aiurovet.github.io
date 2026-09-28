@@ -8901,6 +8901,26 @@ i18n.vi = {
     const val = langData[key] || (recent && recent[key]) || fallback[key];
     if (val) el.setAttribute('placeholder', val);
   });
+  applyWhatsNewLanguage(lang);
+}
+
+function applyWhatsNewLanguage(lang) {
+  const pack = (typeof I18N_WN !== 'undefined') && I18N_WN[lang];
+  if (!pack) return;
+  document.querySelectorAll('.whatsnew .wn-entry').forEach(entry => {
+    const verEl = entry.querySelector('.wn-ver');
+    const ul = entry.querySelector('ul');
+    if (!verEl || !ul) return;
+    const ver = (verEl.firstChild && verEl.firstChild.nodeType === 3)
+      ? verEl.firstChild.nodeValue.trim()
+      : verEl.textContent.replace(/\s+/g, ' ').replace(/\s*\d{1,2}\s+\w+\s+\d{4}$/, '').trim();
+    const list = pack[ver];
+    if (!list) return;
+    const items = ul.children;
+    for (let i = 0; i < items.length && i < list.length; i++) {
+      if (list[i]) items[i].innerHTML = list[i];
+    }
+  });
 }
 
 const LINUX_KBD_DEFAULTS = {
