@@ -3573,3 +3573,226 @@ I18N_WN.da = {
   'v1': ['Første udgave af Anthkeys: alle daglige tastaturgenveje til Windows, macOS, Linux og ChromeOS på én side.']
 };
 
+I18N_WN.fi = {
+  'v52.1': [
+    'Uusi: sivu &laquo;Mitä uutta&raquo; on nyt käännetty kokonaan kaikille 20 kielelle — jokainen julkaisumerkintä näkyy omalla kielelläsi.'
+  ],
+  'v52': [
+    'Korjaus: v51 saattoi estää sovelluksen latautumisen; tanskalaisessa kielitiedostossa oli sulkematon yksinkertainen lainausmerkki, joka teki koko kielitiedostosta virheellisen. Tiedosto jäsennetään nyt oikein ja kaikki 20 kieltä ladataan.'
+  ],
+  'v51': [
+    'Käännökset on valmiit kaikille 20 kielelle — asetukset, suora synkronointi, offline-synkronointi ja synkronointiohje on nyt käännetty kokonaan (uudet kohteet olivat aiemmin vain englanniksi).',
+    'Uusi: jos Anthkeys vaikuttaa hitaalta, ilmoitusbanneri mahdollistaa <strong>suorituskykytilan</strong> käyttöönoton yhdellä napauksella. Voit sulkea bannerin, eikä se palaa.'
+  ],
+  'v50.7': ['Suorituskykytila siirrettiin asetusten <strong>Yleiset</strong>-välilehteen.'],
+  'v50.6': ['Yläpalkin ikonit ovat taas värillisiä emojeja kuten v50:ssä: kirja, tulostin, salama, kuu/aurinko, päivitys ja ratas.'],
+  'v50.5': ['Yläpalkin ikonit käyttävät taas korostusväriä (oletuksena), joten ne eivät enää näy valkoisina tai harmaina.'],
+  'v50.4': ['Ikonien värittäminen korostusvärillä poistettiin: favicon, aloitusnäytön kuvake ja asennettu PWA-kuvake käyttävät taas oikeaa kuvaketta (korostusväri kuvakkeissa merkitsee jotain vain natiivisovelluksessa).'],
+  'v50.3': [
+    'Yläpalkin ikonit rakennettiin uudelleen, jotta ne näkyvät vakaasti kaikilla laitteilla (kierros, tulostus, pulma, teema, päivitys ja asetukset käyttävät nyt oikeita kuvakkeita).',
+    'Teemanvaihtokuvake on taas oikea kuvake ja vastaa valoisa/tumma-tilaa.'
+  ],
+  'v50.2': ['Korjattiin v50.1:n virhe, joka aiheutti yläpalkin kuvakkeiden ja asetusten toimimattomuuden käynnistyksessä.'],
+  'v50.1': [
+    'Uusi <strong>suorituskykytila</strong> kohdassa Muokkaa:_summa_ hämärtävien ja animaatioidenefektien poistaminen voi hidastaa sovellusta Windowsilla.',
+    'Yläpalkki käyttää nyt oikeita kuvakkeita, ja uusi <strong>Kuvakkeet</strong>-asetus antaa värittää ne korostusvärilläsi.',
+    'Sovellukset-välilehti toimii nyt kuin Linux-välilehti: napauta missä tahansa valitaksesi sovelluksen (VS Code, Figma, Gmail ja muut), ja välilehti näyttää valintasi, esimerkiksi &laquo;Sovellus - Gmail&raquo;.',
+    'Heksakenttä Muokkaa-painikkeen alta poistettiin: valitse väri vain liukusäätimillä.',
+    'Korostusvärin valintoihin lisättiin kahdeksan uutta kahden värin yhdistelmää.'
+  ],
+  'v50': [
+    'Avaa jakeluluettelo napauttamalla Linux-välilehteä missä tahansa, ja välilehti näyttää nyt valintasi, esimerkiksi &laquo;Linux - Ubuntu (GNOME)&raquo;.',
+    'Mukautettu värivalitsin rakennettiin uudelleen: pyöreä esikatselu avaa liukusäätimet <strong>Sävy</strong>, <strong>Kylläisyys</strong> ja <strong>Kirkkaus</strong> (arvo näkyy kunkin liukusäätimen yllä) ja aloittaa nykyisestä väristä 0/0/0:n sijaan.',
+    'Uusi <strong>Korostusvärit</strong>-osio: kahdeksan valmista kahden värin muunnosta, jotka voi käyttää korostusvärinä.',
+    'Valmiit korostusvärisarjat hienosäätettiin puhtaamman ja selkeämmän paletin mukaan.'
+  ],
+  'v40.9': ['Jakeluluettelo on nyt itse Linux-välilehdellä: valitse jakelversi napauttamalla välilehden pientä nuolta.'],
+  'v40.8': ['Linux-välilehdellä on nyt jakeluluettelo (Ubuntu, Debian, Fedora, Arch, Mint, KDE ja muut), jonka avulla voit sovittaa järjestelmän pikanäppäimet kunkin jakelversion oletuksiin ja muistaa valintasi.'],
+  'v40.7': ['Korostusvärin asetus näyttää nyt esikatselun käytössä olevan värin tarkan heksakoodin kanssa, joten näet jokaisen valinnan vaikutuksen heti.'],
+  'v40.6': [
+    'Työkalu <strong>Poimi väri näytöltä</strong> poistettiin.',
+    'Valmiit korostusvärisarjat säädettiin Material 3 Expressiven intensiteetin mukaan: syvät ja kirkkaat värit, aidosti neoni (harmaat sävyt pysyvät pehmeinä).'
+  ],
+  'v40.5': ['Korostusvärien paletti tasapainotettiin uudelleen Material 3 Expressiven mukaan: kirkkaampia, elävämpiä värejä.'],
+  'v40.4': ['<strong>Sovita laitteeseeni</strong> lukee nyt todellisen järjestelmä värin (myös Chromen oklch/color()-arvot) ja käyttöjärjestelmän tekstin korostusvärin, joten todellinen dynaaminen korostusvärisi otetaan käyttöön.'],
+  'v40.3': [
+    'Kaikki korostusvärit tasapainotettiin uudelleen Material Yous turvallisten sävyjen mukaan (pehmeät keskisävyt pehmeiden pintasävyjen kanssa).',
+    '<strong>Sovita laitteeseeni</strong> lukee nyt myös järjestelmän korostusvärin vaihtoehtona, joten se toimii useammissa selaimissa ja profiileissa.'
+  ],
+  'v40.2': ['Korostusvärin asetus: uusi <strong>Sovita laitteeseeni</strong> -painike lukee järjestelmän korostusvärin (Chrome 150+, kun sovellus on asennettu) ja ottaa sen käyttöön vahvistusviestillä.'],
+  'v40.1': ['Taustakuvakirjasto poistettiin (kirjastoon tallennetut taustakuvat poistuvat; itse lataamasi kuvat toimivat edelleen).'],
+  'v40.0': ['Korostusvärin valitsin: mukautetussa värissä on nyt heksakenttä (kirjoita mikä tahansa väri, 3 tai 6 merkkiä) ja kopiointipainike — sama asettelu tietokoneella ja puhelimella.'],
+  'v39.9': ['Huoneen keskustelu: huoneen muistiinpanot näkyvät nyt <strong>Keskustelu</strong>-taulukossa historian kanssa (60 viestiä huonetta kohti, palautuu paluulta). Julkiset muistiinpanot julkaistaan lokissa; yksityiset kopioidaan suoraan leikepöydälle. Kopioi napauttamalla viestiä.'],
+  'v39.8': [
+    '<strong>Viimeisimmät huoneet</strong>: kuusi uusinta huonettasi näkyvät etusivulla yhdellä napauksella avautuvina painikkeina, kukin oman värinsä, sekä poistopainike.',
+    '<strong>Lähetä profiilini</strong>: lähetä asetuksesi ja mukautetut pikanäppäimet koko huoneelle yhtenä hetkenä: muut laitteet ottavat ne heti käyttöön.',
+    '<strong>Taustakuvakirjasto</strong>: kuusi sisäänrakennettua liukuväriä, automaattisella vaalea/tumma-versiolla, satunnaispainike ja päivittäin vaihtuva valinta.',
+    '<strong>Haku</strong>: kopioidut pikanäppäimet muistetaan hakivalikossa nimellä &laquo;Kopioitu äskettäin&raquo;, hakuhistorian mukana.'
+  ],
+  'v39.7': ['Mobiilissa animaatiot käyttävät nyt samaa CSS:ää kuin tietokone: kosketuslaitteiden säännöt eivät enää poista kaikkia siirtymiä. Kierroksen heijastus ja liukuvat kortit sujuvat nyt, ja teima ja taustaväri vaihtuvat pehmeästi, myös puhelimella.'],
+  'v39.6': ['Puhelin on nyt tasaveroinen tietokoneen kanssa: teeman ja taustavärin vaihto tapahtuu yhtä sujuvasti kuin tietokoneella, ja sivukierros liikkuu vaiheiden välillä myös kosketuslaitteilla.'],
+  'v39.5': ['<strong>AirDrop ja Quick Share</strong>: huoneekoodin vieressä oleva <strong>Jaa</strong>-painike avaa puhelimen jakovalikon (AirDrop Applen laitteilla) ja kertakäyttöisen linkin huoneeseen: toisella laitteella riittää napautus liittyäkseen.'],
+  'v39.4': ['Versiokortin heijastus ja säihde toimivat nyt tietokoneellakin, vaikka järjestelmässä olisi &laquo;vähennä liikettä&raquo; päällä tai animaatiot pois asetuksista: ne lasketaan päivitysmerkiksi, ei koristeeksi.'],
+  'v39.3': ['Versiokortin heijastus ja asetusten versiotunnus ovat nyt vakaita tietokoneella: käynnissä oleva versio saa aina &laquo;päivitys saatavilla&raquo;-kehyksen muutamaksi päiväksi käynnistyksessä, vaikka päivitysilmotus olisi sivuutettu.'],
+  'v39.2': ['Kortin uusi versio -tehoste ei katoa nyt pysyvästi yhden katsomisen jälkeen: heijastus kestää muutaman päivän ja palaa jokaisella käynnillä.'],
+  'v39.1': ['Vihdoin värimallit näkyvät: esikatselut (huoneen väri, teeman väri ja korostusväri) piirretään nyt selvinä ympyröinä tyhjien näkymättömien elementtien sijaan.'],
+  'v39': [
+    'Soittoon voi nyt liittää lyhyen viestin: soittava laite kuulee sen ja kopioi sen leikepöydälle.',
+    '<strong>Akkuvaroitus</strong>: saat ilmoituksen &laquo;palautettu&raquo;, kun laitteen akku ylittää 25 %, ja voit kytkeä akun varoituksen päälle tai pois.',
+    'Muistiinpanot voi nyt lähettää yhdelle laitteelle valitsemalla <strong>Vastaanottaja:</strong> muistiinpanokentän vierestä.',
+    'Jokaisella huoneella voi olla värillinen tunniste, jotta huoneet erottuvat heti.',
+    'Offline-synkronointikoodi näyttää nyt esikatselun (laite, aika, asetusten ja pikanäppäinten määrä) ja pyytää vahvistuksen ennen tuontia.'
+  ],
+  'v38.1': ['Mobiilissa napautus <strong>Tietoja</strong>-välilehteen ei enää avaa osioita automaattisesti: avaa osio napauttamalla sen otsikkoa.'],
+  'v38': ['Mobiilissa <strong>Tietoja</strong>-välilehden avaaminen ei enää avaa synkronointiohjetta automaattisesti: avaa se napauttamalla kohtaa <strong>Suorat huoneet ja offline-synkronointi</strong>.'],
+  'v37': ['Ohje sisältää nyt täydet ohjeet <strong>suorista huoneista</strong> ja <strong>offline-synkronointikoodista</strong>, ja se on saatavilla myös mobiilissa.'],
+  'v36': ['Kirjautumisalueen painikkeen nimi on nyt <strong>Skannaa</strong> (avaa kameran tai tiedostonvalitsimen QR-koodin lukemiseksi), jottei sitä sekoiteta huoneekoodia näyttävään <strong>QR</strong>-painikkeeseen.'],
+  'v35': ['Korjaus: huoneen QR-koodi ja offline-koodi näkyvät nyt oikein tyhjän kehyksen sijaan.'],
+  'v34': [
+    '<strong>Soita laitteelle</strong> — jokaisella muulla laitteella on <strong>Soita</strong>-painike, joka soittaa ja värisee, jotta löydät puhelimesi.',
+    '<strong>Lähetä muistiinpano</strong> — jaa tekstiä kaikkien liitettyjen laitteiden kanssa; sisältö näkyy heti ja kopioituu laitteen leikepöydälle.',
+    '<strong>Tarkkaile akkua</strong> — saat varoituksen, kun liitetyn laitteen akku laskee alle 20 %:n.',
+    '<strong>Nimeä laite</strong> — napauta laitteen nimeä antaaksesi sille oman nimen.',
+    '<strong>Liity skannaamalla</strong> — palvelin voi näyttää huoneekoodinsa QR-koodina; skannaa kameralla (tai skannaa offline-synkronointikoodin).',
+    '<strong>Suojattu huone</strong> — valitse &laquo;Suojaa tämä huone&raquo; ja aseta salasana; kaikki huoneen tiedot salataan, joten vain salasanan omaavat jäsenet voivat lukea ne.',
+    '<strong>Viimeisin toiminta</strong> — jokainen laite näyttää nyt, kuinka kauan se on ollut verkossa.'
+  ],
+  'v33': ['Liitetyt laitteet jakavat myös <strong>akun tason</strong> (myös latauksen aikana) ja päivittyvät huoneessa reaaliajassa.'],
+  'v32': ['Suora huone näyttää nyt kunkin laitteen todellisen nimen (esimerkiksi &laquo;Mi 9T Pro&raquo;) sen sijaan, että laite keksii satunnaisen nimen.'],
+  'v31': ['Suora huone luettelee nyt kaikki liitetyt laitteet nimellä, vihreällä pisteellä tälle laitteelle ja kokonaismäärällä.'],
+  'v30': [
+    '<strong>Suora huone</strong> — ensimmäisenä, synkronoidaksesi asetukset ja mukautetut pikanäppäimet reaaliajassa:<ol><li>Laitteella, jolla asetukset ovat, avaa <strong>Asetukset → Suora huone</strong> ja napauta <strong>Käynnistä huone</strong>. Näkyviin tulee huonekoodi muodossa AK-XXX-YYY.</li><li>Lähetä koodi muihin laitteisiisi (kopioi tai jaa haluamasi tavalla).</li><li>Jokaisella vastaanottavalla laitteella avaa <strong>Asetukset → Suora huone</strong>, syötä sama koodi ja napauta <strong>Liity huoneeseen</strong>.</li></ol>',
+    '<strong>Offline-synkronointikoodi</strong> — sitten, siirtääksesi kerran ilman internetyhteyttä:<ol><li>Avaa <strong>Asetukset → Offline-synkronointikoodi</strong> ja napauta <strong>Luo koodi</strong>. Kopioi koodi tai skannaa näkyvä QR-koodi.</li><li>Toisella laitteella avaa <strong>Asetukset → Offline-synkronointikoodi</strong>, liitä koodi ja napauta <strong>Käytä koodi</strong>.</li></ol>'
+  ],
+  'v29': ['Korjaus: mobiilissa <strong>versiotunnusta</strong> napauttaminen käynnistää nyt aina ponnahdus-, pyörimis- ja puristusefektin, jonka kosketuslaitteiden animaatioiden nollaus ennen esti.'],
+  'v28': ['Mobiilissa Muokkaa-asetuksen vieressä olevan kortin nimi on nyt vain <strong>Tietoja</strong> (ohje on vain tietokoneella), ja napautus avaa Tietoja-osion.'],
+  'v27': ['Korjaus: sivun avaaminen heti <strong>uuden version</strong> jälkeen ei enää lataa sivua uudelleen yllättäen muutaman sekunnin kuluttua — päivitykset otetaan nyt käyttöön taustalla. Päivityspainike ja asetus <strong;Kysy ennen päivitystä&raquo; lataavat edelleen pyydettäessä.'],
+  'v26.9': ['Hauskaa: <strong>versiotunnusta</strong> napauttaminen käynnistää nyt aina ponnahdus-, pyörimis- ja puristusefektin, hohtaa <strong>säihdyksellä</strong>, kun uusi versio nostetaan esiin, ja Tietoja-osiosta siirrettiin oma <strong>Tietoja</strong>-välilehti nopeampaa pääsyä varten.'],
+  'v26.8': ['Parannus: Tietoja-osion <strong>versiotunnus</strong> päivittyy nyt automaattisesti ja avaa sivun Mitä uutta.'],
+  'v26.7': ['Parannus: päivän vihjeen <strong>sovelluspikanäppäimet</strong> kertovat nyt ensin, mihin sovellukseen ne kuuluvat, esimerkiksi <em>Figma — Move Tool — V</em>.'],
+  'v26.6': ['Parannus: <strong>päivän vihje</strong> päivittyy, kun vaihdat alustavälilehteä: Windowsin, macOS:n, Linuxin, ChromeOS:n tai Sovellusten valinta näyttää kyseisen osan pikanäppäimet.'],
+  'v26.5': ['Korjaus: <strong>päivän vihje</strong> ei jää enää kiinni yhteen pikanäppäimeen: sivun latautuessa se näyttää uuden satunnaisen pikanäppäimen katselemastasi alustavälilehdestä.'],
+  'v26.4': ['Korjaus: <strong>päivän vihje</strong> näyttää nyt vain katselemasi alustavälilehden pikanäppäimet (ennen kaikkien alustojen pikanäppäimet sekoitettiin). Ohjeen versiotunnus päivittyy myös automaattisesti.'],
+  'v26.3': ['<strong>Kierros</strong>-painike näyttää nyt <strong>avattu kirja</strong> -kuvakkeen.'],
+  'v26.2': ['<strong>Kierros</strong>-painike näyttää nyt kompassikuvakkeen, ja sivukierrokseen on lisätty uusi vaihe, joka selittää <strong>päivityspainikkeen</strong> tehtävän.'],
+  'v26.1': ['Korjaus: <strong>tumman ja vaalean</strong> välillä vaihtaminen (yläkytkimestä tai asetuksista) ei enää riistä <strong>taustateeman</strong> värejä: korostusväri, palkin painikkeet ja pikanäppäimet säilyttävät teeman värit, kun tausta pysyy paikallaan.'],
+  'v26': ['<strong>Uusi sivukierros</strong> — napauta yläkulman <strong>?</strong>-painiketta, jotta sinut opastetaan hakupalkin, suodattimien, välilehtien, pikanäppäinlistan, pulmien, asetusten, tulostuksen ja teemanvaihtopainikkeen ohi. Siirry painikkeilla, nuolilla tai pisteillä.'],
+  'v25': ['Linkki <strong>Näytä GitHubissa</strong> poistettiin Tietoja-osiosta.'],
+  'v24.8': ['Korjaus: mobiilissa ilmoitus <strong>&laquo;Päivitetty&raquo;</strong> pysyy nyt näytön sisällä (ennen se valui oikean reunan yli pienillä laitteilla).'],
+  'v24.7.4': ['Kulmasäde on nyt rajattu <strong>16&thinsp;kseinäpikseliin</strong> kaikissa teemoissa: pillipainikkeet, kortit, hakupalkki ja ilmoitukset eivät enää ole täysin pyöreitä (ennen jopa 100&thinsp;kseinäpikseliä). Kulmat ovat edelleen pehmeät, mutta hillittymmät.'],
+  'v24.7.3': ['Korjaus: <strong>Avaa Wi-Fi-asetukset</strong> ei tehnyt mitään <strong>Androidilla</strong>: uudemmat Chrome-versiot eivät sivustoille anna avata Androidin järjestelmäasetuksia. Painike näyttää nyt lyhyen viestin, joka muistuttaa avaamaan Wi-Fi-asetukset laitteen Asetukset-sovelluksesta (iOS:ssa ja macOS:ssa ne avautuvat edelleen suoraan).'],
+  'v24.7.2': ['Korjaus: asennetussa Android-sovelluksessa (PWA) <strong>Avaa Wi-Fi-asetukset</strong> -napautus ei tehnyt mitään: Android ei anna sovellusten avata järjestelmäasetuksia suoraan. Painike selittää tämän nyt ja muistuttaa avaamaan sivun Chromen välilehdessä, jossa painike toimii.'],
+  'v24.7.1': ['Korjaus: <strong>Avaa Wi-Fi-asetukset</strong> käytti <strong>Androidilla</strong> JavaScriptin käynnistämää linkkiklikkausta, jonka Chrome estää <code>intent:</code>-linkeille: nyt käytetään käyttäjan eleestä alkaavaa navigointia.'],
+  'v24.7': [
+    '<strong>Yhteyden tila</strong> on nyt <strong>Asetukset → Yleiset</strong> -kohdan alussa (siirretty Tietoja-osiosta).',
+    '<strong>Avaa Wi-Fi-asetukset</strong> -painike avaa nyt oikeat Wi-Fi-asetukset <strong>iOS:ssa</strong> (Asetukset-sovellus) ja <strong>macOS:ssa</strong> (Järjestelmäasetukset). Androidilla, Windowsissa ja Linuxissa, joissa selain ei voi avata järjestelmäasetuksia, painike näyttää lyhyen ohjeen.'
+  ],
+  'v24.6': [
+    '<strong>Offline</strong>-pilleri pysyy nyt vain <strong>10 sekuntia</strong> ja katoaa sitten (se ei häiritse, kun yhteys on yhä poikki).',
+    '<strong>Asetukset → Tietoja</strong> näyttää nyt aina <strong>yhteyden tilan</strong> (online/offline) sekä <strong>Avaa Wi-Fi-asetukset</strong> -painikkeen: iOS:ssa se avaa Asetukset-sovelluksen suoraan, muilla laitteilla se näyttää lyhyen ohjeen.'
+  ],
+  'v24.5.2': ['Korjaus: pöytäkoneilla, joissa Windows menettää yhteyden ilman että selain lähettää <em>offline</em>-tapahtumaa (tai joissa pyynnöt jäävät jumiin sen sijaan että epäonnistuvat), <strong>Offline</strong>-pilleri näkyy nyt myös yhteystestin aikakatkaistuessa, ei vain kun pyyntö epäonnistuu kokonaan.'],
+  'v24.5.1': ['Korjaus: <strong>Offline</strong>-pilleri näkyy nyt myös, kun yhteys katkeaa ilman mitään selaimen merkkiä (esimerkiksi DevToolsin offline-tila, jotkin mobiiliselaimet): sovellus testaa yhteyden aktiivisesti muutaman sekunnin välein sen sijaan, että luottaisi vain selaimen merkkiin. Se katoaa, kun olet taas verkossa.'],
+  'v24.5': [
+    'Hakua käytettäessä hakusanan osumat <strong>korostetaan</strong> tuloksissa: nyt näkee helposti, miksi rivi täsmäsi.',
+    'Hakukenttään tulee <strong>poista (&times;)</strong> -painike, kun olet kirjoittanut jotain.',
+    'Pieni <strong>Offline</strong>-pilleri näkyy, kun yhteys katkeaa: napauta varmistaaksesi, että Anthkeys toimii edelleen välimuistista.'
+  ],
+  'v24.4.1': ['Korjaus mobiilissa: <strong>Toiminto — Pikanäppäimet</strong> -otsikko ei enää liu’u näytön ulkopuolelle: kapeilla näytöillä pikanäppäintaulukosta tuli oma vaakasuuntainen vieritysalue, joka rikkoi kiinnitetyn otsikon. Se on nyt kiinnitettynä ylhäälle täsmälleen kuten tietokoneella.'],
+  'v24.4': ['<strong>Kotiruudun pulmien putken widget</strong> poistettiin: se perustui verkkostandardiin, jota selaimet eivät vielä toteuta, joten sitä ei ole koskaan näkynyt missään. Putkesi ja pulmatilastosi ovat edelleen sovelluksessa.'],
+  'v24.3': [
+    '<strong>Pikanäppäinpulma tallentaa nyt tilastosi</strong>: päivien putki (🔥 peräkkäisten valmiiden päivien määrä), paras tulos, tarkkuus ja pelattujen kierrosten määrä. Tallennetaan paikallisesti eikä koskaan lähetetä.',
+    'Uusi <strong>kotiruudun pulmien putken widget</strong> Androidille (verkkosovellusten widgetit: kokeellisia, tulossa Chromeen ja Firefoxiin; ei ole iOS:ssä). Näyttää putkesi ja tilastosi; napauta avataksesi pulman.'
+  ],
+  'v24.2.1': ['Korjaus mobiilissa: hakupalkin napautus saattoi avata Tietoja-sivun: piilotettu &laquo;Mitä uutta&raquo;-ilmoitus asetuspainikkeen vieressä oli yhä napsautettavissa ja asettui hakukentän päälle. Se reagoi nyt vain ollessaan näkyvissä.'],
+  'v24.2': [
+    'Uusi <strong>muokkausnäppäimen suodatin</strong>: valitse suodatinvalikosta näppäin (Ctrl, Shift, Alt, Win, Cmd ja muut), niin näytetään vain kyseistä näppäintä käyttävät pikanäppäimet. Vaihtoehdot vaihtelevat alustan mukaan.',
+    '<strong>Takaisin ylös</strong>-painike leijuu pikanäppäinlistan päällä, kun vierität: napauta palataksesi heti listan alkuun.'
+  ],
+  'v24.1': ['<strong>Toiminto — Pikanäppäimet</strong> -palkki on nyt kiinnitettynä listan alkuun vierittäessäsi: aiemmin se liu’ui näytön ulkopuolelle mobiilissa ja Safarissa.'],
+  'v23.9': ['Ohjeen ja vihjeiden ponnahdusikkuna poistettiin mobiilissa: se luetteli vain tietokoneen pikanäppäimet. Ohje on edelleen tietokoneen asetuksissa, jonne <kbd>?</kbd> vie suoraan.'],
+  'v23.8': ['Mobiilissa ohje ei enää ole asetuksissa: se on piilotettu, jotta sivu pysyy kevyenä. Avaa se ponnahdusikkunaan painamalla <kbd>?</kbd>.'],
+  'v23.7': ['Ohje ja vihjeet siirrettiin <strong>Asetuksiin</strong> (Yleiset-osio) tietokoneella: paina <kbd>?</kbd> päästäksesi suoraan sinne.'],
+  'v23.6': [
+    'Kaikki 20 kieltä on nyt käännetty kokonaan: enää ei palaa englanniksi uusissa ominaisuuksissa, kuten pulmissa, pilvisynkronoinnissa ja ohjeessa.',
+    'Mobiilissa kopioit pikanäppäimet pitkällä painalluksella napautuksen sijaan: et enää kopioi vahingossa vierittäessäsi.',
+    'Ryhmäpainikkeet käyttävät nyt korostusväriäsi mobiilissakin kuten tietokoneella; kun Suosikit on valittu, vain se painike nousee esiin.',
+    'Kehys viiden painikkeen ympärillä poistettiin mobiilissa: ne sulautuvat nyt sivun osaksi.',
+    'Pulmapainikkeessa on uusi salaman kuvake, ja vastaukset näyttävät luettavat nimet raakojen näppäinten nimien sijaan.',
+    'Korjaus: sovelluksen JavaScript ei joskus latautunut päivityksen jälkeen, jolloin sivu ei vastannut.'
+  ],
+  'v23.5': [
+    'Suodattimet, suosikit, vertailu ja tiivistys koottiin yhteen tiivimpaan <strong>Suodattimet</strong>-valikkoon: enemmän tilaa pikanäppäinlistalle mobiilissa.',
+    'Mitä uutta -sivu, versiotunnus ja päivitysasetukset siirrettiin uuteen <strong>Tietoja</strong>-osioon asetuksissa.',
+    'Päivitys-ilmoitukset näytetään nyt <strong>Asetukset</strong>-painikkeen kautta: rataskuvakkeessa on merkki, kunnes olet nähnyt uuden.'
+  ],
+  'v23.4': ['Apupainike <kbd>?</kbd> poistettiin yläpalkista: paina <kbd>?</kbd> avataksesi ohjeen.'],
+  'v23.3': [
+    'Versiotunnus syttyy automaattisen päivityksen jälkeen, jotta huomaat uuden version seuraavalla käynnistyksellä.',
+    'Vaihto oletustaustojen välillä säilyttää tumman tilan: uusi tausta tummennetaan myös.',
+    'Mobiilissa alustapalkki (Windows, macOS, Linux, ChromeOS) näyttää nyt samalta kuin tietokoneella.'
+  ],
+  'v23.2': [
+    'Edistyneet/Perustas-valitsin poistettiin: kaikki pikanäppäimet näytetään nyt yhdessä.',
+    'Mobiilissa yläpalkin painikkeet ryhmitetään nyt 2&times;3-ruudukkoon.',
+    'Oletustausta otetaan edelleen käyttöön ja se tummennetaan oikein siirtyessäsi tummaan tilaan.',
+    'Peitteet (asetukset, ohje, pulma) peittävät nyt kiinnitetyt kortit mobiilissa.'
+  ],
+  'v23.1': ['Taustat on optimoitu tummaan tilaan: siirtyessäsi tummaan sekä lataamasi kuvat että oletustaustat (meri, metsä, auringonlasku ja muut) tummennetaan ja kylläisyyttä alennetaan, jotta taulukot pysyvät luettavina.'],
+  'v23': [
+    'Uusi <strong>Vertaa</strong>-tila: valitse toinen alusta, niin näet vain ne pikanäppäimet, jotka eroavat.',
+    'Automaattinen teema vuorokaudenajan mukaan (tumma klo 19–07).',
+    'Paina <kbd>?</kbd> tai <kbd>?</kbd>-painiketta nähdäksesi pikaoppaan ja vihjeet.',
+    'Julkaisupäivämäärä lisättiin jokaiseen kohtaan tällä sivulla.'
+  ],
+  'v22': [
+    'Korjaus: näppäintaulukko leikkautui kapeilla puhelimilla: nyt taulukkoa voi vierittää vaakasuunnassa, joten kaikki sarakkeet ovat käytettävissä.',
+    'Hakupalkki ja ryhmäpainikkeet olivat piilotettuina Mitä uutta -sivulla, koska ne eivät koske sitä.'
+  ],
+  'v21': [
+    'Näppäintaulukossa on nyt sulkupainike, joten voit tiivistää sen taulukon sisältä: kätevää mobiilissa, kun näppäimistö voi liukua ulottumattomiin.',
+    'Nopeampi kosketusvaste näppäintaulukon painikkeelle kosketuslaitteilla.'
+  ],
+  'v20.1': [
+    'Versioluku käsittelee nyt korjauspakettiversioita: alatunnisteessa näkyy esimerkiksi v20.1 ja päivitykset tunnistetaan oikein.',
+    'Tältä sivulta puuttunut v20-kohta lisättiin.'
+  ],
+  'v20': ['Uusi &laquo;Mitä uutta&raquo; -sivu Anthkeysissä: päivitys-ilmoituksen linkki ja alatunniste avaavat nyt tämän sivun GitHubin sijaan.'],
+  'v19': ['Päivityspalkki näkyy nyt myös, kun päivität versiosta, joka edeltää versioiden seurantaa (vanha versio tunnistetaan offline-välimuistista).'],
+  'v18': [
+    'Ilmoitus &laquo;Päivitetty versioon vX — Mitä uutta&raquo; näytetään nyt, kun uusi versio on saatavilla (automaattisessa päivitystilassa).',
+    'Päivityspalkki käynnistyy nyt sisällön päivityksistä, ei vain service workerin muutoksista.',
+    'Alatunnisteessa olevaa versiotunnusta voi nyt painaa: napauta nähdäksesi uutiset.',
+    'Offline-välimuisti on pienempi (tiedostoja, joissa ei ole versiomerkkiä, ei hylätä enää).'
+  ],
+  'v16': ['Alatunnisteeseen lisättiin versiotunnus, joka näyttää nykyisen koontiversion.'],
+  'v15': ['Lisättiin päivityspainike ja asetus (päivitä automaattisesti tai kysy ensin), jotka perustuvat service workeriin.'],
+  'v14': ['Ryhmän tiivistys ja laajennus kunnioittaa nyt haettua sanaa.'],
+  'v13': ['Sivun välimuisti suosii nyt verkkoa, joten päivitykset näkyvät heti; vieritys on huomattavasti sujuvampaa tietokoneella.'],
+  'v12': ['Haku ja suodattimet koskevat nyt vain avointa välilehteä.'],
+  'v11': ['Lisättiin PWA-asennuksen tuki, saavutettavuusmerkinnät, liikkeen vähentämisen tuki, Gmail- ja YouTube-pikanäppäimet sekä SEO-parannuksia.'],
+  'v10': [
+    'Korjaus: ryhmäsuodatin voi piilottaa kaikki pikanäppäimet, kun ne osuvat ryhmän otsikkoon: nyt se piilottaa vain ne rivit, jotka suodatit.',
+    'Tausta peittää nyt koko näytön mobiilissa.'
+  ],
+  'v9': ['Windows on nyt oletusalusta ja välilehtien järjestys on selkeämpi.'],
+  'v8': [
+    'Pulmien vaikeustasot ja päivän vihje.',
+    'Huomattavasti sujuvampaa vieritystä mobiilissa sekä offline-välimuisti.',
+    'Haku ja suodatin toimivat nyt kaikilla alustoilla yhdellä kertaa, ja käyttöjärjestelmien nimet ovat lihavoituja.'
+  ],
+  'v7': ['Useita teematyylejä poistettiin: nyt on vain Material 3.'],
+  'v6': [
+    'Teema yksinkertaistettiin Material 3:ksi, ja painike <strong>Poista tausta</strong> palauttaa oletusteeman.',
+    'Lisättiin välimuistin ohjausotsikko, jotta päivitykset saapuvat nopeammin.'
+  ],
+  'v5': ['Sivun otsikko lyhennettiin kaikilla 14 kielellä muotoon <strong>Pikanäppäimet</strong>.'],
+  'v4': [
+    '<strong>Pikanäppäinpulmatila</strong>: harjoittele arvaamalla näppäimiä tai suorittamalla toimintoja sekä pilvisynkronointi GitHub Gistin kautta.',
+    'Laaja sarja korjauksia korostusväreihin, teeman vaihtoon ja mobiilin taustakuviin.'
+  ],
+  'v3': ['Lisättiin valmiit korostusvärisarjat, jotka voi tallentaa ja käyttää uudelleen, sekä välimuistin mitätöintimekanismi, jotta päivitykset näkyvät luotettavasti.'],
+  'v2': ['Vaalea ja tumma teema korostusvärillä sekä pikanäppäintaulukon käännös.'],
+  'v1': ['Anthkeysin ensimmäinen versio: kaikki päivittäiset näppäinoikotiet Windowsille, macOS:lle, Linuxille ja ChromeOS:lle yhdellä sivulla.']
+};
+
