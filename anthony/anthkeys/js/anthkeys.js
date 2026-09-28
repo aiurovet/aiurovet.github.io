@@ -58,6 +58,11 @@ const i18n = {
     'tip.label': 'Show a daily shortcut tip',
     'setting.animations': 'Animations',
     'animations.label': 'Reduce motion',
+    'setting.performance': 'Performance',
+    'perf.label': 'Performance mode (turns off blur & animations)',
+    'setting.icons': 'Icons',
+    'icons.accent': 'Accent-colored icons',
+    'apps.all': 'All apps',
     'setting.custom-anthkeys': 'Custom shortcuts',
     'setting.about': 'About',
     'setting.help-about': 'Help / About',
@@ -9003,8 +9008,91 @@ document.addEventListener('click', e => {
   if (wrap && !wrap.contains(e.target)) hideLinuxDistroMenu();
 });
 document.addEventListener('keydown', e => {
-  if (e.key === 'Escape') hideLinuxDistroMenu();
+  if (e.key === 'Escape') {
+    hideLinuxDistroMenu();
+    hideAppsMenu();
+  }
 });
+
+const APPS_MENU = ['vscode','figma','photoshop','terminal-app','slack','devtools','obsidian','jetbrains','gmail','youtube'];
+let appsFilterState = 'all';
+function tagAppsRows() {
+  const panel = document.getElementById('apps');
+  if (!panel || panel.dataset.tagged) return;
+  panel.dataset.tagged = '1';
+  let cur = 'none';
+  panel.querySelectorAll('tbody tr').forEach(tr => {
+    const td = tr.querySelector('td[data-i18n]');
+    const key = td ? (td.getAttribute('data-i18n') || '') : (tr.getAttribute('data-i18n') || '');
+    if (tr.classList.contains('category') && key.indexOf('cat.') === 0) {
+      cur = key.slice(4);
+      tr.dataset.app = cur;
+    } else {
+      tr.dataset.app = cur;
+    }
+  });
+}
+function renderAppsMenu() {
+  const menu = document.getElementById('appsMenu');
+  if (!menu) return;
+  if (!menu.dataset.rendered) {
+    menu.dataset.rendered = '1';
+    const head = document.createElement('div');
+    head.style.cssText = 'padding:.25rem .6rem;font-size:.65rem;text-transform:uppercase;letter-spacing:.05em;color:var(--text-variant)';
+    head.textContent = tx('tab.apps');
+    menu.appendChild(head);
+    ['all'].concat(APPS_MENU).forEach(id => {
+      const b = document.createElement('button');
+      b.type = 'button';
+      b.className = 'linux-distro-option';
+      b.dataset.appOption = id;
+      b.textContent = id === 'all' ? tx('apps.all') : (tx('cat.' + id) || id);
+      b.addEventListener('click', () => {
+        appsFilterState = id;
+        hideAppsMenu();
+        setAppsTabLabel();
+        applyView();
+        saveSettings();
+        const t = document.querySelector('.tab[data-tab="apps"]');
+        if (t && !t.classList.contains('active')) t.click();
+      });
+      menu.appendChild(b);
+    });
+  }
+  menu.querySelectorAll('.linux-distro-option').forEach(b => {
+    b.classList.toggle('active', b.dataset.appOption === appsFilterState);
+  });
+}
+function toggleAppsMenu() {
+  const menu = document.getElementById('appsMenu');
+  if (!menu) return;
+  renderAppsMenu();
+  menu.hidden = !menu.hidden;
+}
+function hideAppsMenu() {
+  const menu = document.getElementById('appsMenu');
+  if (menu) menu.hidden = true;
+}
+function setAppsTabLabel() {
+  const suffix = document.getElementById('appsTabApp');
+  if (!suffix) return;
+  suffix.textContent = (!appsFilterState || appsFilterState === 'all') ? '' : ' - ' + (tx('cat.' + appsFilterState) || appsFilterState);
+}
+const _appsTabBtn = document.querySelector('.tab[data-tab="apps"]');
+if (_appsTabBtn) {
+  _appsTabBtn.addEventListener('click', () => toggleAppsMenu());
+}
+document.addEventListener('click', e => {
+  const menu = document.getElementById('appsMenu');
+  if (!menu || menu.hidden) return;
+  const wrap = document.getElementById('appsTabWrap');
+  if (wrap && !wrap.contains(e.target)) hideAppsMenu();
+});
+function applyAppsFilter() {
+  tagAppsRows();
+  applyView();
+  setAppsTabLabel();
+}
 
 function saveSettings() {
   const activeAccent = document.querySelector('.accent-opt.active');
@@ -9022,14 +9110,15 @@ function saveSettings() {
     modStyle: document.querySelector('[data-mod-style].active')?.dataset.modStyle || 'text',
     compact: document.body.classList.contains('compact'),
     noAnim: document.body.classList.contains('no-anim'),
+    perfMode: document.body.classList.contains('perf-mode'),
+    accentIcons: document.body.classList.contains('accent-icons'),
     tip: document.getElementById('toggleTip')?.classList.contains('on') ?? true,
     updateMode: document.querySelector('[data-update-mode].active')?.dataset.updateMode || 'auto',
-    linuxDistro: linuxDistroState || 'ubuntu'
+    linuxDistro: linuxDistroState || 'ubuntu',
+    appsApp: appsFilterState || 'all'
   };
   if (data.accent === 'custom' || (activeAccent && !activeAccent.dataset.accent)) {
-    const bodyHex = document.body.style.getPropertyValue('--accent-1').trim();
-    if (bodyHex && bodyHex.startsWith('#')) { data.customAccentHex = bodyHex; }
-    else { const el = document.getElementById('customAccentHexInput'); if (el && el.value) data.customAccentHex = el.value; }
+    data.customAccentHex = document.body.style.getPropertyValue('--accent-1').trim() || '#f7971e';
   }
   const gradBtn = document.querySelector('.gradient-opt.active');
   if (gradBtn) data.gradientAccent = gradBtn.dataset.gradient;
@@ -9109,8 +9198,6 @@ function loadSettings() {
       document.querySelectorAll('.gradient-opt').forEach(a => a.classList.remove('active'));
       const accentBtn = document.getElementById('customAccentBtn');
       if (accentBtn) accentBtn.classList.add('active');
-      const hexBox = document.getElementById('customAccentHexInput');
-      if (hexBox) hexBox.value = hex.toUpperCase();
       const sw = document.getElementById('customAccentSwatch');
       if (sw) sw.style.background = 'linear-gradient(135deg,' + hex + ',' + hex2 + ')';
       document.body.style.setProperty('--accent-1', hex);
@@ -9195,6 +9282,30 @@ function loadSettings() {
         toggleAnim.classList.add('on');
         toggleAnim.setAttribute('aria-checked', 'true');
       }
+    }
+
+    if (data.perfMode) {
+      document.body.classList.add('perf-mode');
+      const togglePerf = document.getElementById('togglePerf');
+      if (togglePerf) {
+        togglePerf.classList.add('on');
+        togglePerf.setAttribute('aria-checked', 'true');
+      }
+    }
+
+    if (data.accentIcons) {
+      document.body.classList.add('accent-icons');
+      const toggleAccentIcons = document.getElementById('toggleAccentIcons');
+      if (toggleAccentIcons) {
+        toggleAccentIcons.classList.add('on');
+        toggleAccentIcons.setAttribute('aria-checked', 'true');
+      }
+    }
+
+    if (data.appsApp) {
+      appsFilterState = data.appsApp;
+      setAppsTabLabel();
+      tagAppsRows();
     }
 
     if (data.tip !== undefined && data.tip === false) {
@@ -9832,7 +9943,15 @@ const gradientAccents = {
   'gold-blaze': ['#F59E0B','#EF4444'],
   aurora: ['#34D399','#38BDF8'],
   royal: ['#6366F1','#A855F7'],
-  ember: ['#F43F5E','#F97316']
+  ember: ['#F43F5E','#F97316'],
+  'rose-gold': ['#FB7185','#F59E0B'],
+  'grape-soda': ['#A855F7','#F472B6'],
+  'mint-fresh': ['#4ADE80','#34D399'],
+  iceberg: ['#38BDF8','#818CF8'],
+  'peach-sorbet': ['#FDE047','#F97316'],
+  serenity: ['#818CF8','#F472B6'],
+  'lime-pop': ['#A3E635','#14B8A6'],
+  twilight: ['#6366F1','#E879F9']
 };
 window.gradientAccents = gradientAccents;
 function renderGradientAccents() {
@@ -9904,7 +10023,6 @@ function updateAccentPreview() {
 updateAccentPreview();
 
 const _customAccentBtn = document.getElementById('customAccentBtn');
-const _customAccentHex = document.getElementById('customAccentHexInput');
 const _customAccentCopy = document.getElementById('customAccentCopy');
 function applyCustomAccent(hex) {
   if (!/^#[0-9a-fA-F]{6}$/.test(hex)) return false;
@@ -9925,7 +10043,6 @@ document.body.style.setProperty('--accent-rgb', [r,g,b].join(','));
     document.body.style.setProperty('--primary', hex);
     const sw = document.getElementById('customAccentSwatch');
     if (sw) sw.style.background = 'linear-gradient(135deg,' + hex + ',' + hex2 + ')';
-    if (_customAccentHex) _customAccentHex.value = hex.toUpperCase();
     syncHslSliders(hex);
     updateAccentPreview();
     saveSettings();
@@ -9937,9 +10054,7 @@ const _hslSat = document.getElementById('hslSat');
 const _hslBright = document.getElementById('hslBright');
 function currentCustomHex() {
   const body = document.body.style.getPropertyValue('--accent-1').trim();
-  if (/^#[0-9a-fA-F]{6}$/.test(body)) return body;
-  const box = _customAccentHex && /^#[0-9a-fA-F]{6}$/.test(_customAccentHex.value.trim()) ? _customAccentHex.value.trim() : '';
-  return box || '#f7971e';
+  return /^#[0-9a-fA-F]{6}$/.test(body) ? body : '#f7971e';
 }
 function _hexToHsv(hex) {
   const r = parseInt(hex.slice(1,3),16) / 255;
@@ -10008,17 +10123,9 @@ if (_customSwatch) {
     applyCustomAccent(hex);
   });
 })
-if (_customAccentHex) {
-  _customAccentHex.addEventListener('input', function() {
-    let v = this.value.trim();
-    if (v && v.charAt(0) !== '#') v = '#' + v;
-    if (/^#[0-9a-fA-F]{6}$/.test(v)) applyCustomAccent(v);
-    else if (/^#[0-9a-fA-F]{3}$/.test(v)) applyCustomAccent('#' + v[1] + v[1] + v[2] + v[2] + v[3] + v[3]);
-  });
-}
 if (_customAccentCopy) {
   _customAccentCopy.addEventListener('click', () => {
-    const hex = document.body.style.getPropertyValue('--accent-1').trim() || (_customAccentHex ? _customAccentHex.value : '') || '#f7971e';
+    const hex = document.body.style.getPropertyValue('--accent-1').trim() || '#f7971e';
     if (navigator.clipboard && navigator.clipboard.writeText) {
       navigator.clipboard.writeText(hex.toUpperCase()).then(() => showToastMsg(tx('msg.copied'))).catch(() => {});
     }
@@ -10211,6 +10318,7 @@ renderAccentPresets();
 // ---- Load saved settings (after accents init & click handlers) ----
 loadSettings();
 applyLinuxDistro(linuxDistroState || 'ubuntu');
+applyAppsFilter();
 checkForUpdate();
 
 function applyWallpaper(dataUrl) {
@@ -10359,6 +10467,20 @@ onId('toggleBlur', 'click', function() {
   saveSettings();
 });
 
+onId('togglePerf', 'click', function() {
+  const on = this.classList.toggle('on');
+  this.setAttribute('aria-checked', on);
+  document.body.classList.toggle('perf-mode', on);
+  saveSettings();
+});
+
+onId('toggleAccentIcons', 'click', function() {
+  const on = this.classList.toggle('on');
+  this.setAttribute('aria-checked', on);
+  document.body.classList.toggle('accent-icons', on);
+  saveSettings();
+});
+
 onId('toggleCompact', 'click', function() {
   const on = this.classList.toggle('on');
   this.setAttribute('aria-checked', on);
@@ -10401,7 +10523,7 @@ document.querySelectorAll('.reset-btn').forEach(btn => {
     const setting = btn.dataset.reset;
     const defaults = {
       language: 'auto',       keyStyle: 'spaced', modStyle: 'text',
-      blur: true, compact: false, noAnim: false, tip: true,
+      blur: true, compact: false, noAnim: false, perfMode: false, accentIcons: false, tip: true,
       theme: 'light', accent: 'gold', style: 'm3',
       size: 'medium', font: 'google-sans', updateMode: 'auto'
     };
@@ -10427,6 +10549,15 @@ document.querySelectorAll('.reset-btn').forEach(btn => {
         const dailyTip = document.getElementById('dailyTip');
         if (dailyTip) dailyTip.style.display = val ? '' : 'none';
       }
+    } else if (setting === 'perfMode' || setting === 'accentIcons') {
+      const toggleId = setting === 'perfMode' ? 'togglePerf' : 'toggleAccentIcons';
+      const toggle = document.getElementById(toggleId);
+      if (toggle) {
+        toggle.classList.toggle('on', val);
+        toggle.setAttribute('aria-checked', val);
+      }
+      if (setting === 'perfMode') document.body.classList.toggle('perf-mode', val);
+      if (setting === 'accentIcons') document.body.classList.toggle('accent-icons', val);
     } else if (setting === 'theme') {
       document.querySelectorAll('.theme-opt[data-theme]').forEach(t => t.classList.remove('active'));
       const defBtn = document.querySelector('.theme-opt[data-theme="light"]');
@@ -10988,6 +11119,11 @@ function applyView() {
 
   panel.querySelectorAll('tbody tr:not(.category)').forEach(tr => {
     const cat = getRowCategory(tr);
+    if (panel.id === 'apps' && appsFilterState && appsFilterState !== 'all' && tr.dataset.app !== appsFilterState) {
+      tr.style.display = 'none';
+      tr.dataset.filtered = '1';
+      return;
+    }
     const pinned = pinnedIds.includes(getPinId(tr));
     const catOk = favOnly ? pinned : (showAll || (cat && activeCats.has(cat)));
     const modOk = !activeMods.size || rowModifiers(tr).split(',').filter(Boolean).some(m => activeMods.has(m));

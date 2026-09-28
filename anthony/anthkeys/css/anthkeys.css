@@ -290,6 +290,10 @@
     .hsl-head { display: flex; align-items: center; justify-content: space-between; font-size: .68rem; color: var(--text-variant); margin-bottom: .15rem; }
     .hsl-num { font: 600 .72rem Consolas, monospace; color: var(--text); background: var(--surface); border: 1px solid var(--outline-variant); border-radius: 6px; padding: 0 .4rem; min-width: 2.4rem; text-align: center; }
     .hsl-row input[type=range] { width: 100%; margin: 0; accent-color: var(--accent-1); }
+    .btn-settings svg { display: block; }
+    .accent-icons .btn-settings { color: var(--accent-1); }
+    .accent-icons .btn-settings:hover { color: var(--accent-1); }
+    body.perf-mode, body.perf-mode *, body.perf-mode *::before, body.perf-mode *::after { backdrop-filter: none !important; -webkit-backdrop-filter: none !important; animation: none !important; transition: none !important; }
     .panel { display: none; background: var(--surface); border-radius: var(--radius); box-shadow: var(--shadow); overflow: hidden; padding: 1.25rem; transition: background .3s; }
     .panel.active { display: block; }
     table { width: 100%; border-collapse: collapse; }
