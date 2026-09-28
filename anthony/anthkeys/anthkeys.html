@@ -60,6 +60,14 @@
     </span>
   </div>
 
+  <div class="install-banner" id="perfBanner" hidden>
+    <span class="install-text" data-i18n="perf.banner">Anthkeys feels slow. Turn on Performance mode?</span>
+    <span class="install-actions">
+      <button class="pill" id="btnPerfEnable" data-i18n="perf.banner.cta">Turn on</button>
+      <button class="install-dismiss" id="btnPerfDismiss" title="Dismiss" aria-label="Dismiss performance banner">&times;</button>
+    </span>
+  </div>
+
   <div class="search-bar" style="position:relative"><input type="text" id="searchInput" data-i18n-placeholder="search.placeholder" placeholder="Search actions…" autocomplete="off"><button class="search-clear" id="searchClear" title="Clear search" aria-label="Clear search" hidden>&times;</button><div class="search-history" id="searchHistory"></div></div>
   <div class="daily-tip" id="dailyTip" style="display:none"><span class="tip-icon">&#128161;</span><span class="tip-label" data-i18n="tip.label">Tip</span>: <span id="tipContent"></span><button class="tip-close" id="tipClose" title="Dismiss" aria-label="Dismiss tip">&times;</button></div>
   <div class="filter-menu" id="filterMenu">
@@ -761,6 +769,13 @@
                 <div class="whatsnew-title" data-i18n="whatsnew.title">What's new</div>
                 <p class="whatsnew-sub" data-i18n="whatsnew.sub">Recent changes to Anthkeys</p>
                 <select id="whatsnewSelect" aria-label="Version" style="width:100%;padding:.45rem .7rem;border:1px solid var(--outline-variant);border-radius:var(--radius-sm);background:var(--surface);color:var(--text);font:var(--size) var(--font);font-size:.8rem;margin-bottom:.6rem;box-sizing:border-box;outline:none"></select>
+                <div class="wn-entry">
+                  <div class="wn-ver">v51 <span class="wn-date">Sep 28, 2026</span></div>
+                  <ul>
+                    <li>Translations completed for all 20 languages &mdash; settings, Live rooms, offline sync and sync help are now fully translated (newer UI text previously showed only in English).</li>
+                    <li>New: if Anthkeys feels laggy, a banner offers to turn on Performance mode in one tap. You can dismiss it, and it won&rsquo;t ask again.</li>
+                  </ul>
+                </div>
                 <div class="wn-entry">
                   <div class="wn-ver">v50.7 <span class="wn-date">Sep 28, 2026</span></div>
                   <ul>
@@ -1687,7 +1702,8 @@
 
   <script src="js/mqtt.min.js"></script>
   <script src="js/qrcode.js"></script>
-  <script src="js/anthkeys.js?v=50.7">
+  <script src="js/i18n-recent.js"></script>
+  <script src="js/anthkeys.js?v=51">
 </script>
 </body>
 </html>

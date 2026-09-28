@@ -60,6 +60,8 @@ const i18n = {
     'animations.label': 'Reduce motion',
     'setting.performance': 'Performance',
     'perf.label': 'Performance mode (turns off blur & animations)',
+    'perf.banner': 'Anthkeys feels slow. Turn on Performance mode?',
+    'perf.banner.cta': 'Turn on',
     'apps.all': 'All apps',
     'setting.custom-anthkeys': 'Custom shortcuts',
     'setting.about': 'About',
@@ -8886,16 +8888,17 @@ i18n.vi = {
 };;function applyLanguage(lang) {
   const langData = i18n[lang] || {};
   const fallback = i18n.en;
+  const recent = I18N_RECENT[lang];
   document.querySelectorAll('[data-i18n]').forEach(el => {
     const key = el.getAttribute('data-i18n');
-    const val = langData[key] || fallback[key];
+    const val = langData[key] || (recent && recent[key]) || fallback[key];
     if (val && (el.children.length === 0 || el.tagName === 'SPAN' || el.tagName === 'BUTTON' || el.tagName === 'TH' || el.tagName === 'H1' || el.tagName === 'H2' || el.tagName === 'SMALL' || el.tagName === 'LABEL' || el.tagName === 'TITLE')) {
       el.textContent = val;
     }
   });
   document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
     const key = el.getAttribute('data-i18n-placeholder');
-    const val = langData[key] || fallback[key];
+    const val = langData[key] || (recent && recent[key]) || fallback[key];
     if (val) el.setAttribute('placeholder', val);
   });
 }
@@ -11998,7 +12001,7 @@ function tx(key) {
   const langBtn = document.querySelector('[data-lang].active');
   const lang = langBtn ? langBtn.dataset.lang : 'auto';
   const l = lang === 'auto' ? (navigator.language || 'en').split('-')[0] : lang;
-  return (i18n[l] && i18n[l][key]) || i18n.en[key] || key;
+  return (i18n[l] && i18n[l][key]) || (I18N_RECENT[l] && I18N_RECENT[l][key]) || i18n.en[key] || key;
 }
 
 function syncNormCode(input) {
@@ -12880,4 +12883,48 @@ if (_savedRoom && syncCodeValid(_savedRoom)) {
   } catch (e) {}
 })();
 syncRenderPanel();
+(function perfBannerInit() {
+  const banner = document.getElementById('perfBanner');
+  if (!banner) return;
+  const enableBtn = document.getElementById('btnPerfEnable');
+  const dismissBtn = document.getElementById('btnPerfDismiss');
+  if (enableBtn) enableBtn.addEventListener('click', () => {
+    const toggle = document.getElementById('togglePerf');
+    if (toggle) {
+      toggle.classList.add('on');
+      toggle.setAttribute('aria-checked', 'true');
+    }
+    document.body.classList.add('perf-mode');
+    saveSettings();
+    banner.hidden = true;
+  });
+  if (dismissBtn) dismissBtn.addEventListener('click', () => {
+    lsSet('anthkeys-perf-dismissed', '1');
+    banner.hidden = true;
+  });
+  if (lsGet('anthkeys-perf-dismissed', '') === '1') return;
+  if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  if (document.body.classList.contains('perf-mode')) return;
+  try {
+    if (JSON.parse(lsGet('anthkeys-settings') || '{}').perfMode) return;
+  } catch (e) {}
+  const measure = () => {
+    let count = 0, slow = 0, prev = 0, total = 0, t0 = 0;
+    const frame = now => {
+      if (!prev) { prev = now; t0 = now; requestAnimationFrame(frame); return; }
+      const dt = now - prev;
+      prev = now;
+      count++;
+      total += dt;
+      if (dt > 50) slow++;
+      if (document.hidden) return;
+      if (count < 100 && (now - t0) < 2200) { requestAnimationFrame(frame); return; }
+      if (total / count >= 28 || (slow / count >= 0.2 && slow >= 6)) banner.hidden = false;
+    };
+    requestAnimationFrame(frame);
+  };
+  const start = () => setTimeout(measure, 600);
+  if (document.readyState === 'complete') start();
+  else window.addEventListener('load', start);
+})();
 
