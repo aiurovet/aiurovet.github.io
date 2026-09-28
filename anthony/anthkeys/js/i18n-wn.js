@@ -1789,3 +1789,449 @@ I18N_WN.ru = {
   'v1': ['Первая версия Anthkeys: все повседневные сочетания клавиш для Windows, macOS, Linux и ChromeOS на одной странице.']
 };
 
+I18N_WN.ko = {
+  'v52.1': [
+    '새로운 기능: &laquo;새 소식&raquo; 페이지가 20개 언어 모두에서 완전 번역되었습니다. 모든 릴리스 노트가 사용자의 언어로 표시됩니다.'
+  ],
+  'v52': [
+    '수정: v51에서는 앱이 로드되지 않을 수 있었습니다. 덴마크어 번역에 이스케이프되지 않은 아포스트로피가 있어 언어 파일 전체가 유효하지 않았습니다. 이제 파일이 올바르게 파싱되며 20개 언어 모두 다시 로드됩니다.'
+  ],
+  'v51': [
+    '20개 언어의 번역을 모두 마쳤습니다. 설정, 라이브 룸, 오프라인 동기화, 동기화 가이드가 이제 완전 번역됩니다 (최근 항목은 영어만 지원했습니다).',
+    '새로운 기능: Anthkeys가 느리게 느껴지면 배너에서 한 번의 탭으로 성능 모드를 켤 수 있습니다. 배너를 닫으면 다시 나타나지 않습니다.'
+  ],
+  'v50.7': ['성능 모드를 설정의 &laquo;일반&raquo; 탭으로 옮겼습니다.'],
+  'v50.6': ['상단 바 아이콘이 v50과 같이 다시 컬러 이모지가 되었습니다. 책, 프린터, 번개, 달/해, 새로고침, 톱니바퀴.'],
+  'v50.5': ['상단 바 아이콘이 다시 강조색 (기본값)을 사용하여 희거나 회색으로 보이지 않습니다.'],
+  'v50.4': ['강조색 아이콘 tint 기능을 제거했습니다. 파비콘, 홈 화면 아이콘, 설치된 PWA 아이콘이 다시 기본 아이콘을 사용합니다 (아이콘을 강조색으로 칠하는 것은 네이티브 앱에서만 의미가 있습니다).'],
+  'v50.3': [
+    '상단 바 아이콘을 모든 기기에서 안정적으로 표시되도록 다시 만들었습니다 (둘러보기, 인쇄, 퀴즈, 테마, 새로고침, 설정이 모두 실제 아이콘을 사용합니다).',
+    '테마 전환 아이콘이 다시 실제 아이콘이 되어 라이트/다크 상태와 일치합니다.'
+  ],
+  'v50.2': ['v50.1에서 상단 바 아이콘과 설정이 시작 직후 동작하지 않던 버그를 수정했습니다.'],
+  'v50.1': [
+    '사용자 설정에 새로운 성능 모드가 추가되었습니다. Windows에서 앱을 느리게 만들 수 있는 블러 효과와 애니메이션을 끕니다.',
+    '상단 바가 실제 아이콘을 사용하며, 새로운 아이콘 설정으로 강조색으로 칠할 수 있습니다.',
+    '앱 탭이 Linux 탭처럼 동작합니다. 원하는 곳을 클릭해 앱 (VS Code, Figma, Gmail 등)을 선택하면 탭에 선택 내용이 표시됩니다 (예: &laquo;앱 - Gmail&raquo;).',
+    '사용자 설정 버튼 아래의 16진수 입력란을 제거했습니다. 색상은 슬라이더로만 고릅니다.',
+    '그라디언트 강조색 옵션을 두 배로 늘리고 새로운 2색 조합 8개를 추가했습니다.'
+  ],
+  'v50': [
+    'Linux 탭의 원하는 곳을 클릭하면 배포판 목록이 열리고, 탭에 선택 내용 (예: &laquo;Linux - Ubuntu (GNOME)&raquo;)이 표시됩니다.',
+    '사용자 색상 선택기를 다시 만들었습니다. 둥근 견본을 누르면 색조, 채도, 밝기 슬라이더가 열리고 각 슬라이더 위에 값이 표시되며, 0/0/0이 아니라 현재 색에서 시작합니다.',
+    '새로운 그라디언트 강조색 섹션: 강조색으로 바로 적용할 수 있는 2색 그라디언트 8개.',
+    '강조색 프리셋을 더 깔끔하고 선명한 팔레트로 다듬었습니다.'
+  ],
+  'v40.9': ['배포판 목록이 이제 Linux 탭에 바로 있습니다. 탭의 작은 화살표를 눌러 배포판을 선택하세요.'],
+  'v40.8': ['Linux 탭에 배포판 목록 (Ubuntu, Debian, Fedora, Arch, Mint, KDE 등)이 생겼습니다. 각 배포판의 기본 설정에 맞춰 시스템 단축키를 조정하고 선택을 기억합니다.'],
+  'v40.7': ['강조색 설정에 적용된 색의 정확한 16진수 코드를 보여 주는 실시간 미리보기 바가 생겼습니다. 선택이 바뀔 때마다 바로 확인할 수 있습니다.'],
+  'v40.6': [
+    '&laquo;화면에서 가져오기&raquo; 기능 제거.',
+    '강조색 프리셋을 Material 3 Expressive의 최대 채도로 조정했습니다. 깊고 선명한 실제 네온 색상이며 회색은 여전히 절제되어 있습니다.'
+  ],
+  'v40.5': ['강조색 팔레트를 Material 3 Expressive 스타일로 다시 조정해 색상이 더 생생해졌습니다.'],
+  'v40.4': ['&laquo;내 기기와 일치시키기&raquo;가 실제 시스템 색상 (Chrome의 oklch/color() 출력 포함)을 읽고 운영체제 텍스트 선택 색상도 확인하여, 기기의 실제 동적 강조색이 적용되도록 했습니다.'],
+  'v40.3': [
+    '모든 강조색을 Material You의 톤 스타일 (차분한 중간 톤과 부드러운 컨테이너 톤)에 맞춰 다시 조정했습니다.',
+    '&laquo;내 기기와 일치시키기&raquo;가 시스템 선택 색상도 대안으로 읽어들여, 더 많은 브라우저와 프로필에서 동작합니다.'
+  ],
+  'v40.2': ['강조색 설정에 새 버튼 &laquo;내 기기와 일치시키기&raquo;를 추가했습니다 (Chrome 150 이상, 설치된 앱). 시스템 강조색을 읽어 적용하고 확인 알림을 보여 줍니다.'],
+  'v40.1': ['배경화 갤러리를 제거했습니다 (갤러리에 저장된 배경은 삭제되며, 직접 불러온 배경은 계속 사용할 수 있습니다).'],
+  'v40.0': ['강조색 선택기: 사용자 색상에 16진수 입력란 (3자리 또는 6자리로 원하는 색 입력)과 복사 버튼을 추가했습니다. 데스크톱과 모바일에서 완전히 같은 배치입니다.'],
+  'v39.9': ['룸 채팅: 룸 노트가 이제 기록이 있는 채팅 패널에 표시됩니다 (룸마다 60개 메시지를 보관하며, 다시 들어오면 복원됩니다). 공개 노트는 로그에 게시되고, 비공개 노트는 계속 바로 클립보드로 복사됩니다. 메시지를 눌러 복사할 수 있습니다.'],
+  'v39.8': [
+    '최근 룸: 참가했던 최근 6개 룸이 색상과 함께 홈 화면에 한 번의 탭으로 보이는 칩으로 표시됩니다. 지우는 버튼도 있습니다.',
+    '내 프로필 보내기: 설정과 사용자 단축키를 일회성 스냅샷으로 룸 전체에 보냅니다. 다른 기기는 즉시 적용합니다.',
+    '배경화 갤러리: 자동으로 밝고 어두운 버전이 바뀌는 내장 그라디언트 6종, 무작위 버튼, 선택형 일일 혼합을 제공합니다.',
+    '검색: 복사한 단축키가 검색 메뉴에 &laquo;최근 복사함&raquo;으로 남아 검색 기록과 함께 나타납니다.'
+  ],
+  'v39.7': ['모바일 애니메이션도 데스크톱과 같은 기본 CSS를 사용합니다. 터치 기기 규칙이 더 이상 전환을 전체적으로 끄지 않습니다. 둘러보기 손전등과 탭이 단계 사이를 부드럽게 이동하고 테마와 배경 전환이 페이드됩니다 (스마트폰에서도).'],
+  'v39.6': ['모바일도 데스크톱과 같은 부드러운 테마와 배경 전환을 갖고 사이트 둘러보기 단계 사이 애니메이션이 적용됩니다 (터치 기기에서도).'],
+  'v39.5': ['AirDrop과 Quick Share: 룸 코드 옆의 &laquo;공유&raquo; 버튼이 휴대폰의 공유 시트를 열며 (Apple 기기에서는 AirDrop) 한 번의 탭으로 들어가는 링크를 제공합니다. 다른 기기에서는 탭하기만 하면 룸에 참여합니다.'],
+  'v39.4': ['버전 알약의 발광과 반짝임이 이제 시스템에서 &laquo;모션 줄이기&raquo;가 켜져 있거나 설정에서 애니메이션을 꺼도 데스크톱에서 재생됩니다. 장식이 아니라 업데이트 신호로 처리하기 때문입니다.'],
+  'v39.3': ['버전 알약의 발광과 설정 배지가 데스크톱에서 안정적으로 표시됩니다. 실행 중인 버전은 시작할 때 항상 며칠짜리 새 강조 기간을 얻으므로 업데이트 알림을 건너뛰어도 마찬가지입니다.'],
+  'v39.2': ['알약의 새 버전 발광이 한 번 본 뒤 영영 사라지지 않습니다. 강조가 며칠 동안 유지되고 방문할 때마다 다시 나타납니다.'],
+  'v39.1': ['색상 견본이 이제 보입니다. 견본 (룸 색상, 테마와 강조색 견본)이 보이지 않는 빈 요소가 아니라 눈에 보이는 원으로 그려집니다.'],
+  'v39': [
+    'Ring 이제 벨에 짧은 메시지를 붙일 수 있습니다. 울리는 기기가 이를 듣게 되고 클립보드로 복사합니다.',
+    '배터리 알림: 기기 배터리가 25퍼센트를 다시 넘으면 &laquo;복구&raquo; 알림을 받고, 배터리 알림을 켜거나 끌 수 있습니다.',
+    '노트 필드 옆의 &laquo;대상:&raquo; 선택기로 노트를 특정 기기 한 대에만 보낼 수 있습니다.',
+    '각 룸에 색상 라벨을 붙여 룸을 한눈에 구분할 수 있습니다.',
+    '오프라인 동기화 코드는 이제 미리 보기 (기기, 시간, 설정과 단축키 개수)를 보여 주고 가져오기 전에 확인을 요청합니다.'
+  ],
+  'v38.1': ['모바일에서 정보 탭을 눌러도 섹션이 자동으로 펼쳐지지 않습니다. 섹션 제목을 눌러 펼치세요.'],
+  'v38': ['모바일에서 정보 탭을 열어도 동기화 안내가 자동으로 펼쳐지지 않습니다. &laquo;라이브 룸과 오프라인 동기화&raquo; 섹션을 눌러 여세요.'],
+  'v37': ['가이드에 <strong>라이브 룸</strong>과 <strong>오프라인 동기화 코드</strong> 전체 안내가 추가되었고 모바일에서도 이용할 수 있습니다.'],
+  'v36': ['로그인 영역의 버튼 이름이 <strong>스캔</strong>으로 바뀌었습니다 (QR을 읽으려고 카메라나 파일 선택기를 엽니다). 룸 코드를 보여 주는 <strong>QR</strong> 버튼과 혼동되지 않도록 하기 위함입니다.'],
+  'v35': ['수정: 룸과 오프라인 코드의 QR 코드가 빈 상자 대신 올바르게 표시됩니다.'],
+  'v34': [
+    '<strong>기기 부르기</strong> &mdash; 다른 각 기기에는 벨을 울리고 진동시키는 Ring 버튼이 있어 휴대폰을 찾을 수 있습니다.',
+    '<strong>노트 보내기</strong> &mdash; 연결된 모든 기기에 텍스트를 공유합니다. 즉시 나타나고 해당 기기의 클립보드로 복사됩니다.',
+    '<strong>배터리 감시</strong> &mdash; 연결된 기기 배터리가 20퍼센트 아래로 내려가면 알림을 받습니다.',
+    '<strong>기기 이름 바꾸기</strong> &mdash; 기기 이름을 누르면 원하는 이름을 붙일 수 있습니다.',
+    '<strong>스캔해서 참여</strong> &mdash; 호스트가 룸 코드의 QR을 띄울 수 있습니다. 카메라로 스캔하거나 오프라인 동기화 코드를 스캔하세요.',
+    '<strong>보호된 룸</strong> &mdash; &laquo;이 룸 보호&raquo;를 켜고 암호 구절을 정하면 룸의 모든 데이터가 암호화되어 암호 구절을 아는 구성원만 읽을 수 있습니다.',
+    '<strong>최근 접속</strong> &mdash; 각 기기가 이제 온라인 상태인 시간을 보여 줍니다.'
+  ],
+  'v33': ['연결된 기기들은 충전 중을 포함해 <strong>배터리 잔량</strong>도 공유하며 룸 안에서 실시간으로 갱신됩니다.'],
+  'v32': ['라이브 룸이 무작위 이름 대신 각 기기의 실제 이름 (예: &laquo;Mi 9T Pro&raquo;)을 보여 줍니다.'],
+  'v31': ['라이브 룸이 연결된 각 기기를 이름으로 보여 주며, 이 기기에는 초록 점이 전체 개수와 함께 표시됩니다.'],
+  'v30': [
+    '<strong>라이브 룸</strong> &mdash; 먼저 사용자 설정과 단축키를 실시간으로 동기화하려면:<ol><li>설정이 있는 기기에서 <strong>설정 &rarr; 라이브 룸</strong>을 열고 <strong>룸 시작</strong>을 누릅니다. AK-XXX-YYY 같은 룸 코드가 나타납니다.</li><li>이 코드를 다른 기기들에 보내세요 (복사하거나 원하는 방식으로 공유하면 됩니다).</li><li>받는 각 기기에서 <strong>설정 &rarr; 라이브 룸</strong>을 열고 같은 코드를 입력한 뒤 <strong>룸 참여</strong>를 누릅니다.</li></ol>',
+    '<strong>오프라인 동기화 코드</strong> &mdash; 다음으로 인터넷이 없을 때 한 번만 옮길 때 사용합니다:<ol><li><strong>설정 &rarr; 오프라인 동기화 코드</strong>를 열고 <strong>코드 만들기</strong>를 누릅니다. 코드를 복사하거나 나타나는 QR 코드를 스캔합니다.</li><li>다른 기기에서 <strong>설정 &rarr; 오프라인 동기화 코드</strong>를 열고 코드를 붙여넣은 뒤 <strong>코드 적용</strong>을 누릅니다.</li></ol>'
+  ],
+  'v29': ['수정: <strong>모바일</strong>에서 버전 배지를 누르면 터치 기기 애니메이션 초기화로 막히지 않고 매번 무작위 바운스/회전/압축 애니메이션이 실행됩니다.'],
+  'v28': ['모바일: 사용자 설정 옆의 설정 탭은 이제 <strong>정보</strong>만 남습니다 (가이드는 데스크톱에만 있음). 누르면 정보 섹션이 자동으로 열립니다.'],
+  'v27': ['수정: <strong>새 버전</strong> 직후 페이지를 열어도 몇 초 뒤에 예고 없는 재로드로 초기화되지 않습니다. 이제 업데이트가 백그라운드에서 적용됩니다. 새로고침 버튼과 &laquo;업데이트 전에 묻기&raquo; 옵션은 그대로 필요할 때 새로고침합니다.'],
+  'v26.9': ['재미있는 기능: <strong>버전 배지</strong>를 누를 때마다 무작위 바운스/회전/압축 애니메이션이 실행되고, 새 버전이 강조되면 <strong>반짝임</strong>이 일어나며, 정보 섹션은 더 빨리 열도록 설정의 <strong>정보 탭</strong>으로 옮겨졌습니다.'],
+  'v26.8': ['개선: 정보 섹션의 <strong>버전 배지</strong>가 자동으로 갱신되며 새 소식을 엽니다.'],
+  'v26.7': ['개선: 오늘의 팁에 있는 <strong>앱 단축키</strong>가 이제 어느 앱의 단축키인지 먼저 보여 줍니다 (예: <em>Figma - Move Tool - V</em>).'],
+  'v26.6': ['개선: <strong>오늘의 팁</strong>이 플랫폼 탭을 바꾸면 갱신됩니다. Windows, macOS, Linux, ChromeOS, 앱을 고르면 그 섹션의 단축키를 보여 줍니다.'],
+  'v26.5': ['수정: <strong>오늘의 팁</strong>이 하나의 단축키에 머물지 않습니다. 페이지를 열 때마다 보고 있는 플랫폼 탭에서 새 무작위 단축키를 보여 줍니다.'],
+  'v26.4': ['수정: <strong>오늘의 팁</strong>은 이제 보고 있는 플랫폼 탭의 단축키만 보여 줍니다 (예전에는 모든 플랫폼이 섞였습니다). 가이드의 버전 배지도 자동으로 갱신됩니다.'],
+  'v26.3': ['<strong>둘러보기</strong> 버튼 아이콘이 <strong>펼친 책</strong>이 되었습니다.'],
+  'v26.2': ['<strong>둘러보기</strong> 버튼 아이콘이 나침반이 되었고, 둘러보기에 <strong>새로고침 버튼</strong>의 역할을 설명하는 단계가 추가되었습니다.'],
+  'v26.1': ['수정: <strong>다크 &harr; 라이트</strong>를 전환해도 (상단 스위치나 설정에서) <strong>배경 테마</strong>의 색이 벗겨지지 않습니다. 강조색, 바 버튼, 단축키는 배경 테마의 색을 유지합니다.'],
+  'v26': ['새로운 <strong>사이트 둘러보기</strong> &mdash; 상단의 <strong>?</strong> 버튼을 눌러 검색창, 필터, 탭, 단축키 목록, 퀴즈, 설정, 인쇄, 테마 전환을 둘러봅니다. 버튼, 화살표, 점으로 이동할 수 있습니다.'],
+  'v25': ['정보 섹션에서 <strong>GitHub에서 보기</strong> 링크를 제거했습니다.'],
+  'v24.8': ['수정: 모바일의 <strong>업데이트 완료</strong> 알림이 화면 안에 남습니다 (이전에는 작은 기기에서 오른쪽 가장자리로 넘쳤습니다).'],
+  'v24.7.4': ['모서리 둥글림이 모든 테마에서 <strong>16&thinsp;px</strong>로 제한됩니다. 알약, 탭, 검색창, 알림이 완전히 둥글게 보이지 않습니다 (이전에는 최대 100&thinsp;px). 모서리는 여전히 부드럽지만 절제된 모양입니다.'],
+  'v24.7.3': ['수정: <strong>Android</strong>에서 <strong>Wi-Fi 설정 열기</strong>를 눌러도 아무 일도 없었습니다. 최신 Chrome은 사이트가 Android 시스템 설정을 열지 못하게 합니다. 이제 버튼이 안내 문구를 보여 주고 기기 설정 앱에서 Wi-Fi 설정을 열도록 안내합니다 (iOS와 macOS에서는 여전히 바로 엽니다).'],
+  'v24.7.2': ['수정: 설치된 Android 앱 (PWA)에서 <strong>Wi-Fi 설정 열기</strong>를 눌러도 아무 일도 없었습니다. Android는 앱이 시스템 설정을 직접 열지 못하게 합니다. 이제 이유를 설명하고 버튼이 동작하는 Chrome 탭에서 사이트를 열도록 안내합니다.'],
+  'v24.7.1': ['수정: <strong>Android</strong>의 <strong>Wi-Fi 설정 열기</strong>는 JavaScript로 실행한 링크 클릭을 사용해 왔고 Chrome은 <code>intent:</code> 링크를 차단합니다. 이제 사용자 동작으로 시작하는 이동으로 바꿨습니다.'],
+  'v24.7': [
+    '<strong>연결 상태</strong>가 <strong>설정 &rarr; 일반</strong> 맨 위로 옮겨졌습니다 (정보에서 이동).',
+    '<strong>Wi-Fi 설정 열기</strong> 버튼이 이제 <strong>iOS</strong> (설정 앱)와 <strong>macOS</strong> (시스템 설정)에서 실제 Wi-Fi 설정을 엽니다. Android, Windows, Linux에서는 브라우저가 시스템 설정으로 이동할 수 없어 짧은 안내를 보여 줍니다.'
+  ],
+  'v24.6': [
+    '<strong>오프라인</strong> 알약이 <strong>10초</strong> 동안만 표시된 뒤 사라집니다 (연결이 계속 끊겨 있어도 방해하지 않습니다).',
+    '설정 &rarr; 정보가 항상 <strong>연결 상태</strong> (온라인/오프라인)를 보여 주고 <strong>Wi-Fi 설정</strong>을 여는 버튼을 함께 표시합니다. Android, Windows, Linux에서는 짧은 안내가 나옵니다.'
+  ],
+  'v24.5.2': ['수정: Windows가 브라우저의 offline 이벤트를 발생시키지 않고 연결이 끊기거나 (또는 요청이 실패하는 대신 멈추는) 데스크톱에서도 연결 확인이 시간 초과되면 <strong>오프라인</strong> 알약이 표시됩니다. 요청이 완전히 실패한 경우만은 아닙니다.'],
+  'v24.5.1': ['수정: 브라우저 이벤트가 없이 연결이 끊긴 경우에도 (예: DevTools의 오프라인, 일부 모바일 브라우저) <strong>오프라인</strong> 알약이 표시됩니다. 브라우저 신호에만 의존하지 않고 몇 초마다 연결을 직접 확인합니다. 온라인인 동안에는 숨겨져 있습니다.'],
+  'v24.5': [
+    '검색하는 동안 검색어와 일치하는 단어가 결과에서 <strong>강조</strong>됩니다. 어떤 줄이 왜 일치했는지 파악하기 쉽습니다.',
+    '검색창에 입력하면 나타나는 <strong>지우기 버튼 (&times;)</strong>이 생겼습니다.',
+    '연결이 끊기면 작은 <strong>오프라인</strong> 알약이 나타납니다. 탭하면 Anthkeys가 캐시로도 계속 동작하는지 확인할 수 있습니다.'
+  ],
+  'v24.4.1': ['모바일 수정: <strong>동작 &mdash; 단축키</strong> 헤더가 화면 밖으로 사라지지 않습니다. 좁은 화면에서는 단축키 표가 별도의 가로 스크롤 영역으로 바뀌어 고정 헤더가 깨졌습니다. 이제 데스크톱과 마찬가지로 맨 위에 고정됩니다.'],
+  'v24.4': ['홈 화면의 <strong>퀴즈 연속 기록 위젯</strong>을 제거했습니다. 브라우저가 아직 구현하지 않은 웹 표준에 의존해 어느 기기에서도 표시되지 않았기 때문입니다. 연속 기록과 통계는 앱 안에 그대로 있습니다.'],
+  'v24.3': [
+    '<strong>단축키 퀴즈가 통계를 기록</strong>합니다. 연속 기록 (🔥 연속으로 퀴즈를 완료한 날), 최고 점수, 정확도, 플레이 횟수를 보여 줍니다. 기기에만 저장되며 업로드되지 않습니다.',
+    'Android용 홈 화면 <strong>퀴즈 연속 기록 위젯</strong>을 추가했습니다 (웹 앱 위젯: 실험 기능, Chrome과 Firefox에 순차 제공, iOS에서는 사용할 수 없음). 연속 기록과 통계를 보여 주고 탭하면 퀴즈가 열립니다.'
+  ],
+  'v24.2.1': ['모바일 수정: 검색창을 누르면 정보 페이지가 열릴 수 있었습니다. 설정 버튼 옆에 숨겨진 &laquo;새 소식&raquo; 알림이 계속 누를 수 있는 상태로 검색창 위에 겹쳐 있었습니다. 이제 보이는 동안에만 반응합니다.'],
+  'v24.2': [
+    '새로운 <strong>수정자 필터</strong>: 필터 메뉴에서 키 (Ctrl, Shift, Alt, Win, Cmd 등)를 고르면 그 키를 쓰는 단축키만 보여 줍니다. 선택지는 플랫폼에 따라 달라집니다.',
+    '스크롤할 때 단축키 목록 위에 <strong>맨 위로 가기 버튼</strong>이 떠 있습니다. 탭하면 바로 위로 이동합니다.'
+  ],
+  'v24.1': ['<strong>동작 &mdash; 단축키</strong> 바가 스크롤 중에도 목록 맨 위에 고정됩니다. 모바일과 Safari에서는 이전에 화면 밖으로 사라졌습니다.'],
+  'v23.9': ['모바일 도움말과 팁 팝업을 제거했습니다. 데스크톱 단축키만 나열하고 있었기 때문입니다. 도움말은 데스크톱 설정에 남아 있으며 <kbd>?</kbd>로 바로 이동할 수 있습니다.'],
+  'v23.8': ['모바일에서는 도움말이 설정에 없습니다. 페이지를 가볍게 유지하려고 숨겨 두었습니다. <kbd>?</kbd>를 누르면 팝업으로 열립니다.'],
+  'v23.7': ['도움말과 팁을 데스크톱 <strong>설정</strong> (일반 섹션)으로 옮겼습니다. <kbd>?</kbd>를 누르면 바로 이동합니다.'],
+  'v23.6': [
+    '20개 언어가 모두 완전 번역되었습니다. 퀴즈, 클라우드 동기화, 가이드 같은 새 기능에서 영어로 넘어가는 일이 없습니다.',
+    '모바일에서는 탭 대신 길게 눌러 단축키를 복사합니다. 스크롤 중 실수로 복사되는 일이 없어졌습니다.',
+    '필터 알약이 모바일에서도 데스크톱과 같이 강조색을 사용하며, 즐겨찾기를 선택하면 그것만 강조됩니다.',
+    '모바일 상단 바의 다섯 버튼을 둘러싼 테두리를 없앴습니다. 이제 페이지와 하나로 어울립니다.',
+    '퀴즈 버튼에 새 번개 아이콘이 생겼고, 답변은 원시 키 이름 대신 알아보기 쉬운 이름을 보여 줍니다.',
+    '수정: 업데이트 후 앱 JavaScript가 로드되지 않아 사이트가 반응하지 않을 수 있었습니다.'
+  ],
+  'v23.5': [
+    '필터, 즐겨찾기, 비교, 접기 동작을 하나의 간결한 <strong>필터</strong> 메뉴로 모았습니다. 모바일에서 단축키 목록에 쓸 공간이 늘었습니다.',
+    '새 소식 페이지, 버전 배지, 업데이트 설정이 설정의 새 <strong>정보</strong> 섹션으로 옮겨졌습니다.',
+    '업데이트 알림이 이제 <strong>설정</strong> 버튼을 통해 표시됩니다. 뉴스를 보기 전까지 톱니바퀴 아이콘에 배지가 붙습니다.'
+  ],
+  'v23.4': ['상단 바의 도움말 버튼 <kbd>?</kbd>를 제거했습니다. <kbd>?</kbd>를 누르면 도움말이 열립니다.'],
+  'v23.3': [
+    '자동 업데이트 후 버전 배지가 켜져 다음 실행 때 새 버전을 알아챌 수 있습니다.',
+    '기본 배경 사이를 바꿔도 다크 모드가 유지됩니다. 새 배경도 어둡게 처리됩니다.',
+    '모바일에서 플랫폼 바 (Windows, macOS, Linux, ChromeOS)가 데스크톱과 같은 모습이 되었습니다.'
+  ],
+  'v23.2': [
+    '고급/기본 전환을 제거했습니다. 모든 단축키를 함께 보여 줍니다.',
+    '모바일에서 상단 바 버튼이 깔끔한 2&times;3 격자로 정렬되었습니다.',
+    '기본 배경은 계속 적용되며 다크 모드로 바꾸면 올바르게 어두워집니다.',
+    '오버레이 (설정, 가이드, 퀴즈)가 모바일의 고정 탭을 덮습니다.'
+  ],
+  'v23.1': ['배경이 다크 모드에 맞춰 최적화되었습니다. 다크 모드로 바꾸면 직접 올린 이미지와 기본 배경 (바다, 숲, 노을 등) 모두 어둡게 되고 채도를 낮춰 판이 읽기 편해집니다.'],
+  'v23': [
+    '새로운 &laquo;비교&raquo; 모드: 두 번째 플랫폼을 골라 서로 다른 단축키만 볼 수 있습니다.',
+    '시간대 (19시부터 7시까지 다크)에 따라 바뀌는 자동 테마.',
+    '<kbd>?</kbd>를 누거나 <kbd>?</kbd> 버튼을 눌러 빠른 가이드와 팁을 확인하세요.',
+    '이 페이지의 모든 항목에 출시일을 추가했습니다.'
+  ],
+  'v22': [
+    '수정: 좁은 휴대폰에서 키 안내 표가 잘렸습니다. 이제 가로로 스크롤되어 모든 열에 접근할 수 있습니다.',
+    '검색창과 카테고리 알약은 &laquo;새 소식&raquo; 페이지에서 쓰이지 않으므로 숨겨 두었습니다.'
+  ],
+  'v21': [
+    '키 안내에 닫기 버튼이 생겨 패널 안에서 접을 수 있습니다. 스위치가 화면 밖으로 스크롤될 수 있는 모바일에서 유용합니다.',
+    '터치 기기에서 키 안내 버튼의 누름 반응을 개선했습니다.'
+  ],
+  'v20.1': [
+    '버전 번호가 패치 버전을 지원합니다. 바닥의 배지가 v20.1 등을 보여 주고 업데이트 감지가 올바르게 처리합니다.',
+    '이 페이지에 없던 v20 항목을 추가했습니다.'
+  ],
+  'v20': ['Anthkeys 안에 새로운 &laquo;새 소식&raquo; 페이지를 만들었습니다. 업데이트 알림의 링크와 바닥의 버전 배지가 GitHub 대신 여기를 엽니다.'],
+  'v19': ['버전 기록 기능이 나오기 전 버전에서 업데이트해도 업데이트 배너가 나타납니다 (이전 버전은 오프라인 캐시로 감지합니다).'],
+  'v18': [
+    '자동 업데이트 모드에서 새 버전이 도착하면 &laquo;vX로 업데이트됨 - 새 소식&raquo; 알림이 나타납니다.',
+    '업데이트 배너가 이제 서비스 워커 변경뿐 아니라 콘텐츠 업데이트에도 반응합니다.',
+    '바닥의 버전 배지를 누를 수 있습니다. 눌러서 뉴스를 확인하세요.',
+    '오프라인 캐시가 더 작아졌습니다 (버전 없는 파일을 버리지 않음).'
+  ],
+  'v16': ['바닥에 현재 빌드 번호를 보여 주는 버전 배지를 추가했습니다.'],
+  'v15': ['서비스 워커를 바탕으로 한 새로고침 버튼과 설정 (자동 업데이트 / 묻고 업데이트)을 추가했습니다.'],
+  'v14': ['카테고리 접기와 펼치기가 현재 검색어를 따르도록 했습니다.'],
+  'v13': ['네트워크 우선 페이지 캐시를 적용해 업데이트가 바로 반영되고 데스크톱 스크롤이 훨씬 매끄러워졌습니다.'],
+  'v12': ['검색과 필터가 현재 열려 있는 탭에만 적용됩니다.'],
+  'v11': ['PWA 설치 지원, 접근성 라벨, 모션 줄이기 지원, Gmail과 YouTube 단축키, SEO 개선.'],
+  'v10': [
+    '수정: 카테고리 필터가 카테고리 제목 줄과 일치하면 모든 단축키를 숨길 수 있었습니다. 이제 필터한 줄만 숨깁니다.',
+    '모바일에서 배경이 화면 전체를 채웁니다.'
+  ],
+  'v9': ['Windows가 기본 플랫폼 탭이 되고 탭 순서가 더 분명해졌습니다.'],
+  'v8': [
+    '퀴즈 난이도와 오늘의 팁.',
+    '오프라인 캐시 외에 모바일 스크롤이 훨씬 매끄러워졌습니다.',
+    '검색과 필터가 모든 플랫폼에서 동시에 동작하고 운영체제 이름이 굵게 표시됩니다.'
+  ],
+  'v7': ['디자인 스타일을 없애고 Material 3만 남겼습니다.'],
+  'v6': [
+    '디자인 스타일을 Material 3으로 정리하고 기본 테마로 돌아가는 &laquo;배경 제거&raquo; 버튼을 추가했습니다.',
+    '업데이트를 더 빨리 받도록 캐시 제어 헤더를 추가했습니다.'
+  ],
+  'v5': ['14개 언어 모두 페이지 제목을 &laquo;단축키&raquo; 하나로 단순화했습니다.'],
+  'v4': [
+    '단축키 퀴즈 모드: 단축키나 동작을 맞혀 연습하고 GitHub Gist로 클라우드 동기화도 지원합니다.',
+    '강조색 견본, 테마 전환, 모바일 배경에 대한 대규모 수정.'
+  ],
+  'v3': ['저장해 다시 쓸 수 있는 강조색 프리셋과 업데이트가 확실히 반영되도록 하는 캐시 무효화를 추가했습니다.'],
+  'v2': ['라이트와 다크 테마, 강조색, 단축키 참고 번역을 추가했습니다.'],
+  'v1': ['Anthkeys의 첫 버전입니다. Windows, macOS, Linux, ChromeOS의 일상적인 키보드 단축키를 한 페이지에 모았습니다.']
+};
+
+I18N_WN.pl = {
+  'v52.1': [
+    'Nowość: strona &laquo;Co nowego&raquo; jest teraz w pełni przetłumaczona we wszystkich 20 językach — każda informacja o wydaniu wyświetla się w Twoim języku.'
+  ],
+  'v52': [
+    'Poprawka: wersja v51 mogła uniemożliwiać wczytanie aplikacji; duński przekład zawierał niesescapowany apostrof, który unieważniał cały plik językowy. Plik jest teraz poprawnie przetwarzany i wszystkie 20 języków znów się ładuje.'
+  ],
+  'v51': [
+    'Zakończono tłumaczenia dla wszystkich 20 języków — ustawienia, pokoje na żywo, synchronizacja offline i przewodnik synchronizacji są teraz w pełni przetłumaczone (najnowsze pozycje były tylko po angielsku).',
+    'Nowość: jeśli Anthkeys wydaje się wolny, baner umożliwia włączenie trybu wydajności jednym dotknięciem. Możesz go zamknąć i więcej się nie pojawi.'
+  ],
+  'v50.7': ['Tryb wydajności został przeniesiony do zakładki Ogólne w ustawieniach.'],
+  'v50.6': ['Ikony w górnym pasku znów są kolorowymi emoji, tak jak w v50: książka, drukarka, błyskawica, księżyc/słońce, odświeżanie i koło zębate.'],
+  'v50.5': ['Ikony w górnym pasku znów używają koloru akcentu (domyślnie), zamiast wyglądać na białe lub szare.'],
+  'v50.4': ['Usunięto funkcję barwienia ikony kolorem akcentu: favicon, ikona ekranu głównego oraz ikona zainstalowanej aplikacji PWA znów używają ikony domyślnej (kolorowanie ikony kolorem akcentu ma sens tylko w aplikacjach natywnych).'],
+  'v50.3': [
+    'Ikony w górnym pasku przebudowano tak, by wyświetlały się niezawodnie na wszystkich urządzeniach (przewodnik, druk, quiz, motyw, odświeżanie i ustawienia używają teraz prawdziwych ikon).',
+    'Ikona przełącznika motywu znów jest prawdziwą ikoną i odpowiada stanowi jasnemu lub ciemnemu.'
+  ],
+  'v50.2': ['Naprawiono błąd z v50.1, przez który ikony górnego paska i ustawienia nie działały przy starcie.'],
+  'v50.1': [
+    'Nowy tryb wydajności w sekcji Dostosuj: wyłącza efekty rozmycia i animacje, które mogą spowalniać aplikację w Windows.',
+    'Górny pasek używa teraz prawdziwych ikon, a nowe ustawienie Ikony pozwala je pomalować kolorem akcentu.',
+    'Zakładka Aplikacje działa jak zakładka Linux: kliknij w dowolnym miejscu, aby wybrać aplikację (VS Code, Figma, Gmail i inne), a zakładka pokaże Twój wybór, na przykład &laquo;Aplikacje - Gmail&raquo;.',
+    'Usunięto pole szesnastkowe pod przyciskiem Dostosuj: kolory wybiera się tylko suwakami.',
+    'Podwojono opcje akcentu z gradientem i dodano osiem nowych połączeń dwóch kolorów.'
+  ],
+  'v50': [
+    'Kliknięcie w dowolnym miejscu zakładki Linux otwiera listę dystrybucji, a zakładka pokazuje teraz Twój wybór, na przykład &laquo;Linux - Ubuntu (GNOME)&raquo;.',
+    'Wybór koloru niestandardowego został przebudowany: okrągła próbka otwiera suwaki odcienia, nasycenia i jasności (z wartością nad każdym z nich), zaczynając od bieżącego koloru, a nie od 0/0/0.',
+    'Nowa sekcja Gradientowe akcenty: osiem gradientów dwukolorowych gotowych do zastosowania jako kolor akcentu.',
+    'Ustawienia wstępne akcentu dopracowano do czystszej i wyraźniejszej palety.'
+  ],
+  'v40.9': ['Lista dystrybucji jest teraz na zakładce Linux: kliknij małą strzałkę na zakładce, aby wybrać swoją dystrybucję.'],
+  'v40.8': ['Zakładka Linux ma teraz listę dystrybucji (Ubuntu, Debian, Fedora, Arch, Mint, KDE i inne), która dopasowuje skróty systemowe do domyślnych ustawień każdej z nich i zapamiętuje Twój wybór.'],
+  'v40.7': ['Ustawienia akcentu pokazują teraz pasek podglądu na żywo z dokładnym kodem szesnastkowym zastosowanego koloru, więc od razu widzisz każdą zmianę.'],
+  'v40.6': [
+    'Usunięto funkcję &laquo;Pobierz z ekranu&raquo;.',
+    'Ustawienia wstępne akcentu ustawiono na pełną intensywność stylu Material 3 Expressive: głębokie, żywe kolory, prawdziwy neon (szarości pozostają stonowane).'
+  ],
+  'v40.5': ['Paletę akcentu ponownie zrównoważono w stylu Material 3 Expressive: bardziej żywe barwy tonalne.'],
+  'v40.4': ['&laquo;Dopasuj do mojego urządzenia&raquo; odczytuje teraz prawdziwy kolor systemu (także wynik oklch/color() w Chrome) i bada również kolor zaznaczenia tekstu systemu, dzięki czemu stosowany jest Twój rzeczywisty dynamiczny kolor akcentu.'],
+  'v40.3': [
+    'Wszystkie kolory akcentu ponownie zrównoważono do tonacji Material You (stonowane średnie tony z miękkimi tonami kontenerowymi).',
+    '&laquo;Dopasuj do mojego urządzenia&raquo; odczytuje teraz także systemowy kolor zaznaczenia jako wariant zapasowy, więc działa w większej liczbie przeglądarek i profili.'
+  ],
+  'v40.2': ['Ustawienia koloru akcentu: nowy przycisk &laquo;Dopasuj do mojego urządzenia&raquo; odczytuje kolor akcentu systemu (Chrome 150+, zainstalowana aplikacja) i stosuje go, z potwierdzeniem.'],
+  'v40.1': ['Usunięto galerię tapet (zapisywane w galerii tła są kasowane; wczytane tło nadal działa).'],
+  'v40.0': ['Wybór koloru akcentu: kolor niestandardowy ma teraz pole szesnastkowe (wpisz dowolny kolor, 3 lub 6 znaków) oraz przycisk Kopiuj — identyczny układ na komputerze i telefonie.'],
+  'v39.9': ['Czat w pokoju: notatki pokoju pojawiają się teraz w panelu Czat z historią (60 wiadomości na pokój, odtwarzanych po powrocie). Notatki publiczne trafiają do dziennika, a prywatne nadal są kopiowane wprost do schowka. Dotknij wiadomości, aby ją skopiować.'],
+  'v39.8': [
+    'Ostatnie pokoje: sześć ostatnich pokoi, w których brałeś udział, pojawia się na ekranie głównym jako jednodotkowe przyciski w kolorach każdego pokoju, plus przycisk ich czyszczenia.',
+    'Wyślij mój profil: wysyła Twoje ustawienia i własne skróty do całego pokoju jako jednorazową migawkę; pozostałe urządzenia stosują ją natychmiast.',
+    'Galeria tapet: sześć wbudowanych gradientów z automatycznymi wariantami jasnym i ciemnym, przycisk Losowy oraz opcjonalna codzienna mieszanka.',
+    'Wyszukiwanie: skopiowane skróty są zapamiętywane jako &laquo;Ostatnio skopiowane&raquo; w menu wyszukiwania, razem z historią wyszukiwania.'
+  ],
+  'v39.7': ['Animacje na telefonie korzystają teraz z tej samej podstawowej karty stylów co na komputerze: reguła dla urządzeń dotykowych nie wyłącza już globalnie przejść. Reflektor przewodnika i zakładki płynnie przeskakują między krokami, a zmiana motywu i tła zanika, także na telefonach.'],
+  'v39.6': ['Telefon dorównał komputerowi: zmiany motywu i tła są płynne, a przewodnik po stronie animuje się między krokami również na urządzeniach dotykowych.'],
+  'v39.5': ['AirDrop i Quick Share: przycisk &laquo;Udostępnij&raquo; obok kodu pokoju otwiera arkusz udostępniania telefonu (AirDrop na Apple) z jednorazowym linkiem wejścia: drugie urządzenie wystarczy dotknąć, aby dołączyć do pokoju.'],
+  'v39.4': ['Światło i migotanie tabletki wersji animują się teraz na komputerze nawet przy włączonej systemowej opcji ograniczania ruchu lub wyłączonych animacjach w ustawieniach: jest traktowane jak sygnał aktualizacji, a nie ozdoba.'],
+  'v39.3': ['Światło tabletki wersji i znaczek w ustawieniach są teraz niezawodnie widoczne na komputerze: uruchomiona wersja zawsze otrzymuje przy starcie nowe okno wyróżnienia na kilka dni, nawet jeśli powiadomienie o aktualizacji zostało pominięte.'],
+  'v39.2': ['Światło i migotanie nowej wersji na tabletce nie znikają już na zawsze po jednym spojrzeniu: wyróżnienie trwa kilka dni i wraca przy każdej wizycie.'],
+  'v39.1': ['Kolorowe próbki są wreszcie widoczne: próbki (kolor pokoju oraz próbki motywu i akcentu) są rysowane jako widoczne koła, a nie puste, niewidoczne elementy.'],
+  'v39': [
+    'Ring pozwala teraz dołączyć krótką wiadomość do dzwonka: urządzenie, które dzwoni, słyszy ją i kopiuje do schowka.',
+    'Alerty baterii: otrzymujesz powiadomienie &laquo;odzyskano&raquo;, gdy urządzenie znów przekroczy 25 procent, a alarm baterii możesz włączyć lub wyłączyć.',
+    'Notatki można kierować do jednego urządzenia za pomocą listy &laquo;Do:&raquo; obok pola notatki.',
+    'Każdy pokój może mieć kolorową etykietę, aby odróżnić pokoje na pierwszy rzut oka.',
+    'Kody synchronizacji offline pokazują teraz podgląd (urządzenie, godzina, liczba ustawień i skrótów) i proszą o potwierdzenie przed importem.'
+  ],
+  'v38.1': ['Na telefonie dotknięcie zakładki Informacje nie rozwija już automatycznie sekcji: dotknij nagłówka sekcji, aby ją otworzyć.'],
+  'v38': ['Na telefonie otwarcie zakładki Informacje nie rozwija już automatycznie instrukcji synchronizacji: dotknij sekcji &laquo;Pokoje na żywo i synchronizacja offline&raquo;, aby ją otworzyć.'],
+  'v37': ['Przewodnik zawiera teraz pełne instrukcje <strong>Pokojów na żywo</strong> i <strong>Kodów synchronizacji offline</strong> i jest dostępny również na telefonie.'],
+  'v36': ['Przycisk w obszarze logowania nazywa się teraz <strong>Skanuj</strong> (otwiera aparat lub wybór plików, aby odczytać kod QR), więc nie jest mylony z przyciskiem <strong>QR</strong>, który pokazuje kod pokoju.'],
+  'v35': ['Poprawiono: kody QR pokoju i kodu offline są teraz wyświetlane poprawnie, zamiast pustego pola.'],
+  'v34': [
+    '<strong>Zadzwoń do urządzenia</strong> &mdash; każde inne urządzenie ma przycisk Ring, który włącza dzwonek i wibracje, dzięki czemu znajdziesz swój telefon.',
+    '<strong>Wyślij notatkę</strong> &mdash; udostępnij tekst każdemu podłączonemu urządzeniu; pojawi się natychmiast i trafi do jego schowka.',
+    '<strong>Monitorowanie baterii</strong> &mdash; dostaniesz alert, gdy podłączone urządzenie spadnie poniżej 20 procent baterii.',
+    '<strong>Zmień nazwy urządzeń</strong> &mdash; dotknij nazwy urządzenia, aby nadać mu własną.',
+    '<strong>Dołącz przez skanowanie</strong> &mdash; gospodarz może pokazać kod QR pokoju; zeskanuj go aparatem (albo zeskanuj kod synchronizacji offline).',
+    '<strong>Chronione pokoje</strong> &mdash; włącz &laquo;Chroń ten pokój&raquo; i ustaw hasło; wszystkie dane pokoju zostaną zaszyfrowane, więc odczyta je tylko członek znający hasło.',
+    '<strong>Widziano</strong> &mdash; każde urządzenie pokazuje teraz, od jak dawna jest online.'
+  ],
+  'v33': ['Podłączone urządzenia udostępniają też <strong>poziom baterii</strong> (także podczas ładowania), aktualizowany w pokoju w czasie rzeczywistym.'],
+  'v32': ['Pokoje na żywo pokazują teraz prawdziwą nazwę każdego urządzenia (na przykład &laquo;Mi 9T Pro&raquo;), a losową nazwę wymyśloną przez samo urządzenie.'],
+  'v31': ['Pokoje na żywo pokazują teraz każde podłączone urządzenie po nazwie, z zieloną kropką przy tym urządzeniu i liczbą wszystkich.'],
+  'v30': [
+    '<strong>Pokoje na żywo</strong> &mdash; aby najpierw zsynchronizować ustawienia i własne skróty w czasie rzeczywistym:<ol><li>Na urządzeniu z Twoimi ustawieniami otwórz <strong>Ustawienia &rarr; Pokoje na żywo</strong> i dotknij <strong>Rozpocznij pokój</strong>. Pojawi się kod pokoju, na przykład AK-XXX-YYY.</li><li>Wyślij ten kod pozostałym urządzeniom (skopiuj lub udostępnij, jak wolisz).</li><li>Na każdym odbierającym urządzeniu otwórz <strong>Ustawienia &rarr; Pokoje na żywo</strong>, wpisz ten sam kod i dotknij <strong>Dołącz do pokoju</strong>.</li></ol>',
+    '<strong>Kody synchronizacji offline</strong> &mdash; następnie do jednorazowego przesyłania, gdy nie ma internetu:<ol><li>Otwórz <strong>Ustawienia &rarr; Kod synchronizacji offline</strong> i dotknij <strong>Utwórz kod</strong>. Skopiuj kod lub zeskanuj pojawiający się kod QR.</li><li>Na drugim urządzeniu otwórz <strong>Ustawienia &rarr; Kod synchronizacji offline</strong>, wklej kod i dotknij <strong>Zastosuj kod</strong>.</li></ol>'
+  ],
+  'v29': ['Poprawiono: na <strong>telefonie</strong> dotknięcie znaczka wersji uruchamia losową animację odbicia, obrotu i ściskania, zamiast być blokowane przez reset animacji urządzeń dotykowych.'],
+  'v28': ['Telefon: zakładka ustawień obok Dostosuj nazywa się teraz tylko <strong>Informacje</strong> (przewodnik istnieje tylko na komputerze) i otwiera sekcję Informacje po dotknięciu.'],
+  'v27': ['Poprawiono: otwarcie strony tuż po <strong>nowej wersji</strong> nie resetuje jej już niespodziewanym przeładowaniem kilka sekund później — aktualizacja jest teraz stosowana w tle. Przycisk Odśwież i opcja &laquo;Pytaj przed aktualizacją&raquo; nadal przeładowują na żądanie.'],
+  'v26.9': ['Zabawne: dotknięcie <strong>znacznika wersji</strong> za każdym razem uruchamia losową animację odbicia, obrotu i ściskania, rozświetla się przy wyróżnieniu nowej wersji, a sekcja Informacje została przeniesiona do zakładki <strong>Informacje</strong> w ustawieniach, aby była łatwiej dostępna.'],
+  'v26.8': ['Ulepszenie: <strong>znaczek wersji</strong> w sekcji Informacje aktualizuje się teraz sam i otwiera Co nowego.'],
+  'v26.7': ['Ulepszenie: <strong>skróty aplikacji</strong> w poradzie dnia pokazują teraz najpierw, do której aplikacji należą, na przykład <em>Figma &mdash; Move Tool &mdash; V</em>.'],
+  'v26.6': ['Ulepszenie: <strong>porada dnia</strong> odświeża się po zmianie zakładki platformy: wybór Windows, macOS, Linux, ChromeOS lub Aplikacje pokazuje skrót z tej sekcji.'],
+  'v26.5': ['Poprawiono: <strong>porada dnia</strong> nie utknie już na jednym skrócie: przy każdym wczytaniu strony pokazuje nowy losowy skrót z zakładki platformy, którą oglądasz.'],
+  'v26.4': ['Poprawiono: <strong>porada dnia</strong> pokazuje teraz tylko skróty z zakładki platformy, którą oglądasz (wcześniej mieszały się skróty ze wszystkich platform). Znaczek wersji w przewodniku też odświeża się sam.'],
+  'v26.3': ['Przycisk <strong>przewodnika</strong> pokazuje teraz ikonę <strong>otwartej książki</strong>.'],
+  'v26.2': ['Przycisk <strong>przewodnika</strong> pokazuje teraz ikonę kompasu, a przewodnik zyskał krok wyjaśniający działanie <strong>przycisku odświeżania</strong>.'],
+  'v26.1': ['Poprawiono: przełączanie między <strong>ciemnym a jasnym</strong> (przełącznikiem u góry lub w ustawieniach) nie zdziera już kolorów <strong>motywu tła</strong>: akcent, przyciski paska i klawisze skrótów zachowują kolory motywu, a tło zostaje.'],
+  'v26': ['Nowy <strong>przewodnik po stronie</strong> &mdash; dotknij przycisku <strong>?</strong> u góry, aby przejść po pasku wyszukiwania, filtrach, zakładkach, liście skrótów, quizie, ustawieniach, drukowaniu i przełączniku motywu. Poruszaj się przyciskami, strzałkami lub kropkami.'],
+  'v25': ['Usunięto odnośnik &laquo;Zobacz na GitHubie&raquo; z sekcji Informacje.'],
+  'v24.8': ['Poprawiono: powiadomienie <strong>&laquo;Zaktualizowano&raquo;</strong> na telefonie mieści się teraz na ekranie (wcześniej wychodziło za prawą krawędź na małych urządzeniach).'],
+  'v24.7.4': ['Zaokrąglenie rogów jest teraz ograniczone do <strong>16&thinsp;px</strong> we wszystkich motywach: pigułki, zakładki, paski wyszukiwania i powiadomienia nie są już całkiem okrągłe (wcześniej do 100&thinsp;px). Rogi pozostają miękkie, tylko bardziej stonowane.'],
+  'v24.7.3': ['Poprawiono: <strong>Otwórz ustawienia Wi-Fi</strong> na <strong>Androidzie</strong> nic nie robił: nowsze Chrome nie pozwala stronom otwierać ustawień systemowych Androida. Przycisk pokazuje teraz krótką instrukcję, aby otworzyć ustawienia Wi-Fi w aplikacji Ustawienia urządzenia (na iOS i macOS nadal otwiera je od razu).'],
+  'v24.7.2': ['Poprawiono: w zainstalowanej aplikacji Androida (PWA) dotknięcie <strong>Otwórz ustawienia Wi-Fi</strong> nic nie robiło: Android zabrania aplikacjom otwierania ustawień systemowych bezpośrednio. Teraz przycisk wyjaśnia to i prosi o otwarcie strony w karcie Chrome, gdzie działa.'],
+  'v24.7.1': ['Poprawiono: <strong>Otwórz ustawienia Wi-Fi</strong> na <strong>Androidzie</strong> używał kliknięcia w kotwicę wywoływanego z JavaScript, które Chrome blokuje dla odnośników <code>intent:</code>: teraz nawigację wywołuje gest użytkownika.'],
+  'v24.7': [
+    '<strong>Stan połączenia</strong> znajduje się teraz na górze sekcji <strong>Ustawienia &rarr; Ogólne</strong> (przeniesiony z Informacji).',
+    'Przycisk <strong>Otwórz ustawienia Wi-Fi</strong> otwiera teraz prawdziwe ustawienia Wi-Fi na <strong>iOS</strong> (aplikacja Ustawienia) i <strong>macOS</strong> (Ustawienia systemowe). W systemach Android, Windows i Linux, gdzie przeglądarki nie mogą przejść do ustawień systemu, pokazuje krótkie instrukcje.'
+  ],
+  'v24.6': [
+    'Pigułka <strong>Offline</strong> pozostaje teraz przez <strong>10 sekund</strong>, a potem znika (nie przeszkadza, dopóki połączenie jest naprawdę zerwane).',
+    'Ustawienia &rarr; Informacje zawsze pokazują teraz <strong>stan połączenia</strong> (online lub offline) wraz z przyciskiem otwierającym <strong>ustawienia Wi-Fi</strong>: na iOS prowadzi od razu do aplikacji Ustawienia, a na innych urządzeniach pokazuje krótkie instrukcje.'
+  ],
+  'v24.5.2': ['Poprawiono: na komputerach, gdzie Windows gubi połączenie bez wywoływania zdarzenia <em>offline</em> w przeglądarce (albo żądania zawieszają się zamiast kończyć się błędem), pigułka <strong>Offline</strong> pojawia się także wtedy, gdy sprawdzenie łączności upłynie: nie tylko gdy żądanie całkowicie się nie powiedzie.'],
+  'v24.5.1': ['Poprawiono: pigułka <strong>Offline</strong> pojawia się także wtedy, gdy połączenie znika bez zdarzenia przeglądarki (na przykład &laquo;Offline&raquo; w narzędziach deweloperskich, niektóre przeglądarki mobilne): aplikacja sama sprawdza łączność co kilka sekund, zamiast polegać wyłącznie na sygnałach przeglądarki. Gdy jesteś online, pozostaje ukryta.'],
+  'v24.5': [
+    'Podczas wyszukiwania słowa pasujące do zapytania są teraz <strong>podświetlane</strong> w wynikach: łatwiej zrozumieć, dlaczego dany wiersz pasuje.',
+    'Pole wyszukiwania ma teraz <strong>przycisk czyszczenia (&times;)</strong>, który pojawia się po wpisaniu czegokolwiek.',
+    'Mała pigułka <strong>Offline</strong> pojawia się przy utracie połączenia: dotknij jej, aby potwierdzić, że Anthkeys działa dalej z pamięci podręcznej.'
+  ],
+  'v24.4.1': ['Poprawiono na telefonie: nagłówek <strong>Akcja &mdash; Skrót</strong> nie zjeżdża już z ekranu: na wąskich ekranach tabela skrótów zamieniała się we własny obszar przewijania poziomego, co psuło przypięty nagłówek. Teraz jest przypięty u góry, dokładnie jak na komputerze.'],
+  'v24.4': ['Usunięto <strong>widżet serii quizu na ekranie głównym</strong>: opierał się na standardzie sieciowym, którego przeglądarki jeszcze nie implementują, więc nigdy się nie pojawiał. Twoja seria i statystyki quizu pozostają w aplikacji.'],
+  'v24.3': [
+    '<strong>Quiz skrótów zapisuje teraz Twoją statystykę</strong>: serię dni (🔥 dni z rzędu, kiedy ukończyłeś quiz), najlepszy wynik, dokładność i rozegrane podejścia. Zapisywane lokalnie, nigdy nie są wysyłane.',
+    'Nowy <strong>widżet serii quizu na ekranie głównym</strong> dla Androida (widżety aplikacji internetowych: eksperymentalne, wdrażane w Chrome i Firefoksie; niedostępne na iOS). Pokazuje serię i statystyki; dotknij, aby otworzyć quiz.'
+  ],
+  'v24.2.1': ['Poprawiono na telefonie: dotknięcie paska wyszukiwania mogło otworzyć stronę Informacje: ukryte powiadomienie &laquo;Co nowego&raquo; obok przycisku ustawień było nadal klikalne i nakładało się na pole wyszukiwania. Teraz reaguje tylko, gdy jest widoczne.'],
+  'v24.2': [
+    'Nowy <strong>filtr modyfikatorów</strong>: w menu Filtry wybierz klawisz (Ctrl, Shift, Alt, Win, Cmd i inne), aby pokazać tylko skróty, które go używają. Dostępne opcje zależą od platformy.',
+    'Przycisk <strong>do góry</strong> unosi się nad listę skrótów podczas przewijania: dotknij go, aby natychmiast wrócić na początek.'
+  ],
+  'v24.1': ['Pasek <strong>Akcja &mdash; Skrót</strong> pozostaje teraz przypięty u góry listy podczas przewijania: na telefonie i w Safari wcześniej znikał z ekranu.'],
+  'v23.9': ['Usunięto wyskakujące okno przewodnika i porad na telefonie: wymieniało tylko skróty komputerowe. Przewodnik pozostaje w ustawieniach na komputerze, gdzie <kbd>?</kbd> prowadzi do niego bezpośrednio.'],
+  'v23.8': ['Na telefonie przewodnik nie jest już w ustawieniach: pozostaje ukryty, aby nie obciążać strony. Naciśnij <kbd>?</kbd>, aby otworzyć go jako okno.'],
+  'v23.7': ['Przewodnik i porady przeniesiono do <strong>Ustawień</strong> (sekcja Ogólne) na komputerze: naciśnij <kbd>?</kbd>, aby przejść od razu.'],
+  'v23.6': [
+    'Wszystkie 20 języków jest teraz w pełni przetłumaczonych: nie ma już powrotu do angielskiego przy nowszych funkcjach, takich jak quiz, synchronizacja w chmurze i przewodnik.',
+    'Na telefonie skrót kopiujesz, przytrzymując go, a nie dotykając: koniec z przypadkowymi kopiami podczas przewijania.',
+    'Pigułki filtrów używają Twojego koloru akcentu także na telefonie, tak jak na komputerze; po wybraniu Ulubionych wyróżnia się tylko ono.',
+    'Usunięto obramowanie wokół pięciu przycisków górnego paska na telefonie: teraz wtapiają się w stronę.',
+    'Przycisk quizu ma nową ikonę błyskawicy, a odpowiedzi pokazują czytelne nazwy zamiast surowych klawiszy.',
+    'Poprawiono: skrypt aplikacji mógł nie wczytać się po aktualizacji, przez co strona przestała reagować.'
+  ],
+  'v23.5': [
+    'Filtry, ulubione, porównanie i zwijanie zebrano w jedno zwięzłe menu <strong>Filtry</strong>: na telefonie zostaje więcej miejsca na listę skrótów.',
+    'Strona Co nowego, znaczek wersji i ustawienia aktualizacji przeniesiono do nowej sekcji <strong>Informacje</strong> w ustawieniach.',
+    'Powiadomienia o aktualizacjach pojawiają się teraz przy przycisku <strong>Ustawień</strong>: ikona koła zębatego ma znaczek, dopóki nie spojrzysz na nowości.'
+  ],
+  'v23.4': ['Usunięto przycisk pomocy <kbd>?</kbd> z górnego paska: naciśnij <kbd>?</kbd>, aby i tak otworzyć przewodnik.'],
+  'v23.3': [
+    'Znaczek wersji zapala się po automatycznej aktualizacji, więc zauważysz nową wersję przy następnym uruchomieniu.',
+    'Przełączanie między domyślnymi tapetami zachowuje tryb ciemny: nowa tapeta też jest przyciemniana.',
+    'Na telefonie pasek platform (Windows, macOS, Linux, ChromeOS) wygląda teraz tak samo jak na komputerze.'
+  ],
+  'v23.2': [
+    'Usunięto przełącznik Zaawansowane i Podstawowe: wszystkie skróty są pokazywane razem.',
+    'Na telefonie przyciski górnego paska są teraz uporządkowane w siatkę 2&times;3.',
+    'Domyślne tapety nadal są stosowane i poprawnie przyciemniane po przełączeniu w tryb ciemny.',
+    'Nakładki (ustawienia, przewodnik, quiz) przykrywają przypięte zakładki na telefonie.'
+  ],
+  'v23.1': ['Tapety są optymalizowane pod tryb ciemny: po przełączeniu na ciemny zarówno własne obrazy, jak i domyślne tła (ocean, las, zachód słońca i inne) zostają przyciemnione i odbarwione, dzięki czemu panele pozostają czytelne.'],
+  'v23': [
+    'Nowy tryb &laquo;Porównaj&raquo;: wybierz drugą platformę, aby zobaczyć tylko skróty, które się różnią.',
+    'Motyw automatyczny podążający za porą dnia (ciemny od 19 do 7).',
+    'Naciśnij <kbd>?</kbd> lub dotknij przycisku <kbd>?</kbd>, aby zobaczyć krótki przewodnik i porady.',
+    'Do każdej pozycji na tej stronie dodano daty wydania.'
+  ],
+  'v22': [
+    'Poprawiono: tabela ściągawki z klawiszami była ucinana na wąskich telefonach: teraz przewija się w poziomie, więc wszystkie kolumny są dostępne.',
+    'Pasek wyszukiwania i pigułki kategorii są ukryte na stronie &laquo;Co nowego&raquo;, bo tam nie mają zastosowania.'
+  ],
+  'v21': [
+    'Ściągawka z klawiszami ma teraz przycisk zamknięcia, więc można ją zwinąć z wnętrza panelu: przydatne na telefonie, gdzie przełącznik może zjechać poza ekran.',
+    'Szybsza reakcja na dotknięcie przycisku ściągawki na urządzeniach dotykowych.'
+  ],
+  'v20.1': [
+    'Numery wersji obsługują teraz wersje poprawek: znaczek na dole pokazuje na przykład v20.1, a wykrywanie aktualizacji obsługuje je poprawnie.',
+    'Dodano do tej strony brakującą pozycję v20.'
+  ],
+  'v20': ['Nowa strona &laquo;Co nowego&raquo; w Anthkeys: odnośnik w powiadomieniu o aktualizacji i znaczek wersji na dole otwierają ją tutaj, a nie na GitHubie.'],
+  'v19': ['Baner aktualizacji pojawia się także wtedy, gdy aktualizujesz z wersji sprzed śledzenia wersji (poprzednia wersja jest wykrywana z pamięci offline).'],
+  'v18': [
+    'Pojawia się powiadomienie &laquo;Zaktualizowano do vX &mdash; Co nowego&raquo;, gdy przyjdzie nowa wersja (w trybie automatycznej aktualizacji).',
+    'Baner aktualizacji jest teraz wyzwalany przez aktualizacje treści, a nie tylko zmiany w service workerze.',
+    'Znaczek wersji na dole można kliknąć: dotknij go, aby zobaczyć nowości.',
+    'Lżejsza pamięć offline (nie usuwamy już plików bez wersji).'
+  ],
+  'v16': ['Na dole dodano znaczek wersji pokazujący bieżący numer kompilacji.'],
+  'v15': ['Przycisk odświeżania i preferencja (aktualizuj automatycznie lub pytaj), oparte na service workerze.'],
+  'v14': ['Zwijanie i rozwijanie kategorii respektuje teraz aktywne wyszukiwanie.'],
+  'v13': ['Bufor stron z pierwszeństwem sieci, więc aktualizacje pojawiają się od razu; znacznie płynniejsze przewijanie na komputerze.'],
+  'v12': ['Wyszukiwanie i filtry dotyczą teraz tylko otwartej zakładki.'],
+  'v11': ['Obsługa instalacji PWA, etykiety ułatwień dostępu, obsługa ograniczonego ruchu, skróty Gmail i YouTube, poprawki SEO.'],
+  'v10': [
+    'Poprawiono: filtr kategorii mógł ukryć wszystkie skróty, gdy pasował do wiersza nagłówka kategorii: teraz ukrywa tylko wiersze, które filtrowałeś.',
+    'Na telefonie tło wypełnia cały ekran.'
+  ],
+  'v9': ['Windows jest teraz domyślną zakładką platformy, a zakładki maję czytelniejszą kolejność.'],
+  'v8': [
+    'Poziomy trudności quizu i porada dnia.',
+    'Znacznie płynniejsze przewijanie na telefonie oraz pamięć offline.',
+    'Wyszukiwanie i filtry działają jednocześnie na wszystkich platformach, z pogrubionymi nazwami systemów.'
+  ],
+  'v7': ['Usunięto style wyglądu: jedynym wyglądem jest teraz Material 3.'],
+  'v6': [
+    'Ograniczono style wyglądu do Material 3 oraz dodano przycisk &laquo;Usuń tło&raquo;, aby wrócić do motywu domyślnego.',
+    'Dodano nagłówki sterujące pamięcią podręczną, aby aktualizacje przychodziły szybciej.'
+  ],
+  'v5': ['Tytuły stron uproszczono do samych &laquo;Skrótów&raquo; we wszystkich 14 językach.'],
+  'v4': [
+    'Tryb quizu skrótów: ćwicz, zgadując skrót lub czynność, plus synchronizacja w chmurze przez GitHub Gist.',
+    'Obszerny zestaw poprawek próbek akcentu, przełączania motywu i tapet na telefonie.'
+  ],
+  'v3': ['Dodano ustawienia wstępne koloru akcentu, które można zapisać i użyć ponownie, oraz unieważnianie pamięci podręcznej, aby aktualizacje pojawiały się niezawodnie.'],
+  'v2': ['Motywy jasny i ciemny z kolorami akcentu oraz tłumaczenia ściągawki skrótów.'],
+  'v1': ['Pierwsza wersja Anthkeys: wszystkie codzienne skróty klawiszowe dla Windows, macOS, Linux i ChromeOS na jednej stronie.']
+};
+
