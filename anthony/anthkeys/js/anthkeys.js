@@ -40,6 +40,7 @@ const i18n = {
     'accent.match-device': 'Match my device',
     'accent.device-applied': 'Device accent applied',
     'accent.device-fail': 'Device accent not available here \u2014 open the installed app',
+    'linux.distro': 'Distribution',
     'setting.theme': 'Theme',
     'setting.presets': 'Style',
     'setting.accent': 'Accent color',
@@ -8895,6 +8896,68 @@ i18n.vi = {
   });
 }
 
+const LINUX_KBD_DEFAULTS = {
+  'switch-window': '<kbd>Alt</kbd> + <kbd>Tab</kbd>',
+  'switch-workspace': '<kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>\u2190</kbd> / <kbd>\u2192</kbd>',
+  'lock-screen': '<kbd>Super</kbd> + <kbd>L</kbd>',
+  'screenshot': '<kbd>Print Screen</kbd>',
+  'open-terminal': '<kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>T</kbd>'
+};
+const linuxDistros = [
+  { id: 'ubuntu', label: 'Ubuntu (GNOME)' },
+  { id: 'debian', label: 'Debian' },
+  { id: 'fedora', label: 'Fedora Workstation (GNOME)' },
+  { id: 'arch', label: 'Arch Linux' },
+  { id: 'linuxmint', label: 'Linux Mint (Cinnamon)', overrides: { 'lock-screen': '<kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>L</kbd>' } },
+  { id: 'popos', label: 'Pop!_OS (GNOME)' },
+  { id: 'elementary', label: 'elementary OS (Pantheon)', overrides: { 'open-terminal': '<kbd>Super</kbd> + <kbd>T</kbd>' } },
+  { id: 'opensuse-kde', label: 'openSUSE (KDE Plasma)', overrides: { 'switch-workspace': '<kbd>Ctrl</kbd> + <kbd>F1\u2026F4</kbd>' } },
+  { id: 'manjaro', label: 'Manjaro (XFCE)' },
+  { id: 'kali', label: 'Kali Linux' },
+  { id: 'zorin', label: 'Zorin OS' },
+  { id: 'kubuntu', label: 'Kubuntu (KDE Plasma)', overrides: { 'switch-workspace': '<kbd>Ctrl</kbd> + <kbd>F1\u2026F4</kbd>' } },
+  { id: 'xubuntu', label: 'Xubuntu (XFCE)' },
+  { id: 'kdeneon', label: 'KDE neon (KDE Plasma)', overrides: { 'switch-workspace': '<kbd>Ctrl</kbd> + <kbd>F1\u2026F4</kbd>' } },
+  { id: 'endeavouros', label: 'EndeavourOS' },
+  { id: 'nixos', label: 'NixOS' },
+  { id: 'gentoo', label: 'Gentoo' },
+  { id: 'mxlinux', label: 'MX Linux' },
+  { id: 'rocky', label: 'Rocky Linux' },
+  { id: 'almalinux', label: 'AlmaLinux' }
+];
+let linuxDistroState = null;
+function applyLinuxDistro(id) {
+  linuxDistroState = (id && linuxDistros.some(d => d.id === id)) ? id : 'ubuntu';
+  if (!document.querySelector('#linux [data-kbd]')) {
+    document.querySelectorAll('#linux tbody td:first-child').forEach(td => {
+      const k = (td.getAttribute('data-i18n') || '').replace('action.', '');
+      if (k in LINUX_KBD_DEFAULTS) { const kb = td.parentElement.querySelectorAll('td')[1]; if (kb) kb.dataset.kbd = k; }
+    });
+  }
+  const sel = document.getElementById('linuxDistroSelect');
+  if (sel) {
+    if (!sel.options.length) linuxDistros.forEach(d => {
+      const o = document.createElement('option');
+      o.value = d.id;
+      o.textContent = d.label;
+      sel.appendChild(o);
+    });
+    sel.value = linuxDistroState;
+  }
+  const dist = linuxDistros.find(d => d.id === linuxDistroState) || linuxDistros[0];
+  const overrides = dist.overrides || {};
+  document.querySelectorAll('#linux [data-kbd]').forEach(td => {
+    td.innerHTML = overrides[td.dataset.kbd] || LINUX_KBD_DEFAULTS[td.dataset.kbd];
+  });
+}
+const _linuxDistroSelect = document.getElementById('linuxDistroSelect');
+if (_linuxDistroSelect) {
+  _linuxDistroSelect.addEventListener('change', () => {
+    applyLinuxDistro(_linuxDistroSelect.value);
+    saveSettings();
+  });
+}
+
 function saveSettings() {
   const activeAccent = document.querySelector('.accent-opt.active');
   const customBtn = document.getElementById('customAccentBtn');
@@ -8912,7 +8975,8 @@ function saveSettings() {
     compact: document.body.classList.contains('compact'),
     noAnim: document.body.classList.contains('no-anim'),
     tip: document.getElementById('toggleTip')?.classList.contains('on') ?? true,
-    updateMode: document.querySelector('[data-update-mode].active')?.dataset.updateMode || 'auto'
+    updateMode: document.querySelector('[data-update-mode].active')?.dataset.updateMode || 'auto',
+    linuxDistro: document.getElementById('linuxDistroSelect')?.value || 'ubuntu'
   };
   if (data.accent === 'custom' || (activeAccent && !activeAccent.dataset.accent)) {
     const bodyHex = document.body.style.getPropertyValue('--accent-1').trim();
@@ -9016,6 +9080,8 @@ function loadSettings() {
       document.body.style.setProperty('--primary', c[0]);
       updateAccentPreview();
     }
+
+    if (data.linuxDistro) applyLinuxDistro(data.linuxDistro);
 
     if (data.blur !== undefined) {
       const blurToggle = document.getElementById('toggleBlur');
@@ -9944,6 +10010,7 @@ renderAccentPresets();
 
 // ---- Load saved settings (after accents init & click handlers) ----
 loadSettings();
+applyLinuxDistro(linuxDistroState || 'ubuntu');
 checkForUpdate();
 
 function applyWallpaper(dataUrl) {
