@@ -677,3 +677,672 @@ I18N_WN.de = {
   'v2': ['Helle und dunkle Designs mit Akzentfarben sowie &Uuml;bersetzungen der Shortcut-Referenz.'],
   'v1': ['Die erste Version von Anthkeys &mdash; alle t&auml;glichen Tastenk&uuml;rzel f&uuml;r Windows, macOS, Linux und ChromeOS auf einer Seite.']
 };
+
+I18N_WN.it = {
+  'v52.1': [
+    'Novit&agrave;: la pagina &laquo;Novit&agrave;&raquo; &egrave; ora completamente tradotta in tutte e 20 le lingue &mdash; ogni nota di rilascio passata viene mostrata nella tua lingua.'
+  ],
+  'v52': [
+    'Correzione: la v51 poteva impedire il caricamento dell&rsquo;app; una traduzione danese conteneva un apostrofo non escape che invalidava l&rsquo;intero file di lingua. Il file ora viene analizzato correttamente e tutte e 20 le lingue si caricano di nuovo.'
+  ],
+  'v51': [
+    'Traduzioni completate per tutte e 20 le lingue &mdash; impostazioni, stanze live, sincronizzazione offline e la guida alla sincronizzazione sono ora completamente tradotte (i testi pi&ugrave; recenti comparivano solo in inglese).',
+    'Novit&agrave;: se Anthkeys ti sembra lento, un banner ti propone di attivare la modalit&agrave; Prestazioni con un tocco. Puoi chiuderlo e non te lo chieder&agrave; pi&ugrave;.'
+  ],
+  'v50.7': ['La modalit&agrave; Prestazioni &egrave; stata spostata nella scheda Generale delle impostazioni.'],
+  'v50.6': ['Le icone della barra superiore sono di nuovo le emoji colorate, proprio come in v50: libro, stampante, fulmine, luna/sole, aggiorna e ingranaggio.'],
+  'v50.5': ['Le icone della barra superiore usano di nuovo il colore d&rsquo;accento (per impostazione predefinita), invece di apparire bianche/grigie.'],
+  'v50.4': ['Rimossa la funzione icona colorata d&rsquo;accento: favicon, icona della schermata home e icona della PWA installata usano di nuovo quella predefinita (colorare l&rsquo;icona con l&rsquo;accento ha senso solo per le app native).'],
+  'v50.3': [
+    'Le icone della barra superiore sono state ricostruite per essere visualizzate in modo affidabile su tutti i dispositivi (Tour, Stampa, Quiz, tema, Aggiorna e Impostazioni ora usano icone reali).',
+    'L&rsquo;icona del commutatore del tema &egrave; di nuovo un&rsquo;icona reale e corrisponde al suo stato chiaro/scuro.'
+  ],
+  'v50.2': ['Corretto un bug della v50.1 che impediva alle icone della barra superiore e alle Impostazioni di funzionare al caricamento.'],
+  'v50.1': [
+    'Nuova modalit&agrave; Prestazioni in Personalizzazione: disattiva gli effetti sfocatura e le animazioni che possono rendere l&rsquo;app lenta su Windows.',
+    'La barra superiore usa ora icone reali e una nuova impostazione Icone le colora con il tuo colore d&rsquo;accento.',
+    'La scheda Apps funziona come quella Linux: fai clic ovunque per scegliere un&rsquo;app (VS Code, Figma, Gmail e altre), e la scheda mostra la tua scelta, ad esempio &laquo;Apps - Gmail&raquo;.',
+    'Rimosso il campo di testo esadecimale sotto il pulsante Personalizza: scegli i colori solo con i cursori.',
+    'Doppiate le opzioni di accento a gradiente con otto nuove combinazioni a due colori.'
+  ],
+  'v50': [
+    'Fai clic ovunque sulla scheda Linux per aprire l&rsquo;elenco delle distribuzioni, e la scheda mostra ora la tua scelta, ad esempio &laquo;Linux - Ubuntu (GNOME)&raquo;.',
+    'Il selettore di colore personalizzato &egrave; stato ricostruito: il campione circolare apre cursori di Tonalit&agrave;, Saturazione e Luminosit&agrave; (con il valore mostrato poco sopra ciascuno), partendo dal colore attuale invece che da 0/0/0.',
+    'Nuova sezione Accenti a gradiente: otto gradienti a due colori pronti da applicare come accento.',
+    'I preset d&rsquo;accento sono stati perfezionati verso una palette pi&ugrave; pulita e distinta.'
+  ],
+  'v40.9': ['L&rsquo;elenco delle distribuzioni si trova ora direttamente sulla scheda Linux: fai clic sulla piccola freccia della scheda per scegliere la tua distribuzione.'],
+  'v40.8': ['La scheda Linux ha ora un elenco di distribuzioni (Ubuntu, Debian, Fedora, Arch, Mint, KDE e altre) che adatta le scorciatoie di sistema alle impostazioni predefinite di ciascuna distribuzione e ricorda la tua scelta.'],
+  'v40.7': ['Le impostazioni dell&rsquo;accento mostrano ora una barra di anteprima dal vivo con il codice esadecimale esatto del colore applicato, così vedi ogni scelta cambiare all&rsquo;istante.'],
+  'v40.6': [
+    'Rimosso il conta gocce &laquo;Preleva dallo schermo&raquo;.',
+    'Preset d&rsquo;accento portati alla piena intensità Material 3 Expressive: colori profondi e vivaci, veramente neon (i grigi restano attenuati).'
+  ],
+  'v40.5': ['La palette d&rsquo;accento è stata riequilibrata verso lo stile Material 3 Expressive: colori tonali più vivaci.'],
+  'v40.4': ['La corrispondenza dell&rsquo;accento con il dispositivo ora legge il vero colore di sistema (incluso l&rsquo;output oklch/color() di Chrome) e sonda anche il colore di selezione del testo del sistema operativo, così viene applicato il tuo accento dinamico reale.'],
+  'v40.3': [
+    'Tutti i colori d&rsquo;accento sono stati riequilibrati allo stile tonale di Material You (toni medi attenuati con toni contenitore morbidi).',
+    '&laquo;Corrispondenza col mio dispositivo&raquo; legge ora anche il colore di selezione del sistema come alternativa, così funziona su più browser e profili.'
+  ],
+  'v40.2': ['Impostazioni del colore d&rsquo;accento: il nuovo pulsante &laquo;Corrispondenza col mio dispositivo&raquo; legge il colore d&rsquo;accento di sistema (Chrome 150+, app installata) e lo applica, con una notifica di conferma.'],
+  'v40.1': ['Rimosso la galleria di sfondi (gli sfondi salvati nella galleria vengono eliminati; il tuo sfondo caricato continua a funzionare).'],
+  'v40.0': ['Selettore del colore d&rsquo;accento: il colore personalizzato ora ha un campo esadecimale (digita qualsiasi colore, di 3 o 6 cifre) più un pulsante Copia: lo stesso identico layout su desktop e mobile.'],
+  'v39.9': ['Chat nella stanza: le note della stanza ora compaiono in un pannello Chat con cronologia (60 messaggi conservati per stanza, ripristinati al rientro). Le note pubbliche vengono pubblicate nel registro; quelle private vengono ancora copiate direttamente negli appunti. Tocca un messaggio per ricopiarlo.'],
+  'v39.8': [
+    'Stanze recenti: le ultime sei stanze a cui hai partecipato compaiono come chip a un tocco nella schermata di ingresso (con i loro colori), più un pulsante per cancellarli.',
+    'Invia il mio profilo: invia le tue impostazioni e scorciatoie personalizzate a tutta la stanza come istantanea monodirezionale; gli altri dispositivi la applicano all&rsquo;istante.',
+    'Galleria di sfondi: sei sfumature integrate con varianti chiare/scure automatiche, un pulsante Casuale e una mescolanza giornaliera opzionale.',
+    'Ricerca: le scorciatoie che copi vengono ricordate come &laquo;Copiate di recente&raquo; nel menu di ricerca, insieme alla cronologia delle ricerche.'
+  ],
+  'v39.7': ['Le animazioni su mobile ora provengono dallo stesso CSS di base del desktop: la regola per dispositivi touch non disattiva più globalmente le transizioni. Il riflettore del tour e le schede scorrono tra un passaggio e l&rsquo;altro, e i cambi di tema/sfondo sfumano, anche sui telefoni.'],
+  'v39.6': ['Parità mobile: i cambi di tema e sfondo ora avvengono in modo fluido (come sul desktop) e il tour del sito si anima tra i passaggi anche sui dispositivi touch.'],
+  'v39.5': ['AirDrop e Quick Share: un pulsante &laquo;Condividi&raquo; accanto al codice della stanza apre il foglio di condivisione del telefono (AirDrop su Apple) con un link di ingresso a un tocco: l&rsquo;altro dispositivo basta toccarlo ed entra nella stanza.'],
+  'v39.4': ['La luminosità e lo scintillio della pillola della versione ora si animano sul desktop anche quando &laquo;riduci movimento&raquo; è attivo nel sistema o le animazioni sono disattivate nelle impostazioni: viene trattato come un segnale di aggiornamento, non come decorazione.'],
+  'v39.3': ['La luminosità della pillola della versione e il badge nelle impostazioni ora compaiono in modo affidabile sul desktop: la versione in esecuzione ottiene sempre una nuova finestra di evidenziazione di pochi giorni al caricamento, anche se l&rsquo;avviso di aggiornamento è stato saltato.'],
+  'v39.2': ['La luminosità e lo scintillio di nuova versione sulla pillola non scompaiono più per sempre dopo un&rsquo;unica occhiata: l&rsquo;evidenziazione dura pochi giorni e torna a ogni visita.'],
+  'v39.1': ['I punti di colore finalmente si vedono: i campioni (colore della stanza e campioni di tema/accento) ora vengono renderizzati come cerchi visibili invece che come span vuoti invisibili.'],
+  'v39': [
+    'Ring ora ti permette di allegare un messaggio rapido al ping: il dispositivo che squilla lo sente e lo copia negli appunti.',
+    'Avvisi batteria: ricevi una notifica &laquo;ripristinata&raquo; quando un dispositivo risale sopra il 25% e puoi attivare o disattivare l&rsquo;allarme batteria.',
+    'Le note possono essere indirizzate a un singolo dispositivo tramite un selettore &laquo;A:&raquo; accanto al campo della nota.',
+    'Ogni stanza può avere un&rsquo;etichetta di colore per distinguere le stanze a colpo d&rsquo;occhio.',
+    'I codici di sincronizzazione offline ora mostrano un&rsquo;anteprima (dispositivo, ora, numero di impostazioni e scorciatoie) e chiedono conferma prima di importare.'
+  ],
+  'v38.1': ['Su mobile, toccando la scheda Informazioni le sezioni non si aprono più automaticamente: tocca l&rsquo;intestazione di una sezione per espanderla.'],
+  'v38': ['Su mobile, aprire la scheda Informazioni non espande più automaticamente le istruzioni di sincronizzazione: tocca la sezione &laquo;Live rooms &amp; offline sync&raquo; per aprirla.'],
+  'v37': ['La guida ora include istruzioni complete per <strong>Stanze live</strong> e <strong>Codici di sincronizzazione offline</strong>, ed è disponibile anche su mobile.'],
+  'v36': ['Il pulsante nell&rsquo;area di ingresso ora si chiama <strong>Scansiona</strong> (apre la fotocamera o il selettore di file per leggere un QR), quindi non viene più confuso con il pulsante <strong>QR</strong> che mostra il codice della stanza.'],
+  'v35': ['Corretto: i codici QR della stanza e del codice offline ora vengono visualizzati correttamente invece di una casella vuota.'],
+  'v34': [
+    '<strong>Chiama un dispositivo</strong> &mdash; ogni altro dispositivo ha un pulsante Ring che lo fa squillare e vibrare, così puoi trovare il tuo telefono.',
+    '<strong>Invia una nota</strong> &mdash; condividi testo con ogni dispositivo collegato; compare all&rsquo;istante e viene copiato nei suoi appunti.',
+    '<strong>Monitoraggio batteria</strong> &mdash; vieni avvisato quando un dispositivo collegato scende sotto il 20% di batteria.',
+    '<strong>Rinomina dispositivi</strong> &mdash; tocca il nome di un dispositivo per assegnargli un nome personalizzato.',
+    '<strong>Unisciti scansionando</strong> &mdash; l&rsquo;host può mostrare un QR del codice stanza; scansionalo con la fotocamera (o scansiona un codice di sincronizzazione offline).',
+    '<strong>Stanze protette</strong> &mdash; seleziona &laquo;Proteggi questa stanza&raquo; e imposta una passphrase; tutti i dati della stanza vengono crittografati, così solo i membri con la passphrase possono leggerli.',
+    '<strong>Visto l&rsquo;ultima volta</strong> &mdash; ogni dispositivo mostra ora da quanto tempo è online.'
+  ],
+  'v33': ['I dispositivi collegati condividono ora anche il loro <strong>livello della batteria</strong> (anche durante la ricarica), aggiornato in tempo reale nella stanza.'],
+  'v32': ['Le stanze live mostrano ora il vero nome di ogni dispositivo (come &laquo;Mi 9T Pro&raquo;) invece di uno casuale, prelevato automaticamente dal dispositivo stesso.'],
+  'v31': ['Le stanze live mostrano ora ogni dispositivo collegato per nome, con un punto verde su questo dispositivo e il totale.'],
+  'v30': [
+    '<strong>Stanze live</strong> &mdash; prima, per sincronizzare impostazioni e scorciatoie personalizzate in tempo reale:<ol><li>Sul dispositivo con le tue impostazioni, apri <strong>Impostazioni &rarr; Stanze live</strong> e tocca <strong>Avvia una stanza</strong>. Appare un codice stanza come AK-XXX-YYY.</li><li>Invia quel codice agli altri tuoi dispositivi (copialo o condividilo come preferisci).</li><li>Su ogni dispositivo ricevente, apri <strong>Impostazioni &rarr; Stanze live</strong>, digita lo stesso codice e tocca <strong>Unisciti alla stanza</strong>.</li></ol>',
+    '<strong>Codici di sincronizzazione offline</strong> &mdash; poi, per un trasferimento una tantum quando non c&rsquo;è internet:<ol><li>Apri <strong>Impostazioni &rarr; Codice di sincronizzazione offline</strong> e tocca <strong>Crea un codice</strong>. Copia il codice o scansiona il QR che appare.</li><li>Sull&rsquo;altro dispositivo, apri <strong>Impostazioni &rarr; Codice di sincronizzazione offline</strong>, incolla il codice e tocca <strong>Applica un codice</strong>.</li></ol>'
+  ],
+  'v29': ['Corretto: su <strong>mobile</strong>, toccando il badge della versione ora parte l&rsquo;animazione casuale di rimbalzo/rotazione/compressione, invece di essere bloccato dal reset delle animazioni dei dispositivi touch.'],
+  'v28': ['Mobile: la scheda impostazioni accanto a Personalizza ora si chiama solo <strong>Informazioni</strong> (la Guida esiste solo sul desktop) e apre automaticamente la sezione Informazioni quando viene toccata.'],
+  'v27': ['Corretto: aprire la pagina subito dopo una <strong>nuova versione</strong> non la resetta più con un ricaricamento a sorpresa qualche secondo dopo &mdash; l&rsquo;aggiornamento viene ora applicato in background. Il pulsante Aggiorna e l&rsquo;opzione &laquo;Chiedi prima di aggiornare&raquo; ricaricano ancora su richiesta.'],
+  'v26.9': ['Divertente: toccare il <strong>badge della versione</strong> ora fa partire ogni volta un&rsquo;animazione casuale di rimbalzo/rotazione/compressione, si illumina con uno <strong>sfavilla&shy;mento</strong> mentre viene evidenziata una nuova versione e la sezione Informazioni è stata spostata nella sua <strong>scheda Informazioni</strong> nelle Impostazioni per raggiungerla più in fretta.'],
+  'v26.8': ['Migliorato: il <strong>badge della versione</strong> nella sezione Informazioni ora si aggiorna automaticamente e apre Novità.'],
+  'v26.7': ['Migliorato: le <strong>scorciatoie delle app</strong> nel consiglio del giorno mostrano ora prima a quale app appartengono, ad esempio <em>Figma &mdash; Move Tool &mdash; V</em>.'],
+  'v26.6': ['Migliorato: il <strong>consiglio del giorno</strong> ora si aggiorna quando cambi scheda di piattaforma: selezionare Windows, macOS, Linux, ChromeOS o Apps mostra una scorciatoia di quella sezione.'],
+  'v26.5': ['Corretto: il <strong>consiglio del giorno</strong> non rimane più bloccato su una sola scorciatoia: ora mostra una nuova scorciatoia casuale (dalla scheda piattaforma che stai visualizzando) a ogni caricamento della pagina, invece di riutilizzare la stessa tutto il giorno.'],
+  'v26.4': ['Corretto: il <strong>consiglio del giorno</strong> ora mostra solo scorciatoie della scheda piattaforma che stai visualizzando (prima mescolava quelle di tutte le piattaforme). Anche il badge della versione nella sezione Guida si aggiorna automaticamente.'],
+  'v26.3': ['Il pulsante <strong>tour</strong> mostra ora un&rsquo;icona di <strong>libro aperto</strong>.'],
+  'v26.2': ['Il pulsante <strong>tour</strong> mostra ora un&rsquo;icona di bussola e il tour ha acquisito un passaggio che spiega cosa fa il <strong>pulsante di aggiornamento</strong>.'],
+  'v26.1': ['Corretto: passare da <strong>scuro &harr; chiaro</strong> (tramite l&rsquo;interruttore in alto o le Impostazioni) non spoglia più i colori di un <strong>tema sfondo</strong>: accento, pulsanti della barra e tasti delle scorciatoie mantengono i colori del tema mentre lo sfondo resta.'],
+  'v26': ['Nuovo <strong>tour del sito</strong> &mdash; tocca il pulsante <strong>?</strong> in alto per una visita guidata di barra di ricerca, filtri, schede, elenco scorciatoie, quiz, impostazioni, stampa e commutatore del tema. Naviga con i pulsanti, le frecce o i punti.'],
+  'v25': ['Rimosso il collegamento <strong>Vedi su GitHub</strong> dalla sezione Informazioni.'],
+  'v24.8': ['Corretto: la notifica <strong>&laquo;Aggiornato&raquo;</strong> su mobile ora resta dello schermo (prima traboccava dal bordo destro sui dispositivi piccoli).'],
+  'v24.7.4': ['Il raggio degli angoli è ora limitato a <strong>16&thinsp;px</strong> in tutti i temi: pastiglie, schede, barre di ricerca e notifiche non sono più completamente tonde (prima usavano fino a 100&thinsp;px). Gli angoli restano morbidi, solo più sobri.'],
+  'v24.7.3': ['Corretto: <strong>Apri impostazioni Wi-Fi</strong> su <strong>Android</strong> non faceva nulla: Chrome recente non permette ai siti di aprire le impostazioni di sistema di Android. Il pulsante ora mostra un breve messaggio che ti chiede di aprire le impostazioni Wi-Fi dall&rsquo;app Impostazioni del dispositivo (su iOS e macOS le apre ancora direttamente).'],
+  'v24.7.2': ['Corretto: in un&rsquo;app Android installata (PWA), toccare <strong>Apri impostazioni Wi-Fi</strong> non faceva nulla: Android impedisce alle app di aprire direttamente le impostazioni di sistema. Ora lo spiega e ti chiede di aprire il sito in una scheda di Chrome, dove il pulsante funziona.'],
+  'v24.7.1': ['Corretto: <strong>Apri impostazioni Wi-Fi</strong> su <strong>Android</strong> usava un clic su un&rsquo;ancora attivato da JS, che Chrome blocca per i link <code>intent:</code>: ora si usa una navigazione avviata da un gesto dell&rsquo;utente.'],
+  'v24.7': [
+    'Lo <strong>stato della connessione</strong> si trova ora in cima a <strong>Impostazioni &rarr; Generale</strong> (spostato da Informazioni).',
+    'Il pulsante <strong>Apri impostazioni Wi-Fi</strong> ora apre le vere impostazioni Wi-Fi su <strong>iOS</strong> (app Impostazioni) e <strong>macOS</strong> (Impostazioni di sistema). Su Android, Windows e Linux, dove i browser non possono collegarsi in profondità alle impostazioni di sistema, mostra brevi istruzioni.'
+  ],
+  'v24.6': [
+    'La pillola <strong>Offline</strong> ora resta <strong>10 secondi</strong> e poi scompare (non ti infastidisce finché la connessione è ancora caduta).',
+    'Impostazioni &rarr; Informazioni ora mostra sempre il tuo <strong>stato della connessione</strong> (Online/Offline), con un pulsante per aprire le tue <strong>impostazioni Wi-Fi</strong>: su iOS apre direttamente l&rsquo;app Impostazioni; su altri dispositivi mostra brevi istruzioni.'
+  ],
+  'v24.5.2': ['Corretto: sui desktop in cui Windows cade la connessione senza attivare l&rsquo;evento <em>offline</em> del browser (o in cui le richieste si bloccano invece di fallire), la pillola <strong>Offline</strong> compare ora anche quando il controllo di connettività scade: non solo quando la richiesta fallisce del tutto.'],
+  'v24.5.1': ['Corretto: la pillola <strong>Offline</strong> compare ora anche quando la connessione cade senza attivare un evento del browser (ad es. &laquo;Offline&raquo; in DevTools, alcuni browser mobili): l&rsquo;app controlla attivamente la connettività ogni pochi secondi invece di affidarsi solo ai segnali del browser. Resta nascosta finché sei online.'],
+  'v24.5': [
+    'Mentre cerchi, le parole che corrispondono alla tua ricerca sono ora <strong>evidenziate</strong> nei risultati: è più facile capire perché ogni riga corrisponde.',
+    'Il campo di ricerca ha ora un <strong>pulsante di cancellazione (&times;)</strong> che compare quando hai digitato qualcosa.',
+    'Una piccola pillola <strong>Offline</strong> compare quando la connessione cade: toccala per confermare che Anthkeys continua a funzionare dalla cache.'
+  ],
+  'v24.4.1': ['Corretto su mobile: l&rsquo;intestazione <strong>Azione &mdash; Scorciatoia</strong> non scorre più via: sugli schermi stretti la tabella delle scorciatoie era stata trasformata in un proprio contenitore di scorrimento orizzontale, il che rompeva l&rsquo;intestazione fissa. Ora è di nuovo bloccata in alto, esattamente come sul desktop.'],
+  'v24.4': ['Rimosso il <strong>widget della serie del quiz nella schermata home</strong>: si basava su uno standard web che i browser non hanno ancora implementato, quindi non è mai apparso da nessuna parte. La tua serie e le tue statistiche del quiz restano nell&rsquo;app come al solito.'],
+  'v24.3': [
+    'Il <strong>quiz delle scorciatoie ora tiene traccia delle tue statistiche</strong>: una serie quotidiana (🔥 giorni di fila in cui hai completato un quiz), il punteggio migliore, la precisione e le partite giocate. Salvate in locale, mai caricate.',
+    'Nuovo <strong>widget della serie del quiz nella schermata home</strong> per Android (Web App Widgets: sperimentale, in distribuzione su Chrome e Firefox; non disponibile su iOS). Mostra la tua serie e le tue statistiche; toccalo per aprire il quiz.'
+  ],
+  'v24.2.1': ['Corretto su mobile: toccare la barra di ricerca poteva aprire la pagina Informazioni: la notifica nascosta &laquo;Novità&raquo; vicino al pulsante delle impostazioni era ancora cliccabile e si sovrapponeva al campo di ricerca. Ora reagisce solo mentre è visibile.'],
+  'v24.2': [
+    'Nuovo <strong>filtro modificatori</strong>: nel menu Filtri scegli un tasto (Ctrl, Maiusc, Alt, Win, Cmd, &hellip;) per mostrare solo le scorciatoie che lo usano. Le opzioni si aggiornano per piattaforma.',
+    'Un <strong>pulsante torna su</strong> fluttua sopra l&rsquo;elenco delle scorciatoie quando scorri: toccalo per tornare subito in alto.'
+  ],
+  'v24.1': ['La barra <strong>Azione &mdash; Scorciatoia</strong> ora resta fissata in cima all&rsquo;elenco mentre scorri: su mobile e Safari prima usciva dalla vista.'],
+  'v23.9': ['Rimosso il popup Guida e suggerimenti su mobile: elencava solo scorciatoie desktop. La Guida resta nelle Impostazioni sul desktop, dove <kbd>?</kbd> ci porta direttamente.'],
+  'v23.8': ['Su mobile, la Guida non è più dentro le Impostazioni: resta nascosta lì per non appesantire la pagina. Premi <kbd>?</kbd> per aprirla come popup.'],
+  'v23.7': ['Guida e suggerimenti sono passati in <strong>Impostazioni</strong> (sezione Generale) sul desktop: premi <kbd>?</kbd> per andarci direttamente.'],
+  'v23.6': [
+    'Tutte e 20 le lingue sono ora completamente tradotte: niente più fallback all&rsquo;inglese per funzioni più recenti come quiz, sincronizzazione cloud e Guida.',
+    'Su mobile, tieni premuta una scorciatoia per copiarla invece di toccarla: niente più copie accidentali durante lo scorrimento.',
+    'Le pastiglie dei filtri usano ora il tuo colore d&rsquo;accento anche su mobile, proprio come sul desktop; quando è selezionata Preferiti, è l&rsquo;unica che spicca.',
+    'Rimosso il bordo attorno ai cinque pulsanti della barra superiore su mobile: ora si fondono nella pagina.',
+    'Il pulsante del quiz ha una nuova icona a fulmine e le risposte mostrano nomi leggibili invece di tasti grezzi.',
+    'Corretto: il JavaScript dell&rsquo;app poteva non caricarsi dopo un aggiornamento, lasciando il sito non responsive.'
+  ],
+  'v23.5': [
+    'I controlli di filtro, preferito, confronto e compressione si trovano ora in un unico menu compatto <strong>Filtri</strong>: più spazio per l&rsquo;elenco delle scorciatoie su mobile.',
+    'La pagina Novità, il badge della versione e le impostazioni di aggiornamento sono passati in una nuova sezione <strong>Informazioni</strong> nelle Impostazioni.',
+    'Le notifiche di aggiornamento ora compaiono dal pulsante <strong>Impostazioni</strong>: l&rsquo;icona dell&rsquo;ingranaggio mostra un badge finché non hai visto le novità.'
+  ],
+  'v23.4': ['Rimosso il pulsante di aiuto <kbd>?</kbd> dalla barra superiore: premi <kbd>?</kbd> per aprire comunque la Guida.'],
+  'v23.3': [
+    'Il badge della versione si accende dopo un aggiornamento automatico, così noti la nuova versione al prossimo avvio.',
+    'Passare da uno sfondo predefinito a un&rsquo;altro mantiene la modalità scura: anche il nuovo sfondo viene oscurato.',
+    'Su mobile la barra delle piattaforme (Windows, macOS, Linux, ChromeOS) ora ha lo stesso aspetto del desktop.'
+  ],
+  'v23.2': [
+    'Rimosso il commutatore Avanzato/Basico: tutte le scorciatoie vengono mostrate insieme.',
+    'Su mobile, i pulsanti della barra superiore sono ora disposti in una pulita griglia 2&times;3.',
+    'Gli sfondi predefiniti restano applicati e vengono oscurati correttamente quando passi alla modalità scura.',
+    'Le sovrapposizioni (impostazioni, guida, quiz) ora coprono le schede fisse su mobile.'
+  ],
+  'v23.1': ['Gli sfondi sono ora ottimizzati per la modalità scura: passando allo scuro, sia le immagini personalizzate sia gli sfondi predefiniti (Oceano, Foresta, Tramonto, &hellip;) vengono oscurati e desaturati così i pannelli restano leggibili.'],
+  'v23': [
+    'Nuova modalità &laquo;Confronta&raquo;: scegli una seconda piattaforma per vedere solo le scorciatoie che differiscono.',
+    'Tema automatico che segue l&rsquo;ora del giorno (scuro dalle 19 alle 7).',
+    'Premi <kbd>?</kbd> o tocca il pulsante <kbd>?</kbd> per una guida rapida e suggerimenti.',
+    'Aggiunte le date di rilascio a ogni voce di questa pagina.'
+  ],
+  'v22': [
+    'Corretto: la tabella della legenda dei tasti era tagliata sui telefoni stretti: ora scorre orizzontalmente così tutte le colonne sono raggiungibili.',
+    'La barra di ricerca e le pastiglie di categoria sono nascoste nella pagina &laquo;Novità&raquo; perché non si applicano lì.'
+  ],
+  'v21': [
+    'La legenda dei tasti ha ora un pulsante di chiusura, così puoi comprimerla dall&rsquo;interno del pannello: comodo su mobile, dove l&rsquo;interruttore può scorrere fuori portata.',
+    'Gestione dei tocchi più reattiva per il pulsante Legenda dei tasti sui dispositivi touch.'
+  ],
+  'v20.1': [
+    'I numeri di versione supportano ora le versioni di patch: il badge nel piè di pagina mostra ad es. v20.1 e il rilevamento degli aggiornamenti li gestisce correttamente.',
+    'Aggiunta a questa pagina la voce v20 mancante.'
+  ],
+  'v20': ['Nuova pagina &laquo;Novità&raquo; dentro Anthkeys: il collegamento nella notifica di aggiornamento e il badge della versione nel piè di pagina la aprono qui invece che su GitHub.'],
+  'v19': ['Il banner di aggiornamento compare ora anche se aggiorni da una versione precedente al tracciamento delle versioni (la tua versione precedente viene rilevata dalla cache offline).'],
+  'v18': [
+    'Appare una notifica &laquo;Aggiornato a vX &mdash; Novità&raquo; quando arriva una nuova versione (in modalità di aggiornamento automatico).',
+    'Il banner di aggiornamento viene ora attivato da aggiornamenti dei contenuti, non solo da modifiche al service worker.',
+    'Il badge della versione nel piè di pagina è cliccabile: toccalo per vedere le novità.',
+    'Cache offline più leggera (nessun file senza versione sprecato).'
+  ],
+  'v16': ['Aggiunto un badge della versione nel piè di pagina che mostra il numero di build corrente.'],
+  'v15': ['Pulsante di aggiornamento e preferenza (aggiornamento automatico o chiedi prima), basati sul service worker.'],
+  'v14': ['Comprimere o espandere una categoria ora rispetta la ricerca attiva.'],
+  'v13': ['Cache delle pagine con priorità alla rete, così gli aggiornamenti compaiono subito; scorrimento più fluido sul desktop.'],
+  'v12': ['La ricerca e i filtri sono ora limitati alla scheda attiva.'],
+  'v11': ['Supporto all&rsquo;installazione PWA, etichette di accessibilità, supporto al movimento ridotto, scorciatoie Gmail e YouTube, miglioramenti SEO.'],
+  'v10': [
+    'Corretto: il filtro di categoria poteva nascondere tutte le scorciatoie quando corrispondeva a una riga di intestazione di categoria: ora nasconde solo le righe che hai filtrato.',
+    'Lo sfondo ora riempie l&rsquo;intero schermo su mobile.'
+  ],
+  'v9': ['Windows è ora la scheda piattaforma predefinita e le schede sono in un ordine più chiaro.'],
+  'v8': [
+    'Livelli di difficoltà del quiz e un consiglio del giorno.',
+    'Scorrimento molto più fluido su mobile, oltre alla cache offline.',
+    'Ricerca e filtri funzionano su tutte le piattaforme contemporaneamente, con etichette SO in grassetto.'
+  ],
+  'v7': ['Gli stili di design sono stati rimossi: Material 3 è ora l&rsquo;unico aspetto.'],
+  'v6': [
+    'Stili di design ridotti a Material 3, più un pulsante &laquo;Rimuovi sfondo&raquo; per tornare al tema predefinito.',
+    'Intestazioni cache-control perché gli aggiornamenti ti arrivino più in fretta.'
+  ],
+  'v5': ['Titoli delle pagine semplificati a solo &laquo;Scorciatoie&raquo; in tutte le 14 lingue.'],
+  'v4': [
+    'Modalità quiz delle scorciatoie: allenati indovinando la scorciatoia o l&rsquo;azione, più la sincronizzazione cloud con GitHub Gist.',
+    'Un&rsquo;ampia serie di correzioni su campioni d&rsquo;accento, cambio tema e sfondi mobili.'
+  ],
+  'v3': ['Preset di colore d&rsquo;accento che puoi salvare e riutilizzare, più l&rsquo;invalidazione della cache perché gli aggiornamenti compaiano in modo affidabile.'],
+  'v2': ['Temi chiaro e scuro con colori d&rsquo;accento, più traduzioni del riferimento delle scorciatoie.'],
+  'v1': ['La prima versione di Anthkeys: tutte le scorciatoie da tastiera quotidiane per Windows, macOS, Linux e ChromeOS in una sola pagina.']
+};
+
+I18N_WN.pt = {
+  'v52.1': [
+    'Novidade: a p&aacute;gina &laquo;Novidades&raquo; agora est&aacute; totalmente traduzida em todos os 20 idiomas &mdash; cada nota de vers&atilde;o &eacute; exibida no seu idioma.'
+  ],
+  'v52': [
+    'Corre&ccedil;&atilde;o: a v51 podia impedir o carregamento do aplicativo; uma tradu&ccedil;&atilde;o dinamarquesa continha um apóstrofo n&atilde;o escapado que invalidava o arquivo de idioma inteiro. O arquivo agora &eacute; analisado corretamente e todos os 20 idiomas voltam a carregar.'
+  ],
+  'v51': [
+    'Tradu&ccedil;&otilde;es conclu&iacute;das para todos os 20 idiomas &mdash; configura&ccedil;&otilde;es, salas ao vivo, sincroniza&ccedil;&atilde;o offline e o guia de sincroniza&ccedil;&atilde;o agora est&atilde;o totalmente traduzidos (os itens recentes apareciam apenas em ingl&ecirc;s).',
+    'Novidade: se o Anthkeys parecer lento, uma faixa oferece ativar o Modo Desempenho com um toque. Voc&ecirc; pode fech&aacute;-la e ela n&atilde;o aparece de novo.'
+  ],
+  'v50.7': ['O Modo Desempenho foi movido para a aba Geral nas configura&ccedil;&otilde;es.'],
+  'v50.6': ['Os &iacute;cones da barra superior voltaram a ser emojis coloridos, como na v50: livro, impressora, raio, lua/sol, atualizar e engrenagem.'],
+  'v50.5': ['Os &iacute;cones da barra superior voltaram a usar a cor de destaque (por padr&atilde;o), em vez de parecerem brancos/cinzas.'],
+  'v50.4': ['Removido o recurso de &iacute;cone com cor de destaque: favicon, &iacute;cone da tela inicial e &iacute;cone do PWA instalado voltaram a usar o &iacute;cone pad&atilde;o (colorir o &iacute;cone com a cor de destaque s&oacute; faz sentido para aplicativos nativos).'],
+  'v50.3': [
+    'Os &iacute;cones da barra superior foram reconstru&iacute;dos para aparecer de forma confi&aacute;vel em todos os dispositivos (Tour, Imprimir, Quiz, tema, Atualizar e Configura&ccedil;&otilde;es agora usam &iacute;cones reais).',
+    'O &iacute;cone do alternador de tema voltou a ser um &iacute;cone real e corresponde ao seu estado claro/escuro.'
+  ],
+  'v50.2': ['Corrigido um bug da v50.1 que impedia os &iacute;cones da barra superior e as Configura&ccedil;&otilde;es de funcionar na abertura.'],
+  'v50.1': [
+    'Novo Modo Desempenho em Personalizar: desliga efeitos de desfoque e anima&ccedil;&otilde;es que podem deixar o aplicativo lento no Windows.',
+    'A barra superior agora usa &iacute;cones reais e uma nova configura&ccedil;&atilde;o &Iacute;cones que os pinta com a sua cor de destaque.',
+    'A guia Apps funciona como a do Linux: clique em qualquer lugar para escolher um aplicativo (VS Code, Figma, Gmail e outros), e a guia mostra sua escolha, como &laquo;Apps - Gmail&raquo;.',
+    'Removido o campo hexadecimal abaixo do bot&atilde;o Personalizar: escolha as cores apenas com os controles deslizantes.',
+    'Duplicadas as op&ccedil;&otilde;es de destaque em gradiente com oito novas combina&ccedil;&otilde;es de duas cores.'
+  ],
+  'v50': [
+    'Clique em qualquer lugar da guia Linux para abrir a lista de distribui&ccedil;&otilde;es, e a guia agora mostra sua escolha, como &laquo;Linux - Ubuntu (GNOME)&raquo;.',
+    'O seletor de cor personalizada foi reconstru&iacute;do: a amostra circular abre controles de Matiz, Satura&ccedil;&atilde;o e Lumin&acirc;ncia (com o valor exibido logo acima de cada um), come&ccedil;ando da cor atual em vez de 0/0/0.',
+    'Nova se&ccedil;&atilde;o Destaques em gradiente: oito gradientes de duas cores prontos para aplicar como cor de destaque.',
+    'As predefini&ccedil;&otilde;es de destaque foram refinadas para uma paleta mais limpa e definida.'
+  ],
+  'v40.9': ['A lista de distribui&ccedil;&otilde;es agora fica direto na guia Linux: clique na pequena seta da guia para escolher sua distribui&ccedil;&atilde;o.'],
+  'v40.8': ['A guia Linux agora tem uma lista de distribui&ccedil;&otilde;es (Ubuntu, Debian, Fedora, Arch, Mint, KDE e outras) que adapta as atalhos de sistema aos padr&otilde;es de cada uma e lembra sua escolha.'],
+  'v40.7': ['As configura&ccedil;&otilde;es de destaque agora mostram uma barra de pr&eacute;via ao vivo com o c&oacute;digo hexadecimal exato da cor aplicada, para voc&ecirc; ver cada escolha mudar na hora.'],
+  'v40.6': [
+    'Removido o conta-gotas &laquo;Capturar da tela&raquo;.',
+    'Predefini&ccedil;&otilde;es de destaque ajustadas para a intensidade total do Material 3 Expressive: cores profundas e vivas, realmente neon (os cinzas continuam suaves).'
+  ],
+  'v40.5': ['A paleta de destaque foi reequilibrada para o estilo Material 3 Expressive: cores tonais mais vivas.'],
+  'v40.4': ['O &laquo;Combinar com meu dispositivo&raquo; agora l&ecirc; a cor real do sistema (incluindo a sa&iacute;da oklch/color() do Chrome) e tamb&eacute;m sonda a cor de sele&ccedil;&atilde;o de texto do sistema operacional, para aplicar sua cor de destaque din&acirc;mica real.'],
+  'v40.3': [
+    'Todas as cores de destaque foram reequilibradas para o estilo tonal do Material You (tons m&eacute;dios suaves com tons de cont&ecirc;iner suaves).',
+    '&laquo;Combinar com meu dispositivo&raquo; agora tamb&eacute;m l&ecirc; a cor de sele&ccedil;&atilde;o do sistema como alternativa, para funcionar em mais navegadores e perf&iacute;s.'
+  ],
+  'v40.2': ['Configura&ccedil;&otilde;es de cor de destaque: o novo bot&atilde;o &laquo;Combinar com meu dispositivo&raquo; l&ecirc; a cor de destaque do sistema (Chrome 150+, aplicativo instalado) e a aplica, com uma confirma&ccedil;&atilde;o.'],
+  'v40.1': ['Removida a galeria de planos de fundo (os planos salvos na galeria s&atilde;o exclu&iacute;dos; o plano carregado continua funcionando).'],
+  'v40.0': ['Seletor de cor de destaque: a cor personalizada agora tem um campo hexadecimal (digite qualquer cor, de 3 ou 6 d&iacute;gitos) e um bot&atilde;o Copiar: o mesmo layout exato no desktop e no celular.'],
+  'v39.9': ['Chat na sala: as notas da sala agora aparecem em um painel Chat com hist&oacute;rico (60 mensagens guardadas por sala, restauradas ao voltar). Notas p&uacute;blicas s&atilde;o publicadas no log; as privadas ainda s&atilde;o copiadas direto para os rascunhos. Toque em uma mensagem para copi&aacute;-la.'],
+  'v39.8': [
+    'Salas recentes: as &uacute;ltimas seis salas em que voc&ecirc; participou aparecem como chips de um toque na tela inicial (com suas cores), mais um bot&atilde;o para limp&aacute;-las.',
+    'Enviar meu perfil: envia suas configura&ccedil;&otilde;es e atalhos personalizados para a sala inteira como um instant&acirc;neo de sentido &uacute;nico; os outros dispositivos aplicam na hora.',
+    'Galeria de planos de fundo: seis gradientes integrados com variantes claras/escuras autom&aacute;ticas, um bot&atilde;o Aleat&oacute;rio e uma mistura di&aacute;ria opcional.',
+    'Busca: os atalhos copiados s&atilde;o lembrados como &laquo;Copiados recentemente&raquo; no menu de busca, junto do hist&oacute;rico de buscas.'
+  ],
+  'v39.7': ['As anima&ccedil;&otilde;es no celular v&ecirc;m do mesmo CSS base do desktop: a regra para dispositivos de toque n&atilde;o desliga mais as transi&ccedil;&otilde;es globalmente. O holofote do tour e as guias deslizam entre um passo e outro, e as trocas de tema/plano de fundo desvanecem, tamb&eacute;m nos telefones.'],
+  'v39.6': ['Paridade no celular: as trocas de tema e plano de fundo agora acontecem de forma suave (como no desktop) e o tour do site anima entre os passos tamb&eacute;m em dispositivos de toque.'],
+  'v39.5': ['AirDrop e Quick Share: um bot&atilde;o &laquo;Compartilhar&raquo; ao lado do c&oacute;digo da sala abre a folha de compartilhamento do telefone (AirDrop no Apple) com um link de entrada de um toque: o outro dispositivo s&oacute; precisa tocar nele e entrar na sala.'],
+  'v39.4': ['O brilho e o cintila&ccedil;&atilde;o da p&iacute;lula de vers&atilde;o agora animam no desktop mesmo com &laquo;reduzir movimento&raquo; ativo no sistema ou anima&ccedil;&otilde;es desativadas nas configura&ccedil;&otilde;es: &eacute; tratado como um sinal de atualiza&ccedil;&atilde;o, n&atilde;o como decora&ccedil;&atilde;o.'],
+  'v39.3': ['O brilho da p&iacute;lula de vers&atilde;o e o selo nas configura&ccedil;&otilde;es agora aparecem de forma confi&aacute;vel no desktop: a vers&atilde;o em execu&ccedil;&atilde;o sempre recebe uma nova janela de destaque por alguns dias na abertura, mesmo se a notifica&ccedil;&atilde;o de atualiza&ccedil;&atilde;o foi ignorada.'],
+  'v39.2': ['O brilho e o cintila&ccedil;&atilde;o de nova vers&atilde;o na p&iacute;lula n&atilde;o desaparecem mais para sempre depois de um &uacute;nico olhar: o destaque dura alguns dias e volta a cada visita.'],
+  'v39.1': ['Os pontos de cor finalmente aparecem: as amostras (cor da sala e amostras de tema/destaque) agora s&atilde;o desenhadas como c&iacute;rculos vis&iacute;veis em vez de spans vazios e invis&iacute;veis.'],
+  'v39': [
+    'O Ring agora permite anexar uma mensagem r&aacute;pida ao toque: o dispositivo que toca ouve e copia para os rascunhos.',
+    'Alertas de bateria: voc&ecirc; recebe uma notifica&ccedil;&atilde;o &laquo;recuperada&raquo; quando um dispositivo volta acima de 25% e pode ativar ou desativar o alarme de bateria.',
+    'As notas podem ser enviadas para um &uacute;nico dispositivo por um seletor &laquo;Para:&raquo; ao lado do campo da nota.',
+    'Cada sala pode ter um r&oacute;tulo colorido para distinguir as salas &agrave; primeira vista.',
+    'Os c&oacute;digos de sincroniza&ccedil;&atilde;o offline agora mostram uma pr&eacute;via (dispositivo, hora, n&uacute;mero de configura&ccedil;&otilde;es e atalhos) e pedem confirma&ccedil;&atilde;o antes de importar.'
+  ],
+  'v38.1': ['No celular, tocar na guia Informa&ccedil;&otilde;es n&atilde;o abre mais as se&ccedil;&otilde;es automaticamente: toque no t&iacute;tulo de uma se&ccedil;&atilde;o para expandi-la.'],
+  'v38': ['No celular, abrir a guia Informa&ccedil;&otilde;es n&atilde;o expande mais automaticamente as instru&ccedil;&otilde;es de sincroniza&ccedil;&atilde;o: toque na se&ccedil;&atilde;o &laquo;Salas ao vivo e sincroniza&ccedil;&atilde;o offline&raquo; para abri-la.'],
+  'v37': ['O guia agora inclui instru&ccedil;&otilde;es completas para <strong>Salas ao vivo</strong> e <strong>C&oacute;digos de sincroniza&ccedil;&atilde;o offline</strong>, e tamb&eacute;m est&aacute; dispon&iacute;vel no celular.'],
+  'v36': ['O bot&atilde;o na &aacute;rea de entrada agora se chama <strong>Escanear</strong> (abre a c&acirc;mera ou o seletor de arquivos para ler um QR), para n&atilde;o ser mais confundido com o bot&atilde;o <strong>QR</strong> que mostra o c&oacute;digo da sala.'],
+  'v35': ['Corrigido: os QR codes da sala e do c&oacute;digo offline agora aparecem corretamente em vez de uma caixa vazia.'],
+  'v34': [
+    '<strong>Ligar para um dispositivo</strong> &mdash; cada outro dispositivo tem um bot&atilde;o Ring que o faz tocar e vibrar, para voc&ecirc; encontrar seu telefone.',
+    '<strong>Enviar uma nota</strong> &mdash; compartilhe texto com cada dispositivo conectado; ela aparece na hora e &eacute; copiada para os rascunhos dele.',
+    '<strong>Monitoramento de bateria</strong> &mdash; voc&ecirc; &eacute; avisado quando um dispositivo conectado cai abaixo de 20% de bateria.',
+    '<strong>Renomear dispositivos</strong> &mdash; toque no nome de um dispositivo para dar a ele um nome personalizado.',
+    '<strong>Entrar escaneando</strong> &mdash; o anfitri&atilde;o pode mostrar um QR do c&oacute;digo da sala; escaneie com a c&acirc;mera (ou escaneie um c&oacute;digo de sincroniza&ccedil;&atilde;o offline).',
+    '<strong>Salas protegidas</strong> &mdash; marque &laquo;Proteger esta sala&raquo; e defina uma senha; todos os dados da sala s&atilde;o criptografados, para que s&oacute; os membros com a senha possam l&ecirc;-los.',
+    '<strong>Visto por &uacute;ltimo</strong> &mdash; cada dispositivo agora mostra h&aacute; quanto tempo est&aacute; online.'
+  ],
+  'v33': ['Os dispositivos conectados tamb&eacute;m compartilham seu <strong>n&iacute;vel de bateria</strong> (inclusive durante o carregamento), atualizado em tempo real na sala.'],
+  'v32': ['As salas ao vivo agora mostram o nome real de cada dispositivo (como &laquo;Mi 9T Pro&raquo;) em vez de um aleat&oacute;rio, tirado do pr&oacute;prio dispositivo.'],
+  'v31': ['As salas ao vivo agora mostram cada dispositivo conectado pelo nome, com um ponto verde neste dispositivo e o total.'],
+  'v30': [
+    '<strong>Salas ao vivo</strong> &mdash; antes, para sincronizar configura&ccedil;&otilde;es e atalhos personalizados em tempo real:<ol><li>No dispositivo com suas configura&ccedil;&otilde;es, abra <strong>Configura&ccedil;&otilde;es &rarr; Salas ao vivo</strong> e toque em <strong>Iniciar uma sala</strong>. Aparece um c&oacute;digo como AK-XXX-YYY.</li><li>Envie esse c&oacute;digo para os outros dispositivos (copie ou compartilhe como preferir).</li><li>Em cada dispositivo receptor, abra <strong>Configura&ccedil;&otilde;es &rarr; Salas ao vivo</strong>, digite o mesmo c&oacute;digo e toque em <strong>Entrar na sala</strong>.</li></ol>',
+    '<strong>C&oacute;digos de sincroniza&ccedil;&atilde;o offline</strong> &mdash; depois, para uma transfer&ecirc;ncia &uacute;nica quando n&atilde;o h&aacute; internet:<ol><li>Abra <strong>Configura&ccedil;&otilde;es &rarr; C&oacute;digo de sincroniza&ccedil;&atilde;o offline</strong> e toque em <strong>Criar um c&oacute;digo</strong>. Copie o c&oacute;digo ou escaneie o QR que aparece.</li><li>No outro dispositivo, abra <strong>Configura&ccedil;&otilde;es &rarr; C&oacute;digo de sincroniza&ccedil;&atilde;o offline</strong>, cole o c&oacute;digo e toque em <strong>Aplicar um c&oacute;digo</strong>.</li></ol>'
+  ],
+  'v29': ['Corrigido: no <strong>celular</strong>, tocar no selo de vers&atilde;o agora dispara a anima&ccedil;&atilde;o aleat&oacute;ria de quique/rota&ccedil;&atilde;o/compress&atilde;o, em vez de ser bloqueado pela redefini&ccedil;&atilde;o de anima&ccedil;&otilde;es de dispositivos de toque.'],
+  'v28': ['Celular: a guia de configura&ccedil;&otilde;es ao lado de Personalizar agora se chama apenas <strong>Informa&ccedil;&otilde;es</strong> (o Guia existe apenas no desktop) e abre a se&ccedil;&atilde;o Informa&ccedil;&otilde;es automaticamente quando tocada.'],
+  'v27': ['Corrigido: abrir a p&aacute;gina logo ap&oacute;s uma <strong>nova vers&atilde;o</strong> n&atilde;o a reinicia mais com um recarregamento surpresa alguns segundos depois &mdash; a atualiza&ccedil;&atilde;o agora &eacute; aplicada em segundo plano. O bot&atilde;o Atualizar e a op&ccedil;&atilde;o &laquo;Perguntar antes de atualizar&raquo; ainda recarregam sob demanda.'],
+  'v26.9': ['Divertido: tocar no <strong>selo de vers&atilde;o</strong> agora dispara sempre uma anima&ccedil;&atilde;o aleat&oacute;ria de quique/rota&ccedil;&atilde;o/compress&atilde;o, brilha com um <strong>pisca&shy;mento</strong> quando uma nova vers&atilde;o &eacute; destacada, e a se&ccedil;&atilde;o Informa&ccedil;&otilde;es foi movida para a <strong>guia Informa&ccedil;&otilde;es</strong> nas Configura&ccedil;&otilde;es para chegar mais r&aacute;pido.'],
+  'v26.8': ['Melhorado: o <strong>selo de vers&atilde;o</strong> na se&ccedil;&atilde;o Informa&ccedil;&otilde;es agora se atualiza sozinho e abre Novidades.'],
+  'v26.7': ['Melhorado: os <strong>atalhos de aplicativos</strong> na dica do dia agora mostram primeiro a qual aplicativo pertencem, como <em>Figma &mdash; Move Tool &mdash; V</em>.'],
+  'v26.6': ['Melhorado: a <strong>dica do dia</strong> agora se atualiza quando voc&ecirc; muda a guia de plataforma: escolher Windows, macOS, Linux, ChromeOS ou Apps mostra um atalho daquela se&ccedil;&atilde;o.'],
+  'v26.5': ['Corrigido: a <strong>dica do dia</strong> n&atilde;o fica mais presa a um &uacute;nico atalho: agora mostra um atalho aleat&oacute;rio novo (da guia de plataforma que voc&ecirc; est&aacute; vendo) a cada carregamento da p&aacute;gina, em vez de reutilizar o mesmo o dia inteiro.'],
+  'v26.4': ['Corrigido: a <strong>dica do dia</strong> agora mostra apenas atalhos da guia de plataforma que voc&ecirc; est&aacute; vendo (antes misturava atalhos de todas as plataformas). O selo de vers&atilde;o na se&ccedil;&atilde;o Guia tamb&eacute;m se atualiza sozinho.'],
+  'v26.3': ['O bot&atilde;o <strong>tour</strong> agora mostra um &iacute;cone de <strong>livro aberto</strong>.'],
+  'v26.2': ['O bot&atilde;o <strong>tour</strong> agora mostra um &iacute;cone de b&uacute;ssola, e o tour ganhou um passo que explica o que faz o <strong>bot&atilde;o atualizar</strong>.'],
+  'v26.1': ['Corrigido: alternar entre <strong>escuro &harr; claro</strong> (pelo interruptor no topo ou pelas Configura&ccedil;&otilde;es) n&atilde;o deixa mais os cores de um <strong>tema de plano de fundo</strong> descascados: destaque, bot&otilde;es da barra e teclas de atalho mant&ecirc;m as cores do tema enquanto o plano de fundo permanece.'],
+  'v26': ['Novo <strong>tour do site</strong> &mdash; toque no bot&atilde;o <strong>?</strong> no topo para uma visita guiada de barra de busca, filtros, guias, lista de atalhos, quiz, configura&ccedil;&otilde;es, impress&atilde;o e alternador de tema. Navegue com os bot&otilde;es, as setas ou os pontos.'],
+  'v25': ['Removido o link <strong>Ver no GitHub</strong> da se&ccedil;&atilde;o Informa&ccedil;&otilde;es.'],
+  'v24.8': ['Corrigido: a notifica&ccedil;&atilde;o <strong>&laquo;Atualizado&raquo;</strong> no celular agora fica dentro da tela (antes transbordava da borda direita em dispositivos pequenos).'],
+  'v24.7.4': ['O raio dos cantos agora &eacute; limitado a <strong>16&thinsp;px</strong> em todos os temas: p&iacute;lulas, guias, barras de busca e notifica&ccedil;&otilde;es n&atilde;o ficam mais totalmente redondas (antes usavam at&eacute; 100&thinsp;px). Os cantos continuam suaves, apenas mais s&oacute;brios.'],
+  'v24.7.3': ['Corrigido: <strong>Abrir configura&ccedil;&otilde;es de Wi-Fi</strong> no <strong>Android</strong> n&atilde;o fazia nada: o Chrome recente n&atilde;o permite que sites abram as configura&ccedil;&otilde;es de sistema do Android. O bot&atilde;o agora mostra uma mensagem breve pedindo para abrir as configura&ccedil;&otilde;es de Wi-Fi pelo app Configura&ccedil;&otilde;es do aparelho (no iOS e macOS ele ainda abre diretamente).'],
+  'v24.7.2': ['Corrigido: em um app Android instalado (PWA), tocar em <strong>Abrir configura&ccedil;&otilde;es de Wi-Fi</strong> n&atilde;o fazia nada: o Android impede que apps abram diretamente as configura&ccedil;&otilde;es de sistema. Agora o app explica e pede para abrir o site em uma aba do Chrome, onde o bot&atilde;o funciona.'],
+  'v24.7.1': ['Corrigido: <strong>Abrir configura&ccedil;&otilde;es de Wi-Fi</strong> no <strong>Android</strong> usava um clique em &acirc;ncora ativado por JS, que o Chrome bloqueia para links <code>intent:</code>: agora usa uma navega&ccedil;&atilde;o iniciada por gesto do usu&aacute;rio.'],
+  'v24.7': [
+    'O <strong>status da conex&atilde;o</strong> agora fica no topo de <strong>Configura&ccedil;&otilde;es &rarr; Geral</strong> (antes em Informa&ccedil;&otilde;es).',
+    'O bot&atilde;o <strong>Abrir configura&ccedil;&otilde;es de Wi-Fi</strong> agora abre as verdadeiras configura&ccedil;&otilde;es de Wi-Fi no <strong>iOS</strong> (app Configura&ccedil;&otilde;es) e no <strong>macOS</strong> (Configura&ccedil;&otilde;es do Sistema). No Android, Windows e Linux, onde os navegadores n&atilde;o conseguem abrir as configura&ccedil;&otilde;es do sistema, mostra instru&ccedil;&otilde;es breves.'
+  ],
+  'v24.6': [
+    'A p&iacute;lula <strong>Offline</strong> agora fica <strong>10 segundos</strong> e depois some (n&atilde;o te incomoda enquanto a conex&atilde;o ainda caiu).',
+    'Configura&ccedil;&otilde;es &rarr; Informa&ccedil;&otilde;es agora sempre mostra seu <strong>status da conex&atilde;o</strong> (Online/Offline), com um bot&atilde;o para abrir suas <strong>configura&ccedil;&otilde;es de Wi-Fi</strong>: no iOS abre direto o app Configura&ccedil;&otilde;es; em outros aparelhos mostra instru&ccedil;&otilde;es breves.'
+  ],
+  'v24.5.2': ['Corrigido: em desktops onde o Windows perde a conex&atilde;o sem disparar o evento <em>offline</em> do navegador (ou onde as requisi&ccedil;&otilde;es travam em vez de falhar), a p&iacute;lula <strong>Offline</strong> agora tamb&eacute;m aparece quando a verifica&ccedil;&atilde;o de conectividade expira: n&atilde;o s&oacute; quando a requisi&ccedil;&atilde;o falha completamente.'],
+  'v24.5.1': ['Corrigido: a p&iacute;lula <strong>Offline</strong> agora tamb&eacute;m aparece quando a conex&atilde;o cai sem disparar um evento do navegador (como &laquo;Offline&raquo; no DevTools, em alguns navegadores m&oacute;veis): o app verifica ativamente a conectividade a cada poucos segundos em vez de depender s&oacute; de sinais do navegador. Ela fica oculta enquanto voc&ecirc; estiver online.'],
+  'v24.5': [
+    'Enquanto voc&ecirc; busca, as palavras que correspondem &agrave; sua busca agora s&atilde;o <strong>destacadas</strong> nos resultados: fica mais f&aacute;cil entender por que cada linha corresponde.',
+    'O campo de busca agora tem um <strong>bot&atilde;o de limpar (&times;)</strong> que aparece quando voc&ecirc; digitou algo.',
+    'Uma pequena p&iacute;lula <strong>Offline</strong> aparece quando a conex&atilde;o cai: toque para confirmar que o Anthkeys continua funcionando do cache.'
+  ],
+  'v24.4.1': ['Corrigido no celular: o cabe&ccedil;alho <strong>A&ccedil;&atilde;o &mdash; Atalho</strong> n&atilde;o desliza mais para fora: em telas estreitas a tabela de atalhos tinha virado um cont&eacute;iner de rolagem horizontal pr&oacute;prio, o que quebrava o cabe&ccedil;alho fixo. Agora ele fica fixo no topo, exatamente como no desktop.'],
+  'v24.4': ['Removido o <strong>widget de sequ&ecirc;ncia do quiz na tela inicial</strong>: ele dependia de um padrao web que os navegadores ainda n&atilde;o implementaram, ent&atilde;o nunca apareceu em lugar nenhum. Sua sequ&ecirc;ncia e suas estat&iacute;sticas do quiz continuam no aplicativo como sempre.'],
+  'v24.3': [
+    'O <strong>quiz de atalhos agora guarda suas estat&iacute;sticas</strong>: uma sequ&ecirc;ncia di&aacute;ria (🔥 dias seguidos em que voc&ecirc; completou um quiz), a melhor pontua&ccedil;&atilde;o, a precis&atilde;o e as partidas jogadas. Salvas localmente, nunca enviadas.',
+    'Novo <strong>widget de sequ&ecirc;ncia do quiz na tela inicial</strong> para Android (Web App Widgets: experimental, chegando ao Chrome e ao Firefox; n&atilde;o dispon&iacute;vel no iOS). Mostra sua sequ&ecirc;ncia e estat&iacute;sticas; toque para abrir o quiz.'
+  ],
+  'v24.2.1': ['Corrigido no celular: tocar na barra de busca podia abrir a p&aacute;gina Informa&ccedil;&otilde;es: a notifica&ccedil;&atilde;o oculta &laquo;Novidades&raquo; perto do bot&atilde;o de configura&ccedil;&otilde;es ainda era clic&aacute;vel e ficava sobre o campo de busca. Agora ela s&oacute; reage enquanto est&aacute; vis&iacute;vel.'],
+  'v24.2': [
+    'Novo <strong>filtro de modificadores</strong>: no menu Filtros escolha uma tecla (Ctrl, Shift, Alt, Win, Cmd, &hellip;) para mostrar apenas os atalhos que a usam. As op&ccedil;&otilde;es se adaptam por plataforma.',
+    'Um <strong>bot&atilde;o voltar ao topo</strong> flutua sobre a lista de atalhos quando voc&ecirc; rola: toque para voltar imediatamente ao in&iacute;cio.'
+  ],
+  'v24.1': ['A barra <strong>A&ccedil;&atilde;o &mdash; Atalho</strong> agora fica fixa no topo da lista enquanto voc&ecirc; rola: no celular e no Safari antes sa&iacute;a da tela.'],
+  'v23.9': ['Removido o popup Guia e dicas no celular: ele listava apenas atalhos de desktop. O Guia continua nas Configura&ccedil;&otilde;es no desktop, onde <kbd>?</kbd> leva direto a ele.'],
+  'v23.8': ['No celular, o Guia n&atilde;o fica mais dentro das Configura&ccedil;&otilde;es: ele continua oculto l&aacute; para n&atilde;o pesar na p&aacute;gina. Pressione <kbd>?</kbd> para abri-lo como popup.'],
+  'v23.7': ['Guia e dicas foram movidos para <strong>Configura&ccedil;&otilde;es</strong> (se&ccedil;&atilde;o Geral) no desktop: pressione <kbd>?</kbd> para ir direto.'],
+  'v23.6': [
+    'Todos os 20 idiomas agora est&atilde;o totalmente traduzidos: sem mais fallback para o ingl&ecirc;s em recursos recentes como quiz, sincroniza&ccedil;&atilde;o em nuvem e Guia.',
+    'No celular, segure um atalho para copi&aacute;-lo em vez de tocar: sem mais c&oacute;pias acidentais durante a rolagem.',
+    'As p&iacute;lulas de filtro agora usam sua cor de destaque tamb&eacute;m no celular, como no desktop; quando Favoritos est&aacute; selecionado, ele &eacute; o &uacute;nico que se destaca.',
+    'Removida a borda ao redor dos cinco bot&otilde;es da barra superior no celular: agora eles se fundem &agrave; p&aacute;gina.',
+    'O bot&atilde;o do quiz ganhou um novo &iacute;cone de raio, e as respostas mostram nomes leg&iacute;veis em vez de teclas cruas.',
+    'Corrigido: o JavaScript do aplicativo podia n&atilde;o carregar depois de uma atualiza&ccedil;&atilde;o, deixando o site sem resposta.'
+  ],
+  'v23.5': [
+    'Os controles de filtro, favorito, compara&ccedil;&atilde;o e compacta&ccedil;&atilde;o agora ficam em um &uacute;nico menu compacto <strong>Filtros</strong>: mais espa&ccedil;o para a lista de atalhos no celular.',
+    'A p&aacute;gina Novidades, o selo de vers&atilde;o e as configura&ccedil;&otilde;es de atualiza&ccedil;&atilde;o foram movidos para uma nova se&ccedil;&atilde;o <strong>Informa&ccedil;&otilde;es</strong> nas Configura&ccedil;&otilde;es.',
+    'As notifica&ccedil;&otilde;es de atualiza&ccedil;&atilde;o agora aparecem pelo bot&atilde;o <strong>Configura&ccedil;&otilde;es</strong>: o &iacute;cone da engrenagem mostra um selo at&eacute; voc&ecirc; ver as novidades.'
+  ],
+  'v23.4': ['Removido o bot&atilde;o de ajuda <kbd>?</kbd> da barra superior: pressione <kbd>?</kbd> para abrir o Guia de qualquer forma.'],
+  'v23.3': [
+    'O selo de vers&atilde;o acende ap&oacute;s uma atualiza&ccedil;&atilde;o autom&aacute;tica, para voc&ecirc; notar a nova vers&atilde;o no pr&oacute;ximo in&iacute;cio.',
+    'Mudar de um plano de fundo padr&atilde;o para outro mant&eacute;m o modo escuro: o novo plano tamb&eacute;m &eacute; escurecido.',
+    'No celular, a barra de plataformas (Windows, macOS, Linux, ChromeOS) agora tem a mesma apar&ecirc;ncia do desktop.'
+  ],
+  'v23.2': [
+    'Removido o alternador Avan&ccedil;ado/B&aacute;sico: todos os atalhos s&atilde;o mostrados juntos.',
+    'No celular, os bot&otilde;es da barra superior agora ficam em uma grade limpa de 2&times;3.',
+    'Os planos de fundo padr&atilde;o continuam aplicados e s&atilde;o escurecidos corretamente quando voc&ecirc; muda para o modo escuro.',
+    'Sobreposi&ccedil;&otilde;es (configura&ccedil;&otilde;es, guia, quiz) agora cobrem as guias fixas no celular.'
+  ],
+  'v23.1': ['Os planos de fundo agora s&atilde;o otimizados para o modo escuro: ao passar para o escuro, tanto as imagens personalizadas quanto os fundos padr&atilde;o (Oceano, Floresta, P&ocirc;r-do-sol, &hellip;) s&atilde;o escurecidos e dessaturados para os pain&eacute;is continuarem leg&iacute;veis.'],
+  'v23': [
+    'Novo modo &laquo;Comparar&raquo;: escolha uma segunda plataforma para ver apenas os atalhos que diferem.',
+    'Tema autom&aacute;tico que segue a hor&aacute;rio do dia (escuro das 19h &agrave;s 7h).',
+    'Pressione <kbd>?</kbd> ou toque no bot&atilde;o <kbd>?</kbd> para um guia r&aacute;pido e dicas.',
+    'Datas de lan&ccedil;amento adicionadas a cada item desta p&aacute;gina.'
+  ],
+  'v22': [
+    'Corrigido: a tabela da legenda de teclas era cortada em celulares estreitos: agora ela rola na horizontal para todas as colunas serem alcan&ccedil;veis.',
+    'A barra de busca e as p&iacute;lulas de categoria ficam ocultas na p&aacute;gina &laquo;Novidades&raquo; porque n&atilde;o se aplicam l&aacute;.'
+  ],
+  'v21': [
+    'A legenda de teclas agora tem um bot&atilde;o de fechar, para voc&ecirc; recolh&ecirc;-la de dentro do painel: &uacute;til no celular, onde o interruptor pode rolar para fora do alcance.',
+    'Tratamento de toque mais responsivo para o bot&atilde;o Legenda de teclas em dispositivos de toque.'
+  ],
+  'v20.1': [
+    'Os n&uacute;meros de vers&atilde;o agora aceitam vers&otilde;es de corre&ccedil;&atilde;o: o selo no rodap&eacute; mostra, por exemplo, v20.1, e a detec&ccedil;&atilde;o de atualiza&ccedil;&otilde;es as trata corretamente.',
+    'Adicionado a esta p&aacute;gina o item v20 que faltava.'
+  ],
+  'v20': ['Nova p&aacute;gina &laquo;Novidades&raquo; dentro do Anthkeys: o link na notifica&ccedil;&atilde;o de atualiza&ccedil;&atilde;o e o selo de vers&atilde;o no rodap&eacute; abrem ela aqui em vez do GitHub.'],
+  'v19': ['O banner de atualiza&ccedil;&atilde;o agora tamb&eacute;m aparece se voc&ecirc; atualizar de uma vers&atilde;o anterior ao rastreamento de vers&otilde;es (sua vers&atilde;o anterior &eacute; detectada pelo cache offline).'],
+  'v18': [
+    'Aparece uma notifica&ccedil;&atilde;o &laquo;Atualizado para vX &mdash; Novidades&raquo; quando chega uma nova vers&atilde;o (no modo de atualiza&ccedil;&atilde;o autom&aacute;tica).',
+    'O banner de atualiza&ccedil;&atilde;o agora &eacute; acionado por atualiza&ccedil;&otilde;es de conte&uacute;do, n&atilde;o apenas por mudanças no service worker.',
+    'O selo de vers&atilde;o no rodap&eacute; &eacute; clic&aacute;vel: toque para ver as novidades.',
+    'Cache offline mais leve (nenhum arquivo sem vers&atilde;o jogado fora).'
+  ],
+  'v16': ['Adicionado um selo de vers&atilde;o no rodap&eacute; mostrando o n&uacute;mero de build atual.'],
+  'v15': ['Bot&atilde;o de atualizar e prefer&ecirc;ncia (atualiza&ccedil;&atilde;o autom&aacute;tica ou perguntar antes), com base no service worker.'],
+  'v14': ['Recolher ou expandir uma categoria agora respeita a busca ativa.'],
+  'v13': ['Cache de p&aacute;ginas com prioridade &agrave; rede, para as atualiza&ccedil;&otilde;es aparecerem na hora; rolagem muito mais suave no desktop.'],
+  'v12': ['A busca e os filtros agora ficam restritos &agrave; aba ativa.'],
+  'v11': ['Suporte a instala&ccedil;&atilde;o PWA, r&oacute;tulos de acessibilidade, suporte a movimento reduzido, atalhos do Gmail e YouTube, melhorias de SEO.'],
+  'v10': [
+    'Corrigido: o filtro de categoria podia esconder todos os atalhos quando correspondia a uma linha de cabe&ccedil;alho de categoria: agora ele s&oacute; esconde as linhas que voc&ecirc; filtrou.',
+    'O plano de fundo agora preenche a tela inteira no celular.'
+  ],
+  'v9': ['Windows agora &eacute; a aba de plataforma padr&atilde;o e as abas est&atilde;o em uma ordem mais clara.'],
+  'v8': [
+    'N&iacute;veis de dificuldade do quiz e uma dica do dia.',
+    'Rolagem muito mais suave no celular, al&eacute;m do cache offline.',
+    'Busca e filtros funcionam em todas as plataformas ao mesmo tempo, com r&oacute;tulos de sistema em negrito.'
+  ],
+  'v7': ['Os estilos de design foram removidos: Material 3 agora &eacute; o &uacute;nico visual.'],
+  'v6': [
+    'Estilos de design reduzidos a Material 3, mais um bot&atilde;o &laquo;Remover plano de fundo&raquo; para voltar ao tema padr&atilde;o.',
+    'Cabe&ccedil;alhos cache-control para as atualiza&ccedil;&otilde;es chegarem mais r&aacute;pido.'
+  ],
+  'v5': ['T&iacute;tulos de p&aacute;gina simplificados para apenas &laquo;Atalhos&raquo; em todos os 14 idiomas.'],
+  'v4': [
+    'Modo de quiz de atalhos: treine adivinhando o atalho ou a a&ccedil;&atilde;o, mais sincroniza&ccedil;&atilde;o em nuvem com GitHub Gist.',
+    'Uma grande s&eacute;rie de corre&ccedil;&otilde;es em amostras de destaque, troca de tema e planos de fundo no celular.'
+  ],
+  'v3': ['Predefini&ccedil;&otilde;es de cor de destaque que voc&ecirc; pode salvar e reutilizar, mais invalida&ccedil;&atilde;o de cache para as atualiza&ccedil;&otilde;es aparecerem de forma confi&aacute;vel.'],
+  'v2': ['Temas claro e escuro com cores de destaque, mais tradu&ccedil;&otilde;es da refer&ecirc;ncia de atalhos.'],
+  'v1': ['A primeira vers&atilde;o do Anthkeys: todos os atalhos de teclado do dia a dia para Windows, macOS, Linux e ChromeOS em uma &uacute;nica p&aacute;gina.']
+};
+
+I18N_WN.nl = {
+  'v52.1': [
+    'Nieuw: de pagina &laquo;Nieuws&raquo; is nu volledig in alle 20 talen vertaald &mdash; elke release-notitie wordt in je eigen taal getoond.'
+  ],
+  'v52': [
+    'Oplossing: v51 kon het laden van de app verhinderen; een Deense vertaling bevatte een niet-escapte apostrof die het hele taalbestand ongeldig maakte. Het bestand wordt nu correct verwerkt en alle 20 talen laden weer.'
+  ],
+  'v51': [
+    'Vertalingen voltooid voor alle 20 talen &mdash; instellingen, live kamers, offline synchronisatie en de synchronisatiegids zijn nu volledig vertaald (recente items verschenen alleen in het Engels).',
+    'Nieuw: als Anthkeys traag lijkt, biedt een banner aan om de Prestatiemodus met &eacute;&eacute;n tik in te schakelen. Je kunt hem sluiten en hij komt niet terug.'
+  ],
+  'v50.7': ['De Prestatiemodus is verplaatst naar het tabblad Algemeen in de instellingen.'],
+  'v50.6': ['De pictogrammen in de bovenbalk zijn weer gekleurde emoji, net als bij v50: boek, printer, bliksem, maan/zon, vernieuwen en tandwiel.'],
+  'v50.5': ['De pictogrammen in de bovenbalk gebruiken weer de accentkleur (standaard), in plaats van wit/grijs te lijken.'],
+  'v50.4': ['De functie voor accentkleurpictogram is verwijderd: favicon, startschermpictogram en het pictogram van de ge&iuml;nstalleerde PWA gebruiken weer het standaardpictogram (een pictogram in de accentkleur kleuren maakt alleen zin voor native apps).'],
+  'v50.3': [
+    'De pictogrammen in de bovenbalk zijn opnieuw opgebouwd om betrouwbaar op alle apparaten te verschijnen (Rondleiding, Afdrukken, Quiz, thema, Vernieuwen en Instellingen gebruiken nu echte pictogrammen).',
+    'Het thema-schakelpictogram is weer een echt pictogram en komt overeen met de lichte/donkerstatus.'
+  ],
+  'v50.2': ['Een bug in v50.1 verhinderde dat de pictogrammen in de bovenbalk en Instellingen bij het opstarten werkten; opgelost.'],
+  'v50.1': [
+    'Nieuwe Prestatiemodus bij Aanpassen: schakelt blur-effecten en animaties uit die de app op Windows traag kunnen maken.',
+    'De bovenbalk gebruikt nu echte pictogrammen en een nieuwe instelling Pictogrammen kleurt ze met je accentkleur.',
+    'Het tabblad Apps werkt nu als het Linux-tabblad: klik ergens om een app te kiezen (VS Code, Figma, Gmail en meer), en het tabblad toont je keuze, bijvoorbeeld &laquo;Apps - Gmail&raquo;.',
+    'Het hexveld onder de knop Aanpassen is verwijderd: kies kleuren alleen via de schuifregelaars.',
+    'De accentopties met kleurverloop zijn verdubbeld met acht nieuwe combinaties van twee kleuren.'
+  ],
+  'v50': [
+    'Klik ergens op het Linux-tabblad om de distributielijst te openen, en het tabblad toont nu je keuze, bijvoorbeeld &laquo;Linux - Ubuntu (GNOME)&raquo;.',
+    'De aangepaste kleurkiezer is opnieuw opgebouwd: het ronde monster opent schuifregelaars voor Tint, Verzadiging en Lichtheid (met de waarde erboven elk ervan), uitgaand van de huidige kleur in plaats van 0/0/0.',
+    'Nieuwe sectie Verloopaccenten: acht tweekleurige verlopen die klaarstaan om als accentkleur te worden toegepast.',
+    'De accentvoorinstellingen zijn verfijnd naar een zuiverder en duidelijker palet.'
+  ],
+  'v40.9': ['De distributielijst staat nu direct op het Linux-tabblad: klik op het kleine pijltje van het tabblad om je distributie te kiezen.'],
+  'v40.8': ['Het Linux-tabblad heeft nu een distributielijst (Ubuntu, Debian, Fedora, Arch, Mint, KDE en meer) die systeemsneltoetsen aanpast aan de standaardinstellingen van elke distributie en je keuze onthoudt.'],
+  'v40.7': ['De accentinstellingen tonen nu een live voorbeeldbalk met de exacte hexcode van de toegepaste kleur, zodat je elke keuze direct ziet veranderen.'],
+  'v40.6': [
+    'De &laquo;Van scherm opnemen&raquo;-pipet is verwijderd.',
+    'De accentvoorinstellingen zijn bijgesteld op de volle intensiteit van Material 3 Expressive: diepe, levendige kleuren, echt neon (grijs blijft gedempt).'
+  ],
+  'v40.5': ['Het accentpalet is opnieuw uitgebalanceerd in de stijl van Material 3 Expressive: levendigere tonale kleuren.'],
+  'v40.4': ['&laquo;Overeenkomen met mijn apparaat&raquo; leest nu de echte systeemkleur (inclusief de oklch/color()-uitvoer van Chrome) en peilt ook de tekstselectiekleur van het besturingssysteem, zodat je je werkelijke dynamische accentkleur krijgt toegepast.'],
+  'v40.3': [
+    'Alle accentkleuren zijn opnieuw uitgebalanceerd naar de Material You-tonaliteit (zachte middentonen met zachte containertonen).',
+    '&laquo;Overeenkomen met mijn apparaat&raquo; leest nu ook de selectiekleur van het systeem als alternatief, zodat het op meer browsers en profielen werkt.'
+  ],
+  'v40.2': ['Instellingen voor accentkleur: de nieuwe knop &laquo;Overeenkomen met mijn apparaat&raquo; leest de systeemaccentkleur (Chrome 150+, ge&iuml;nstalleerde app) en past die toe, met een bevestigingsmelding.'],
+  'v40.1': ['De achtergrondgalerij is verwijderd (achtergronden die in de galerij zijn opgeslagen worden gewist; je geladen achtergrond blijft werken).'],
+  'v40.0': ['Accentkleurkiezer: de aangepaste kleur heeft nu een hexveld (typ willekeurige kleur, 3 of 6 tekens) plus een knop Kopi&euml;ren: exact dezelfde indeling op desktop en mobiel.'],
+  'v39.9': ['Chat in de kamer: kamernotities verschijnen nu in een chatpaneel met geschiedenis (60 berichten per kamer bewaard, hersteld bij terugkeren). Openbare notities worden in het log geplaatst; priv&eacute;notities worden nog steeds direct naar klemborden gekopieerd. Tik op een bericht om het te kopi&euml;ren.'],
+  'v39.8': [
+    'Recente kamers: de laatste zes kamers waaraan je deelnam staan als &eacute;&eacute;n-tik-chips op het startscherm (met hun kleuren), plus een knop om ze te wissen.',
+    'Mijn profiel sturen: stuur je instellingen en aangepaste sneltoetsen naar de hele kamer als een eenmalige momentopname; andere apparaten passen die direct toe.',
+    'Achtergrondgalerij: zes ingebouwde verlopen met automatische lichte/donker varianten, een knop Willekeurig en een optionele dagelijkse mix.',
+    'Zoeken: gekopieerde sneltoetsen worden onthouden als &laquo;Recent gekopieerd&raquo; in het zoekmenu, samen met de zoekgeschiedenis.'
+  ],
+  'v39.7': ['Animaties op mobiel komen nu uit dezelfde basis-CSS als op desktop: de regel voor touchapparaten schakelt overgangen niet langer globaal uit. De tourzaklamp en de tabbladen bewegen tussen de stappen, en thema- en achtergrondwissels vervagen, ook op telefoons.'],
+  'v39.6': ['Mobiel gelijkgetrokken: thema- en achtergrondwissels verlopen nu vloeiend (zoals op desktop) en de site-tour animeert tussen de stappen ook op touchapparaten.'],
+  'v39.5': ['AirDrop en Quick Share: een knop &laquo;Delen&raquo; naast de kamercode opent het deelblad van de telefoon (AirDrop op Apple) met een eenmalige inschrijflink: het andere apparaat hoeft er alleen op te tikken en doet mee aan de kamer.'],
+  'v39.4': ['De helderheid en flikkering van de versiepil flikkeren nu ook op desktop wanneer &laquo; beweging beperken&raquo; aanstaat in het systeem of animaties in de instellingen uit staan: het wordt behandeld als een updatesignaal, niet als decoratie.'],
+  'v39.3': ['De helderheid van de versiepil en de badge in de instellingen verschijnen nu betrouwbaar op desktop: de actieve versie krijgt bij het opstarten altijd een nieuw highlight-venster van enkele dagen, ook als de updatemelding is overgeslagen.'],
+  'v39.2': ['De helderheid en flikkering van een nieuwe versie op de pil verdwijnen niet meer voorgoed na &eacute;&eacute;n blik: de markering duurt enkele dagen en komt bij elk bezoek terug.'],
+  'v39.1': ['De kleurpunten zijn eindelijk zichtbaar: de monsters (kamerkleur en thema/accentmonsters) worden nu als zichtbare cirkels getekend in plaats van lege, onzichtbare spans.'],
+  'v39': [
+    'Ring kan nu een kort bericht aan de bel voegen: het beltijdende apparaat hoort het en kopieert het naar klemborden.',
+    'Batterijwaarschuwingen: je krijgt een &laquo;hersteld&raquo;-melding wanneer een apparaat weer boven 25% komt en je kunt het batterijalarm aan- of uitzetten.',
+    'Notities kunnen naar &eacute;&eacute;n apparaat worden gestuurd via een &laquo;Aan:&raquo;-kiezer naast het notitieveld.',
+    'Elke kamer kan een kleurlabel krijgen om kamers in één oogopslag te onderscheiden.',
+    'Offline synchronisatiecodes tonen nu een voorbeeld (apparaat, tijd, aantal instellingen en sneltoetsen) en vragen om bevestiging voor het importeren.'
+  ],
+  'v38.1': ['Op mobiel worden de secties niet meer automatisch geopend wanneer je het tabblad Info aanraakt: tik op de kop van een sectie om die uit te klappen.'],
+  'v38': ['Op mobiel worden de synchronisatie-instructies niet meer automatisch uitgeklapt wanneer je het tabblad Info opent: tik op de sectie &laquo;Live kamers en offline synchronisatie&raquo; om die te openen.'],
+  'v37': ['De gids bevat nu volledige instructies voor <strong>Live kamers</strong> en <strong>Offline synchronisatiecodes</strong>, en is ook beschikbaar op mobiel.'],
+  'v36': ['De knop in het aanmeldgebied heet nu <strong>Scannen</strong> (opent de camera of bestandskiezer om een QR-code te lezen), zodat hij niet meer verward wordt met de <strong>QR</strong>-knop die de kamercode toont.'],
+  'v35': ['Opgelost: QR-codes voor de kamer en de offline code worden nu correct getoond in plaats van een leeg vak.'],
+  'v34': [
+    '<strong>Een apparaat bellen</strong> &mdash; elk ander apparaat heeft een Ring-knop die het laat overgaan en trillen, zodat je je telefoon kunt vinden.',
+    '<strong>Een notitie sturen</strong> &mdash; deel tekst met elk verbonden apparaat; die verschijnt direct en wordt naar zijn klemborden gekopieerd.',
+    '<strong>Batterijbewaking</strong> &mdash; je wordt gewaarschuwd wanneer een verbonden apparaat onder 20% batterij zakt.',
+    '<strong>Apparaten hernoemen</strong> &mdash; tik op de naam van een apparaat om het een eigen naam te geven.',
+    '<strong>Deelnemen door te scannen</strong> &mdash; de host kan een QR-code van de kamercode tonen; scan die met de camera (of scan een offline synchronisatiecode).',
+    '<strong>Beveiligde kamers</strong> &mdash; vink &laquo;Deze kamer beveiligen&raquo; aan en stel een wachtwoord in: alle kamergegevens worden versleuteld, zodat alleen leden met het wachtwoord ze kunnen lezen.',
+    '<strong>Laatst gezien</strong> &mdash; elk apparaat laat nu zien hoe lang het online is.'
+  ],
+  'v33': ['Verbonden apparaten delen nu ook hun <strong>batterijniveau</strong> (ook tijdens het opladen), in de kamer realtime bijgewerkt.'],
+  'v32': ['Live kamers tonen nu de echte naam van elk apparaat (zoals &laquo;Mi 9T Pro&raquo;) in plaats van een willekeurige naam die het apparaat zelf heeft bedacht.'],
+  'v31': ['Live kamers tonen nu elk verbonden apparaat op naam, met een groene stip op dit apparaat en het totaal.'],
+  'v30': [
+    '<strong>Live kamers</strong> &mdash; om eerst instellingen en aangepaste sneltoetsen realtime te synchroniseren:<ol><li>Open op het apparaat met je instellingen <strong>Instellingen &rarr; Live kamers</strong> en tik op <strong>Kamer starten</strong>. Er verschijnt een kamercode zoals AK-XXX-YYY.</li><li>Stuur die code naar je andere apparaten (kopieer of deel hem zoals je wilt).</li><li>Open op elk ontvangend apparaat <strong>Instellingen &rarr; Live kamers</strong>, typ dezelfde code en tik op <strong>Deelnemen aan kamer</strong>.</li></ol>',
+    '<strong>Offline synchronisatiecodes</strong> &mdash; daarna, voor een eenmalige overdracht als er geen internet is:<ol><li>Open <strong>Instellingen &rarr; Offline synchronisatiecode</strong> en tik op <strong>Code aanmaken</strong>. Kopieer de code of scan de QR-code die verschijnt.</li><li>Open op het andere apparaat <strong>Instellingen &rarr; Offline synchronisatiecode</strong>, plak de code en tik op <strong>Code toepassen</strong>.</li></ol>'
+  ],
+  'v29': ['Opgelost: op <strong>mobiel</strong> start het aanraken van de versiebadge nu de willekeurige stuiter-/draai-/krimpanimatie, in plaats van geblokkeerd te worden door de animatiereset voor touchapparaten.'],
+  'v28': ['Mobiel: het instellingen-tabblad naast Aanpassen heet nu alleen <strong>Info</strong> (de gids bestaat alleen op desktop) en opent automatisch de Info-sectie wanneer je erop tikt.'],
+  'v27': ['Opgelost: de pagina kort na een <strong>nieuwe versie</strong> openen reset zich niet meer met een verrassingsherlaadbeeld enkele seconden later &mdash; de update wordt nu op de achtergrond toegepast. De Vernieuwen-knop en de optie &laquo;Vragen voor het bijwerken&raquo; herladen nog op aanvraag.'],
+  'v26.9': ['Leuk: het aanraken van de <strong>versiebadge</strong> start nu elke keer een willekeurige stuiter-/draai-/krimpanimatie, hij gloeit met een <strong>schittering</strong> wanneer een nieuwe versie wordt gemarkeerd, en de Info-sectie is verplaatst naar het tabblad <strong>Info</strong> in de instellingen om hem sneller te bereiken.'],
+  'v26.8': ['Verbeterd: de <strong>versiebadge</strong> in de Info-sectie werkt nu automatisch bij en opent Nieuws.'],
+  'v26.7': ['Verbeterd: <strong>appsneltoetsen</strong> in de dagtip tonen nu eerst van welke app ze zijn, zoals <em>Figma &mdash; Move Tool &mdash; V</em>.'],
+  'v26.6': ['Verbeterd: de <strong>dagtip</strong> werkt nu bij wanneer je van platformtabblad wisselt: Windows, macOS, Linux, ChromeOS of Apps kiezen toont een sneltoets uit die sectie.'],
+  'v26.5': ['Opgelost: de <strong>dagtip</strong> blijft niet meer op één sneltoets hangen: hij toont nu bij elke paginalading een nieuwe willekeurige sneltoets (uit het platformtabblad dat je bekijkt), in plaats van dezelfde de hele dag te hergebruiken.'],
+  'v26.4': ['Opgelost: de <strong>dagtip</strong> toont nu alleen sneltoetsen van het platformtabblad dat je bekijkt (eerder werden sneltoetsen van alle platforms gemengd). Ook de versiebadge in de gids werkt nu automatisch bij.'],
+  'v26.3': ['De <strong>tour</strong>-knop toont nu een <strong>open boek</strong>-pictogram.'],
+  'v26.2': ['De <strong>tour</strong>-knop toont nu een kompass-pictogram, en de tour heeft een stap gekregen die uitlegt wat de <strong>vernieuwknop</strong> doet.'],
+  'v26.1': ['Opgelost: wisselen tussen <strong>donker &harr; licht</strong> (via de schakelaar bovenaan of de instellingen) trekt de kleuren van een <strong>achtergrondthema</strong> niet meer weg: accent, balkknoppen en sneltoetstoetsen houden de themakleuren terwijl de achtergrond blijft staan.'],
+  'v26': ['Nieuwe <strong>sitetour</strong> &mdash; tik op de <strong>?</strong>-knop bovenaan voor een rondleiding door zoekbalk, filters, tabbladen, sneltoetslijst, quiz, instellingen, afdrukken en de themaschakelaar. Navigeer met de knoppen, de pijltjes of de stippen.'],
+  'v25': ['De link <strong>Bekijk op GitHub</strong> is verwijderd uit de Info-sectie.'],
+  'v24.8': ['Opgelost: de melding <strong>&laquo;Bijgewerkt&raquo;</strong> blijft op mobiel nu binnen het scherm (eerder liep die op kleine apparaten over de rechterrand).'],
+  'v24.7.4': ['De hoekstraal is nu overal beperkt tot <strong>16&thinsp;px</strong>: pillen, tabbladen, zoekbalken en meldingen zijn niet meer volledig rond (eerder tot 100&thinsp;px). Hoeken blijven zacht, alleen ingetogen.'],
+  'v24.7.3': ['Opgelost: <strong>Wifi-instellingen openen</strong> deed op <strong>Android</strong> niets: recente Chrome staat websites niet toe de systeeminstellingen van Android te openen. De knop toont nu een korte melding die vraagt de wifi-instellingen via de Instellingen-app van je apparaat te openen (op iOS en macOS opent die nog steeds direct).'],
+  'v24.7.2': ['Opgelost: in een ge&iuml;nstalleerde Android-app (PWA) deed tikken op <strong>Wifi-instellingen openen</strong> niets: Android staat apps niet toe direct systeeminstellingen te openen. Nu legt hij het uit en vraagt hij de site in een Chrome-tabblad te openen, waar de knop wel werkt.'],
+  'v24.7.1': ['Opgelost: <strong>Wifi-instellingen openen</strong> gebruikte op <strong>Android</strong> een JS-geactiveerde anklik, die Chrome blokkeert voor <code>intent:</code>-links: nu gebruikt het een navigatie die door een gebruikersgebaar is gestart.'],
+  'v24.7': [
+    'De <strong>verbindingsstatus</strong> staat nu bovenaan <strong>Instellingen &rarr; Algemeen</strong> (verplaatst uit Info).',
+    'De knop <strong>Wifi-instellingen openen</strong> opent nu de echte wifi-instellingen op <strong>iOS</strong> (Instellingen-app) en <strong>macOS</strong> (Systeeminstellingen). Op Android, Windows en Linux, waar browsers niet doorlinken naar systeeminstellingen, toont hij korte instructies.'
+  ],
+  'v24.6': [
+    'De <strong>Offline</strong>-pil blijft nu <strong>10 seconden</strong> staan en verdwijnt daarna (hij zit niet de hele tijd in de weg zolang de verbinding nog weg is).',
+    'Instellingen &rarr; Info toont nu altijd je <strong>verbindingsstatus</strong> (Online/Offline), met een knop om je <strong>wifi-instellingen</strong> te openen: op iOS gaat die direct naar de Instellingen-app; op andere apparaten verschijnen korte instructies.'
+  ],
+  'v24.5.2': ['Opgelost: op desktops waar Windows de verbinding verliest zonder de <em>offline</em>-gebeurtenis van de browser te activeren (of waar aanvragen blijven hangen in plaats van te mislukken), verschijnt de <strong>Offline</strong>-pil nu ook wanneer de connectiviteitscontrole time-out gaat: niet alleen wanneer de aanvraag volledig mislukt.'],
+  'v24.5.1': ['Opgelost: de <strong>Offline</strong>-pil verschijnt nu ook wanneer de verbinding valt zonder een browserevent te activeren (zoals &laquo;Offline&raquo; in DevTools, in sommige mobiele browsers): de app controleert actief de connectiviteit om de paar seconden in plaats van alleen op browsersignalen te vertrouwen. Hij blijft verborgen zolang je online bent.'],
+  'v24.5': [
+    'Tijdens het zoeken worden de woorden die overeenkomen met je zoekopdracht nu <strong>gemarkeerd</strong> in de resultaten: zo is duidelijker waarom elke regel overeenkomt.',
+    'Het zoekveld heeft nu een <strong>wisknop (&times;)</strong> die verschijnt zodra je iets hebt getypt.',
+    'Een kleine <strong>Offline</strong>-pil verschijnt wanneer de verbinding valt: tik erop om te bevestigen dat Anthkeys uit de cache blijft werken.'
+  ],
+  'v24.4.1': ['Opgelost op mobiel: de kop <strong>Actie &mdash; Sneltoets</strong> scrolt niet meer weg: op smalle schermen was de sneltoetstabel omgezet in een eigen horizontale scrollcontainer, wat de vaste kop onderbrak. Die zit nu weer bovenaan vast, precies als op desktop.'],
+  'v24.4': ['De <strong>quizreekswidget op het startscherm</strong> is verwijderd: die leunde op een webstandaard die browsers nog niet implementeren en is dus nooit ergens verschenen. Je quizreeks en -statistieken blijven gewoon in de app.'],
+  'v24.3': [
+    'De <strong>sneltoetsquiz houdt nu je statistieken bij</strong>: een dagelijkse reeks (🔥 dagen op rij dat je een quiz hebt afgerond), je beste score, je nauwkeurigheid en het aantal gespeelde rondes. Lokaal opgeslagen, nooit ge&uuml;pload.',
+    'Nieuwe <strong>quizreekswidget op het startscherm</strong> voor Android (Web App Widgets: experimenteel, uitgerold in Chrome en Firefox; niet beschikbaar op iOS). Toont je reeks en statistieken; tik erop om de quiz te openen.'
+  ],
+  'v24.2.1': ['Opgelost op mobiel: tikken op de zoekbalk kon de Info-pagina openen: de verborgen &laquo;Nieuws&raquo;-melding naast de instellingenknop was nog klikbaar en lag over het zoekveld. Ze reageert nu alleen terwijl ze zichtbaar is.'],
+  'v24.2': [
+    'Nieuwe <strong>modifierfilter</strong>: kies in het Filters-menu een toets (Ctrl, Shift, Alt, Win, Cmd, &hellip;) om alleen sneltoetsen te tonen die die gebruiken. De opties passen zich per platform aan.',
+    'Een <strong>terug-naar-bovenknop</strong> zweeft boven de sneltoetslijst als je scrolt: tik erop om direct naar boven te gaan.'
+  ],
+  'v24.1': ['De balk <strong>Actie &mdash; Sneltoets</strong> blijft nu boven aan de lijst plakken terwijl je scrolt: op mobiel en Safari verdween die eerder uit beeld.'],
+  'v23.9': ['De mobiele Guide- en tips-popup is verwijderd: die noemde alleen desktopsneltoetsen. De gids blijft in de instellingen op desktop, waar <kbd>?</kbd> er direct naartoe gaat.'],
+  'v23.8': ['Op mobiel staat de gids niet meer in de instellingen: hij blijft daar verborgen om de pagina niet zwaarder te maken. Druk op <kbd>?</kbd> om hem als popup te openen.'],
+  'v23.7': ['Gids en tips zijn verplaatst naar <strong>Instellingen</strong> (sectie Algemeen) op desktop: druk op <kbd>?</kbd> om er direct heen te gaan.'],
+  'v23.6': [
+    'Alle 20 talen zijn nu volledig vertaald: geen Engelse terugval meer voor nieuwere functies zoals quiz, cloudsynchronisatie en gids.',
+    'Houd op mobiel een sneltoets ingedrukt om die te kopi&euml;ren in plaats van aan te tikken: geen onbedoelde kopie&euml;n meer tijdens het scrollen.',
+    'Filterpills gebruiken nu ook op mobiel je accentkleur, net als op desktop; bij Favorieten is dat de enige die opvalt.',
+    'De rand rond de vijf knoppen in de bovenbalk is op mobiel verwijderd: ze lopen nu in de pagina over.',
+    'De quizknop heeft een nieuw bliksem-pictogram en de antwoorden tonen leesbare namen in plaats van ruwe toetsen.',
+    'Opgelost: de JavaScript van de app kon na een update niet laden, waardoor de site niet reageerde.'
+  ],
+  'v23.5': [
+    'De filters, favorieten, vergelijken en samenvouwen staan nu in &eacute;&eacute;n compact <strong>Filters</strong>-menu: meer ruimte voor de sneltoetslijst op mobiel.',
+    'De Nieuws-pagina, de versiebadge en de update-instellingen zijn verplaatst naar een nieuwe sectie <strong>Info</strong> in de instellingen.',
+    'Updatemeldingen verschijnen nu via de <strong>Instellingen</strong>-knop: het tandwiel-pictogram toont een badge tot je het nieuws hebt gezien.'
+  ],
+  'v23.4': ['De hulpknop <kbd>?</kbd> is uit de bovenbalk verwijderd: druk op <kbd>?</kbd> om de gids toch te openen.'],
+  'v23.3': [
+    'De versiebadge licht op na een automatische update, zodat je de nieuwe versie bij de volgende start opmerkt.',
+    'Overschakelen tussen standaardachtergronden behoudt de donkere modus: ook de nieuwe achtergrond wordt donker gemaakt.',
+    'Op mobiel heeft de platformbalk (Windows, macOS, Linux, ChromeOS) nu dezelfde uitstraling als op desktop.'
+  ],
+  'v23.2': [
+    'De schakelaar Geavanceerd/Basis is verwijderd: alle sneltoetsen worden samen getoond.',
+    'Op mobiel staan de knoppen in de bovenbalk nu in een net raster van 2&times;3.',
+    'Standaardachtergronden blijven toegepast en worden correct donker gemaakt als je naar de donkere modus gaat.',
+    'Overlays (instellingen, gids, quiz) bedekken nu ook de vaste tabbladen op mobiel.'
+  ],
+  'v23.1': ['Achtergronden zijn nu geoptimaliseerd voor de donkere modus: bij het overschakelen naar donker worden zowel je eigen afbeeldingen als de standaardachtergronden (Oceaan, Bos, Zonsondergang, &hellip;) donker gemaakt en ontkleurt, zodat de panelen leesbaar blijven.'],
+  'v23': [
+    'Nieuwe modus &laquo;Vergelijken&raquo;: kies een tweede platform om alleen de sneltoetsen te zien die verschillen.',
+    'Automatisch thema dat het tijdstip van de dag volgt (donker van 19 tot 7 uur).',
+    'Druk op <kbd>?</kbd> of tik op de <kbd>?</kbd>-knop voor een korte gids en tips.',
+    'Releasedatums toegevoegd aan elk item op deze pagina.'
+  ],
+  'v22': [
+    'Opgelost: de toetsenlegenda-tabel was afgekappt op smalle telefoons: die scrolt nu horizontaal zodat alle kolommen bereikbaar zijn.',
+    'De zoekbalk en categoriepills zijn verborgen op de pagina &laquo;Nieuws&raquo; omdat ze daar niet gelden.'
+  ],
+  'v21': [
+    'De toetsenlegenda heeft nu een sluitknop, zodat je die vanuit het paneel kunt samenvouwen: handig op mobiel, waar de schakelaar buiten bereik kan scrollen.',
+    'Snellere aanraakreactie voor de toetsenlegenda-knop op touchapparaten.'
+  ],
+  'v20.1': [
+    'Versienummers ondersteunen nu patchversies: de badge onderaan toont bijvoorbeeld v20.1 en de updatedetectie verwerkt ze correct.',
+    'Het ontbrekende v20-item is aan deze pagina toegevoegd.'
+  ],
+  'v20': ['Nieuwe pagina &laquo;Nieuws&raquo; in Anthkeys: de link in de updatemelding en de versiebadge onderaan openen die hier in plaats van op GitHub.'],
+  'v19': ['De updatebanner verschijnt nu ook als je bijwerkt vanaf een versie van vóór de versievolging (je vorige versie wordt uit de offlinecache gedetecteerd).'],
+  'v18': [
+    'Er verschijnt een melding &laquo;Bijgewerkt naar vX &mdash; Nieuws&raquo; wanneer een nieuwe versie binnenkomt (in de automatische updatemodus).',
+    'De updatebanner wordt nu getriggerd door contentupdates, niet alleen door wijzigingen in de service worker.',
+    'De versiebadge onderaan is klikbaar: tik erop om het nieuws te zien.',
+    'Kleinere offlinecache (geen versieloze bestanden meer die worden weggegooid).'
+  ],
+  'v16': ['Er is een versiebadge onderaan toegevoegd die het huidige buildnummer toont.'],
+  'v15': ['Vernieuwen-knop en voorkeur (automatisch bijwerken of eerst vragen), op basis van de service worker.'],
+  'v14': ['Een categorie samenvouwen of uitklappen houdt nu rekening met de actieve zoekopdracht.'],
+  'v13': ['Pagina-cache met netwerkprioriteit, zodat updates meteen verschijnen; veel soepeler scrollen op desktop.'],
+  'v12': ['Zoeken en filters gelden nu alleen voor het actieve tabblad.'],
+  'v11': ['Ondersteuning voor PWA-installatie, toegankelijkheidslabels, beperkte beweging, Gmail- en YouTube-sneltoetsen, SEO-verbeteringen.'],
+  'v10': [
+    'Opgelost: de categoriefilter kon alle sneltoetsen verbergen wanneer die overeenkwam met een categoriekopregel: nu verbergt hij alleen de rijen die je hebt gefilterd.',
+    'De achtergrond vult nu het hele scherm op mobiel.'
+  ],
+  'v9': ['Windows is nu het standaard platformtabblad en de tabbladen staan in een duidelijkere volgorde.'],
+  'v8': [
+    'Quizniveaus en een dagtip.',
+    'Veel soepeler scrollen op mobiel, naast de offlinecache.',
+    'Zoeken en filters werken gelijktijdig op alle platforms, met vetgedrukte OS-labels.'
+  ],
+  'v7': ['De ontwerpstijlen zijn verwijderd: Material 3 is nu de enige vormgeving.'],
+  'v6': [
+    'Ontwerpstijlen teruggebracht op Material 3, plus een knop &laquo;Achtergrond verwijderen&raquo; om terug te keren naar het standaardthema.',
+    'Cache-control-headers toegevoegd zodat updates sneller aankomen.'
+  ],
+  'v5': ['Paginatitels vereenvoudigd tot alleen &laquo;Sneltoetsen&raquo; in alle 14 talen.'],
+  'v4': [
+    'Sneltoetsquizmodus: train door de sneltoets of actie te raden, plus cloudsynchronisatie met GitHub Gist.',
+    'Een brede reeks fixes voor accentmonsters, themawissels en mobiele achtergronden.'
+  ],
+  'v3': ['Voorinstellingen voor accentkleuren die je kunt opslaan en hergebruiken, plus cache-invalidation zodat updates betrouwbaar verschijnen.'],
+  'v2': ['Lichte en donkere thema&lsquo;s met accentkleuren, plus vertalingen van de sneltoetsreferentie.'],
+  'v1': ['De eerste versie van Anthkeys: alle dagelijkse toetsenbord-sneltoetsen voor Windows, macOS, Linux en ChromeOS op &eacute;&eacute;n pagina.']
+};
