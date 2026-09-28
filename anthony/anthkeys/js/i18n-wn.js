@@ -454,3 +454,226 @@ I18N_WN.fr = {
   'v2': ['Th&egrave;mes clair et sombre avec couleurs d&rsquo;accentuation, ainsi que des traductions de la r&eacute;f&eacute;rence des raccourcis.'],
   'v1': ['La premi&egrave;re version d&rsquo;Anthkeys : les raccourcis clavier quotidiens de Windows, macOS, Linux et ChromeOS sur une seule page.']
 };
+
+I18N_WN.de = {
+  'v52.1': [
+    'Neu: Die Seite &laquo;Neuerungen&raquo; ist jetzt in allen 20 Sprachen vollst&auml;ndig &uuml;bersetzt &mdash; jede fr&uuml;here Versionsnotiz wird in Ihrer Sprache angezeigt.'
+  ],
+  'v52': [
+    'Behoben: Die v51 konnte die App beim Laden abst&uuml;rzen lassen; eine d&auml;nische &Uuml;bersetzung enthielt ein nicht maskiertes Apostroph, das die gesamte Sprachdatei ung&uuml;ltig machte. Die Datei wird jetzt korrekt geparst und alle 20 Sprachen laden wieder.'
+  ],
+  'v51': [
+    '&Uuml;bersetzungen f&uuml;r alle 20 Sprachen abgeschlossen &mdash; Einstellungen, Live-R&auml;ume, Offline-Sync und die Sync-Hilfe sind jetzt vollst&auml;ndig &uuml;bersetzt (neuere Texte wurden zuvor nur auf Englisch angezeigt).',
+    'Neu: Wenn sich Anthkeys langsam anf&uuml;hlt, bietet ein Banner an, den Leistungsmodus mit einem Tippen zu aktivieren. Sie k&ouml;nnen es ausblenden, und es fragt nicht mehr nach.'
+  ],
+  'v50.7': ['Der Leistungsmodus wurde in den Tab Allgemein der Einstellungen verschoben.'],
+  'v50.6': ['Die Symbole in der oberen Leiste sind wieder die farbigen Emojis, genau wie in v50: Buch, Drucker, Blitz, Mond/Sonne, Aktualisieren und Zahnrad.'],
+  'v50.5': ['Die Symbole in der oberen Leiste verwenden wieder die Akzentfarbe (standardm&auml;&szlig;ig), statt wei&szlig;/grau angezeigt zu werden.'],
+  'v50.4': ['Die Funktion f&uuml;r ein akzentfarbenes App-Symbol wurde entfernt &mdash; Favicon, Startbildschirm-Symbol und installiertes PWA-Symbol verwenden wieder das Standardbild (ein Symbol passend zur Akzentfarbe zu &auml;ndern ergibt nur bei nativen Apps Sinn).'],
+  'v50.3': [
+    'Die Symbole der oberen Leiste wurden neu gebaut, damit sie auf allen Ger&auml;ten zuverl&auml;ssig dargestellt werden (Tour, Drucken, Quiz, Design, Aktualisieren und Einstellungen verwenden jetzt echte Symbole).',
+    'Das Symbol f&uuml;r den Design-Umschalter ist wieder ein echtes Symbol und passt zu seinem Hell-/Dunkelzustand.'
+  ],
+  'v50.2': ['Behoben: Ein Fehler in v50.1 verhinderte, dass die Symbole der oberen Leiste und die Einstellungen beim Laden funktionierten.'],
+  'v50.1': [
+    'Neuer Leistungsmodus in der Anpassung &mdash; er schaltet Weichzeichnungs-Effekte und Animationen ab, die die App unter Windows langsam machen k&ouml;nnen.',
+    'Die obere Leiste verwendet jetzt echte Symbole, und eine neue Symbole-Einstellung f&auml;rbt sie mit Ihrer Akzentfarbe.',
+    'Der Tab Apps funktioniert wie der Linux-Tab: Klicken Sie anywhere darauf, um eine App auszuw&auml;hlen (VS Code, Figma, Gmail und mehr), und der Tab zeigt Ihre Auswahl &mdash; &laquo;Apps - Gmail&raquo;.',
+    'Das Hexadezimal-Eingabefeld unter der Schaltfl&auml;che Anpassen wurde entfernt &mdash; w&auml;hlen Sie Farben nur &uuml;ber die Regler.',
+    'Die Verlaufsakzent-Optionen wurden mit acht neuen Zweifarb-Kombinationen verdoppelt.'
+  ],
+  'v50': [
+    'Klicken Sie anywhere auf den Linux-Tab, um die Distributionsauswahl zu &ouml;ffnen, und der Tab zeigt jetzt Ihre Auswahl, etwa &laquo;Linux - Ubuntu (GNOME)&raquo;.',
+    'Der benutzerdefinierte Farbw&auml;hler wurde neu gebaut: Der runde Regler &ouml;ffnet Schieberegler f&uuml;r Farbton, S&auml;ttigung und Helligkeit (mit dem Wert direkt dar&uuml;ber), ausgehend von Ihrer aktuellen Farbe statt von 0/0/0.',
+    'Neuer Abschnitt Verlaufsakzente &mdash; acht Zweifarb-Verl&auml;ufe, die direkt als Akzent angewendet werden k&ouml;nnen.',
+    'Die Akzent-Voreinstellungen wurden auf eine klarere, deutlichere Palette abgestimmt.'
+  ],
+  'v40.9': ['Die Distributionsauswahl befindet sich jetzt direkt auf dem Linux-Tab &mdash; klicken Sie auf den kleinen Pfeil am Tab, um Ihre Distribution zu w&auml;hlen.'],
+  'v40.8': ['Der Linux-Tab hat jetzt eine Distributionsauswahl (Ubuntu, Debian, Fedora, Arch, Mint, KDE und mehr), die Systemshortcuts an die Standardwerte jeder Distribution anpasst und Ihre Auswahl speichert.'],
+  'v40.7': ['Die Akzenteinstellungen zeigen jetzt eine Live-Vorschauleiste mit dem exakten Hexadezimalwert der angewendeten Farbe, sodass Sie jede Auswahl sofort sehen.'],
+  'v40.6': [
+    'Die Pipette &laquo;Vom Bildschirm w&auml;hlen&raquo; wurde entfernt.',
+    'Akzent-Voreinstellungen auf volle Material-3-Expressive-Intensit&auml;t verst&auml;rkt &mdash; tiefe, kr&auml;ftige Neon-Farben (Graut&ouml;ne bleiben ged&auml;mpft).'
+  ],
+  'v40.5': ['Die Akzentpalette wurde auf den Material-3-Expressive-Stil abgestimmt &mdash; lebendigere Tonalfarben.'],
+  'v40.4': ['Die Ger&auml;teerkennung f&uuml;r Akzente liest jetzt die echte Systemfarbe (einschlie&szlig;lich Chromes oklch/color()-Ausgabe) und fragt auch die Textauswahlfarbe des Betriebssystems ab &mdash; so wird Ihr echter dynamischer Akzent angewendet.'],
+  'v40.3': [
+    'Alle Akzentfarben wurden auf den Material-You-Tonalstil abgestimmt (ged&auml;mpfte Mittelt&ouml;ne mit weichen Containert&ouml;nen).',
+    '&laquo;Meinem Ger&auml;t angleichen&raquo; liest jetzt zus&auml;tzlich die Systemauswahlfarbe als R&uuml;ckfalloption und funktioniert damit in mehr Browsern und Profilen.'
+  ],
+  'v40.2': ['Akzentfarbeinstellungen: Die neue Schaltfl&auml;che &laquo;Meinem Ger&auml;t angleichen&raquo; liest die Systemakzentfarbe des Ger&auml;ts (Chrome 150+, installierte App) und wendet sie mit einer Best&auml;tigungsbenachrichtigung an.'],
+  'v40.1': ['Die Hintergrundbild-Galerie wurde entfernt (gespeicherte Galerie-Hintergr&uuml;nde werden verworfen; Ihr eigenes hochgeladenes Hintergrundbild funktioniert weiterhin).'],
+  'v40.0': ['Akzentfarbw&auml;hler: Die benutzerdefinierte Farbe hat jetzt ein Hexadezimal-Eingabefeld (geben Sie eine beliebige Farbe mit 3 oder 6 Ziffern ein) sowie eine Schaltfl&auml;che Kopieren &mdash; exakt dasselbe Layout auf Desktop und Mobil.'],
+  'v39.9': ['Chat im Raum: Raumnotizen erscheinen jetzt in einem Chat-Bereich mit Verlauf (60 Nachrichten pro Raum, beim erneuten Beitreten wiederhergestellt). &ouml;ffentliche Notizen werden ins Protokoll geschrieben; private Notizen werden weiterhin direkt in die Zwischenablage kopiert. Tippen Sie auf eine Nachricht, um sie erneut zu kopieren.'],
+  'v39.8': [
+    'Letzte R&auml;ume: Die sechs zuletzt beigetretenen R&auml;ume erscheinen auf dem Beitrittsbildschirm als Ein-Tipp-Chips (mit ihren Raumfarben), dazu eine Schaltfl&auml;che zum L&ouml;schen.',
+    'Mein Profil senden: Sendet Ihre Einstellungen und benutzerdefinierten Shortcuts als Einweg-Momentaufnahme an den gesamten Raum &mdash; andere Ger&auml;te wenden sie sofort an.',
+    'Hintergrundbild-Galerie: sechs integrierte Verläufe mit automatischen Hell-/Dunkelvarianten, eine Schaltfl&auml;che Zuf&auml;llig und eine optionale t&auml;gliche Mischung.',
+    'Suche: Von Ihnen kopierte Shortcuts werden im Suchdialog als &laquo;Zuletzt kopiert&raquo; gespeichert, zusammen mit Ihrem Suchverlauf.'
+  ],
+  'v39.7': ['Mobile Animationen stammen jetzt aus derselben Basis-CSS wie auf dem Desktop &mdash; die Touch-Ger&auml;te-Regel deaktiviert &Uuml;berg&auml;nge nicht mehr global. Der Tour-Spotlight und die Karten gleiten zwischen den Schritten, und Design-/Hintergrundwechsel blenden auch auf Smartphones &uuml;ber.'],
+  'v39.6': ['Mobile Parit&auml;t: Design- und Hintergrundwechsel werden jetzt reibungslos &uuml;bergangen (wie auf dem Desktop), und die Website-Tour animiert auch auf Touch-Ger&auml;ten zwischen den Schritten.'],
+  'v39.5': ['AirDrop und Quick Share: Eine Schaltfl&auml;che &laquo;Teilen&raquo; neben dem Raumcode &ouml;ffnet die Teilen-Funktion Ihres Smartphones (AirDrop auf Apple) mit einem Beitrittslink zum Tippen &mdash; das andere Ger&auml;t muss ihn nur antippen und ist im Raum.'],
+  'v39.4': ['Leuchten und Schimmern der Versionskapsel werden jetzt auch auf dem Desktop animiert, selbst wenn im System &laquo;Bewegung reduzieren&raquo; aktiv ist oder Animationen in den Einstellungen deaktiviert sind &mdash; es gilt als Aktualisierungssignal, nicht als Dekoration.'],
+  'v39.3': ['Das Leuchten der Versionskapsel und das Abzeichen in den Einstellungen erscheinen jetzt zuverl&auml;ssig auf dem Desktop: Die laufende Version bekommt beim Laden immer ein neues Hervorhebungsfenster von einigen Tagen, auch wenn der Aktualisierungshinweis &uuml;bersprungen wurde.'],
+  'v39.2': ['Leuchten und Schimmern f&uuml;r eine neue Version auf der Versionskapsel verschwinden nicht mehr f&uuml;r immer nach einem einzigen Blick &mdash; die Hervorhebung dauert einige Tage und kehrt bei jedem Besuch zur&uuml;ck.'],
+  'v39.1': ['Farbpunkte werden endlich angezeigt: Die Farbfelder (Raumfarbe sowie Design-/Akzentfelder) werden jetzt als sichtbare Kreise dargestellt statt als unsichtbare leere spans.'],
+  'v39': [
+    'Ring erlaubt jetzt, eine Kurznachricht an den Ping anzuh&auml;ngen &mdash; das klingelnde Ger&auml;t h&ouml;rt sie und kopiert sie in die Zwischenablage.',
+    'Batteriewarnungen: Sie erhalten eine &laquo;wiederhergestellt&raquo;-Benachrichtigung, wenn ein Ger&auml;t wieder &uuml;ber 25 % steigt, und Sie k&ouml;nnen den Batteriealarm ein- oder ausschalten.',
+    'Notizen k&ouml;nnen &uuml;ber einen &laquo;An:&raquo;-Ausw&auml;hler neben dem Notizfeld an ein einzelnes Ger&auml;t gerichtet werden.',
+    'Jeder Raum kann eine Farbmarkierung haben, sodass Sie R&auml;ume auf einen Blick unterscheiden k&ouml;nnen.',
+    'Offline-Sync-Codes zeigen jetzt eine Vorschau (Ger&auml;t, Uhrzeit, Anzahl der Einstellungen und Shortcuts) und fragen vor dem Import nach.'
+  ],
+  'v38.1': ['Auf dem Mobilger&auml;t werden beim Tippen auf den Tab &Uuml;ber uns nicht mehr automatisch Abschnitte ge&ouml;ffnet &mdash; tippen Sie auf eine Abschnitts&uuml;berschrift, um ihn auszuklappen.'],
+  'v38': ['Auf dem Mobilger&auml;t wird beim &Ouml;ffnen des Tabs &Uuml;ber uns die Sync-Anleitung nicht mehr automatisch ausgeklappt &mdash; tippen Sie auf den Abschnitt &laquo;Live rooms &amp; offline sync&raquo;, um ihn zu &ouml;ffnen.'],
+  'v37': ['Die Hilfe enth&auml;lt jetzt vollst&auml;ndige Anweisungen f&uuml;r <strong>Live rooms</strong> und <strong>Offline sync codes</strong>, und diese Hilfe ist auch auf dem Mobilger&auml;t verf&uuml;gbar.'],
+  'v36': ['Die Schaltfl&auml;che im Beitrittsbereich hei&szlig;t jetzt <strong>Scannen</strong> (sie &ouml;ffnet Kamera oder Dateiauswahl, um einen QR-Code zu lesen) und wird nicht mehr mit der Schaltfl&auml;che <strong>QR</strong> verwechselt, die Ihren Raumcode anzeigt.'],
+  'v35': ['Behoben: Die QR-Codes f&uuml;r Raum und Offline-Code werden jetzt korrekt angezeigt statt als leeres Feld.'],
+  'v34': [
+    '<strong>Ger&auml;t anrufen</strong> &mdash; jedes andere Ger&auml;t hat eine Ring-Schaltfl&auml;che, die es klingeln l&auml;sst und vibrieren l&auml;sst, damit Sie Ihr Telefon finden.',
+    '<strong>Notiz senden</strong> &mdash; teilen Sie Text mit jedem verkn&uuml;pften Ger&auml;t; er erscheint sofort und wird in die Zwischenablage kopiert.',
+    '<strong>Akk&uuml;berwachung</strong> &mdash; Sie werden gewarnt, wenn ein verkn&uuml;pftes Ger&auml;t unter 20 % Akkustand f&auml;llt.',
+    '<strong>Ger&auml;te umbenennen</strong> &mdash; tippen Sie auf einen Ger&auml;tenamen, um einen eigenen Namen zu vergeben.',
+    '<strong>Per Scan beitreten</strong> &mdash; der Host kann einen QR-Code des Raumcodes anzeigen; scannen Sie ihn mit der Kamera (oder scannen Sie einen Offline-Sync-Code).',
+    '<strong>Gesch&uuml;tzte R&auml;ume</strong> &mdash; haken Sie &laquo;Diesen Raum sch&uuml;tzen&raquo; an und legen Sie eine Passphrase fest; alle Raumdaten werden dann verschl&uuml;sselt, sodass nur Mitglieder mit der Passphrase sie lesen k&ouml;nnen.',
+    '<strong>Zuletzt gesehen</strong> &mdash; jedes Ger&auml;t zeigt jetzt, wie lange es online war.'
+  ],
+  'v33': ['Verkn&uuml;pfte Ger&auml;te teilen jetzt auch ihren <strong>Akkustand</strong> (auch w&auml;hrend des Ladens), der im Raum laufend aktualisiert wird.'],
+  'v32': ['Live-R&auml;ume zeigen jetzt den echten Namen jedes Ger&auml;ts (wie &laquo;Mi 9T Pro&raquo;) statt eines zuf&auml;lligen &mdash; automatisch vom Ger&auml;t selbst &uuml;bernommen.'],
+  'v31': ['Live-R&auml;ume zeigen jetzt jedes verkn&uuml;pfte Ger&auml;t mit Namen, mit einem gr&uuml;nen Punkt auf diesem Ger&auml;t und der Gesamtzahl.'],
+  'v30': [
+    '<strong>Live-R&auml;ume</strong> &mdash; zuerst, um Einstellungen und benutzerdefinierte Shortcuts in Echtzeit zu synchronisieren:<ol><li>Auf dem Ger&auml;t mit Ihren Einstellungen &ouml;ffnen Sie <strong>Settings &rarr; Live rooms</strong> und tippen Sie auf <strong>Start a room</strong>. Ein Raumcode wie AK-XXX-YYY erscheint.</li><li>Senden Sie diesen Code an Ihre anderen Ger&auml;te (kopieren Sie ihn oder teilen Sie ihn wie gew&uuml;nscht).</li><li>Auf jedem empfangenden Ger&auml;t &ouml;ffnen Sie <strong>Settings &rarr; Live rooms</strong>, geben Sie denselben Code ein und tippen Sie auf <strong>Join room</strong>.</li></ol>',
+    '<strong>Offline-Sync-Codes</strong> &mdash; dann f&uuml;r eine einmalige &Uuml;bertragung, wenn es kein Internet gibt:<ol><li>&Ouml;ffnen Sie <strong>Settings &rarr; Offline sync code</strong> und tippen Sie auf <strong>Create a code</strong>. Kopieren Sie den Code oder scannen Sie den angezeigten QR-Code.</li><li>Auf dem anderen Ger&auml;t &ouml;ffnen Sie <strong>Settings &rarr; Offline sync code</strong>, f&uuml;gen Sie den Code ein und tippen Sie auf <strong>Apply a code</strong>.</li></ol>'
+  ],
+  'v29': ['Behoben: Auf <strong>Mobilger&auml;ten</strong> spielt das Tippen auf das Versionsabzeichen jetzt die zuf&auml;llige Hüpf-/Dreh-/Stauch-Animation ab, statt durch die Touch-Animationszur&uuml;cksetzung blockiert zu werden.'],
+  'v28': ['Mobil: Der Einstellungen-Tab neben Anpassen hei&szlig;t jetzt nur noch <strong>&Uuml;ber uns</strong> (Hilfe gibt es nur auf dem Desktop) und &ouml;ffnet beim Tippen automatisch den Abschnitt &Uuml;ber uns.'],
+  'v27': ['Behoben: Das &Ouml;ffnen der Seite direkt nach einer <strong>neuen Version</strong> setzt sie nicht mehr Sekunden sp&auml;ter durch eine unerwartete Neu&shy;ladung zur&uuml;ck &mdash; die Aktualisierung wird jetzt im Hintergrund angewendet. Die Schaltfl&auml;che Aktualisieren und die Option &laquo;Vor dem Aktualisieren fragen&raquo; laden weiterhin auf Wunsch neu.'],
+  'v26.9': ['Spa&szlig;: Das Tippen auf das <strong>Versionsabzeichen</strong> spielt jetzt jedes Mal eine zuf&auml;llige Hüpf-/Dreh-/Stauch-Animation ab, erh&auml;lt ein <strong>Schimmern</strong>, solange eine neue Version hervorgehoben wird, und der Abschnitt &Uuml;ber uns ist in einen eigenen <strong>Tab &Uuml;ber uns</strong> in den Einstellungen umgezogen, um ihn schneller zu erreichen.'],
+  'v26.8': ['Verbessert: Das <strong>Versionsabzeichen</strong> im Abschnitt &Uuml;ber uns aktualisiert sich jetzt automatisch und &ouml;ffnet die Neuerungen.'],
+  'v26.7': ['Verbessert: <strong>App-Shortcuts</strong> im Tageshinweis zeigen jetzt zuerst, zu welcher App sie geh&ouml;ren, z. B. <em>Figma &mdash; Move Tool &mdash; V</em>.'],
+  'v26.6': ['Verbessert: Der <strong>Tageshinweis</strong> wird jetzt aktualisiert, wenn Sie die Plattform-Registerkarte wechseln &mdash; die Auswahl von Windows, macOS, Linux, ChromeOS oder Apps zeigt einen Shortcut aus diesem Bereich.'],
+  'v26.5': ['Behoben: Der <strong>Tageshinweis</strong> bleibt nicht mehr auf einem Shortcut h&auml;ngen &mdash; er zeigt jetzt bei jedem Laden der Seite einen neuen zuf&auml;lligen Shortcut (aus der Registerkarte, die Sie ansehen) an, statt den ganzen Tag &uuml;ber denselben zu verwenden.'],
+  'v26.4': ['Behoben: Der <strong>Tageshinweis</strong> zeigt jetzt nur Shortcuts der Plattform-Registerkarte, die Sie ansehen (zuvor mischte er Shortcuts aller Plattformen). Das Versionsabzeichen im Abschnitt Hilfe wird ebenfalls automatisch aktualisiert.'],
+  'v26.3': ['Die Schaltfl&auml;che <strong>Tour</strong> zeigt jetzt ein <strong>offenes Buch</strong>-Symbol.'],
+  'v26.2': ['Die Schaltfl&auml;che <strong>Tour</strong> zeigt jetzt ein Kompass-Symbol, und die Tour hat einen Schritt erhalten, der erkl&auml;rt, was die <strong>Aktualisierungsschaltfl&auml;che</strong> tut.'],
+  'v26.1': ['Behoben: Beim Umschalten zwischen <strong>dunkel &harr; hell</strong> (&uuml;ber den oberen Umschalter oder die Einstellungen) verlieren <strong>Hintergrundbild-Themes</strong> nicht mehr ihre Farben &mdash; Akzent, Symbolleisten-Schaltfl&auml;chen und Shortcut-Tasten behalten ihre Themenfarben, w&auml;hrend das Hintergrundbild bestehen bleibt.'],
+  'v26': ['Neue <strong>Website-Tour</strong> &mdash; tippen Sie oben auf die Schaltfl&auml;che <strong>?</strong> f&uuml;r einen gef&uuml;hrten Rundgang durch Suchleiste, Filter, Registerkarten, Shortcut-Liste, Quiz, Einstellungen, Drucken und Design-Umschalter. Navigieren Sie mit den Schaltfl&auml;chen, Pfeiltasten oder den Punkten.'],
+  'v25': ['Der Link <strong>Auf GitHub ansehen</strong> wurde aus dem Abschnitt &Uuml;ber uns entfernt.'],
+  'v24.8': ['Behoben: Die <strong>&laquo;Aktualisiert&raquo;</strong>-Benachrichtigung auf dem Mobilger&auml;t bleibt jetzt auf dem Bildschirm (zuvor ragte sie auf kleinen Ger&auml;ten &uuml;ber den rechten Rand hinaus).'],
+  'v24.7.4': ['Der Eckenradius ist jetzt in allen Designs auf <strong>16&thinsp;px</strong> begrenzt &mdash; Pillen, Registerkarten, Suchleisten und Benachrichtigungen sind nicht mehr vollst&auml;ndig rund (zuvor wurden bis zu 100&thinsp;px verwendet). Ecken sehen weiterhin weich aus, nur zur&uuml;ckhaltender.'],
+  'v24.7.3': ['Behoben: <strong>Wi-Fi-Einstellungen &ouml;ffnen</strong> unter <strong>Android</strong> tat nichts &mdash; aktuelles Chrome l&auml;sst Webseiten gar nicht erst die Android-Systemeinstellungen &ouml;ffnen. Die Schaltfl&auml;che zeigt jetzt eine kurze Meldung, dass Sie die Wi-Fi-Einstellungen &uuml;ber die Einstellungs-App Ihres Ger&auml;ts &ouml;ffnen sollen (auf iOS und macOS &ouml;ffnet sie weiterhin direkt).'],
+  'v24.7.2': ['Behoben: In einer installierten Android-App (PWA) tat das Tippen auf <strong>Wi-Fi-Einstellungen &ouml;ffnen</strong> nichts &mdash; Android blockiert das &Ouml;ffnen von Systemeinstellungen durch Apps. Es wird jetzt erkl&auml;rt und Sie werden angewiesen, die Seite in einem Chrome-Tab zu &ouml;ffnen, wo die Schaltfl&auml;che funktioniert.'],
+  'v24.7.1': ['Behoben: <strong>Wi-Fi-Einstellungen &ouml;ffnen</strong> unter <strong>Android</strong> nutzte einen per JS ausgel&ouml;sten Anker-Klick, den Chrome bei <code>intent:</code>-Links blockiert &mdash; jetzt wird eine Navigation aus einer Benutzeraktion verwendet.'],
+  'v24.7': [
+    'Der <strong>Verbindungsstatus</strong> befindet sich jetzt oben unter <strong>Settings &rarr; General</strong> (aus &Uuml;ber uns herausgenommen).',
+    'Die Schaltfl&auml;che <strong>Wi-Fi-Einstellungen &ouml;ffnen</strong> &ouml;ffnet jetzt die tats&auml;chlichen Wi-Fi-Einstellungen unter <strong>iOS</strong> (App Einstellungen) und <strong>macOS</strong> (Systemeinstellungen). Auf Android, Windows und Linux, wo Browser nicht in Systemeinstellungen verlinken k&ouml;nnen, zeigt sie stattdessen kurze Anweisungen.'
+  ],
+  'v24.6': [
+    'Die Pille <strong>Offline</strong> bleibt jetzt <strong>10 Sekunden</strong> und verschwindet dann (sie nervt Sie nicht, solange die Verbindung weiterhin getrennt ist).',
+    'Settings &rarr; &Uuml;ber uns zeigt jetzt st&auml;ndig Ihren <strong>Verbindungsstatus</strong> (Online/Offline) sowie eine Schaltfl&auml;che zum &Ouml;ffnen Ihrer <strong>Wi-Fi-Einstellungen</strong> &mdash; unter iOS &ouml;ffnet sie direkt die Einstellungs-App; auf anderen Ger&auml;ten zeigt sie kurze Anweisungen.'
+  ],
+  'v24.5.2': ['Behoben: Auf Desktops, auf denen Windows die Verbindung ohne <em>offline</em>-Ereignis des Browsers trennt (oder auf denen Anfragen h&auml;ngen statt fehlschlagen), erscheint die Pille <strong>Offline</strong> jetzt auch, wenn die Konnektivit&auml;tspr&uuml;fung in einen Timeout l&auml;uft &mdash; nicht nur, wenn die Anfrage outright scheitert.'],
+  'v24.5.1': ['Behoben: Die Pille <strong>Offline</strong> erscheint jetzt auch, wenn die Verbindung ohne Browserereignis abrei&szlig;t (z. B. &laquo;Offline&raquo; in DevTools, einige Mobilbrowser) &mdash; die App pr&uuml;ft die Konnektivit&auml;t jetzt aktiv alle paar Sekunden, statt sich nur auf Browsersignale zu verlassen. Sie bleibt verborgen, solange Sie online sind.'],
+  'v24.5': [
+    'W&auml;hrend der Suche werden W&ouml;rter, die Ihrer Suchanfrage entsprechen, jetzt <strong>hervorgehoben</strong> &mdash; so sieht man leichter, warum eine Zeile passt.',
+    'Das Suchfeld hat jetzt eine <strong>L&ouml;schen-Schaltfl&auml;che (&times;)</strong>, die erscheint, sobald Sie etwas eingegeben haben.',
+    'Eine kleine Pille <strong>Offline</strong> erscheint, wenn Ihre Verbindung abrei&szlig;t &mdash; tippen Sie darauf, um zu best&auml;tigen, dass Anthkeys weiterhin aus dem Cache funktioniert.'
+  ],
+  'v24.4.1': ['Behoben auf dem Mobilger&auml;t: Die Kopfzeile <strong>Aktion &mdash; Shortcut</strong> scrollt nicht mehr weg &mdash; auf schmalen Bildschirmen war die Shortcut-Tabelle in einen eigenen horizontalen Scroll-Container umgewandelt worden, was die fixierte Kopfzeile zerst&ouml;rte. Sie ist jetzt wieder fixiert, genau wie auf dem Desktop.'],
+  'v24.4': ['Das experimentelle <strong>Quiz-Streak-Startbildschirm-Widget</strong> wurde entfernt &mdash; es beruhte auf einem Webstandard, den Browser noch nicht umgesetzt haben, und erschien daher nirgends. Ihre Quiz-Serie und Statistiken bleiben wie gewohnt in der App.'],
+  'v24.3': [
+    'Das <strong>Shortcut-Quiz erfasst jetzt Ihre Statistik</strong> &mdash; eine t&auml;gliche Serie (🔥 Tage in Folge, an denen Sie ein Quiz abgeschlossen haben), Ihre beste Punktzahl, Genauigkeit und gespielte Spiele. Lokal gespeichert, niemals hochgeladen.',
+    'Neues <strong>Quiz-Streak-Startbildschirm-Widget</strong> f&uuml;r Android (Web App Widgets &mdash; experimentell, wird schrittweise f&uuml;r Chrome und Firefox ausgerollt; auf iOS nicht verf&uuml;gbar). Zeigt Ihre Serie und Statistiken; tippen Sie, um das Quiz zu &ouml;ffnen.'
+  ],
+  'v24.2.1': ['Behoben auf dem Mobilger&auml;t: Das Tippen auf die Suchleiste konnte die Seite &Uuml;ber uns &ouml;ffnen &mdash; die verborgene &laquo;Neuerungen&raquo;-Benachrichtigung nahe der Einstellungen-Schaltfl&auml;che war weiterhin anklickbar und &uuml;berlappte das Suchfeld. Sie reagiert jetzt nur noch, solange sie sichtbar ist.'],
+  'v24.2': [
+    'Neuer <strong>Modifikatorfilter</strong> &mdash; w&auml;hlen Sie im Men&uuml; Filter eine Taste (Strg, Umschalt, Alt, Win, Cmd, &hellip;), um nur Shortcuts anzuzeigen, die sie verwenden. Die Optionen werden je nach Plattform aktualisiert.',
+    'Eine <strong>Schaltfl&auml;che Nach oben</strong> schwebt &uuml;ber der Shortcut-Liste, sobald Sie scrollen &mdash; tippen Sie darauf, um direkt nach oben zu springen.'
+  ],
+  'v24.1': ['Die Leiste <strong>Aktion &mdash; Shortcut</strong> bleibt jetzt beim Scrollen oben in der Liste fixiert &mdash; auf dem Mobilger&auml;t und in Safari scrollte sie zuvor aus der Sicht.'],
+  'v23.9': ['Der Pop-up Hilfe &amp; Tipps auf dem Mobilger&auml;t wurde entfernt &mdash; er listete nur Desktop-Shortcuts. Hilfe bleibt auf dem Desktop in den Einstellungen, wo <kbd>?</kbd> direkt dorthin springt.'],
+  'v23.8': ['Auf dem Mobilger&auml;t befindet sich Hilfe nicht mehr in den Einstellungen &mdash; sie bleibt dort ausgeblendet, damit die Seite &uuml;bersichtlich bleibt. Dr&uuml;cken Sie <kbd>?</kbd>, um sie als Pop-up zu &ouml;ffnen.'],
+  'v23.7': ['Hilfe &amp; Tipps ist auf dem Desktop in <strong>Einstellungen</strong> (Abschnitt Allgemein) umgezogen &mdash; dr&uuml;cken Sie <kbd>?</kbd>, um direkt dorthin zu springen.'],
+  'v23.6': [
+    'Alle 20 Sprachen sind jetzt vollst&auml;ndig &uuml;bersetzt &mdash; kein Zur&uuml;ckfallen auf Englisch mehr bei neueren Funktionen wie Quiz, Cloud-Sync und Hilfe.',
+    'Auf dem Mobilger&auml;t halten Sie einen Shortcut zum Kopieren gedr&uuml;ckt (Long-Press), statt ihn anzutippen &mdash; keine unbeabsichtigten Kopien beim Scrollen.',
+    'Die Filterpillen verwenden jetzt auch auf dem Mobilger&auml;t Ihre Akzentfarbe, genau wie auf dem Desktop; wenn Favoriten ausgew&auml;hlt ist, hebt sich nur dieses ab.',
+    'Der Rahmen um die f&uuml;nf Schaltfl&auml;chen der oberen Leiste wurde auf dem Mobilger&auml;t entfernt &mdash; sie gehen jetzt in der Seite auf.',
+    'Die Quiz-Schaltfl&auml;che hat ein neues Blitz-Symbol, und Quiz-Antworten zeigen lesbare Namen statt roher Tasten.',
+    'Behoben: Das JavaScript der App konnte nach einer Aktualisierung beim Laden scheitern und die Seite unbedienbar machen.'
+  ],
+  'v23.5': [
+    'Filter-, Favoriten-, Vergleichs- und Einklapp-Steuerelemente liegen jetzt in einem kompakten <strong>Filter</strong>-Men&uuml; &mdash; mehr Platz f&uuml;r die Shortcut-Liste auf dem Mobilger&auml;t.',
+    'Die Seite Neuerungen, das Versionsabzeichen und die Aktualisierungseinstellungen sind in einen neuen <strong>Tab &Uuml;ber uns</strong> in den Einstellungen umgezogen.',
+    'Aktualisierungsbenachrichtigungen erscheinen jetzt aus der <strong>Einstellungen</strong>-Schaltfl&auml;che &mdash; das Zahnradsymbol zeigt ein Abzeichen, bis Sie die Neuerungen gesehen haben.'
+  ],
+  'v23.4': ['Die Hilfe-Schaltfl&auml;che <kbd>?</kbd> wurde aus der oberen Leiste entfernt &mdash; dr&uuml;cken Sie <kbd>?</kbd>, um die Hilfe weiterhin zu &ouml;ffnen.'],
+  'v23.3': [
+    'Das Versionsabzeichen leuchtet nach einer automatischen Aktualisierung auf, sodass Sie die neue Version beim n&auml;chsten Start bemerken.',
+    'Beim Wechsel zwischen voreingestellten Hintergr&uuml;nden bleibt Ihr Dunkelmodus erhalten &mdash; der neue Hintergrund wird ebenfalls abgedunkelt.',
+    'Auf dem Mobilger&auml;t sieht die Plattformleiste (Windows, macOS, Linux, ChromeOS) jetzt genauso aus wie auf dem Desktop.'
+  ],
+  'v23.2': [
+    'Der Schalter Erweitert/Einfach wurde entfernt &mdash; alle Shortcuts werden zusammen angezeigt.',
+    'Auf dem Mobilger&auml;t liegen die Schaltfl&auml;chen der oberen Leiste jetzt in einem ordentlichen 2&times;3-Raster.',
+    'Voreingestellte Hintergr&uuml;nde bleiben angewendet und werden beim Wechsel in den Dunkelmodus korrekt abgedunkelt.',
+    'Overlays (Einstellungen, Hilfe, Quiz) &uuml;berdecken jetzt auf dem Mobilger&auml;t die fixierten Registerkarten.'
+  ],
+  'v23.1': ['Hintergrundbilder sind jetzt f&uuml;r den Dunkelmodus optimiert &mdash; beim Wechsel ins Dunkle werden sowohl eigene Bilder als auch voreingestellte Hintergr&uuml;nde (Ozean, Wald, Sonnenuntergang, &hellip;) abgedunkelt und ents&auml;ttigt, damit Bedienfelder lesbar bleiben.'],
+  'v23': [
+    'Neuer Modus &laquo;Vergleichen&raquo; &mdash; w&auml;hlen Sie eine zweite Plattform, um nur die Shortcuts zu sehen, die sich unterscheiden.',
+    'Automatisches Design, das der Tageszeit folgt (dunkel von 19 bis 7 Uhr).',
+    'Dr&uuml;cken Sie <kbd>?</kbd> oder tippen Sie auf die Schaltfl&auml;che <kbd>?</kbd> f&uuml;r schnelle Hilfe und Tipps.',
+    'Ver&ouml;ffentlichungsdaten wurden jeder Eintr&auml;g auf dieser Seite hinzugef&uuml;gt.'
+  ],
+  'v22': [
+    'Behoben: Die Tastentabelle wurde auf schmalen Telefonen abgeschnitten &mdash; sie scrollt jetzt horizontal, sodass alle Spalten erreichbar sind.',
+    'Suchleiste und Kategorie-Pills sind auf der Seite &laquo;Neuerungen&raquo; ausgeblendet, da sie dort nicht zutreffen.'
+  ],
+  'v21': [
+    'Die Tastentabelle hat jetzt eine Schlie&szlig;-Schaltfl&auml;che, damit Sie sie innerhalb des Panels einklappen k&ouml;nnen &mdash; praktisch auf dem Mobilger&auml;t, wo der Schalter aus dem Bereich scrollen kann.',
+    'Reaktionsf&auml;higere Touch-Verarbeitung f&uuml;r die Tastentabelle-Schaltfl&auml;che auf Touch-Ger&auml;ten.'
+  ],
+  'v20.1': [
+    'Versionsnummern unterst&uuml;tzen jetzt Patch-Versionen &mdash; das Abzeichen in der Fu&szlig;zeile zeigt z. B. v20.1, und die Aktualisierungserkennung verarbeitet sie korrekt.',
+    'Der fehlende Eintrag v20 wurde dieser Seite hinzugef&uuml;gt.'
+  ],
+  'v20': ['Neue Seite &laquo;Neuerungen&raquo; direkt in Anthkeys &mdash; der Link in der Aktualisierungsbenachrichtigung und das Versionsabzeichen in der Fu&szlig;zeile &ouml;ffnen sie jetzt hier statt auf GitHub.'],
+  'v19': ['Das Aktualisierungsbanner erscheint jetzt auch, wenn Sie von einer Version aktualisieren, die vor der Versionsverfolgung erschien (Ihre vorherige Version wird aus dem Offline-Cache erkannt).'],
+  'v18': [
+    'Eine Benachrichtigung &laquo;Aktualisiert auf vX &mdash; Neuerungen&raquo; erscheint, wenn eine neue Version verf&uuml;gbar ist (im Auto-Update-Modus).',
+    'Das Aktualisierungsbanner l&ouml;st jetzt bei Inhaltsupdates aus, nicht nur bei &Auml;nderungen am Service Worker.',
+    'Das Versionsabzeichen in der Fu&szlig;zeile ist anklickbar &mdash; tippen Sie darauf, um die Neuerungen zu sehen.',
+    'Schlankerer Offline-Cache (keine verschwendeten Dateien ohne Version).'
+  ],
+  'v16': ['Versionsabzeichen in der Fu&szlig;zeile erg&auml;zt, das die aktuelle Build-Nummer anzeigt.'],
+  'v15': ['Schaltfl&auml;che Aktualisieren und Aktualisierungspr&auml;ferenz (automatisch oder zuerst fragen), angetrieben vom Service Worker.'],
+  'v14': ['Das Ein- und Ausklappen einer Kategorie ber&uuml;cksichtigt jetzt die aktive Suchanfrage.'],
+  'v13': ['Seitencache mit Netzwerkpriorit&auml;t, damit Aktualisierungen sofort erscheinen; geschmeidigeres Scrollen auf dem Desktop.'],
+  'v12': ['Suche und Filter sind jetzt auf die aktive Registerkarte beschr&auml;nkt.'],
+  'v11': ['PWA-Installationsunterst&uuml;tzung, Barrierefreiheitsbeschriftungen, Unterst&uuml;tzung f&uuml;r reduzierte Bewegung, Gmail- und YouTube-Shortcuts, SEO-Verbesserungen.'],
+  'v10': [
+    'Behoben: Der Kategoriefilter konnte alle Shortcuts ausblenden, wenn er auf eine Kategorie-Kopfzeile passte &mdash; jetzt blendet er nur die Zeilen aus, die Sie herausgefiltert haben.',
+    'Der Hintergrund f&uuml;llt jetzt auf dem Mobilger&auml;t den gesamten Bildschirm.'
+  ],
+  'v9': ['Windows ist jetzt die Standard-Plattformregisterkarte, und die Registerkarten sind in einer klareren Reihenfolge.'],
+  'v8': [
+    'Schwierigkeitsgrade f&uuml;r das Quiz und ein Tageshinweis.',
+    'Deutlich geschmeidigeres Scrollen auf dem Mobilger&auml;t, dazu Offline-Caching.',
+    'Suche und Filter funktionieren &uuml;ber alle Plattformen hinweg, mit fett gedruckten OS-Bezeichnungen.'
+  ],
+  'v7': ['Die Designstile wurden entfernt &mdash; Material 3 ist jetzt das einzige Erscheinungsbild.'],
+  'v6': [
+    'Designstile auf Material 3 reduziert, dazu eine Schaltfl&auml;che &laquo;Hintergrundbild entfernen&raquo;, um zum Standarddesign zur&uuml;ckzusetzen.',
+    'Cache-Control-Header, damit Aktualisierungen schneller bei Ihnen ankommen.'
+  ],
+  'v5': ['Seitentitel in allen 14 Sprachen auf nur &laquo;Shortcuts&raquo; vereinfacht.'],
+  'v4': [
+    'Shortcut-Quiz-Modus &mdash; &uuml;ben Sie, indem Sie den Shortcut oder die Aktion erraten &mdash; sowie Cloud-Sync &uuml;ber GitHub Gist.',
+    'Eine gro&szlig;e Fehlerbehebungsrunde zu Akzentfeldern, Designwechsel und mobilen Hintergr&uuml;nden.'
+  ],
+  'v3': ['Voreinstellungen f&uuml;r Akzentfarben, die Sie speichern und wiederverwenden k&ouml;nnen, dazu Cache-Leerung, damit Aktualisierungen zuverl&auml;ssig erscheinen.'],
+  'v2': ['Helle und dunkle Designs mit Akzentfarben sowie &Uuml;bersetzungen der Shortcut-Referenz.'],
+  'v1': ['Die erste Version von Anthkeys &mdash; alle t&auml;glichen Tastenk&uuml;rzel f&uuml;r Windows, macOS, Linux und ChromeOS auf einer Seite.']
+};
