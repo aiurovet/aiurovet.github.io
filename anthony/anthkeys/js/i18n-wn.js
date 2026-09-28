@@ -3366,7 +3366,7 @@ I18N_WN.da = {
   'v50.5': ['Ikonerne i topfeltet bruger igen accentfarven (standard), så de længer ikke ser ud som hvide eller grå.'],
   'v50.4': ['Funktionen til at farvelægge ikoner med accentfarven blev fjernet: favicon, startskærmsikon og installeret PWA-ikon bruger igen standardikonen (det er kun i den indbyggede app, at accentfarve på ikoner betyder noget).'],
   'v50.3': [
-    'Ikonerne i topfeltet byggdes om för att visas stabilt på alla enheter (visning, udskrift, gåder, tema, opdatering og indstillinger anvender nu rigtige ikoner).',
+    'Ikonerne i topfeltet blev bygget om, så de vises stabilt på alle enheder (visning, udskrift, gåder, tema, opdatering og indstillinger bruger nu rigtige ikoner).',
     'Temaknappen er igen en rigtig ikon og matcher tilstanden lyst/mørkt.'
   ],
   'v50.2': ['Rettelse af en fejl i v50.1, der gjorde, at ikoner i topfeltet og indstillingerne ikke virkede ved start.'],
