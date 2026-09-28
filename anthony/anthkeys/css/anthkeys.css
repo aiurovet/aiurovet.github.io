@@ -291,8 +291,6 @@
     .hsl-num { font: 600 .72rem Consolas, monospace; color: var(--text); background: var(--surface); border: 1px solid var(--outline-variant); border-radius: 6px; padding: 0 .4rem; min-width: 2.4rem; text-align: center; }
     .hsl-row input[type=range] { width: 100%; margin: 0; accent-color: var(--accent-1); }
     .btn-settings svg { display: block; }
-    .accent-icons .btn-settings { color: var(--accent-1); }
-    .accent-icons .btn-settings:hover { color: var(--accent-1); }
     body.perf-mode, body.perf-mode *, body.perf-mode *::before, body.perf-mode *::after { backdrop-filter: none !important; -webkit-backdrop-filter: none !important; animation: none !important; transition: none !important; }
     .panel { display: none; background: var(--surface); border-radius: var(--radius); box-shadow: var(--shadow); overflow: hidden; padding: 1.25rem; transition: background .3s; }
     .panel.active { display: block; }
@@ -306,13 +304,13 @@
     .category.collapsed td::before { transform: rotate(-90deg); }
 
     kbd { display: inline-block; padding: .15rem .5rem; font-size: .75rem; font-family: 'Google Sans', 'SFMono-Regular', Consolas, monospace; background: var(--surface-variant); border-radius: 6px; white-space: nowrap; color: var(--text); font-weight: 500; }
-    .btn-settings { padding: .5rem .75rem; font-size: 1rem; line-height: 1; color: var(--text-variant); background: var(--surface-variant); border: none; border-radius: 16px; cursor: pointer; transition: all .2s; }
+    .btn-settings { padding: .5rem .75rem; font-size: 1rem; line-height: 1; color: var(--accent-1); background: var(--surface-variant); border: none; border-radius: 16px; cursor: pointer; transition: all .2s; }
     .btn-settings { position: relative; }
     .settings-badge { position: absolute; top: -2px; right: -2px; width: .55rem; height: .55rem; background: var(--accent-1); border: 2px solid var(--surface-variant); border-radius: 50%; animation: badge-pop .5s cubic-bezier(.18,.89,.32,1.28); }
     .settings-badge[hidden] { display: none; }
     @keyframes badge-pop { 0% { transform: scale(0); } 70% { transform: scale(1.25); } 100% { transform: scale(1); } }
     .btn-settings:active { transform: scale(.93); }
-    .btn-settings:hover { background: var(--outline-variant); color: var(--text); }
+    .btn-settings:hover { background: var(--outline-variant); color: var(--accent-1); }
     #appVersion.pill-new span { border-color: var(--accent-1) !important; background: linear-gradient(135deg, var(--accent-1), var(--accent-2)) !important; color: var(--on-primary) !important; animation: pill-glow 2s ease-in-out infinite; }
     @keyframes pill-glow { 0%, 100% { box-shadow: 0 0 0 3px rgba(var(--accent-rgb), .25), 0 6px 18px rgba(var(--accent-rgb), .3); } 50% { box-shadow: 0 0 0 6px rgba(var(--accent-rgb), .4), 0 8px 26px rgba(var(--accent-rgb), .5); } }
     /* shimmer sweep across the pill while a new version is highlighted */

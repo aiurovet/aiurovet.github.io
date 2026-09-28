@@ -28,7 +28,7 @@
   <script>if (location.protocol === 'file:') document.getElementById('manifestLink').remove();</script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=Roboto:wght@400;500;600;700&family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/anthkeys.css?v=111">
+  <link rel="stylesheet" href="css/anthkeys.css?v=112">
 </head>
 <body class="light style-m3 size-medium font-google-sans">
  <div class="container">
@@ -752,6 +752,12 @@
                 <div class="whatsnew-title" data-i18n="whatsnew.title">What's new</div>
                 <p class="whatsnew-sub" data-i18n="whatsnew.sub">Recent changes to Anthkeys</p>
                 <select id="whatsnewSelect" aria-label="Version" style="width:100%;padding:.45rem .7rem;border:1px solid var(--outline-variant);border-radius:var(--radius-sm);background:var(--surface);color:var(--text);font:var(--size) var(--font);font-size:.8rem;margin-bottom:.6rem;box-sizing:border-box;outline:none"></select>
+                <div class="wn-entry">
+                  <div class="wn-ver">v50.5 <span class="wn-date">Sep 28, 2026</span></div>
+                  <ul>
+                    <li>Top bar icons are accent-colored again (by default), matching your chosen accent color instead of showing white/grey.</li>
+                  </ul>
+                </div>
                 <div class="wn-entry">
                   <div class="wn-ver">v50.4 <span class="wn-date">Sep 28, 2026</span></div>
                   <ul>
@@ -1581,15 +1587,6 @@
         </div>
       </div>
       <div class="setting-group">
-        <h2 data-i18n="setting.icons">Icons <button class="reset-btn" data-reset="accentIcons" title="Reset to default">↺</button></h2>
-        <div class="setting-body">
-          <div class="toggle-row">
-            <label for="toggleAccentIcons" data-i18n="icons.accent">Accent-colored icons</label>
-            <button class="toggle" id="toggleAccentIcons" role="switch" aria-checked="false"></button>
-          </div>
-        </div>
-      </div>
-      <div class="setting-group">
         <h2 data-i18n="cloud.title">Cloud Sync</h2>
         <div class="setting-body">
           <input type="password" id="cloudToken" placeholder="GitHub Token" data-i18n-placeholder="cloud.token-placeholder" style="width:100%;padding:.5rem;border:1px solid var(--outline-variant);border-radius:var(--radius-sm);background:var(--surface);color:var(--text);font:var(--size) var(--font);margin-bottom:.4rem;box-sizing:border-box;outline:none;font-size:.8rem">
@@ -1678,7 +1675,7 @@
 
   <script src="js/mqtt.min.js"></script>
   <script src="js/qrcode.js"></script>
-  <script src="js/anthkeys.js?v=50.4">
+  <script src="js/anthkeys.js?v=50.5">
 </script>
 </body>
 </html>

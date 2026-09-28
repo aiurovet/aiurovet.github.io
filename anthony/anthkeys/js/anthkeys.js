@@ -60,8 +60,6 @@ const i18n = {
     'animations.label': 'Reduce motion',
     'setting.performance': 'Performance',
     'perf.label': 'Performance mode (turns off blur & animations)',
-    'setting.icons': 'Icons',
-    'icons.accent': 'Accent-colored icons',
     'apps.all': 'All apps',
     'setting.custom-anthkeys': 'Custom shortcuts',
     'setting.about': 'About',
@@ -9110,7 +9108,6 @@ function saveSettings() {
     compact: document.body.classList.contains('compact'),
     noAnim: document.body.classList.contains('no-anim'),
     perfMode: document.body.classList.contains('perf-mode'),
-    accentIcons: document.body.classList.contains('accent-icons'),
     tip: document.getElementById('toggleTip')?.classList.contains('on') ?? true,
     updateMode: document.querySelector('[data-update-mode].active')?.dataset.updateMode || 'auto',
     linuxDistro: linuxDistroState || 'ubuntu',
@@ -9289,15 +9286,6 @@ function loadSettings() {
       if (togglePerf) {
         togglePerf.classList.add('on');
         togglePerf.setAttribute('aria-checked', 'true');
-      }
-    }
-
-    if (data.accentIcons) {
-      document.body.classList.add('accent-icons');
-      const toggleAccentIcons = document.getElementById('toggleAccentIcons');
-      if (toggleAccentIcons) {
-        toggleAccentIcons.classList.add('on');
-        toggleAccentIcons.setAttribute('aria-checked', 'true');
       }
     }
 
@@ -10480,13 +10468,6 @@ onId('togglePerf', 'click', function() {
   saveSettings();
 });
 
-onId('toggleAccentIcons', 'click', function() {
-  const on = this.classList.toggle('on');
-  this.setAttribute('aria-checked', on);
-  document.body.classList.toggle('accent-icons', on);
-  saveSettings();
-});
-
 onId('toggleCompact', 'click', function() {
   const on = this.classList.toggle('on');
   this.setAttribute('aria-checked', on);
@@ -10529,7 +10510,7 @@ document.querySelectorAll('.reset-btn').forEach(btn => {
     const setting = btn.dataset.reset;
     const defaults = {
       language: 'auto',       keyStyle: 'spaced', modStyle: 'text',
-      blur: true, compact: false, noAnim: false, perfMode: false, accentIcons: false, tip: true,
+      blur: true, compact: false, noAnim: false, perfMode: false, tip: true,
       theme: 'light', accent: 'gold', style: 'm3',
       size: 'medium', font: 'google-sans', updateMode: 'auto'
     };
@@ -10555,15 +10536,13 @@ document.querySelectorAll('.reset-btn').forEach(btn => {
         const dailyTip = document.getElementById('dailyTip');
         if (dailyTip) dailyTip.style.display = val ? '' : 'none';
       }
-    } else if (setting === 'perfMode' || setting === 'accentIcons') {
-      const toggleId = setting === 'perfMode' ? 'togglePerf' : 'toggleAccentIcons';
-      const toggle = document.getElementById(toggleId);
+    } else if (setting === 'perfMode') {
+      const toggle = document.getElementById('togglePerf');
       if (toggle) {
         toggle.classList.toggle('on', val);
         toggle.setAttribute('aria-checked', val);
       }
-      if (setting === 'perfMode') document.body.classList.toggle('perf-mode', val);
-      if (setting === 'accentIcons') document.body.classList.toggle('accent-icons', val);
+      document.body.classList.toggle('perf-mode', val);
     } else if (setting === 'theme') {
       document.querySelectorAll('.theme-opt[data-theme]').forEach(t => t.classList.remove('active'));
       const defBtn = document.querySelector('.theme-opt[data-theme="light"]');
