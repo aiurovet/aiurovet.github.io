@@ -9994,7 +9994,6 @@ function applyGradientAccent(id) {
   if (hp) hp.hidden = true;
   updateAccentPreview();
   saveSettings();
-  updateAppIcon();
 }
 renderGradientAccents();
 function clearAccentSelections() {
@@ -10018,7 +10017,6 @@ document.querySelectorAll('.accent-opt').forEach(btn => {
     document.body.style.setProperty('--primary', c[0]);
     updateAccentPreview();
     saveSettings();
-    updateAppIcon();
   });
 });
 
@@ -10054,7 +10052,6 @@ document.body.style.setProperty('--accent-rgb', [r,g,b].join(','));
     syncHslSliders(hex);
     updateAccentPreview();
     saveSettings();
-    updateAppIcon();
     return true;
 }
 const _customSwatch = document.getElementById('customAccentSwatch');
@@ -10319,103 +10316,15 @@ if (accentPresetsContainer) {
       document.body.style.setProperty('--primary', hex);
       updateAccentPreview();
       saveSettings();
-      updateAppIcon();
     }
   });
 }
 renderAccentPresets();
 
-// ---- Accent-colored app icon (favicon, apple icon, PWA manifest) ----
-let _manifestIconUrl = null;
-function _iconRoundedRect(ctx, x, y, w, h, r) {
-  ctx.beginPath();
-  ctx.moveTo(x + r, y);
-  ctx.arcTo(x + w, y, x + w, y + h, r);
-  ctx.arcTo(x + w, y + h, x, y + h, r);
-  ctx.arcTo(x, y + h, x, y, r);
-  ctx.arcTo(x, y, x + w, y, r);
-  ctx.closePath();
-}
-function _drawAppIcon(size, safe) {
-  const canvas = document.createElement('canvas');
-  canvas.width = canvas.height = size;
-  const ctx = canvas.getContext('2d');
-  const a1 = document.body.style.getPropertyValue('--accent-1').trim() || '#f7971e';
-  const a2 = document.body.style.getPropertyValue('--accent-2').trim() || a1;
-  const g = ctx.createLinearGradient(0, 0, size, size);
-  g.addColorStop(0, a1);
-  g.addColorStop(1, a2);
-  ctx.fillStyle = g;
-  _iconRoundedRect(ctx, 0, 0, size, size, size * 0.18);
-  ctx.fill();
-  const k = size / 512;
-  let keys = [
-    { x: 92, y: 160, w: 90, h: 90, r: 24 },
-    { x: 194, y: 202, w: 90, h: 90, r: 24 },
-    { x: 296, y: 202, w: 90, h: 90, r: 24 },
-    { x: 362, y: 256, w: 46, h: 46, r: 14 }
-  ];
-  if (safe) {
-    const cx = 250, cy = 235;
-    keys = keys.map(kk => ({
-      x: cx - (cx - kk.x) * 0.72,
-      y: cy - (cy - kk.y) * 0.72,
-      w: kk.w * 0.72,
-      h: kk.h * 0.72,
-      r: kk.r * 0.72
-    }));
-  }
-  ctx.fillStyle = 'rgba(255,255,255,.95)';
-  keys.forEach(kk => {
-    _iconRoundedRect(ctx, kk.x * k, kk.y * k, kk.w * k, kk.h * k, kk.r * k);
-    ctx.fill();
-  });
-  try { return canvas.toDataURL('image/png'); } catch (e) { return ''; }
-}
-function updateAppIcon() {
-  try {
-    const a1 = document.body.style.getPropertyValue('--accent-1').trim() || '#f7971e';
-    const p192 = _drawAppIcon(192, false);
-    if (!p192) return;
-    const p512 = _drawAppIcon(512, false);
-    const m192 = _drawAppIcon(192, true);
-    const m512 = _drawAppIcon(512, true);
-    const iconLink = document.querySelector('link[rel="icon"]');
-    if (iconLink) iconLink.setAttribute('href', p192);
-    const appleLink = document.querySelector('link[rel="apple-touch-icon"]');
-    if (appleLink) appleLink.setAttribute('href', p192);
-    const mf = document.getElementById('manifestLink');
-    if (mf && location.protocol !== 'file:') {
-      const manifest = {
-        name: 'Keyboard Anthkeys',
-        short_name: 'Anthkeys',
-        description: 'Common keyboard anthkeys for every platform',
-        start_url: 'anthkeys.html',
-        display: 'standalone',
-        background_color: a1,
-        theme_color: a1,
-        categories: ['productivity', 'utilities'],
-        lang: 'en',
-        icons: [
-          { src: p192, sizes: '192x192', type: 'image/png', purpose: 'any' },
-          { src: p512, sizes: '512x512', type: 'image/png', purpose: 'any' },
-          { src: m192, sizes: '192x192', type: 'image/png', purpose: 'maskable' },
-          { src: m512, sizes: '512x512', type: 'image/png', purpose: 'maskable' }
-        ]
-      };
-      const url = URL.createObjectURL(new Blob([JSON.stringify(manifest)], { type: 'application/manifest+json' }));
-      mf.setAttribute('href', url);
-      if (_manifestIconUrl) URL.revokeObjectURL(_manifestIconUrl);
-      _manifestIconUrl = url;
-    }
-  } catch (e) { /* non-fatal */ }
-}
-
 // ---- Load saved settings (after accents init & click handlers) ----
 loadSettings();
 applyLinuxDistro(linuxDistroState || 'ubuntu');
 applyAppsFilter();
-updateAppIcon();
 checkForUpdate();
 
 function applyWallpaper(dataUrl) {
