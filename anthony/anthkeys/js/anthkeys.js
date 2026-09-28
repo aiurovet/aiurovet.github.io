@@ -41,6 +41,7 @@ const i18n = {
     'accent.device-applied': 'Device accent applied',
     'accent.device-fail': 'Device accent not available here \u2014 open the installed app',
     'linux.distro': 'Distribution',
+    'accent.gradient-title': 'Gradient accents',
     'setting.theme': 'Theme',
     'setting.presets': 'Style',
     'setting.accent': 'Accent color',
@@ -8983,18 +8984,17 @@ function applyLinuxDistro(id) {
     });
   }
   const dist = linuxDistros.find(d => d.id === linuxDistroState) || linuxDistros[0];
+  const distroSuffix = document.getElementById('linuxTabDistro');
+  if (distroSuffix) distroSuffix.textContent = ' - ' + dist.label;
   const overrides = dist.overrides || {};
   document.querySelectorAll('#linux [data-kbd]').forEach(td => {
     td.innerHTML = overrides[td.dataset.kbd] || LINUX_KBD_DEFAULTS[td.dataset.kbd];
   });
   renderLinuxDistroMenu();
 }
-const _linuxChev = document.getElementById('linuxChev');
-if (_linuxChev) {
-  _linuxChev.addEventListener('click', e => {
-    e.preventDefault();
-    toggleLinuxDistroMenu();
-  });
+const _linuxTabBtn = document.querySelector('.tab[data-tab="linux"]');
+if (_linuxTabBtn) {
+  _linuxTabBtn.addEventListener('click', () => toggleLinuxDistroMenu());
 }
 document.addEventListener('click', e => {
   const menu = document.getElementById('linuxDistroMenu');
@@ -9016,7 +9016,7 @@ function saveSettings() {
     size: document.querySelector('[data-size].active')?.dataset.size || 'medium',
     font: document.querySelector('[data-font].active')?.dataset.font || 'google-sans',
     language: document.querySelector('[data-lang].active')?.dataset.lang || 'auto',
-    accent: activeAccent?.dataset.accent || (isCustom ? 'custom' : 'gold'),
+    accent: document.querySelector('.gradient-opt.active') ? 'gold' : (activeAccent?.dataset.accent || (isCustom ? 'custom' : 'gold')),
     blur: document.getElementById('toggleBlur')?.classList.contains('on') ?? true,
     keyStyle: document.querySelector('[data-key-style].active')?.dataset.keyStyle || 'spaced',
     modStyle: document.querySelector('[data-mod-style].active')?.dataset.modStyle || 'text',
@@ -9029,8 +9029,10 @@ function saveSettings() {
   if (data.accent === 'custom' || (activeAccent && !activeAccent.dataset.accent)) {
     const bodyHex = document.body.style.getPropertyValue('--accent-1').trim();
     if (bodyHex && bodyHex.startsWith('#')) { data.customAccentHex = bodyHex; }
-    else { const el = document.getElementById('customAccentInput'); if (el) data.customAccentHex = el.value; }
+    else { const el = document.getElementById('customAccentHexInput'); if (el && el.value) data.customAccentHex = el.value; }
   }
+  const gradBtn = document.querySelector('.gradient-opt.active');
+  if (gradBtn) data.gradientAccent = gradBtn.dataset.gradient;
   lsSet('anthkeys-settings', JSON.stringify(data));
   scheduleSyncPublish();
 }
@@ -9104,20 +9106,37 @@ function loadSettings() {
       const b2 = Math.min(255, b + 40);
       const hex2 = '#' + [r2,g2,b2].map(v => v.toString(16).padStart(2,'0')).join('');
       document.querySelectorAll('.accent-opt').forEach(a => a.classList.remove('active'));
+      document.querySelectorAll('.gradient-opt').forEach(a => a.classList.remove('active'));
       const accentBtn = document.getElementById('customAccentBtn');
-      const accentInput = document.getElementById('customAccentInput');
       if (accentBtn) accentBtn.classList.add('active');
-      if (accentInput) accentInput.value = hex;
       const hexBox = document.getElementById('customAccentHexInput');
       if (hexBox) hexBox.value = hex.toUpperCase();
+      const sw = document.getElementById('customAccentSwatch');
+      if (sw) sw.style.background = 'linear-gradient(135deg,' + hex + ',' + hex2 + ')';
       document.body.style.setProperty('--accent-1', hex);
       document.body.style.setProperty('--accent-2', hex2);
       document.body.style.setProperty('--accent-rgb', [r,g,b].join(','));
       document.body.style.setProperty('--accent-2-rgb', [r2,g2,b2].join(','));
       document.body.style.setProperty('--primary', hex);
+      syncHslSliders(hex);
+      updateAccentPreview();
+    } else if (data.gradientAccent && gradientAccents[data.gradientAccent]) {
+      document.querySelectorAll('.accent-opt').forEach(a => a.classList.remove('active'));
+      document.querySelectorAll('.gradient-opt').forEach(a => a.classList.remove('active'));
+      const custBtn = document.getElementById('customAccentBtn');
+      if (custBtn) custBtn.classList.remove('active');
+      const gradSel = document.querySelector('.gradient-opt[data-gradient="' + data.gradientAccent + '"]');
+      if (gradSel) gradSel.classList.add('active');
+      const gc = gradientAccents[data.gradientAccent];
+      document.body.style.setProperty('--accent-1', gc[0]);
+      document.body.style.setProperty('--accent-2', gc[1]);
+      document.body.style.setProperty('--accent-rgb', _hexRgb(gc[0]));
+      document.body.style.setProperty('--accent-2-rgb', _hexRgb(gc[1]));
+      document.body.style.setProperty('--primary', gc[0]);
       updateAccentPreview();
     } else if (data.accent && accents[data.accent]) {
       document.querySelectorAll('.accent-opt').forEach(a => a.classList.remove('active'));
+      document.querySelectorAll('.gradient-opt').forEach(a => a.classList.remove('active'));
       const aBtn = document.querySelector('.accent-opt[data-accent="' + data.accent + '"]');
       if (aBtn) aBtn.classList.add('active');
       const c = accents[data.accent];
@@ -9770,41 +9789,100 @@ document.querySelectorAll('.theme-opt[data-theme]').forEach(opt => {
 });
 
 const accents = {
-  gold: ['#D87C08','#F5C383','216,124,8','245,195,131'],
-  blue: ['#0A59DA','#87B0F4','10,89,218','135,176,244'],
-  green: ['#17BB53','#86EAAB','23,187,83','134,234,171'],
-  pink: ['#CF1571','#EF8DBD','207,21,113','239,141,189'],
-  purple: ['#4C0CDD','#AB8BF4','76,12,221','171,139,244'],
-  red: ['#C41818','#E88E8E','196,24,24','232,142,142'],
-  teal: ['#11BEAE','#7FEEE4','17,190,174','127,238,228'],
-  orange: ['#D04E0B','#F3A982','208,78,11','243,169,130'],
-  indigo: ['#2319CA','#9590EB','35,25,202','149,144,235'],
-  cyan: ['#09A4C9','#7CDCF4','9,164,201','124,220,244'],
-  lime: ['#78C10F','#C1F07F','120,193,15','193,240,127'],
-  fuchsia: ['#B018C3','#DD8FE6','176,24,195','221,143,230'],
-  grape: ['#770ADD','#C089F5','119,10,221','192,137,245'],
-  tangerine: ['#D95C06','#F7B181','217,92,6','247,177,129'],
-  'sky-blue': ['#0C92CF','#83D0F2','12,146,207','131,208,242'],
-  'warm-gray': ['#8F664A','#CAB7A9','143,102,74','202,183,169'],
-  mocha: ['#BC5212','#EEA97F','188,82,18','238,169,127'],
-  'ocean-deep': ['#0484CB','#76C9F7','4,132,203','118,201,247'],
-  crimson: ['#C41818','#E88E8E','196,24,24','232,142,142'],
-  violet: ['#5813CF','#B08BF0','88,19,207','176,139,240'],
-  amber: ['#D27306','#F6BE7D','210,115,6','246,190,125'],
-  jade: ['#07C78B','#77F5CE','7,199,139','119,245,206'],
-  ruby: ['#C4183E','#EB8BA0','196,24,62','235,139,160'],
-  candy: ['#D80C2F','#F3889B','216,12,47','243,136,155'],
-  azure: ['#134DCC','#89A9EF','19,77,204','137,169,239'],
-  peach: ['#EF0522','#F88F9C','239,5,34','248,143,156'],
-  slate: ['#4A6790','#AAB7CB','74,103,144','170,183,203'],
-  tulip: ['#C70AE3','#E78DF5','199,10,227','231,141,245']
+  gold: ['#C98910','#F2D896','201,137,16','242,216,150'],
+  blue: ['#0A59DA','#93B8F6','10,89,218','147,184,246'],
+  green: ['#16A34A','#8CE6B2','22,163,74','140,230,178'],
+  pink: ['#D63384','#F2A9CE','214,51,132','242,169,206'],
+  purple: ['#7C3AED','#C3A8F9','124,58,237','195,168,249'],
+  red: ['#DC2626','#F2A5A5','220,38,38','242,165,165'],
+  teal: ['#0D9488','#83E5DC','13,148,136','131,229,220'],
+  orange: ['#EA580C','#F9B586','234,88,12','249,181,134'],
+  indigo: ['#4F46E5','#B7B3F4','79,70,229','183,179,244'],
+  cyan: ['#0891B2','#8ADFF2','8,145,178','138,223,242'],
+  lime: ['#65A30D','#CDED8F','101,163,13','205,237,143'],
+  fuchsia: ['#C026D3','#E9A6F0','192,38,211','233,166,240'],
+  grape: ['#8E24C9','#D0A7EF','142,36,201','208,167,239'],
+  tangerine: ['#F97316','#FCC08F','249,115,22','252,192,143'],
+  'sky-blue': ['#0284C7','#93D5F5','2,132,199','147,213,245'],
+  'warm-gray': ['#8A6D5C','#D6C6BA','138,109,92','214,198,186'],
+  mocha: ['#A4511E','#F0BC8F','164,81,30','240,188,143'],
+  'ocean-deep': ['#0369A1','#8FD0EE','3,105,161','143,208,238'],
+  crimson: ['#B91C4C','#EFA9C2','185,28,76','239,169,194'],
+  violet: ['#6D28D9','#C3A7F4','109,40,217','195,167,244'],
+  amber: ['#D97706','#F8CB7F','217,119,6','248,203,127'],
+  jade: ['#059669','#8BE8C4','5,150,105','139,232,196'],
+  ruby: ['#BE123C','#F0ABC0','190,18,60','240,171,192'],
+  candy: ['#E11D48','#F7A9BB','225,29,72','247,169,187'],
+  azure: ['#2563EB','#A6C2F8','37,99,235','166,194,248'],
+  peach: ['#F43F5E','#F9A9B6','244,63,94','249,169,182'],
+  slate: ['#475569','#B9C4D0','71,85,105','185,196,208'],
+  tulip: ['#9333EA','#D0A9F5','147,51,234','208,169,245']
 };
 // Expose accents for loadSettings
 window.accents = accents;
 
+function _hexRgb(hex) {
+  return [parseInt(hex.slice(1,3),16), parseInt(hex.slice(3,5),16), parseInt(hex.slice(5,7),16)].join(',');
+}
+const gradientAccents = {
+  sunset: ['#F97316','#D946EF'],
+  ocean: ['#0EA5E9','#6366F1'],
+  forest: ['#22C55E','#0D9488'],
+  candy: ['#EC4899','#8B5CF6'],
+  'gold-blaze': ['#F59E0B','#EF4444'],
+  aurora: ['#34D399','#38BDF8'],
+  royal: ['#6366F1','#A855F7'],
+  ember: ['#F43F5E','#F97316']
+};
+window.gradientAccents = gradientAccents;
+function renderGradientAccents() {
+  const g = document.getElementById('gradientAccents');
+  if (!g || g.dataset.rendered) return;
+  g.dataset.rendered = '1';
+  Object.keys(gradientAccents).forEach(id => {
+    const gc = gradientAccents[id];
+    const b = document.createElement('button');
+    b.type = 'button';
+    b.className = 'gradient-opt';
+    b.dataset.gradient = id;
+    b.style.background = 'linear-gradient(135deg,' + gc[0] + ',' + gc[1] + ')';
+    b.title = id;
+    b.addEventListener('click', () => applyGradientAccent(id));
+    g.appendChild(b);
+  });
+}
+function applyGradientAccent(id) {
+  const gc = gradientAccents[id];
+  if (!gc) return;
+  document.querySelectorAll('.accent-opt').forEach(b => b.classList.remove('active'));
+  document.querySelectorAll('.gradient-opt').forEach(b => b.classList.remove('active'));
+  const cust = document.getElementById('customAccentBtn');
+  if (cust) cust.classList.remove('active');
+  const sel = document.querySelector('.gradient-opt[data-gradient="' + id + '"]');
+  if (sel) sel.classList.add('active');
+  document.body.style.setProperty('--accent-1', gc[0]);
+  document.body.style.setProperty('--accent-2', gc[1]);
+  document.body.style.setProperty('--accent-rgb', _hexRgb(gc[0]));
+  document.body.style.setProperty('--accent-2-rgb', _hexRgb(gc[1]));
+  document.body.style.setProperty('--primary', gc[0]);
+  const hp = document.getElementById('customHslPanel');
+  if (hp) hp.hidden = true;
+  updateAccentPreview();
+  saveSettings();
+}
+renderGradientAccents();
+function clearAccentSelections() {
+  document.querySelectorAll('.accent-opt').forEach(b => b.classList.remove('active'));
+  document.querySelectorAll('.gradient-opt').forEach(b => b.classList.remove('active'));
+  const cust = document.getElementById('customAccentBtn');
+  if (cust) cust.classList.remove('active');
+  const hp = document.getElementById('customHslPanel');
+  if (hp) hp.hidden = true;
+}
+
 document.querySelectorAll('.accent-opt').forEach(btn => {
   btn.addEventListener('click', () => {
-    document.querySelectorAll('.accent-opt').forEach(b => b.classList.remove('active'));
+    clearAccentSelections();
     btn.classList.add('active');
     const c = accents[btn.dataset.accent];
     document.body.style.setProperty('--accent-1', c[0]);
@@ -9826,7 +9904,6 @@ function updateAccentPreview() {
 updateAccentPreview();
 
 const _customAccentBtn = document.getElementById('customAccentBtn');
-const _customAccentInput = document.getElementById('customAccentInput');
 const _customAccentHex = document.getElementById('customAccentHexInput');
 const _customAccentCopy = document.getElementById('customAccentCopy');
 function applyCustomAccent(hex) {
@@ -9839,22 +9916,98 @@ function applyCustomAccent(hex) {
   const b2 = Math.min(255, b + 40);
   const hex2 = '#' + [r2,g2,b2].map(v => v.toString(16).padStart(2,'0')).join('');
   document.querySelectorAll('.accent-opt').forEach(b => b.classList.remove('active'));
+  document.querySelectorAll('.gradient-opt').forEach(b => b.classList.remove('active'));
   _customAccentBtn.classList.add('active');
   document.body.style.setProperty('--accent-1', hex);
   document.body.style.setProperty('--accent-2', hex2);
 document.body.style.setProperty('--accent-rgb', [r,g,b].join(','));
     document.body.style.setProperty('--accent-2-rgb', [r2,g2,b2].join(','));
     document.body.style.setProperty('--primary', hex);
-    if (_customAccentInput) _customAccentInput.value = hex;
+    const sw = document.getElementById('customAccentSwatch');
+    if (sw) sw.style.background = 'linear-gradient(135deg,' + hex + ',' + hex2 + ')';
     if (_customAccentHex) _customAccentHex.value = hex.toUpperCase();
+    syncHslSliders(hex);
     updateAccentPreview();
     saveSettings();
     return true;
 }
-if (_customAccentBtn && _customAccentInput) {
-  _customAccentBtn.addEventListener('click', () => _customAccentInput.click());
-  _customAccentInput.addEventListener('input', function() { applyCustomAccent(this.value); });
+const _customSwatch = document.getElementById('customAccentSwatch');
+const _hslHue = document.getElementById('hslHue');
+const _hslSat = document.getElementById('hslSat');
+const _hslBright = document.getElementById('hslBright');
+function currentCustomHex() {
+  const body = document.body.style.getPropertyValue('--accent-1').trim();
+  if (/^#[0-9a-fA-F]{6}$/.test(body)) return body;
+  const box = _customAccentHex && /^#[0-9a-fA-F]{6}$/.test(_customAccentHex.value.trim()) ? _customAccentHex.value.trim() : '';
+  return box || '#f7971e';
 }
+function _hexToHsv(hex) {
+  const r = parseInt(hex.slice(1,3),16) / 255;
+  const g = parseInt(hex.slice(3,5),16) / 255;
+  const b = parseInt(hex.slice(5,7),16) / 255;
+  const max = Math.max(r,g,b), min = Math.min(r,g,b), d = max - min;
+  let h = 0;
+  if (d !== 0) {
+    if (max === r) h = ((g - b) / d) % 6;
+    else if (max === g) h = (b - r) / d + 2;
+    else h = (r - g) / d + 4;
+    h *= 60;
+    if (h < 0) h += 360;
+  }
+  const s = max === 0 ? 0 : (d / max) * 100;
+  const v = max * 100;
+  return [Math.round(h), Math.round(s), Math.round(v)];
+}
+function _hsvToHex(h, s, v) {
+  s /= 100; v /= 100;
+  const c = v * s, x = c * (1 - Math.abs(((h / 60) % 2) - 1)), m = v - c;
+  let rgb;
+  if (h < 60) rgb = [c,x,0]; else if (h < 120) rgb = [x,c,0]; else if (h < 180) rgb = [0,c,x];
+  else if (h < 240) rgb = [0,x,c]; else if (h < 300) rgb = [x,0,c]; else rgb = [c,0,x];
+  const cn = n => Math.round((n + m) * 255).toString(16).padStart(2,'0');
+  return '#' + cn(rgb[0]) + cn(rgb[1]) + cn(rgb[2]);
+}
+function syncHslSliders(hex) {
+  if (!/^#[0-9a-fA-F]{6}$/.test(hex)) hex = currentCustomHex();
+  const hsv = _hexToHsv(hex);
+  const map = { hslHue: hsv[0], hslSat: hsv[1], hslBright: hsv[2] };
+  Object.keys(map).forEach(id => {
+    const el = document.getElementById(id);
+    if (el && String(el.value) !== String(map[id])) el.value = map[id];
+  });
+  const nums = { hslNumHue: hsv[0], hslNumSat: hsv[1], hslNumBright: hsv[2] };
+  Object.keys(nums).forEach(id => {
+    const el = document.getElementById(id);
+    if (el && el.textContent !== String(nums[id])) el.textContent = nums[id];
+  });
+}
+function toggleHslPanel(force) {
+  const p = document.getElementById('customHslPanel');
+  if (!p) return;
+  const wasHidden = p.hidden;
+  if (force !== undefined) p.hidden = !force;
+  else p.hidden = !wasHidden;
+  if (p.hidden === false) syncHslSliders(currentCustomHex());
+}
+if (_customAccentBtn) {
+  _customAccentBtn.addEventListener('click', () => {
+    applyCustomAccent(currentCustomHex());
+    toggleHslPanel(true);
+  });
+}
+if (_customSwatch) {
+  _customSwatch.addEventListener('click', () => toggleHslPanel());
+}
+[_hslHue, _hslSat, _hslBright].forEach(sl => {
+  if (!sl) return;
+  sl.addEventListener('input', () => {
+    const hex = _hsvToHex(parseInt(_hslHue.value,10), parseInt(_hslSat.value,10), parseInt(_hslBright.value,10));
+    const nId = sl === _hslHue ? 'hslNumHue' : sl === _hslSat ? 'hslNumSat' : 'hslNumBright';
+    const n = document.getElementById(nId);
+    if (n && n.textContent !== sl.value) n.textContent = sl.value;
+    applyCustomAccent(hex);
+  });
+})
 if (_customAccentHex) {
   _customAccentHex.addEventListener('input', function() {
     let v = this.value.trim();
@@ -10041,8 +10194,7 @@ if (accentPresetsContainer) {
       const g2 = Math.min(255, g + 40);
       const b2 = Math.min(255, b + 40);
       const hex2 = '#' + [r2,g2,b2].map(v => v.toString(16).padStart(2,'0')).join('');
-      document.querySelectorAll('.accent-opt').forEach(b => b.classList.remove('active'));
-      document.querySelectorAll('#customAccentBtn').forEach(b => b.classList.remove('active'));
+      clearAccentSelections();
       presetBtn.classList.add('active');
       document.body.style.setProperty('--accent-1', hex);
       document.body.style.setProperty('--accent-2', hex2);

@@ -28,7 +28,7 @@
   <script>if (location.protocol === 'file:') document.getElementById('manifestLink').remove();</script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=Roboto:wght@400;500;600;700&family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/anthkeys.css?v=108">
+  <link rel="stylesheet" href="css/anthkeys.css?v=109">
 </head>
 <body class="light style-m3 size-medium font-google-sans">
  <div class="container">
@@ -88,8 +88,8 @@
     <button class="tab active" data-tab="windows" data-i18n="tab.windows">Windows</button>
     <button class="tab" data-tab="macos" data-i18n="tab.macos">macOS</button>
     <div id="linuxTabWrap" style="position:relative;display:inline-flex">
-      <button class="tab" data-tab="linux" style="padding-right:.55rem"><span data-i18n="tab.linux">Linux</span><span id="linuxChev" title="Choose Linux distribution" style="margin-left:.35rem;font-size:.55rem;opacity:.8;cursor:pointer;display:inline-block">&#9662;</span></button>
-      <div id="linuxDistroMenu" hidden style="position:absolute;top:calc(100% + .45rem);left:0;z-index:600;min-width:14rem;max-height:60vh;overflow:auto;background:var(--surface);border:1px solid var(--outline-variant);border-radius:12px;box-shadow:var(--shadow-lg);padding:.35rem"></div>
+      <button class="tab" data-tab="linux" style="padding-right:.55rem"><span data-i18n="tab.linux">Linux</span><span id="linuxTabDistro"></span><span id="linuxChev" title="Choose Linux distribution" style="margin-left:.35rem;font-size:.55rem;opacity:.8;display:inline-block">&#9662;</span></button>
+      <div id="linuxDistroMenu" hidden style="position:absolute;top:calc(100% + .45rem);left:0;z-index:600;min-width:14rem;max-width:85vw;max-height:60vh;overflow:auto;background:var(--surface);border:1px solid var(--outline-variant);border-radius:12px;box-shadow:var(--shadow-lg);padding:.35rem"></div>
     </div>
     <button class="tab" data-tab="chromeos" data-i18n="tab.chromeos">ChromeOS</button>
     <button class="tab" data-tab="apps" data-i18n="tab.apps">Apps</button>
@@ -750,6 +750,15 @@
                 <p class="whatsnew-sub" data-i18n="whatsnew.sub">Recent changes to Anthkeys</p>
                 <select id="whatsnewSelect" aria-label="Version" style="width:100%;padding:.45rem .7rem;border:1px solid var(--outline-variant);border-radius:var(--radius-sm);background:var(--surface);color:var(--text);font:var(--size) var(--font);font-size:.8rem;margin-bottom:.6rem;box-sizing:border-box;outline:none"></select>
                 <div class="wn-entry">
+                  <div class="wn-ver">v50 <span class="wn-date">Sep 6, 2026</span></div>
+                  <ul>
+                    <li>Click anywhere on the Linux tab to open the distribution dropdown - and the tab now shows your pick, like "Linux - Ubuntu (GNOME)".</li>
+                    <li>The custom colour picker is rebuilt: the round swatch opens Hue, Saturation and Brightness sliders (with the value shown right above each one), starting from your current colour instead of 0/0/0.</li>
+                    <li>New Gradient accents section - eight two-colour gradients ready to apply as your accent.</li>
+                    <li>Accent presets retuned to a cleaner, more distinct palette.</li>
+                  </ul>
+                </div>
+                <div class="wn-entry">
                   <div class="wn-ver">v40.9 <span class="wn-date">Sep 6, 2026</span></div>
                   <ul>
                     <li>The distribution dropdown now lives right on the Linux tab itself - click the little arrow on the tab to pick your distro.</li>
@@ -1348,6 +1357,18 @@
                     <li>Accent color presets you can save and reuse, plus cache busting so updates show up reliably.</li>
                   </ul>
                 </div>
+                <div class="wn-entry">
+                  <div class="wn-ver">v2 <span class="wn-date">May 25, 2026</span></div>
+                  <ul>
+                    <li>Light and dark themes with accent colors, plus translations for the shortcut reference.</li>
+                  </ul>
+                </div>
+                <div class="wn-entry">
+                  <div class="wn-ver">v1 <span class="wn-date">May 24, 2026</span></div>
+                  <ul>
+                    <li>The first release of Anthkeys - every day keyboard shortcuts for Windows, macOS, Linux and ChromeOS on one page.</li>
+                  </ul>
+                </div>
           </div>
         </div>
       </div>
@@ -1403,41 +1424,59 @@
             <span id="accentPreviewHex" style="font:600 .9rem Consolas,monospace;color:var(--text-variant);min-width:5.6rem;text-align:center">#D87C08</span>
           </div>
           <div style="display:flex;flex-wrap:wrap;gap:.4rem;margin-bottom:.5rem">
-            <div class="accent-item"><button class="accent-opt active" data-accent="gold" style="background:#D87C08" title="Gold"></button><span>Gold</span></div>
+            <div class="accent-item"><button class="accent-opt active" data-accent="gold" style="background:#C98910" title="Gold"></button><span>Gold</span></div>
             <div class="accent-item"><button class="accent-opt" data-accent="blue" style="background:#0A59DA" title="Blue"></button><span>Blue</span></div>
-            <div class="accent-item"><button class="accent-opt" data-accent="green" style="background:#17BB53" title="Green"></button><span>Green</span></div>
-            <div class="accent-item"><button class="accent-opt" data-accent="pink" style="background:#CF1571" title="Pink"></button><span>Pink</span></div>
-            <div class="accent-item"><button class="accent-opt" data-accent="purple" style="background:#4C0CDD" title="Purple"></button><span>Purple</span></div>
-            <div class="accent-item"><button class="accent-opt" data-accent="red" style="background:#C41818" title="Red"></button><span>Red</span></div>
-            <div class="accent-item"><button class="accent-opt" data-accent="teal" style="background:#11BEAE" title="Teal"></button><span>Teal</span></div>
-            <div class="accent-item"><button class="accent-opt" data-accent="orange" style="background:#D04E0B" title="Orange"></button><span>Orange</span></div>
-            <div class="accent-item"><button class="accent-opt" data-accent="indigo" style="background:#2319CA" title="Indigo"></button><span>Indigo</span></div>
-            <div class="accent-item"><button class="accent-opt" data-accent="cyan" style="background:#09A4C9" title="Cyan"></button><span>Cyan</span></div>
-            <div class="accent-item"><button class="accent-opt" data-accent="lime" style="background:#78C10F" title="Lime"></button><span>Lime</span></div>
-            <div class="accent-item"><button class="accent-opt" data-accent="fuchsia" style="background:#B018C3" title="Fuchsia"></button><span>Fuchsia</span></div>
-            <div class="accent-item"><button class="accent-opt" data-accent="grape" style="background:#770ADD" title="Grape"></button><span>Grape</span></div>
-            <div class="accent-item"><button class="accent-opt" data-accent="tangerine" style="background:#D95C06" title="Tangerine"></button><span>Tangerine</span></div>
-            <div class="accent-item"><button class="accent-opt" data-accent="sky-blue" style="background:#0C92CF" title="Sky Blue"></button><span>Sky Blue</span></div>
-            <div class="accent-item"><button class="accent-opt" data-accent="warm-gray" style="background:#8F664A" title="Warm Gray"></button><span>Warm Gray</span></div>
-            <div class="accent-item"><button class="accent-opt" data-accent="mocha" style="background:#BC5212" title="Mocha"></button><span>Mocha</span></div>
-            <div class="accent-item"><button class="accent-opt" data-accent="ocean-deep" style="background:#0484CB" title="Ocean Deep"></button><span>Ocean Deep</span></div>
-            <div class="accent-item"><button class="accent-opt" data-accent="crimson" style="background:#C41818" title="Crimson"></button><span>Crimson</span></div>
-            <div class="accent-item"><button class="accent-opt" data-accent="violet" style="background:#5813CF" title="Violet"></button><span>Violet</span></div>
-            <div class="accent-item"><button class="accent-opt" data-accent="amber" style="background:#D27306" title="Amber"></button><span>Amber</span></div>
-            <div class="accent-item"><button class="accent-opt" data-accent="jade" style="background:#07C78B" title="Jade"></button><span>Jade</span></div>
-            <div class="accent-item"><button class="accent-opt" data-accent="ruby" style="background:#C4183E" title="Ruby"></button><span>Ruby</span></div>
-            <div class="accent-item"><button class="accent-opt" data-accent="candy" style="background:#D80C2F" title="Candy"></button><span>Candy</span></div>
-            <div class="accent-item"><button class="accent-opt" data-accent="azure" style="background:#134DCC" title="Azure"></button><span>Azure</span></div>
-            <div class="accent-item"><button class="accent-opt" data-accent="peach" style="background:#EF0522" title="Peach"></button><span>Peach</span></div>
-            <div class="accent-item"><button class="accent-opt" data-accent="slate" style="background:#4A6790" title="Slate"></button><span>Slate</span></div>
-            <div class="accent-item"><button class="accent-opt" data-accent="tulip" style="background:#C70AE3" title="Tulip"></button><span>Tulip</span></div>
+            <div class="accent-item"><button class="accent-opt" data-accent="green" style="background:#16A34A" title="Green"></button><span>Green</span></div>
+            <div class="accent-item"><button class="accent-opt" data-accent="pink" style="background:#D63384" title="Pink"></button><span>Pink</span></div>
+            <div class="accent-item"><button class="accent-opt" data-accent="purple" style="background:#7C3AED" title="Purple"></button><span>Purple</span></div>
+            <div class="accent-item"><button class="accent-opt" data-accent="red" style="background:#DC2626" title="Red"></button><span>Red</span></div>
+            <div class="accent-item"><button class="accent-opt" data-accent="teal" style="background:#0D9488" title="Teal"></button><span>Teal</span></div>
+            <div class="accent-item"><button class="accent-opt" data-accent="orange" style="background:#EA580C" title="Orange"></button><span>Orange</span></div>
+            <div class="accent-item"><button class="accent-opt" data-accent="indigo" style="background:#4F46E5" title="Indigo"></button><span>Indigo</span></div>
+            <div class="accent-item"><button class="accent-opt" data-accent="cyan" style="background:#0891B2" title="Cyan"></button><span>Cyan</span></div>
+            <div class="accent-item"><button class="accent-opt" data-accent="lime" style="background:#65A30D" title="Lime"></button><span>Lime</span></div>
+            <div class="accent-item"><button class="accent-opt" data-accent="fuchsia" style="background:#C026D3" title="Fuchsia"></button><span>Fuchsia</span></div>
+            <div class="accent-item"><button class="accent-opt" data-accent="grape" style="background:#8E24C9" title="Grape"></button><span>Grape</span></div>
+            <div class="accent-item"><button class="accent-opt" data-accent="tangerine" style="background:#F97316" title="Tangerine"></button><span>Tangerine</span></div>
+            <div class="accent-item"><button class="accent-opt" data-accent="sky-blue" style="background:#0284C7" title="Sky Blue"></button><span>Sky Blue</span></div>
+            <div class="accent-item"><button class="accent-opt" data-accent="warm-gray" style="background:#8A6D5C" title="Warm Gray"></button><span>Warm Gray</span></div>
+            <div class="accent-item"><button class="accent-opt" data-accent="mocha" style="background:#A4511E" title="Mocha"></button><span>Mocha</span></div>
+            <div class="accent-item"><button class="accent-opt" data-accent="ocean-deep" style="background:#0369A1" title="Ocean Deep"></button><span>Ocean Deep</span></div>
+            <div class="accent-item"><button class="accent-opt" data-accent="crimson" style="background:#B91C4C" title="Crimson"></button><span>Crimson</span></div>
+            <div class="accent-item"><button class="accent-opt" data-accent="violet" style="background:#6D28D9" title="Violet"></button><span>Violet</span></div>
+            <div class="accent-item"><button class="accent-opt" data-accent="amber" style="background:#D97706" title="Amber"></button><span>Amber</span></div>
+            <div class="accent-item"><button class="accent-opt" data-accent="jade" style="background:#059669" title="Jade"></button><span>Jade</span></div>
+            <div class="accent-item"><button class="accent-opt" data-accent="ruby" style="background:#BE123C" title="Ruby"></button><span>Ruby</span></div>
+            <div class="accent-item"><button class="accent-opt" data-accent="candy" style="background:#E11D48" title="Candy"></button><span>Candy</span></div>
+            <div class="accent-item"><button class="accent-opt" data-accent="azure" style="background:#2563EB" title="Azure"></button><span>Azure</span></div>
+            <div class="accent-item"><button class="accent-opt" data-accent="peach" style="background:#F43F5E" title="Peach"></button><span>Peach</span></div>
+            <div class="accent-item"><button class="accent-opt" data-accent="slate" style="background:#475569" title="Slate"></button><span>Slate</span></div>
+            <div class="accent-item"><button class="accent-opt" data-accent="tulip" style="background:#9333EA" title="Tulip"></button><span>Tulip</span></div>
           </div>
           <div style="display:flex;gap:.4rem;align-items:center;flex-wrap:wrap">
             <button class="theme-opt" id="customAccentBtn" style="flex:0 0 auto;justify-content:center;padding:.5rem .8rem">Custom</button>
-            <input type="color" id="customAccentInput" value="#f7971e" style="width:36px;height:36px;border:2px solid var(--outline-variant);border-radius:50%;cursor:pointer;padding:0;background:none;flex:0 0 auto">
+            <button id="customAccentSwatch" style="flex:0 0 auto;width:36px;height:36px;border-radius:50%;border:2px solid var(--outline-variant);padding:0;cursor:pointer;background:linear-gradient(135deg,var(--accent-1),var(--accent-2))" title="Open color picker"></button>
             <input type="text" id="customAccentHexInput" value="#f7971e" maxlength="7" placeholder="#RRGGBB" spellcheck="false" autocapitalize="none" style="flex:1;min-width:6.5rem;padding:.5rem .6rem;border:1px solid var(--outline-variant);border-radius:var(--radius-sm);background:var(--surface);color:var(--text);font:var(--size) var(--font);font-size:.8rem;outline:none;text-transform:uppercase;box-sizing:border-box">
             <button class="theme-opt" id="customAccentCopy" data-i18n="accent.copy" title="Copy hex colour" style="flex:0 0 auto;width:auto;justify-content:center;font-size:.78rem;padding:.5rem .8rem">Copy</button>
             <button class="theme-opt" id="btnMatchDeviceAccent" data-i18n="accent.match-device" title="Use the accent colour of this device" style="flex:0 0 auto;width:auto;justify-content:center;font-size:.78rem;padding:.5rem .8rem">Match my device</button>
+          </div>
+          <div id="customHslPanel" hidden style="margin-top:.5rem;padding:.6rem .7rem .1rem;border:1px solid var(--outline-variant);border-radius:12px;background:var(--surface-variant)">
+            <div class="hsl-row">
+              <div class="hsl-head"><span>Hue</span><span class="hsl-num" id="hslNumHue">0</span></div>
+              <input type="range" id="hslHue" min="0" max="360" step="1" value="0" aria-label="Hue">
+            </div>
+            <div class="hsl-row">
+              <div class="hsl-head"><span>Saturation</span><span class="hsl-num" id="hslNumSat">0</span></div>
+              <input type="range" id="hslSat" min="0" max="100" step="1" value="0" aria-label="Saturation">
+            </div>
+            <div class="hsl-row">
+              <div class="hsl-head"><span>Brightness</span><span class="hsl-num" id="hslNumBright">0</span></div>
+              <input type="range" id="hslBright" min="0" max="100" step="1" value="0" aria-label="Brightness">
+            </div>
+          </div>
+          <div style="margin-top:.75rem;padding-top:.6rem;border-top:1px dashed var(--outline-variant)">
+            <div style="font-size:.72rem;font-weight:600;color:var(--text-variant);margin-bottom:.4rem" data-i18n="accent.gradient-title">Gradient accents</div>
+            <div id="gradientAccents" style="display:flex;flex-wrap:wrap;gap:.4rem"></div>
           </div>
           <div style="display:flex;gap:.4rem;flex-wrap:wrap;margin-top:.5rem" id="accentPresets"></div>
           <button class="theme-opt" id="savePresetBtn" style="justify-content:center;padding:.3rem .6rem;font-size:.75rem;margin-top:.3rem">+ Save current</button>
@@ -1590,7 +1629,7 @@
 
   <script src="js/mqtt.min.js"></script>
   <script src="js/qrcode.js"></script>
-  <script src="js/anthkeys.js?v=40.9">
+  <script src="js/anthkeys.js?v=50">
 </script>
 </body>
 </html>
