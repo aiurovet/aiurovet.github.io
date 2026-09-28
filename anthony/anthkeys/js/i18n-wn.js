@@ -3350,3 +3350,226 @@ I18N_WN.sv = {
   'v1': ['Första versionen av Anthkeys: alla dagliga tangentbordsgenvägar för Windows, macOS, Linux och ChromeOS på en sida.']
 };
 
+I18N_WN.da = {
+  'v52.1': [
+    'Nyt: siden &laquo;Hvad er nyt&raquo; er nu fuldt oversat på alle 20 sprog — alle udgivelsesnoter vises på dit sprog.'
+  ],
+  'v52': [
+    'Rettelse: v51 kunne få appen til at ikke indlæse; den danske sprogfil indeholdt et uafsluttet enkelt citattegn, som gjorde hele sprogfilen ugyldig. Filen fortolkes nu korrekt, og alle 20 sprog indlæses.'
+  ],
+  'v51': [
+    'Oversættelsen er komplet for alle 20 sprog — indstillinger, live-synkronisering, offline-synkronisering og synkroniseringsvejledningen er nu fuldt oversat (nye poster var tidligere kun på engelsk).',
+    'Nyt: hvis Anthkeys virker langsom, viser en avisering som låter dig aktivere <strong>ydelsestilstand</strong> med ét tryk. Du kan lukke den, og den kommer ikke tilbage.'
+  ],
+  'v50.7': ['Ydelsestilstanden blev flyttet til fanen <strong>Generelt</strong> i indstillingerne.'],
+  'v50.6': ['Ikonerne i topfeltet er farvelagte emoji igen som i v50: bog, printer, lyn, måne/sol, opdatering og tandhjul.'],
+  'v50.5': ['Ikonerne i topfeltet bruger igen accentfarven (standard), så de længer ikke ser ud som hvide eller grå.'],
+  'v50.4': ['Funktionen til at farvelægge ikoner med accentfarven blev fjernet: favicon, startskærmsikon og installeret PWA-ikon bruger igen standardikonen (det er kun i den indbyggede app, at accentfarve på ikoner betyder noget).'],
+  'v50.3': [
+    'Ikonerne i topfeltet byggdes om för att visas stabilt på alla enheter (visning, udskrift, gåder, tema, opdatering og indstillinger anvender nu rigtige ikoner).',
+    'Temaknappen er igen en rigtig ikon og matcher tilstanden lyst/mørkt.'
+  ],
+  'v50.2': ['Rettelse af en fejl i v50.1, der gjorde, at ikoner i topfeltet og indstillingerne ikke virkede ved start.'],
+  'v50.1': [
+    'Ny <strong>ydelsestilstand</strong> under Tilpas: at slå slør- og animationseffekter fra kan gøre appen langsom på Windows.',
+    'Topfeltet bruger nu rigtige ikoner, og den nye indstilling <strong>Ikoner</strong> lader dig farvelægge dem med din accentfarve.',
+    'Appfanen fungerer nu som Linux-fanen: tryk hvor som helst for at vælge en app (VS Code, Figma, Gmail med flere), og fanen viser dit valg, for eksempel &laquo;App - Gmail&raquo;.',
+    'Hex-feltet under knappen Tilpas blev fjernet: vælg kun farve med skyderne.',
+    'Otte nye tofarveskombinationer blev føjet til accentfarvemulighederne.'
+  ],
+  'v50': [
+    'Tryk hvor som helst på Linux-fanen for at åbne listen over distributioner, og fanen viser nu dit valg, for eksempel &laquo;Linux - Ubuntu (GNOME)&raquo;.',
+    'Den tilpassede farvevælger blev bygget om: den runde prøve åbner skyderne for <strong>Nuance</strong>, <strong>Mætning</strong> og <strong>Lyshed</strong> (med værdien vist over hver skyder) og starter fra den nuværende farve i stedet for 0/0/0.',
+    'Nyt afsnit <strong>Accentfarver</strong>: otte klar-til-brug tofarvestransformationer, der kan anvendes som accentfarve.',
+    'De indbyggede accentfarvesæt blev finjusteret efter en renere og klarere palet.'
+  ],
+  'v40.9': ['Distributionslisten ligger nu på selve Linux-fanen: tryk på den lille pil i fanen for at vælge din distribution.'],
+  'v40.8': ['Linux-fanen har nu en distributionsliste (Ubuntu, Debian, Fedora, Arch, Mint, KDE med flere), som hjælper dig med at tilpasse systemgenveje efter hver distributions standardindstillinger og husker dit valg.'],
+  'v40.7': ['Indstillingen for accentfarve viser nu et direkte forhåndsvisning med den præcise hexkode for den anvendte farve, så du ser effekten af hvert valg med det samme.'],
+  'v40.6': [
+    'Værktøjet <strong>Hent farve fra skærmen</strong> blev fjernet.',
+    'De indbyggede accentfarvesæt blev justeret efter Material 3 Expressives intensitet: dybe, levende farver og ægte neon (gråtonerne er stadig bløde).'
+  ],
+  'v40.5': ['Accentfarvepaletten blev balanceret efter Material 3 Expressive: lysere, mere levende farver.'],
+  'v40.4': ['<strong>Match min enhed</strong> læser nu den rigtige systemfarve (også Chromes oklch/color()-værdier) og operativsystemets tekstmarkering, så din faktiske dynamiske accent anvendes.'],
+  'v40.3': [
+    'Alle accentfarver blev balanceret efter Material Yous trygge toner (bløde midttoner sammen med bløde overfladetoner).',
+    '<strong>Match min enhed</strong> læser nu også systemets markering som alternativ, så det virker i flere browsere og profiler.'
+  ],
+  'v40.2': ['Indstillingen for accentfarve: den nye knap <strong>Match min enhed</strong> læser systemets accentfarve (Chrome 150+, når appen er installeret) og anvender den med en bekræftelsesbesked.'],
+  'v40.1': ['Vægpapirsbiblioteket blev fjernet (gemte vægpapirer i biblioteket slettes; dine uploadede billeder virker stadig).'],
+  'v40.0': ['Vælgeren for accentfarve: tilpasset farve har nu et hex-felt (skriv enhver farve, 3 eller 6 tegn) og en kopier-knap — samme layout på computer og telefon.'],
+  'v39.9': ['Rumchat: rumsbemærkninger vises nu i tabellen <strong>Chat</strong> med historik (60 beskeder pr. rum, gendannet ved tilbagekomst). Offentlige bemærkninger offentliggøres i loggen; private noter kopieres direkte til udklipsholderen. Tryk på en besked for at kopiere den.'],
+  'v39.8': [
+    '<strong>Seneste rum</strong>: de seks seneste rum, du har tilsluttet dig, vises på forsiden som knapper med ét tryk, hvert med sin egen farve, plus en knap til at fjerne dem.',
+    '<strong>Send min profil</strong>: send dine indstillinger og tilpassede genveje til hele rummet som ét øjebliksbillede; andre enheder anvender dem med det samme.',
+    '<strong>Vægpapirsbibliotek</strong>: seks indbyggede gradienter med automatisk lys/mørk udgave, en tilfældighedsknap og en mulighed for at skifte dagligt.',
+    '<strong>Søgning</strong>: kopierede genveje huskes som &laquo;Nyligt kopieret&raquo; i søgemenuen, sammen med søgehistorikken.'
+  ],
+  'v39.7': ['Animationer på mobilen bruger nu samme CSS som computeren: regler for touch-enheder slår ikke længere alle overgange fra. Turens belysning og glidende kort flyder nu, og tema og baggrund toner blødt ind, også på telefonen.'],
+  'v39.6': ['Telefonen er nu på niveau med computeren: skift af tema og baggrund sker lige så flydende som på computeren, og sideturen bevæger sig mellem trin på touch-enheder.'],
+  'v39.5': ['<strong>AirDrop og Quick Share</strong>: knappen <strong>Del</strong> ved siden af rumskoden åbner telefonens delingspanel (AirDrop på Apple-enheder) med et engangslink til rummet: på den anden enhed er det nok at trykke for at være med.'],
+  'v39.4': ['Glow og fnug på versionskortet kører nu også på computeren, selv hvis systemet har &laquo;reducer bevægelse&raquo; slået til, eller animationer er slået fra i indstillingerne: de tælles som opdateringssignaler, ikke pynt.'],
+  'v39.3': ['Glow på versionskortet og versionsemblemet i indstillingerne er nu stabile på computeren: den kørende version får altid en &laquo;opdatering tilgængelig&raquo;-ramme i nogle dage ved start, selv hvis opdateringsbeskeden er blevet ignoreret.'],
+  'v39.2': ['Ny versions-effekt på kortet forsvinder ikke længere permanent efter ét kig: glowet varer nogle dage og vender tilbage ved hvert besøg.'],
+  'v39.1': ['Endelig er farveprøverne synlige: stikprøver (rumfarve, temafarve og accentfarve) tegnes nu som tydelige cirkler i stedet for tomme, usynlige elementer.'],
+  'v39': [
+    'Ringing kan nu vedlægge en kort besked: den ringerende enhed hører den og kopierer den til udklipsholderen.',
+    '<strong>Batteriadvarsel</strong>: du får en besked om &laquo;genoprettet&raquo;, når enheden kommer over 25 %, og du kan slå batteriadvarslen til eller fra.',
+    'Noter kan nu sendes til én enkelt enhed med vælgeren <strong>Til:</strong> ved siden af notefeltet.',
+    'Hvert rum kan have en farvet etiket, så rummene kan skelnes med det samme.',
+    'Koden til offline-synkronisering viser nu et forhåndsvisning (enhed, tidspunkt, antal indstillinger og genveje) og beder om bekræftelse før import.'
+  ],
+  'v38.1': ['På mobilen åbner et tryk på fanen <strong>Om</strong> ikke længere sektionerne automatisk: tryk på sektionens overskrift for at åbne den.'],
+  'v38': ['På mobilen åbner fanen <strong>Om</strong> ikke længere synkroniseringsvejledningen automatisk: tryk på sektionen <strong>Live-rum og offline-synkronisering</strong> for at åbne den.'],
+  'v37': ['Vejledningen indeholder nu fulde instruktioner om <strong>live-rum</strong> og <strong>koder til offline-synkronisering</strong>, og findes også på mobilen.'],
+  'v36': ['Knappen i loginområdet hedder nu <strong>Scan</strong> (åbner kameraet eller filvælgeren for at læse en QR-kode), så den ikke forveksles med <strong>QR</strong>-knappen, der viser rumskoden.'],
+  'v35': ['Rettelse: rummets QR-kode og offlinekoden vises nu korrekt i stedet for en tom ramme.'],
+  'v34': [
+    '<strong>Ring en enhed</strong> — alle andre enheder har en <strong>Ring</strong>-knap, der får den til at ringe og vibrere, så du kan finde din telefon.',
+    '<strong>Send en note</strong> — del tekst med alle tilsluttede enheder; indholdet vises med det samme og kopieres til den enheds udklipsholder.',
+    '<strong>Overvåg batteri</strong> — du advares, når en tilsluttet enhed falder under 20 % batteri.',
+    '<strong>Omdøb enheden</strong> — tryk på enhedens navn for at angive et eget navn.',
+    '<strong>Deltag ved at scanne</strong> — serveren kan vise sin rumskode som QR-kode; scan med kameraet (eller scan en offline-synkroniseringskode).',
+    '<strong>Beskyttet rum</strong> — vælg &laquo;Beskyt dette rum&raquo;, og angiv en adgangskode; alle rumdata krypteres, så kun medlemmer med adgangskoden kan læse dem.',
+    '<strong>Seneste aktivitet</strong> — alle enheder viser nu, hvor længe de har været online.'
+  ],
+  'v33': ['Tilsluttede enheder deler også <strong>batteriniveau</strong> (også under opladning) og opdateres i realtid i rummet.'],
+  'v32': ['Live-rummet viser nu hver enheds rigtige navn (f.eks. &laquo;Mi 9T Pro&raquo;) i stedet for de tilfældige navne, enheden selv finder på.'],
+  'v31': ['Live-rummet viser nu alle tilsluttede enheder med navn, en grøn prik på denne enhed og det samlede antal.'],
+  'v30': [
+    '<strong>Live-rum</strong> — først, for at synkronisere dine indstillinger og tilpassede genveje i realtid:<ol><li>På enheden med dine indstillinger åbner du <strong>Indstillinger → Live-rum</strong> og trykker <strong>Start rum</strong>. En rumskode i formatet AK-XXX-YYY vises.</li><li>Send koden til dine andre enheder (kopier eller del, som du vil).</li><li>På hver enhed, der modtager den, åbner du <strong>Indstillinger → Live-rum</strong>, indtaster den samme kode og trykker <strong>Deltag i rum</strong>.</li></ol>',
+    '<strong>Kode til offline-synkronisering</strong> — derefter, for at overføre én gang, når du ikke har internet:<ol><li>Åbn <strong>Indstillinger → Kode til offline-synkronisering</strong>, og tryk <strong>Opret kode</strong>. Kopiér koden, eller scan den viste QR-kode.</li><li>På den anden enhed åbner du <strong>Indstillinger → Kode til offline-synkronisering</strong>, indsætter koden og trykker <strong>Anvend kode</strong>.</li></ol>'
+  ],
+  'v29': ['Rettelse: på <strong>mobil</strong> udløser et tryk på versionsemblemet nu altid pop-, rotations- og klemmeeffekten i stedet for at være blokeret af, at animationer nulstilles på touch-enheder.'],
+  'v28': ['På mobilen: indstillingskortet ved siden af Tilpas hedder nu kun <strong>Om</strong> (vejledningen findes kun på computeren) og åbner sektionen Om ved tryk.'],
+  'v27': ['Rettelse: at åbne siden lige efter en <strong>ny version</strong> genindlæser ikke længere pludselig nogle få sekunder senere — opdateringer anvendes nu i baggrunden. Knappen Opdater og indstillingen <strong>Spørg før opdatering</strong> genindlæser stadig, når du beder om det.'],
+  'v26.9': [' Sjovt: tryk på <strong>versionsemblemet</strong> udløser nu altid pop-, rotations- og klemmeeffekten, lyser op med <strong>fnug</strong>, når en ny version fremhæves, og sektionen Om blev flyttet til fanen <strong>Om</strong> i indstillingerne for hurtigere adgang.'],
+  'v26.8': ['Forbedring: <strong>versionsemblemet</strong> i sektionen Om opdateres nu automatisk og åbner siden Hvad er nyt.'],
+  'v26.7': ['Forbedring: <strong>appgenveje</strong> i dagens tip angiver nu først, hvilken app de tilhører, for eksempel <em>Figma — Move Tool — V</em>.'],
+  'v26.6': ['Forbedring: <strong>dagens tip</strong> opdateres, når du skifter platformsfane: at vælge Windows, macOS, Linux, ChromeOS eller Apps viser genvejene for den del.'],
+  'v26.5': ['Rettelse: <strong>dagens tip</strong> sidder ikke længere fast i én genvej: hver gang siden indlæses, viser den en ny tilfældig genvej fra den platformsfane, du ser på.'],
+  'v26.4': ['Rettelse: <strong>dagens tip</strong> viser nu kun genvejene fra den platformsfane, du ser på (før blev genveje fra alle platforme blandet sammen). Versionsemblemet i vejledningen opdateres også automatisk.'],
+  'v26.3': ['Knappen <strong>Vis</strong> viser nu ikonet <strong>åben bog</strong>.'],
+  'v26.2': ['Knappen <strong>Vis</strong> viser nu et kompasikon, og sideturen har fået et nyt trin, der forklarer, hvad <strong>opdateringsknappen</strong> gør.'],
+  'v26.1': ['Rettelse: at skifte mellem <strong>mørkt og lyst</strong> (med kontakten i toppen eller i indstillingerne) får ikke længere et <strong>baggrundstema</strong> til at miste farverne: accentfarve, feltknapper og genvejer beholder temafarverne, mens baggrunden står stille.'],
+  'v26': ['<strong>Ny sidetur</strong> — tryk på knappen <strong>?</strong> i toppen for at blive ført gennem søgefeltet, filtrene, fanerne, genvejslisten, gåder, indstillinger, udskrift og temaknappen. Brug knapperne, pilene eller punkterne til at navigere.'],
+  'v25': ['Linket <strong>Se på GitHub</strong> blev fjernet fra sektionen Om.'],
+  'v24.8': ['Rettelse: beskeden <strong>&laquo;Opdateret&raquo;</strong> på mobilen ligger nu inden for skærmen (før løb den ud over højre kant på små enheder).'],
+  'v24.7.4': ['Hjørneradius er nu begrænset til <strong>16&thinsp;px</strong> i alle temaer: pilleknapper, kort, søgefeltet og beskeder er ikke længere helt rundede (før op til 100&thinsp;px). Hjørnerne er stadig bløde, bare mere tilbageholdende.'],
+  'v24.7.3': ['Rettelse: <strong>Åbn Wi-Fi-indstillinger</strong> på <strong>Android</strong> gjorde intet: nyere versioner af Chrome tillader ikke websteder at åbne Androids systemindstillinger. Knappen viser nu en kort besked, der minder dig om at åbne Wi-Fi-indstillingerne i enhedens Indstillinger-app (på iOS og macOS åbnes de stadig direkte).'],
+  'v24.7.2': ['Rettelse: i en installeret Android-app (PWA) gjorde et tryk på <strong>Åbn Wi-Fi-indstillinger</strong> intet: Android tillader ikke apps at åbne systemindstillinger direkte. Knappen forklarer nu dette og minder dig om at åbne siden i en Chrome-fane, hvor knappen virker.'],
+  'v24.7.1': ['Rettelse: <strong>Åbn Wi-Fi-indstillinger</strong> på <strong>Android</strong> brugte et linkklik udløst af JavaScript, som Chrome blokerer for <code>intent:</code>-links: nu bruges en navigation, der starter fra brugerens bevægelse.'],
+  'v24.7': [
+    '<strong>Forbindelsesstatus</strong> ligger nu øverst i <strong>Indstillinger → Generelt</strong> (flyttet fra Om).',
+    'Knappen <strong>Åbn Wi-Fi-indstillinger</strong> åbner nu de rigtige Wi-Fi-indstillinger på <strong>iOS</strong> (Indstillinger-appen) og <strong>macOS</strong> (Systemindstillinger). På Android, Windows og Linux, hvor browseren ikke kan åbne systemindstillinger, viser knappen en kort vejledning.'
+  ],
+  'v24.6': [
+    'Pillen <strong>Offline</strong> står nu kun <strong>10 sekunder</strong> og forsvinder så (så den ikke irriterer, mens forbindelsen stadig er væk).',
+    '<strong>Indstillinger → Om</strong> viser nu altid din <strong>forbindelsesstatus</strong> (online/offline) sammen med knappen <strong>Åbn Wi-Fi-indstillinger</strong>: på iOS åbner den Indstillinger-appen direkte, på andre enheder viser den en kort vejledning.'
+  ],
+  'v24.5.2': ['Rettelse: på stationære computere, hvor Windows mister forbindelsen uden at browseren sender en <em>offline</em>-begivenhed (eller hvor forespørgsler hænger i stedet for at fejle), vises pillen <strong>Offline</strong> nu også, når forbindelsestesten får timeout, ikke kun når selve anmodningen fejler.'],
+  'v24.5.1': ['Rettelse: pillen <strong>Offline</strong> vises nu også, når forbindelsen tabes uden noget signal fra browseren (f.eks. offline-tilstand i DevTools, visse mobilbrowsere): appen tester aktivt forbindelsen med nogle sekunders mellemrum i stedet for kun at stole på browserens signal. Den forsvinder, når du er online igen.'],
+  'v24.5': [
+    'Under søgning er ord, der matcher søgeordet, nu <strong>fremhævet</strong> i resultaterne: det er nemmere at se, hvorfor en linje matcher.',
+    'Søgefeltet får en <strong>ryd (&times;)</strong>-knap, når du har skrevet noget.',
+    'En lille pill <strong>Offline</strong> vises, når forbindelsen tabes: tryk på den for at bekræfte, at Anthkeys stadig kører fra cachen.'
+  ],
+  'v24.4.1': ['Rettelse på mobilen: overskriften <strong>Handling — Genveje</strong> glider ikke længere ud af skærmen: på smalle skærme blev genvejstabellen sit eget vandrette rulområde, som brød den fastgjorte overskrift. Den er nu låst helt i toppen, præcis som på computeren.'],
+  'v24.4': ['<strong>Widgeten med gådestreak på startskærmen</strong> blev fjernet: den byggede på en webstandard, som browsere endnu ikke har implementeret, så den har aldrig vist sig nogen steder. Din streak og din gådestatistik er stadig i appen.'],
+  'v24.3': [
+    '<strong>Genvejsgåden gemmer nu din statistik</strong>: dagsstrek (🔥 antal dage i træk, du har fuldført), bedste score, præcision og antal spillede runder. Gemmes lokalt og uploades aldrig.',
+    'Ny widget til <strong>gådestreak på startskærmen</strong> til Android (webapp-widgets: eksperimentelle, på vej til Chrome og Firefox; findes ikke på iOS). Viser din streak og dine statistikker; tryk for at åbne gåden.'
+  ],
+  'v24.2.1': ['Rettelse på mobilen: et tryk i søgefeltet kunne åbne siden Om: den skjulte besked &laquo;Hvad er nyt&raquo; ved siden af indstillingsknappen var stadig klikbar og lå oven på søgefeltet. Nu reagerer den kun, når den er synlig.'],
+  'v24.2': [
+    'Nyt <strong>modifieringsfilter</strong>: vælg en tast (Ctrl, Shift, Alt, Win, Cmd med flere) i filtermenuen for kun at vise genveje, der bruger den tast. Valgmulighederne varierer efter platform.',
+    'En knap <strong>til toppen</strong> flyder over genvejslisten, når du ruller: tryk for at springe tilbage til listens begyndelse.'
+  ],
+  'v24.1': [' feltet <strong>Handling — Genveje</strong> er nu låst i toppen af listen, når du ruller: før glider det ud af skærmen på mobilen og i Safari.'],
+  'v23.9': ['Popup-vinduet med vejledning og tips blev fjernet på mobilen: det listede kun genveje til computeren. Vejledningen ligger stadig i indstillingerne på computeren, hvor <kbd>?</kbd> tager dig direkte derhen.'],
+  'v23.8': ['På mobilen ligger vejledningen ikke længere i indstillingerne: den er skjult for at holde siden let. Tryk <kbd>?</kbd> for at åbne den i et popup-vindue.'],
+  'v23.7': ['Vejledningen og tipsene blev flyttet til <strong>Indstillinger</strong> (afsnittet Generelt) på computeren: tryk <kbd>?</kbd> for at komme direkte derhen.'],
+  'v23.6': [
+    'Alle 20 sprog er nu fuldt oversat: du falder ikke længere tilbage til engelsk i nye funktioner som gåder, cloudsynkronisering og vejledningen.',
+    'På mobilen kopierer du genveje ved at trykke længe i stedet for at trykke: du kopierer ikke længere ved et uheld, mens du ruller.',
+    'Gruppeknapperne bruger nu din accentfarve på mobilen også, præcis som på computeren; når Favoritter vælges, er det kun den knap, der træder frem.',
+    'Rammen rundt om de fem knapper i topfeltet blev fjernet på mobilen: de smelter nu ind i siden.',
+    'Gådeknappen har et nyt lynikon, og svarene viser læsbare navne i stedet for rå tastenavne.',
+    'Rettelse: appens JavaScript kunne nogle gange ikke indlæses efter en opdatering, så siden holdt op med at svare.'
+  ],
+  'v23.5': [
+    'Filtre, favoritter, sammenligning og fold blev samlet i én kompakt <strong>Filter</strong>-menu: mere plads til genvejslisten på mobilen.',
+    'Siden Hvad er nyt, versionsemblemet og opdateringsindstillingerne blev flyttet til det nye afsnit <strong>Om</strong> i indstillingerne.',
+    'Opdateringsbeskeder vises nu via knappen <strong>Indstillinger</strong>: der bliver et emblem på tandhjulsikonen, indtil du har set nyheden.'
+  ],
+  'v23.4': ['Hjælpeknappen <kbd>?</kbd> blev fjernet fra topfeltet: tryk <kbd>?</kbd> for at åbne vejledningen.'],
+  'v23.3': [
+    'Versionsemblemet lyser op efter en automatisk opdatering, så du lægger mærke til den nye version, næste gang appen åbnes.',
+    'Skift mellem standardbaggrunde bevarer mørk tilstand: den nye baggrund mørklægges også.',
+    'På mobilen ligner platformsfeltet (Windows, macOS, Linux, ChromeOS) nu det på computeren.'
+  ],
+  'v23.2': [
+    'Knappen Avanceret/Basisk blev fjernet: alle genveje vises nu sammen.',
+    'På mobilen pakkes knapperne i topfeltet nu i et 2&times;3-gitter.',
+    'Standardbaggrunden anvendes stadig og mørklægges korrekt, når du skifter til mørk tilstand.',
+    'Overlæg (indstillinger, vejledning, gåde) dækker nu de fastgjorte kort på mobilen.'
+  ],
+  'v23.1': ['Baggrunde er optimeret til mørk tilstand: når du skifter til mørk, mørklægges både dine uploadede billeder og standardbaggrunde (hav, skov, solnedgang med flere), og mætningen sænkes, så tabellerne forbliver læsbare.'],
+  'v23': [
+    'Ny tilstand <strong>Sammenlign</strong>: vælg en anden platform for kun at se de genveje, der er forskellige.',
+    'Automatisk tema efter tidspunkt på dagen (mørkt fra 19 til 07).',
+    'Tryk <kbd>?</kbd> eller knappen <kbd>?</kbd> for at se hurtigvejledningen og tip.',
+    'Udgivelsesdatoer blev føjet til hvert element på denne side.'
+  ],
+  'v22': [
+    'Rettelse: tastetabelen blev skåret af på smalle telefoner: nu kan tabellen rulles vandret, så alle kolonner kan nås.',
+    'Søgefeltet og gruppeknapperne var skjult på siden Hvad er nyt, fordi de ikke finder anvendelse der.'
+  ],
+  'v21': [
+    'Tastetabelen har nu en luk-knap, så du kan folde den sammen inde i tabellen: nyttigt på mobilen, når tastaturet kan glide ud af rækkevidde.',
+    'Hurtigere trykrespons for tastetabelknappen på touch-enheder.'
+  ],
+  'v20.1': [
+    'Versionsnummeret håndterer nu patchversioner:emblemet i sidefoden viser for eksempel v20.1, og opdateringer genkendes korrekt.',
+    'Det manglende v20-afsnit blev føjet til denne side.'
+  ],
+  'v20': ['Ny side &laquo;Hvad er nyt&raquo; i Anthkeys: linket i opdateringsbeskeden og versionsemblemet i sidefoden åbner denne side i stedet for GitHub.'],
+  'v19': ['Opdateringslinjen vises nu også, når du opdaterer fra en version fra før versionssporingen blev indført (den gamle version genkendes fra offlinecachen).'],
+  'v18': [
+    'Beskeden &laquo;Opdateret til vX — Hvad er nyt&raquo; vises nu, når en ny version er klar (i tilstanden automatisk opdatering).',
+    'Opdateringslinjen udløses nu af indholdsopdateringer, ikke kun af ændringer i servicearbejderen.',
+    'Versionsemblemet i sidefoden kan nu trykkes på: tryk for at se nyheder.',
+    'Offlinecachen er mindre (filer uden versionsnummer kasseres ikke længere).'
+  ],
+  'v16': ['Der blev tilføjet et versionsemblem i sidefoden, der viser det aktuelle buildnummer.'],
+  'v15': ['Der blev tilføjet en opdateringsknap og en indstilling (opdatér automatisk eller spørg først), baseret på servicearbejderen.'],
+  'v14': ['Folding og udfolding af en gruppe respekterer nu det søgte ord.'],
+  'v13': ['Sidecachen prioriterer nu netværket, så opdateringer vises med det samme; rulning er langt jævnere på computeren.'],
+  'v12': ['Søgning og filtre finder nu kun anvendelse på den åbne fane.'],
+  'v11': ['Der blev tilføjet understøttelse af PWA-installation, tilgængelighedsetiketter, understøttelse af reduceret bevægelse, Gmail- og YouTube-genveje samt SEO-forbedringer.'],
+  'v10': [
+    'Rettelse: gruppefilteret kunne skjule alle genveje, når de matchede gruppens overskrift: nu skjuler det kun de rækker, du har filtreret.',
+    'Baggrunden dækker nu hele skærmen på mobilen.'
+  ],
+  'v9': ['Windows er nu standardplatform, og rækkefølgen af faner er tydeligere.'],
+  'v8': [
+    'Sværhedsgrader for gåden og dagens tip.',
+    'Langt jævnere rulning på mobilen, sammen med offlinecache.',
+    'Søgning og filter fungerer nu samtidigt på alle platforme, med operativsystemets navne i fed skrift.'
+  ],
+  'v7': ['Flere temastile blev fjernet: nu er der kun Material 3.'],
+  'v6': [
+    'Temaet blev forenklet til Material 3 med knappen <strong>Fjern baggrund</strong> for at vende tilbage til standardtemaet.',
+    'Der blev tilføjet en overskrift til cachekontrol, så opdateringer kommer hurtigere.'
+  ],
+  'v5': ['Sideoverskriften blev forkortet til <strong>Genveje</strong> på alle 14 sprog.'],
+  'v4': [
+    '<strong>Tilstand med genvejsgåder</strong>: træn ved at gætte taster eller udføre handlinger, med cloud-synkronisering via GitHub Gist.',
+    'En stor række rettelser af accentfarver, temaskift og baggrunde på mobilen.'
+  ],
+  'v3': ['Der blev tilføagt færdige sæt af accentfarver, der kan gemmes og bruges igen, sammen med en ordning til ugyldiggørelse af cachen, så opdateringer vises pålideligt.'],
+  'v2': ['Lyst og mørkt tema med accentfarve samt oversættelse af genvejstabellen.'],
+  'v1': ['Første udgave af Anthkeys: alle daglige tastaturgenveje til Windows, macOS, Linux og ChromeOS på én side.']
+};
+
