@@ -231,3 +231,226 @@ I18N_WN.es = {
   'v2': ['Temas claro y oscuro con colores de acento, adem&aacute;s de traducciones de la referencia de atajos.'],
   'v1': ['La primera versi&oacute;n de Anthkeys: los atajos de teclado diarios de Windows, macOS, Linux y ChromeOS en una sola p&aacute;gina.']
 };
+
+I18N_WN.fr = {
+  'v52.1': [
+    'Nouveau : la page &laquo;Nouveaut&eacute;s&raquo; est d&eacute;sormais enti&egrave;rement traduite dans les 20 langues &mdash; toutes les notes de versions pass&eacute;es s&rsquo;affichent dans votre langue.'
+  ],
+  'v52': [
+    'Correction : la v51 pouvait faire planter l&rsquo;application au chargement ; une traduction danoise comportait un apostrophe non &eacute;chapp&eacute;e qui invalidait tout le fichier de langue. Le fichier est d&eacute;sormais correctement analys&eacute; et les 20 langues se rechargent.'
+  ],
+  'v51': [
+    'Traductions achev&eacute;es pour les 20 langues : les param&egrave;tres, les salons en direct, la synchronisation hors ligne et l&rsquo;aide de synchronisation sont d&eacute;sormais enti&egrave;rement traduits (les textes r&eacute;cents n&rsquo;&eacute;taient affich&eacute;s qu&rsquo;en anglais).',
+    'Nouveau : si Anthkeys vous semble lent, une b&acirc;ne propose d&rsquo;activer le mode Performance en un seul geste. Vous pouvez la fermer et elle ne vous le redemandera plus.'
+  ],
+  'v50.7': ['Le mode Performance a &eacute;t&eacute; d&eacute;plac&eacute; dans l&rsquo;onglet G&eacute;n&eacute;ral des param&egrave;tres.'],
+  'v50.6': ['Les ic&ocirc;nes de la barre sup&eacute;rieure sont de nouveau les emojis color&eacute;s, comme en v50 : livre, imprimante, &eacute;clair, lune/soleil, actualiser et engrenage.'],
+  'v50.5': ['Les ic&ocirc;nes de la barre sup&eacute;rieure reprennent la couleur d&rsquo;accentuation (par d&eacute;faut), au lieu de s&rsquo;afficher en blanc/gris.'],
+  'v50.4': ['Suppression de la fonction d&rsquo;icône accentu&eacute;e : le favicon, l&rsquo;ic&ocirc;ne d&rsquo;&eacute;cran d&rsquo;accueil et l&rsquo;ic&ocirc;ne de la PWA install&eacute;e utilisent de nouveau l&rsquo;ic&ocirc;ne par d&eacute;faut (changer l&rsquo;ic&ocirc;ne avec l&rsquo;accent n&rsquo;a de sens que pour les applications natives).'],
+  'v50.3': [
+    'Les ic&ocirc;nes de la barre sup&eacute;rieure ont &eacute;t&eacute; reconstruits pour s&rsquo;afficher de mani&egrave;re fiable sur tous les appareils (Visite, Imprimer, Quiz, th&egrave;me, Actualiser et Param&egrave;tres utilisent maintenant de vraies ic&ocirc;nes).',
+    'L&rsquo;ic&ocirc;ne du commutateur de th&egrave;me est de nouveau une vraie ic&ocirc;ne et correspond &agrave; son &eacute;tat clair/sombre.'
+  ],
+  'v50.2': ['Correction d&rsquo;un bug de la v50.1 qui emp&ecirc;chait les ic&ocirc;nes de la barre sup&eacute;rieure et les Param&egrave;tres de fonctionner au chargement.'],
+  'v50.1': [
+    'Nouveau mode Performance dans Personnalisation : il d&eacute;sactive les effets de flou et les animations qui peuvent rendre l&rsquo;application lente sous Windows.',
+    'La barre sup&eacute;rieure utilise maintenant de vraies ic&ocirc;nes, et un nouveau r&eacute;glage Ic&ocirc;nes les colore avec votre couleur d&rsquo;accentuation.',
+    'L&rsquo;onglet Apps fonctionne comme l&rsquo;onglet Linux : cliquez n&rsquo;importe o&ugrave; pour choisir une application (VS Code, Figma, Gmail et plus), et l&rsquo;onglet affiche votre choix, par exemple &laquo;Apps - Gmail&raquo;.',
+    'Suppression du champ de texte hexad&eacute;cimal sous le bouton Personnaliser : choisissez les couleurs uniquement avec les curseurs.',
+    'Doublement des options d&rsquo;accent en d&eacute;grad&eacute; avec huit nouvelles combinaisons de deux couleurs.'
+  ],
+  'v50': [
+    'Cliquez n&rsquo;importe o&ugrave; sur l&rsquo;onglet Linux pour ouvrir le menu des distributions, et l&rsquo;onglet affiche maintenant votre choix, par exemple &laquo;Linux - Ubuntu (GNOME)&raquo;.',
+    'Le s&eacute;lecteur de couleur personnalis&eacute;e a &eacute;t&eacute; reconstruit : le cercle ouvre des curseurs de Teinte, Saturation et Luminosit&eacute; (avec la valeur affich&eacute;e juste au-dessus de chacun), en partant de votre couleur actuelle au lieu de 0/0/0.',
+    'Nouvelle section Accents en d&eacute;grad&eacute; : huit d&eacute;grad&eacute;s &agrave; deux couleurs pr&ecirc;ts &agrave; appliquer comme accent.',
+    'Les pr&eacute;r&eacute;glages d&rsquo;accent ont &eacute;t&eacute; ajust&eacute;s vers une palette plus sobre et plus distincte.'
+  ],
+  'v40.9': ['Le menu des distributions se trouve d&eacute;sormais directement sur l&rsquo;onglet Linux : cliquez sur la petite fl&egrave;che de l&rsquo;onglet pour choisir votre distribution.'],
+  'v40.8': ['L&rsquo;onglet Linux dispose maintenant d&rsquo;un menu de distributions (Ubuntu, Debian, Fedora, Arch, Mint, KDE et plus) qui adapte les raccourcis syst&egrave;me aux valeurs par d&eacute;faut de chaque distribution et m&eacute;morise votre choix.'],
+  'v40.7': ['Les r&eacute;glages d&rsquo;accent affichent maintenant une barre d&rsquo;aper&ccedil;u en direct avec le code hexad&eacute;cimal exact de la couleur appliqu&eacute;e, pour que vous voyiez chaque choix changer imm&eacute;diatement.'],
+  'v40.6': [
+    'Suppression de la pipette &laquo;Choisir &agrave; l&rsquo;&eacute;cran&raquo;.',
+    'Pr&eacute;r&eacute;glages d&rsquo;accent pouss&eacute;s &agrave; la pleine intensit&eacute; Material 3 Expressive : des couleurs profondes, vives et Truly Neon (les gris restent att&eacute;n&eacute;s).'
+  ],
+  'v40.5': ['La palette d&rsquo;accent a &eacute;t&eacute; r&eacute;ajust&eacute;e vers le style Material 3 Expressive : des couleurs tonales plus vibrantes.'],
+  'v40.4': ['La correspondance d&rsquo;accent avec l&rsquo;appareil lit maintenant la vraie couleur du syst&egrave;me (y compris la sortie oklch/color() de Chrome) et sonde aussi la couleur de s&eacute;lection du texte du syst&egrave;me d&rsquo;exploitation : c&rsquo;est donc votre accent dynamique r&eacute;el qui est appliqu&eacute;.'],
+  'v40.3': [
+    'Toutes les couleurs d&rsquo;accent ont &eacute;t&eacute; r&eacute;ajust&eacute;es au style tonal Material You (tons moyens att&eacute;n&eacute;s avec des tons de conteneur doux).',
+    '&laquo;Correspondre &agrave; mon appareil&raquo; lit aussi la couleur de s&eacute;lection du syst&egrave;me en secours, afin de fonctionner sur davantage de navigateurs et de profils.'
+  ],
+  'v40.2': ['R&eacute;glages de la couleur d&rsquo;accent : le nouveau bouton &laquo;Correspondre &agrave; mon appareil&raquo; lit la couleur d&rsquo;accentuation du syst&egrave;me (Chrome 150+, application install&eacute;e) et l&rsquo;applique, avec une notification de confirmation.'],
+  'v40.1': ['Suppression de la galerie de fonds d&rsquo;&eacute;cran (les fonds enregistr&eacute;s dans la galerie sont supprim&eacute;s ; votre propre fond t&eacute;l&eacute;charg&eacute; continue de fonctionner).'],
+  'v40.0': ['S&eacute;lecteur de couleur d&rsquo;accent : la couleur personnalis&eacute;e dispose maintenant d&rsquo;un champ hexad&eacute;cimal (saisissez n&rsquo;importe quelle couleur, 3 ou 6 chiffres) et d&rsquo;un bouton Copier &mdash; la m&ecirc;me mise en page exacte sur ordinateur et mobile.'],
+  'v39.9': ['Discussion dans le salon : les notes du salon apparaissent maintenant dans un panneau Chat avec historique (60 messages conserv&eacute;s par salon, restaur&eacute;s &agrave; la reconnexion). Les notes publiques sont publi&eacute;es dans le journal ; les notes priv&eacute;es sont toujours copi&eacute;es directement dans votre presse-papiers. Touchez un message pour le recopier.'],
+  'v39.8': [
+    'Salons r&eacute;cents : les six derniers salons rejoints apparaissent sous forme de puces &agrave; un seul geste sur l&rsquo;&eacute;cran de connexion (avec leurs couleurs), plus un bouton pour les effacer.',
+    'Envoyer mon profil : envoie vos param&egrave;tres et raccourcis personnalis&eacute;s &agrave; tout le salon sous forme d&rsquo;instantan&eacute; &agrave; sens unique ; les autres appareils l&rsquo;appliquent imm&eacute;diatement.',
+    'Galerie de fonds : six d&eacute;grad&eacute;s int&eacute;gr&eacute;s avec des variantes automatiques clair/sombre, un bouton Al&eacute;atoire et un m&eacute;lange quotidien optionnel.',
+    'Recherche : les raccourcis que vous copiez sont m&eacute;morisis comme &laquo;R&eacute;cemment copi&eacute;s&raquo; dans le menu de recherche, avec votre historique de recherches.'
+  ],
+  'v39.7': ['Les animations sur mobile proviennent d&eacute;sormais du m&ecirc;me CSS de base que sur ordinateur : la r&egrave;gle pour appareils tactiles ne d&eacute;sactive plus globalement les transitions. Le projecteur de la visite et les cartes glissent entre les &eacute;tapes, et les changements de th&egrave;me/fond se fondent, y compris sur les t&eacute;l&eacute;phones.'],
+  'v39.6': ['Parit&eacute; mobile : les changements de th&egrave;me et de fond se transforment maintenant en douceur (comme sur ordinateur), et la visite du site s&rsquo;anime entre les &eacute;tapes sur les appareils tactiles aussi.'],
+  'v39.5': ['AirDrop et Quick Share : un bouton &laquo;Partager&raquo; &agrave; c&ocirc;t&eacute; du code du salon ouvre le menu de partage de votre t&eacute;l&eacute;phone (AirDrop sur Apple) avec un lien de connexion en un geste &mdash; l&rsquo;autre appareil n&rsquo;a qu&rsquo;&agrave; le toucher pour rejoindre le salon.'],
+  'v39.4': ['La lueur et le scintillement de la pastille de version s&rsquo;animent maintenant sur ordinateur, m&ecirc;me si &laquo;r&eacute;duire les animations&raquo; est activ&eacute; dans le syst&egrave;me ou si les animations sont d&eacute;sactiv&eacute;es dans les param&egrave;tres : c&rsquo;est trait&eacute; comme un signal de mise &agrave; jour, pas comme une d&eacute;coration.'],
+  'v39.3': ['La lueur de la pastille de version et le badge des param&egrave;tres apparaissent maintenant de mani&egrave;re fiable sur ordinateur : la version en cours d&rsquo;ex&eacute;cution b&eacute;n&eacute;ficie toujours d&rsquo;une nouvelle fen&ecirc;tre de mise en avant de quelques jours au chargement, m&ecirc;me si l&rsquo;avis de mise &agrave; jour a &eacute;t&eacute; ignor&eacute;.'],
+  'v39.2': ['La lueur et le scintillement de nouvelle version sur la pastille ne dispara&ucirc;sent plus d&eacute;finitivement apr&egrave;s un seul coup d&rsquo;&oelig;il : la mise en avant dure quelques jours et revient &agrave; chaque visite.'],
+  'v39.1': ['Les pastilles de couleur s&rsquo;affichent enfin : les &eacute;chantillons (couleur de salon et &eacute;chantillons de th&egrave;me/accent) sont maintenant des cercles visibles au lieu de spans vides invisibles.'],
+  'v39': [
+    'Ring permet maintenant d&rsquo;attacher un message rapide au ping : l&rsquo;appareil qui sonne l&rsquo;entend et le copie dans le presse-papiers.',
+    'Alertes de batterie : vous recevez une notification &laquo;r&eacute;tabli&raquo; lorsqu&rsquo;un appareil remonte au-dessus de 25 %, et vous pouvez activer ou d&eacute;sactiver l&rsquo;alarme de batterie.',
+    'Les notes peuvent &ecirc;tre adress&eacute;es &agrave; un seul appareil gr&acirc;ce &agrave; un s&eacute;lecteur &laquo;&Agrave;&nbsp;:&raquo; &agrave; c&ocirc;t&eacute; du champ de note.',
+    'Chaque salon peut avoir une &eacute;tiquette de couleur pour distinguer les salons d&rsquo;un coup d&rsquo;&oelig;il.',
+    'Les codes de synchronisation hors ligne affichent maintenant un aper&ccedil;u (appareil, heure, nombre de param&egrave;tres et de raccourcis) et demandent confirmation avant l&rsquo;importation.'
+  ],
+  'v38.1': ['Sur mobile, toucher l&rsquo;onglet &Agrave; propos n&rsquo;ouvre plus les sections automatiquement : touchez l&rsquo;en-t&ecirc;te d&rsquo;une section pour la d&eacute;plier.'],
+  'v38': ['Sur mobile, ouvrir l&rsquo;onglet &Agrave; propos ne d&eacute;plie plus automatiquement les instructions de synchronisation : touchez la section &laquo;Live rooms &amp; offline sync&raquo; pour l&rsquo;ouvrir.'],
+  'v37': ['L&rsquo;aide contient maintenant les instructions compl&egrave;tes pour <strong>Live rooms</strong> et <strong>Offline sync codes</strong>, et cette aide est aussi disponible sur mobile.'],
+  'v36': ['Le bouton de la zone de connexion porte maintenant le nom <strong>Scan</strong> (il ouvre l&rsquo;appareil photo ou le s&eacute;lecteur de fichiers pour lire un QR), il n&rsquo;est donc plus confondu avec le bouton <strong>QR</strong> qui affiche votre code de salon.'],
+  'v35': ['Correction : les codes QR de salon et de code hors ligne s&rsquo;affichent maintenant correctement au lieu d&rsquo;une case vide.'],
+  'v34': [
+    '<strong>Faire sonner un appareil</strong> &mdash; chaque autre appareil dispose d&rsquo;un bouton Ring qui le fait sonner et vibrer, pour retrouver votre t&eacute;l&eacute;phone.',
+    '<strong>Envoyer une note</strong> &mdash; partagez du texte avec chaque appareil li&eacute; ; il appara&icirc;t imm&eacute;diatement et est copi&eacute; dans leur presse-papiers.',
+    '<strong>Surveillance de la batterie</strong> &mdash; vous &ecirc;tes averti lorsqu&rsquo;un appareil li&eacute; passe sous 20 % de batterie.',
+    '<strong>Renommer les appareils</strong> &mdash; touchez le nom d&rsquo;un appareil pour lui donner un nom personnalis&eacute;.',
+    '<strong>Rejoindre en scannant</strong> &mdash; l&rsquo;h&ocirc;te peut afficher un QR du code de salon ; scannez-le avec l&rsquo;appareil photo (ou scannez un code de synchronisation hors ligne).',
+    '<strong>Salons prot&eacute;g&eacute;s</strong> &mdash; cochez &laquo;Prot&eacute;ger ce salon&raquo; et d&eacute;finissez une phrase secr&egrave;te ; toutes les donn&eacute;es du salon sont alors chiffr&eacute;es afin que seuls les membres connaissant la phrase puissent les lire.',
+    '<strong>Vu la derni&egrave;re fois</strong> &mdash; chaque appareil affiche maintenant depuis combien de temps il est en ligne.'
+  ],
+  'v33': ['Les appareils li&eacute;s partagent maintenant aussi leur <strong>niveau de batterie</strong> (y compris pendant la charge), mis &agrave; jour en direct dans le salon.'],
+  'v32': ['Les salons en direct affichent maintenant le vrai nom de chaque appareil (comme &laquo;Mi 9T Pro&raquo;) au lieu d&rsquo;un nom al&eacute;atoire, choisi automatiquement depuis l&rsquo;appareil lui-m&ecirc;me.'],
+  'v31': ['Les salons en direct affichent maintenant chaque appareil li&eacute; par son nom, avec un point vert sur cet appareil et le total.'],
+  'v30': [
+    '<strong>Salons en direct</strong> &mdash; d&rsquo;abord, pour synchroniser param&egrave;tres et raccourcis personnalis&eacute;s en temps r&eacute;el :<ol><li>Sur l&rsquo;appareil qui contient vos param&egrave;tres, ouvrez <strong>Settings &rarr; Live rooms</strong> et touchez <strong>Start a room</strong>. Un code de salon comme AK-XXX-YYY appara&icirc;t.</li><li>Envoyez ce code &agrave; vos autres appareils (copiez-le ou partagez-le comme vous voulez).</li><li>Sur chaque appareil destinataire, ouvrez <strong>Settings &rarr; Live rooms</strong>, saisissez le m&ecirc;me code et touchez <strong>Join room</strong>.</li></ol>',
+    '<strong>Codes de synchronisation hors ligne</strong> &mdash; ensuite, pour un transfert unique quand il n&rsquo;y a pas internet :<ol><li>Ouvrez <strong>Settings &rarr; Offline sync code</strong> et touchez <strong>Create a code</strong>. Copiez le code ou scannez le QR qui appara&icirc;t.</li><li>Sur l&rsquo;autre appareil, ouvrez <strong>Settings &rarr; Offline sync code</strong>, collez le code et touchez <strong>Apply a code</strong>.</li></ol>'
+  ],
+  'v29': ['Correction : sur <strong>mobile</strong>, toucher le badge de version d&eacute;clenche maintenant l&rsquo;animation al&eacute;atoire de rebond/rotation/&eacute;crasement au lieu d&rsquo;&ecirc;tre bloqu&eacute; par la r&eacute;initialisation des animations des appareils tactiles.'],
+  'v28': ['Mobile : l&rsquo;onglet des param&egrave;tres situ&eacute; &agrave; c&ocirc;t&eacute; de Personnaliser est maintenant simplement <strong>&Agrave; propos</strong> (l&rsquo;Aide n&rsquo;existe que sur ordinateur) et ouvre automatiquement la section &Agrave; propos lorsqu&rsquo;on le touche.'],
+  'v27': ['Correction : ouvrir la page juste apr&egrave;s une <strong>nouvelle version</strong> ne la r&eacute;initialise plus avec un rechargement surprise quelques secondes plus tard &mdash; la mise &agrave; jour s&rsquo;applique maintenant en arri&egrave;re-plan. Le bouton Actualiser et l&rsquo;option &laquo;Demander avant de mettre &agrave; jour&raquo; rechargent toujours &agrave; la demande.'],
+  'v26.9': ['Ludique : toucher le <strong>badge de version</strong> d&eacute;clenche maintenant une animation al&eacute;atoire de rebond/rotation/&eacute;crasement &agrave; chaque fois, affiche un <strong>scintillement</strong> lorsqu&rsquo;une nouvelle version est mise en avant, et la section &Agrave; propos a d&eacute;m&eacute;rag&eacute; vers son propre <strong>onglet &Agrave; propos</strong> dans Param&egrave;tres pour y acc&eacute;der plus vite.'],
+  'v26.8': ['Am&eacute;lioration : le <strong>badge de version</strong> de la section &Agrave; propos se met maintenant &agrave; jour automatiquement et ouvre Nouveaut&eacute;s.'],
+  'v26.7': ['Am&eacute;lioration : les <strong>raccourcis d&rsquo;applications</strong> du conseil quotidien affichent maintenant d&rsquo;abord &agrave; quelle application ils appartiennent, par exemple <em>Figma &mdash; Move Tool &mdash; V</em>.'],
+  'v26.6': ['Am&eacute;lioration : le <strong>conseil quotidien</strong> se met maintenant &agrave; jour lorsque vous changez d&rsquo;onglet de plateforme : s&eacute;lectionner Windows, macOS, Linux, ChromeOS ou Apps affiche un raccourci de cette section.'],
+  'v26.5': ['Correction : le <strong>conseil quotidien</strong> ne reste plus bloqu&eacute; sur un seul raccourci : il affiche maintenant un nouveau raccourci al&eacute;atoire (depuis l&rsquo;onglet de plateforme que vous consultez) &agrave; chaque chargement de page, au lieu de r&eacute;utiliser le m&ecirc;me toute la journ&eacute;e.'],
+  'v26.4': ['Correction : le <strong>conseil quotidien</strong> n&rsquo;affiche maintenant que les raccourcis de l&rsquo;onglet de plateforme que vous consultez (il m&eacute;langeait auparavant ceux de toutes les plateformes). Le badge de version de la section Aide se met aussi &agrave; jour automatiquement.'],
+  'v26.3': ['Le bouton de <strong>visite</strong> affiche maintenant une ic&ocirc;ne de <strong>livre ouvert</strong>.'],
+  'v26.2': ['Le bouton de <strong>visite</strong> affiche maintenant une ic&ocirc;ne de boussole, et la visite a gagn&eacute; une &eacute;tape expliquant ce que fait le <strong>bouton d&rsquo;actualisation</strong>.'],
+  'v26.1': ['Correction : passer du <strong>sombre &harr; clair</strong> (via le commutateur en haut ou les Param&egrave;tres) ne d&eacute;colorise plus un <strong>th&egrave;me de fond d&rsquo;&eacute;cran</strong> &mdash; l&rsquo;accent, les boutons de la barre et les touches de raccourcis conservent leurs couleurs de th&egrave;me pendant que le fond reste en place.'],
+  'v26': ['Nouvelle <strong>visite du site</strong> &mdash; touchez le bouton <strong>?</strong> en haut pour un parcours guid&eacute; de la barre de recherche, des filtres, des onglets, de la liste des raccourcis, du quiz, des param&egrave;tres, de l&rsquo;impression et du commutateur de th&egrave;me. Naviguez avec les boutons, les fl&egrave;ches ou les points.'],
+  'v25': ['Suppression du lien <strong>Voir sur GitHub</strong> dans la section &Agrave; propos.'],
+  'v24.8': ['Correction : la notification <strong>&laquo;&Agrave; jour&raquo;</strong> sur mobile reste maintenant dans l&rsquo;&eacute;cran (elle d&eacute;bordait de l&rsquo;&eacute;cran sur les petits appareils).'],
+  'v24.7.4': ['Le rayon des coins est maintenant limit&eacute; &agrave; <strong>16&thinsp;px</strong> dans tous les th&egrave;mes : les pastilles, les onglets, les barres de recherche et les notifications ne sont plus totalement arrondis (ils utilisaient auparavant jusqu&rsquo;&agrave; un rayon de 100&thinsp;px). Les coins restent doux, juste plus sobres.'],
+  'v24.7.3': ['Correction : <strong>Ouvrir les param&egrave;tres Wi-Fi</strong> sur <strong>Android</strong> ne faisait rien &mdash; les versions r&eacute;centes de Chrome ne permettent pas aux sites web d&rsquo;ouvrir les param&egrave;tres syst&egrave;me d&rsquo;Android. Le bouton affiche maintenant un court message vous demandant d&rsquo;ouvrir les param&egrave;tres Wi-Fi depuis l&rsquo;application Param&egrave;tres de votre appareil (il les ouvre toujours directement sur iOS et macOS).'],
+  'v24.7.2': ['Correction : dans une application Android install&eacute;e (PWA), toucher <strong>Ouvrir les param&egrave;tres Wi-Fi</strong> ne faisait rien &mdash; Android emp&ecirc;che les applications d&rsquo;ouvrir directement les param&egrave;tres syst&egrave;me. L&rsquo;application explique maintenant cela et vous invite &agrave; ouvrir le site dans un onglet Chrome, o&ugrave; le bouton fonctionne.'],
+  'v24.7.1': ['Correction : <strong>Ouvrir les param&egrave;tres Wi-Fi</strong> sur <strong>Android</strong> utilisait un clic d&rsquo;ancre d&eacute;clench&eacute; par JS, que Chrome bloque pour les liens <code>intent:</code> &mdash; nous sommes pass&eacute;s &agrave; une navigation initi&eacute;e par un geste de l&rsquo;utilisateur.'],
+  'v24.7': [
+    'Le <strong>&eacute;tat de la connexion</strong> se trouve maintenant en haut de <strong>Settings &rarr; General</strong> (d&eacute;plac&eacute; hors de &Agrave; propos).',
+    'Le bouton <strong>Ouvrir les param&egrave;tres Wi-Fi</strong> ouvre maintenant les vrais param&egrave;tres Wi-Fi sur <strong>iOS</strong> (application R&eacute;glages) et <strong>macOS</strong> (R&eacute;glages Syst&egrave;me). Sur Android, Windows et Linux, o&ugrave; les navigateurs ne peuvent pas acc&eacute;der directement aux param&egrave;tres syst&egrave;me, il affiche &agrave; la place des instructions rapides.'
+  ],
+  'v24.6': [
+    'La pastille <strong>Offline</strong> reste maintenant <strong>10 secondes</strong> puis dispara&icirc;t (elle ne vous har&ccedil;lerait pas tant que la connexion est toujours coup&eacute;e).',
+    'Settings &rarr; &Agrave; propos affiche maintenant votre <strong>&eacute;tat de connexion</strong> (En ligne / Hors ligne) en permanence, avec un bouton pour ouvrir vos <strong>param&egrave;tres Wi-Fi</strong> &mdash; sur iOS il ouvre directement l&rsquo;application R&eacute;glages ; sur les autres appareils il affiche des instructions rapides.'
+  ],
+  'v24.5.2': ['Correction : sur les ordinateurs o&ugrave; Windows coupe la connexion sans d&eacute;clencher l&rsquo;&eacute;v&eacute;nement <em>offline</em> du navigateur (ou o&ugrave; les requ&ecirc;tes bloquent au lieu d&rsquo;&eacute;chouer), la pastille <strong>Offline</strong> appara&icirc;t aussi lorsque le test de connectivit&eacute; d&eacute;passe le d&eacute;lai &mdash; pas seulement lorsque la requ&ecirc;te &eacute;choue.'],
+  'v24.5.1': ['Correction : la pastille <strong>Offline</strong> appara&icirc;t maintenant aussi lorsque la connexion tombe sans &eacute;v&eacute;nement du navigateur (par ex. &laquo;Offline&raquo; dans DevTools, certains navigateurs mobiles) &mdash; l&rsquo;application teste maintenant activement la connectivit&eacute; toutes les quelques secondes au lieu de s&rsquo;appuyer uniquement sur les signaux du navigateur. Elle reste masqu&eacute;e tant que vous &ecirc;tes en ligne.'],
+  'v24.5': [
+    'Pendant la recherche, les mots correspondant &agrave; votre requ&ecirc;te sont maintenant <strong>mis en évidence</strong> dans les r&eacute;sultats &mdash; il est plus facile de voir pourquoi chaque ligne correspond.',
+    'Le champ de recherche dispose maintenant d&rsquo;un <strong>bouton d&rsquo;effacement (&times;)</strong> qui appara&icirc;t lorsque vous avez saisi quelque chose.',
+    'Une petite pastille <strong>Offline</strong> appara&icirc;t lorsque votre connexion tombe &mdash; touchez-la pour confirmer qu&rsquo;Anthkeys continue de fonctionner depuis son cache.'
+  ],
+  'v24.4.1': ['Correction sur mobile : l&rsquo;en-t&ecirc;te <strong>Action &mdash; Raccourci</strong> ne d&eacute;file plus &mdash; sur les &eacute;crans &eacute;troits, le tableau des raccourcis &eacute;tait devenu son propre conteneur de d&eacute;filement horizontal, ce qui cassait l&rsquo;en-t&ecirc;te fixe. Il est de nouveau ancr&eacute;, exactement comme sur ordinateur.'],
+  'v24.4': ['Suppression du <strong>widget de s&eacute;rie du quiz sur l&rsquo;&eacute;cran d&rsquo;accueil</strong> &mdash; il reposait sur une norme web que les navigateurs n&rsquo;ont pas encore impl&eacute;ment&eacute;e, il n&rsquo;apparaissait donc nulle part. Votre s&eacute;rie et vos statistiques de quiz restent dans l&rsquo;application comme d&rsquo;habitude.'],
+  'v24.3': [
+    'Le <strong>quiz des raccourcis suit maintenant vos statistiques</strong> &mdash; une s&eacute;rie quotidienne (🔥 jours d&rsquo;affil&eacute;e o&ugrave; vous terminez un quiz), votre meilleur score, votre pr&eacute;cision et le nombre de parties. Stock&eacute;es localement, jamais t&eacute;l&eacute;charg&eacute;es.',
+    'Nouveau <strong>widget de s&eacute;rie du quiz sur l&rsquo;&eacute;cran d&rsquo;accueil</strong> pour Android (Web App Widgets &mdash; exp&eacute;rimental, d&eacute;ploiement progressif sur Chrome et Firefox ; indisponible sur iOS). Il affiche votre s&eacute;rie et vos statistiques ; touchez-le pour ouvrir le quiz.'
+  ],
+  'v24.2.1': ['Correction sur mobile : toucher la barre de recherche pouvait ouvrir la page &Agrave; propos &mdash; la notification cach&eacute;e &laquo;Nouveaut&eacute;s&raquo; pr&egrave;s du bouton des param&egrave;tres restait cliquable et recouvrait le champ de recherche. Elle ne r&eacute;agit plus que lorsqu&rsquo;elle est visible.'],
+  'v24.2': [
+    'Nouveau <strong>filtre de modificateurs</strong> &mdash; dans le menu Filtres, choisissez une touche (Ctrl, Maj, Alt, Win, Cmd, &hellip;) pour n&rsquo;afficher que les raccourcis qui l&rsquo;utilisent. Les options s&rsquo;adaptent &agrave; chaque plateforme.',
+    'Un <strong>bouton de retour en haut</strong> flotte au-dessus de la liste des raccourcis d&egrave;s que vous faites d&eacute;filer &mdash; touchez-le pour remonter directement.'
+  ],
+  'v24.1': ['La barre <strong>Action &mdash; Raccourci</strong> reste maintenant ancr&eacute;e en haut de la liste pendant le d&eacute;filement &mdash; sur mobile et Safari, elle sortait de l&rsquo;&eacute;cran.'],
+  'v23.9': ['Suppression du pop-up Aide &amp; conseils sur mobile &mdash; il ne listait que les raccourcis d&rsquo;ordinateur. L&rsquo;Aide reste dans les Param&egrave;tres sur ordinateur, o&ugrave; <kbd>?</kbd> y acc&egrave;de directement.'],
+  'v23.8': ['Sur mobile, l&rsquo;Aide ne se trouve plus dans les Param&egrave;tres &mdash; elle y reste masqu&eacute;e pour ne pas surcharger la page. Appuyez sur <kbd>?</kbd> pour l&rsquo;ouvrir en pop-up.'],
+  'v23.7': ['Aide &amp; conseils d&eacute;plac&eacute;e dans <strong>Param&egrave;tres</strong> (section G&eacute;n&eacute;ral) sur ordinateur &mdash; appuyez sur <kbd>?</kbd> pour y acc&eacute;der directement.'],
+  'v23.6': [
+    'Les 20 langues sont maintenant enti&egrave;rement traduites &mdash; plus de repli sur l&rsquo;anglais pour les fonctions r&eacute;centes comme le quiz, la synchronisation cloud et l&rsquo;Aide.',
+    'Sur mobile, maintenez l&rsquo;appui (appui long) sur un raccourci pour le copier au lieu de le toucher &mdash; plus de copies accidentelles lors du d&eacute;filement.',
+    'Les pastilles de filtre utilisent maintenant votre couleur d&rsquo;accentuation sur mobile aussi, comme sur ordinateur ; lorsque Favoris est s&eacute;lectionn&eacute;, c&rsquo;est le seul qui ressort.',
+    'Suppression de la bordure autour des cinq boutons de la barre sup&eacute;rieure sur mobile &mdash; ils se fondent maintenant dans la page.',
+    'Le bouton du quiz a un nouvel ic&ocirc;ne d&rsquo;&eacute;clair, et les r&eacute;ponses du quiz affichent des noms lisibles au lieu de touches brutes.',
+    'Correction : le JavaScript de l&rsquo;application pouvait &eacute;chouer au chargement apr&egrave;s une mise &agrave; jour, laissant le site sans r&eacute;ponse.'
+  ],
+  'v23.5': [
+    'Les contr&ocirc;les de filtrage, favori, comparaison et repli r&eacute;unissent d&eacute;sormais dans un seul menu compact <strong>Filtres</strong> &mdash; plus de place pour la liste des raccourcis sur mobile.',
+    'La page Nouveaut&eacute;s, le badge de version et les param&egrave;tres de mise &agrave; jour ont d&eacute;m&eacute;rag&eacute; vers une nouvelle section <strong>&Agrave; propos</strong> des Param&egrave;tres.',
+    'Les notifications de mise &agrave; jour apparaissent d&eacute;sormais depuis le bouton <strong>Param&egrave;tres</strong> &mdash; l&rsquo;ic&ocirc;ne d&rsquo;engrenage porte un badge tant que vous n&rsquo;avez pas vu les novidades.'
+  ],
+  'v23.4': ['Suppression du bouton d&rsquo;aide <kbd>?</kbd> de la barre sup&eacute;rieure &mdash; appuyez sur <kbd>?</kbd> pour tout de m&ecirc;me ouvrir l&rsquo;Aide.'],
+  'v23.3': [
+    'Le badge de version s&rsquo;allume apr&egrave;s une mise &agrave; jour automatique, afin que vous remarquiez la nouvelle version au lancement suivant.',
+    'Changer de fond pr&eacute;d&eacute;fini conserve votre mode sombre &mdash; le nouveau fond est lui aussi att&eacute;nu&eacute;.',
+    'Sur mobile, la barre de plateformes (Windows, macOS, Linux, ChromeOS) a maintenant la m&ecirc;me apparence que sur ordinateur.'
+  ],
+  'v23.2': [
+    'Suppression du commutateur Avanc&eacute;/Basique &mdash; tous les raccourcis sont affich&eacute;s ensemble.',
+    'Sur mobile, les boutons de la barre sup&eacute;rieure sont maintenant dispos&eacute;s dans une grille 2&times;3 nette.',
+    'Les fonds pr&eacute;d&eacute;finis restent appliqu&eacute;s et s&rsquo;att&eacute;nuent correctement lorsque vous passez en mode sombre.',
+    'Les surcouches (param&egrave;tres, aide, quiz) recouvrent maintenant les onglets fixes sur mobile.'
+  ],
+  'v23.1': ['Les fonds d&rsquo;&eacute;cran sont maintenant optimisés pour le mode sombre : lorsque vous passez en sombre, les images personnalis&eacute;es comme les fonds pr&eacute;d&eacute;finis (Oc&eacute;an, For&ecirc;t, Coucher de soleil, &hellip;) sont assombris et d&eacute;satur&eacute;s afin que les panneaux restent lisibles.'],
+  'v23': [
+    'Nouveau mode &laquo;Comparer&raquo; &mdash; choisissez une deuxi&egrave;me plateforme pour ne voir que les raccourcis qui diff&egrave;rent.',
+    'Th&egrave;me automatique qui suit l&rsquo;heure de la journ&eacute;e (sombre de 19h &agrave; 7h).',
+    'Appuyez sur <kbd>?</kbd> ou touchez le bouton <kbd>?</kbd> pour une aide et des conseils rapides.',
+    'Dates de sortie ajout&eacute;es &agrave; chaque entr&eacute;e de cette page.'
+  ],
+  'v22': [
+    'Correction : le tableau de la l&eacute;gende des touches &eacute;tait tronqu&eacute; sur les t&eacute;l&eacute;phones &eacute;troits ; il d&eacute;file maintenant horizontalement pour que toutes les colonnes soient accessibles.',
+    'La barre de recherche et les pastilles de cat&eacute;gorie sont masqu&eacute;es sur la page &laquo;Nouveaut&eacute;s&raquo;, car elles ne s&rsquo;y appliquent pas.'
+  ],
+  'v21': [
+    'La l&eacute;gende des touches dispose maintenant d&rsquo;un bouton de fermeture, pour pouvoir la replier depuis le panneau &mdash; pratique sur mobile o&ugrave; le commutateur peut sortir de port&eacute;e.',
+    'Gestion des taps plus adaptative pour le bouton L&eacute;gende des touches sur les appareils tactiles.'
+  ],
+  'v20.1': [
+    'Les num&eacute;ros de version g&egrave;rent maintenant les versions de correction &mdash; le badge du pied de page affiche par exemple v20.1, et la d&eacute;tection des mises &agrave; jour les g&egrave;re correctement.',
+    'Ajout de l&rsquo;entr&eacute;e v20 manquante sur cette page.'
+  ],
+  'v20': ['Nouvelle page &laquo;Nouveaut&eacute;s&raquo; directement dans Anthkeys &mdash; le lien de la notification de mise &agrave; jour et le badge de version du pied de page l&rsquo;ouvrent ici plut&ocirc;t que sur GitHub.'],
+  'v19': ['La b&acirc;ne de mise &agrave; jour appara&icirc;t maintenant aussi si vous mettez &agrave; jour depuis une version ant&eacute;rieure au suivi des versions (votre version pr&eacute;c&eacute;dente est d&eacute;tect&eacute;e depuis le cache hors ligne).'],
+  'v18': [
+    'Une notification &laquo;Mis &agrave; jour vers vX &mdash; Nouveaut&eacute;s&raquo; appara&icirc;t &agrave; l&rsquo;arriv&eacute;e d&rsquo;une nouvelle version (en mode de mise &agrave; jour automatique).',
+    'La b&acirc;ne de mise &agrave; jour se d&eacute;clenche d&eacute;sormais sur les mises &agrave; jour de contenu, pas seulement sur les changements du service worker.',
+    'Le badge de version du pied de page est cliquable &mdash; touchez-le pour voir les nouveaut&eacute;s.',
+    'Cache hors ligne plus l&eacute;ger (plus de fichiers sans version inutiles).'
+  ],
+  'v16': ['Ajout d&rsquo;un badge de version au pied de page affichant le num&eacute;ro de build actuel.'],
+  'v15': ['Bouton d&rsquo;actualisation et pr&eacute;f&eacute;rence de mise &agrave; jour (automatique ou demander d&rsquo;abord), propuls&eacute;s par le service worker.'],
+  'v14': ['Replier ou d&eacute;plier une cat&eacute;gorie respecte maintenant la recherche active.'],
+  'v13': ['Cache des pages avec priorit&eacute; au r&eacute;seau afin que les mises &agrave; jour apparaissent imm&eacute;diatement ; d&eacute;filement plus fluide sur ordinateur.'],
+  'v12': ['La recherche et les filtres sont maintenant limit&eacute;s &agrave; l&rsquo;onglet actif.'],
+  'v11': ['Prise en charge de l&rsquo;installation en PWA, &eacute;tiquettes d&rsquo;accessibilit&eacute;, prise en charge du mouvement r&eacute;duit, raccourcis Gmail et YouTube, am&eacute;liorations du SEO.'],
+  'v10': [
+    'Correction : le filtre de cat&eacute;gorie pouvait masquer tous les raccourcis lorsqu&rsquo;il correspondait &agrave; une ligne d&rsquo;en-t&ecirc;te de cat&eacute;gorie ; il ne masque plus que les lignes que vous avez filtr&eacute;es.',
+    'L&rsquo;arri&egrave;re-plan occupe maintenant tout l&rsquo;&eacute;cran sur mobile.'
+  ],
+  'v9': ['Windows est maintenant l&rsquo;onglet de plateforme par d&eacute;faut, et les onglets sont dans un ordre plus clair.'],
+  'v8': [
+    'Niveaux de difficult&eacute; du quiz et conseil quotidien.',
+    'D&eacute;filement bien plus fluide sur mobile, ainsi qu&rsquo;un cache hors ligne.',
+    'La recherche et les filtres fonctionnent sur toutes les plateformes &agrave; la fois, avec des libell&eacute;s d&rsquo;OS en gras.'
+  ],
+  'v7': ['Les styles d&rsquo;apparence ont &eacute;t&eacute; supprim&eacute;s &mdash; Material 3 est maintenant le seul look.'],
+  'v6': [
+    'Styles d&rsquo;apparence r&eacute;duits &agrave; Material 3, plus un bouton &laquo;Retirer le fond d&rsquo;&eacute;cran&raquo; pour revenir au th&egrave;me par d&eacute;faut.',
+    'En-t&ecirc;tes de contr&ocirc;le du cache pour que les mises &agrave; jour vous parviennent plus vite.'
+  ],
+  'v5': ['Titres de page simplifi&eacute;s &agrave; simplement &laquo;Raccourcis&raquo; dans les 14 langues.'],
+  'v4': [
+    'Mode quiz de raccourcis &mdash; entra&icirc;nez-vous en devinant le raccourci ou l&rsquo;action &mdash; ainsi que la synchronisation cloud via GitHub Gist.',
+    'Une importante s&eacute;rie de corrections couvrant les &eacute;chantillons d&rsquo;accent, le changement de th&egrave;me et les fonds d&rsquo;&eacute;cran mobiles.'
+  ],
+  'v3': ['Pr&eacute;r&eacute;glages de couleur d&rsquo;accent que vous pouvez enregistrer et r&eacute;utiliser, ainsi qu&rsquo;une invalidation du cache pour que les mises &agrave; jour apparaissent de mani&egrave;re fiable.'],
+  'v2': ['Th&egrave;mes clair et sombre avec couleurs d&rsquo;accentuation, ainsi que des traductions de la r&eacute;f&eacute;rence des raccourcis.'],
+  'v1': ['La premi&egrave;re version d&rsquo;Anthkeys : les raccourcis clavier quotidiens de Windows, macOS, Linux et ChromeOS sur une seule page.']
+};
