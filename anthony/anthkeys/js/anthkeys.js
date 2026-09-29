@@ -5,6 +5,21 @@ function onId(id, event, handler) {
 
 const i18n = {
   en: {
+    'setting.notifications': 'Notifications',
+    'notify.label': 'Send me notifications',
+    'notify.state.default': 'Click the switch and allow notifications in the browser prompt.',
+    'notify.state.granted': 'On. Anthkeys can send you notifications.',
+    'notify.state.denied': 'Blocked. Allow notifications for this site in your browser settings.',
+    'notify.state.unsupported': 'This browser cannot show notifications.',
+    'notify.state.off': 'Allowed, but switched off.',
+    'notify.time': 'Daily tip at',
+    'notify.test': 'Send a test notification',
+    'notify.note': 'Tips are sent while this site is open. Installed on Chrome they can also arrive when it is closed, but the browser picks the time and may skip a day.',
+    'notify.tip.title': 'Today\u2019s shortcut',
+    'notify.test.title': 'Test notification',
+    'notify.test.body': 'Notifications are working.',
+    'notify.update.title': 'Update available',
+    'notify.update.body': 'Anthkeys v{ver} is ready. Open it to update.',
     'mod.label': 'Modifier',
     'title': 'Shortcuts',
     'page.title': 'Shortcuts - Anthkeys',
@@ -426,6 +441,21 @@ const i18n = {
 }
 
 i18n.ar = {
+    'setting.notifications': 'الإشعارات',
+    'notify.label': 'أرسل إليّ إشعارات',
+    'notify.state.default': 'شغّل المفتاح واسمح بالإشعارات في نافذة المتصفح.',
+    'notify.state.granted': 'مُفعّل. يمكن لـ Anthkeys إرسال إشعارات إليك.',
+    'notify.state.denied': 'محظور. اسمح بإشعارات هذا الموقع من إعدادات المتصفح.',
+    'notify.state.unsupported': 'لا يمكن لهذا المتصفح عرض الإشعارات.',
+    'notify.state.off': 'مسموح، لكنه مُعطّل.',
+    'notify.time': 'نصيحة اليوم في',
+    'notify.test': 'أرسل إشعارًا تجريبيًا',
+    'notify.note': '\u062A\u062A\u0645 \u062A\u0642\u0644\u064A\u0639\u0627\u062A \u0627\u0644\u0627\u062E\u062A\u0635\u0627\u0631 \u0645\u062A\u064A \u0645\u0641\u062A\u062D \u0647\u0630\u0627 \u0627\u0644\u0645\u0648\u0642\u0639. \u0639\u0646\u062F\u0627 \u062A\u062B\u0628\u064A\u062A \u0627\u0644\u062A\u0637\u0628\u064a\u0642 \u0639\u0644\u0649 Chrome \u0641\u0642\u062F \u062A\u0635\u0644 \u0623\u064A\u0636\u0627\u064b \u0623\u064A\u0646 \u0627\u0644\u0645\u0648\u0642\u0639 \u0645\u063A\u0644\u0642\u064b\u060C \u0644\u0643\u0646 \u0627\u0644\u0645\u062A\u0635\u0641\u062D \u064A\u062D\u062F\u062F \u0627\u0644\u0648\u0642\u062A \u0648\u0642\u062F \u064A\u062A\u062E\u0637\u0651 \u064A\u0648\u0645\u064b\u0627 \u0643\u0627\u0645\u0644\u0627\u064b\u060C',
+    'notify.tip.title': 'اختصار اليوم',
+    'notify.test.title': 'إشعار تجريبي',
+    'notify.test.body': 'الإشعارات تعمل.',
+    'notify.update.title': 'يتوفر تحديث',
+    'notify.update.body': 'Anthkeys v{ver} جاهزة. افتحها للتحديث.',
     'mod.label': 'مُعدِّل',
     'title': 'اختصارات',
     'subtitle': 'اختصارات شائعة لكل منصة',
@@ -849,6 +879,21 @@ i18n.ar = {
 };;
 
 i18n.cs = {
+    'setting.notifications': 'Oznámení',
+    'notify.label': 'Zasílat mi oznámení',
+    'notify.state.default': 'Zapněte přepínač a v dotazu prohlížeče povolte oznámení.',
+    'notify.state.granted': 'Zapnuto. Anthkeys vám může zasílat oznámení.',
+    'notify.state.denied': 'Zablokováno. Povolte oznámení pro tento web v nastavení prohlížeče.',
+    'notify.state.unsupported': 'Tento prohlížeč neumí zobrazovat oznámení.',
+    'notify.state.off': 'Povoleno, ale vypnuto.',
+    'notify.time': 'Denní tip v',
+    'notify.test': 'Odeslat zkušební oznámení',
+    'notify.note': 'Tipy se odes\u00EDlat\u00E1, dokud je tento web otev\u011Ben\u00FD. Nainstalov\u00E1no v Chromu mohou dorazit i p\u0159i zav\u0159en\u00E9m webu, ale prohl\u00ED\u017E\u010D ur\u010D\u00ED \u010Das a m\u016F\u017Ee p\u0159esko\u010Dit den.',
+    'notify.tip.title': 'Dnešní zkratka',
+    'notify.test.title': 'Zkušební oznámení',
+    'notify.test.body': 'Oznámení fungují.',
+    'notify.update.title': 'Dostupná aktualizace',
+    'notify.update.body': 'Anthkeys v{ver} je připravená. Otevřete ji pro aktualizaci.',
     'mod.label': 'Modifikátor',
     'title': 'Zkratky',
     'subtitle': 'Vanliga genvägar för varje plattform',
@@ -1272,6 +1317,21 @@ i18n.cs = {
 };;
 
 i18n.da = {
+    'setting.notifications': 'Notifikationer',
+    'notify.label': 'Send mig notifikationer',
+    'notify.state.default': 'Tænd kontakten og tillad notifikationer i browserens prompt.',
+    'notify.state.granted': 'Tændt. Anthkeys kan sende dig notifikationer.',
+    'notify.state.denied': 'Blokeret. Tillad notifikationer for dette websted i browserens indstillinger.',
+    'notify.state.unsupported': 'Denne browser kan ikke vise notifikationer.',
+    'notify.state.off': 'Tilladt, men slået fra.',
+    'notify.time': 'Dagligt tip kl.',
+    'notify.test': 'Send en testnotifikation',
+    'notify.note': 'Tips sendes, mens dette websted er \u00E5bent. Installeret i Chrome kan de ogs\u00E5 komme, mens webstedet er lukket, men browseren v\u00E6lger tidspunktet og kan springe en dag over.',
+    'notify.tip.title': 'Dagens genvej',
+    'notify.test.title': 'Testnotifikation',
+    'notify.test.body': 'Notifikationer virker.',
+    'notify.update.title': 'Opdatering tilgængelig',
+    'notify.update.body': 'Anthkeys v{ver} er klar. Åbn den for at opdatere.',
     'mod.label': 'Modifikator',
     'title': 'Genveje',
     'subtitle': 'Fælles genveje til hver platform',
@@ -1695,6 +1755,21 @@ i18n.da = {
 };;
 
 i18n.de = {
+    'setting.notifications': 'Benachrichtigungen',
+    'notify.label': 'Benachrichtigungen senden',
+    'notify.state.default': 'Schalte den Regler ein und erlaube Benachrichtigungen in der Browserabfrage.',
+    'notify.state.granted': 'Ein. Anthkeys kann dir Benachrichtigungen senden.',
+    'notify.state.denied': 'Blockiert. Erlaube Benachrichtigungen für diese Seite in den Browsereinstellungen.',
+    'notify.state.unsupported': 'Dieser Browser kann keine Benachrichtigungen anzeigen.',
+    'notify.state.off': 'Erlaubt, aber ausgeschaltet.',
+    'notify.time': 'Täglicher Tipp um',
+    'notify.test': 'Testbenachrichtigung senden',
+    'notify.note': 'Hinweise werden gesendet, solange diese Seite ge\u00F6ffnet ist. Installiert in Chrome k\u00F6nnen sie auch bei geschlossener Seite ankommen, aber der Browser bestimmt die Uhrzeit und kann einen Tag \u00FCberspringen.',
+    'notify.tip.title': 'Dein Tipp des Tages',
+    'notify.test.title': 'Testbenachrichtigung',
+    'notify.test.body': 'Benachrichtigungen funktionieren.',
+    'notify.update.title': 'Update verfügbar',
+    'notify.update.body': 'Anthkeys v{ver} ist bereit. Öffne sie, um zu aktualisieren.',
     'mod.label': 'Modifikator',
     'title': 'Kurzbefehle',
     'subtitle': 'Häufige Tastenkürzel für jede Plattform',
@@ -2118,6 +2193,21 @@ i18n.de = {
 };;
 
 i18n.es = {
+    'setting.notifications': 'Notificaciones',
+    'notify.label': 'Enviarme notificaciones',
+    'notify.state.default': 'Pulsa el interruptor y permite las notificaciones en el aviso del navegador.',
+    'notify.state.granted': 'Activado. Anthkeys puede enviarte notificaciones.',
+    'notify.state.denied': 'Bloqueado. Permite las notificaciones de este sitio en los ajustes de tu navegador.',
+    'notify.state.unsupported': 'Este navegador no puede mostrar notificaciones.',
+    'notify.state.off': 'Permitido, pero desactivado.',
+    'notify.time': 'Consejo diario a las',
+    'notify.test': 'Enviar una notificación de prueba',
+    'notify.note': 'Los recordatorios se env\u00EDan mientras este sitio est\u00E1 abierto. Si lo instalas en Chrome tambi\u00E9n pueden llegar con el sitio cerrado, pero el navegador decide la hora y puede saltarse un d\u00EDa.',
+    'notify.tip.title': 'Tu atajo de hoy',
+    'notify.test.title': 'Notificación de prueba',
+    'notify.test.body': 'Las notificaciones funcionan.',
+    'notify.update.title': 'Actualización disponible',
+    'notify.update.body': 'Anthkeys v{ver} está lista. Ábrela para actualizar.',
     'mod.label': 'Modificador',
     'title': 'Atajos',
     'subtitle': 'Atajos comunes para cada plataforma',
@@ -2541,6 +2631,21 @@ i18n.es = {
 };;
 
 i18n.fi = {
+    'setting.notifications': 'Ilmoitukset',
+    'notify.label': 'Lähetä minulle ilmoituksia',
+    'notify.state.default': 'Kytke kytkin päälle ja salli ilmoitukset selaimen kyselyssä.',
+    'notify.state.granted': 'Päällä. Anthkeys voi lähettää sinulle ilmoituksia.',
+    'notify.state.denied': 'Estetty. Salli ilmoitukset tälle sivustolle selaimen asetuksista.',
+    'notify.state.unsupported': 'Tämä selain ei voi näyttää ilmoituksia.',
+    'notify.state.off': 'Sallittu, mutta pois päältä.',
+    'notify.time': 'Päivän vinkki klo',
+    'notify.test': 'Lähetä testi-ilmoitus',
+    'notify.note': 'Vinkkej\u00E4 l\u00E4hetet\u00E4n, kun verkkosivusto on auki. Asennettuna Chromeen ne voivat tulla vaikka sivusto olisi kiinni, mutta selain p\u00E4\u00E4tt\u00E4\u00E4 ajan ja voi ohittaa p\u00E4iv\u00E4n.',
+    'notify.tip.title': 'Tänään oma pikakuvake',
+    'notify.test.title': 'Testi-ilmoitus',
+    'notify.test.body': 'Ilmoitukset toimivat.',
+    'notify.update.title': 'Päivitys saatavilla',
+    'notify.update.body': 'Anthkeys v{ver} on valmis. Avaa se päivittääksesi.',
     'mod.label': 'Muokkausnäppäin',
     'title': 'Pikanäppäimet',
     'subtitle': 'Yhteiset pikakuvakkeet jokaiselle alustalle',
@@ -2964,6 +3069,21 @@ i18n.fi = {
 };;
 
 i18n.fr = {
+    'setting.notifications': 'Notifications',
+    'notify.label': 'M’envoyer des notifications',
+    'notify.state.default': 'Activez l’interrupteur et autorisez les notifications dans l’invite du navigateur.',
+    'notify.state.granted': 'Activé. Anthkeys peut vous envoyer des notifications.',
+    'notify.state.denied': 'Bloqué. Autorisez les notifications pour ce site dans les paramètres de votre navigateur.',
+    'notify.state.unsupported': 'Ce navigateur ne peut pas afficher les notifications.',
+    'notify.state.off': 'Autorisé, mais désactivé.',
+    'notify.time': 'Astuce du jour à',
+    'notify.test': 'Envoyer une notification de test',
+    'notify.note': 'Les conseils sont envoy\u00E9s tant que ce site est ouvert. Install\u00E9 sur Chrome, ils peuvent aussi arriver site ferm\u00E9, mais le navigateur choisit l\u2019heure et peut sauter un jour.',
+    'notify.tip.title': 'Votre raccourci du jour',
+    'notify.test.title': 'Notification de test',
+    'notify.test.body': 'Les notifications fonctionnent.',
+    'notify.update.title': 'Mise à jour disponible',
+    'notify.update.body': 'Anthkeys v{ver} est prête. Ouvrez-la pour mettre à jour.',
     'mod.label': 'Modificateur',
     'title': 'Raccourcis',
     'subtitle': 'Raccourcis courants pour chaque plateforme',
@@ -3388,6 +3508,21 @@ i18n.fr = {
 };
 
 i18n.hi = {
+    'setting.notifications': 'सूचनाएँ',
+    'notify.label': 'मुझे सूचनाएँ भेजें',
+    'notify.state.default': 'स्विच चालू करें और ब्राउज़र की अनुमति विंडो में सूचनाओं की अनुमति दें।',
+    'notify.state.granted': 'चालू। Anthkeys आपको सूचनाएँ भेज सकता है।',
+    'notify.state.denied': 'अवरुद्ध। ब्राउज़र सेटिंग्स में इस साइट के लिए सूचनाओं की अनुमति दें।',
+    'notify.state.unsupported': 'यह ब्राउज़र सूचनाएँ नहीं दिखा सकता।',
+    'notify.state.off': 'अनुमति है, लेकिन बंद है।',
+    'notify.time': 'दैनिक सुझाव का समय',
+    'notify.test': 'परीक्षण सूचना भेजें',
+    'notify.note': '\u0936\u0949\u0930\u094D\u0924 \u0938\u0942\u091A\u0928\u093E\u0935 \u0906\u092A\u0928\u0940 \u0938\u093E\u0907\u091F \u0916\u0941\u0932\u093E \u0939\u094B\u0928\u0947 \u0924\u0915 \u0938\u0942\u091A\u0928\u093E\u0913\u0902 \u091C\u093E\u0924\u093E \u0915\u093F\u090F \u091C\u093E\u0924\u0947\u0902\u0964 Chrome \u092E\u0947\u0902 \u0907\u0928\u094D\u0938\u094D\u091F\u0949\u0932 \u0915\u093F\u092F\u093E \u0917\u092F\u093E \u0939\u094B\u0928\u0947 \u090F\u0915 \u0938\u093E\u0907\u091F \u092C\u0902\u0926 \u0939\u094B\u0928\u0947 \u092A\u0930 \u0905\u0928\u0941\u0938\u0942\u091A\u0928 \u092D\u0947\u091C \u0938\u0915\u0947\u0902, \u0932\u0947\u0915\u093F\u0928 \u092C\u094D\u0930\u093E\u0909\u091C\u0930 \u0938\u092E\u092F \u091A\u0941\u0928\u0947\u0902 \u0914\u0930 \u090F\u0915 \u0926\u093F\u0928 \u091A\u0942\u0915\u094D \u0938\u0915\u0947\u0902\u0964',
+    'notify.tip.title': 'आज का शॉर्टकट',
+    'notify.test.title': 'परीक्षण सूचना',
+    'notify.test.body': 'सूचनाएँ काम कर रही हैं।',
+    'notify.update.title': 'अपडेट उपलब्ध है',
+    'notify.update.body': 'Anthkeys v{ver} तैयार है। अपडेट करने के लिए इसे खोलें।',
     'mod.label': 'संशोधक',
     'title': 'शॉर्टकट',
     'subtitle': 'हर प्लेटफ़ॉर्म के लिए सामान्य शॉर्टकट',
@@ -3811,6 +3946,21 @@ i18n.hi = {
 };;
 
 i18n.hu = {
+    'setting.notifications': 'Értesítések',
+    'notify.label': 'Értesítsen',
+    'notify.state.default': 'Kapcsolja be a kapcsolót, és engedélyezze az értesítéseket a böngésző kérésében.',
+    'notify.state.granted': 'Bekapcsolva. Az Anthkeys küldhet Önnek értesítéseket.',
+    'notify.state.denied': 'Letiltva. Engedélyezze az értesítéseket ehhez a webhelyhez a böngésző beállításaiban.',
+    'notify.state.unsupported': 'Ez a böngésző nem tudja megjeleníteni az értesítéseket.',
+    'notify.state.off': 'Engedélyezve, de kikapcsolva.',
+    'notify.time': 'Napi tipp ekkor:',
+    'notify.test': 'Tesztértesítés küldése',
+    'notify.note': 'Tippek k\u00F6ld\u0151k, am\u00EDgy az oldal nyitva van. Chrome-ban telep\u00EDtve akkor is \u00E9rkezhetnek, ha az oldal z\u00E1rt, de a b\u00F6ngyel\u0151\u0151 d\u00F6nti az id\u0151pontot, \u00E9s kihagyhat egy napot.',
+    'notify.tip.title': 'A mai gyorsbillentyű',
+    'notify.test.title': 'Tesztértesítés',
+    'notify.test.body': 'Az értesítések működnek.',
+    'notify.update.title': 'Frissítés elérhető',
+    'notify.update.body': 'Az Anthkeys v{ver} készen áll. Nyissa meg a frissítéshez.',
     'mod.label': 'Módosító',
     'title': 'Billentyűparancsok',
     'subtitle': 'Közös parancsikonok minden platformhoz',
@@ -4234,6 +4384,21 @@ i18n.hu = {
 };;
 
 i18n.it = {
+    'setting.notifications': 'Notifiche',
+    'notify.label': 'Inviami notifiche',
+    'notify.state.default': 'Attiva l’interruttore e consenti le notifiche nella richiesta del browser.',
+    'notify.state.granted': 'Attivo. Anthkeys può inviarti notifiche.',
+    'notify.state.denied': 'Bloccato. Consenti le notifiche per questo sito nelle impostazioni del browser.',
+    'notify.state.unsupported': 'Questo browser non può mostrare notifiche.',
+    'notify.state.off': 'Consentito, ma disattivato.',
+    'notify.time': 'Suggerimento quotidiano alle',
+    'notify.test': 'Invia una notifica di prova',
+    'notify.note': 'I promemoria vengono inviati mentre questo sito \u00E8 aperto. Installato su Chrome possono arrivare anche a sito chiuso, ma il browser sceglie l\u2019ora e pu\u00F2 saltare un giorno.',
+    'notify.tip.title': 'La tua scorciatoia di oggi',
+    'notify.test.title': 'Notifica di prova',
+    'notify.test.body': 'Le notifiche funzionano.',
+    'notify.update.title': 'Aggiornamento disponibile',
+    'notify.update.body': 'Anthkeys v{ver} è pronta. Aprila per aggiornare.',
     'mod.label': 'Modificatore',
     'title': 'Scorciatoie',
     'subtitle': 'Scorciatoie comuni per ogni piattaforma',
@@ -4657,6 +4822,21 @@ i18n.it = {
 };;
 
 i18n.ja = {
+    'setting.notifications': '通知',
+    'notify.label': '通知を受け取る',
+    'notify.state.default': 'スイッチをオンにして、ブラウザの案内で通知を許可してください。',
+    'notify.state.granted': 'オンです。Anthkeys は通知を送信できます。',
+    'notify.state.denied': 'ブロックされています。ブラウザーの設定でこのサイトの通知を許可してください。',
+    'notify.state.unsupported': 'このブラウザーは通知を表示できません。',
+    'notify.state.off': '許可されていますが、オフになっています。',
+    'notify.time': '毎日のヒントの時刻',
+    'notify.test': 'テスト通知を送る',
+    'notify.note': '\u30C8\u30A4\u30D7\u306F\u3053\u306E\u30B5\u30A4\u30C8\u3092\u958B\u3044\u3066\u3044\u308B\u9593\u306B\u9001\u4FE1\u3055\u308C\u307E\u3059\u3002Chrome\u306B\u30A4\u30F3\u30B9\u30C8\u30FC\u30EB\u3059\u308B\u3068\u3001\u30B5\u30A4\u30C8\u3092\u9589\u3058\u3066\u3044\u3066\u3082\u5C4A\u304D\u307E\u3059\u304C\u3001\u6642\u9593\u306F\u30D6\u30E9\u30A6\u30B6\u304C\u6C7A\u3081\u3001\u65E5\u5B66\u3092\u30B9\u30AD\u30C3\u30D7\u3059\u308B\u3053\u3068\u304C\u3042\u308A\u307E\u3059\u3002',
+    'notify.tip.title': '今日のショートカット',
+    'notify.test.title': 'テスト通知',
+    'notify.test.body': '通知は正常に動作しています。',
+    'notify.update.title': 'アップデートがあります',
+    'notify.update.body': 'Anthkeys v{ver} の準備ができました。開いて更新してください。',
     'mod.label': '修飾キー',
     'title': 'ショートカット',
     'subtitle': '各プラットフォームの一般的なショートカット',
@@ -5080,6 +5260,21 @@ i18n.ja = {
 };;
 
 i18n.ko = {
+    'setting.notifications': '알림',
+    'notify.label': '알림 받기',
+    'notify.state.default': '스위치를 켜고 브라우저의 안내에서 알림을 허용하세요.',
+    'notify.state.granted': '켜짐. Anthkeys가 알림을 보낼 수 있습니다.',
+    'notify.state.denied': '차단됨. 브라우저 설정에서 이 사이트의 알림을 허용하세요.',
+    'notify.state.unsupported': '이 브라우저는 알림을 표시할 수 없습니다.',
+    'notify.state.off': '허용되었지만 꺼져 있습니다.',
+    'notify.time': '매일 팁 알림 시간',
+    'notify.test': '테스트 알림 보내기',
+    'notify.note': '\uD78C\uD2B8\uB294 \uC774 \uC0C1\uD0DC\uB97C \uC5F4\uC5B4 \uC788\uC744 \uB2F9\uC2DC\uC5D0 \uC804\uB2EC\uB429\uB2C8\uB2E4. Chrome\uC5D0 \uC124\uCE58\uD558\uBA74 \uC0C1\uD0DC\uB97C \uB2EB\uC740 \uC0C1\uD0DC\uC5D0\uC11C\uB3C4 \uC801\uC740\uB2EC, \uC2DC\uAC04\uC740 \uBE0C\uB77C\uC6B0\uC800\uAC00 \uC81C\uC77C\uD558\uACE0 \uD558\uB8E8 \uC548\uB2A5\uD788 \uC218\uC788\uC2B5\uB2C8\uB2E4.',
+    'notify.tip.title': '오늘의 단축키',
+    'notify.test.title': '테스트 알림',
+    'notify.test.body': '알림이 정상적으로 작동합니다.',
+    'notify.update.title': '업데이트 사용 가능',
+    'notify.update.body': 'Anthkeys v{ver}가 준비되었습니다. 열어서 업데이트하세요.',
     'mod.label': '보조 키',
     'title': '단축키',
     'subtitle': '각 플래폼의 일반적인 단축키',
@@ -5503,6 +5698,21 @@ i18n.ko = {
 };;
 
 i18n.nl = {
+    'setting.notifications': 'Meldingen',
+    'notify.label': 'Stuur mij meldingen',
+    'notify.state.default': 'Zet de schakelaar aan en sta meldingen toe in de melding van de browser.',
+    'notify.state.granted': 'Aan. Anthkeys kan je meldingen sturen.',
+    'notify.state.denied': 'Geblokkeerd. Sta meldingen voor deze site toe in de browserinstellingen.',
+    'notify.state.unsupported': 'Deze browser kan geen meldingen tonen.',
+    'notify.state.off': 'Toegestaan, maar uitgeschakeld.',
+    'notify.time': 'Dagelijkse tip om',
+    'notify.test': 'Een testmelding sturen',
+    'notify.note': 'Herinneringen worden verstuurd zolang deze site open is. Ge\u00EFnstalleerd in Chrome kunnen ze ook bij een gesloten site aankomen, maar de browser bepaalt het tijdstip en slaat soms een dag over.',
+    'notify.tip.title': 'Je snelktoets van vandaag',
+    'notify.test.title': 'Testmelding',
+    'notify.test.body': 'Meldingen werken.',
+    'notify.update.title': 'Update beschikbaar',
+    'notify.update.body': 'Anthkeys v{ver} staat klaar. Open hem om bij te werken.',
     'mod.label': 'Modifier',
     'title': 'Sneltoetsen',
     'subtitle': 'Algemene snelkoppelingen voor elk platform',
@@ -5926,6 +6136,21 @@ i18n.nl = {
 };;
 
 i18n.no = {
+    'setting.notifications': 'Varsler',
+    'notify.label': 'Send meg varsler',
+    'notify.state.default': 'Slå på bryteren og tillat varsler i nettleserens forespørsel.',
+    'notify.state.granted': 'På. Anthkeys kan sende deg varsler.',
+    'notify.state.denied': 'Blokkert. Tillat varsler for dette nettstedet i nettleserinnstillingene.',
+    'notify.state.unsupported': 'Denne nettleseren kan ikke vise varsler.',
+    'notify.state.off': 'Tillatt, men av.',
+    'notify.time': 'Daglig tips kl.',
+    'notify.test': 'Send en testvarsel',
+    'notify.note': 'Tips sendes mens dette nettstedet er \u00E5pent. Installert i Chrome kan de komme selv n\u00E5r nettstedet er lukket, men nettleseren velger tidspunktet og kan hoppe over en dag.',
+    'notify.tip.title': 'Dagens hurtigtast',
+    'notify.test.title': 'Testvarsel',
+    'notify.test.body': 'Varsler fungerer.',
+    'notify.update.title': 'Oppdatering tilgjengelig',
+    'notify.update.body': 'Anthkeys v{ver} er klar. Åpne den for å oppdatere.',
     'mod.label': 'Modifikator',
     'title': 'Snarveier',
     'subtitle': 'Vanlige snarveier for hver plattform',
@@ -6349,6 +6574,21 @@ i18n.no = {
 };;
 
 i18n.pl = {
+    'setting.notifications': 'Powiadomienia',
+    'notify.label': 'Wysyłaj mi powiadomienia',
+    'notify.state.default': 'Włącz przełącznik i zezwól na powiadomienia w monicie przeglądarki.',
+    'notify.state.granted': 'Włączone. Anthkeys może wysyłać Ci powiadomienia.',
+    'notify.state.denied': 'Zablokowane. Zezwól na powiadomienia tej witryny w ustawieniach przeglądarki.',
+    'notify.state.unsupported': 'Ta przeglądarka nie może wyświetlać powiadomień.',
+    'notify.state.off': 'Dozwolone, ale wyłączone.',
+    'notify.time': 'Dzienna wskazówka o',
+    'notify.test': 'Wyślij powiadomienie testowe',
+    'notify.note': 'Wskaz\u00F3wki s\u0105 wysy\u0142ane s\u0105, dop\u00F3ki ta strona jest otwarta. Po instalacji w Chrome mog\u0105 tak\u017Ce dotrze\u0107 przy zamkni\u0119tej stronie, ale przegl\u0105darka decyduje o porze i mo\u017ce pomin\u0105\u0107 dzie\u0144.',
+    'notify.tip.title': 'Twój skrót na dziś',
+    'notify.test.title': 'Powiadomienie testowe',
+    'notify.test.body': 'Powiadomienia działają.',
+    'notify.update.title': 'Dostępna aktualizacja',
+    'notify.update.body': 'Anthkeys v{ver} jest gotowa. Otwórz ją, aby zaktualizować.',
     'mod.label': 'Modyfikator',
     'title': 'Skróty',
     'subtitle': 'Typowe skróty dla każdej platformy',
@@ -6772,6 +7012,21 @@ i18n.pl = {
 };;
 
 i18n.pt = {
+    'setting.notifications': 'Notificações',
+    'notify.label': 'Enviar-me notificações',
+    'notify.state.default': 'Ative o interruptor e permita as notificações no pedido do navegador.',
+    'notify.state.granted': 'Ligado. O Anthkeys pode enviar-te notificações.',
+    'notify.state.denied': 'Bloqueado. Permite as notificações deste site nas definições do navegador.',
+    'notify.state.unsupported': 'Este navegador não consegue mostrar notificações.',
+    'notify.state.off': 'Permitido, mas desligado.',
+    'notify.time': 'Dica diária às',
+    'notify.test': 'Enviar uma notificação de teste',
+    'notify.note': 'Os lembretes s\u00E3o enviados enquanto este site estiver aberto. Instalado no Chrome, tamb\u00E9m podem chegar com o site fechado, mas o navegador escolhe a hora e pode pular um dia.',
+    'notify.tip.title': 'A tua atalho de hoje',
+    'notify.test.title': 'Notificação de teste',
+    'notify.test.body': 'As notificações estão a funcionar.',
+    'notify.update.title': 'Atualização disponível',
+    'notify.update.body': 'O Anthkeys v{ver} está pronto. Abre-o para atualizar.',
     'mod.label': 'Modificador',
     'title': 'Atalhos',
     'subtitle': 'Atalhos comuns para todas as plataformas',
@@ -7195,6 +7450,21 @@ i18n.pt = {
 };;
 
 i18n.ru = {
+    'setting.notifications': 'Уведомления',
+    'notify.label': 'Присылать мне уведомления',
+    'notify.state.default': 'Включите переключатель и разрешите уведомления в запросе браузера.',
+    'notify.state.granted': 'Включено. Anthkeys может присылать вам уведомления.',
+    'notify.state.denied': 'Заблокировано. Разрешите уведомления для этого сайта в настройках браузера.',
+    'notify.state.unsupported': 'Этот браузер не может показывать уведомления.',
+    'notify.state.off': 'Разрешено, но выключено.',
+    'notify.time': 'Совет дня в',
+    'notify.test': 'Отправить тестовое уведомление',
+    'notify.note': '\u0421\u043E\u0432\u0435\u0442\u044B \u043E\u0442\u043F\u0440\u0430\u0432\u043B\u044F\u044E\u0442\u0441\u044F, \u043F\u043E\u043A\u0430 \u044D\u0442\u043E\u0442 \u0441\u0430\u0439\u0442 \u043E\u0442\u043A\u0440\u044B\u0442. \u0415\u0441\u043B\u0438 \u0443\u0441\u0442\u0430\u043D\u043E\u0432\u0438\u0442\u044C \u0432 Chrome, \u043E\u043D\u0438 \u043C\u043E\u0433\u0443\u0442 \u043F\u0440\u0438\u0445\u043E\u0434\u0438\u0442\u044C \u0438 \u043F\u0440\u0438 \u0437\u0430\u043A\u0440\u044B\u0442\u043E\u043C \u0441\u0430\u0439\u0442\u0435, \u043D\u043E \u0431\u0440\u0430\u0443\u0437\u0435\u0440 \u0441\u0430\u043C \u0432\u044B\u0431\u0438\u0440\u0430\u0435\u0442 \u0432\u0440\u0435\u043C\u044F \u0438 \u043C\u043E\u0436\u0435\u0442 \u043F\u0440\u043E\u043F\u0443\u0441\u0442\u0438\u0442\u044C \u0434\u0435\u043D\u044C.',
+    'notify.tip.title': 'Ваше сочетание на сегодня',
+    'notify.test.title': 'Тестовое уведомление',
+    'notify.test.body': 'Уведомления работают.',
+    'notify.update.title': 'Доступно обновление',
+    'notify.update.body': 'Anthkeys v{ver} готова. Откройте её, чтобы обновиться.',
     'mod.label': 'Модификатор',
     'title': 'Сочетания клавиш',
     'subtitle': 'Основные сочетания для каждой платформы',
@@ -7618,6 +7888,21 @@ i18n.ru = {
 };;
 
 i18n.sv = {
+    'setting.notifications': 'Aviseringar',
+    'notify.label': 'Skicka aviseringar till mig',
+    'notify.state.default': 'Slå på reglaget och tillåt aviseringar i webbläsarens fråga.',
+    'notify.state.granted': 'På. Anthkeys kan skicka aviseringar till dig.',
+    'notify.state.denied': 'Blockerad. Tillåt aviseringar för den här webbplatsen i webbläsarens inställningar.',
+    'notify.state.unsupported': 'Den här webbläsaren kan inte visa aviseringar.',
+    'notify.state.off': 'Tillåten, men avstängd.',
+    'notify.time': 'Dagligt tips kl.',
+    'notify.test': 'Skicka en testavisering',
+    'notify.note': 'Tips skickas medan webbplatsen \u00E4r \u00F6ppen. Installerad i Chrome kan de \u00E4ven komma n\u00E4r webbplatsen \u00E4r st\u00E4ngd, men webbl\u00E4saren v\u00E4ljer tidpunkten och kan hoppa \u00F6ver en dag.',
+    'notify.tip.title': 'Dagens genväg',
+    'notify.test.title': 'Testavisering',
+    'notify.test.body': 'Aviseringar fungerar.',
+    'notify.update.title': 'Uppdatering tillgänglig',
+    'notify.update.body': 'Anthkeys v{ver} är klar. Öppna den för att uppdatera.',
     'mod.label': 'Modifierare',
     'title': 'Kortkommandon',
     'subtitle': 'Vanliga genvägar för varje plattform',
@@ -8041,6 +8326,21 @@ i18n.sv = {
 };;
 
 i18n.tr = {
+    'setting.notifications': 'Bildirimler',
+    'notify.label': 'Bana bildirim gönder',
+    'notify.state.default': 'Anahtarı aç ve tarayıcı isteminde bildirimlere izin ver.',
+    'notify.state.granted': 'Açık. Anthkeys sana bildirim gönderebilir.',
+    'notify.state.denied': 'Engellendi. Tarayıcı ayarlarından bu site için bildirimlere izin ver.',
+    'notify.state.unsupported': 'Bu tarayıcı bildirim gösteremez.',
+    'notify.state.off': 'İzin verildi, ancak kapalı.',
+    'notify.time': 'Günlük ipucu saati',
+    'notify.test': 'Test bildirimi gönder',
+    'notify.note': 'Hat\u0131rlatlar bu site a\u00E7\u0131kken g\u00F6nderildi\u011Fi s\u00FCrece g\u00F6nderilir. Chrome\'a kuruldu\u011Fundaysa site kapal\u0131yken de gelebilir, ancak taray\u0131c\u0131 saati se\u00E7er ve bir g\u00FCn\u00FC atlayabilir.',
+    'notify.tip.title': 'Bugünün kısayolun',
+    'notify.test.title': 'Test bildirimi',
+    'notify.test.body': 'Bildirimler çalışıyor.',
+    'notify.update.title': 'Güncelleme var',
+    'notify.update.body': 'Anthkeys v{ver} hazır. Güncellemek için aç.',
     'mod.label': 'Değiştirici',
     'title': 'Kısayollar',
     'subtitle': 'Her platform için ortak kısayollar',
@@ -8465,6 +8765,21 @@ i18n.tr = {
 };
 
 i18n.vi = {
+    'setting.notifications': 'Thông báo',
+    'notify.label': 'Gửi cho tôi thông báo',
+    'notify.state.default': 'Bật công tắc và cho phép thông báo trong lời nhắc của trình duyệt.',
+    'notify.state.granted': 'Đang bật. Anthkeys có thể gửi thông báo cho bạn.',
+    'notify.state.denied': 'Đã chặn. Hãy cho phép thông báo cho trang này trong cài đặt trình duyệt.',
+    'notify.state.unsupported': 'Trình duyệt này không thể hiển thị thông báo.',
+    'notify.state.off': 'Đã cho phép, nhưng đang tắt.',
+    'notify.time': 'Mẹo hằng ngày lúc',
+    'notify.test': 'Gửi thông báo thử',
+    'notify.note': 'M\u1ED9i ti\u1EBFp \u0111\u01B0\u1EE3c g\u1EE5i khi trang n\u00E0y \u0111ang m\u1EDF. N\u1EBFu c\u00E0i \u0111\u1EB5t Chrome, ch\u00FAng c\u00F3 th\u1EC3 g\u1EE1i c\u00E1 khi \u0111\u00F3ng m\u1EDF trang, nh\u01B0ng tr\u00ECnh duy\u1EC7t s\u1EED quy\u1EBFt \u0111\u1ED7 v\u00E0 c\u00F3 th\u1EC3 b\u1ECB qua m\u1ED9t ng\u00E0y.',
+    'notify.tip.title': 'Phím tắt hôm nay',
+    'notify.test.title': 'Thông báo thử',
+    'notify.test.body': 'Thông báo đang hoạt động.',
+    'notify.update.title': 'Đã có bản cập nhật',
+    'notify.update.body': 'Anthkeys v{ver} đã sẵn sàng. Hãy mở để cập nhật.',
     'mod.label': 'Phím bổ trợ',
     'title': 'Lối tắt',
     'subtitle': 'Phím tắt phổ biến cho mọi nền tảng',
@@ -8906,6 +9221,7 @@ function applyLanguage(lang) {
     if (val) el.setAttribute('placeholder', val);
   });
   applyWhatsNewLanguage(lang);
+  renderNotifyUI();
 }
 
 function applyWhatsNewLanguage(lang) {
@@ -9409,7 +9725,236 @@ if (autoLang) {
   }
 })();
 
-applyLanguage('en');
+// ---- Notifications (daily tip + new version) ----
+function currentLang() {
+  const sel = document.querySelector('[data-lang].active')?.dataset.lang || 'auto';
+  if (sel !== 'auto') return sel;
+  const nav = (navigator.language || 'en').split('-')[0];
+  return (typeof i18n !== 'undefined' && i18n[nav]) ? nav : 'en';
+}
+
+const NOTIFY = {
+  read() {
+    try { return JSON.parse(lsGet('anthkeys-notify') || '{}') || {}; } catch(e) { return {}; }
+  },
+  isEnabled() { return NOTIFY.read().enabled === true; },
+  getTime() { return NOTIFY.read().time || '09:00'; },
+  getLastDay() { return NOTIFY.read().lastDay || ''; },
+  set(patch) {
+    lsSet('anthkeys-notify', JSON.stringify(Object.assign(NOTIFY.read(), patch)));
+  }
+};
+
+const notifySupported = 'Notification' in window && 'serviceWorker' in navigator;
+let notifyTimer = null;
+
+function notifyState() {
+  if (!notifySupported) return 'unsupported';
+  return Notification.permission;
+}
+
+function notifyText(key, fallback) {
+  const d = (typeof i18n !== 'undefined' && i18n[currentLang()]) || {};
+  const en = (typeof i18n !== 'undefined' && i18n.en) || {};
+  return d[key] || en[key] || fallback;
+}
+
+async function sendNotification(id, title, body, tag, force) {
+  if (!force && !NOTIFY.isEnabled()) return false;
+  if (notifyState() !== 'granted') return false;
+  try {
+    const reg = await navigator.serviceWorker.getRegistration();
+    if (!reg) return false;
+    const opts = {
+      body: body,
+      icon: 'icon-192.png',
+      badge: 'icon-192.png',
+      tag: tag || id,
+      renotify: false,
+      data: { url: 'anthkeys.html' }
+    };
+    if (document.body.classList.contains('dark')) opts.theme = 'dark';
+    await reg.showNotification(title, opts);
+    return true;
+  } catch(e) {
+    return false;
+  }
+}
+
+async function requestNotifyPermission() {
+  if (!notifySupported) return 'unsupported';
+  if (Notification.permission === 'granted') return 'granted';
+  try {
+    return await Notification.requestPermission();
+  } catch(e) {
+    return Notification.permission;
+  }
+}
+
+function todayKey() {
+  const d = new Date();
+  return d.getFullYear() + '-' + (d.getMonth() + 1) + '-' + d.getDate();
+}
+
+function randomTip() {
+  const panel = document.querySelector('.panel.active') || document.getElementById('windows');
+  const tips = [];
+  let curApp = '';
+  const inApps = panel && panel.id === 'apps';
+  if (panel) {
+    panel.querySelectorAll('tbody tr').forEach(tr => {
+      if (tr.classList.contains('category')) {
+        if (inApps) {
+          const c = tr.querySelector('td');
+          if (c) curApp = c.textContent.trim();
+        }
+        return;
+      }
+      const a = tr.querySelector('td:first-child');
+      const k = tr.querySelector('td:last-child');
+      if (!a || !k) return;
+      const action = a.textContent.trim();
+      const anthkey = k.textContent.trim();
+      if (action && anthkey) tips.push(inApps && curApp ? curApp + ' — ' + action + ' — ' + anthkey : action + ' — ' + anthkey);
+    });
+  }
+  if (!tips.length) return null;
+  return tips[Math.floor(Math.random() * tips.length)];
+}
+
+async function deliverDailyTip() {
+  const tip = randomTip();
+  if (!tip) return;
+  const ok = await sendNotification(
+    'daily-tip',
+    notifyText('notify.tip.title', 'Today\u2019s shortcut'),
+    tip,
+    'daily-tip-' + todayKey()
+  );
+  if (ok) {
+    NOTIFY.set({ lastDay: todayKey() });
+    pushNotifyConfig();
+  }
+}
+
+function scheduleDailyTip() {
+  if (notifyTimer) { clearTimeout(notifyTimer); notifyTimer = null; }
+  if (!notifySupported || !NOTIFY.isEnabled() || notifyState() !== 'granted') return;
+
+  const m = /^(\d{1,2}):(\d{2})$/.exec(NOTIFY.getTime());
+  const hh = m ? Math.min(23, Math.max(0, parseInt(m[1], 10))) : 9;
+  const mm = m ? Math.min(59, Math.max(0, parseInt(m[2], 10))) : 0;
+
+  const now = new Date();
+  const next = new Date(now.getFullYear(), now.getMonth(), now.getDate(), hh, mm, 0, 0);
+  if (next <= now) next.setDate(next.getDate() + 1);
+
+  if (next.getTime() - now.getTime() > 2147483647) return;
+  notifyTimer = setTimeout(() => {
+    notifyTimer = null;
+    if (NOTIFY.getLastDay() === todayKey()) { scheduleDailyTip(); return; }
+    deliverDailyTip().then(() => scheduleDailyTip());
+  }, next - now);
+}
+
+async function pushNotifyConfig() {
+  if (!notifySupported || !NOTIFY.isEnabled()) return;
+  try {
+    const reg = await navigator.serviceWorker.ready;
+    const sw = reg.active || navigator.serviceWorker.controller;
+    if (!sw) return;
+    sw.postMessage({
+      type: 'NOTIFY_SCHEDULE',
+      time: NOTIFY.getTime(),
+      lastDay: NOTIFY.getLastDay(),
+      tip: randomTip(),
+      title: notifyText('notify.tip.title', 'Today\u2019s shortcut'),
+      dark: document.body.classList.contains('dark')
+    });
+  } catch(e) { }
+}
+
+async function unregisterPeriodicSync() {
+  try {
+    const reg = await navigator.serviceWorker.ready;
+    if (reg.periodicSync && typeof reg.periodicSync.unregister === 'function') {
+      await reg.periodicSync.unregister('anthkeys-daily-tip');
+    }
+  } catch(e) { }
+}
+
+async function registerPeriodicSync() {
+  if (!notifySupported || !NOTIFY.isEnabled() || notifyState() !== 'granted') {
+    unregisterPeriodicSync();
+    return;
+  }
+  try {
+    const reg = await navigator.serviceWorker.ready;
+    if (!('periodicSync' in reg)) return;
+    const st = await navigator.permissions.query({ name: 'periodic-background-sync' }).catch(() => null);
+    if (st && st.state !== 'granted') return;
+    await reg.periodicSync.register('anthkeys-daily-tip', { minInterval: 24 * 60 * 60 * 1000 });
+  } catch(e) { }
+}
+
+function renderNotifyUI() {
+  const toggle = document.getElementById('toggleNotify');
+  const status = document.getElementById('notifyStatus');
+  const timeWrap = document.getElementById('notifyTimeWrap');
+  const timeInput = document.getElementById('notifyTime');
+  const testBtn = document.getElementById('btnNotifyTest');
+  const state = notifyState();
+  const on = NOTIFY.isEnabled() && state === 'granted';
+  if (toggle) {
+    toggle.classList.toggle('on', on);
+    toggle.setAttribute('aria-checked', on ? 'true' : 'false');
+  }
+  if (status) {
+    const key = (state === 'granted' && !NOTIFY.isEnabled()) ? 'notify.state.off' : 'notify.state.' + state;
+    status.textContent = notifyText(key, '');
+  }
+  if (timeInput) timeInput.value = NOTIFY.getTime();
+  if (timeWrap) timeWrap.hidden = !on;
+  if (testBtn) testBtn.hidden = state !== 'granted';
+}
+
+onId('toggleNotify', 'click', async function() {
+  const want = !this.classList.contains('on');
+  if (want) {
+    const res = await requestNotifyPermission();
+    if (res !== 'granted') {
+      NOTIFY.set({ enabled: false });
+      renderNotifyUI();
+      return;
+    }
+    NOTIFY.set({ enabled: true });
+    registerPeriodicSync();
+    pushNotifyConfig();
+  } else {
+    NOTIFY.set({ enabled: false });
+    unregisterPeriodicSync();
+  }
+  renderNotifyUI();
+  scheduleDailyTip();
+});
+
+onId('notifyTime', 'change', function() {
+  const v = this.value || '09:00';
+  NOTIFY.set({ time: v });
+  scheduleDailyTip();
+  pushNotifyConfig();
+});
+
+onId('btnNotifyTest', 'click', async function() {
+  const tip = randomTip();
+  await sendNotification(
+    'notify-test',
+    notifyText('notify.test.title', 'Test notification'),
+    tip || notifyText('notify.test.body', 'Notifications are working.'),
+    'notify-test-' + Date.now(),
+    true
+  );
+});
 
 // ---- Register service worker (PWA) + update detection ----
 let reloadOnUpdate = false;
@@ -9419,7 +9964,7 @@ if ('serviceWorker' in navigator) {
     const el = document.querySelector('[data-update-mode].active');
     return el ? el.dataset.updateMode : 'auto';
   };
-  navigator.serviceWorker.register('sw.js?v=15').then(reg => {
+  navigator.serviceWorker.register('sw.js?v=16').then(reg => {
     reg.addEventListener('updatefound', () => {
       const newSW = reg.installing;
       if (!newSW) return;
@@ -9433,6 +9978,8 @@ if ('serviceWorker' in navigator) {
         }
       });
     });
+    registerPeriodicSync();
+    pushNotifyConfig();
   }).catch(() => {});
   navigator.serviceWorker.addEventListener('controllerchange', () => {
     if (!reloadOnUpdate || refreshing) return;
@@ -9441,6 +9988,10 @@ if ('serviceWorker' in navigator) {
     location.reload();
   });
 }
+
+applyLanguage('en');
+scheduleDailyTip();
+pushNotifyConfig();
 
 // ---- Refresh for updates ----
 function refreshForUpdates() {
@@ -9653,6 +10204,12 @@ function cachedJsVersion() {
 function showUpdateNotification() {
   const badge = document.getElementById('settingsBadge');
   if (badge) badge.hidden = false;
+  sendNotification(
+    'update-' + APP_VERSION,
+    notifyText('notify.update.title', 'Update available'),
+    notifyText('notify.update.body', 'Anthkeys v{ver} is ready. Open it to update.').replace('{ver}', APP_VERSION),
+    'update-' + APP_VERSION
+  );
   const mode = (document.querySelector('[data-update-mode].active')?.dataset.updateMode) || 'auto';
   if (mode === 'ask') {
     const banner = document.getElementById('updateBanner');
