@@ -8885,7 +8885,11 @@ i18n.vi = {
     'net.android': 'Android không cho phép các trang web mở cài đặt hệ thống. Hãy mở cài đặt Wi-Fi trong ứng dụng Cài đặt của thiết bị.',
     'whatsnew.sub': 'Các thay đổi gần đây của Anthkeys',
     'whatsnew.title': 'Có gì mới'
-};;function applyLanguage(lang) {
+};
+
+let WN_ORIGINAL = null;
+
+function applyLanguage(lang) {
   const langData = i18n[lang] || {};
   const fallback = i18n.en;
   const recent = I18N_RECENT[lang];
@@ -8906,7 +8910,6 @@ i18n.vi = {
 
 function applyWhatsNewLanguage(lang) {
   const pack = (typeof I18N_WN !== 'undefined') && I18N_WN[lang];
-  if (!pack) return;
   document.querySelectorAll('.whatsnew .wn-entry').forEach(entry => {
     const verEl = entry.querySelector('.wn-ver');
     const ul = entry.querySelector('ul');
@@ -8914,9 +8917,19 @@ function applyWhatsNewLanguage(lang) {
     const ver = (verEl.firstChild && verEl.firstChild.nodeType === 3)
       ? verEl.firstChild.nodeValue.trim()
       : verEl.textContent.replace(/\s+/g, ' ').replace(/\s*\d{1,2}\s+\w+\s+\d{4}$/, '').trim();
-    const list = pack[ver];
-    if (!list) return;
+    if (!WN_ORIGINAL) WN_ORIGINAL = new Map();
+    if (!WN_ORIGINAL.has(ul)) WN_ORIGINAL.set(ul, ul.innerHTML);
     const items = ul.children;
+    if (!pack) {
+      ul.innerHTML = WN_ORIGINAL.get(ul);
+      return;
+    }
+    const list = pack[ver];
+    if (!list) {
+      ul.innerHTML = WN_ORIGINAL.get(ul);
+      return;
+    }
+    if (ul.innerHTML !== WN_ORIGINAL.get(ul)) ul.innerHTML = WN_ORIGINAL.get(ul);
     for (let i = 0; i < items.length && i < list.length; i++) {
       if (list[i]) items[i].innerHTML = list[i];
     }
