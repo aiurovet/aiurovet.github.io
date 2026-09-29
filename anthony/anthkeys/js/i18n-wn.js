@@ -8,7 +8,8 @@ const I18N_WN = window.I18N_WN || {};
 I18N_WN.es = {
   'v52.2': [
     'Nuevo: notificaciones. Actívalas en Ajustes: elige una hora y Anthkeys te enviará un consejo diario de atajo, además de un aviso cuando haya una nueva versión lista para instalar.',
-    'Nota: los consejos llegan siempre con el sitio abierto. Si lo instalas en Chrome también pueden llegar con el sitio cerrado, pero el navegador decide la hora y puede saltarse un día.'
+    'Nota: los consejos llegan siempre con el sitio abierto. Si lo instalas en Chrome también pueden llegar con el sitio cerrado, pero el navegador decide la hora y puede saltarse un día.',
+    'Nuevo: avisos de salas en directo. Un interruptor aparte te avisa cuando un dispositivo se une a tu sala o te llama, para que encuentres tu otro dispositivo aunque la pestaña esté en segundo plano.'
   ],
   'v52.1': [
     'Nuevo: la p&aacute;gina &laquo;Novedades&raquo; ya est&aacute; completamente traducida a los 20 idiomas: todas las notas de versiones anteriores se muestran en tu idioma.'
@@ -235,7 +236,8 @@ I18N_WN.es = {
 I18N_WN.fr = {
   'v52.2': [
     'Nouveau : les notifications. Activez-les dans les réglages : choisissez une heure et Anthkeys vous envoie un conseil de raccourci quotidien, ainsi qu’une alerte quand une nouvelle version est prête à être installée.',
-    'Remarque : les conseils arrivent toujours lorsque le site est ouvert. Installé sur Chrome, ils peuvent aussi arriver site fermé, mais le navigateur choisit l’heure et peut sauter un jour.'
+    'Remarque : les conseils arrivent toujours lorsque le site est ouvert. Installé sur Chrome, ils peuvent aussi arriver site fermé, mais le navigateur choisit l’heure et peut sauter un jour.',
+    'Nouveau : alertes de salon en direct. Un interrupteur distinct vous previent quand un appareil rejoint votre salon ou sonne, pour retrouver votre autre appareil même si l&rsquo;onglet est en arrière-plan.'
   ],
   'v52.1': [
     'Nouveau : la page &laquo;Nouveaut&eacute;s&raquo; est d&eacute;sormais enti&egrave;rement traduite dans les 20 langues &mdash; toutes les notes de versions pass&eacute;es s&rsquo;affichent dans votre langue.'
@@ -462,7 +464,8 @@ I18N_WN.fr = {
 I18N_WN.de = {
   'v52.2': [
     'Neu: Benachrichtigungen. Aktiviere sie in den Einstellungen – wähle eine Uhrzeit und Anthkeys sendet dir einen täglichen Tipp zum Tastenkürzel sowie einen Hinweis, wenn eine neue Version zur Installation bereitsteht.',
-    'Hinweis: Tipps kommen immer, solange die Seite geöffnet ist. Installiert in Chrome können sie auch bei geschlossener Seite ankommen, aber der Browser bestimmt die Uhrzeit und kann einen Tag überspringen.'
+    'Hinweis: Tipps kommen immer, solange die Seite geöffnet ist. Installiert in Chrome können sie auch bei geschlossener Seite ankommen, aber der Browser bestimmt die Uhrzeit und kann einen Tag überspringen.',
+    'Neu: Live-Raum-Hinweise. Ein eigener Schalter meldet, wenn ein Gerät deinem Raum beitritt oder klingelt &ndash; so findest du dein anderes Gerät auch, wenn der Tab im Hintergrund ist.'
   ],
   'v52.1': [
     'Neu: Die Seite &laquo;Neuerungen&raquo; ist jetzt in allen 20 Sprachen vollst&auml;ndig &uuml;bersetzt &mdash; jede fr&uuml;here Versionsnotiz wird in Ihrer Sprache angezeigt.'
@@ -689,7 +692,8 @@ I18N_WN.de = {
 I18N_WN.it = {
   'v52.2': [
     'Novità: le notifiche. Attivale nelle impostazioni: scegli un orario e Anthkeys ti invierà un suggerimento giornaliero sulle scorciatoie, oltre a un avviso quando una nuova versione è pronta da installare.',
-    'Nota: i suggerimenti arrivano sempre mentre il sito è aperto. Installato su Chrome possono arrivare anche a sito chiuso, ma il browser sceglie l’ora e può saltare un giorno.'
+    'Nota: i suggerimenti arrivano sempre mentre il sito è aperto. Installato su Chrome possono arrivare anche a sito chiuso, ma il browser sceglie l’ora e può saltare un giorno.',
+    'Novità: avvisi delle stanze live. Un interruttore separato ti avvisa quando un dispositivo si unisce alla tua stanza o ti chiama, così trovi l&rsquo;altro dispositivo anche con la scheda in secondo piano.'
   ],
   'v52.1': [
     'Novit&agrave;: la pagina &laquo;Novit&agrave;&raquo; &egrave; ora completamente tradotta in tutte e 20 le lingue &mdash; ogni nota di rilascio passata viene mostrata nella tua lingua.'
@@ -916,7 +920,8 @@ I18N_WN.it = {
 I18N_WN.pt = {
   'v52.2': [
     'Novo: notificações. Ative-as nas definições — escolha um horário e o Anthkeys envia uma dica diária de atalho, além de um aviso quando uma nova versão estiver pronta a instalar.',
-    'Nota: as dicas chegam sempre com o site aberto. Instalado no Chrome, também podem chegar com o site fechado, mas o navegador escolhe a hora e pode pular um dia.'
+    'Nota: as dicas chegam sempre com o site aberto. Instalado no Chrome, também podem chegar com o site fechado, mas o navegador escolhe a hora e pode pular um dia.',
+    'Novidade: avisos de salas ao vivo. Um interruptor separado avisa quando um dispositivo entra na sua sala ou liga, para encontrar o outro dispositivo mesmo com o separador em segundo plano.'
   ],
   'v52.1': [
     'Novidade: a p&aacute;gina &laquo;Novidades&raquo; agora est&aacute; totalmente traduzida em todos os 20 idiomas &mdash; cada nota de vers&atilde;o &eacute; exibida no seu idioma.'
@@ -1143,7 +1148,8 @@ I18N_WN.pt = {
 I18N_WN.nl = {
   'v52.2': [
     'Nieuw: meldingen. Zet ze aan in de instellingen — kies een tijd en Anthkeys stuurt een dagelijkse sneltoets-tip, plus een melding wanneer een nieuwe versie klaarstaat om te installeren.',
-    'Let op: tips komen altijd terwijl de site open is. Geïnstalleerd in Chrome kunnen ze ook komen als de site gesloten is, maar de browser bepaalt het tijdstip en slaat soms een dag over.'
+    'Let op: tips komen altijd terwijl de site open is. Geïnstalleerd in Chrome kunnen ze ook komen als de site gesloten is, maar de browser bepaalt het tijdstip en slaat soms een dag over.',
+    'Nieuw: meldingen voor live-ruimtes. Een eigen schakelaar meldt wanneer een apparaat je ruimte binnenkomt of belt, zodat je je andere apparaat vindt ook als het tabblad op de achtergrond staat.'
   ],
   'v52.1': [
     'Nieuw: de pagina &laquo;Nieuws&raquo; is nu volledig in alle 20 talen vertaald &mdash; elke release-notitie wordt in je eigen taal getoond.'
@@ -1370,7 +1376,8 @@ I18N_WN.nl = {
 I18N_WN.ja = {
   'v52.2': [
     '新機能：通知。設定で有効にして時刻を選ぶと、Anthkeys が毎日のショートカットのヒントを送り、新しいバージョンの準備ができたら知らせます。',
-    '注意：ヒントはサイトを開いている間に届きます。Chrome にインストールしてあればタブを閉じていても届くことがありますが、届く時刻はブラウザが決めるため、日にちを飛ばすことがあります。'
+    '注意：ヒントはサイトを開いている間に届きます。Chrome にインストールしてあればタブを閉じていても届くことがありますが、届く時刻はブラウザが決めるため、日にちを飛ばすことがあります。',
+    '新機能: ライブルームの通知。専用のスイッチで、デバイスがルームに参加したり呼びかけたりすると知らせます。タブがバックグラウンドでも別のデバイスを見つけられます。'
   ],
   'v52.1': [
     '新機能:「新着情報」ページが 20 言語すべてで完全に翻訳されました。すべてのリリースノートがお使いの言語で表示されます。'
@@ -1597,7 +1604,8 @@ I18N_WN.ja = {
 I18N_WN.ru = {
   'v52.2': [
     'Новое: уведомления. Включите их в настройках, выберите время — Anthkeys будет присылать ежедневную подсказку по горячим клавишам, а также напомнит, когда новая версия готова к установке.',
-    'Примечание: подсказки приходят, пока сайт открыт. Если Anthkeys установлен в Chrome, они могут приходить и при закрытом сайте, но время выбирает браузер, и один день может быть пропущен.'
+    'Примечание: подсказки приходят, пока сайт открыт. Если Anthkeys установлен в Chrome, они могут приходить и при закрытом сайте, но время выбирает браузер, и один день может быть пропущен.',
+    'Новое: уведомления live-комнат. Отдельный переключатель сообщает, когда устройство заходит в комнату или звонит, чтобы вы нашли второе устройство, даже если вкладка в фоне.'
   ],
   'v52.1': [
     'Новое: страница «Что нового» теперь полностью переведена на все 20 языков — каждая запись о выпуске показывается на вашем языке.'
@@ -1824,7 +1832,8 @@ I18N_WN.ru = {
 I18N_WN.ko = {
   'v52.2': [
     '새 기능: 알림. 설정에서 켜고 시간을 고르면 Anthkeys가 매일의 단축키 팁을 보내고, 새 버전이 준비되면 알려줍니다.',
-    '참고: 팁은 사이트가 열려 있을 때 도착합니다. Chrome에 설치해 두면 사이트를 닫아도 올 수 있지만, 도착 시간은 브라우저가 정해 하루를 건너뛸 수 있습니다.'
+    '참고: 팁은 사이트가 열려 있을 때 도착합니다. Chrome에 설치해 두면 사이트를 닫아도 올 수 있지만, 도착 시간은 브라우저가 정해 하루를 건너뛸 수 있습니다.',
+    '새 기능: 라이브 룸 알림. 별도 스위치로 기기가 룸에 참여하거나 호출하면 알려 줍니다. 탭이 백그라운드에 있어도 다른 기기를 찾을 수 있습니다.'
   ],
   'v52.1': [
     '새로운 기능: &laquo;새 소식&raquo; 페이지가 20개 언어 모두에서 완전 번역되었습니다. 모든 릴리스 노트가 사용자의 언어로 표시됩니다.'
@@ -2051,7 +2060,8 @@ I18N_WN.ko = {
 I18N_WN.pl = {
   'v52.2': [
     'Nowość: powiadomienia. Włącz je w ustawieniach — wybierz godzinę, a Anthkeys wyśle codzienną podpowiedź o skrócie i uprzedzi, gdy nowa wersja będzie gotowa do instalacji.',
-    'Uwaga: podpowiedzi przychodzą, gdy strona jest otwarta. Zainstalowany w Chrome mogą przyjść także przy zamkniętej stronie, ale przeglądarka decyduje o porze i może pominąć dzień.'
+    'Uwaga: podpowiedzi przychodzą, gdy strona jest otwarta. Zainstalowany w Chrome mogą przyjść także przy zamkniętej stronie, ale przeglądarka decyduje o porze i może pominąć dzień.',
+    'Nowość: powiadomienia z pokoi na żywo. Osobny przełącznik informuje, gdy urządzenie dołączy do pokoju lub zadzwoni, więc znajdziesz drugie urządzenie nawet, gdy karta jest w tle.'
   ],
   'v52.1': [
     'Nowość: strona &laquo;Co nowego&raquo; jest teraz w pełni przetłumaczona we wszystkich 20 językach — każda informacja o wydaniu wyświetla się w Twoim języku.'
@@ -2278,7 +2288,8 @@ I18N_WN.pl = {
 I18N_WN.tr = {
   'v52.2': [
     'Yeni: bildirimler. Ayarlardan aç ve bir saat seç; Anthkeys her gün bir kısayol ipucu gönderir ve yeni sürüm kurulmaya hazır olduğunda seni uyarır.',
-    'Not: ipuçları site açıkken gelir. Chrome\u2019a kuruluysa site kapalıyken de gelebilir, ancak saati tarayıcı belirler ve bir gün atlanabilir.'
+    'Not: ipuçları site açıkken gelir. Chrome\u2019a kuruluysa site kapalıyken de gelebilir, ancak saati tarayıcı belirler ve bir gün atlanabilir.',
+    'Yeni: canlı oda uyarıları. Ayrı bir düğme, bir cihaz odanıza katıldığında veya size aradığında haber verir; sekme arka plandayken bile diğer cihazınızı bulursunuz.'
   ],
   'v52.1': [
     'Yeni: &laquo;Yenilikler&raquo; sayfası artık 20 dilin tamamında eksiksiz çevrildi — her sürüm notu kendi dilinizde gösteriliyor.'
@@ -2505,7 +2516,8 @@ I18N_WN.tr = {
 I18N_WN.vi = {
   'v52.2': [
     'Mới: thông báo. Bật trong cài đặt, chọn giờ và Anthkeys sẽ gửi một mẹo phím tắt hằng ngày, cùng thông báo khi có phiên bản mới sẵn sàng cài đặt.',
-    'Lưu ý: mẹo luôn đến khi trang đang mở. Nếu đã cài trên Chrome, chúng cũng có thể đến khi trang đã đóng, nhưng trình duyệt chọn thời điểm và có thể bỏ qua một ngày.'
+    'Lưu ý: mẹo luôn đến khi trang đang mở. Nếu đã cài trên Chrome, chúng cũng có thể đến khi trang đã đóng, nhưng trình duyệt chọn thời điểm và có thể bỏ qua một ngày.',
+    'Mới: thông báo phòng trực tiếp. Công tắc riêng báo cho bạn khi một thiết bị tham gia phòng hoặc gọi cho bạn, để tìm thiết bị thứ hai dù thẻ đang ở chế độ nền.'
   ],
   'v52.1': [
     'Mới: trang &laquo;Có gì mới&raquo; hiện đã được dịch đầy đủ cho cả 20 ngôn ngữ — mọi ghi chú phát hành đều hiển thị bằng ngôn ngữ của bạn.'
@@ -2732,7 +2744,8 @@ I18N_WN.vi = {
 I18N_WN.ar = {
   'v52.2': [
     'جديد: الإشعارات. فعّلها من الإعدادات واختر وقتًا، فيرسل Anthkeys تلميحًا يوميًا عن مفتاح الاختصار، وينبّهك أيضًا عند توفر إصدار جديد للتثبيت.',
-    'ملاحظة: تصل التلميحات ما دام الموقع مفتوحًا. وإذا ثبّتته على Chrome فقد تصل أيضًا والموقع مغلق، لكن المتصفح يختار الوقت وقد يتخطى يومًا.'
+    'ملاحظة: تصل التلميحات ما دام الموقع مفتوحًا. وإذا ثبّتته على Chrome فقد تصل أيضًا والموقع مغلق، لكن المتصفح يختار الوقت وقد يتخطى يومًا.',
+    'جديد: تنبيهات الغرف المباشرة. مفتاح منفصل يخبرك عندما ينضم جهاز إلى غرفتك أو يرنّها، لتجد جهازك الآخر حتى عندما تكون الصفحة في الخلفية.'
   ],
   'v52.1': [
     'جديد: أصبحت صفحة &laquo;ما الجديد&raquo; مترجمة بالكامل إلى جميع اللغات الـ20 — كل ملاحظات الإصدار تظهر بلغتك.'
@@ -2959,7 +2972,8 @@ I18N_WN.ar = {
 I18N_WN.hi = {
   'v52.2': [
     'नया: सूचनाएँ। सेटिंग्स में चालू करें और समय चुनें — Anthkeys रोज़ाना एक शॉर्टकट टिप भेजेगा, और नया संस्करण इंस्टॉल के लिए तैयार होने पर सूचित करेगा।',
-    'ध्यान दें: टिप तब तक आती हैं जब तक यह साइट खुली है। Chrome में इंस्टॉल करने पर वे बंद होने पर भी आ सकती हैं, लेकिन समय ब्राउज़र तय करता है और एक दिन छूट सकता है।'
+    'ध्यान दें: टिप तब तक आती हैं जब तक यह साइट खुली है। Chrome में इंस्टॉल करने पर वे बंद होने पर भी आ सकती हैं, लेकिन समय ब्राउज़र तय करता है और एक दिन छूट सकता है।',
+    'नया: लाइव रूम सूचनाएँ। एक अलग स्विच आपको बताता है जब कोई डिवाइस आपके रूम में जुड़े या आपको रिंग करे, ताकि टैब बैकग्राउंड में होने पर भी आप अपना दूसरा डिवाइस ढूँढ सकें।'
   ],
   'v52.1': [
     'नया: &laquo;नया क्या है&raquo; पेज अब सभी 20 भाषाओं में पूरी तरह अनूदित है — हर रिलीज़ नोट आपकी भाषा में दिखता है।'
@@ -3186,7 +3200,8 @@ I18N_WN.hi = {
 I18N_WN.sv = {
   'v52.2': [
     'Nytt: aviseringar. Slå på dem i inställningarna — välj en tid så skickar Anthkeys ett dagligt snabbkommandotips och meddelar när en ny version är klar att installera.',
-    'Obs: tipsen kommer medan webbplatsen är öppen. Installerat i Chrome kan de komma även när webbplatsen är stängd, men webbläsaren väljer tidpunkten och kan hoppa över en dag.'
+    'Obs: tipsen kommer medan webbplatsen är öppen. Installerat i Chrome kan de komma även när webbplatsen är stängd, men webbläsaren väljer tidpunkten och kan hoppa över en dag.',
+    'Nytt: aviseringar för live-rum. En egen strömbrytare säger till när en enhet ansluter till ditt rum eller ringer, så du hittar din andra enhet även när fliken är i bakgrunden.'
   ],
   'v52.1': [
     'Nytt: sidan &laquo;Vad är nytt&raquo; är nu helt översatt för alla 20 språk — allaversionsnoter visas på ditt språk.'
@@ -3413,7 +3428,8 @@ I18N_WN.sv = {
 I18N_WN.da = {
   'v52.2': [
     'Nyt: notifikationer. Slå dem til i indstillingerne — vælg et tidspunkt, så sender Anthkeys et dagligt genvejstip og giver besked, når en ny version er klar til installation.',
-    'Bemærk: tips sendes, mens webstedet er åbent. Installeret i Chrome kan de også komme, mens webstedet er lukket, men browseren vælger tidspunktet og kan springe en dag over.'
+    'Bemærk: tips sendes, mens webstedet er åbent. Installeret i Chrome kan de også komme, mens webstedet er lukket, men browseren vælger tidspunktet og kan springe en dag over.',
+    'Nyt: live-rum notifikationer. En separat knap fortæller dig, når en enhed tilslutter dit rum eller ringer, så du kan finde din anden enhed, selv når fanen er i baggrunden.'
   ],
   'v52.1': [
     'Nyt: siden &laquo;Hvad er nyt&raquo; er nu fuldt oversat på alle 20 sprog — alle udgivelsesnoter vises på dit sprog.'
@@ -3640,7 +3656,8 @@ I18N_WN.da = {
 I18N_WN.fi = {
   'v52.2': [
     'Uusi: ilmoitukset. Ota ne käyttöön asetuksissa — valitse kellonaika, niin Anthkeys lähettää päivittäisen pikanäppäysvinkin ja ilmoittaa, kun uusi versio on valmis asennettavaksi.',
-    'Huomaa: vinkit tulevat, kun sivusto on auki. Asennettuna Chromeen ne voivat tulla vaikka sivusto olisi kiinni, mutta selain päättää ajan ja voi ohittaa päivän.'
+    'Huomaa: vinkit tulevat, kun sivusto on auki. Asennettuna Chromeen ne voivat tulla vaikka sivusto olisi kiinni, mutta selain päättää ajan ja voi ohittaa päivän.',
+    'Uutta: live-tilojen ilmoitukset. Erillinen kytkin kertoo, kun laite liittyy huoneeseesi tai soittaa sinulle, joten löydät toisen laitteesi myös kun välilehti on taustalla.'
   ],
   'v52.1': [
     'Uusi: sivu &laquo;Mitä uutta&raquo; on nyt käännetty kokonaan kaikille 20 kielelle — jokainen julkaisumerkintä näkyy omalla kielelläsi.'
@@ -3867,7 +3884,8 @@ I18N_WN.fi = {
 I18N_WN.no = {
   'v52.2': [
     'Nytt: varsler. Slå dem på i innstillingene — velg et tidspunkt, så sender Anthkeys et daglig hurtigtast tips og gir beskjed når en ny versjon er klar til installasjon.',
-    'Merk: tips sendes mens nettstedet er åpent. Installert i Chrome kan de komme selv når nettstedet er lukket, men nettleseren velger tidspunktet og kan hoppe over en dag.'
+    'Merk: tips sendes mens nettstedet er åpent. Installert i Chrome kan de komme selv når nettstedet er lukket, men nettleseren velger tidspunktet og kan hoppe over en dag.',
+    'Nytt: varsler for live-rom. En egen bryter sier fra når en enhet blir med i rommet ditt eller ringer, slik at du finner den andre enheten også når fanen er i bakgrunnen.'
   ],
   'v52.1': [
     'Nytt: siden &laquo;Hva er nytt&raquo; er nå oversatt for alle 20 språk — alle utgivelsesnotater vises på ditt språk.'
@@ -4094,7 +4112,8 @@ I18N_WN.no = {
 I18N_WN.cs = {
   'v52.2': [
     'Novinka: oznámení. Zapněte je v nastavení — zvolte čas a Anthkeys vám pošle denní tip zkratky a upozorní, až bude připravena nová verze k instalaci.',
-    'Poznámka: tipy chodí, dokud je web otevřený. Nainstalováno v Chromu mohou dorazit i při zavřeném webu, ale prohlížeč určí čas a může přeskočit den.'
+    'Poznámka: tipy chodí, dokud je web otevřený. Nainstalováno v Chromu mohou dorazit i při zavřeném webu, ale prohlížeč určí čas a může přeskočit den.',
+    'Nové: upozornění živých místností. Samostatný přepínač vás upozorní, když se do místnosti připojí zařízení nebo zazvoní, takže najdete své druhé zařízení i když je panel v pozadí.'
   ],
   'v52.1': [
     'Nové: stránka &laquo;Co je nového&raquo; je nyní plně přeložena do všech 20 jazyků — každá poznámka k vydání se zobrazí ve vašem jazyce.'
@@ -4321,7 +4340,8 @@ I18N_WN.cs = {
 I18N_WN.hu = {
   'v52.2': [
     'Új: értesítések. Kapcsold be őket a beállításokban — válassz időpontot, és az Anthkeys napi gyorsbillentyű-tippet küld, valamint szól, amikor új verzió telepíthető.',
-    'Megjegyzés: a tippek akkor érkeznek, amikor az oldal nyitva van. Chrome-ban telepítve akkor is jöhetnek, ha zárva van, de a böngésző dönti el az időpontot, és egy napot kihagyhat.'
+    'Megjegyzés: a tippek akkor érkeznek, amikor az oldal nyitva van. Chrome-ban telepítve akkor is jöhetnek, ha zárva van, de a böngésző dönti el az időpontot, és egy napot kihagyhat.',
+    'Új: élő szobák értesítései. Külön kapcsoló jelzi, ha egy eszköz csatlakozik a szobádhoz vagy csenget, így a másik eszközödet akkor is megtalálod, ha a lap a háttérben van.'
   ],
   'v52.1': [
     'Új: a &laquo;Mi az új?&raquo; oldal mostantól mind a 20 nyelven teljesen le van fordítva — minden kiadási megjegyzés a te nyelveden jelenik meg.'

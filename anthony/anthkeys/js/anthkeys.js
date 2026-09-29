@@ -20,6 +20,12 @@ const i18n = {
     'notify.test.body': 'Notifications are working.',
     'notify.update.title': 'Update available',
     'notify.update.body': 'Anthkeys v{ver} is ready. Open it to update.',
+    'notify.rooms': 'Live room alerts',
+    'notify.rooms-note': 'Tell me when a device joins your room or rings it.',
+    'notify.room.join.title': 'Device joined',
+    'notify.room.join.body': '{0} joined your room',
+    'notify.room.ring.title': 'Ring',
+    'notify.room.ring.body': '{0} is looking for you',
     'mod.label': 'Modifier',
     'title': 'Shortcuts',
     'page.title': 'Shortcuts - Anthkeys',
@@ -456,6 +462,12 @@ i18n.ar = {
     'notify.test.body': 'الإشعارات تعمل.',
     'notify.update.title': 'يتوفر تحديث',
     'notify.update.body': 'Anthkeys v{ver} جاهزة. افتحها للتحديث.',
+    'notify.rooms': 'تنبيهات الغرف المباشرة',
+    'notify.rooms-note': 'أخبرني عندما ينضم جهاز إلى غرفتك أو يرنّها.',
+    'notify.room.join.title': 'انضم جهاز',
+    'notify.room.join.body': 'انضم {0} إلى غرفتك',
+    'notify.room.ring.title': 'رنّة',
+    'notify.room.ring.body': '{0} يبحث عنك',
     'mod.label': 'مُعدِّل',
     'title': 'اختصارات',
     'subtitle': 'اختصارات شائعة لكل منصة',
@@ -894,6 +906,12 @@ i18n.cs = {
     'notify.test.body': 'Oznámení fungují.',
     'notify.update.title': 'Dostupná aktualizace',
     'notify.update.body': 'Anthkeys v{ver} je připravená. Otevřete ji pro aktualizaci.',
+    'notify.rooms': 'Upozornění živých místností',
+    'notify.rooms-note': 'Informujte mě, když se do místnosti připojí zařízení nebo zazvoní.',
+    'notify.room.join.title': 'Připojeno zařízení',
+    'notify.room.join.body': '{0} se připojil k vaší místnosti',
+    'notify.room.ring.title': 'Zvonění',
+    'notify.room.ring.body': '{0} vás hledá',
     'mod.label': 'Modifikátor',
     'title': 'Zkratky',
     'subtitle': 'Vanliga genvägar för varje plattform',
@@ -1332,6 +1350,12 @@ i18n.da = {
     'notify.test.body': 'Notifikationer virker.',
     'notify.update.title': 'Opdatering tilgængelig',
     'notify.update.body': 'Anthkeys v{ver} er klar. Åbn den for at opdatere.',
+    'notify.rooms': 'Notifikationer fra live-rum',
+    'notify.rooms-note': 'Giv mig besked, når en enhed tilslutter dit rum eller ringer.',
+    'notify.room.join.title': 'Enhed tilsluttet',
+    'notify.room.join.body': '{0} sluttede til dit rum',
+    'notify.room.ring.title': 'Ringning',
+    'notify.room.ring.body': '{0} leder efter dig',
     'mod.label': 'Modifikator',
     'title': 'Genveje',
     'subtitle': 'Fælles genveje til hver platform',
@@ -1770,6 +1794,12 @@ i18n.de = {
     'notify.test.body': 'Benachrichtigungen funktionieren.',
     'notify.update.title': 'Update verfügbar',
     'notify.update.body': 'Anthkeys v{ver} ist bereit. Öffne sie, um zu aktualisieren.',
+    'notify.rooms': 'Live-Raum-Hinweise',
+    'notify.rooms-note': 'Benachrichtige mich, wenn ein Gerät deinem Raum beitritt oder klingelt.',
+    'notify.room.join.title': 'Gerät beigetreten',
+    'notify.room.join.body': '{0} ist deinem Raum beigetreten',
+    'notify.room.ring.title': 'Klingeln',
+    'notify.room.ring.body': '{0} sucht dich',
     'mod.label': 'Modifikator',
     'title': 'Kurzbefehle',
     'subtitle': 'Häufige Tastenkürzel für jede Plattform',
@@ -2208,6 +2238,12 @@ i18n.es = {
     'notify.test.body': 'Las notificaciones funcionan.',
     'notify.update.title': 'Actualización disponible',
     'notify.update.body': 'Anthkeys v{ver} está lista. Ábrela para actualizar.',
+    'notify.rooms': 'Avisos de salas en directo',
+    'notify.rooms-note': 'Avísame cuando un dispositivo se une a mi sala o me llama.',
+    'notify.room.join.title': 'Dispositivo conectado',
+    'notify.room.join.body': '{0} se ha unido a tu sala',
+    'notify.room.ring.title': 'Llamada',
+    'notify.room.ring.body': '{0} te está buscando',
     'mod.label': 'Modificador',
     'title': 'Atajos',
     'subtitle': 'Atajos comunes para cada plataforma',
@@ -2646,6 +2682,12 @@ i18n.fi = {
     'notify.test.body': 'Ilmoitukset toimivat.',
     'notify.update.title': 'Päivitys saatavilla',
     'notify.update.body': 'Anthkeys v{ver} on valmis. Avaa se päivittääksesi.',
+    'notify.rooms': 'Live-tilojen ilmoitukset',
+    'notify.rooms-note': 'Ilmoita, kun laite liittyy huoneeseeni tai soittaa minulle.',
+    'notify.room.join.title': 'Laite liittyi',
+    'notify.room.join.body': '{0} liittyi huoneeseesi',
+    'notify.room.ring.title': 'Soitto',
+    'notify.room.ring.body': '{0} etsii sinua',
     'mod.label': 'Muokkausnäppäin',
     'title': 'Pikanäppäimet',
     'subtitle': 'Yhteiset pikakuvakkeet jokaiselle alustalle',
@@ -3084,6 +3126,12 @@ i18n.fr = {
     'notify.test.body': 'Les notifications fonctionnent.',
     'notify.update.title': 'Mise à jour disponible',
     'notify.update.body': 'Anthkeys v{ver} est prête. Ouvrez-la pour mettre à jour.',
+    'notify.rooms': 'Alertes de salon en direct',
+    'notify.rooms-note': 'Préviens-moi quand un appareil rejoint mon salon ou sonne.',
+    'notify.room.join.title': 'Appareil rejoint',
+    'notify.room.join.body': '{0} a rejoint votre salon',
+    'notify.room.ring.title': 'Sonnerie',
+    'notify.room.ring.body': '{0} vous cherche',
     'mod.label': 'Modificateur',
     'title': 'Raccourcis',
     'subtitle': 'Raccourcis courants pour chaque plateforme',
@@ -3523,6 +3571,12 @@ i18n.hi = {
     'notify.test.body': 'सूचनाएँ काम कर रही हैं।',
     'notify.update.title': 'अपडेट उपलब्ध है',
     'notify.update.body': 'Anthkeys v{ver} तैयार है। अपडेट करने के लिए इसे खोलें।',
+    'notify.rooms': 'लाइव रूम सूचनाएँ',
+    'notify.rooms-note': 'जब कोई डिवाइस मेरे रूम में जुड़े या मुझे रिंग करे तो मुझे बताएँ।',
+    'notify.room.join.title': 'डिवाइस जुड़ा',
+    'notify.room.join.body': '{0} आपके रूम में जुड़ गया',
+    'notify.room.ring.title': 'रिंग',
+    'notify.room.ring.body': '{0} आपको ढूँढ रहा है',
     'mod.label': 'संशोधक',
     'title': 'शॉर्टकट',
     'subtitle': 'हर प्लेटफ़ॉर्म के लिए सामान्य शॉर्टकट',
@@ -3961,6 +4015,12 @@ i18n.hu = {
     'notify.test.body': 'Az értesítések működnek.',
     'notify.update.title': 'Frissítés elérhető',
     'notify.update.body': 'Az Anthkeys v{ver} készen áll. Nyissa meg a frissítéshez.',
+    'notify.rooms': 'Élő szobák értesítései',
+    'notify.rooms-note': 'Értesíts, ha egy eszköz csatlakozik a szobámhoz vagy csenget.',
+    'notify.room.join.title': 'Eszköz csatlakozott',
+    'notify.room.join.body': '{0} csatlakozott a szobádhoz',
+    'notify.room.ring.title': 'Csengetés',
+    'notify.room.ring.body': '{0} keres téged',
     'mod.label': 'Módosító',
     'title': 'Billentyűparancsok',
     'subtitle': 'Közös parancsikonok minden platformhoz',
@@ -4399,6 +4459,12 @@ i18n.it = {
     'notify.test.body': 'Le notifiche funzionano.',
     'notify.update.title': 'Aggiornamento disponibile',
     'notify.update.body': 'Anthkeys v{ver} è pronta. Aprila per aggiornare.',
+    'notify.rooms': 'Avvisi delle stanze live',
+    'notify.rooms-note': 'Avvisami quando un dispositivo si unisce alla mia stanza o mi chiama.',
+    'notify.room.join.title': 'Dispositivo collegato',
+    'notify.room.join.body': '{0} si è unito alla tua stanza',
+    'notify.room.ring.title': 'Chiamata',
+    'notify.room.ring.body': '{0} ti sta cercando',
     'mod.label': 'Modificatore',
     'title': 'Scorciatoie',
     'subtitle': 'Scorciatoie comuni per ogni piattaforma',
@@ -4837,6 +4903,12 @@ i18n.ja = {
     'notify.test.body': '通知は正常に動作しています。',
     'notify.update.title': 'アップデートがあります',
     'notify.update.body': 'Anthkeys v{ver} の準備ができました。開いて更新してください。',
+    'notify.rooms': 'ライブルームの通知',
+    'notify.rooms-note': 'デバイスがルームに参加したり呼びかけたりしたら知らせて。',
+    'notify.room.join.title': 'デバイスが参加',
+    'notify.room.join.body': '{0} がルームに参加しました',
+    'notify.room.ring.title': '着信',
+    'notify.room.ring.body': '{0} があなたを探しています',
     'mod.label': '修飾キー',
     'title': 'ショートカット',
     'subtitle': '各プラットフォームの一般的なショートカット',
@@ -5275,6 +5347,12 @@ i18n.ko = {
     'notify.test.body': '알림이 정상적으로 작동합니다.',
     'notify.update.title': '업데이트 사용 가능',
     'notify.update.body': 'Anthkeys v{ver}가 준비되었습니다. 열어서 업데이트하세요.',
+    'notify.rooms': '라이브 룸 알림',
+    'notify.rooms-note': '기기가 내 룸에 참여하거나 호출하면 알려주세요.',
+    'notify.room.join.title': '기기 참여',
+    'notify.room.join.body': '{0} 님이 룸에 참여했습니다',
+    'notify.room.ring.title': '벨소리',
+    'notify.room.ring.body': '{0} 님이 찾고 있습니다',
     'mod.label': '보조 키',
     'title': '단축키',
     'subtitle': '각 플래폼의 일반적인 단축키',
@@ -5713,6 +5791,12 @@ i18n.nl = {
     'notify.test.body': 'Meldingen werken.',
     'notify.update.title': 'Update beschikbaar',
     'notify.update.body': 'Anthkeys v{ver} staat klaar. Open hem om bij te werken.',
+    'notify.rooms': 'Meldingen voor live-ruimtes',
+    'notify.rooms-note': 'Laat het weten als een apparaat mijn ruimte binnenkomt of belt.',
+    'notify.room.join.title': 'Apparaat toegevoegd',
+    'notify.room.join.body': '{0} is toegevoegd aan je ruimte',
+    'notify.room.ring.title': 'Beltoon',
+    'notify.room.ring.body': '{0} zoekt je',
     'mod.label': 'Modifier',
     'title': 'Sneltoetsen',
     'subtitle': 'Algemene snelkoppelingen voor elk platform',
@@ -6151,6 +6235,12 @@ i18n.no = {
     'notify.test.body': 'Varsler fungerer.',
     'notify.update.title': 'Oppdatering tilgjengelig',
     'notify.update.body': 'Anthkeys v{ver} er klar. Åpne den for å oppdatere.',
+    'notify.rooms': 'Varsler for live-rom',
+    'notify.rooms-note': 'Gi meg beskjed når en enhet blir med i rommet mitt eller ringer.',
+    'notify.room.join.title': 'Enhet koblet til',
+    'notify.room.join.body': '{0} koblet seg til rommet ditt',
+    'notify.room.ring.title': 'Ringing',
+    'notify.room.ring.body': '{0} leter etter deg',
     'mod.label': 'Modifikator',
     'title': 'Snarveier',
     'subtitle': 'Vanlige snarveier for hver plattform',
@@ -6589,6 +6679,12 @@ i18n.pl = {
     'notify.test.body': 'Powiadomienia działają.',
     'notify.update.title': 'Dostępna aktualizacja',
     'notify.update.body': 'Anthkeys v{ver} jest gotowa. Otwórz ją, aby zaktualizować.',
+    'notify.rooms': 'Powiadomienia z pokoi na żywo',
+    'notify.rooms-note': 'Daj znać, gdy urządzenie dołączy do pokoju lub zadzwoni.',
+    'notify.room.join.title': 'Urządzenie dołączyło',
+    'notify.room.join.body': '{0} dołączył(a) do pokoju',
+    'notify.room.ring.title': 'Dzwonek',
+    'notify.room.ring.body': '{0} szuka Cię',
     'mod.label': 'Modyfikator',
     'title': 'Skróty',
     'subtitle': 'Typowe skróty dla każdej platformy',
@@ -7027,6 +7123,12 @@ i18n.pt = {
     'notify.test.body': 'As notificações estão a funcionar.',
     'notify.update.title': 'Atualização disponível',
     'notify.update.body': 'O Anthkeys v{ver} está pronto. Abre-o para atualizar.',
+    'notify.rooms': 'Avisos de salas ao vivo',
+    'notify.rooms-note': 'Avise-me quando um dispositivo entrar na minha sala ou me chamar.',
+    'notify.room.join.title': 'Dispositivo entrou',
+    'notify.room.join.body': '{0} entrou na sua sala',
+    'notify.room.ring.title': 'Chamada',
+    'notify.room.ring.body': '{0} está à sua procura',
     'mod.label': 'Modificador',
     'title': 'Atalhos',
     'subtitle': 'Atalhos comuns para todas as plataformas',
@@ -7465,6 +7567,12 @@ i18n.ru = {
     'notify.test.body': 'Уведомления работают.',
     'notify.update.title': 'Доступно обновление',
     'notify.update.body': 'Anthkeys v{ver} готова. Откройте её, чтобы обновиться.',
+    'notify.rooms': 'Уведомления live-комнат',
+    'notify.rooms-note': 'Сообщи мне, когда устройство заходит в комнату или звонит.',
+    'notify.room.join.title': 'Устройство подключилось',
+    'notify.room.join.body': '{0} подключился к вашей комнате',
+    'notify.room.ring.title': 'Звонок',
+    'notify.room.ring.body': '{0} ищет вас',
     'mod.label': 'Модификатор',
     'title': 'Сочетания клавиш',
     'subtitle': 'Основные сочетания для каждой платформы',
@@ -7903,6 +8011,12 @@ i18n.sv = {
     'notify.test.body': 'Aviseringar fungerar.',
     'notify.update.title': 'Uppdatering tillgänglig',
     'notify.update.body': 'Anthkeys v{ver} är klar. Öppna den för att uppdatera.',
+    'notify.rooms': 'Aviseringar för live-rum',
+    'notify.rooms-note': 'Meddela mig när en enhet ansluter till mitt rum eller ringer.',
+    'notify.room.join.title': 'Enhet ansluten',
+    'notify.room.join.body': '{0} anslöt till ditt rum',
+    'notify.room.ring.title': 'Ringning',
+    'notify.room.ring.body': '{0} söker dig',
     'mod.label': 'Modifierare',
     'title': 'Kortkommandon',
     'subtitle': 'Vanliga genvägar för varje plattform',
@@ -8341,6 +8455,12 @@ i18n.tr = {
     'notify.test.body': 'Bildirimler çalışıyor.',
     'notify.update.title': 'Güncelleme var',
     'notify.update.body': 'Anthkeys v{ver} hazır. Güncellemek için aç.',
+    'notify.rooms': 'Canlı oda uyarıları',
+    'notify.rooms-note': 'Bir cihaz odama katıldığında veya beni aradığında bana haber ver.',
+    'notify.room.join.title': 'Cihaz katıldı',
+    'notify.room.join.body': '{0} odanıza katıldı',
+    'notify.room.ring.title': 'Çalıyor',
+    'notify.room.ring.body': '{0} sizi arıyor',
     'mod.label': 'Değiştirici',
     'title': 'Kısayollar',
     'subtitle': 'Her platform için ortak kısayollar',
@@ -8780,6 +8900,12 @@ i18n.vi = {
     'notify.test.body': 'Thông báo đang hoạt động.',
     'notify.update.title': 'Đã có bản cập nhật',
     'notify.update.body': 'Anthkeys v{ver} đã sẵn sàng. Hãy mở để cập nhật.',
+    'notify.rooms': 'Thông báo phòng trực tiếp',
+    'notify.rooms-note': 'Báo tôi khi một thiết bị tham gia phòng hoặc gọi cho tôi.',
+    'notify.room.join.title': 'Thiết bị đã tham gia',
+    'notify.room.join.body': '{0} đã tham gia phòng của bạn',
+    'notify.room.ring.title': 'Chuông gọi',
+    'notify.room.ring.body': '{0} đang tìm bạn',
     'mod.label': 'Phím bổ trợ',
     'title': 'Lối tắt',
     'subtitle': 'Phím tắt phổ biến cho mọi nền tảng',
@@ -9738,6 +9864,8 @@ const NOTIFY = {
     try { return JSON.parse(lsGet('anthkeys-notify') || '{}') || {}; } catch(e) { return {}; }
   },
   isEnabled() { return NOTIFY.read().enabled === true; },
+  roomsEnabled() { return NOTIFY.read().rooms !== false; },
+  roomsOn() { return NOTIFY.isEnabled() && NOTIFY.roomsEnabled(); },
   getTime() { return NOTIFY.read().time || '09:00'; },
   getLastDay() { return NOTIFY.read().lastDay || ''; },
   set(patch) {
@@ -9897,14 +10025,42 @@ async function registerPeriodicSync() {
   } catch(e) { }
 }
 
+function notifyRoomName(id) {
+  if (!id || id === synDeviceId()) return notifyText('sync.unknown', 'Unknown device');
+  return syncPeerName(id) || notifyText('sync.unknown', 'Unknown device');
+}
+
+function notifyRoomJoin(name) {
+  if (!notifySupported || !NOTIFY.roomsOn() || notifyState() !== 'granted') return;
+  sendNotification(
+    'room-join-' + Date.now(),
+    notifyText('notify.room.join.title', 'Device joined'),
+    notifyText('notify.room.join.body', '{0} joined your room').replace('{0}', name),
+    'room-join'
+  );
+}
+
+function notifyRoomRing(name) {
+  if (!notifySupported || !NOTIFY.roomsOn() || notifyState() !== 'granted') return;
+  sendNotification(
+    'room-ring-' + Date.now(),
+    notifyText('notify.room.ring.title', 'Ring'),
+    notifyText('notify.room.ring.body', '{0} is looking for you').replace('{0}', name),
+    'room-ring'
+  );
+}
+
 function renderNotifyUI() {
   const toggle = document.getElementById('toggleNotify');
   const status = document.getElementById('notifyStatus');
   const timeWrap = document.getElementById('notifyTimeWrap');
   const timeInput = document.getElementById('notifyTime');
   const testBtn = document.getElementById('btnNotifyTest');
+  const roomWrap = document.getElementById('notifyRoomWrap');
+  const roomToggle = document.getElementById('toggleNotifyRoom');
   const state = notifyState();
   const on = NOTIFY.isEnabled() && state === 'granted';
+  const roomsOn = on && NOTIFY.roomsEnabled();
   if (toggle) {
     toggle.classList.toggle('on', on);
     toggle.setAttribute('aria-checked', on ? 'true' : 'false');
@@ -9915,6 +10071,11 @@ function renderNotifyUI() {
   }
   if (timeInput) timeInput.value = NOTIFY.getTime();
   if (timeWrap) timeWrap.hidden = !on;
+  if (roomWrap) roomWrap.hidden = !on;
+  if (roomToggle) {
+    roomToggle.classList.toggle('on', roomsOn);
+    roomToggle.setAttribute('aria-checked', roomsOn ? 'true' : 'false');
+  }
   if (testBtn) testBtn.hidden = state !== 'granted';
 }
 
@@ -9936,6 +10097,11 @@ onId('toggleNotify', 'click', async function() {
   }
   renderNotifyUI();
   scheduleDailyTip();
+});
+
+onId('toggleNotifyRoom', 'click', function() {
+  NOTIFY.set({ rooms: !NOTIFY.roomsEnabled() });
+  renderNotifyUI();
 });
 
 onId('notifyTime', 'change', function() {
@@ -12626,15 +12792,38 @@ function syncPrunePeers() {
     if (id !== synDeviceId() && now - syncPeers[id].t > 45000) delete syncPeers[id];
   });
 }
+let syncSeenPeers = null;
+let syncNotifiedAt = {};
+
+function syncNotifyNewPeers(ids) {
+  if (!syncSeenPeers) return;
+  const mine = synDeviceId();
+  const now = Date.now();
+  const prev = syncSeenPeers;
+  const next = {};
+  ids.forEach(id => {
+    if (id === mine) return;
+    next[id] = now;
+    if (prev[id] && now - prev[id] < 30000) return;
+    if (now - (syncNotifiedAt[id] || 0) < 30000) return;
+    syncNotifiedAt[id] = now;
+    if (NOTIFY.roomsOn() && document.visibilityState === 'hidden') {
+      notifyRoomJoin(syncPeerName(id));
+    }
+  });
+  syncSeenPeers = next;
+}
+
 function syncUpdatePeers() {
   const box = document.getElementById('syncDevices');
-  if (!box) return;
   const myId = synDeviceId();
   syncPeers[myId] = { n: synDeviceName(), t: Date.now(), b: (syncPeers[myId] && syncPeers[myId].b != null) ? syncPeers[myId].b : null, c: !!(syncPeers[myId] && syncPeers[myId].c) };
   const now = Date.now();
   const ids = Object.keys(syncPeers)
     .filter(id => now - syncPeers[id].t < 45000)
     .sort((a, b) => (a === myId ? -1 : (b === myId ? 1 : 0)));
+  if (syncSeenPeers) syncNotifyNewPeers(ids);
+  if (!box) return;
   if (!ids.length) { box.textContent = tx('sync.none'); return; }
   const rows = ids.map(id => {
     const self = id === myId;
@@ -12933,6 +13122,7 @@ function syncHandlePing(m) {
   const from = (m && m.n) || tx('sync.unknown');
   if (navigator.vibrate) { try { navigator.vibrate([350, 150, 350, 150, 700]); } catch (e) {} }
   playRingSound();
+  notifyRoomRing(syncPeerName(m && m.d) || from);
   if (m && m.text) {
     if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(m.text).catch(() => {});
     showToastMsg(tx('sync.ping-recv-with').replace('{0}', from).replace('{1}', m.text));
@@ -13036,6 +13226,8 @@ function syncConnect(code) {
   syncConnected = false;
   syncRetainedT = 0;
   syncPeers = {};
+  syncSeenPeers = null;
+  syncNotifiedAt = {};
   syncSetStatus('#f59e0b', tx('sync.connecting'));
   let client = null;
   try {
@@ -13075,6 +13267,15 @@ function syncConnect(code) {
       }, 15000);
       syncSetStatus('#34a853', tx('sync.online'));
       syncRenderPanel();
+      setTimeout(() => {
+        if (!syncConnected || !syncRoom) return;
+        const seeded = {};
+        const seedId = synDeviceId();
+        const seedNow = Date.now();
+        Object.keys(syncPeers).forEach(id => { if (id !== seedId) seeded[id] = seedNow; });
+        syncSeenPeers = seeded;
+        syncNotifiedAt = {};
+      }, 2500);
       setTimeout(() => {
         if (syncConnected && syncRoom && syncRetainedT === 0) syncPublishNow();
       }, 1800);
@@ -13141,6 +13342,8 @@ function syncLeave() {
   lsRemove('anthkeys-sync-room');
   syncRoom = '';
   syncPeers = {};
+  syncSeenPeers = null;
+  syncNotifiedAt = {};
   syncConnected = false;
   syncRetainedT = 0;
   syncWarned = {};

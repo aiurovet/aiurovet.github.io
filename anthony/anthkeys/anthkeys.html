@@ -641,6 +641,13 @@
             <label for="notifyTime" style="font-size:.78rem;color:var(--text-variant)" data-i18n="notify.time">Daily tip at</label>
             <input type="time" id="notifyTime" value="09:00" style="margin-left:auto;padding:.3rem .4rem;border:1px solid var(--outline-variant);border-radius:var(--radius-sm);background:var(--surface);color:var(--text);font:var(--size) var(--font)">
           </div>
+          <div id="notifyRoomWrap" hidden style="display:flex;align-items:center;gap:.6rem;margin-top:.5rem;padding:.5rem .6rem;border:1px solid var(--outline-variant);border-radius:var(--radius-sm);background:var(--surface-variant)">
+            <div style="flex:1;min-width:0">
+              <label for="toggleNotifyRoom" style="font-size:.78rem;color:var(--text)" data-i18n="notify.rooms">Live room alerts</label>
+              <div style="font-size:.7rem;line-height:1.35;color:var(--text-variant)" data-i18n="notify.rooms-note">Tell me when a device joins your room or rings it.</div>
+            </div>
+            <button class="toggle" id="toggleNotifyRoom" role="switch" aria-checked="true"></button>
+          </div>
           <div style="display:flex;gap:.4rem;margin-top:.5rem">
             <button class="pill" id="btnNotifyTest" data-i18n="notify.test" title="Send a test notification" hidden>Send a test notification</button>
           </div>
@@ -791,6 +798,7 @@
                   <div class="wn-ver">v52.2 <span class="wn-date">Sep 29, 2026</span></div>
                   <ul>
                     <li>New: notifications. Turn them on in Settings &mdash; pick a time and Anthkeys sends a daily shortcut tip, plus a heads-up when a new version is ready to install.</li>
+                    <li>New: live room alerts. A separate switch tells you when a device joins your room or rings it, so you can find your other device even when the tab is in the background.</li>
                     <li>Note: tips always arrive while the site is open. Installed on Chrome they can also come when it is closed, but the browser chooses the time and may skip a day.</li>
                   </ul>
                 </div>
