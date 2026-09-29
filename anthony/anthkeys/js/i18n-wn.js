@@ -4019,3 +4019,226 @@ I18N_WN.no = {
   'v1': ['Første utgave av Anthkeys: alle daglige tastaturgenveier for Windows, macOS, Linux og ChromeOS på én side.']
 };
 
+I18N_WN.cs = {
+  'v52.1': [
+    'Nové: stránka &laquo;Co je nového&raquo; je nyní plně přeložena do všech 20 jazyků — každá poznámka k vydání se zobrazí ve vašem jazyce.'
+  ],
+  'v52': [
+    'Oprava: verze v51 mohla zabránit načtení aplikace; v českém jazykovém souboru chyběla uzavírací apostrofa, takže byl celý soubor neplatný. Soubor se nyní parsuje správně a všech 20 jazyků se načte.'
+  ],
+  'v51': [
+    'Překlad je hotový pro všech 20 jazyků — nastavení, živé synchronizace, offline synchronizace i průvodce synchronizací jsou nyní plně přeložené (nové položky byly dříve jen anglicky).',
+    'Nové: pokud se vám Anthkeys zdá pomalý, oznamovací lišta vám umožní jedním dotykem zapnout <strong>režim výkonu</strong>. Lištu můžete zavřít a už se neobjeví.'
+  ],
+  'v50.7': ['Režim výkonu byl přesunut na kartu <strong>Obecné</strong> v nastavení.'],
+  'v50.6': ['Ikony v horním panelu jsou opět barevné emoji jako ve v50: kniha, tiskárka, blesk, měsíc/slunce, obnovení a ozubené kolo.'],
+  'v50.5': ['Ikony v horním panelu opět používají akcentní barvu (výchozí), takže už nevypadají bílé ani šedé.'],
+  'v50.4': ['Funkce barvení ikon akcentní barvou byla odstraněna: favicon, ikona domovské obrazovky i instalovaná ikona PWA používají opět výchozí ikonu (barvení ikon akcentem má smysl jen v nativní aplikaci).'],
+  'v50.3': [
+    'Ikony v horním panelu byly přestavěny, aby se stabilně zobrazovaly na všech zařízeních (prohlídka, tisk, hádanky, motiv, obnovení a nastavení nyní používají skutečné ikony).',
+    'Přepínač motivu je opět skutečná ikona a odpovídá stavu světlý/tmavý.'
+  ],
+  'v50.2': ['Opravena chyba ve v50.1, která způsobovala, že ikony v horním panelu a nastavení při startu nefungovaly.'],
+  'v50.1': [
+    'Nový <strong>režim výkonu</strong> v části Přizpůsobit: vypnutí rozmazání a animací může aplikaci na Windows zpomalit.',
+    'Horní panel nyní používá skutečné ikony a nové nastavení <strong>Ikony</strong> vám dovolí je obarvit vlastní akcentní barvou.',
+    'Karta aplikací nyní funguje jako karta Linuxu: klepnutím kamkoli vyberete aplikaci (VS Code, Figma, Gmail a další) a karta zobrazí váš výběr, například &laquo;Aplikace - Gmail&raquo;.',
+    'Pole pro hex kód pod tlačítkem Přizpůsobit bylo odstraněno: barvu vybírejte pouze posuvníky.',
+    'Do voleb akcentní barvy přibylo osm nových kombinací dvou barev.'
+  ],
+  'v50': [
+    'Klepnutím kamkoli na kartě Linux otevřete seznam distribucí a karta nyní zobrazuje váš výběr, například &laquo;Linux - Ubuntu (GNOME)&raquo;.',
+    'Výběr vlastní barvy byl přestavěn: kulový vzorek otevírá posuvníky <strong>Odstín</strong>, <strong>Sytost</strong> a <strong>Jas</strong> (nad každým posuvníkem je vidět hodnotu) a začíná od aktuální barvy místo 0/0/0.',
+    'Nová sekce <strong>Akcentní barvy</strong>: osm hotových dvoubarevných transformací, které lze použít jako akcentní barvu.',
+    'Vestavěné sady akcentních barev byly doladěny podle čistší a čitelnější palety.'
+  ],
+  'v40.9': ['Seznam distribucí je nyní přímo na kartě Linux: výběr distribuce provedete klepnutím na malou šipku v kartě.'],
+  'v40.8': ['Karta Linux má nyní seznam distribucí (Ubuntu, Debian, Fedora, Arch, Mint, KDE a další), který vám pomůže přizpůsobit systémové zkratky výchozímu nastavení každé distribuce a pamatuje si vaši volbu.'],
+  'v40.7': ['Nastavení akcentní barvy nyní zobrazuje živý náhled s přesným hex kódem použité barvy, takže účinek každého výběru uvidíte ihned.'],
+  'v40.6': [
+    'Nástroj <strong>Vzít barvu z obrazovky</strong> byl odstraněn.',
+    'Vestavěné sady akcentních barev byly upraveny podle intenzity Material 3 Expressive: syté, živé barvy a poctivý neon (šedé tóny zůstávají jemné).'
+  ],
+  'v40.5': ['Paleta akcentních barev byla znovu vyvážena podle Material 3 Expressive: světlejší a živější barvy.'],
+  'v40.4': ['<strong>Sladit s mým zařízením</strong> nyní čte skutečnou barvu systému (včetně výstupů oklch/color() v Chromu) i systémovou barvu zvýraznění textu, takže se použije váš skutečný dynamický akcent.'],
+  'v40.3': [
+    'Všechny akcentní barvy byly znovu vyváženy podle bezpečných tónů Material You (jemné střední tóny s měkkými tóny ploch).',
+    '<strong>Sladit s mým zařízením</strong> nyní čte jako alternativu i systémovou barvu zvýraznění, takže funguje ve více prohlížečích a profilech.'
+  ],
+  'v40.2': ['Nastavení akcentní barvy: nové tlačítko <strong>Sladit s mým zařízením</strong> přečte systémovou akcentní barvu (Chrome 150+, pokud je aplikace nainstalovaná) a použije ji s potvrzovací zprávou.'],
+  'v40.1': ['Knihovna pozadí byla odstraněna (pozadí uložená v knihovně se smažou; vaše nahrané obrázky fungují dál).'],
+  'v40.0': ['Výběr akcentní barvy: vlastní barva má nyní pole pro hex kód (napište libovolnou barvu, 3 nebo 6 znaků) a tlačítko kopírovat — stejné rozvržení na počítači i telefonu.'],
+  'v39.9': ['Chat v místnosti: poznámky místnosti se nyní zobrazují v tabulce <strong>Chat</strong> s historií (60 zpráv na místnost, po návratu se obnoví). Veřejné poznámky se zveřejňují v protokolu; soukromé se kopírují přímo do schránky. Zkopírujte zprávu klepnutím.'],
+  'v39.8': [
+    '<strong>Nedávné místnosti</strong>: posledních šest místností, ke kterým jste se připojili, se zobrazuje na úvodní obrazovce jako tlačítka na jedno klepnutí, každá se svou barvou, plus tlačítko pro jejich odebrání.',
+    '<strong>Send my profile</strong> pošlete tlačítkem své nastavení a přizpůsobené zkratky celé místnosti jako jeden snímek; ostatní zařízení je ihned použijí.',
+    '<strong>Knihovna pozadí</strong>: šest vestavěných přechodů s automatickou světlou a tmavou verzí, tlačítko náhodného výběru a volba střídání po dnech.',
+    '<strong>Hledání</strong>: zkopírované zkratky si menu hledání pamatuje jako &laquo;Nedávno zkopírované&raquo;, spolu s historií hledání.'
+  ],
+  'v39.7': ['Animace na mobilu nyní používají stejný CSS jako počítač: pravidla pro dotyková zařízení už nevypínají všechny přechody. Osvětlení prohlídky a posouvající se karty nyní plynule přecházejí a motiv i pozadí se jemně přelévají, i na telefonu.'],
+  'v39.6': ['Telefon je nyní na úrovni počítače: přepínání motivu a pozadí probíhá stejně plynule jako na počítači a prohlídka stránky se pohybuje mezi kroky i na dotykových zařízeních.'],
+  'v39.5': ['<strong>AirDrop a Quick Share</strong>: tlačítko <strong>Sdílet</strong> vedle kódu místnosti otevře panel sdílení v telefonu (AirDrop na zařízeních Apple) s jednorázovým odkazem na místnost: na druhém zařízení stačí klepnout, abyste se připojili.'],
+  'v39.4': ['Zářivost a jiskry na kartě verze nyní běží i na počítači, i když má systém zapnuté <laquo;omezit pohyb&raquo; nebo jsou animace v nastavení vypnuté: počítají se jako signál aktualizace, ne jako výzdoba.'],
+  'v39.3': ['Zářivost na kartě verze a odznáček verze v nastavení jsou nyní na počítači stabilní: spuštěná verze si při startu vždy několik dní ponechá rám &laquo;je k dispozici aktualizace&raquo;, i když jste oznámení o aktualizaci přehlédli.'],
+  'v39.2': ['Efekt nové verze na kartě už po jednom zhlédnutí nezmizí natrvalo: zářivost trvá několik dní a vrací se při každé návštěvě.'],
+  'v39.1': ['Konečně jsou barevné vzorky vidět: vzorky (barva místnosti, barva motivu a akcentní barva) se nyní kreslí jako zřetelné kruhy místo prázdných neviditelných prvků.'],
+  'v39': [
+    'Vyzvánění nyní umožní přiložit krátkou zprávu: vyzvané zařízení ji uslyší a zkopíruje do schránky.',
+    '<strong>Upozornění na baterii</strong>: když baterie zařízení překročí 25 %, dostanete zprávu &laquo;obnoveno&raquo; a upozornění můžete zapnout nebo vypnout.',
+    'Poznámky lze nyní poslat jedinému zařízení pomocí voliče <strong>Komu:</strong> vedle pole poznámky.',
+    'Každá místnost může mít barevný štítek, takže jsou místnosti ihned rozlišitelné.',
+    'Kód offline synchronizace nyní zobrazuje náhled (zařízení, čas, počet nastavení a zkratek) a před importem vyžaduje potvrzení.'
+  ],
+  'v38.1': ['Na mobilu už klepnutí na kartu <strong>O aplikaci</strong> sekce automaticky neotevírá: otevřete sekci klepnutím na její nadpis.'],
+  'v38': ['Na mobilu už otevření karty <strong>O aplikaci</strong> neotevírá automaticky průvodce synchronizací: otevřete sekci <strong>Živé místnosti a offline synchronizace</strong>.'],
+  'v37': ['Průvodce nyní obsahuje úplné pokyny k <strong>živým místnostem</strong> a <strong>kódům offline synchronizace</strong> a je dostupný i na mobilu.'],
+  'v36': ['Tlačítko v oblasti přihlášení se nyní jmenuje <strong>Skenovat</strong> (otevře fotoaparát nebo výběr souborů pro načtení QR kódu), aby se nezaměňovalo s tlačítkem <strong>QR</strong>, které zobrazuje kód místnosti.'],
+  'v35': ['Oprava: QR kód místnosti a offline kód se nyní zobrazují správně místo prázdného rámečku.'],
+  'v34': [
+    '<strong>Zavolat zařízení</strong> — každé jiné zařízení má tlačítko <strong>Vyzvat</strong>, které je rozvzduní a rozvibruje, abyste našli svůj telefon.',
+    '<strong>Send note</strong> — sdílejte text se všemi připojenými zařízeními; obsah se zobrazí ihned a zkopíruje se do schránky toho zařízení.',
+    '<strong>Sledovat baterii</strong> — budete upozorněni, když baterie připojeného zařízení klesne pod 20 %.',
+    '<strong>Přejmenovat zařízení</strong> — klepnutím na název zařízení zadáte vlastní název.',
+    '<strong>Připojit se naskenováním</strong> — server může zobrazit svůj kód místnosti jako QR kód; naskenujte ho fotoaparátem (nebo naskenujte kód offline synchronizace).',
+    '<strong>Chráněná místnost</strong> — vyberte &laquo;Chránit tuto místnost&raquo; a nastavte heslo; všechna data místnosti jsou šifrována, takže je přečtou jen členové s heslem.',
+    '<strong>Poslední aktivita</strong> — každé zařízení nyní zobrazuje, jak dlouho bylo online.'
+  ],
+  'v33': ['Připojená zařízení sdílejí také <strong>úroveň baterie</strong> (i při nabíjení) a v místnosti se aktualizují v reálném čase.'],
+  'v32': ['Živá místnost nyní zobrazuje skutečný název každého zařízení (například &laquo;Mi 9T Pro&raquo;) místo náhodných názvů, které si zařízení vymýšlí.'],
+  'v31': ['Živá místnost nyní vypisuje každé připojené zařízení podle názvu, se zelenou tečkou u tohoto zařízení a celkovým počtem.'],
+  'v30': [
+    '<strong>Živá místnost</strong> — nejprve pro synchronizaci nastavení a přizpůsobených zkratek v reálném čase:<ol><li>Na zařízení s vaším nastavením otevřete <strong>Nastavení → Živá místnost</strong> a klepněte na <strong>Spustit místnost</strong>. Zobrazí se kód místnosti ve tvaru AK-XXX-YYY.</li><li>Pošlete kód ostatním svým zařízením (zkopírujte ho nebo sdílejte, jak chcete).</li><li>Na každém zařízení, které ho obdrží, otevřete <strong>Nastavení → Živá místnost</strong>, zadejte stejný kód a klepněte na <strong>Připojit se k místnosti</strong>.</li></ol>',
+    '<strong>Kód offline synchronizace</strong> — potom pro jednorázové převedení, když nemáte internet:<ol><li>Otevřete <strong>Nastavení → Kód offline synchronizace</strong> a klepněte na <strong>Vytvořit kód</strong>. Zkopírujte kód nebo naskenujte zobrazený QR kód.</li><li>Na druhém zařízení otevřete <strong>Nastavení → Kód offline synchronizace</strong>, vložte kód a klepněte na <strong>Použít kód</strong>.</li></ol>'
+  ],
+  'v29': ['Oprava: na <strong>mobilu</strong> klepnutí na odznáček verze nyní vždy spustí efekt vyskočení, otočení a stlačení místo toho, aby bylo blokováno resetováním animací na dotykových zařízeních.'],
+  'v28': ['Na mobilu se karta nastavení vedle Přizpůsobit nyní jmenuje jen <strong>O aplikaci</strong> (průvodce je pouze na počítači) a klepnutím otevře sekci O aplikaci.'],
+  'v27': ['Oprava: otevření stránky ihned po <strong>nové verzi</strong> už se po několika sekundách samovolně nepřeloaduje — aktualizace se nyní používají na pozadí. Tlačítko Aktualizovat a možnost <strong>Zeptat se před aktualizací</strong> stále načítají znovu na vyžádání.'],
+  'v26.9': ['Zábava: klepnutí na <strong>odznáček verze</strong> nyní vždy spustí efekt vyskočení, otočení a stlačení, rozzáří se <strong>jiskrami</strong>, když se zvýrazní nová verze, a sekce O aplikaci byla přesunuta na kartu <strong>O aplikaci</strong> v nastavení pro rychlejší přístup.'],
+  'v26.8': ['Zlepšení: <strong>odznáček verze</strong> v sekci O aplikaci se nyní sám aktualizuje a otevře stránku Co je nového.'],
+  'v26.7': ['Zlepšení: <strong>zkratky aplikací</strong> v denním tipu nyní jako první uvádějí, ke které aplikaci patří, například <em>Figma — Move Tool — V</em>.'],
+  'v26.6': ['Zlepšení: <strong>denní tip</strong> se obnovuje při změně karty platformy: výběrem Windows, macOS, Linux, ChromeOS nebo Aplikací se zobrazí zkratky dané části.'],
+  'v26.5': ['Oprava: <strong>denní tip</strong> už nezůstává na jedné zkratce: při každém načtení stránky zobrazí novou náhodnou zkratku z karty platformy, kterou právě prohlížíte.'],
+  'v26.4': ['Oprava: <strong>denní tip</strong> nyní zobrazuje jen zkratky karty platformy, kterou prohlížíte (dříve se míchaly zkratky všech platforem). Odznáček verze v průvodci se také aktualizuje automaticky.'],
+  'v26.3': ['Tlačítko <strong>Prohlídka</strong> nyní zobrazuje ikonu <strong>otevřené knihy</strong>.'],
+  'v26.2': ['Tlačítko <strong>Prohlídka</strong> nyní zobrazuje ikonu kompasu a průvodce stránkou získal nový krok, který vysvětluje, co dělá <strong>tlačítko aktualizace</strong>.'],
+  'v26.1': ['Oprava: přepínání mezi <strong>tmavým a světlým</strong> režimem (přepínačem nahoře nebo v nastavení) už nezpůsobuje, že <strong>témové pozadí</strong> ztratí barvy: akcentní barva, tlačítka polí i zkratky si ponechají barvy motivu, zatímco pozadí zůstává klidné.'],
+  'v26': ['<strong>Nová prohlídka stránky</strong> — klepněte na tlačítko <strong>?</strong> nahoře, abyste si stránku prošli polem hledání, filtry, kartami, seznamem zkratek, hádankami, nastavením, tiskem a přepínačem motivu. K procházení použijte tlačítka, šipky nebo tečky.'],
+  'v25': ['Odkaz <strong>Zobrazit na GitHubu</strong> byl odstraněn ze sekce O aplikaci.'],
+  'v24.8': ['Oprava: upozornění <strong>&laquo;Aktualizováno&raquo;</strong> se na mobilu nyní vejde do obrazovky (dříve přesahovalo přes pravý okraj na malých zařízeních).'],
+  'v24.7.4': ['Zaoblení rohů je nyní ve všech motivech omezeno na <strong>16&thinsp;px</strong>: tlačítka, karty, pole hledání i oznámení už nejsou úplně zaoblená (dříve až 100&thinsp;px). Rohy zůstávají měkké, jen střídlivější.'],
+  'v24.7.3': ['Oprava: <strong>Otevřít nastavení Wi-Fi</strong> na <strong>Androidu</strong> nefungovalo: novější verze Chromu webům neumožňují otevřít systémová nastavení Androidu. Tlačítko nyní zobrazí stručnou zprávu s připomenutím, že máte otevřít nastavení Wi-Fi v aplikaci Nastavení zařízení (na iOS a macOS se stále otevře přímo).'],
+  'v24.7.2': ['Oprava: v nainstalované aplikaci Android (PWA) nefungovalo klepnutí na <strong>Otevřít nastavení Wi-Fi</strong>: Android aplikacím neumožňuje otevřít systémová nastavení přímo. Tlačítko to nyní vysvětluje a připomíná, že máte stránku otevřít v kartě Chromu, kde tlačítko funguje.'],
+  'v24.7.1': ['Oprava: <strong>Otevřít nastavení Wi-Fi</strong> na <strong>Androidu</strong> používalo kliknutí na odkaz vyvolané z JavaScriptu, které Chrome blokuje pro odkazy <code>intent:</code>: nyní se používá navigace zahájená uživatelským gestem.'],
+  'v24.7': [
+    '<strong>Stav připojení</strong> se přesunul nahoru do <strong>Nastavení → Obecné</strong> (z O aplikaci).',
+    'Tlačítko <strong>Otevřít nastavení Wi-Fi</strong> nyní otevírá správná nastavení Wi-Fi na <strong>iOS</strong> (aplikace Nastavení) a <strong>macOS</strong> (Systemové nastavení). Na Androidu, Windows a Linuxu, kde prohlížeč nemůže otevřít systémová nastavení, tlačítko zobrazí stručný návod.'
+  ],
+  'v24.6': [
+    'Tlačítko <strong>Frakoblení</strong> je nyní vidět jen <strong>10 sekund</strong> a potom zmizí (aby nerušilo, dokud připojení stále chybí).',
+    '<strong>Nastavení → O aplikaci</strong> nyní vždy zobrazuje váš <strong>stav připojení</strong> (online/offline), stejně jako tlačítko <strong>Otevřít nastavení Wi-Fi</strong>: na iOS přímo otevře aplikaci Nastavení, na ostatních zařízeních zobrazí stručný návod.'
+  ],
+  'v24.5.2': ['Oprava: na stolních počítačích, kde Windows ztratí připojení, aniž by prohlížeč odeslal událost <em>offline</em> (nebo kde požadavky místo chyby jen visí), se tlačítko <strong>Frakoblení</strong> nyní zobrazí také při vypršení kontroly připojení, nejen když samotný požadavek selže.'],
+  'v24.5.1': ['Oprava: tlačítko <strong>Frakoblení</strong> se nyní zobrazí i tehdy, když připojení zmizí bez jakéhokoli signálu z prohlížeče (například offline režim v DevTools, některé mobilní prohlížeče): aplikace aktivně testuje připojení v několikasekundových intervalech místo spoléhání se pouze na signál prohlížeče. Zmizí, jakmile budete opět online.'],
+  'v24.5': [
+    'Pod polem hledání jsou nyní slova odpovídající hledanému výrazu v <strong>zvýrazněna</strong> ve výsledcích: je snazší vidět, proč řádek výsledku sedí.',
+    'Pole hledání dostalo tlačítko <strong>vymazat (&times;)</strong>, jakmile něco napíšete.',
+    'Malé tlačítko <strong>Frakoblení</strong> se zobrazí, když se připojení ztratí: klepnutím potvrdíte, že Anthkeys stále běží z offline mezipaměti.'
+  ],
+  'v24.4.1': ['Oprava na mobilu: nadpis <strong>Akce — Zkratky</strong> už neklouže mimo obrazovku: na úzkých obrazovkách byla tabulka zkratek vlastní vodorovně posuvná oblast, která rozpohala přichycenou hlavičku. Nyní je přichycena nahoře, stejně jako na počítači.'],
+  'v24.4': ['<strong>Widget se stavem řetězu hádanek na domovské obrazovce</strong> byl odstraněn: stavěl na webovém standardu, který prohlížeče dosud neimplementovaly, takže se nikdy nikde neobjevil. Váš řetěz a statistiky hádanek v aplikaci zůstávají.'],
+  'v24.3': [
+    '<strong>Hádanka zkratek nyní ukládá vaši statistiku</strong>: denní řetěz (🔥 počet dní po sobě, kdy jste ji dokončili), nejlepší skóre, přesnost a počet odehraných kol. Ukládá se místně a nikdy se neodesílá.',
+    'Nový widget <strong>řetězu hádanek na domovské obrazovce</strong> pro Android (webové widgety: experimentální, postupně do Chromu a Firefoxu; na iOS není). Zobrazuje váš řetěz a statistiku; klepnutím otevřete hádanku.'
+  ],
+  'v24.2.1': ['Oprava na mobilu: klepnutí do pole hledání mohlo otevřít stránku O aplikaci: překryv <strong>Co je nového</strong> vedle tlačítka nastavení byl stále kliknutelný a překrýval pole hledání. Nyní reaguje jen tehdy, když je viditelný.'],
+  'v24.2': [
+    'Nový <strong>filtr modifikátorů</strong>: v nabídce filtrů vyberte klávesu (Ctrl, Shift, Alt, Win, Cmd a další) a zobrazte jen zkratky, které tuto klávesu používají. Možnosti se liší podle platformy.',
+    'Tlačítko <strong>nahoru</strong> plave nad seznamem zkratek při posouvání: klepnutím se vrátíte na začátek seznamu.'
+  ],
+  'v24.1': ['Pole <strong>Akce — Zkratky</strong> je nyní při posouvání přichyceno nahoře: dříve klouzalo mimo obrazovku na mobilu a v Safari.'],
+  'v23.9': ['Vyskakovací okno s průvodcem a tipy bylo odstraněno z mobilu: uvádělo jen zkratky pro počítač. Průvodce je stále v nastavení na počítači, kde vás na něj dostane <kbd>?</kbd>.'],
+  'v23.8': ['Na mobilu už průvodce není v nastavení: je skrytý, aby stránka zůstala lehká. Stisknutím <kbd>?</kbd> jej otevřete ve vyskakovacím okně.'],
+  'v23.7': ['Průvodce a tipy byly přesunuty do <strong>Nastavení</strong> (sekce Obecné) na počítači: stisknutím <kbd>?</kbd> se dostanete přímo tam.'],
+  'v23.6': [
+    'Všech 20 jazyků je nyní plně přeloženo: v nových funkcích, jako jsou hádanky, cloudová synchronizace a průvodce, už nebudete přepadat na angličtinu.',
+    'Na mobilu kopírujete zkratky dlouhým stiskem místo klepnutí: nebudete už omylem kopírovat při posouvání.',
+    'Skupinová tlačítka nyní používají vaši akcentní barvu i na mobilu, stejně jako na počítači; když je vybráno Oblíbené, vystupuje pouze toto tlačítko.',
+    'Rámeček kolem pěti tlačítek v horním panelu byl na mobilu odstraněn: nyní splývají se stránkou.',
+    'Tlačítko hádanky má novou ikonu blesku a odpovědi zobrazují čitelné názvy místo surových názvů kláves.',
+    'Oprava: JavaScript aplikace se někdy po aktualizaci nenačel, takže stránka přestala reagovat.'
+  ],
+  'v23.5': [
+    'Filtry, oblíbené, porovnání a sbalení byly sloučeny do jedné kompaktní nabídky <strong>Filtry</strong>: více místa pro seznam zkratek na mobilu.',
+    'Stránka Co je nového, odznáček verze a nastavení aktualizací byly přesunuty do nové sekce <strong>O aplikaci</strong> v nastavení.',
+    'Oznámení o aktualizacích se nyní zobrazují přes tlačítko <strong>Nastavení</strong>: na ikoně ozubeného kola zůstane odznak, dokud novost neuvidíte.'
+  ],
+  'v23.4': ['Tlačítko nápovědy <kbd>?</kbd> bylo odstraněno z horního panelu: průvodce otevřete stisknutím <kbd>?</kbd>.'],
+  'v23.3': [
+    'Odznáček verze se po automatické aktualizaci rozsvítí, takže novou verzi příště při otevření aplikace zpozorujete.',
+    'Přepínání mezi výchozími pozadími zachovává tmavý režim: nové pozadí se také ztmaví.',
+    'Na mobilu vypadá lišta platforem (Windows, macOS, Linux, ChromeOS) nyní stejně jako na počítači.'
+  ],
+  'v23.2': [
+    'Přepínač Pokročilé/Základní byl odstraněn: nyní se zobrazují všechny zkratky pohromadě.',
+    'Na mobilu jsou tlačítka v horním panelu nyní v mřížce 2&times;3.',
+    'Výchozí pozadí se stále používá a správně se ztmaví při přepnutí do tmavého režimu.',
+    'Překryvy (nastavení, průvodce, hádanka) nyní na mobilu překrývají pevné karty.'
+  ],
+  'v23.1': ['Pozadí byla optimalizována pro tmavý režim: při přepnutí do tmavého se ztmaví vaše nahrané obrázky i výchozí pozadí (moře, les, západ slunce a další) a sytost se sníží, aby zůstaly tabulky čitelné.'],
+  'v23': [
+    'Nový režim <strong>Porovnat</strong>: zvolte druhou platformu a zobrazte jen zkratky, které se liší.',
+    'Automatický motiv podle denní doby (tmavý od 19 do 7).',
+    'Stisknutím <kbd>?</kbd> nebo tlačítka <kbd>?</kbd> zobrazíte průvodce a tipy.',
+    'Datum vydání bylo přidáno ke každé položce na této stránce.'
+  ],
+  'v22': [
+    'Oprava: tabulka kláves se na úzkých telefonech ořízávala: nyní se vodorovně posouvá, takže jsou dostupné všechny sloupce.',
+    'Vyhledávací pole a tlačítka skupin byly na stránce Co je nového skryté, protože tam nemají použití.'
+  ],
+  'v21': [
+    'Tabulka kláves má nyní tlačítko zavřít, takže ji můžete sbalit přímo v tabulce: užitečné na mobilu, když klávesnice může vyjet z dosahu.',
+    'Rychlejší odezva na klepnutí u tlačítka tabulky kláves na dotykových zařízeních.'
+  ],
+  'v20.1': [
+    'Číslo verze nyní zvládá i opravné verze: odznak v patě zobrazí například v20.1 a aktualizace se správně rozpoznají.',
+    'Chybějící sekce v20 byla doplněna na tuto stránku.'
+  ],
+  'v20': ['Nová stránka &laquo;Co je nového&raquo; v Anthkeys: odkaz v oznámení o aktualizaci a odznak v patě nyní otevřou tuto stránku místo GitHubu.'],
+  'v19': ['Lišta aktualizací se zobrazuje i tehdy, když aktualizujete z verze před zavedením sledování verzí (starou verzi rozpozná offline mezipaměť).'],
+  'v18': [
+    'Zpráva &laquo;Aktualizováno na vX — Co je nového&raquo; se nyní zobrazuje, když je k dispozici nová verze (v režimu automatické aktualizace).',
+    'Lišta aktualizací se nyní spouští aktualizací obsahu, ne jen změnou service workeru.',
+    'Odznak verze v patě je nyní klepnutelný: klepnutím zobrazíte novinky.',
+    'Offline mezipaměť je menší (soubory bez čísla verze se už neodhazují).'
+  ],
+  'v16': ['Do paty byl přidán odznak verze zobrazující aktuální číslo sestavení.'],
+  'v15': ['Přidáno tlačítko aktualizace a volba (automaticky aktualizovat nebo se zeptat), založené na service workeru.'],
+  'v14': ['Sbalení a rozbalení skupiny nyní respektuje hledané slovo.'],
+  'v13': ['Mezipaměť stránky nyní upřednostňuje síť, takže se aktualizace zobrazí ihned; posouvání je na počítači mnohem plynulejší.'],
+  'v12': ['Hledání a filtry se nyní používají pouze na otevřené kartě.'],
+  'v11': ['Přidána podpora instalace PWA, popisky pro přístupnost, podpora omezení pohybu, zkratky Gmail a YouTube a vylepšení SEO.'],
+  'v10': [
+    'Oprava: filtr skupiny mohl skrýt všechny zkratky, kdyže odpovídaly nadpisu skupiny: nyní skrývá jen řádky, které jste odfiltrovali.',
+    'Pozadí nyní na mobilu překrývá celou obrazovku.'
+  ],
+  'v9': ['Windows je nyní výchozí platforma a pořadí karet je přehlednější.'],
+  'v8': [
+    'Úrovně obtížnosti hádanky a denní tip.',
+    'Mnohem plynulejší posouvání na mobilu, spolu s offline mezipamětí.',
+    'Hledání a filtr nyní fungují současně na všech platformách a názvy operačních systémů jsou tučné.'
+  ],
+  'v7': ['Byly odstraněny více stylů motivu: zůstává pouze Material 3.'],
+  'v6': [
+    'Motiv byl zjednodušen na Material 3 s tlačítkem <strong>Odebrat pozadí</strong> pro návrat k výchozímu motivu.',
+    'Byl přidán nadpisek řízení mezipaměti, aby aktualizace dorazily rychleji.'
+  ],
+  'v5': ['Nadpis stránky byl zkrácen na <strong>Zkratky</strong> ve všech 14 jazycích.'],
+  'v4': [
+    '<strong>Režim hádanky zkratek</strong>: trénujte hádáním kláves nebo prováděním akcí, s cloudovou synchronizací přes GitHub Gist.',
+    'Velká série oprav akcentních barev, přepínání motivu a pozadí na mobilu.'
+  ],
+  'v3': ['Přidány hotové sady akcentních barev, které lze uložit a znovu použít, spolu se zneplatňováním mezipaměti, aby se aktualizace zobrazovaly spolehlivě.'],
+  'v2': ['Světlý a tmavý motiv s akcentní barvou a překlad tabulky zkratek.'],
+  'v1': ['První verze Anthkeys: všechny denní klávesové zkratky pro Windows, macOS, Linux a ChromeOS na jedné stránce.']
+};
+
