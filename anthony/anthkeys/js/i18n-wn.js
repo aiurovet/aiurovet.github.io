@@ -4242,3 +4242,226 @@ I18N_WN.cs = {
   'v1': ['První verze Anthkeys: všechny denní klávesové zkratky pro Windows, macOS, Linux a ChromeOS na jedné stránce.']
 };
 
+I18N_WN.hu = {
+  'v52.1': [
+    'Új: a &laquo;Mi az új?&raquo; oldal mostantól mind a 20 nyelven teljesen le van fordítva — minden kiadási megjegyzés a te nyelveden jelenik meg.'
+  ],
+  'v52': [
+    'Javítás: az v51 megakadályozhatta az alkalmazás betöltését; a magyar nyelvfájlban egy lezáratlan aposztróf volt, ezért a teljes fájl érvénytelen lett. A fájl mostantól helyesen értelmeződik, és mind a 20 nyelv betöltődik.'
+  ],
+  'v51': [
+    'A fordítás mind a 20 nyelven teljes — a beállítások, az élő szinkronizálás, az offline szinkronizálás és a szinkronizálási útmutató is teljesen le van fordítva (az új bejegyzések korábban csak angolul jelentek meg).',
+    'Új: ha az Anthkeys lassúnak tűnik, egy értesítősáv egyetlen érintéssel bekapcsolhatja a <strong>teljesítménymódot</strong>. Bezárhatod, és nem jelenik meg újra.'
+  ],
+  'v50.7': ['A teljesítménymód átkerült a beállítások <strong>Általános</strong> fülére.'],
+  'v50.6': ['A felső sáv ikonjai ismét színes emoji-ek az v50-hez hasonlóan: könyv, nyomtató, villám, hold/nap, frissítés és fogaskerék.'],
+  'v50.5': ['A felső sáv ikonjai ismét az akcentusszínt használják (alapértelmezett), így már nem néznek ki fehérnek vagy szürkének.'],
+  'v50.4': ['Az akcentusszínnel történő ikonozás funkció eltűnt: a favicon, a kezdőképernyő-ikon és a telepített PWA-ikon ismét az alapértelmezett ikont használja (az akcentusszín csak a beépített alkalmazásban jelent valamit).'],
+  'v50.3': [
+    'A felső sáv ikonjai átalakítottuk, hogy minden eszközön stabilan jelenjenek meg (a tallózás, a nyomtatás, a fejtörők, a téma, a frissítés és a beállítások most valódi ikonokat használnak).',
+    'A témagomb ismét valódi ikon, és a világos/sötét állapothoz igazodik.'
+  ],
+  'v50.2': ['Javítottuk az v50.1 hibáját, amely miatt a felső sáv ikonjai és a beállítások indításkor nem működtek.'],
+  'v50.1': [
+    'Új <strong>teljesítménymód</strong> a Testreszabás alatt: az elmosás és az animációk kikapcsolása lassíthatja az alkalmazást Windowson.',
+    'A felső sáv most valódi ikonokat használ, és az új <strong>Ikonok</strong> beállítással színezheted őket a saját akcentusszíneddel.',
+    'Az Alkalmazások fül mostantól úgy működik, mint a Linux fül: koppintással bárhogyan kiválaszthatod az alkalmazást (VS Code, Figma, Gmail és még sok más), és a fül megjeleníti a választásodat, például &laquo;Alkalmazás - Gmail&raquo;.',
+    'A Testreszabás gomb alatti hexmező megszűnt: a színt csak a csúszkákkal választhatod ki.',
+    'Az akcentusszín-választókhoz nyolc új kétértékes kombináció került.'
+  ],
+  'v50': [
+    'A Linux fülön bárhogyan koppintva megnyílik a disztribúciók listája, és a fül mostantól megjeleníti a választásodat, például &laquo;Linux - Ubuntu (GNOME)&raquo;.',
+    'Az egyéni színválasztót átalakítottuk: a kerek mintamegnyitja a <strong>Színárnyalat</strong>, <strong>Telítettség</strong> és <strong>Fényesség</strong> csúszkákat (mindegyik csúszka fölött látszik az érték), és az aktuális színből indul ki a 0/0/0 helyett.',
+    'Új <strong>Akcentusszínek</strong> szakasz: nyolc kész kétértékes átalakítás, amely akcentusszínként használható.',
+    'A beépített akcentusszín-készleteket finomítottuk a tisztább, olvashatóbb paletta érdekében.'
+  ],
+  'v40.9': ['A disztribúciólista mostantól magán a Linux fülön található: a disztribúció kiválasztásához koppints a fülön lévő kis nyílra.'],
+  'v40.8': ['A Linux fülön mostantól disztribúciólista van (Ubuntu, Debian, Fedora, Arch, Mint, KDE és mások), amely segít a rendszerparancsikonokat az egyes disztribúciók alapértelmezett beállításaihoz igazítani, és megjegyzi a választásodat.'],
+  'v40.7': ['Az akcentusszín beállítása mostantól élő előnézetet mutat a használt szín pontos hexkódjával, így minden választás hatását azonnal láthatod.'],
+  'v40.6': [
+    'A <strong>Szín kivétele a képernyőről</strong> eszközt eltávolítottuk.',
+    'A beépített akcentusszín-készleteket a Material 3 Expressive intenzitásához igazítottuk: mély, élénk színek és valódi neon (a szürke árnyalatok továbbra is lágyak).'
+  ],
+  'v40.5': ['Az akcentusszín-palettát újra kiegyensúlyoztuk a Material 3 Expressive alapján: világosabb, élénkebb színek.'],
+  'v40.4': ['A <strong>Matcholás az eszközömnél</strong> mostantól a rendszer tényleges színét olvassa (a Chrome oklch/color() értékeit is) és az operációs rendszer szövegkijelölését, így a valódi dinamikus akcentusszín lép életbe.'],
+  'v40.3': [
+    'Minden akcentusszínt újra kiegyensúlyoztunk a Material You biztonságos tónusaihoz (lágy középtónusok a lágy felületi tónusok mellett).',
+    'A <strong>Matcholás az eszközömnél</strong> mostantól alternatívaként a rendszer kijelölését is olvassa, így több böngészőben és profilban is működik.'
+  ],
+  'v40.2': ['Akcentusszín beállítás: az új <strong>Matcholás az eszközömnél</strong> gomb beolvassa a rendszer akcentusszínét (Chrome 150+, ha az alkalmazás telepítve van), és megerősítő üzenettel alkalmazza.'],
+  'v40.1': ['A háttérkönyvtárat eltávolítottuk (a könyvtárban tárolt háttérek törlődnek; a feltöltött képeid továbbra is működnek).'],
+  'v40.0': ['Akcentusszín-választó: az egyéni színhez most hexmező tartozik (írj bármilyen színt, 3 vagy 6 karaktert) és egy másolás gomb — ugyanaz az elrendezés a számítógépen és a telefonon.'],
+  'v39.9': ['Szobacsata: a szobajegyzetek mostantól a <strong>Cata</strong> táblázatban jelennek meg előzménnyel (szobánként 60 üzenet, visszatéréskor visszaáll). A nyilvános jegyzetek a naplóba kerülnek; a privát jegyzetek közvetlenül a vágólapra másolódnak. Koppints egy üzenetre a másoláshoz.'],
+  'v39.8': [
+    '<strong>Legutóbbi szobák</strong>: az utolsó hat szoba, amelyhez csatlakoztál, egygombos gombként jelenik meg a főoldalon, mindegyik saját színnel, plusz egy gomb az eltávolításukhoz.',
+    '<strong>Profilom küldése</strong>: küldd el a beállításaidat és az egyéni parancsikonjaidat az egész szobának egyetlen pillanatként; más eszközök azonnal használatba veszik.',
+    '<strong>Háttérkönyvtár</strong>: hat beépített átmenet automatikus világos és sötét változattal, egy véletlen gomb és napi váltás opció.',
+    '<strong>Keresés</strong>: a másolt parancsikonok a keresési menüben &laquo;Legutóbbi másolás&raquo; néven maradnak meg, a keresési előzményekkel együtt.'
+  ],
+  'v39.7': ['A mobilon futó animációk mostantól ugyanazt a CSS-t használják, mint a számítógép: az érintőeszközsabályok már nem kapcsolnak ki minden átmenetet. A bemutató világítása és a csúszkártyák mostantól folyamatosan mozognak, és a téma, valamint a háttér lágyan át is vált, a telefonon is.'],
+  'v39.6': ['A telefon mostantól a számítógép szintjén van: a téma és a háttér váltása ugyanolyan egyenletes, mint a számítógépen, és az oldalbemutató az érintőeszközökön is végighalad a lépéseken.'],
+  'v39.5': ['<strong>AirDrop és Quick Share</strong>: a szobakód melletti <strong>Megosztás</strong> gomb megnyitja a telefon megosztási paneljét (AirDrop Apple-eszközökön) egyszer használatos szobalinkkel: a második eszközön elég egy koppintás a csatlakozáshoz.'],
+  'v39.4': ['A verziókártya ragyogása és a pehelycseppjei mostantól a számítógépen is futnak, akkor is, ha a rendszeren be van kapcsolva a &laquo;mozgás csökkentése&raquo;, vagy az animációk ki vannak kapcsolva a beállításokban: frissítési jelzésnek számítanak, nem dísznek.'],
+  'v39.3': ['A verziókártya ragyogása és a beállításokban lévő verziójelölés mostantól stabil a számítógépen: a futó verzió indításkor mindig néhány napra megtartja a &laquo;frissítés elérhető&raquo; keretet, akkor is, ha a frissítési értesítést átgörgetted.'],
+  'v39.2': ['Az új verzió kártyán lévő effektusa többé nem tűnik el örökre egyetlen pillantás után: a ragyogás néhány napig tart, és minden látogatáskor visszatér.'],
+  'v39.1': ['Végre látható a színminták: a minták (szobaszín, témaszín és akcentusszín) mostantól jól látható körökként rajzolódnak ki az üres, láthatatlan elemek helyett.'],
+  'v39': [
+    'A csengetés mostantól rövid üzenetet is hordozhat: a csengető eszköz meghallja, és a vágólapra másolja.',
+    '<strong>Akkumulátorjelzés</strong>: üzenetet kapsz, amikor egy eszköz 25 % fölé kerül, és az akkumulátorjelzést be- vagy kikapcsolhatod.',
+    'A jegyzeteket mostantól egyetlen eszközre küldhetjük a jegymező melletti <strong>Címzett:</strong> választóval.',
+    'Minden szobának színes címkéje lehet, így a szobák azonnal megkülönböztethetők.',
+    'Az offline szinkronizálási kód mostantól előnézetet mutat (eszköz, idő, beállítások és parancsikonok száma), és az importálás előtt megerősítést kér.'
+  ],
+  'v38.1': ['Mobilon egy <strong>Névjegy</strong> fülre koppintva a szakaszok már nem nyílnak meg automatikusan: a megnyitáshoz koppints a szakasz címére.'],
+  'v38': ['Mobilon az <strong>Névjegy</strong> fül már nem nyitja meg automatikusan a szinkronizálási útmutatót: a <strong>Élő szobák és offline szinkronizálás</strong> szakasz megnyitásával éred el.'],
+  'v37': ['Az útmutató mostantól a <strong>élő szobák</strong> és az <strong>offline szinkronizálási kódok</strong> teljes leírását tartalmazza, és mobilon is elérhető.'],
+  'v36': ['A bejelentkezési gomb neve mostantól <strong>Beolvasás</strong> (a fényképezőgépet vagy a fájlválasztót nyitja meg egy QR-kód beolvasásához), így nem téveszthető össze a <strong>QR</strong> gombbal, amely a szobakódot mutatja.'],
+  'v35': ['Javítás: a szoba QR-kódja és az offline kód mostantól helyesen jelenik meg egy üres keret helyett.'],
+  'v34': [
+    '<strong>Eszköz hívása</strong> — minden másik eszközön van egy <strong>Hívás</strong> gomb, amely megszólaltatja és rezegteti, hogy megtaláld a telefonodat.',
+    '<strong>Jegy küldése</strong> — oszd meg a szöveget az összes csatlakozott eszközzel; a tartalom azonnal megjelenik, és bemásolódik az adott eszköz vágólapjára.',
+    '<strong>Akkumulátor figyelése</strong> — figyelmeztetést kapsz, ha egy csatlakozott eszköz akkumulátora 20 % alá esik.',
+    '<strong>Eszköz átnevezése</strong> — koppints az eszköz nevére saját név megadásához.',
+    '<strong>Csatlakozás beolvasással</strong> — a kiszolgáló QR-kódként megjelenítheti a szobakódját; olvasd be a fényképezőgéppel (vagy olvasd be az offline szinkronizálási kódot).',
+    '<strong>Védett szoba</strong> — válaszd a &laquo;Szoba védelme&raquo; lehetőséget és adj meg egy jelszót; minden szobaadat titkosítva van, így csak a jelszóval rendelkező tagok olvashatják.',
+    '<strong>Utolsó aktivitás</strong> — minden eszköz megmutatja, mennyi ideje volt online.'
+  ],
+  'v33': ['A csatlakozott eszközök az <strong>akkumulátorszintet</strong> is megosztják (töltés közben is), és valós időben frissülnek a szobában.'],
+  'v32': ['Az élő szoba mostantól minden eszköz valódi nevét mutatja (például &laquo;Mi 9T Pro&raquo;) az eszköz által kitalált véletlenszerű nevek helyett.'],
+  'v31': ['Az élő szoba mostantól felsorol minden csatlakozott eszközt névvvel, zöld ponttal ezen az eszközön, valamint az összesített darabszámmal.'],
+  'v30': [
+    '<strong>Élő szoba</strong> — először, a beállításaid és az egyéni parancsikonjaid valós idejű szinkronizálásához:<ol><li>A azon az eszközön, amelyen a beállításaid vannak, nyisd meg a <strong>Beállítások → Élő szoba</strong> menüt, és koppints a <strong>Szoba indítása</strong> gombra. Megjelenik egy AK-XXX-YYY formátumú szobakód.</li><li>Küldd el a kódot a többi eszközödre (másold vagy oszd meg, ahogy tetszik).</li><li>Minden eszközön, amely megkapja, nyisd meg a <strong>Beállítások → Élő szoba</strong> menüt, írd be ugyanazt a kódot, és koppints a <strong>Csatlakozás a szobához</strong> gombra.</li></ol>',
+    '<strong>Offline szinkronizálási kód</strong> — utána, az egyszeri átvitelhez, ha nincs internet:<ol><li>Nyisd meg a <strong>Beállítások → Offline szinkronizálási kód</strong> menüt, és koppints a <strong>Kód létrehozása</strong> gombra. Másold ki a kódot, vagy olvasd be a megjelenő QR-kódot.</li><li>A második eszközön nyisd meg a <strong>Beállítások → Offline szinkronizálási kód</strong> menüt, illeszd be a kódot, és koppints a <strong>Kód használata</strong> gombra.</li></ol>'
+  ],
+  'v29': ['Javítás: <strong>mobilon</strong> a verziójelölésre koppintva mostantól mindig lefut a kibuborodás-, forgatás- és összenyomódás-effektus, ahelyett, hogy az érintőeszközökön az animációk visszaállítása letiltaná.'],
+  'v28': ['Mobilon a Testreszabás melletti beállításkártya mostantól csak <strong>Névjegy</strong> (az útmutató csak a számítógépen érhető el), és koppintásra megnyitja a Névjegy szakaszt.'],
+  'v27': ['Javítás: az oldal megnyitása közvetlenül egy <strong>új verzió</strong> után már nem tölti be magát újra néhány másodperccel később — a frissítések mostantól a háttérben lépnek életbe. A Frissítés gomb és a <strong>Frissítés előtt kérdezés</strong> beállítás továbbra is kérésre tölti be újra az oldalt.'],
+  'v26.9': ['Vicces: a <strong>verziójelölésre</strong> koppintva mostantól mindig lefut a kibuborodás-, forgatás- és összenyomódás-effektus, <strong>pehelycseppként</strong> villan, amikor az új verzió előtérbe kerül, és a Névjegy szakasz a gyorsabb hozzáférés érdekében átkerült a beállítások <strong>Névjegy</strong> fülére.'],
+  'v26.8': ['Fejlesztés: a Névjegy szakasz <strong>verziójelölése</strong> mostantól magától frissül, és megnyitja a Mi az új? oldalt.'],
+  'v26.7': ['Fejlesztés: a napi tipp <strong>alkalmazásparancsikonjai</strong> mostantól először megadják, melyik alkalmazáshoz tartoznak, például <em>Figma - Move Tool - V</em>.'],
+  'v26.6': ['Fejlesztés: a <strong>napi tipp</strong> frissül a platformfül váltásakor: a Windows, macOS, Linux, ChromeOS vagy Alkalmazások kiválasztásával az adott rész parancsikonjai jelennek meg.'],
+  'v26.5': ['Javítás: a <strong>napi tipp</strong> már nem ragad be egyetlen parancsikonon: az oldal minden betöltésekor új véletlenszerű parancsikont mutat abból a platformfülből, amelyet éppen nézel.'],
+  'v26.4': ['Javítás: a <strong>napi tipp</strong> mostantól csak annak a platformfülnek a parancsikonjait mutatja, amelyet nézel (korábban az összes platform parancsikonjai összekeveredtek). Az útmutató verziójelölése is automatikusan frissül.'],
+  'v26.3': ['A <strong>Tallózás</strong> gomb mostantól a <strong>nyitott könyv</strong> ikont mutatja.'],
+  'v26.2': ['A <strong>Tallózás</strong> gomb mostantól iránytű ikont mutat, és az oldalbemutató új lépést kapott, amely elmagyarázza, mit tesz a <strong>frissítés gomb</strong>.'],
+  'v26.1': ['Javítás: a <strong>sötét és világos</strong> mód közötti váltás (a felső kapcsolóval vagy a beállításokban) már nem okozza, hogy a <strong>témaháttér</strong> elveszítse a színeit: az akcentusszín, a mezőgombok és a parancsikonok megtartják a témaszíneket, miközben a háttér nyugodt marad.'],
+  'v26': ['<strong>Új oldalbemutató</strong> — koppints a felső <strong>?</strong> gombra, hogy végigböngéssz a keresőmezőn, a szűrőkön, a fülökön, a parancsikonlistán, a fejtörőkön, a beállításokon, a nyomtatáson és a témagombon. A böngészéshez használd a gombokat, a nyilakat vagy a pontokat.'],
+  'v25': ['A <strong>Megtekintés a GitHubon</strong> hivatkozást eltávolítottuk a Névjegy szakaszból.'],
+  'v24.8': ['Javítás: a <strong>&laquo;Frissítve&raquo;</strong> értesítés mobilon mostantól belefér a képernyőbe (korábban a kis eszközök jobb szélén túllógott).'],
+  'v24.7.4': ['A saroklekerekítés mostantól minden témában <strong>16&thinsp;px</strong>-re korlátozott: a gombok, a kártyák, a keresőmező és az értesítések már nem teljesen lekerekítettek (korábban akár 100&thinsp;px). A sarkak lágyak maradnak, csak visszafogottabbak.'],
+  'v24.7.3': ['Javítás: az <strong>A Wi-Fi beállítások megnyitása</strong> gomb <strong>Androidon</strong> nem csinált semmit: a Chrome újabb verziói nem engedik a weboldalaknak megnyitni az Android rendszerbeállításait. A gomb most rövid üzenetet mutat, amely emlékeztet, hogy nyisd meg a Wi-Fi beállításokat az eszköz Beállítások alkalmazásában (iOS-en és macOS-en továbbra is közvetlenül nyílik).'],
+  'v24.7.2': ['Javítás: egy telepített Android-alkalmazásban (PWA) az <strong>A Wi-Fi beállítások megnyitása</strong> gombra koppintva semmi sem történt: az Android nem engedi, hogy az alkalmazások közvetlenül rendszerbeállításokat nyissonak. A gomb ezt most elmagyarázza, és emlékeztet, hogy nyisd meg az oldalt egy Chrome-fülben, ahol a gomb működik.'],
+  'v24.7.1': ['Javítás: az <strong>A Wi-Fi beállítások megnyitása</strong> gomb <strong>Androidon</strong> JavaScript által kiváltott linkkattintást használt, amit a Chrome letilt a <code>intent:</code> linkeknél: mostantól felhasználói gesztusból kiinduló navigációt használ.'],
+  'v24.7': [
+    'A <strong>kapcsolat állapota</strong> mostantól a <strong>Beállítások → Általános</strong> rész tetején van (a Névjegyből költözött ide).',
+    'Az <strong>A Wi-Fi beállítások megnyitása</strong> gomb mostantól a megfelelő Wi-Fi beállításokat nyitja meg <strong>iOS</strong>-en (a Beállítások alkalmazásban) és <strong>macOS</strong>-en (Rendszerbeállításokban). Androidon, Windowson és Linuxon, ahol a böngésző nem tud rendszerbeállításokat nyitni, a gomb rövid útmutatót mutat.'
+  ],
+  'v24.6': [
+    'A <strong>Offline</strong> gomb mostantól csak <strong>10 másodpercig</strong> látszik, aztán eltűnik (hogy ne legyen bosszantó, amíg a kapcsolat továbbra is hiányzik).',
+    'A <strong>Beállítások → Névjegy</strong> mostantól mindig megjeleníti a <strong>kapcsolat állapotát</strong> (online/offline), az <strong>A Wi-Fi beállítások megnyitása</strong> gombbal együtt: iOS-en közvetlenül megnyitja a Beállítások alkalmazást, más eszközökön rövid útmutatót mutat.'
+  ],
+  'v24.5.2': ['Javítás: azokon az asztali gépeken, ahol a Windows elveszíti a kapcsolatot anélkül, hogy a böngésző <em>offline</em> eseményt küldene (vagy a kérések ahelyett, hogy hibáznának, csak beragadnak), az <strong>Offline</strong> gomb mostantól akkor is megjelenik, ha a kapcsolatellenőrzés időtúllép, nem csak akkor, ha maga a kérés hibázik.'],
+  'v24.5.1': ['Javítás: az <strong>Offline</strong> gomb mostantól akkor is megjelenik, ha a kapcsolat jel nélkül szűnik meg (például a DevTools offline módjában, egyes mobilböngészőkben): az alkalmazás néhány másodpercenként aktívan ellenőrzi a kapcsolatot, ahelyett, hogy csak a böngésző jelére támaszkodna. Akkor tűnik el, amikor újra online vagy.'],
+  'v24.5': [
+    'A keresőmező alatt az eredményekben a keresőszóval egyező szavak mostantól <strong>kiemelve</strong> jelennek meg: könnyebb látni, miért illik egy eredménysor.',
+    'A keresőmező <strong>törlés (&times;)</strong> gombot kap, amikor valamit beírtál.',
+    'Egy kis <strong>Offline</strong> gomb jelenik meg, amikor a kapcsolat megszakad: koppints rá, hogy megerősítsd, az Anthkeys továbbra is a gyorsítótárból fut.'
+  ],
+  'v24.4.1': ['Javítás mobilon: a <strong>Művelet - Parancsikonok</strong> fejléc már nem csúszik ki a képernyőből: a szűk kijelzőkön a parancsikontáblázat saját vízszintes görgetési területe volt, ami szétrombolta a rögzített fejlécet. Mostantól felül van rögzítve, ugyanúgy, mint a számítógépen.'],
+  'v24.4': ['A <strong>fejtörő-lánc widget a kezdőképernyőn</strong> eltűnt: egy olyan webes szabványon épült, amelyet a böngészők még nem valósítottak meg, így soha nem jelent meg sehol. A láncod és a fejtörő-statisztikáid az alkalmazásban megmaradnak.'],
+  'v24.3': [
+    'A <strong>parancsikonfejtörő mostantól menti a statisztikádat</strong>: napi lánc (🔥 az egymást követő befejezett napok száma), legjobb pontszám, pontosság és lejátszott körök száma. Helyben tárolódik, és soha nem töltődik fel.',
+    'Új <strong>fejtörő-lánc widget a kezdőképernyőn</strong> Androidhoz (webes widgetek: kísérleti, hamarosan a Chrome-ban és a Firefoxban; iOS-on nem létezik). Megmutatja a láncodat és a statisztikádat; koppints, hogy megnyíljon a fejtörő.'
+  ],
+  'v24.2.1': ['Javítás mobilon: a keresőmezőre koppintva megnyílhatott a Névjegy oldal: a beállítás gomb melletti <strong>Mi az új?</strong> réteg még kattintható volt, és letakarta a keresőmezőt. Mostantól csak akkor reagál, ha látható.'],
+  'v24.2': [
+    'Új <strong> módosítószűrő</strong>: válassz egy billentyűt (Ctrl, Shift, Alt, Win, Cmd és mások) a szűrőmenüből, hogy csak azokat a parancsikonokat lásd, amelyek azt a billentyűt használják. A lehetőségek platformonként eltérnek.',
+    'A <strong>fent gomb</strong> a parancsikonlista fölött úszik görgetéskor: koppints, hogy visszaugrass a lista elejére.'
+  ],
+  'v24.1': ['A <strong>Művelet - Parancsikonok</strong> mező görgetéskor mostantól felül van rögzítve: korábban kicsúszott a képernyőből mobilon és a Safariban.'],
+  'v23.9': ['Az útmutatót és a tippeket tartalmazó felugró ablakot mobolon eltávolítottuk: csak számítógépes parancsikonokat sorolt fel. Az útmutató továbbra is a beállításokban van a számítógépen, ahol a <kbd>?</kbd> odavisz.'],
+  'v23.8': ['Mobolon az útmutató már nincs a beállításokban: elrejtettük, hogy az oldal könnyű maradjon. A <kbd>?</kbd> megnyomásával felugró ablakban jelenik meg.'],
+  'v23.7': ['Az útmutatót és a tippeket átköltöztettük a <strong>Beállításokba</strong> (Általános szakasz) a számítógépen: a <kbd>?</kbd> megnyomásával egyenesen oda jutsz.'],
+  'v23.6': [
+    'Mind a 20 nyelv mostantól teljesen le van fordítva: az új funkciókban, mint a fejtörők, a felhőszinkronizálás és az útmutató, már nem esel vissza angolra.',
+    'Mobolon a parancsikonokat hosszú koppintással másolhatod másolás helyett: görgetés közben már nem másolsz véletlenül.',
+    'A csoportgombok mostantól mobilon is a saját akcentusszínedet használják, ugyanúgy, mint a számítógépen; ha a Kedvencek van kiválasztva, csak az lép elő.',
+    'Az öt felső sávbeli gomb körüli keretet mobolon eltávolítottuk: mostantól belesimulnak az oldalba.',
+    'A fejtörőgomb új villámikon kapott, és a válaszok olvasható neveket mutatnak nyers billentyűnevek helyett.',
+    'Javítás: az alkalmazás JavaScriptje néha frissítés után nem töltődött be, így az oldal nem válaszolt.'
+  ],
+  'v23.5': [
+    'A szűrők, a kedvencek, az összehasonlítás és az összecsukás egyetlen kompakt <strong>Szűrők</strong> menübe került: több hely marad a parancsikonlistának mobilon.',
+    'A Mi az új? oldal, a verziójelölés és a frissítési beállítások átkerültek az új <strong>Névjegy</strong> szakaszba a beállításokban.',
+    'A frissítési értesítések mostantól a <strong>Beállítások</strong> gombon keresztül jelennek meg: jel marad a fogaskerék ikonon, amíg nem nézed meg az újdonságot.'
+  ],
+  'v23.4': ['A <kbd>?</kbd> súgó gombot eltávolítottuk a felső sávból: az útmutatót a <kbd>?</kbd> megnyomásával nyithatod meg.'],
+  'v23.3': [
+    'A verziójelölés kigyullad automatikus frissítés után, így a következő megnyitáskor észreveszed az új verziót.',
+    'Az alapértelmezett hátterek közötti váltás megőrzi a sötét módot: az új háttér is elsötétedik.',
+    'Mobilon a platformsáv (Windows, macOS, Linux, ChromeOS) mostantól úgy néz ki, mint a számítógépen.'
+  ],
+  'v23.2': [
+    'A Speciális/Alapvető kapcsolót eltávolítottuk: mostantól minden parancsikon együtt látszik.',
+    'Mobilon a felső sáv gombjai mostantól 2&times;3 rácsban helyezkednek el.',
+    'Az alapértelmezett háttér továbbra is használatban van, és sötét módra váltáskor helyesen elsötétedik.',
+    'A rétegek (beállítások, útmutató, fejtörő) mobilon mostantól a rögzített kártyákat takarják.'
+  ],
+  'v23.1': ['A háttereket optimalizáltuk a sötét móddal: sötét módra váltáskor a feltöltött képeid és az alapértelmezett hátterek (tenger, erdő, naplemente és még sok más) is elsötétednek, és a telítettség csökken, hogy a táblázatok olvashatók maradjanak.'],
+  'v23': [
+    'Új <strong>Összehasonlítás</strong> mód: válassz másik platformot, és csak az eltérő parancsikonokat lásd.',
+    'Automatikus téma a napszak alapján (sötét 19:00-től 07:00-ig).',
+    'Nyomd meg a <kbd>?</kbd> billentyűt vagy a <kbd>?</kbd> gombot a gyors útmutatóhoz és a tippekhez.',
+    'Az oldal minden eleméhez kiadási dátum került.'
+  ],
+  'v22': [
+    'Javítás: a billentyűtáblázat levágódott a szűk telefonokon: mostantól vízszintesen görgethető, így minden oszlop elérhető.',
+    'A keresőmezőt és a csoportgombokat elrejtettük a Mi az új? oldalon, mert ott nincs rájuk szükség.'
+  ],
+  'v21': [
+    'A billentyűtáblázatnak mostantól van bezárógombja, így magában a táblázatban összecsukható: hasznos mobilon, ha a billentyűzet kicsúszhat a hatókörből.',
+    'Gyorsabb koppintási válasz a billentyűtáblázat gombján érintőeszközökön.'
+  ],
+  'v20.1': [
+    'A verziószám mostantól a javítóverziókat is kezeli: a lábléc jelölése például v20.1-et mutat, és a frissítések helyesen felismerésre kerülnek.',
+    'A hiányzó v20 szakaszt hozzáadtuk ehhez az oldalhoz.'
+  ],
+  'v20': ['Új &laquo;Mi az új?&raquo; oldal az Anthkeysben: a frissítési értesítésben lévő hivatkozás és a lábléc jelölése mostantól ezt az oldalt nyitja meg a GitHub helyett.'],
+  'v19': ['A frissítési sáv mostantól akkor is megjelenik, ha olyan verzióról frissítesz, amely a verziókövetés bevezetése előtti (a régi verziót a gyorsítótár azonosítja).'],
+  'v18': [
+    'Az &laquo;Frissítve a vX verzióra - Mi az új?&raquo; üzenet mostantól akkor jelenik meg, ha új verzió érhető el (automatikus frissítési módban).',
+    'A frissítési sáv mostantól tartalmi frissítések hatására indul el, nem csak a service worker változásakor.',
+    'A láblécen lévő verziójelölésre mostantól koppintani lehet: koppints, hogy megnézd az újdonságokat.',
+    'A gyorsítótár kisebb (a verziószám nélküli fájlokat már nem dobja el).'
+  ],
+  'v16': ['Hozzáadtunk egy láblécen lévő verziójelölést, amely az aktuális build számot mutatja.'],
+  'v15': ['Hozzáadtunk egy frissítés gombot és egy lehetőséget (automatikus frissítés vagy rákérdezés) a service worker alapján.'],
+  'v14': ['A csoport összecsukása és kibontása mostantól tiszteletben tartja a keresett szót.'],
+  'v13': ['Az oldal gyorsítótára mostantól a hálózatot részesíti előnyben, így a frissítések azonnal megjelennek; a görgetés sokkal egyenletesebb a számítógépen.'],
+  'v12': ['A keresés és a szűrők mostantól csak a nyitott fülre vonatkoznak.'],
+  'v11': ['Hozzáadtunk PWA-telepítést, akadálymentességi címkéket, mozgáscsökkentési támogatást, Gmail- és YouTube-parancsikonokat valamint SEO-javításokat.'],
+  'v10': [
+    'Javítás: a csoportszűrő elrejthette az összes parancsikont, amikor azok a csoport címére illeszkedtek: mostantól csak a szűréssel kizárt sorokat rejti el.',
+    'A háttér mostantól mobolon az egész képernyőt lefedi.'
+  ],
+  'v9': ['A Windows lett az alapértelmezett platform, és a fülek sorrendje áttekinthetőbb.'],
+  'v8': [
+    'Nehézségi szintek a fejtörőhöz és a napi tipphez.',
+    'Sokkal egyenletesebb görgetés mobilon, gyorsítótárral együtt.',
+    'A keresés és a szűrő mostantól egyszerre működik minden platformon, az operációs rendszer neve félkövéren.'
+  ],
+  'v7': ['Eltávolítottuk a több témastílust: mostantól csak a Material 3 marad.'],
+  'v6': [
+    'Leegyszerűsítettük a témát a Material 3-ra, a <strong>Háttér eltávolítása</strong> gombbal az alapértelmezett témához való visszatéréshez.',
+    'Hozzáadtunk egy gyorsítótár-vezérlő címsort, hogy a frissítések gyorsabban érkezzenek.'
+  ],
+  'v5': ['Az oldalcímet minden 14 nyelven <strong>Parancsikonokra</strong> rövidítettük.'],
+  'v4': [
+    '<strong>Parancsikonfejtörő mód</strong>: gyakorolj billentyűk kitalálásával vagy műveletek végrehajtásával, felhőszinkronizálással a GitHub Gisten keresztül.',
+    'Nagy sorozat akcentusszín-, témaváltási és mobilháttér-javítás.'
+  ],
+  'v3': ['Kész akcentusszín-készleteket adtunk hozzá, amelyek elmenthetők és újra felhasználhatók, a gyorsítótár érvénytelenítésével együtt, hogy a frissítések megbízhatóan megjelenjenek.'],
+  'v2': ['Világos és sötét téma akcentusszínnel, valamint a parancsikontáblázat fordítása.'],
+  'v1': ['Az Anthkeys első kiadása: minden napi billentyűparancsikon a Windows, macOS, Linux és ChromeOS rendszerekhez egyetlen oldalon.']
+};
+
