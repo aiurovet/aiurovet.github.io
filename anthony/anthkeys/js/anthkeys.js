@@ -13590,6 +13590,7 @@ function syncRenderColor() {
   tag.hidden = !c;
   if (c) tag.style.background = c;
   document.querySelectorAll('.sync-color-tag').forEach(el => {
+    if (el.dataset.syncColor) el.style.background = el.dataset.syncColor;
     const active = c && el.dataset.syncColor === c;
     el.style.boxShadow = active ? '0 0 0 2px var(--surface), 0 0 0 4px ' + c : '';
   });
