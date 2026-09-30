@@ -6,6 +6,10 @@
 const I18N_WN = window.I18N_WN || {};
 
 I18N_WN.es = {
+  'v52.3': [
+    'Nuevo: los resultados de la búsqueda ahora te dicen cuántos hay, en los 20 idiomas, y cambian con el idioma que elijas.',
+    'Nuevo: Anthkeys vuelve a abrirse en la plataforma que estabas leyendo, así que el cambio entre Windows, macOS, Linux, ChromeOS y Apps se recuerda entre visitas.'
+  ],
   'v52.2': [
     'Nuevo: notificaciones. Actívalas en Ajustes: elige una hora y Anthkeys te enviará un consejo diario de atajo, además de un aviso cuando haya una nueva versión lista para instalar.',
     'Nuevo: avisos de salas en directo. Un interruptor aparte te avisa cuando un dispositivo se une a tu sala, la abandona, te llama, tiene la batería baja o te envía una nota, para que encuentres tu otro dispositivo aunque la pestaña esté en segundo plano.',
@@ -236,6 +240,10 @@ I18N_WN.es = {
 };
 
 I18N_WN.fr = {
+  'v52.3': [
+    'Nouveau : les résultats de recherche vous indiquent maintenant combien il y en a, dans les 20 langues, et suivent la langue que vous choisissez.',
+    'Nouveau : Anthkeys se rouvre sur la plateforme que vous consultiez, si bien que le passage de Windows, macOS, Linux, ChromeOS et Apps est mémorisé d\'une visite à l\'autre.'
+  ],
   'v52.2': [
     'Nouveau : les notifications. Activez-les dans les réglages : choisissez une heure et Anthkeys vous envoie un conseil de raccourci quotidien, ainsi qu’une alerte quand une nouvelle version est prête à être installée.',
     'Nouveau : alertes de salon en direct. Un interrupteur distinct vous previent quand un appareil rejoint votre salon, le quitte, sonne, a une batterie faible ou vous envoie une note, pour retrouver votre autre appareil même si l&rsquo;onglet est en arrière-plan.',
@@ -466,6 +474,10 @@ I18N_WN.fr = {
 };
 
 I18N_WN.de = {
+  'v52.3': [
+    'Neu: die Suchergebnisse sagen dir jetzt, wie viele es gibt, in allen 20 Sprachen, und sie folgen der Sprache, die du wählst.',
+    'Neu: Anthkeys öffnet wieder auf der Plattform, die du zuletzt gelesen hast, sodass der Wechsel zwischen Windows, macOS, Linux, ChromeOS und Apps zwischen den Besuchen erhalten bleibt.'
+  ],
   'v52.2': [
     'Neu: Benachrichtigungen. Aktiviere sie in den Einstellungen – wähle eine Uhrzeit und Anthkeys sendet dir einen täglichen Tipp zum Tastenkürzel sowie einen Hinweis, wenn eine neue Version zur Installation bereitsteht.',
     'Neu: Live-Raum-Hinweise. Ein eigener Schalter meldet, wenn ein Gerät deinem Raum beitritt, ihn verlässt, klingelt, einen niedrigen Akkustand hat oder dir eine Notiz schickt, damit du dein anderes Gerät findest, auch wenn der Tab im Hintergrund ist.',
@@ -696,6 +708,10 @@ I18N_WN.de = {
 };
 
 I18N_WN.it = {
+  'v52.3': [
+    'Novità: i risultati della ricerca ti dicono ora quanti sono, in tutte le 20 lingue, e seguono la lingua che scegli.',
+    'Novità: Anthkeys si riapre sulla piattaforma che stavi leggendo, così il passaggio tra Windows, macOS, Linux, ChromeOS e Apps resta valido da una visita all\'altra.'
+  ],
   'v52.2': [
     'Novità: le notifiche. Attivale nelle impostazioni: scegli un orario e Anthkeys ti invierà un suggerimento giornaliero sulle scorciatoie, oltre a un avviso quando una nuova versione è pronta da installare.',
     'Novità: avvisi delle stanze live. Un interruttore separato ti avvisa quando un dispositivo entra nella tua stanza, esce, suona, ha la batteria scarica o ti invia una nota, così trovi il tuo altro dispositivo anche quando la scheda è in background.',
@@ -926,6 +942,10 @@ I18N_WN.it = {
 };
 
 I18N_WN.pt = {
+  'v52.3': [
+    'Novo: os resultados da busca agora dizem quantos são, nos 20 idiomas, e seguem o idioma que você escolher.',
+    'Novo: O Anthkeys reabre na plataforma que você estava lendo, então alternar entre Windows, macOS, Linux, ChromeOS e Apps fica salvo de uma visita para a outra.'
+  ],
   'v52.2': [
     'Novo: notificações. Ative-as nas definições — escolha um horário e o Anthkeys envia uma dica diária de atalho, além de um aviso quando uma nova versão estiver pronta a instalar.',
     'Novidade: avisos de salas ao vivo. Um interruptor separado avisa quando um dispositivo entra na sua sala, sai, toca, fica com a bateria fraca ou envia uma nota, para encontrar o seu outro dispositivo mesmo quando o separador está em segundo plano.',
@@ -1156,6 +1176,10 @@ I18N_WN.pt = {
 };
 
 I18N_WN.nl = {
+  'v52.3': [
+    'Nieuw: de zoekresultaten zeggen nu hoeveel het er zijn, in alle 20 talen, en ze volgen de taal die je kiest.',
+    'Nieuw: Anthkeys opent weer op het platform dat je het laatst las, dus wisselen tussen Windows, macOS, Linux, ChromeOS en Apps blijft tussen bezoeken onthouden.'
+  ],
   'v52.2': [
     'Nieuw: meldingen. Zet ze aan in de instellingen — kies een tijd en Anthkeys stuurt een dagelijkse sneltoets-tip, plus een melding wanneer een nieuwe versie klaarstaat om te installeren.',
     'Nieuw: meldingen voor live-ruimtes. Een eigen schakelaar meldt wanneer een apparaat je ruimte binnenkomt, het verlaat, overgaat, een lege batterij heeft of je een notitie stuurt, zodat je je andere apparaat vindt, ook als het tabblad op de achtergrond staat.',
@@ -1386,6 +1410,10 @@ I18N_WN.nl = {
 };
 
 I18N_WN.ja = {
+  'v52.3': [
+    '新機能：検索結果が一致した件数を教えてくれるようになりました。20 の言語すべてに対応し、選んだ言語に合わせて表示されます。',
+    '新機能：Anthkeys は最後に見ていたプラットフォームの画面を再び開くようになりました。Windows、macOS、Linux、ChromeOS、Apps の切り替えは訪問をまたいで保持されます。'
+  ],
   'v52.2': [
     '新機能：通知。設定で有効にして時刻を選ぶと、Anthkeys が毎日のショートカットのヒントを送り、新しいバージョンの準備ができたら知らせます。',
     '新機能：ライブルーム通知。別のスイッチで、デバイスがルームに参加したとき、退出したとき、着信したとき、バッテリー残量が少なくなったとき、メモが送られたときに知らせます。タブがバックグラウンドでも、もう一方のデバイスを見つけられます。',
@@ -1616,6 +1644,10 @@ I18N_WN.ja = {
 };
 
 I18N_WN.ru = {
+  'v52.3': [
+    'Новое: результаты поиска теперь показывают, сколько их, на всех 20 языках, и следуют выбранному языку.',
+    'Новое: Anthkeys снова открывается на той платформе, которую вы читали, поэтому переключение между Windows, macOS, Linux, ChromeOS и Apps сохраняется между посещениями.'
+  ],
   'v52.2': [
     'Новое: уведомления. Включите их в настройках, выберите время — Anthkeys будет присылать ежедневную подсказку по горячим клавишам, а также напомнит, когда новая версия готова к установке.',
     'Новое: уведомления о комнатах. Отдельный переключатель сообщает, когда устройство входит в вашу комнату, выходит из неё, звонит, почти разряжено или присылает заметку, чтобы вы нашли другое устройство, даже когда вкладка в фоне.',
@@ -1846,6 +1878,10 @@ I18N_WN.ru = {
 };
 
 I18N_WN.ko = {
+  'v52.3': [
+    '새 기능: 검색 결과가 이제 일치 항목 수를 알려 주며, 20개 모든 언어로 제공되고 선택한 언어를 따릅니다.',
+    '새 기능: Anthkeys가 마지막으로 읽던 플랫폼에서 다시 열리므로, Windows, macOS, Linux, ChromeOS와 Apps 사이의 전환이 방문 사이에 유지됩니다.'
+  ],
   'v52.2': [
     '새 기능: 알림. 설정에서 켜고 시간을 고르면 Anthkeys가 매일의 단축키 팁을 보내고, 새 버전이 준비되면 알려줍니다.',
     '새 기능: 라이브 룸 알림. 별도 스위치로 기기가 방에 들어오거나 나가고, 전화가 오거나, 배터리가 거의 다 됐거나, 메모를 보낼 때 알려 줍니다. 탭이 백그라운드에 있어도 다른 기기를 찾을 수 있습니다.',
@@ -2076,6 +2112,10 @@ I18N_WN.ko = {
 };
 
 I18N_WN.pl = {
+  'v52.3': [
+    'Nowość: wyniki wyszukiwania pokazują teraz, ile ich jest, we wszystkich 20 językach, i zmieniają się wraz z wybranym językiem.',
+    'Nowość: Anthkeys otwiera się ponownie na platformie, którą czytałeś, więc przełączanie między Windows, macOS, Linux, ChromeOS i Apps zapamiętuje się między wizytami.'
+  ],
   'v52.2': [
     'Nowość: powiadomienia. Włącz je w ustawieniach — wybierz godzinę, a Anthkeys wyśle codzienną podpowiedź o skrócie i uprzedzi, gdy nowa wersja będzie gotowa do instalacji.',
     'Nowość: powiadomienia z pokoju na żywo. Osobny przełącznik informuje, gdy urządzenie dołącza do pokoju, je opuszcza, dzwoni, ma niski poziom baterii lub wysyła notatkę, dzięki czemu znajdziesz drugie urządzenie, nawet gdy karta jest w tle.',
@@ -2306,6 +2346,10 @@ I18N_WN.pl = {
 };
 
 I18N_WN.tr = {
+  'v52.3': [
+    'Yeni: arama sonuçları artık kaç sonuç olduğunu her dilde söylüyor ve seçtiğiniz dili izliyor.',
+    'Yeni: Anthkeys, en son okuduğunuz platformda yeniden açılıyor; böylece Windows, macOS, Linux, ChromeOS ve Apps arasındaki geçiş ziyaretler arasında korunuyor.'
+  ],
   'v52.2': [
     'Yeni: bildirimler. Ayarlardan aç ve bir saat seç; Anthkeys her gün bir kısayol ipucu gönderir ve yeni sürüm kurulmaya hazır olduğunda seni uyarır.',
     'Yeni: canlı oda uyarıları. Ayrı bir düğme, bir cihaz odanıza katıldığında, ayrıldığında, çaldığında, pil düşük olduğunda veya size bir not gönderdiğinde haber verir; sekme arka plandayken bile diğer cihazınızı bulursunuz.',
@@ -2536,6 +2580,10 @@ I18N_WN.tr = {
 };
 
 I18N_WN.vi = {
+  'v52.3': [
+    'Mới: kết quả tìm kiếm giờ cho biết có bao nhiêu kết quả, bằng cả 20 ngôn ngữ, và theo ngôn ngữ bạn chọn.',
+    'Mới: Anthkeys mở lại đúng nền tảng bạn đang đọc, nên việc chuyển qua lại giữa Windows, macOS, Linux, ChromeOS và Apps được giữ lại giữa các lần truy cập.'
+  ],
   'v52.2': [
     'Mới: thông báo. Bật trong cài đặt, chọn giờ và Anthkeys sẽ gửi một mẹo phím tắt hằng ngày, cùng thông báo khi có phiên bản mới sẵn sàng cài đặt.',
     'Mới: thông báo phòng trực tiếp. Công tắc riêng báo cho bạn khi một thiết bị vào phòng, rời đi, đổ chuông, sắp hết pin hoặc gửi cho bạn một ghi chú, để bạn tìm thiết bị còn lại ngay cả khi thẻ đang ở chế độ nền.',
@@ -2766,6 +2814,10 @@ I18N_WN.vi = {
 };
 
 I18N_WN.ar = {
+  'v52.3': [
+    'جديد: نتائج البحث تخبرك الآن بعدد النتائج، في اللغات العشرين جميعها، وتتغير حسب اللغة التي تختارها.',
+    'جديد: يفتح Anthkeys مجددًا على المنصة التي كنت تقرأها، لذلك يبقى التنقل بين Windows وmacOS وLinux وChromeOS وApps محفوظًا بين الزيارات.'
+  ],
   'v52.2': [
     'جديد: الإشعارات. فعّلها من الإعدادات واختر وقتًا، فيرسل Anthkeys تلميحًا يوميًا عن مفتاح الاختصار، وينبّهك أيضًا عند توفر إصدار جديد للتثبيت.',
     'جديد: إشعارات الغرفة المباشرة. يعلمك مفتاح منفصل عندما ينضم جهاز إلى غرفتك أو يغادرها أو يرن أو تنخفض بطاريته أو يرسل لك ملاحظة، لتجد جهازك الآخر حتى عندما تكون علامة التبويب في الخلفية.',
@@ -2996,6 +3048,10 @@ I18N_WN.ar = {
 };
 
 I18N_WN.hi = {
+  'v52.3': [
+    'नया: खोज परिणाम अब बताते हैं कि कितने मिले हैं — सभी 20 भाषाओं में, और वे आपकी चुनी हुई भाषा के अनुसार बदलते हैं।',
+    'नया: Anthkeys अब उसी प्लेटफ़ॉर्म पर दोबारा खुलता है जिसे आपने पिछली बार पढ़ा था, इसलिए Windows, macOS, Linux, ChromeOS और Apps के बीच बदलना हर बार याद रहता है।'
+  ],
   'v52.2': [
     'नया: सूचनाएँ। सेटिंग्स में चालू करें और समय चुनें — Anthkeys रोज़ाना एक शॉर्टकट टिप भेजेगा, और नया संस्करण इंस्टॉल के लिए तैयार होने पर सूचित करेगा।',
     'नया: लाइव रूम सूचनाएँ। एक अलग स्विच बताता है कि जब कोई डिवाइस आपके रूम में आता है, निकलता है, बजता है, उसकी बैटरी कम होती है, या वह आपको नोट भेजता है, ताकि टैब पृष्ठभूमि में होने पर भी आपको दूसरा डिवाइस मिल जाए।',
@@ -3226,6 +3282,10 @@ I18N_WN.hi = {
 };
 
 I18N_WN.sv = {
+  'v52.3': [
+    'Nytt: sökresultaten visar nu hur många det är, på alla 20 språk, och följer det språk du väljer.',
+    'Nytt: Anthkeys öppnas igen på den plattform du senast läste, så växlingen mellan Windows, macOS, Linux, ChromeOS och Apps finns kvar mellan besöken.'
+  ],
   'v52.2': [
     'Nytt: aviseringar. Slå på dem i inställningarna — välj en tid så skickar Anthkeys ett dagligt snabbkommandotips och meddelar när en ny version är klar att installera.',
     'Nytt: aviseringar för live-rum. En egen strömbrytare säger till när en enhet kommer in i ditt rum, lämnar det, ringer, har lågt batteri eller skickar en anteckning, så att du hittar din andra enhet även när fliken är i bakgrunden.',
@@ -3456,6 +3516,10 @@ I18N_WN.sv = {
 };
 
 I18N_WN.da = {
+  'v52.3': [
+    'Nyt: søgeresultaterne viser nu, hvor mange der er, på alle 20 sprog, og følger det sprog, du vælger.',
+    'Nyt: Anthkeys åbner igen på den platform, du sidst læste, så skiftet mellem Windows, macOS, Linux, ChromeOS og Apps huskes mellem besøg.'
+  ],
   'v52.2': [
     'Nyt: notifikationer. Slå dem til i indstillingerne — vælg et tidspunkt, så sender Anthkeys et dagligt genvejstip og giver besked, når en ny version er klar til installation.',
     'Nyt: notifikationer fra live-rum. En separat knap fortæller dig, når en enhed kommer ind i dit rum, forlader det, ringer, har lavt batteri eller sender dig en note, så du kan finde din anden enhed, selv når fanen er i baggrunden.',
@@ -3686,6 +3750,10 @@ I18N_WN.da = {
 };
 
 I18N_WN.fi = {
+  'v52.3': [
+    'Uusi: hakutulokset kertovat nyt, kuinka monta niitä on, kaikilla 20 kielellä, ja ne noudattavat valitsemaasi kieltä.',
+    'Uusi: Anthkeys avautuu uudelleen sille alustalle, jota luet viimeksi, joten vaihto Windows-, macOS-, Linux-, ChromeOS- ja Apps-alustojen välillä säilyy käyntikertojen välillä.'
+  ],
   'v52.2': [
     'Uusi: ilmoitukset. Ota ne käyttöön asetuksissa — valitse kellonaika, niin Anthkeys lähettää päivittäisen pikanäppäysvinkin ja ilmoittaa, kun uusi versio on valmis asennettavaksi.',
     'Uutta: live-tilojen ilmoitukset. Erillinen kytkin kertoo, kun laite liittyy huoneeseesi, poistuu, soi, akku on vähissä tai lähettää sinulle muistutuksen, joten löydät toisen laitteesi myös silloin, kun välilehti on taustalla.',
@@ -3916,6 +3984,10 @@ I18N_WN.fi = {
 };
 
 I18N_WN.no = {
+  'v52.3': [
+    'Nytt: søkeresultatene viser nå hvor mange det er, på alle 20 språk, og følger språket du velger.',
+    'Nytt: Anthkeys åpner igjen på plattformen du sist leste, så byttet mellom Windows, macOS, Linux, ChromeOS og Apps huskes mellom besøkene.'
+  ],
   'v52.2': [
     'Nytt: varsler. Slå dem på i innstillingene — velg et tidspunkt, så sender Anthkeys et daglig hurtigtast tips og gir beskjed når en ny versjon er klar til installasjon.',
     'Nytt: varsler for live-rom. En egen bryter sier fra når en enhet blir med i rommet ditt, forsvinner, ringer, har lavt batteri eller sender deg et notat, slik at du finner den andre enheten selv når fanen er i bakgrunnen.',
@@ -4146,6 +4218,10 @@ I18N_WN.no = {
 };
 
 I18N_WN.cs = {
+  'v52.3': [
+    'Novinka: výsledky hledání teď říkají, kolik jich je, ve všech 20 jazycích, a řídí se jazykem, který si vyberete.',
+    'Novinka: Anthkeys se znovu otevře na platformě, kterou jste četli, takže přepínání mezi Windows, macOS, Linux, ChromeOS a Apps se mezi návštěvami pamatuje.'
+  ],
   'v52.2': [
     'Novinka: oznámení. Zapněte je v nastavení — zvolte čas a Anthkeys vám pošle denní tip zkratky a upozorní, až bude připravena nová verze k instalaci.',
     'Nově: upozornění živých místností. Samostatný přepínač vás upozorní, když se zařízení připojí k místnosti, odejde, zazvoní, má nízkou baterii nebo vám pošle poznámku, takže najdete druhé zařízení, i když je panel na pozadí.',
@@ -4376,6 +4452,10 @@ I18N_WN.cs = {
 };
 
 I18N_WN.hu = {
+  'v52.3': [
+    'Új: a keresési találatok mostantól megmutatják, hány van belőlük, mind a 20 nyelven, és követik a kiválasztott nyelvet.',
+    'Új: Az Anthkeys ismét azon a platformon nyílik meg, amelyet utoljára néztél, így a Windows, macOS, Linux, ChromeOS és Apps közötti váltás megmarad a látogatások között.'
+  ],
   'v52.2': [
     'Új: értesítések. Kapcsold be őket a beállításokban — válassz időpontot, és az Anthkeys napi gyorsbillentyű-tippet küld, valamint szól, amikor új verzió telepíthető.',
     'Új: élő szobák értesítései. Külön kapcsoló jelzi, ha egy eszköz csatlakozik a szobádhoz, távozik, cseng, alacsony az akkumulátora, vagy jegyzetet küld neked, így a másik eszközödet akkor is megtalálod, ha a lap a háttérben van.',
