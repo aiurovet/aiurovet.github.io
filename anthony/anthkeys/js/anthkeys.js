@@ -21,11 +21,17 @@ const i18n = {
     'notify.update.title': 'Update available',
     'notify.update.body': 'Anthkeys v{ver} is ready. Open it to update.',
     'notify.rooms': 'Live room alerts',
-    'notify.rooms-note': 'Tell me when a device joins your room or rings it.',
+    'notify.rooms-note': 'Tell me when a device joins or leaves your room, rings, runs low on battery, or sends a note.',
     'notify.room.join.title': 'Device joined',
     'notify.room.join.body': '{0} joined your room',
     'notify.room.ring.title': 'Ring',
     'notify.room.ring.body': '{0} is looking for you',
+    'notify.room.leave.title': 'Device left',
+    'notify.room.leave.body': '{0} left your room',
+    'notify.room.batt.title': 'Battery low',
+    'notify.room.batt.body': '{0} is on {1}%',
+    'notify.room.note.title': 'Room note',
+    'notify.room.note.body': '{0}: {1}',
     'mod.label': 'Modifier',
     'title': 'Shortcuts',
     'page.title': 'Shortcuts - Anthkeys',
@@ -463,11 +469,17 @@ i18n.ar = {
     'notify.update.title': 'يتوفر تحديث',
     'notify.update.body': 'Anthkeys v{ver} جاهزة. افتحها للتحديث.',
     'notify.rooms': 'تنبيهات الغرف المباشرة',
-    'notify.rooms-note': 'أخبرني عندما ينضم جهاز إلى غرفتك أو يرنّها.',
+    'notify.rooms-note': 'أخبرني عندما ينضم جهاز إلى غرفتك أو يغادرها أو يرنّ أو تنخفض بطاريته أو يرسل لي ملاحظة.',
     'notify.room.join.title': 'انضم جهاز',
     'notify.room.join.body': 'انضم {0} إلى غرفتك',
     'notify.room.ring.title': 'رنّة',
     'notify.room.ring.body': '{0} يبحث عنك',
+    'notify.room.leave.title': 'غادر جهاز',
+    'notify.room.leave.body': 'غادر {0} غرفتك',
+    'notify.room.batt.title': 'البطارية منخفضة',
+    'notify.room.batt.body': 'بطارية {0} عند {1}%',
+    'notify.room.note.title': 'ملاحظة في الغرفة',
+    'notify.room.note.body': '{0}: {1}',
     'mod.label': 'مُعدِّل',
     'title': 'اختصارات',
     'subtitle': 'اختصارات شائعة لكل منصة',
@@ -907,11 +919,17 @@ i18n.cs = {
     'notify.update.title': 'Dostupná aktualizace',
     'notify.update.body': 'Anthkeys v{ver} je připravená. Otevřete ji pro aktualizaci.',
     'notify.rooms': 'Upozornění živých místností',
-    'notify.rooms-note': 'Informujte mě, když se do místnosti připojí zařízení nebo zazvoní.',
+    'notify.rooms-note': 'Informujte mě, když se zařízení připojí k místnosti nebo odejde, zazvoní, má nízkou baterii nebo pošle poznámku.',
     'notify.room.join.title': 'Připojeno zařízení',
     'notify.room.join.body': '{0} se připojil k vaší místnosti',
     'notify.room.ring.title': 'Zvonění',
     'notify.room.ring.body': '{0} vás hledá',
+    'notify.room.leave.title': 'Zařízení odešlo',
+    'notify.room.leave.body': '{0} opustil vaši místnost',
+    'notify.room.batt.title': 'Nízký stav baterie',
+    'notify.room.batt.body': '{0} má {1} %',
+    'notify.room.note.title': 'Poznámka v místnosti',
+    'notify.room.note.body': '{0}: {1}',
     'mod.label': 'Modifikátor',
     'title': 'Zkratky',
     'subtitle': 'Vanliga genvägar för varje plattform',
@@ -1351,11 +1369,17 @@ i18n.da = {
     'notify.update.title': 'Opdatering tilgængelig',
     'notify.update.body': 'Anthkeys v{ver} er klar. Åbn den for at opdatere.',
     'notify.rooms': 'Notifikationer fra live-rum',
-    'notify.rooms-note': 'Giv mig besked, når en enhed tilslutter dit rum eller ringer.',
+    'notify.rooms-note': 'Giv mig besked, når en enhed kommer ind i dit rum eller forlader det, ringer, har lavt batteri eller sender dig en note.',
     'notify.room.join.title': 'Enhed tilsluttet',
     'notify.room.join.body': '{0} sluttede til dit rum',
     'notify.room.ring.title': 'Ringning',
     'notify.room.ring.body': '{0} leder efter dig',
+    'notify.room.leave.title': 'Enhed forlod',
+    'notify.room.leave.body': '{0} forlod dit rum',
+    'notify.room.batt.title': 'Lavt batteri',
+    'notify.room.batt.body': '{0} er på {1} %',
+    'notify.room.note.title': 'Note i rummet',
+    'notify.room.note.body': '{0}: {1}',
     'mod.label': 'Modifikator',
     'title': 'Genveje',
     'subtitle': 'Fælles genveje til hver platform',
@@ -1795,11 +1819,17 @@ i18n.de = {
     'notify.update.title': 'Update verfügbar',
     'notify.update.body': 'Anthkeys v{ver} ist bereit. Öffne sie, um zu aktualisieren.',
     'notify.rooms': 'Live-Raum-Hinweise',
-    'notify.rooms-note': 'Benachrichtige mich, wenn ein Gerät deinem Raum beitritt oder klingelt.',
+    'notify.rooms-note': 'Benachrichtige mich, wenn ein Gerät deinem Raum beitritt oder ihn verlässt, klingelt, einen niedrigen Akkustand hat oder mir eine Notiz schickt.',
     'notify.room.join.title': 'Gerät beigetreten',
     'notify.room.join.body': '{0} ist deinem Raum beigetreten',
     'notify.room.ring.title': 'Klingeln',
     'notify.room.ring.body': '{0} sucht dich',
+    'notify.room.leave.title': 'Gerät hat den Raum verlassen',
+    'notify.room.leave.body': '{0} hat deinen Raum verlassen',
+    'notify.room.batt.title': 'Akku fast leer',
+    'notify.room.batt.body': '{0} hat noch {1} %',
+    'notify.room.note.title': 'Notiz im Raum',
+    'notify.room.note.body': '{0}: {1}',
     'mod.label': 'Modifikator',
     'title': 'Kurzbefehle',
     'subtitle': 'Häufige Tastenkürzel für jede Plattform',
@@ -2239,11 +2269,17 @@ i18n.es = {
     'notify.update.title': 'Actualización disponible',
     'notify.update.body': 'Anthkeys v{ver} está lista. Ábrela para actualizar.',
     'notify.rooms': 'Avisos de salas en directo',
-    'notify.rooms-note': 'Avísame cuando un dispositivo se une a mi sala o me llama.',
+    'notify.rooms-note': 'Avísame cuando un dispositivo se une a mi sala o la abandona, me llama, tiene la batería baja o me envía una nota.',
     'notify.room.join.title': 'Dispositivo conectado',
     'notify.room.join.body': '{0} se ha unido a tu sala',
     'notify.room.ring.title': 'Llamada',
     'notify.room.ring.body': '{0} te está buscando',
+    'notify.room.leave.title': 'Dispositivo salió',
+    'notify.room.leave.body': '{0} salió de tu sala',
+    'notify.room.batt.title': 'Batería baja',
+    'notify.room.batt.body': '{0} está al {1} %',
+    'notify.room.note.title': 'Nota en la sala',
+    'notify.room.note.body': '{0}: {1}',
     'mod.label': 'Modificador',
     'title': 'Atajos',
     'subtitle': 'Atajos comunes para cada plataforma',
@@ -2683,11 +2719,17 @@ i18n.fi = {
     'notify.update.title': 'Päivitys saatavilla',
     'notify.update.body': 'Anthkeys v{ver} on valmis. Avaa se päivittääksesi.',
     'notify.rooms': 'Live-tilojen ilmoitukset',
-    'notify.rooms-note': 'Ilmoita, kun laite liittyy huoneeseeni tai soittaa minulle.',
+    'notify.rooms-note': 'Ilmoita, kun laite liittyy huoneeseeni tai poistuu, soittaa minulle, akun virta on vähissä tai lähettää muistutuksen.',
     'notify.room.join.title': 'Laite liittyi',
     'notify.room.join.body': '{0} liittyi huoneeseesi',
     'notify.room.ring.title': 'Soitto',
     'notify.room.ring.body': '{0} etsii sinua',
+    'notify.room.leave.title': 'Laite poistui',
+    'notify.room.leave.body': '{0} poistui huoneestasi',
+    'notify.room.batt.title': 'Akku vähissä',
+    'notify.room.batt.body': '{0}: akussa {1} %',
+    'notify.room.note.title': 'Muistiinpano huoneessa',
+    'notify.room.note.body': '{0}: {1}',
     'mod.label': 'Muokkausnäppäin',
     'title': 'Pikanäppäimet',
     'subtitle': 'Yhteiset pikakuvakkeet jokaiselle alustalle',
@@ -3127,11 +3169,17 @@ i18n.fr = {
     'notify.update.title': 'Mise à jour disponible',
     'notify.update.body': 'Anthkeys v{ver} est prête. Ouvrez-la pour mettre à jour.',
     'notify.rooms': 'Alertes de salon en direct',
-    'notify.rooms-note': 'Préviens-moi quand un appareil rejoint mon salon ou sonne.',
+    'notify.rooms-note': 'Préviens-moi quand un appareil rejoint mon salon ou le quitte, sonne, a une batterie faible ou m\'envoie une note.',
     'notify.room.join.title': 'Appareil rejoint',
     'notify.room.join.body': '{0} a rejoint votre salon',
     'notify.room.ring.title': 'Sonnerie',
     'notify.room.ring.body': '{0} vous cherche',
+    'notify.room.leave.title': 'Appareil parti',
+    'notify.room.leave.body': '{0} a quitté votre salon',
+    'notify.room.batt.title': 'Batterie faible',
+    'notify.room.batt.body': '{0} est à {1} %',
+    'notify.room.note.title': 'Note dans le salon',
+    'notify.room.note.body': '{0}: {1}',
     'mod.label': 'Modificateur',
     'title': 'Raccourcis',
     'subtitle': 'Raccourcis courants pour chaque plateforme',
@@ -3572,11 +3620,17 @@ i18n.hi = {
     'notify.update.title': 'अपडेट उपलब्ध है',
     'notify.update.body': 'Anthkeys v{ver} तैयार है। अपडेट करने के लिए इसे खोलें।',
     'notify.rooms': 'लाइव रूम सूचनाएँ',
-    'notify.rooms-note': 'जब कोई डिवाइस मेरे रूम में जुड़े या मुझे रिंग करे तो मुझे बताएँ।',
+    'notify.rooms-note': 'जब कोई डिवाइस मेरे रूम में जुड़े या निकले, रिंग करे, उसकी बैटरी कम हो, या वह मुझे नोट भेजे तो मुझे बताएँ।',
     'notify.room.join.title': 'डिवाइस जुड़ा',
     'notify.room.join.body': '{0} आपके रूम में जुड़ गया',
     'notify.room.ring.title': 'रिंग',
     'notify.room.ring.body': '{0} आपको ढूँढ रहा है',
+    'notify.room.leave.title': 'डिवाइस निकल गया',
+    'notify.room.leave.body': '{0} आपके रूम से निकल गया',
+    'notify.room.batt.title': 'बैटरी कम है',
+    'notify.room.batt.body': '{0} की बैटरी {1}% है',
+    'notify.room.note.title': 'रूम में संदेश',
+    'notify.room.note.body': '{0}: {1}',
     'mod.label': 'संशोधक',
     'title': 'शॉर्टकट',
     'subtitle': 'हर प्लेटफ़ॉर्म के लिए सामान्य शॉर्टकट',
@@ -4016,11 +4070,17 @@ i18n.hu = {
     'notify.update.title': 'Frissítés elérhető',
     'notify.update.body': 'Az Anthkeys v{ver} készen áll. Nyissa meg a frissítéshez.',
     'notify.rooms': 'Élő szobák értesítései',
-    'notify.rooms-note': 'Értesíts, ha egy eszköz csatlakozik a szobámhoz vagy csenget.',
+    'notify.rooms-note': 'Értesíts, ha egy eszköz csatlakozik a szobámhoz vagy távozik, csenget, alacsony az akkumulátora, vagy jegyzetet küld nekem.',
     'notify.room.join.title': 'Eszköz csatlakozott',
     'notify.room.join.body': '{0} csatlakozott a szobádhoz',
     'notify.room.ring.title': 'Csengetés',
     'notify.room.ring.body': '{0} keres téged',
+    'notify.room.leave.title': 'Eszköz kilépett',
+    'notify.room.leave.body': '{0} kilépett a szobából',
+    'notify.room.batt.title': 'Alacsony töltöttség',
+    'notify.room.batt.body': '{0} töltöttsége {1}%',
+    'notify.room.note.title': 'Jegyzet a szobában',
+    'notify.room.note.body': '{0}: {1}',
     'mod.label': 'Módosító',
     'title': 'Billentyűparancsok',
     'subtitle': 'Közös parancsikonok minden platformhoz',
@@ -4460,11 +4520,17 @@ i18n.it = {
     'notify.update.title': 'Aggiornamento disponibile',
     'notify.update.body': 'Anthkeys v{ver} è pronta. Aprila per aggiornare.',
     'notify.rooms': 'Avvisi delle stanze live',
-    'notify.rooms-note': 'Avvisami quando un dispositivo si unisce alla mia stanza o mi chiama.',
+    'notify.rooms-note': 'Avvisami quando un dispositivo si unisce alla mia stanza o esce, mi chiama, ha la batteria scarica o mi invia una nota.',
     'notify.room.join.title': 'Dispositivo collegato',
     'notify.room.join.body': '{0} si è unito alla tua stanza',
     'notify.room.ring.title': 'Chiamata',
     'notify.room.ring.body': '{0} ti sta cercando',
+    'notify.room.leave.title': 'Dispositivo uscito',
+    'notify.room.leave.body': '{0} è uscito dalla tua stanza',
+    'notify.room.batt.title': 'Batteria scarica',
+    'notify.room.batt.body': '{0} è al {1}%',
+    'notify.room.note.title': 'Nota nella stanza',
+    'notify.room.note.body': '{0}: {1}',
     'mod.label': 'Modificatore',
     'title': 'Scorciatoie',
     'subtitle': 'Scorciatoie comuni per ogni piattaforma',
@@ -4904,11 +4970,17 @@ i18n.ja = {
     'notify.update.title': 'アップデートがあります',
     'notify.update.body': 'Anthkeys v{ver} の準備ができました。開いて更新してください。',
     'notify.rooms': 'ライブルームの通知',
-    'notify.rooms-note': 'デバイスがルームに参加したり呼びかけたりしたら知らせて。',
+    'notify.rooms-note': 'デバイスがルームに参加・退出したり、呼びかけしてきたり、バッテリー残量が少なくなったり、メモを送ってきたりしたら知らせて。',
     'notify.room.join.title': 'デバイスが参加',
     'notify.room.join.body': '{0} がルームに参加しました',
     'notify.room.ring.title': '着信',
     'notify.room.ring.body': '{0} があなたを探しています',
+    'notify.room.leave.title': 'デバイスが退出しました',
+    'notify.room.leave.body': '{0} がルームから出ました',
+    'notify.room.batt.title': 'バッテリー残量が低下',
+    'notify.room.batt.body': '{0} のバッテリーは {1}% です',
+    'notify.room.note.title': 'ルームのメモ',
+    'notify.room.note.body': '{0}: {1}',
     'mod.label': '修飾キー',
     'title': 'ショートカット',
     'subtitle': '各プラットフォームの一般的なショートカット',
@@ -5348,11 +5420,17 @@ i18n.ko = {
     'notify.update.title': '업데이트 사용 가능',
     'notify.update.body': 'Anthkeys v{ver}가 준비되었습니다. 열어서 업데이트하세요.',
     'notify.rooms': '라이브 룸 알림',
-    'notify.rooms-note': '기기가 내 룸에 참여하거나 호출하면 알려주세요.',
+    'notify.rooms-note': '기기가 내 룸에 들어오거나 나가고, 전화가 오거나, 배터리가 거의 다 됐거나, 메모를 보낼 때 알려주세요.',
     'notify.room.join.title': '기기 참여',
     'notify.room.join.body': '{0} 님이 룸에 참여했습니다',
     'notify.room.ring.title': '벨소리',
     'notify.room.ring.body': '{0} 님이 찾고 있습니다',
+    'notify.room.leave.title': '기기 나감',
+    'notify.room.leave.body': '{0} 님이 룸에서 나갔습니다',
+    'notify.room.batt.title': '배터리 부족',
+    'notify.room.batt.body': '{0} 님 배터리 {1}% 남음',
+    'notify.room.note.title': '룸 메모',
+    'notify.room.note.body': '{0}: {1}',
     'mod.label': '보조 키',
     'title': '단축키',
     'subtitle': '각 플래폼의 일반적인 단축키',
@@ -5792,11 +5870,17 @@ i18n.nl = {
     'notify.update.title': 'Update beschikbaar',
     'notify.update.body': 'Anthkeys v{ver} staat klaar. Open hem om bij te werken.',
     'notify.rooms': 'Meldingen voor live-ruimtes',
-    'notify.rooms-note': 'Laat het weten als een apparaat mijn ruimte binnenkomt of belt.',
+    'notify.rooms-note': 'Laat het weten als een apparaat mijn ruimte binnenkomt of verlaat, belt, een lege batterij heeft of me een notitie stuurt.',
     'notify.room.join.title': 'Apparaat toegevoegd',
     'notify.room.join.body': '{0} is toegevoegd aan je ruimte',
     'notify.room.ring.title': 'Beltoon',
     'notify.room.ring.body': '{0} zoekt je',
+    'notify.room.leave.title': 'Apparaat vertrokken',
+    'notify.room.leave.body': '{0} heeft je ruimte verlaten',
+    'notify.room.batt.title': 'Batterij bijna leeg',
+    'notify.room.batt.body': '{0} staat op {1}%',
+    'notify.room.note.title': 'Notitie in de ruimte',
+    'notify.room.note.body': '{0}: {1}',
     'mod.label': 'Modifier',
     'title': 'Sneltoetsen',
     'subtitle': 'Algemene snelkoppelingen voor elk platform',
@@ -6236,11 +6320,17 @@ i18n.no = {
     'notify.update.title': 'Oppdatering tilgjengelig',
     'notify.update.body': 'Anthkeys v{ver} er klar. Åpne den for å oppdatere.',
     'notify.rooms': 'Varsler for live-rom',
-    'notify.rooms-note': 'Gi meg beskjed når en enhet blir med i rommet mitt eller ringer.',
+    'notify.rooms-note': 'Gi meg beskjed når en enhet blir med i rommet mitt eller forsvinner, ringer, har lavt batteri eller sender meg et notat.',
     'notify.room.join.title': 'Enhet koblet til',
     'notify.room.join.body': '{0} koblet seg til rommet ditt',
     'notify.room.ring.title': 'Ringing',
     'notify.room.ring.body': '{0} leter etter deg',
+    'notify.room.leave.title': 'Enheten forlot',
+    'notify.room.leave.body': '{0} forlot rommet ditt',
+    'notify.room.batt.title': 'Lavt batteri',
+    'notify.room.batt.body': '{0} har {1} % igjen',
+    'notify.room.note.title': 'Merknad i rommet',
+    'notify.room.note.body': '{0}: {1}',
     'mod.label': 'Modifikator',
     'title': 'Snarveier',
     'subtitle': 'Vanlige snarveier for hver plattform',
@@ -6680,11 +6770,17 @@ i18n.pl = {
     'notify.update.title': 'Dostępna aktualizacja',
     'notify.update.body': 'Anthkeys v{ver} jest gotowa. Otwórz ją, aby zaktualizować.',
     'notify.rooms': 'Powiadomienia z pokoi na żywo',
-    'notify.rooms-note': 'Daj znać, gdy urządzenie dołączy do pokoju lub zadzwoni.',
+    'notify.rooms-note': 'Daj znać, gdy urządzenie dołączy do pokoju lub z niego wyjdzie, zadzwoni, ma niski poziom baterii lub wyśle notatkę.',
     'notify.room.join.title': 'Urządzenie dołączyło',
     'notify.room.join.body': '{0} dołączył(a) do pokoju',
     'notify.room.ring.title': 'Dzwonek',
     'notify.room.ring.body': '{0} szuka Cię',
+    'notify.room.leave.title': 'Urządzenie odeszło',
+    'notify.room.leave.body': '{0} opuścił(a) pokój',
+    'notify.room.batt.title': 'Niski poziom baterii',
+    'notify.room.batt.body': '{0} ma {1}%',
+    'notify.room.note.title': 'Notatka w pokoju',
+    'notify.room.note.body': '{0}: {1}',
     'mod.label': 'Modyfikator',
     'title': 'Skróty',
     'subtitle': 'Typowe skróty dla każdej platformy',
@@ -7124,11 +7220,17 @@ i18n.pt = {
     'notify.update.title': 'Atualização disponível',
     'notify.update.body': 'O Anthkeys v{ver} está pronto. Abre-o para atualizar.',
     'notify.rooms': 'Avisos de salas ao vivo',
-    'notify.rooms-note': 'Avise-me quando um dispositivo entrar na minha sala ou me chamar.',
+    'notify.rooms-note': 'Avise-me quando um dispositivo entra na minha sala ou sai, me chama, fica com a bateria fraca ou envia-me uma nota.',
     'notify.room.join.title': 'Dispositivo entrou',
     'notify.room.join.body': '{0} entrou na sua sala',
     'notify.room.ring.title': 'Chamada',
     'notify.room.ring.body': '{0} está à sua procura',
+    'notify.room.leave.title': 'Dispositivo saiu',
+    'notify.room.leave.body': '{0} saiu da sua sala',
+    'notify.room.batt.title': 'Bateria fraca',
+    'notify.room.batt.body': '{0} está em {1}%',
+    'notify.room.note.title': 'Nota na sala',
+    'notify.room.note.body': '{0}: {1}',
     'mod.label': 'Modificador',
     'title': 'Atalhos',
     'subtitle': 'Atalhos comuns para todas as plataformas',
@@ -7568,11 +7670,17 @@ i18n.ru = {
     'notify.update.title': 'Доступно обновление',
     'notify.update.body': 'Anthkeys v{ver} готова. Откройте её, чтобы обновиться.',
     'notify.rooms': 'Уведомления live-комнат',
-    'notify.rooms-note': 'Сообщи мне, когда устройство заходит в комнату или звонит.',
+    'notify.rooms-note': 'Сообщи мне, когда устройство заходит в комнату или выходит, звонит, почти разряжено или присылает заметку.',
     'notify.room.join.title': 'Устройство подключилось',
     'notify.room.join.body': '{0} подключился к вашей комнате',
     'notify.room.ring.title': 'Звонок',
     'notify.room.ring.body': '{0} ищет вас',
+    'notify.room.leave.title': 'Устройство вышло',
+    'notify.room.leave.body': '{0} вышел из вашей комнаты',
+    'notify.room.batt.title': 'Низкий заряд',
+    'notify.room.batt.body': 'У {0} осталось {1}%',
+    'notify.room.note.title': 'Заметка в комнате',
+    'notify.room.note.body': '{0}: {1}',
     'mod.label': 'Модификатор',
     'title': 'Сочетания клавиш',
     'subtitle': 'Основные сочетания для каждой платформы',
@@ -8012,11 +8120,17 @@ i18n.sv = {
     'notify.update.title': 'Uppdatering tillgänglig',
     'notify.update.body': 'Anthkeys v{ver} är klar. Öppna den för att uppdatera.',
     'notify.rooms': 'Aviseringar för live-rum',
-    'notify.rooms-note': 'Meddela mig när en enhet ansluter till mitt rum eller ringer.',
+    'notify.rooms-note': 'Meddela mig när en enhet kommer in i mitt rum eller lämnar det, ringer, har lågt batteri eller skickar mig en anteckning.',
     'notify.room.join.title': 'Enhet ansluten',
     'notify.room.join.body': '{0} anslöt till ditt rum',
     'notify.room.ring.title': 'Ringning',
     'notify.room.ring.body': '{0} söker dig',
+    'notify.room.leave.title': 'Enheten lämnade',
+    'notify.room.leave.body': '{0} lämnade ditt rum',
+    'notify.room.batt.title': 'Lågt batteri',
+    'notify.room.batt.body': '{0} har {1} % kvar',
+    'notify.room.note.title': 'Anteckning i rummet',
+    'notify.room.note.body': '{0}: {1}',
     'mod.label': 'Modifierare',
     'title': 'Kortkommandon',
     'subtitle': 'Vanliga genvägar för varje plattform',
@@ -8456,11 +8570,17 @@ i18n.tr = {
     'notify.update.title': 'Güncelleme var',
     'notify.update.body': 'Anthkeys v{ver} hazır. Güncellemek için aç.',
     'notify.rooms': 'Canlı oda uyarıları',
-    'notify.rooms-note': 'Bir cihaz odama katıldığında veya beni aradığında bana haber ver.',
+    'notify.rooms-note': 'Bana haber ver: bir cihaz odama katıldığında veya ayrıldığında, çaldığında, pili düşük olduğunda ya da bana bir not gönderdiğinde.',
     'notify.room.join.title': 'Cihaz katıldı',
     'notify.room.join.body': '{0} odanıza katıldı',
     'notify.room.ring.title': 'Çalıyor',
     'notify.room.ring.body': '{0} sizi arıyor',
+    'notify.room.leave.title': 'Cihaz ayrıldı',
+    'notify.room.leave.body': '{0} odanızdan ayrıldı',
+    'notify.room.batt.title': 'Pil düşük',
+    'notify.room.batt.body': '{0} cihazının pili %{1}',
+    'notify.room.note.title': 'Oda notu',
+    'notify.room.note.body': '{0}: {1}',
     'mod.label': 'Değiştirici',
     'title': 'Kısayollar',
     'subtitle': 'Her platform için ortak kısayollar',
@@ -8901,11 +9021,17 @@ i18n.vi = {
     'notify.update.title': 'Đã có bản cập nhật',
     'notify.update.body': 'Anthkeys v{ver} đã sẵn sàng. Hãy mở để cập nhật.',
     'notify.rooms': 'Thông báo phòng trực tiếp',
-    'notify.rooms-note': 'Báo tôi khi một thiết bị tham gia phòng hoặc gọi cho tôi.',
+    'notify.rooms-note': 'Báo tôi khi một thiết bị tham gia phòng hoặc rời đi, gọi cho tôi, sắp hết pin hoặc gửi cho tôi một ghi chú.',
     'notify.room.join.title': 'Thiết bị đã tham gia',
     'notify.room.join.body': '{0} đã tham gia phòng của bạn',
     'notify.room.ring.title': 'Chuông gọi',
     'notify.room.ring.body': '{0} đang tìm bạn',
+    'notify.room.leave.title': 'Thiết bị đã rời',
+    'notify.room.leave.body': '{0} đã rời phòng của bạn',
+    'notify.room.batt.title': 'Pin yếu',
+    'notify.room.batt.body': '{0} còn {1}%',
+    'notify.room.note.title': 'Ghi chú trong phòng',
+    'notify.room.note.body': '{0}: {1}',
     'mod.label': 'Phím bổ trợ',
     'title': 'Lối tắt',
     'subtitle': 'Phím tắt phổ biến cho mọi nền tảng',
@@ -10047,6 +10173,36 @@ function notifyRoomRing(name) {
     notifyText('notify.room.ring.title', 'Ring'),
     notifyText('notify.room.ring.body', '{0} is looking for you').replace('{0}', name),
     'room-ring'
+  );
+}
+
+function notifyRoomLeave(name) {
+  if (!notifySupported || !NOTIFY.roomsOn() || notifyState() !== 'granted') return;
+  sendNotification(
+    'room-leave-' + Date.now(),
+    notifyText('notify.room.leave.title', 'Device left'),
+    notifyText('notify.room.leave.body', '{0} left your room').replace('{0}', name),
+    'room-leave'
+  );
+}
+
+function notifyRoomBatt(name, lvl) {
+  if (!notifySupported || !NOTIFY.roomsOn() || notifyState() !== 'granted') return;
+  sendNotification(
+    'room-batt-' + Date.now(),
+    notifyText('notify.room.batt.title', 'Battery low'),
+    notifyText('notify.room.batt.body', '{0} is on {1}%').replace('{0}', name).replace('{1}', String(lvl)),
+    'room-batt'
+  );
+}
+
+function notifyRoomNote(from, text) {
+  if (!notifySupported || !NOTIFY.roomsOn() || notifyState() !== 'granted') return;
+  sendNotification(
+    'room-note-' + Date.now(),
+    notifyText('notify.room.note.title', 'Room note'),
+    notifyText('notify.room.note.body', '{0}: {1}').replace('{0}', from).replace('{1}', text),
+    'room-note'
   );
 }
 
@@ -12794,24 +12950,42 @@ function syncPrunePeers() {
 }
 let syncSeenPeers = null;
 let syncNotifiedAt = {};
+let syncPendingLeave = {};
 
 function syncNotifyNewPeers(ids) {
   if (!syncSeenPeers) return;
   const mine = synDeviceId();
   const now = Date.now();
-  const prev = syncSeenPeers;
-  const next = {};
+  const present = {};
+  const active = NOTIFY.roomsOn() && document.visibilityState === 'hidden';
+
   ids.forEach(id => {
     if (id === mine) return;
-    next[id] = now;
-    if (prev[id] && now - prev[id] < 30000) return;
+    present[id] = { t: now, n: syncPeerName(id) };
+  });
+
+  Object.keys(present).forEach(id => {
+    if (syncSeenPeers[id]) return;
     if (now - (syncNotifiedAt[id] || 0) < 30000) return;
     syncNotifiedAt[id] = now;
-    if (NOTIFY.roomsOn() && document.visibilityState === 'hidden') {
-      notifyRoomJoin(syncPeerName(id));
-    }
+    if (active) notifyRoomJoin(present[id].n);
   });
-  syncSeenPeers = next;
+
+  Object.keys(syncSeenPeers).forEach(id => {
+    if (id === mine || present[id]) return;
+    if (!syncPendingLeave[id]) syncPendingLeave[id] = { n: syncSeenPeers[id].n };
+  });
+
+  Object.keys(syncPendingLeave).forEach(id => {
+    if (present[id]) { delete syncPendingLeave[id]; return; }
+    if (now - (syncNotifiedAt[id] || 0) < 30000) return;
+    syncNotifiedAt[id] = now;
+    const n = syncPendingLeave[id].n;
+    delete syncPendingLeave[id];
+    if (active) notifyRoomLeave(n || notifyText('sync.unknown'));
+  });
+
+  syncSeenPeers = present;
 }
 
 function syncUpdatePeers() {
@@ -13082,7 +13256,9 @@ function syncCheckBattery() {
     if (p.b == null || p.c) return;
     if (p.b < 20 && !syncWarned[id]) {
       syncWarned[id] = true;
-      showToastMsg(tx('sync.batt-warn').replace('{0}', syncPeerName(id) || tx('sync.unknown')).replace('{1}', String(p.b)));
+      const who = syncPeerName(id) || tx('sync.unknown');
+      showToastMsg(tx('sync.batt-warn').replace('{0}', who).replace('{1}', String(p.b)));
+      if (document.visibilityState === 'hidden') notifyRoomBatt(who, p.b);
     } else if (p.b >= 25 && syncWarned[id]) {
       syncWarned[id] = false;
       showToastMsg(tx('sync.batt-ok').replace('{0}', syncPeerName(id) || tx('sync.unknown')).replace('{1}', String(p.b)));
@@ -13116,6 +13292,7 @@ function syncHandleNote(m, isPrivate) {
     navigator.clipboard.writeText(m.text).catch(() => {});
   }
   showToastMsg(tx('sync.note-recv').replace('{0}', from).replace('{1}', m.text));
+  if (document.visibilityState === 'hidden') notifyRoomNote(from, m.text);
   syncChatPush({ d: m.d, n: m.n, t: m.t, text: m.text });
 }
 function syncHandlePing(m) {
@@ -13228,6 +13405,7 @@ function syncConnect(code) {
   syncPeers = {};
   syncSeenPeers = null;
   syncNotifiedAt = {};
+  syncPendingLeave = {};
   syncSetStatus('#f59e0b', tx('sync.connecting'));
   let client = null;
   try {
@@ -13272,9 +13450,13 @@ function syncConnect(code) {
         const seeded = {};
         const seedId = synDeviceId();
         const seedNow = Date.now();
-        Object.keys(syncPeers).forEach(id => { if (id !== seedId) seeded[id] = seedNow; });
+        Object.keys(syncPeers).forEach(id => {
+          if (id === seedId) return;
+          seeded[id] = { t: seedNow, n: syncPeerName(id) };
+        });
         syncSeenPeers = seeded;
         syncNotifiedAt = {};
+        syncPendingLeave = {};
       }, 2500);
       setTimeout(() => {
         if (syncConnected && syncRoom && syncRetainedT === 0) syncPublishNow();
@@ -13344,6 +13526,7 @@ function syncLeave() {
   syncPeers = {};
   syncSeenPeers = null;
   syncNotifiedAt = {};
+  syncPendingLeave = {};
   syncConnected = false;
   syncRetainedT = 0;
   syncWarned = {};
