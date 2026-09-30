@@ -13582,6 +13582,12 @@ function syncRoomColorSet(c) {
   syncRenderColor();
   showToastMsg(tx('sync.color-set'));
 }
+function syncColorRing(c) {
+  const v = String(c || '').trim();
+  if (!v) return '';
+  const plain = /^(#[0-9a-f]{3,8}|(rgb|hsl)a?\([^()]*\)|[a-z]+)$/i.test(v);
+  return '0 0 0 2px var(--surface), 0 0 0 4px ' + (plain ? v : 'var(--text)');
+}
 function syncRenderColor() {
   const tag = document.getElementById('syncRoomTag');
   if (!tag) return;
@@ -13589,10 +13595,11 @@ function syncRenderColor() {
   const c = syncRoomColorGet();
   tag.hidden = !c;
   if (c) tag.style.background = c;
+  const ring = syncColorRing(c);
   document.querySelectorAll('.sync-color-tag').forEach(el => {
     if (el.dataset.syncColor) el.style.background = el.dataset.syncColor;
     const active = c && el.dataset.syncColor === c;
-    el.style.boxShadow = active ? '0 0 0 2px var(--surface), 0 0 0 4px ' + c : '';
+    el.style.boxShadow = active ? ring : '';
   });
 }
 
