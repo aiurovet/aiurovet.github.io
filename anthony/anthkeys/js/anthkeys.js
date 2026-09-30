@@ -55,6 +55,8 @@ const i18n = {
     'update.ask': 'Ask before updating',
     'update.note': 'Auto-update reloads the page when a new version is available. "Ask" shows a Refresh button instead.',
     'search.placeholder': 'Search actions\u2026',
+    'search.results': 'Results: {n}',
+    'search.noresults': 'No results',
     'btn.basic': 'Basic',
     'btn.reset': 'Reset all',
     'btn.export': 'Export',
@@ -614,6 +616,8 @@ i18n.ar = {
     'msg.saved': 'تم حفظ الإعدادات!',
     'msg.copied': 'منسوخ!',
     'search.placeholder': 'ابحث…',
+    'search.results': 'النتائج: {n}',
+    'search.noresults': 'لا توجد نتائج',
     'btn.basic': 'اختصارات أساسية',
     'btn.reset': 'إعادة تعيين',
     'btn.export': 'يصدّر',
@@ -1074,6 +1078,8 @@ i18n.cs = {
     'msg.saved': 'Nastavení uloženo!',
     'msg.copied': 'Zkopírováno!',
     'search.placeholder': 'Akce vyhledávání…',
+    'search.results': 'Výsledky: {n}',
+    'search.noresults': 'Žádné výsledky',
     'btn.basic': 'Základní zkratky',
     'btn.reset': 'Obnovte všechna nastavení',
     'btn.export': 'Export nastavení',
@@ -1534,6 +1540,8 @@ i18n.da = {
     'msg.saved': 'Indstillinger gemt!',
     'msg.copied': 'Kopieret!',
     'search.placeholder': 'Søg…',
+    'search.results': 'Resultater: {n}',
+    'search.noresults': 'Ingen resultater',
     'btn.basic': 'Grundlæggende genveje',
     'btn.reset': 'Nulstil alle',
     'btn.export': 'Eksportere',
@@ -1994,6 +2002,8 @@ i18n.de = {
     'msg.saved': 'Einstellungen gespeichert!',
     'msg.copied': 'Kopiert!',
     'search.placeholder': 'Tastenkürzel suchen…',
+    'search.results': 'Ergebnisse: {n}',
+    'search.noresults': 'Keine Ergebnisse',
     'btn.basic': 'Einfache Kürzel',
     'btn.reset': 'Alles zurücksetzen',
     'btn.export': 'Export',
@@ -2454,6 +2464,8 @@ i18n.es = {
     'msg.saved': '¡Configuración guardada!',
     'msg.copied': '¡Copiado!',
     'search.placeholder': 'Buscar atajos…',
+    'search.results': 'Resultados: {n}',
+    'search.noresults': 'Sin resultados',
     'btn.basic': 'Atajos básicos',
     'btn.reset': 'Restablecer ajustes',
     'btn.export': 'Exportar',
@@ -2914,6 +2926,8 @@ i18n.fi = {
     'msg.saved': 'Asetukset tallennettu!',
     'msg.copied': 'Kopioitu!',
     'search.placeholder': 'Etsi…',
+    'search.results': 'Tulokset: {n}',
+    'search.noresults': 'Ei tuloksia',
     'btn.basic': 'Peruspikanäppäimet',
     'btn.reset': 'Nollaa kaikki',
     'btn.export': 'Viedä',
@@ -3374,6 +3388,8 @@ i18n.fr = {
     'msg.saved': 'Paramètres enregistrés !',
     'msg.copied': 'Copié!',
     'search.placeholder': 'Rechercher des raccourcis…',
+    'search.results': 'Résultats : {n}',
+    'search.noresults': 'Aucun résultat',
     'btn.basic': 'Raccourcis de base',
     'btn.reset': 'Réinitialiser',
     'btn.export': 'Exporter',
@@ -3835,6 +3851,8 @@ i18n.hi = {
     'msg.saved': 'सेटिंग्स को सहेजा गया!',
     'msg.copied': 'नकल की गई!',
     'search.placeholder': 'खोजें…',
+    'search.results': 'परिणाम: {n}',
+    'search.noresults': 'कोई परिणाम नहीं',
     'btn.basic': 'मूल शॉर्टकट',
     'btn.reset': 'सेटिंग्स रीसेट करें',
     'btn.export': 'निर्यात',
@@ -4295,6 +4313,8 @@ i18n.hu = {
     'msg.saved': 'A beállítások elmentve!',
     'msg.copied': 'Másolva!',
     'search.placeholder': 'Keresési műveletek…',
+    'search.results': 'Találatok: {n}',
+    'search.noresults': 'Nincs találat',
     'btn.basic': 'Alapvető gyorsbillentyűk',
     'btn.reset': 'Állítsa vissza az összes beállítást',
     'btn.export': 'Beállítások exportálása',
@@ -4755,6 +4775,8 @@ i18n.it = {
     'msg.saved': 'Impostazioni salvate!',
     'msg.copied': 'Copiato!',
     'search.placeholder': 'Cerca scorciatoie…',
+    'search.results': 'Risultati: {n}',
+    'search.noresults': 'Nessun risultato',
     'btn.basic': 'Scorciatoie base',
     'btn.reset': 'Reimposta tutto',
     'btn.export': 'Esportare',
@@ -5215,6 +5237,8 @@ i18n.ja = {
     'msg.saved': '設定が保存されました!',
     'msg.copied': 'コピーしました！',
     'search.placeholder': 'Search anthkeys…',
+    'search.results': '結果: {n}',
+    'search.noresults': '結果がありません',
     'btn.basic': '基本ショートカット',
     'btn.reset': '設定をリセット',
     'btn.export': '輸出',
@@ -5675,6 +5699,8 @@ i18n.ko = {
     'msg.saved': '설정이 저장되었습니다.',
     'msg.copied': '복사되었습니다!',
     'search.placeholder': '검색…',
+    'search.results': '결과: {n}',
+    'search.noresults': '결과 없음',
     'btn.basic': '기본 단축키',
     'btn.reset': '설정 초기화',
     'btn.export': '내보내다',
@@ -6135,6 +6161,8 @@ i18n.nl = {
     'msg.saved': 'Instellingen opgeslagen!',
     'msg.copied': 'Gekopieerd!',
     'search.placeholder': 'Zoeken…',
+    'search.results': 'Resultaten: {n}',
+    'search.noresults': 'Geen resultaten',
     'btn.basic': 'Basis snelkoppelingen',
     'btn.reset': 'Alles resetten',
     'btn.export': 'Exporteren',
@@ -6595,6 +6623,8 @@ i18n.no = {
     'msg.saved': 'Innstillinger lagret!',
     'msg.copied': 'Kopiert!',
     'search.placeholder': 'Søk…',
+    'search.results': 'Resultater: {n}',
+    'search.noresults': 'Ingen resultater',
     'btn.basic': 'Grunnleggende snarveier',
     'btn.reset': 'Tilbakestill alle',
     'btn.export': 'Eksport',
@@ -7055,6 +7085,8 @@ i18n.pl = {
     'msg.saved': 'Ustawienia zapisane!',
     'msg.copied': 'Skopiowano!',
     'search.placeholder': 'Szukaj…',
+    'search.results': 'Wyniki: {n}',
+    'search.noresults': 'Brak wyników',
     'btn.basic': 'Podstawowe skróty',
     'btn.reset': 'Resetuj ustawienia',
     'btn.export': 'Eksport',
@@ -7515,6 +7547,8 @@ i18n.pt = {
     'msg.saved': 'Configurações salvas!',
     'msg.copied': 'Copiado!',
     'search.placeholder': 'Pesquisar atalhos…',
+    'search.results': 'Resultados: {n}',
+    'search.noresults': 'Sem resultados',
     'btn.basic': 'Atalhos básicos',
     'btn.reset': 'Redefinir tudo',
     'btn.export': 'Exportar',
@@ -7975,6 +8009,8 @@ i18n.ru = {
     'msg.saved': 'Настройки сохранены!',
     'msg.copied': 'Скопировано!',
     'search.placeholder': 'Поиск…',
+    'search.results': 'Результаты: {n}',
+    'search.noresults': 'Ничего не найдено',
     'btn.basic': 'Основные',
     'btn.reset': 'Сбросить',
     'btn.export': 'Экспорт',
@@ -8435,6 +8471,8 @@ i18n.sv = {
     'msg.saved': 'Inställningarna har sparats!',
     'msg.copied': 'Kopierade!',
     'search.placeholder': 'Sökåtgärder…',
+    'search.results': 'Resultat: {n}',
+    'search.noresults': 'Inga resultat',
     'btn.basic': 'Grundläggande genvägar',
     'btn.reset': 'Återställ alla inställningar',
     'btn.export': 'Exportera inställningar',
@@ -8895,6 +8933,8 @@ i18n.tr = {
     'msg.saved': 'Ayarlar kaydedildi!',
     'msg.copied': 'Kopyalandı!',
     'search.placeholder': 'Ara…',
+    'search.results': 'Sonuçlar: {n}',
+    'search.noresults': 'Sonuç yok',
     'btn.basic': 'Temel kısayollar',
     'btn.reset': 'Ayarları sıfırla',
     'btn.export': 'İhracat',
@@ -9356,6 +9396,8 @@ i18n.vi = {
     'msg.saved': 'Đã lưu cài đặt!',
     'msg.copied': 'Đã sao chép!',
     'search.placeholder': 'Tìm kiếm…',
+    'search.results': 'Kết quả: {n}',
+    'search.noresults': 'Không có kết quả',
     'btn.basic': 'Phím tắt cơ bản',
     'btn.reset': 'Đặt lại',
     'btn.export': 'Xuất khẩu',
@@ -9684,6 +9726,7 @@ function applyLanguage(lang) {
   });
   applyWhatsNewLanguage(lang);
   renderNotifyUI();
+  updateSearchCount();
 }
 
 function applyWhatsNewLanguage(lang) {
@@ -10777,20 +10820,30 @@ renderAnthkeys();
 // (moved below click handlers and accents init)
 
 // ---- Event listeners ----
+const AK_TAB_IDS = ['windows', 'macos', 'linux', 'chromeos', 'apps'];
+function selectPlatformTab(tab, smoothScroll) {
+  document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+  document.querySelectorAll('.panel').forEach(p => p.classList.remove('active'));
+  tab.classList.add('active');
+  const pnl = document.getElementById(tab.dataset.tab);
+  if (pnl) pnl.classList.add('active');
+  const scrollArea = document.querySelector('.scroll-area');
+  if (scrollArea && smoothScroll) scrollArea.scrollTo({ top: 0, behavior: 'smooth' });
+  updateCompareOptions();
+  buildModBar();
+  applyCategoryFilter();
+  showDailyTip();
+  lsSet('anthkeys-last-tab', tab.dataset.tab);
+}
+// Reopen on whichever platform the reader was last looking at.
+function restorePlatformTab() {
+  const saved = lsGet('anthkeys-last-tab', '');
+  if (AK_TAB_IDS.indexOf(saved) === -1) return;
+  const tab = document.querySelector('.tab[data-tab="' + saved + '"]');
+  if (tab) selectPlatformTab(tab, false);
+}
 document.querySelectorAll('.tab').forEach(tab => {
-  tab.addEventListener('click', () => {
-    document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
-    document.querySelectorAll('.panel').forEach(p => p.classList.remove('active'));
-    tab.classList.add('active');
-    const pnl = document.getElementById(tab.dataset.tab);
-    if (pnl) pnl.classList.add('active');
-    const scrollArea = document.querySelector('.scroll-area');
-    if (scrollArea) scrollArea.scrollTo({ top: 0, behavior: 'smooth' });
-    updateCompareOptions();
-    buildModBar();
-    applyCategoryFilter();
-    showDailyTip();
-  });
+  tab.addEventListener('click', () => selectPlatformTab(tab, true));
 });
 
 // ---- Back to top ----
@@ -12344,11 +12397,13 @@ onId('searchClear', 'click', function() {
 function updateSearchCount() {
   const q = document.getElementById('searchInput').value.trim();
   const el = document.getElementById('searchCount');
+  if (!el) return;
   if (!q) { el.textContent = ''; return; }
   const panel = document.querySelector('.panel.active');
   const allRows = panel ? [...panel.querySelectorAll('tbody tr:not(.category)')] : [];
   const visible = allRows.filter(r => r.style.display !== 'none').length;
-  el.textContent = visible === 0 ? 'No results' : visible + ' result' + (visible !== 1 ? 's' : '');
+  if (visible === 0) { el.textContent = t('search.noresults'); return; }
+  el.textContent = t('search.results').replace('{n}', visible);
 }
 
 // (Search focus with / is handled centrally further down this file.)
@@ -14336,4 +14391,9 @@ document.addEventListener('keydown', e => {
   if (e.key === 'r') { e.preventDefault(); akShowWhatsNew(); return; }
   if (e.key === 's') { e.preventDefault(); showSettings(); return; }
 });
+
+// ---- Restore the platform the reader was last using ----
+// Runs last on purpose: selectPlatformTab reads state (comparePlatform and
+// friends) that is only initialised further down this file.
+restorePlatformTab();
 
