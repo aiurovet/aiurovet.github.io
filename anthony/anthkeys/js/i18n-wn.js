@@ -9,6 +9,8 @@ I18N_WN.es = {
   'v52.2': [
     'Nuevo: notificaciones. Actívalas en Ajustes: elige una hora y Anthkeys te enviará un consejo diario de atajo, además de un aviso cuando haya una nueva versión lista para instalar.',
     'Nuevo: avisos de salas en directo. Un interruptor aparte te avisa cuando un dispositivo se une a tu sala, la abandona, te llama, tiene la batería baja o te envía una nota, para que encuentres tu otro dispositivo aunque la pestaña esté en segundo plano.',
+    'Nuevo: atajos de teclado. Pulsa ? para ver la lista completa, del 1 al 5 para cambiar de plataforma, / para buscar, t para el modo claro u oscuro, c para comparar y e para plegar todas las categor&iacute;as. Las flechas recorren los resultados y Enter copia el que tengas delante, as&iacute; que puedes usar el sitio sin rat&oacute;n.',
+    'Correcci&oacute;n: el aviso de bater&iacute;a baja ya no se dispara para el dispositivo que est&aacute;s usando. Ahora solo te avisa de los dem&aacute;s.',
     'Nota: los consejos llegan siempre con el sitio abierto. Si lo instalas en Chrome también pueden llegar con el sitio cerrado, pero el navegador decide la hora y puede saltarse un día.'
   ],
   'v52.1': [
@@ -237,6 +239,8 @@ I18N_WN.fr = {
   'v52.2': [
     'Nouveau : les notifications. Activez-les dans les réglages : choisissez une heure et Anthkeys vous envoie un conseil de raccourci quotidien, ainsi qu’une alerte quand une nouvelle version est prête à être installée.',
     'Nouveau : alertes de salon en direct. Un interrupteur distinct vous previent quand un appareil rejoint votre salon, le quitte, sonne, a une batterie faible ou vous envoie une note, pour retrouver votre autre appareil même si l&rsquo;onglet est en arrière-plan.',
+    'Nouveau&#160;: raccourcis clavier. Appuyez sur ? pour la liste compl&egrave;te, de 1 &agrave; 5 pour changer de plateforme, / pour rechercher, t pour le mode clair ou sombre, c pour comparer et e pour replier toutes les cat&eacute;gories. Les fl&egrave;ches parcourent les r&eacute;sultats et Entr&eacute;e copie celui sur lequel vous &ecirc;tes, donc le site est utilisable sans souris.',
+    'Correction&#160;: l\'alerte de batterie faible ne se d&eacute;clenche plus pour l\'appareil que vous utilisez. Elle ne vous pr&eacute;vit plus que pour vos autres appareils.',
     'Remarque : les conseils arrivent toujours lorsque le site est ouvert. Installé sur Chrome, ils peuvent aussi arriver site fermé, mais le navigateur choisit l’heure et peut sauter un jour.'
   ],
   'v52.1': [
@@ -465,6 +469,8 @@ I18N_WN.de = {
   'v52.2': [
     'Neu: Benachrichtigungen. Aktiviere sie in den Einstellungen – wähle eine Uhrzeit und Anthkeys sendet dir einen täglichen Tipp zum Tastenkürzel sowie einen Hinweis, wenn eine neue Version zur Installation bereitsteht.',
     'Neu: Live-Raum-Hinweise. Ein eigener Schalter meldet, wenn ein Gerät deinem Raum beitritt, ihn verlässt, klingelt, einen niedrigen Akkustand hat oder dir eine Notiz schickt, damit du dein anderes Gerät findest, auch wenn der Tab im Hintergrund ist.',
+    'Neu: Tastaturk&uuml;rzel. Mit ? bekommst du die ganze Liste, mit 1 bis 5 wechselst du die Plattform, mit / suchst du, mit t wechselst du zwischen hell und dunkel, mit c vergleichst du und mit e klappst du alle Kategorien ein oder aus. Die Pfeiltasten gehen durch die Treffer und Enter kopiert den jeweiligen Treffer &ndash; so ist die Seite ohne Maus bedienbar.',
+    'Behoben: Die Warnung bei niedrigem Akku erscheint nicht mehr f&uuml;r das Ger&auml;t, das du selbst benutzt. Sie meldet jetzt nur noch deine anderen Ger&auml;te.',
     'Hinweis: Tipps kommen immer, solange die Seite geöffnet ist. Installiert in Chrome können sie auch bei geschlossener Seite ankommen, aber der Browser bestimmt die Uhrzeit und kann einen Tag überspringen.'
   ],
   'v52.1': [
@@ -693,6 +699,8 @@ I18N_WN.it = {
   'v52.2': [
     'Novità: le notifiche. Attivale nelle impostazioni: scegli un orario e Anthkeys ti invierà un suggerimento giornaliero sulle scorciatoie, oltre a un avviso quando una nuova versione è pronta da installare.',
     'Novità: avvisi delle stanze live. Un interruttore separato ti avvisa quando un dispositivo entra nella tua stanza, esce, suona, ha la batteria scarica o ti invia una nota, così trovi il tuo altro dispositivo anche quando la scheda è in background.',
+    'Novit&agrave;: scorciatoie da tastiera. Premi ? per l\'elenco completo, da 1 a 5 per cambiare piattaforma, / per cercare, t per il tema chiaro o scuro, c per confrontare ed e per comprimere tutte le categorie. Le frecce scorrono i risultati ed Enter copia quello su cui sei, cos&igrave; il sito si usa senza mouse.',
+    'Correzione: l\'avviso di batteria scarica non compare pi&ugrave; per il dispositivo che stai usando. Ora segnala solo gli altri.',
     'Nota: i suggerimenti arrivano sempre mentre il sito è aperto. Installato su Chrome possono arrivare anche a sito chiuso, ma il browser sceglie l’ora e può saltare un giorno.'
   ],
   'v52.1': [
@@ -921,6 +929,8 @@ I18N_WN.pt = {
   'v52.2': [
     'Novo: notificações. Ative-as nas definições — escolha um horário e o Anthkeys envia uma dica diária de atalho, além de um aviso quando uma nova versão estiver pronta a instalar.',
     'Novidade: avisos de salas ao vivo. Um interruptor separado avisa quando um dispositivo entra na sua sala, sai, toca, fica com a bateria fraca ou envia uma nota, para encontrar o seu outro dispositivo mesmo quando o separador está em segundo plano.',
+    'Novo: atalhos de teclado. Prime ? para a lista completa, 1 a 5 para trocar de plataforma, / para pesquisar, t para o modo claro ou escuro, c para comparar e e para recolher todas as categorias. As setas percorrem os resultados e Enter copia aquele em que est&aacute;s, por isso o site usa-se sem rato.',
+    'Corre&ccedil;&atilde;o: o aviso de bateria fraca j&aacute; n&atilde;o aparece para o dispositivo que est&aacute;s a usar. Agora s&oacute; avisa sobre os outros.',
     'Nota: as dicas chegam sempre com o site aberto. Instalado no Chrome, também podem chegar com o site fechado, mas o navegador escolhe a hora e pode pular um dia.'
   ],
   'v52.1': [
@@ -1149,6 +1159,8 @@ I18N_WN.nl = {
   'v52.2': [
     'Nieuw: meldingen. Zet ze aan in de instellingen — kies een tijd en Anthkeys stuurt een dagelijkse sneltoets-tip, plus een melding wanneer een nieuwe versie klaarstaat om te installeren.',
     'Nieuw: meldingen voor live-ruimtes. Een eigen schakelaar meldt wanneer een apparaat je ruimte binnenkomt, het verlaat, overgaat, een lege batterij heeft of je een notitie stuurt, zodat je je andere apparaat vindt, ook als het tabblad op de achtergrond staat.',
+    'Nieuw: sneltoetsen. Druk op ? voor de hele lijst, 1 tot 5 om van platform te wisselen, / om te zoeken, t voor licht of donker, c om te vergelijken en e om alle categorie&euml;n in of uit te klappen. Met de pijltjes loop je door de resultaten en Enter kopieert de treffer waar je op staat, dus de site werkt zonder muis.',
+    'Opgelost: de waarschuwing bij een lage batterij verschijnt niet meer voor het apparaat dat je zelf gebruikt. Ze meldt nu alleen je andere apparaten.',
     'Let op: tips komen altijd terwijl de site open is. Geïnstalleerd in Chrome kunnen ze ook komen als de site gesloten is, maar de browser bepaalt het tijdstip en slaat soms een dag over.'
   ],
   'v52.1': [
@@ -1377,6 +1389,8 @@ I18N_WN.ja = {
   'v52.2': [
     '新機能：通知。設定で有効にして時刻を選ぶと、Anthkeys が毎日のショートカットのヒントを送り、新しいバージョンの準備ができたら知らせます。',
     '新機能：ライブルーム通知。別のスイッチで、デバイスがルームに参加したとき、退出したとき、着信したとき、バッテリー残量が少なくなったとき、メモが送られたときに知らせます。タブがバックグラウンドでも、もう一方のデバイスを見つけられます。',
+    '&#26032;&#21151;&#33021;&#65306;&#12463;&#12540;&#12498;&#12540;&#12489;&#12469;&#12522;&#12553;&#12463;&#12471;&#12519;&#12483;&#12463;&#12290; &#65363; &#12391;&#12390;&#20840;&#19968;&#21015;&#12289;1&#12316;5 &#12395;&#12390;&#12503;&#12524;&#12483;&#12488;&#12501;&#12523;&#12540;&#12471;&#12519;&#12531;&#12434;&#25563;&#12379;&#12289;&#12347; &#12395;&#12390;&#26942;&#32032;&#12289;t &#12391;&#12390;&#12521;&#12452;&#12488;&#12523;&#12496;&#12540;&#12463;&#12289;c &#12391;&#12390;&#27604;&#36739;&#12289;e &#12391;&#12390;&#20840;&#12459;&#12486;&#12468;&#12522;&#12398;&#38216;&#38306;&#12469;&#12434;&#12290;&#22796;&#30601;&#12469;&#12540;&#12395;&#12391;&#12390;&#32032;&#26524;&#12434;&#36960;&#12377;&#12289;Enter &#12391;&#12390;&#12381;&#12398;&#39044;&#30446;&#12434;&#12467;&#12522;&#12358;&#12375;&#12383;&#12390;&#12289;&#12414;&#12441;&#12473;&#12394;&#12369;&#12379;&#12390;&#12418;&#12440;&#12473;&#12394;&#12375;&#12379;&#12390;&#20351;&#12358;&#12369;&#12299;',
+    '&#20462;&#27491;&#65306;&#12496;&#12483;&#12486;&#12522;&#21046;&#38656;&#37327;&#19902;&#19969;&#12398;&#21205;&#306a;&#12377;&#12289;&#33258;&#20986;&#12398;&#12487;&#12495;&#12452;&#12473;&#12395;&#12388;&#12356;&#12390;&#12378;&#12429;&#12375;&#12414;&#12375;&#12369;&#12414;&#12290;&#29616;&#22312;&#12399;&#306f;&#20197;&#38477;&#12398;&#12487;&#12495;&#12452;&#12473;&#12395;&#12388;&#12356;&#12390;&#12356;&#12414;&#12379;&#12290;',
     '注意：ヒントはサイトを開いている間に届きます。Chrome にインストールしてあればタブを閉じていても届くことがありますが、届く時刻はブラウザが決めるため、日にちを飛ばすことがあります。'
   ],
   'v52.1': [
@@ -1605,6 +1619,8 @@ I18N_WN.ru = {
   'v52.2': [
     'Новое: уведомления. Включите их в настройках, выберите время — Anthkeys будет присылать ежедневную подсказку по горячим клавишам, а также напомнит, когда новая версия готова к установке.',
     'Новое: уведомления о комнатах. Отдельный переключатель сообщает, когда устройство входит в вашу комнату, выходит из неё, звонит, почти разряжено или присылает заметку, чтобы вы нашли другое устройство, даже когда вкладка в фоне.',
+    '&#1053;&#1086;&#1074;&#1086;&#1077;&#58; &#1075;&#1086;&#1088;&#1103;&#1095;&#1080;&#1077; &#1082;&#1083;&#1072;&#1074;&#1080;&#1096;&#1080;. &#1053;&#1072;&#1078;&#1084;&#1080;&#1090;&#1077; ? &#1076;&#1083;&#1103; &#1087;&#1086;&#1083;&#1085;&#1086;&#1075;&#1086; &#1089;&#1087;&#1080;&#1089;&#1082;&#1072;, 1&ndash;5 &#1076;&#1083;&#1103; &#1089;&#1084;&#1077;&#1085;&#1099; &#1087;&#1083;&#1072;&#1090;&#1092;&#1086;&#1088;&#1084;&#1099;, / &#1076;&#1083;&#1103; &#1087;&#1086;&#1080;&#1089;&#1082;&#1072;, t &#1076;&#1083;&#1103; &#1089;&#1074;&#1077;&#1090;&#1083;&#1086;&#1081; &#1080; &#1090;&#1105;&#1084;&#1085;&#1086;&#1081; &#1090;&#1077;&#1084;&#1099;, c &#1076;&#1083;&#1103; &#1089;&#1088;&#1072;&#1074;&#1085;&#1077;&#1085;&#1080;&#1103; &#1080; e &#1095;&#1090;&#1086;&#1073;&#1099; &#1089;&#1074;&#1077;&#1088;&#1085;&#1091;&#1090;&#1100; &#1080;&#1083;&#1080; &#1088;&#1072;&#1079;&#1074;&#1077;&#1088;&#1085;&#1091;&#1090;&#1100; &#1074;&#1089;&#1077; &#1082;&#1072;&#1090;&#1077;&#1075;&#1086;&#1088;&#1080;&#1080;. &#1057;&#1090;&#1088;&#1077;&#1083;&#1082;&#1080; &#1087;&#1077;&#1088;&#1077;&#1084;&#1077;&#1097;&#1072;&#1102;&#1090; &#1087;&#1086; &#1088;&#1077;&#1079;&#1091;&#1083;&#1100;&#1090;&#1072;&#1090;&#1072;&#1084;, &#1072; Enter &#1082;&#1086;&#1087;&#1080;&#1088;&#1091;&#1077;&#1090; &#1074;&#1099;&#1073;&#1088;&#1072;&#1085;&#1085;&#1099;&#1081;, &#1090;&#1072;&#1082; &#1095;&#1090;&#1086; &#1089;&#1072;&#1081;&#1090; &#1084;&#1086;&#1078;&#1085;&#1086; &#1089;&#1082;&#1086;&#1083;&#1100;&#1079;&#1086; &#1073;&#1077;&#1079; &#1084;&#1099;&#1096;&#1080;.',
+    '&#1048;&#1089;&#1087;&#1088;&#1072;&#1074;&#1083;&#1077;&#1085;&#1086;&#58; &#1087;&#1088;&#1077;&#1076;&#1091;&#1087;&#1088;&#1077;&#1078;&#1076;&#1077;&#1085;&#1080;&#1077; &#1086; &#1085;&#1080;&#1079;&#1082;&#1086;&#1084; &#1079;&#1072;&#1088;&#1103;&#1076;&#1077; &#1073;&#1072;&#1090;&#1072;&#1088;&#1077;&#1080; &#1073;&#1086;&#1083;&#1100;&#1096;&#1077; &#1085;&#1077; &#1087;&#1088;&#1080;&#1091;&#1085;&#1083;&#1100;&#1084;&#1077;&#1090; &#1076;&#1083;&#1103; &#0443;&#0441;&#0442;&#0440;&#043e;&#0439&#0441;&#0442;&#1074;&#0430;, &#043a;&#043e;&#0442;&#043e&#0440;&#044b\u0439 &#0432\u044b \u0438\u0441\u043f\u043e\u043b\u044c\u0437\u0443\u0435\u0442\u0435. &#1058;&#1077;&#1087;&#1077;&#1088;&#1100; &#043e&#1085;&#043e &#1089;&#043e;&#1086;&#0431;&#0449;&#0430;&#1077;&#1090; &#0442;&#043e;&#1083;&#044c\u043a\u043e &#043e \0434\u0440\u0443\u0433\u0438\u0445 \u0443\u0441\u0442\u0440\u043e&#0439&#0441\u0442\u0432\u0430\u0445.',
     'Примечание: подсказки приходят, пока сайт открыт. Если Anthkeys установлен в Chrome, они могут приходить и при закрытом сайте, но время выбирает браузер, и один день может быть пропущен.'
   ],
   'v52.1': [
@@ -1833,6 +1849,8 @@ I18N_WN.ko = {
   'v52.2': [
     '새 기능: 알림. 설정에서 켜고 시간을 고르면 Anthkeys가 매일의 단축키 팁을 보내고, 새 버전이 준비되면 알려줍니다.',
     '새 기능: 라이브 룸 알림. 별도 스위치로 기기가 방에 들어오거나 나가고, 전화가 오거나, 배터리가 거의 다 됐거나, 메모를 보낼 때 알려 줍니다. 탭이 백그라운드에 있어도 다른 기기를 찾을 수 있습니다.',
+    '&#46056; &#52840;&#50512;&#65306;&#52864;&#48372;&#47356;&#46364; &#47556;&#48067;&#53456;&#51968;. &#50864; &#52512;&#51068; &#52532;&#51068;&#50640;&#50640; &#48324;&#44256;&#44256;&#47532; 1~5&#47196; &#46041;&#45328;&#54068;&#47532; &#50739;&#50512;, /&#47196; &#44256;&#50512;, t&#47196; &#46924;&#51068;&#44284; &#46356;&#44592; &#49324;&#53380;, c&#47196; &#48708;&#44384;, e&#47196; &#47784; &#52856;&#44256;&#44532;&#51032; &#51228;&#44256;&#44284; &#45936;&#44592;&#44592;&#45716;&#53912;. &#48148;&#54364;&#44592;&#50640;&#50612;&#48024; &#44256;&#44256;&#44284; &#50612;&#46020;&#44032;&#47532; &#44208;&#45328;&#46914;&#44256; Enter&#44032; &#49464;&#46085;&#51068;&#44284; &#44284;&#45336;&#51012; &#52897;&#51068;&#54616;&#44592; &#46356;&#47088;&#50640;&#47784; &#49888;&#46041; &#48324;&#50640;&#45716;&#53912;.',
+    '&#49556;&#46095;&#65306;&#46944;&#53656;&#9f9c; &#48380;&#46976; &#44060;&#5290;&#55136;&#44060; &#52376;&#51068;&#44284; &#51068;&#44284; &#44168;&#51068;&#50640;&#50612;&#50616;&#5230; &#54840;&#50528;&#44284;&#51264;&#46041;&#53944;&#50612; &#51648;&#51452;&#54616;&#51648; &#&#49892;&#45328;&#51064; &#46356;&#46328;&#51068;&#50640;&#44284;&#51208; &#54840;&#50528;&#54664;&#45716;&#53912;.',
     '참고: 팁은 사이트가 열려 있을 때 도착합니다. Chrome에 설치해 두면 사이트를 닫아도 올 수 있지만, 도착 시간은 브라우저가 정해 하루를 건너뛸 수 있습니다.'
   ],
   'v52.1': [
@@ -2061,6 +2079,8 @@ I18N_WN.pl = {
   'v52.2': [
     'Nowość: powiadomienia. Włącz je w ustawieniach — wybierz godzinę, a Anthkeys wyśle codzienną podpowiedź o skrócie i uprzedzi, gdy nowa wersja będzie gotowa do instalacji.',
     'Nowość: powiadomienia z pokoju na żywo. Osobny przełącznik informuje, gdy urządzenie dołącza do pokoju, je opuszcza, dzwoni, ma niski poziom baterii lub wysyła notatkę, dzięki czemu znajdziesz drugie urządzenie, nawet gdy karta jest w tle.',
+    'Nowo&#347;c: skr&#243;ty klawiszowe. Naci&#347;nij ? aby zobaczy&#263; pe&#322;n&#261; list&#281;, 1&ndash;5 aby zmieni&#263; platform&#281;, / aby wyszuka&#263;, t aby prze&#322;&#261;czy&#263; jasny i ciemny motyw, c aby por&#243;wna&#263;, a e aby zwin&#261;&#263; lub rozwin&#261;&#263; wszystkie kategorie. Strza&#322;ki przechodz&#261; po wynikach, a Enter kopiuje wybrany, wi&#281;c mo&#380;na korzysta&#263; z serwisu bez myszy.',
+    'Poprawka: ostrze&#380;enie o niskim poziomie baterii nie pojawia si&#281; ju&#380; dla urz&#261;dzenia, z kt&oacute;rego korzystasz. Teraz informuje tylko o pozosta&#322;ych.',
     'Uwaga: podpowiedzi przychodzą, gdy strona jest otwarta. Zainstalowany w Chrome mogą przyjść także przy zamkniętej stronie, ale przeglądarka decyduje o porze i może pominąć dzień.'
   ],
   'v52.1': [
@@ -2289,6 +2309,8 @@ I18N_WN.tr = {
   'v52.2': [
     'Yeni: bildirimler. Ayarlardan aç ve bir saat seç; Anthkeys her gün bir kısayol ipucu gönderir ve yeni sürüm kurulmaya hazır olduğunda seni uyarır.',
     'Yeni: canlı oda uyarıları. Ayrı bir düğme, bir cihaz odanıza katıldığında, ayrıldığında, çaldığında, pil düşük olduğunda veya size bir not gönderdiğinde haber verir; sekme arka plandayken bile diğer cihazınızı bulursunuz.',
+    'Yeni: klavye k&#305;sayollar&#305;. Tam liste i&#231;in ?, platform de&#287;i&#351;tirmek i&#231;in 1-5, arama i&#231;in /, a&#287;&#305;k veya koyu mod i&#231;in t, kar&#351;&#305;&#351;t&#305;rmak i&#231;in c ve t&uuml;m kategorileri a&ccedil;mak veya kapatmak i&#231;in e tu&#351;una bas. Ok tu&#351;lar&#305; sonu&ccedil;lar aras&#305;nda gezinir, Enter &uuml;zerinde durdu&#287;un sonucu kopyalar, b&ouml;ylece siteyi fare kullanmadan kullanabilirsin.',
+    'D&uuml;zeltme: d&uuml;&#351;k pil uyar&#305;s&#305; art&#305;k kulland&#305;&#287;&#305;n cihaz i&#231;in g&ouml;sterilmiyor. Yaln&#305;zca di&#287;er cihazlar&#305;n&#305; bildiriyor.',
     'Not: ipuçları site açıkken gelir. Chrome\u2019a kuruluysa site kapalıyken de gelebilir, ancak saati tarayıcı belirler ve bir gün atlanabilir.'
   ],
   'v52.1': [
@@ -2517,6 +2539,8 @@ I18N_WN.vi = {
   'v52.2': [
     'Mới: thông báo. Bật trong cài đặt, chọn giờ và Anthkeys sẽ gửi một mẹo phím tắt hằng ngày, cùng thông báo khi có phiên bản mới sẵn sàng cài đặt.',
     'Mới: thông báo phòng trực tiếp. Công tắc riêng báo cho bạn khi một thiết bị vào phòng, rời đi, đổ chuông, sắp hết pin hoặc gửi cho bạn một ghi chú, để bạn tìm thiết bị còn lại ngay cả khi thẻ đang ở chế độ nền.',
+    'M&#7891;i: ph&iacute;m t&#7855;t b&agrave;n ph&iacute;m. Nh&#7845;n ? &#273;&#7871; xem to&agrave;n b&#7891; danh s&aacute;ch, 1 &#273;&#7871; 5 &#273;&#7871; &#273;&#7893;i n&#7873;n t&#7843;ng, / &#273;&#7871; t&igrave;m ki&#7871;m, t cho ch&#7871; &#273;&#244; s&aacute;ng ho&#7863;c t&#7881;i, c &#273;&#7871; so s&aacute;nh v&agrave; e &#273;&#7871; m&#7903; ho&#7863;c thu g&#7885;n t&#7845;t c&#7843; danh m&#7909;c. Ph&iacute;m m&#361;i t&ecirc;n duy&#7871;t qua k&#7871;t qu&#7843; v&agrave; Enter sao ch&eacute;p m&#7905;c &#273;&#259ng; ch&#7885;n, n&ecirc;n b&#7841;n d&ugrave;ng &#273;&#432;c m&agrave; kh&ocirc;ng c&#7841;n chu&#7899;t.',
+    'S&#7911;a l&#7885;i: c&#7843;nh b&aacute;o pin y&#1ebfu kh&ocirc;ng c&ograve;n b&aacute;o cho thi&#7871;t b&#7881; b&#7841;n &#273;&#259ng d&ugrave;ng. Gi&#7901; n&oacute; ch&#7881; b&aacute;o v&#7871; nh&#7919;ng thi&#7871;t b&#7881; kh&aacute;c.',
     'Lưu ý: mẹo luôn đến khi trang đang mở. Nếu đã cài trên Chrome, chúng cũng có thể đến khi trang đã đóng, nhưng trình duyệt chọn thời điểm và có thể bỏ qua một ngày.'
   ],
   'v52.1': [
@@ -2745,6 +2769,8 @@ I18N_WN.ar = {
   'v52.2': [
     'جديد: الإشعارات. فعّلها من الإعدادات واختر وقتًا، فيرسل Anthkeys تلميحًا يوميًا عن مفتاح الاختصار، وينبّهك أيضًا عند توفر إصدار جديد للتثبيت.',
     'جديد: إشعارات الغرفة المباشرة. يعلمك مفتاح منفصل عندما ينضم جهاز إلى غرفتك أو يغادرها أو يرن أو تنخفض بطاريته أو يرسل لك ملاحظة، لتجد جهازك الآخر حتى عندما تكون علامة التبويب في الخلفية.',
+    '&#1580;&#1583;&#1610;&#1583;&#58; &#1575;&#1582;&#1578;&#1589;&#1575;&#1585;&#1575;&#1578; &#1604;&#1581;&#1576;&#1577; &#1575;&#1604;&#1605;&#1601;&#1575;&#1578;&#1581;. &#1575;&#1590;&#1594;&#1591; &#1593;&#1604;&#1609; ? &#1604;&#1602;&#1575;&#1574;&#1605;&#1577; &#1603;&#1575;&#1605;&#1604;&#1577;&#1548; &#1608;&#1605;&#0646; 1 &#1573;&#1604;&#1609; 5 &#1604;&#1578;&#1576;&#1583;&#1610;&#1604; &#1575;&#1604;&#1605;&#1606;&#1589;&#1577;&#1548; &#1608;/ &#1604;&#1604;&#1576;&#1581;&#1579;&#1548;&#1548; &#1608;t &#1604;&#1604;&#1608;&#1587;&#1606; &#1575;&#1604;&#1601;&#1575;&#1578;&#1581; &#1571;&#1608; &#1575;&#1604;&#1583;&#1575;&#1603;&#1548; &#1608;c &#1604;&#1604;&#1605;&#1602;&#1575;&#1585;&#1606;&#1577;&#1548; &#1608;e &#1604;&#1591;&#1610; &#1603;&#1604; &#1575;&#1604;&#1601;&#1574;&#1575;&#1578; &#1571;&#1608; &#1601;&#1578;&#1581;&#1607;&#1575;. &#1578;&#1606;&#1602;&#1617; &#1575;&#1604;&#1571;&#1587;&#1607;&#1589; &#1576;&#1610;&#1606; &#1575;&#1604;&#1606;&#1578;&#1575;&#1327;&#1580; &#1608;Enter &#1610;&#1606;&#1587;&#1582; &#1575;&#1604;&#1593;&#1606;&#1589;&#1585; &#1575;&#1604;&#1584;&#1610; &#1585;&#1583;&#1578; &#1573;&#1604;&#1610;&#1607;&#1548; &#1601;&#1610;&#1589;&#0628;&#062d; &#1575;&#1604;&#1605;&#1608;&#1602;&#0639; &#1602;&#1575;&#1576;&#1604;&#1604; &#&#1575;&#1587;&#1578;&#1582;&#1583;&#1575;&#1605; &#1603;&#1575;&#1605;&#1604;&#1575;&#1569; &#1576;&#1583;&#1608;&#1606; &#1601;&#1575;&#1574;&#1585;&#1577;.',
+    '',
     'ملاحظة: تصل التلميحات ما دام الموقع مفتوحًا. وإذا ثبّتته على Chrome فقد تصل أيضًا والموقع مغلق، لكن المتصفح يختار الوقت وقد يتخطى يومًا.'
   ],
   'v52.1': [
@@ -2973,6 +2999,8 @@ I18N_WN.hi = {
   'v52.2': [
     'नया: सूचनाएँ। सेटिंग्स में चालू करें और समय चुनें — Anthkeys रोज़ाना एक शॉर्टकट टिप भेजेगा, और नया संस्करण इंस्टॉल के लिए तैयार होने पर सूचित करेगा।',
     'नया: लाइव रूम सूचनाएँ। एक अलग स्विच बताता है कि जब कोई डिवाइस आपके रूम में आता है, निकलता है, बजता है, उसकी बैटरी कम होती है, या वह आपको नोट भेजता है, ताकि टैब पृष्ठभूमि में होने पर भी आपको दूसरा डिवाइस मिल जाए।',
+    '&#2344;&#2351;&#2350;&#2366;&#58; &#2325;&#2368;&#2348;&#2375;&#2352;&#2381;&#2337; &#2358;&#2379;&#2352;&#2381;&#2335;&#2325;&#2335;&#46; &#2346;&#2349;&#2370; &#2360;&#2370;&#2336;&#2368; &#2354;&#2367;&#2352;&#2379; ?, 1-5 &#2360;&#2375; &#2346;&#2354;&#2375;&#2335;&#2381;&#2344;&#2364;&#2352;&#2381;&#2337; &#2367;&#2350;&#2381;&#2348;&#2352;&#2381;&#2335; &#2325;&#2352;&#2344;&#2375;, / &#2360;&#2375; &#2326;&#2379;&#2332;&#2344;&#2375;, t &#2354;&#2379; &#2354;&#2366;&#2306;&#2335; &#2351;&#2366; &#2342;&#2366;&#2352;&#2381;&#2325; &#2362;&#2379;&#2337;, c &#2354;&#2379; &#2340;&#2369;&#2354;&#2340;&#2366;, e &#2360;&#2375; &#2360;&#2349;&#2368; &#2358;&#2381;&#2352;&#2375;&#2339;&#2367;&#2351;&#2366;&#2306; &#2326;&#2379;&#2354;&#2344;&#2375; &#2351;&#2366; &#2348;&#2306;&#2342; &#2325;&#2352;&#2344;&#2375; &#2361;&#2370;&#2306;&#2404; &#2342;&#2348;&#2350;&#2381;&#2346;&#2351;&#2351;&#2375;&#2352; &#2325;&#2381;&#2352;&#2351;&#2340;&#2366;&#2305; &#2366;&#2344;&#2367;&#2351; &#2351;&#2360;&#2366; &#2309;&#2346;&#2370; &#2346;&#2366;&#2369;&#2320;&#2370; &#2340;&#2381;&#2352;&#2366;&#2342;&#2340;&#2358; &#2325;&#2360;&#2369;&#2324;&#2366;, &#2351;&#2366; Enter &#2332;&#2367;&#2360; &#2346;&#2352; &#2309;&#2346;&#2370; &#2346;&#2369;&#2331;&#2364;&#2350;&#2361;&#2370; &#2325;&#2368; &#2346;&#2381;&#2352;&#2340;&#2367;&#2357;&#2366;&#2332;&#2379; &#2346;&#2381;&#2352;&#2340;&#2367;&#2357;&#2366;&#2344; &#2325;&#2352;&#2364;&#2370;, &#2313;&#2367;&#2358;&#2368;&#2351; &#2360;&#2366;&#2306;&#2385;&#2332;&#2339; &#2359;&#2340;&#2306; &#2325;&#2352;&#2344;&#2365; &#2350;&#2370;&#2350;&#2366;&#2351; &#2360;&#2366;&#2360;&#2375; &#2350;&#2366;&#2325;&#2342;&#2366; &#2350;&#2366;&#2370; &#2342;&#2370;&#2354;&#2352; &#2360;&#2325;&#2364;&#2379;.',
+    '&#2360;&#2370;&#2342;&#2366;&#2352;&#58; &#2325;&#2350; &#2348;&#2376;&#2335;&#2352;&#2368; &#2325;&#2368; &#2330;&#2375;&#2340;&#2357;&#2344;&#2346;&#2368; &#2309;&#2325;&#2332;&#2370; &#2325;&#2360;&#2366;&#2360;&#2375; &#2342;&#2368;&#2350; &#2352;&#2361; &#2330;&#2375;&#2350;&#2369;&#2352; &#2325;&#2352;&#2364;&#2370; &#2309;&#2343;&#2367;&#2357; &#2348;&#2340;&#2381;&#2340;&#2360; &#2310;&#2344;&#2366;&#2351;&#2334; &#2337;&#2368;&#2360;&#2351;&#2342; &#2348;&#2376;&#2335;&#2352;&#2368; &#2325;&#2366;&#2360;&#2377;&#2310;&#2335;&#2360;&#2306;&#2350; &#2346;&#2366;&#2306;&#2350;&#2360;&#2381;&#2340;&#2370;&#2366;&#2324;&#2368;&#2404; &#&#2306;&#2374;&#2306; &#2309;&#2348;&#2352; &#2305;&#2337;&#2381;&#2332;&#2360; &#2306;&#2313;&#2325;&#2360;&#2305; &#2325;&#2366;&#2360;&#2367;&#2314;&#2360;&#2351;&#2340;&#2368; &#2326;&#2350;&#2366;&#2346;&#2352; &#2361;&#2376;',
     'ध्यान दें: टिप तब तक आती हैं जब तक यह साइट खुली है। Chrome में इंस्टॉल करने पर वे बंद होने पर भी आ सकती हैं, लेकिन समय ब्राउज़र तय करता है और एक दिन छूट सकता है।'
   ],
   'v52.1': [
@@ -3201,6 +3229,8 @@ I18N_WN.sv = {
   'v52.2': [
     'Nytt: aviseringar. Slå på dem i inställningarna — välj en tid så skickar Anthkeys ett dagligt snabbkommandotips och meddelar när en ny version är klar att installera.',
     'Nytt: aviseringar för live-rum. En egen strömbrytare säger till när en enhet kommer in i ditt rum, lämnar det, ringer, har lågt batteri eller skickar en anteckning, så att du hittar din andra enhet även när fliken är i bakgrunden.',
+    'Nytt: tangentbordsgenv&auml;gar. Tryck p&aring; ? f&ouml;r hela listan, 1 till 5 f&ouml;r att byta plattform, / f&ouml;r att s&ouml;ka, t f&ouml;r ljust eller m&ouml;rkt l&auml;ge, c f&ouml;r att j&auml;mf&ouml;ra och e f&ouml;r att f&auml;lla ihop eller utf&auml;lla alla kategorier. Piltangenterna g&aring; genom tr&auml;ffarna och Enter kopierar den du st&aring;r p&aring;, s&aring; sidan g&aring; att anv&auml;nda utan mus.',
+    'R&auml;ttat: varningen f&ouml;r l&aring;gt batteri visas inte l&auml;ngre f&ouml;r enheten du sj&auml;lv anv&auml;nder. Den rapporterar nu bara dina andra enheter.',
     'Obs: tipsen kommer medan webbplatsen är öppen. Installerat i Chrome kan de komma även när webbplatsen är stängd, men webbläsaren väljer tidpunkten och kan hoppa över en dag.'
   ],
   'v52.1': [
@@ -3429,6 +3459,8 @@ I18N_WN.da = {
   'v52.2': [
     'Nyt: notifikationer. Slå dem til i indstillingerne — vælg et tidspunkt, så sender Anthkeys et dagligt genvejstip og giver besked, når en ny version er klar til installation.',
     'Nyt: notifikationer fra live-rum. En separat knap fortæller dig, når en enhed kommer ind i dit rum, forlader det, ringer, har lavt batteri eller sender dig en note, så du kan finde din anden enhed, selv når fanen er i baggrunden.',
+    'Nyt: tastaturgenveje. Tryk p&aring; ? for hele listen, 1 til 5 for at skifte platform, / for at s&oslash;ge, t for lyst eller m&oslash;rkt tilstand, c for at sammenligne og e for at udvide eller saml&aelig;ge alle kategorier. Piletasterne g&aring; gennem resultaterne, og Enter kopierer den, du er n&aring;et til, s&aring; siden kan bruges uden mus.',
+    'Rettet: advarslen om lavt batteri vises ikke l&aelig;ngere for den enhed, du selv bruger. Den melder nu kun om dine andre enheder.',
     'Bemærk: tips sendes, mens webstedet er åbent. Installeret i Chrome kan de også komme, mens webstedet er lukket, men browseren vælger tidspunktet og kan springe en dag over.'
   ],
   'v52.1': [
@@ -3657,6 +3689,8 @@ I18N_WN.fi = {
   'v52.2': [
     'Uusi: ilmoitukset. Ota ne käyttöön asetuksissa — valitse kellonaika, niin Anthkeys lähettää päivittäisen pikanäppäysvinkin ja ilmoittaa, kun uusi versio on valmis asennettavaksi.',
     'Uutta: live-tilojen ilmoitukset. Erillinen kytkin kertoo, kun laite liittyy huoneeseesi, poistuu, soi, akku on vähissä tai lähettää sinulle muistutuksen, joten löydät toisen laitteesi myös silloin, kun välilehti on taustalla.',
+    'Uusi: n&auml;pp&auml;inoikotiet. Paina ? n&auml;hd&auml;ksesi koko luettelon, 1&ndash;5 vaihtaaksesi alustan, / hakeksesi, t vaalean tai tumman tilan, c verrataksesi ja e laajentaaksesi tai supistellaksesi kaikki luokat. Nuolin&auml;pp&auml;imet siirtyv&auml;t tuloksissa ja Enter kopioi osuman, jolla olet, joten sivua voi k&auml;ytt&auml;&auml; ilman hiirt&auml;.',
+    'Korjattu: akun varoitus ei n&auml;y en&auml;&auml; laitteelle, jota itse k&auml;yt&auml;t. Se ilmoittaa nyt vain muista laitteistasi.',
     'Huomaa: vinkit tulevat, kun sivusto on auki. Asennettuna Chromeen ne voivat tulla vaikka sivusto olisi kiinni, mutta selain päättää ajan ja voi ohittaa päivän.'
   ],
   'v52.1': [
@@ -3885,6 +3919,8 @@ I18N_WN.no = {
   'v52.2': [
     'Nytt: varsler. Slå dem på i innstillingene — velg et tidspunkt, så sender Anthkeys et daglig hurtigtast tips og gir beskjed når en ny versjon er klar til installasjon.',
     'Nytt: varsler for live-rom. En egen bryter sier fra når en enhet blir med i rommet ditt, forsvinner, ringer, har lavt batteri eller sender deg et notat, slik at du finner den andre enheten selv når fanen er i bakgrunnen.',
+    'Nytt: tastatursnarveier. Trykk p&aring; ? for hele listen, 1 til 5 for &aring; bytte plattform, / for &aring; s&oslash;ke, t for lyst eller m&oslash;rk modus, c for &aring; sammenligne og e for &aring; vise eller skjule alle kategorier. Piltastene g&aring; gjennom treffene, og Enter kopierer treffet du st&aring;r p&aring;, s&aring; siden kan brukes uten mus.',
+    'Rettet: advarselen om lavt batteri vises ikke lenger for enheten du selv bruker. Den melder n&aring; bare fra om de andre enhetene dine.',
     'Merk: tips sendes mens nettstedet er åpent. Installert i Chrome kan de komme selv når nettstedet er lukket, men nettleseren velger tidspunktet og kan hoppe over en dag.'
   ],
   'v52.1': [
@@ -4113,6 +4149,8 @@ I18N_WN.cs = {
   'v52.2': [
     'Novinka: oznámení. Zapněte je v nastavení — zvolte čas a Anthkeys vám pošle denní tip zkratky a upozorní, až bude připravena nová verze k instalaci.',
     'Nově: upozornění živých místností. Samostatný přepínač vás upozorní, když se zařízení připojí k místnosti, odejde, zazvoní, má nízkou baterii nebo vám pošle poznámku, takže najdete druhé zařízení, i když je panel na pozadí.',
+    'Novinka: kl&aacute;vesov&eacute; zkratky. Stisknut&iacute;m ? zobraz&iacute;&scaron; cel&yacute; seznam, 1 a&zcaron; 5 p&#345;epne platformu, / vyhled&aacute;, t p&#345;epne sv&#283;tl&yacute; a tmav&yacute; re&#382;im, c porovn&aacute; a e rozbal&iacute; &#269;i sbal&iacute; v&#353;echny kategorie. &Scaron;ipkami proch&aacute;z&iacute;&scaron; v&yacute;sledky a Enter zkop&iacute;ruje ten, na kter&eacute;m jsi, tak&#382;e str&aacute;nku jde pou&scaron;&iacute;vat i bez my&scaron;i.',
+    'Oprava: upozorn&#283;n&iacute; na n&iacute;zkou baterii se u&#382; nezobrazuje pro za&#345;&iacute;zen&iacute;, kter&eacute; pou&scaron;&iacute;v&aacute;&scaron;. Te&#271; informuje jen o ostatn&iacute;ch.',
     'Poznámka: tipy chodí, dokud je web otevřený. Nainstalováno v Chromu mohou dorazit i při zavřeném webu, ale prohlížeč určí čas a může přeskočit den.'
   ],
   'v52.1': [
@@ -4341,6 +4379,8 @@ I18N_WN.hu = {
   'v52.2': [
     'Új: értesítések. Kapcsold be őket a beállításokban — válassz időpontot, és az Anthkeys napi gyorsbillentyű-tippet küld, valamint szól, amikor új verzió telepíthető.',
     'Új: élő szobák értesítései. Külön kapcsoló jelzi, ha egy eszköz csatlakozik a szobádhoz, távozik, cseng, alacsony az akkumulátora, vagy jegyzetet küld neked, így a másik eszközödet akkor is megtalálod, ha a lap a háttérben van.',
+    '&Uacute;j: billenty&#367;parancsok. A ? megmutatja a teljes list&aacute;t, az 1&ndash;5 v&aacute;lt platformot, a / keres, a t vil&aacute;gos &eacute;s s&ouml;t&eacute;t m&oacute;d k&ouml;z&ouml;tt v&aacute;lt, a c &ouml;sszehasonl&iacute;t, az e pedig minden kateg&oacute;ri&aacute;t kibont vagy &ouml;sszecsuk. A ny&iacute;l&aacute;pbillenty&#367;kkel v&eacute;gigmehetsz a tal&aacute;latokon, az Enter pedig kim&aacute;solja, amelyiken &eacute;ppen vagy, &iacute;gy az oldal eg&eacute;r n&eacute;lk&uuml;l is haszn&aacute;lhat&oacute;.',
+    'Jav&iacute;t&aacute;s: az alacsony t&ouml;lt&ouml;tts&eacute;gre figyelmeztet&eacute;s m&aacute;r nem jelenik meg azon az eszk&ouml;z&ouml;n, amelyet haszn&aacute;lsz. Mostant&oacute;l csak a t&ouml;bbi eszk&ouml;zeidr&#337;l t&aacute;j&eacute;koztat.',
     'Megjegyzés: a tippek akkor érkeznek, amikor az oldal nyitva van. Chrome-ban telepítve akkor is jöhetnek, ha zárva van, de a böngésző dönti el az időpontot, és egy napot kihagyhat.'
   ],
   'v52.1': [

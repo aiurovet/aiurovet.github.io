@@ -447,6 +447,16 @@ const i18n = {
     'help.whatsnew': 'Open What\u2019s new',
     'help.compare': 'Compare shortcuts with another platform',
     'help.settings': 'Open settings',
+    'help.platform': 'Switch platform',
+    'help.theme': 'Light or dark mode',
+    'help.legend-open': 'Open the Key Legend',
+    'help.expand': 'Expand or collapse all categories',
+    'help.release': 'See what\u2019s new',
+    'help.navigate': 'Move through results',
+    'help.copy': 'Copy the highlighted shortcut',
+    'help.search-escape': 'Clear the search and go back',
+    'help.expand-all-done': 'All categories expanded',
+    'help.collapse-all-done': 'All categories collapsed',
     'cmp.btn': '\u21c4 Compare',
     'cmp.with': 'with'
   }
@@ -854,6 +864,16 @@ i18n.ar = {
     'help.legend': 'طي / توسيع التصنيفات',
     'help.search': 'التركيز على البحث',
     'help.settings': 'فتح الإعدادات',
+    'help.platform': 'تبديل المنصة',
+    'help.theme': 'الوضع الفاتح أو الداكن',
+    'help.legend-open': 'فتح مفتاح الرموز',
+    'help.expand': 'توسيع أو طي كل الفئات',
+    'help.release': 'اطلع على الجديد',
+    'help.navigate': 'التنقل بين النتائج',
+    'help.copy': 'نسخ الاختصار المحدد',
+    'help.search-escape': 'مسح البحث والعودة',
+    'help.expand-all-done': 'تم توسيع كل الفئات',
+    'help.collapse-all-done': 'تم طي كل الفئات',
     'help.title': 'مساعدة',
     'help.whatsnew': 'فتح ما هو جديد',
     'install.cta': 'تثبيت',
@@ -1304,6 +1324,16 @@ i18n.cs = {
     'help.legend': 'Sbalit / rozbalit kategorie',
     'help.search': 'Zaměřit vyhledávání',
     'help.settings': 'Otevřít nastavení',
+    'help.platform': 'Přepnout platformu',
+    'help.theme': 'Světlý nebo tmavý režim',
+    'help.legend-open': 'Otevřít legendu kláves',
+    'help.expand': 'Rozbalit nebo sbalit všechny kategorie',
+    'help.release': 'Zobrazit novinky',
+    'help.navigate': 'Procházet výsledky',
+    'help.copy': 'Kopírovat vybranou zkratku',
+    'help.search-escape': 'Vymazat hledání a vrátit se',
+    'help.expand-all-done': 'Všechny kategorie rozbaleny',
+    'help.collapse-all-done': 'Všechny kategorie sbaleny',
     'help.title': 'Nápověda',
     'help.whatsnew': 'Otevřít Co je nového',
     'install.cta': 'Instalovat',
@@ -1754,6 +1784,16 @@ i18n.da = {
     'help.legend': 'Fold kategorier sammen / ud',
     'help.search': 'Fokuser søgning',
     'help.settings': 'Åbn indstillinger',
+    'help.platform': 'Skift platform',
+    'help.theme': 'Lyst eller mørkt tilstand',
+    'help.legend-open': 'Åbn tastelegende',
+    'help.expand': 'Udvid eller samlæg alle kategorier',
+    'help.release': 'Se hvad der er nyt',
+    'help.navigate': 'Bevæg dig gennem resultaterne',
+    'help.copy': 'Kopiér den markerede genvej',
+    'help.search-escape': 'Ryd søgningen og gå tilbage',
+    'help.expand-all-done': 'Alle kategorier udvidet',
+    'help.collapse-all-done': 'Alle kategorier sammenlagt',
     'help.title': 'Hjælp',
     'help.whatsnew': 'Åbn Hvad er nyt',
     'install.cta': 'Installér',
@@ -2204,6 +2244,16 @@ i18n.de = {
     'help.legend': 'Kategorien einklappen / ausklappen',
     'help.search': 'Suche fokussieren',
     'help.settings': 'Einstellungen öffnen',
+    'help.platform': 'Plattform wechseln',
+    'help.theme': 'Hell- oder Dunkelmodus',
+    'help.legend-open': 'Tastenlegende öffnen',
+    'help.expand': 'Alle Kategorien ein- oder ausklappen',
+    'help.release': 'Neuerungen ansehen',
+    'help.navigate': 'Durch die Ergebnisse blättern',
+    'help.copy': 'Markierten Shortcut kopieren',
+    'help.search-escape': 'Suche löschen und zurück',
+    'help.expand-all-done': 'Alle Kategorien ausgeklappt',
+    'help.collapse-all-done': 'Alle Kategorien eingeklappt',
     'help.title': 'Hilfe',
     'help.whatsnew': '„Neuigkeiten“ öffnen',
     'install.cta': 'Installieren',
@@ -2654,6 +2704,16 @@ i18n.es = {
     'help.legend': 'Contraer / expandir categorías',
     'help.search': 'Centrar la búsqueda',
     'help.settings': 'Abrir ajustes',
+    'help.platform': 'Cambiar de plataforma',
+    'help.theme': 'Modo claro u oscuro',
+    'help.legend-open': 'Abrir la leyenda de teclas',
+    'help.expand': 'Expandir o contraer todas las categorías',
+    'help.release': 'Ver las novedades',
+    'help.navigate': 'Desplazarse por los resultados',
+    'help.copy': 'Copiar el atajo resaltado',
+    'help.search-escape': 'Borrar la búsqueda y volver',
+    'help.expand-all-done': 'Todas las categorías expandidas',
+    'help.collapse-all-done': 'Todas las categorías contraídas',
     'help.title': 'Ayuda',
     'help.whatsnew': 'Abrir Novedades',
     'install.cta': 'Instalar',
@@ -3104,6 +3164,16 @@ i18n.fi = {
     'help.legend': 'Kutista / laajenna luokkia',
     'help.search': 'Kohdista haku',
     'help.settings': 'Avaa asetukset',
+    'help.platform': 'Vaihda alustaa',
+    'help.theme': 'Vaalea tai tumma tila',
+    'help.legend-open': 'Avaa näppäinselitys',
+    'help.expand': 'Laajenna tai supistele kaikki luokat',
+    'help.release': 'Katso, mitä uutta on',
+    'help.navigate': 'Siirry tuloksissa',
+    'help.copy': 'Kopioi valittu oikotie',
+    'help.search-escape': 'Tyhjennä haku ja palaa takaisin',
+    'help.expand-all-done': 'Kaikki luokat laajennettu',
+    'help.collapse-all-done': 'Kaikki luokat supistettu',
     'help.title': 'Ohje',
     'help.whatsnew': 'Avaa Mitä uutta',
     'install.cta': 'Asenna',
@@ -3555,6 +3625,16 @@ i18n.fr = {
     'help.legend': 'Réduire / développer les catégories',
     'help.search': 'Focus sur la recherche',
     'help.settings': 'Ouvrir les paramètres',
+    'help.platform': 'Changer de plateforme',
+    'help.theme': 'Mode clair ou sombre',
+    'help.legend-open': 'Ouvrir la légende des touches',
+    'help.expand': 'Déplier ou replier toutes les catégories',
+    'help.release': 'Voir les nouveautés',
+    'help.navigate': 'Parcourir les résultats',
+    'help.copy': 'Copier le raccourci sélectionné',
+    'help.search-escape': 'Effacer la recherche et revenir',
+    'help.expand-all-done': 'Toutes les catégories dépliées',
+    'help.collapse-all-done': 'Toutes les catégories repliées',
     'help.title': 'Aide',
     'help.whatsnew': 'Ouvrir Quoi de neuf',
     'install.cta': 'Installer',
@@ -4005,6 +4085,16 @@ i18n.hi = {
     'help.legend': 'श्रेणियाँ छोटी / बड़ी करें',
     'help.search': 'खोज पर ध्यान केंद्रित करें',
     'help.settings': 'सेटिंग्स खोलें',
+    'help.platform': 'प्लेटफ़ॉर्म बदलें',
+    'help.theme': 'लाइट या डार्क मोड',
+    'help.legend-open': 'की लेजेंड खोलें',
+    'help.expand': 'सभी श्रेणियाँ खोलें या संक्षिप्त करें',
+    'help.release': 'नया क्या है देखें',
+    'help.navigate': 'परिणामों में आगे बढ़ें',
+    'help.copy': 'चुनी गई शॉर्टकट कॉपी करें',
+    'help.search-escape': 'खोज साफ़ करें और वापस जाएँ',
+    'help.expand-all-done': 'सभी श्रेणियाँ खुल गईं',
+    'help.collapse-all-done': 'सभी श्रेणियाँ संक्षिप्त हो गईं',
     'help.title': 'सहायता',
     'help.whatsnew': 'नया क्या है खोलें',
     'install.cta': 'इंस्टॉल करें',
@@ -4455,6 +4545,16 @@ i18n.hu = {
     'help.legend': 'Kategóriák összecsukása / kibontása',
     'help.search': 'Keresés fókuszálása',
     'help.settings': 'Beállítások megnyitása',
+    'help.platform': 'Platform váltása',
+    'help.theme': 'Világos vagy sötét mód',
+    'help.legend-open': 'Billentyűjelmagyarázat megnyitása',
+    'help.expand': 'Minden kategória összecsukása vagy kibontása',
+    'help.release': 'Újdonságok megtekintése',
+    'help.navigate': 'Találatok böngészése',
+    'help.copy': 'Kijelölt gyorsbillentyű másolása',
+    'help.search-escape': 'Keresés törlése és visszatérés',
+    'help.expand-all-done': 'Minden kategória kibontva',
+    'help.collapse-all-done': 'Minden kategória összecsukva',
     'help.title': 'Súgó',
     'help.whatsnew': 'A Mi újság megnyitása',
     'install.cta': 'Telepítés',
@@ -4905,6 +5005,16 @@ i18n.it = {
     'help.legend': 'Comprimi / espandi categorie',
     'help.search': 'Focalizza la ricerca',
     'help.settings': 'Apri le impostazioni',
+    'help.platform': 'Cambia piattaforma',
+    'help.theme': 'Modalità chiara o scura',
+    'help.legend-open': 'Apri la legenda dei tasti',
+    'help.expand': 'Espandi o comprimi tutte le categorie',
+    'help.release': 'Scopri le novità',
+    'help.navigate': 'Muoviti tra i risultati',
+    'help.copy': 'Copia la scorciatoia selezionata',
+    'help.search-escape': 'Cancella la ricerca e torna indietro',
+    'help.expand-all-done': 'Tutte le categorie espanse',
+    'help.collapse-all-done': 'Tutte le categorie compresse',
     'help.title': 'Aiuto',
     'help.whatsnew': 'Apri Novità',
     'install.cta': 'Installa',
@@ -5355,6 +5465,16 @@ i18n.ja = {
     'help.legend': 'カテゴリを折りたたむ / 展開',
     'help.search': '検索にフォーカス',
     'help.settings': '設定を開く',
+    'help.platform': 'プラットフォームを切り替える',
+    'help.theme': 'ライト / ダークモード',
+    'help.legend-open': 'キーの凡例を開く',
+    'help.expand': 'すべてのカテゴリを開閉する',
+    'help.release': '新機能を見る',
+    'help.navigate': '結果を移動する',
+    'help.copy': '選択中のショートカットをコピー',
+    'help.search-escape': '検索を消して戻る',
+    'help.expand-all-done': 'すべてのカテゴリを展開しました',
+    'help.collapse-all-done': 'すべてのカテゴリを折りたたみました',
     'help.title': 'ヘルプ',
     'help.whatsnew': '新機能を開く',
     'install.cta': 'インストール',
@@ -5805,6 +5925,16 @@ i18n.ko = {
     'help.legend': '카테고리 접기 / 펼치기',
     'help.search': '검색에 포커스',
     'help.settings': '설정 열기',
+    'help.platform': '플랫폼 전환',
+    'help.theme': '라이트 / 다크 모드',
+    'help.legend-open': '키 범례 열기',
+    'help.expand': '모든 카테고리 펼치거나 접기',
+    'help.release': '새로운 기능 보기',
+    'help.navigate': '결과 이동',
+    'help.copy': '선택한 바로 가기 복사',
+    'help.search-escape': '검색어를 지우고 돌아가기',
+    'help.expand-all-done': '모든 카테고리를 펼쳤습니다',
+    'help.collapse-all-done': '모든 카테고리를 접었습니다',
     'help.title': '도움말',
     'help.whatsnew': '새로운 기능 열기',
     'install.cta': '설치',
@@ -6255,6 +6385,16 @@ i18n.nl = {
     'help.legend': 'Categorieën in-/uitklappen',
     'help.search': 'Focus op zoeken',
     'help.settings': 'Instellingen openen',
+    'help.platform': 'Platform wisselen',
+    'help.theme': 'Lichte of donkere modus',
+    'help.legend-open': 'De toetslegenda openen',
+    'help.expand': 'Alle categorieën in- of uitklappen',
+    'help.release': 'Bekijk wat er nieuw is',
+    'help.navigate': 'Door de resultaten bladeren',
+    'help.copy': 'De gemarkeerde sneltoets kopiëren',
+    'help.search-escape': 'Zoekopdracht wissen en terug',
+    'help.expand-all-done': 'Alle categorieën uitgeklapt',
+    'help.collapse-all-done': 'Alle categorieën ingeklapt',
     'help.title': 'Help',
     'help.whatsnew': 'Wat is er nieuw openen',
     'install.cta': 'Installeren',
@@ -6705,6 +6845,16 @@ i18n.no = {
     'help.legend': 'Slå sammen / utvid kategorier',
     'help.search': 'Fokuser søket',
     'help.settings': 'Åpne innstillinger',
+    'help.platform': 'Bytt plattform',
+    'help.theme': 'Lyst eller mørk modus',
+    'help.legend-open': 'Åpne tastaturlengende',
+    'help.expand': 'Vis eller skjul alle kategorier',
+    'help.release': 'Se hva som er nytt',
+    'help.navigate': 'Bla gjennom resultatene',
+    'help.copy': 'Kopier den markerte hurtigtasten',
+    'help.search-escape': 'Tøm søket og gå tilbake',
+    'help.expand-all-done': 'Alle kategorier vist',
+    'help.collapse-all-done': 'Alle kategorier skjult',
     'help.title': 'Hjelp',
     'help.whatsnew': 'Åpne Hva er nytt',
     'install.cta': 'Installer',
@@ -7155,6 +7305,16 @@ i18n.pl = {
     'help.legend': 'Zwiń / rozwiń kategorie',
     'help.search': 'Skup się na wyszukiwaniu',
     'help.settings': 'Otwórz ustawienia',
+    'help.platform': 'Zmień platformę',
+    'help.theme': 'Tryb jasny lub ciemny',
+    'help.legend-open': 'Otwórz legendę klawiszy',
+    'help.expand': 'Rozwiń lub zwiń wszystkie kategorie',
+    'help.release': 'Zobacz, co nowego',
+    'help.navigate': 'Przeglądaj wyniki',
+    'help.copy': 'Kopiuj zaznaczony skrót',
+    'help.search-escape': 'Wyczyść wyszukiwanie i wróć',
+    'help.expand-all-done': 'Wszystkie kategorie rozwinięte',
+    'help.collapse-all-done': 'Wszystkie kategorie zwinięte',
     'help.title': 'Pomoc',
     'help.whatsnew': 'Otwórz Co nowego',
     'install.cta': 'Zainstaluj',
@@ -7605,6 +7765,16 @@ i18n.pt = {
     'help.legend': 'Recolher / expandir categorias',
     'help.search': 'Focar na busca',
     'help.settings': 'Abrir configurações',
+    'help.platform': 'Mudar de plataforma',
+    'help.theme': 'Modo claro ou escuro',
+    'help.legend-open': 'Abrir a legenda de teclas',
+    'help.expand': 'Expandir ou recolher todas as categorias',
+    'help.release': 'Ver as novidades',
+    'help.navigate': 'Percorrer os resultados',
+    'help.copy': 'Copiar o atalho selecionado',
+    'help.search-escape': 'Limpar a pesquisa e voltar',
+    'help.expand-all-done': 'Todas as categorias expandidas',
+    'help.collapse-all-done': 'Todas as categorias recolhidas',
     'help.title': 'Ajuda',
     'help.whatsnew': 'Abrir Novidades',
     'install.cta': 'Instalar',
@@ -8055,6 +8225,16 @@ i18n.ru = {
     'help.legend': 'Свернуть / развернуть категории',
     'help.search': 'Фокус на поиск',
     'help.settings': 'Открыть настройки',
+    'help.platform': 'Сменить платформу',
+    'help.theme': 'Светлая или тёмная тема',
+    'help.legend-open': 'Открыть легенду клавиш',
+    'help.expand': 'Развернуть или свернуть все категории',
+    'help.release': 'Что нового',
+    'help.navigate': 'Перемещаться по результатам',
+    'help.copy': 'Копировать выбранную комбинацию',
+    'help.search-escape': 'Очистить поиск и вернуться',
+    'help.expand-all-done': 'Все категории развёрнуты',
+    'help.collapse-all-done': 'Все категории свёрнуты',
     'help.title': 'Справка',
     'help.whatsnew': 'Открыть «Что нового»',
     'install.cta': 'Установить',
@@ -8505,6 +8685,16 @@ i18n.sv = {
     'help.legend': 'Fäll ihop / expandera kategorier',
     'help.search': 'Fokusera sökning',
     'help.settings': 'Öppna inställningar',
+    'help.platform': 'Byt plattform',
+    'help.theme': 'Ljust eller mörkt läge',
+    'help.legend-open': 'Öppna tangentlegend',
+    'help.expand': 'Fäll ut eller fäll ihop alla kategorier',
+    'help.release': 'Se vad som är nytt',
+    'help.navigate': 'Bläddra bland resultaten',
+    'help.copy': 'Kopiera den markerade genvägen',
+    'help.search-escape': 'Rensa sökningen och gå tillbaka',
+    'help.expand-all-done': 'Alla kategorier utfällda',
+    'help.collapse-all-done': 'Alla kategorier infällda',
     'help.title': 'Hjälp',
     'help.whatsnew': 'Öppna Nyheter',
     'install.cta': 'Installera',
@@ -8956,6 +9146,16 @@ i18n.tr = {
     'help.legend': 'Kategorileri daralt / genişlet',
     'help.search': 'Aramaya odaklan',
     'help.settings': 'Ayarları aç',
+    'help.platform': 'Platform değiştir',
+    'help.theme': 'Açık veya koyu mod',
+    'help.legend-open': 'Tuş açıklamalarını aç',
+    'help.expand': 'Tüm kategorileri genişlet veya daralt',
+    'help.release': 'Yenilikleri gör',
+    'help.navigate': 'Sonuçlar arasında gezin',
+    'help.copy': 'Seçili kısayolu kopyala',
+    'help.search-escape': 'Aramayı temizle ve geri dön',
+    'help.expand-all-done': 'Tüm kategoriler genişletildi',
+    'help.collapse-all-done': 'Tüm kategoriler daraltıldı',
     'help.title': 'Yardım',
     'help.whatsnew': 'Yenilikler\'i aç',
     'install.cta': 'Kur',
@@ -9406,6 +9606,16 @@ i18n.vi = {
     'help.legend': 'Thu gọn / mở rộng danh mục',
     'help.search': 'Tập trung tìm kiếm',
     'help.settings': 'Mở cài đặt',
+    'help.platform': 'Chuyển nền tảng',
+    'help.theme': 'Chế độ sáng hoặc tối',
+    'help.legend-open': 'Mở chú giải phím',
+    'help.expand': 'Mở hoặc thu gọn tất cả danh mục',
+    'help.release': 'Xem có gì mới',
+    'help.navigate': 'Di chuyển qua kết quả',
+    'help.copy': 'Sao chép phím tắt đang chọn',
+    'help.search-escape': 'Xóa tìm kiếm và quay lại',
+    'help.expand-all-done': 'Đã mở tất cả danh mục',
+    'help.collapse-all-done': 'Đã thu gọn tất cả danh mục',
     'help.title': 'Trợ giúp',
     'help.whatsnew': 'Mở Có gì mới',
     'install.cta': 'Cài đặt',
@@ -11542,19 +11752,7 @@ if (btnImport && importFileInput) {
   });
 }
 
-document.addEventListener('keydown', e => {
-  if ((e.key === '?' || (e.key === ',' && (e.ctrlKey || e.metaKey))) && (!e.target || typeof e.target.closest !== 'function' || !e.target.closest('input,textarea,button'))) {
-    e.preventDefault();
-    const overlay = document.getElementById('settingsOverlay');
-    if (overlay?.classList.contains('open')) {
-      hideSettings();
-    } else if (e.key === '?') {
-      showHelp();
-    } else {
-      showSettings();
-    }
-  }
-});
+// (Keyboard shortcuts are handled centrally further down this file.)
 
 // ---- localStorage safety wrapper (prevents file:// console errors) ----
 function lsGet(key, def) {
@@ -12153,13 +12351,7 @@ function updateSearchCount() {
   el.textContent = visible === 0 ? 'No results' : visible + ' result' + (visible !== 1 ? 's' : '');
 }
 
-// ---- Focus search with / ----
-document.addEventListener('keydown', e => {
-  if (e.key === '/' && !['INPUT', 'TEXTAREA', 'SELECT'].includes(e.target.tagName)) {
-    e.preventDefault();
-    document.getElementById('searchInput').focus();
-  }
-});
+// (Search focus with / is handled centrally further down this file.)
 
 // ---- Offline indicator ----
 function showToastMsg(text) {
@@ -13253,6 +13445,7 @@ function syncCheckBattery() {
   Object.keys(syncPeers).forEach(id => {
     const p = syncPeers[id];
     if (!p || now - p.t > 45000) return;
+    if (id === synDeviceId()) return;
     if (p.b == null || p.c) return;
     if (p.b < 20 && !syncWarned[id]) {
       syncWarned[id] = true;
@@ -13596,11 +13789,17 @@ function syncRenderColor() {
   tag.hidden = !c;
   if (c) tag.style.background = c;
   const ring = syncColorRing(c);
-  document.querySelectorAll('.sync-color-tag').forEach(el => {
+  const swatches = Array.from(document.querySelectorAll('.sync-color-tag'));
+  let roving = false;
+  swatches.forEach(el => {
     if (el.dataset.syncColor) el.style.background = el.dataset.syncColor;
-    const active = c && el.dataset.syncColor === c;
+    const active = !!(c && el.dataset.syncColor === c);
     el.style.boxShadow = active ? ring : '';
+    el.setAttribute('role', 'radio');
+    el.setAttribute('aria-checked', active ? 'true' : 'false');
+    if (active) { el.tabIndex = 0; roving = true; } else el.tabIndex = -1;
   });
+  if (!roving && swatches.length) swatches[0].tabIndex = 0;
 }
 
 function syncRecentsLs() {
@@ -13747,6 +13946,27 @@ onId('btnSyncLeave', 'click', syncLeave);
 onId('btnSyncColorClear', 'click', () => syncRoomColorSet(''));
 document.querySelectorAll('.sync-color-tag').forEach(el => {
   el.addEventListener('click', () => { if (el.dataset.syncColor) syncRoomColorSet(el.dataset.syncColor); });
+});
+const _syncSwatches = Array.from(document.querySelectorAll('.sync-color-tag'));
+_syncSwatches.forEach((el, i) => {
+  el.setAttribute('role', 'radio');
+  el.addEventListener('keydown', e => {
+    const last = _syncSwatches.length - 1;
+    let next = -1;
+    if (e.key === 'Enter' || e.key === ' ' || e.key === 'Spacebar') {
+      e.preventDefault();
+      if (el.dataset.syncColor) syncRoomColorSet(el.dataset.syncColor);
+      return;
+    } else if (e.key === 'ArrowRight' || e.key === 'ArrowDown') next = i === last ? 0 : i + 1;
+    else if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') next = i === 0 ? last : i - 1;
+    else if (e.key === 'Home') next = 0;
+    else if (e.key === 'End') next = last;
+    if (next < 0) return;
+    e.preventDefault();
+    const t = _syncSwatches[next];
+    if (t.dataset.syncColor) syncRoomColorSet(t.dataset.syncColor);
+    t.focus();
+  });
 });
 const _syncBattWatch = document.getElementById('syncBattWatch');
 if (_syncBattWatch) {
@@ -13911,4 +14131,209 @@ syncRenderPanel();
   if (document.readyState === 'complete') start();
   else window.addEventListener('load', start);
 })();
+
+// ============================================================
+//  Keyboard shortcuts
+//  Single source of truth for key handling. Shortcuts never fire
+//  while the user is typing, and never while an overlay is open.
+// ============================================================
+const AK_TYPING_TAGS = ['INPUT', 'TEXTAREA', 'SELECT'];
+const AK_PLATFORM_KEYS = { '1': 'windows', '2': 'macos', '3': 'linux', '4': 'chromeos', '5': 'apps' };
+
+function akIsTyping(t) {
+  if (!t) return false;
+  if (t.isContentEditable) return true;
+  if (AK_TYPING_TAGS.indexOf(t.tagName) !== -1) return true;
+  return !!(t.closest && t.closest('[contenteditable="true"]'));
+}
+function akSettingsOpen() {
+  const o = document.getElementById('settingsOverlay');
+  return !!(o && o.classList.contains('open'));
+}
+function akActivePanel() {
+  return document.querySelector('.panel.active');
+}
+function akCellOf(tr) {
+  return tr ? tr.querySelector('td:last-child') : null;
+}
+function akVisibleRows() {
+  const p = akActivePanel();
+  if (!p) return [];
+  return Array.from(p.querySelectorAll('tbody tr:not(.category)'))
+    .filter(tr => tr.style.display !== 'none' && !tr.dataset.filtered);
+}
+function akFocusRow(tr) {
+  const c = akCellOf(tr);
+  if (!c) return false;
+  const sh = document.getElementById('searchHistory');
+  if (sh) sh.classList.remove('show');
+  c.focus();
+  return true;
+}
+function akFocusSearch() {
+  const s = document.getElementById('searchInput');
+  if (!s) return;
+  s.focus();
+  s.select();
+}
+
+// ---- Expand / collapse every category in the active panel ----
+function akToggleAllCategories() {
+  const p = akActivePanel();
+  if (!p) return;
+  const cats = Array.from(p.querySelectorAll('tr.category')).filter(c => c.style.display !== 'none');
+  if (!cats.length) return;
+  const collapse = !cats.every(c => c.classList.contains('collapsed'));
+  cats.forEach(c => {
+    c.classList.toggle('collapsed', collapse);
+    c.setAttribute('aria-expanded', collapse ? 'false' : 'true');
+  });
+  applyView();
+  showToastMsg(tx(collapse ? 'help.expand-all-done' : 'help.collapse-all-done'));
+}
+
+// ---- Open What's New inside the Settings > Help / About tab ----
+function akShowWhatsNew() {
+  showSettings();
+  const aboutTab = document.querySelector('.settings-tab[data-settings-tab="about"]');
+  if (aboutTab && !aboutTab.classList.contains('active')) aboutTab.click();
+  const wn = document.querySelector('#setting-about .whatsnew');
+  if (wn) {
+    const g = document.getElementById('setting-about');
+    if (g) { g.classList.remove('open'); void g.offsetHeight; g.classList.add('open'); }
+    setTimeout(() => wn.scrollIntoView({ behavior: 'smooth', block: 'center' }), 60);
+  }
+}
+
+// ---- Make the shortcut cells reachable and copyable by keyboard ----
+document.querySelectorAll('.panel table tr:not(.category) td:last-child').forEach(td => {
+  td.tabIndex = -1;
+});
+
+// ---- Category rows behave like disclosure buttons ----
+document.querySelectorAll('.panel table tr.category').forEach(cat => {
+  cat.tabIndex = 0;
+  cat.setAttribute('role', 'button');
+  cat.setAttribute('aria-expanded', cat.classList.contains('collapsed') ? 'false' : 'true');
+  cat.addEventListener('click', () => {
+    cat.setAttribute('aria-expanded', cat.classList.contains('collapsed') ? 'false' : 'true');
+  });
+  cat.addEventListener('keydown', e => {
+    if (e.key === 'Enter' || e.key === ' ' || e.key === 'Spacebar') {
+      e.preventDefault();
+      e.stopPropagation();
+      cat.click();
+      return;
+    }
+    if (e.key !== 'ArrowDown' && e.key !== 'ArrowUp') return;
+    e.preventDefault();
+    e.stopPropagation();
+    const cats = Array.from(akActivePanel()?.querySelectorAll('tr.category') || [])
+      .filter(c => c.style.display !== 'none');
+    const i = cats.indexOf(cat);
+    const n = e.key === 'ArrowDown' ? i + 1 : i - 1;
+    if (n >= 0 && n < cats.length) cats[n].focus();
+  });
+});
+
+// ---- Settings tabs use standard tab semantics ----
+const AK_SETTINGS_TABS = Array.from(document.querySelectorAll('.settings-tab'));
+AK_SETTINGS_TABS.forEach((tab, i) => {
+  tab.setAttribute('role', 'tab');
+  tab.setAttribute('aria-selected', tab.classList.contains('active') ? 'true' : 'false');
+  tab.addEventListener('click', () => {
+    AK_SETTINGS_TABS.forEach(o => o.setAttribute('aria-selected', o === tab ? 'true' : 'false'));
+  });
+  tab.addEventListener('keydown', e => {
+    let n = -1;
+    if (e.key === 'ArrowRight') n = (i + 1) % AK_SETTINGS_TABS.length;
+    else if (e.key === 'ArrowLeft') n = (i - 1 + AK_SETTINGS_TABS.length) % AK_SETTINGS_TABS.length;
+    else if (e.key === 'Home') n = 0;
+    else if (e.key === 'End') n = AK_SETTINGS_TABS.length - 1;
+    if (n < 0) return;
+    e.preventDefault();
+    AK_SETTINGS_TABS[n].focus();
+    AK_SETTINGS_TABS[n].click();
+  });
+});
+
+// ---- The one global key handler ----
+document.addEventListener('keydown', e => {
+  const el = e.target;
+  const isSearch = !!(el && el.id === 'searchInput');
+
+  // Inside the search box: Enter / ArrowDown walk the results, Escape leaves.
+  if (isSearch) {
+    if (e.key === 'Escape') {
+      e.preventDefault();
+      const sh = document.getElementById('searchHistory');
+      if (sh) sh.classList.remove('show');
+      if (el.value) { el.value = ''; applyView(); }
+      el.blur();
+      return;
+    }
+    if (e.key === 'ArrowDown' || e.key === 'Enter') {
+      const rows = akVisibleRows();
+      if (rows.length) { e.preventDefault(); akFocusRow(rows[0]); }
+    }
+    return;
+  }
+
+  // A focused shortcut cell: arrows walk results, Enter copies, Escape searches.
+  const cell = el && el.closest ? el.closest('td[tabindex]') : null;
+  if (cell) {
+    if (e.key === 'Enter' || e.key === ' ' || e.key === 'Spacebar') {
+      e.preventDefault();
+      cell.click();
+      return;
+    }
+    if (e.key === 'Escape') { e.preventDefault(); akFocusSearch(); return; }
+    if (e.key === 'ArrowDown' || e.key === 'ArrowUp') {
+      e.preventDefault();
+      const rows = akVisibleRows();
+      const i = rows.indexOf(cell.closest('tr'));
+      if (i < 0) return;
+      const n = e.key === 'ArrowDown' ? i + 1 : i - 1;
+      if (n >= 0 && n < rows.length) akFocusRow(rows[n]);
+      else if (n < 0) akFocusSearch();
+      return;
+    }
+    if (e.key === 'Home' || e.key === 'End') {
+      e.preventDefault();
+      const rows = akVisibleRows();
+      if (rows.length) akFocusRow(e.key === 'Home' ? rows[0] : rows[rows.length - 1]);
+    }
+    return;
+  }
+
+  if (akIsTyping(el)) return;
+
+  // Settings toggle stays available with or without an overlay open.
+  if (e.key === ',' && (e.ctrlKey || e.metaKey)) {
+    e.preventDefault();
+    akSettingsOpen() ? hideSettings() : showSettings();
+    return;
+  }
+  if (e.ctrlKey || e.metaKey || e.altKey) return;
+  if (e.key === '?') {
+    e.preventDefault();
+    akSettingsOpen() ? hideSettings() : showHelp();
+    return;
+  }
+  // While an overlay is up, single letters would fight the dialog; leave them alone.
+  if (akSettingsOpen()) return;
+
+  if (e.key === '/') { e.preventDefault(); akFocusSearch(); return; }
+  if (AK_PLATFORM_KEYS[e.key]) {
+    const tab = document.querySelector('.tab[data-tab="' + AK_PLATFORM_KEYS[e.key] + '"]');
+    if (tab) { e.preventDefault(); tab.click(); }
+    return;
+  }
+  if (e.key === 't') { e.preventDefault(); document.getElementById('btnThemeToggle')?.click(); return; }
+  if (e.key === 'c') { e.preventDefault(); document.getElementById('btnCompare')?.click(); return; }
+  if (e.key === 'e') { e.preventDefault(); akToggleAllCategories(); return; }
+  if (e.key === 'k') { e.preventDefault(); document.getElementById('dictToggle')?.click(); return; }
+  if (e.key === 'r') { e.preventDefault(); akShowWhatsNew(); return; }
+  if (e.key === 's') { e.preventDefault(); showSettings(); return; }
+});
 
