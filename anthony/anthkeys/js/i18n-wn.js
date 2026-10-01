@@ -6,6 +6,11 @@
 const I18N_WN = window.I18N_WN || {};
 
 I18N_WN.es = {
+  'v52.4': [
+    'Nuevo: los avisos de actualización llegan ahora solos. Anthkeys busca nuevas versiones en segundo plano y te avisa cuando hay una lista, así que ya no tienes que abrir la app para enterarte.',
+    'Nuevo: un botón «Buscar actualizaciones ahora» en Notificaciones, para pedir la última versión cuando quieras.',
+    'Nuevo: las notificaciones dicen con claridad si las comprobaciones en segundo plano están funcionando de verdad, en vez de dejarte adivinar por qué no llega nada.'
+  ],
   'v52.3': [
     'Nuevo: los resultados de la búsqueda ahora te dicen cuántos hay, en los 20 idiomas, y cambian con el idioma que elijas.',
     'Nuevo: Anthkeys vuelve a abrirse en la plataforma que estabas leyendo, así que el cambio entre Windows, macOS, Linux, ChromeOS y Apps se recuerda entre visitas.'
@@ -240,6 +245,11 @@ I18N_WN.es = {
 };
 
 I18N_WN.fr = {
+  'v52.4': [
+    'Nouveau : les alertes de mise à jour arrivent maintenant toutes seules. Anthkeys recherche les nouvelles versions en arrière-plan et vous prévient dès qu\'il y en a une prête, sans avoir à ouvrir l\'application.',
+    'Nouveau : un bouton « Rechercher les mises à jour » dans les notifications, pour demander la dernière version quand vous voulez.',
+    'Nouveau : les notifications indiquent clairement si les vérifications en arrière-plan fonctionnent vraiment, au lieu de vous laisser deviner pourquoi rien n\'arrive.'
+  ],
   'v52.3': [
     'Nouveau : les résultats de recherche vous indiquent maintenant combien il y en a, dans les 20 langues, et suivent la langue que vous choisissez.',
     'Nouveau : Anthkeys se rouvre sur la plateforme que vous consultiez, si bien que le passage de Windows, macOS, Linux, ChromeOS et Apps est mémorisé d\'une visite à l\'autre.'
@@ -474,6 +484,11 @@ I18N_WN.fr = {
 };
 
 I18N_WN.de = {
+  'v52.4': [
+    'Neu: Update-Hinweise kommen jetzt von selbst. Anthkeys sucht im Hintergrund nach neuen Versionen und meldet sich, sobald eine fertig ist – du musst die App also gar nicht erst öffnen.',
+    'Neu: eine Schaltfläche „Jetzt nach Updates suchen“ in den Benachrichtigungen, damit du jederzeit nach der neuesten Version fragen kannst.',
+    'Neu: die Benachrichtigungen sagen jetzt klar, ob die Hintergrundprüfung wirklich läuft, statt dich raten zu lassen, warum nichts ankommt.'
+  ],
   'v52.3': [
     'Neu: die Suchergebnisse sagen dir jetzt, wie viele es gibt, in allen 20 Sprachen, und sie folgen der Sprache, die du wählst.',
     'Neu: Anthkeys öffnet wieder auf der Plattform, die du zuletzt gelesen hast, sodass der Wechsel zwischen Windows, macOS, Linux, ChromeOS und Apps zwischen den Besuchen erhalten bleibt.'
@@ -708,6 +723,11 @@ I18N_WN.de = {
 };
 
 I18N_WN.it = {
+  'v52.4': [
+    'Novità: gli avvisi di aggiornamento ora arrivano da soli. Anthkeys cerca nuove versioni in background e ti avvisa quando ce n\'è una pronta, così non devi più aprire l\'app per saperlo.',
+    'Novità: un pulsante «Controlla ora gli aggiornamenti» nelle notifiche, per chiedere l\'ultima versione quando vuoi.',
+    'Novità: le notifiche dicono chiaramente se i controlli in background stanno funzionando davvero, invece di lasciarti indovinare il motivo per cui non arriva nulla.'
+  ],
   'v52.3': [
     'Novità: i risultati della ricerca ti dicono ora quanti sono, in tutte le 20 lingue, e seguono la lingua che scegli.',
     'Novità: Anthkeys si riapre sulla piattaforma che stavi leggendo, così il passaggio tra Windows, macOS, Linux, ChromeOS e Apps resta valido da una visita all\'altra.'
@@ -942,6 +962,11 @@ I18N_WN.it = {
 };
 
 I18N_WN.pt = {
+  'v52.4': [
+    'Novo: os avisos de atualização chegam sozinhos agora. O Anthkeys procura novas versões em segundo plano e avisa quando alguma fica pronta, então você não precisa mais abrir o app para saber.',
+    'Novo: um botão «Procurar atualizações agora» nas notificações, para pedir a versão mais recente quando quiser.',
+    'Novo: as notificações dizem com clareza se as verificações em segundo plano estão mesmo funcionando, em vez de você ficar adivinhando por que nada chega.'
+  ],
   'v52.3': [
     'Novo: os resultados da busca agora dizem quantos são, nos 20 idiomas, e seguem o idioma que você escolher.',
     'Novo: O Anthkeys reabre na plataforma que você estava lendo, então alternar entre Windows, macOS, Linux, ChromeOS e Apps fica salvo de uma visita para a outra.'
@@ -1176,6 +1201,11 @@ I18N_WN.pt = {
 };
 
 I18N_WN.nl = {
+  'v52.4': [
+    'Nieuw: update-meldingen komen nu vanzelf. Anthkeys zoekt op de achtergrond naar nieuwe versies en meldt het zodra er een klaarstaat, dus je hoeft de app niet meer te openen om het te weten.',
+    'Nieuw: een knop «Nu controleren op updates» bij de meldingen, zodat je op elk moment de nieuwste versie kunt opvragen.',
+    'Nieuw: de meldingen zeggen nu duidelijk of de achtergrondcontrole echt draait, in plaats van je te laten raden waarom er niets aankomt.'
+  ],
   'v52.3': [
     'Nieuw: de zoekresultaten zeggen nu hoeveel het er zijn, in alle 20 talen, en ze volgen de taal die je kiest.',
     'Nieuw: Anthkeys opent weer op het platform dat je het laatst las, dus wisselen tussen Windows, macOS, Linux, ChromeOS en Apps blijft tussen bezoeken onthouden.'
@@ -1410,6 +1440,11 @@ I18N_WN.nl = {
 };
 
 I18N_WN.ja = {
+  'v52.4': [
+    '新機能：更新通知が自動で届くようになりました。Anthkeys はバックグラウンドで新しいバージョンを確認し、用意できたときに知らせます。アプリを開かなくてもお知らせします。',
+    '新機能：通知の設定に「今すぐ更新を確認」ボタン。好きなときに最新版を問い合わせられます。',
+    '新機能：バックグラウンドでの確認が実際に動いているかを通知欄がはっきり示すようになり、何も届かない理由を推測しなくてよくなりました。'
+  ],
   'v52.3': [
     '新機能：検索結果が一致した件数を教えてくれるようになりました。20 の言語すべてに対応し、選んだ言語に合わせて表示されます。',
     '新機能：Anthkeys は最後に見ていたプラットフォームの画面を再び開くようになりました。Windows、macOS、Linux、ChromeOS、Apps の切り替えは訪問をまたいで保持されます。'
@@ -1644,6 +1679,11 @@ I18N_WN.ja = {
 };
 
 I18N_WN.ru = {
+  'v52.4': [
+    'Новое: уведомления об обновлениях теперь приходят сами. Anthkeys проверяет новые версии в фоне и сообщает, как только одна готова, так что открывать приложение ради этого больше не нужно.',
+    'Новое: кнопка «Проверить обновления сейчас» в уведомлениях — запросите последнюю версию, когда захотите.',
+    'Новое: уведомления прямо сообщают, работает ли фоновая проверка на самом деле, вместо того чтобы гадать, почему ничего не приходит.'
+  ],
   'v52.3': [
     'Новое: результаты поиска теперь показывают, сколько их, на всех 20 языках, и следуют выбранному языку.',
     'Новое: Anthkeys снова открывается на той платформе, которую вы читали, поэтому переключение между Windows, macOS, Linux, ChromeOS и Apps сохраняется между посещениями.'
@@ -1878,6 +1918,11 @@ I18N_WN.ru = {
 };
 
 I18N_WN.ko = {
+  'v52.4': [
+    '새 기능: 이제 업데이트 알림이 알아서 도착합니다. Anthkeys가 백그라운드에서 새 버전을 확인하고 준비되면 알려 주므로, 알아맞춰 보려고 앱을 열 필요가 없습니다.',
+    '새 기능: 알림 설정에 «지금 업데이트 확인» 버튼이 생겨 원하는 때에 최신 버전을 확인할 수 있습니다.',
+    '새 기능: 백그라운드 확인이 실제로 동작하는지 알림 창이 분명히 알려 줍니다. 이제 아무것도 오지 않는 이유를 헤맬 필요가 없습니다.'
+  ],
   'v52.3': [
     '새 기능: 검색 결과가 이제 일치 항목 수를 알려 주며, 20개 모든 언어로 제공되고 선택한 언어를 따릅니다.',
     '새 기능: Anthkeys가 마지막으로 읽던 플랫폼에서 다시 열리므로, Windows, macOS, Linux, ChromeOS와 Apps 사이의 전환이 방문 사이에 유지됩니다.'
@@ -2112,6 +2157,11 @@ I18N_WN.ko = {
 };
 
 I18N_WN.pl = {
+  'v52.4': [
+    'Nowość: powiadomienia o aktualizacjach przychodzą teraz same. Anthkeys sprawdza w tle nowe wersje i informuje, gdy któraś jest gotowa, więc nie musisz już otwierać aplikacji, żeby się dowiedzieć.',
+    'Nowość: przycisk „Sprawdź aktualizacje teraz” w powiadomieniach, aby poprosić o najnowszą wersję, kiedy chcesz.',
+    'Nowość: powiadomienia jasno mówią, czy sprawdzanie w tle naprawdę działa, zamiast zostawiać ci zgadywanie, dlaczego nic nie przychodzi.'
+  ],
   'v52.3': [
     'Nowość: wyniki wyszukiwania pokazują teraz, ile ich jest, we wszystkich 20 językach, i zmieniają się wraz z wybranym językiem.',
     'Nowość: Anthkeys otwiera się ponownie na platformie, którą czytałeś, więc przełączanie między Windows, macOS, Linux, ChromeOS i Apps zapamiętuje się między wizytami.'
@@ -2346,6 +2396,11 @@ I18N_WN.pl = {
 };
 
 I18N_WN.tr = {
+  'v52.4': [
+    'Yeni: güncelleme uyarıları artık kendiliğinden geliyor. Anthkeys arka planda yeni sürümleri arar ve biri hazır olduğunda haber verir, böylece öğrenmek için uygulamayı açmanız gerekmiyor.',
+    'Yeni: bildirimlerde «Şimdi güncellemeleri denetle» düğmesi, istediğiniz an en son sürümü isteyebilmeniz için.',
+    'Yeni: bildirimler artık arka plan denetimlerinin gerçekten çalışıp çalışmadığını açıkça söylüyor; neden bir şey gelmediğini tahmin etmenize gerek kalmıyor.'
+  ],
   'v52.3': [
     'Yeni: arama sonuçları artık kaç sonuç olduğunu her dilde söylüyor ve seçtiğiniz dili izliyor.',
     'Yeni: Anthkeys, en son okuduğunuz platformda yeniden açılıyor; böylece Windows, macOS, Linux, ChromeOS ve Apps arasındaki geçiş ziyaretler arasında korunuyor.'
@@ -2580,6 +2635,11 @@ I18N_WN.tr = {
 };
 
 I18N_WN.vi = {
+  'v52.4': [
+    'Mới: thông báo cập nhật giờ tự đến. Anthkeys kiểm tra phiên bản mới ở nền và báo khi có bản mới sẵn sàng, nên bạn không cần mở ứng dụng để biết nữa.',
+    'Mới: nút «Kiểm tra cập nhật ngay» trong phần thông báo, để bạn hỏi phiên bản mới nhất bất cứ lúc nào.',
+    'Mới: phần thông báo giờ nói rõ ràng việc kiểm tra ở nền có thật sự hoạt động hay không, thay vì để bạn phải đoán xem sao không có gì đến.'
+  ],
   'v52.3': [
     'Mới: kết quả tìm kiếm giờ cho biết có bao nhiêu kết quả, bằng cả 20 ngôn ngữ, và theo ngôn ngữ bạn chọn.',
     'Mới: Anthkeys mở lại đúng nền tảng bạn đang đọc, nên việc chuyển qua lại giữa Windows, macOS, Linux, ChromeOS và Apps được giữ lại giữa các lần truy cập.'
@@ -2814,6 +2874,11 @@ I18N_WN.vi = {
 };
 
 I18N_WN.ar = {
+  'v52.4': [
+    'جديد: أصبحت تنبيهات التحديث تصل وحدها. يفحص Anthkeys الإصدارات الجديدة في الخلفية ويخبرك فور جاهزيتها، فلم تعد بحاجة إلى فتح التطبيق لمعرفة ذلك.',
+    'جديد: زر «افحص عن تحديثات الآن» في الإشعارات، لتطلب أحدث إصدار متى شئت.',
+    'جديد: أصبح الإشعارات تخبرك بوضوح إن كانت فحوصات الخلفية تعمل فعلاً، بدلاً من تركك تخمّن سبب عدم وصول أي شيء.'
+  ],
   'v52.3': [
     'جديد: نتائج البحث تخبرك الآن بعدد النتائج، في اللغات العشرين جميعها، وتتغير حسب اللغة التي تختارها.',
     'جديد: يفتح Anthkeys مجددًا على المنصة التي كنت تقرأها، لذلك يبقى التنقل بين Windows وmacOS وLinux وChromeOS وApps محفوظًا بين الزيارات.'
@@ -3048,6 +3113,11 @@ I18N_WN.ar = {
 };
 
 I18N_WN.hi = {
+  'v52.4': [
+    'नया: अब अपडेट सूचनाएँ अपने आप आ जाती हैं। Anthkeys पृष्ठभूमि में नए संस्करण खोजता है और तैयार होते ही बताता है, इसलिए जानने के लिए ऐप खोलना अब ज़रूरी नहीं।',
+    'नया: सूचनाओं में «अभी अपडेट देखें» बटन, ताकि आप जब चाहें नवीनतम संस्करण माँग सकें।',
+    'नया: सूचनाएँ अब साफ़ बता देती हैं कि पृष्ठभूमि की जाँच सचमुच चल रही है या नहीं, इसके बजाय यह अनुमान लगाने पर कि कुछ क्यों नहीं आया।'
+  ],
   'v52.3': [
     'नया: खोज परिणाम अब बताते हैं कि कितने मिले हैं — सभी 20 भाषाओं में, और वे आपकी चुनी हुई भाषा के अनुसार बदलते हैं।',
     'नया: Anthkeys अब उसी प्लेटफ़ॉर्म पर दोबारा खुलता है जिसे आपने पिछली बार पढ़ा था, इसलिए Windows, macOS, Linux, ChromeOS और Apps के बीच बदलना हर बार याद रहता है।'
@@ -3282,6 +3352,11 @@ I18N_WN.hi = {
 };
 
 I18N_WN.sv = {
+  'v52.4': [
+    'Nytt: uppdateringsaviseringar kommer nu av sig själva. Anthkeys söker efter nya versioner i bakgrunden och säger till så snart en är klar, så du behöver inte längre öppna appen för att veta.',
+    'Nytt: en knapp »Sök efter uppdateringar nu« bland aviseringarna, så att du kan fråga efter senaste versionen när du vill.',
+    'Nytt: aviseringarna säger nu tydligt om bakgrundskontrollen verkligen kör, i stället för att låta dig gissa varför ingenting kommer.'
+  ],
   'v52.3': [
     'Nytt: sökresultaten visar nu hur många det är, på alla 20 språk, och följer det språk du väljer.',
     'Nytt: Anthkeys öppnas igen på den plattform du senast läste, så växlingen mellan Windows, macOS, Linux, ChromeOS och Apps finns kvar mellan besöken.'
@@ -3516,6 +3591,11 @@ I18N_WN.sv = {
 };
 
 I18N_WN.da = {
+  'v52.4': [
+    'Nyt: opdateringsvarsler kommer nu af sig selv. Anthkeys tjekker efter nye versioner i baggrunden og giver besked, så snart en er klar, så du behøver ikke længere åbne appen for at finde ud af det.',
+    'Nyt: en knap »Tjek for opdateringer nu« i notifikationerne, så du kan bede om den nyeste version, når du vil.',
+    'Nyt: notifikationerne siger nu tydeligt, om baggrundskontrollen faktisk kører, i stedet for at du skal gætte på, hvorfor intet kommer.'
+  ],
   'v52.3': [
     'Nyt: søgeresultaterne viser nu, hvor mange der er, på alle 20 sprog, og følger det sprog, du vælger.',
     'Nyt: Anthkeys åbner igen på den platform, du sidst læste, så skiftet mellem Windows, macOS, Linux, ChromeOS og Apps huskes mellem besøg.'
@@ -3750,6 +3830,11 @@ I18N_WN.da = {
 };
 
 I18N_WN.fi = {
+  'v52.4': [
+    'Uusi: päivitys-ilmoitukset tulevat nyt itsestään. Anthkeys tarkistaa taustalla uusia versioita ja kertoo heti, kun sellainen on valmis, et enää tarvitse avata sovellusta saadaksesi selville.',
+    'Uusi: painike ”Tarkista päivitykset nyt” ilmoitusten kohdalla, jotta voit pyytää uusimman version milloin tahansa.',
+    'Uusi: ilmoitukset kertovat nyt selvästi, toimiiko taustatarkistus oikeasti, sen sijaan että joutuisit arvailemaan, miksi mitään ei tule.'
+  ],
   'v52.3': [
     'Uusi: hakutulokset kertovat nyt, kuinka monta niitä on, kaikilla 20 kielellä, ja ne noudattavat valitsemaasi kieltä.',
     'Uusi: Anthkeys avautuu uudelleen sille alustalle, jota luet viimeksi, joten vaihto Windows-, macOS-, Linux-, ChromeOS- ja Apps-alustojen välillä säilyy käyntikertojen välillä.'
@@ -3984,6 +4069,11 @@ I18N_WN.fi = {
 };
 
 I18N_WN.no = {
+  'v52.4': [
+    'Nytt: oppdateringsvarsler kommer nå av seg selv. Anthkeys søker etter nye versjoner i bakgrunnen og gir beskjed så snart en er klar, så du trenger ikke lenger å åpne appen for å finne ut.',
+    'Nytt: en knapp «Sjekk etter oppdateringer nå» i varslene, slik at du kan be om nyeste versjon når du vil.',
+    'Nytt: varslene sier nå tydelig om bakgrunnssjekken faktisk kjører, i stedet for at du skal gjette hvorfor ingenting kommer.'
+  ],
   'v52.3': [
     'Nytt: søkeresultatene viser nå hvor mange det er, på alle 20 språk, og følger språket du velger.',
     'Nytt: Anthkeys åpner igjen på plattformen du sist leste, så byttet mellom Windows, macOS, Linux, ChromeOS og Apps huskes mellom besøkene.'
@@ -4218,6 +4308,11 @@ I18N_WN.no = {
 };
 
 I18N_WN.cs = {
+  'v52.4': [
+    'Novinka: upozornění na aktualizace nyní přicházejí sama. Anthkeys na pozadí hledá nové verze a ozvou se, jakmile je nějaká hotová, takže abyste se dozvěděli, nemusíte aplikaci otevírat.',
+    'Novinka: tlačítko „Zkontrolovat aktualizace nyní“ v oznámeních, když chcete požádat o nejnovější verzi.',
+    'Novinka: oznámení nyní jasně říkají, zda kontrola na pozadí opravdu běží, místo abyste hádali, proč nic nepřichází.'
+  ],
   'v52.3': [
     'Novinka: výsledky hledání teď říkají, kolik jich je, ve všech 20 jazycích, a řídí se jazykem, který si vyberete.',
     'Novinka: Anthkeys se znovu otevře na platformě, kterou jste četli, takže přepínání mezi Windows, macOS, Linux, ChromeOS a Apps se mezi návštěvami pamatuje.'
@@ -4452,6 +4547,11 @@ I18N_WN.cs = {
 };
 
 I18N_WN.hu = {
+  'v52.4': [
+    'Új: a frissítési értesítések mostantól maguktól érkeznek. Az Anthkeys a háttérben keresi az új verziókat, és szól, amint kész van, így már nem kell megnyitni az alkalmazást sem tudni róla.',
+    'Új: egy „Frissítések ellenőrzése most” gomb az értesítések között, hogy bármikor lekérhessedz a legfrissebb verziót.',
+    'Új: az értesítések most már világosan megmondják, hogy a háttérben futó ellenőrzés valóban működik-e, ahelyett hogy magad találnád ki, miért nem érkezik semmi.'
+  ],
   'v52.3': [
     'Új: a keresési találatok mostantól megmutatják, hány van belőlük, mind a 20 nyelven, és követik a kiválasztott nyelvet.',
     'Új: Az Anthkeys ismét azon a platformon nyílik meg, amelyet utoljára néztél, így a Windows, macOS, Linux, ChromeOS és Apps közötti váltás megmarad a látogatások között.'
