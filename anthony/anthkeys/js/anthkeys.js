@@ -80,6 +80,7 @@ const i18n = {
     'accent.wallpaper-applied': 'Accent matched to your wallpaper',
     'accent.wallpaper-follow': 'Keeps your accent matched to your wallpaper',
     'accent.wallpaper-fail': 'Could not read your wallpaper',
+    'accent.wallpaper-none': 'Set a wallpaper or design style first',
     'accent.device-applied': 'Device accent applied',
     'accent.device-fail': 'Device accent not available here \u2014 open the installed app',
     'linux.distro': 'Distribution',
@@ -11454,6 +11455,7 @@ document.querySelectorAll('.theme-opt[data-theme]').forEach(opt => {
       if (wasDark) document.body.classList.add('dark');
       document.body.classList.add(theme);
       syncAccentWp(theme);
+      refreshWallpaperAccent();
       saveSettings();
       return;
     }
@@ -11486,6 +11488,7 @@ document.querySelectorAll('.theme-opt[data-theme]').forEach(opt => {
     }
     syncAccentWp(theme);
     if (preservedWp) document.body.classList.add('has-accent-wp');
+    refreshWallpaperAccent();
     saveSettings();
   });
 });
@@ -11858,12 +11861,21 @@ function setWallpaperAccentFollow(on) {
   const btn = document.getElementById('btnMatchWallpaperAccent');
   if (btn) btn.classList.toggle('active', !!on);
 }
-function wallpaperImageSource() {
+// The wallpaper can be three things: an uploaded image (data URL), a design
+// style's own photo (a cross-origin https URL, which taints a canvas), or a
+// built-in CSS gradient. Read whichever one is actually in use.
+function wallpaperBackdrop() {
   const saved = lsGet('anthkeys-wallpaper', '');
-  if (saved && saved.indexOf('data:') === 0) return saved;
-  const css = getComputedStyle(document.body).getPropertyValue('--bg-img') || '';
-  const m = css.match(/url\((["']?)(.*?)\1\)/);
-  return m && m[2] && m[2].indexOf('data:') === 0 ? m[2] : '';
+  if (saved) return { kind: 'image', src: saved };
+  const css = (getComputedStyle(document.body).getPropertyValue('--bg-img') || '').trim();
+  if (!css || css === 'none') return null;
+  const m = css.match(/^url\(([\s\S]*)\)$/);
+  if (m) {
+    const src = m[1].trim().replace(/^["']/, '').replace(/["']$/, '');
+    return src ? { kind: 'image', src: src } : null;
+  }
+  if (/gradient\(/i.test(css)) return { kind: 'gradient', css: css };
+  return null;
 }
 function _wpRgbToHsl(r, g, b) {
   r /= 255; g /= 255; b /= 255;
@@ -11893,9 +11905,37 @@ function _wpTuneAccent(r, g, b) {
   const rgb = _hslToRgb(hsl[0], s * 100, l * 100).map(v => Math.max(0, Math.min(255, Math.round(v))));
   return '#' + rgb.map(v => v.toString(16).padStart(2, '0')).join('');
 }
+function _wpBitmapFromBlob(blob, size) {
+  // Decoding a phone photo at full size is slow and memory hungry, so ask for
+  // a small copy where the browser can. Not every engine supports the resize
+  // options, hence the plain retry.
+  if (!window.createImageBitmap) return Promise.resolve(null);
+  return createImageBitmap(blob, { resizeWidth: size, resizeQuality: 'low', imageOrientation: 'from-image' })
+    .catch(function() { return createImageBitmap(blob); })
+    .catch(function() { return null; });
+}
+function _wpLoadImage(src, size) {
+  return new Promise(function(resolve) {
+    if (/^(data:|blob:)/.test(src)) {
+      const img = new Image();
+      img.onload = function() { resolve(img); };
+      img.onerror = function() { resolve(null); };
+      img.src = src;
+      return;
+    }
+    // A design style's photo lives on another origin: fetch it as a blob so the
+    // canvas stays readable, then decode that.
+    if (typeof fetch !== 'function') return resolve(null);
+    fetch(src, { mode: 'cors', credentials: 'omit' })
+      .then(function(r) { return r && r.ok ? r.blob() : null; })
+      .catch(function() { return null; })
+      .then(function(blob) { return blob ? _wpBitmapFromBlob(blob, size) : null; })
+      .then(resolve, function() { resolve(null); });
+  });
+}
 function _wpSamplePixels(src, size, cb) {
-  const img = new Image();
-  img.onload = function() {
+  _wpLoadImage(src, size).then(function(img) {
+    if (!img) return cb(null);
     try {
       const w = img.naturalWidth || img.width;
       const h = img.naturalHeight || img.height;
@@ -11907,11 +11947,10 @@ function _wpSamplePixels(src, size, cb) {
       const cx = cv.getContext('2d', { willReadFrequently: true });
       if (!cx) return cb(null);
       cx.drawImage(img, 0, 0, cv.width, cv.height);
+      if (img.close) img.close();
       cb(cx.getImageData(0, 0, cv.width, cv.height).data);
     } catch (err) { cb(null); }
-  };
-  img.onerror = function() { cb(null); };
-  img.src = src;
+  }, function() { cb(null); });
 }
 // Quantize into colour families, then favour the most colourful popular family,
 // the way Material You pulls its seed colour out of a wallpaper.
@@ -11942,17 +11981,65 @@ function extractWallpaperAccent(src) {
     });
   });
 }
+// A built-in gradient has no pixels to sample, so use its colour stops and let
+// the most colourful one win.
+function _wpHexToken(token) {
+  // convertColorToHex only understands rgb()/hsl()/oklch() notation, so plain
+  // hex stops are expanded here.
+  const m = String(token).trim().match(/^#([0-9a-fA-F]{3,8})$/);
+  if (!m) return null;
+  let h = m[1];
+  if (h.length === 3 || h.length === 4) h = h.split('').map(function(c) { return c + c; }).join('');
+  if (h.length === 6) h += 'ff';
+  if (h.length !== 8) return null;
+  return '#' + h.slice(0, 6).toLowerCase();
+}
+function accentFromGradient(css) {
+  const re = /(#[0-9a-fA-F]{3,8}\b|rgba?\([^)]*\)|hsla?\([^)]*\)|hwb\([^)]*\)|oklch\([^)]*\)|oklab\([^)]*\)|lch\([^)]*\)|lab\([^)]*\)|color\([^)]*\))/g;
+  const found = css.match(re) || [];
+  let best = null, bestScore = -1;
+  found.forEach(function(token, i) {
+    const hex = token.charAt(0) === '#' ? _wpHexToken(token) : convertColorToHex(token);
+    if (!hex) return;
+    const hsl = _wpRgbToHsl(
+      parseInt(hex.slice(1, 3), 16),
+      parseInt(hex.slice(3, 5), 16),
+      parseInt(hex.slice(5, 7), 16));
+    if (hsl[2] < 0.10 || hsl[2] > 0.94) return;
+    // The first and last stops cover the most area, so nudge them ahead.
+    const edge = (i === 0 || i === found.length - 1) ? 1.25 : 1;
+    const score = hsl[1] * edge;
+    if (score > bestScore) {
+      bestScore = score;
+      best = hex;
+    }
+  });
+  if (!best) return null;
+  return _wpTuneAccent(
+    parseInt(best.slice(1, 3), 16),
+    parseInt(best.slice(3, 5), 16),
+    parseInt(best.slice(5, 7), 16));
+}
 function applyWallpaperAccent(silent) {
-  const src = wallpaperImageSource();
-  if (!src) {
+  const bd = wallpaperBackdrop();
+  const fail = function() {
     if (!silent) showToastMsg(tx('accent.wallpaper-fail'));
+    return false;
+  };
+  if (!bd) {
+    if (!silent) showToastMsg(tx('accent.wallpaper-none'));
     return Promise.resolve(false);
   }
-  return extractWallpaperAccent(src).then(function(hex) {
-    if (!hex) {
-      if (!silent) showToastMsg(tx('accent.wallpaper-fail'));
-      return false;
-    }
+  if (bd.kind === 'gradient') {
+    const hex = accentFromGradient(bd.css);
+    if (!hex) return Promise.resolve(fail());
+    setWallpaperAccentFollow(true);
+    applyCustomAccent(hex.toUpperCase(), true);
+    if (!silent) showToastMsg(tx('accent.wallpaper-applied'));
+    return Promise.resolve(true);
+  }
+  return extractWallpaperAccent(bd.src).then(function(hex) {
+    if (!hex) return fail();
     setWallpaperAccentFollow(true);
     applyCustomAccent(hex.toUpperCase(), true);
     if (!silent) showToastMsg(tx('accent.wallpaper-applied'));
@@ -11962,9 +12049,18 @@ function applyWallpaperAccent(silent) {
 const _btnMatchWallpaperAccent = document.getElementById('btnMatchWallpaperAccent');
 if (_btnMatchWallpaperAccent) {
   _btnMatchWallpaperAccent.addEventListener('click', function() {
-    _btnMatchWallpaperAccent.disabled = true;
-    applyWallpaperAccent(false).then(function() { _btnMatchWallpaperAccent.disabled = false; });
+    const btn = _btnMatchWallpaperAccent;
+    btn.disabled = true;
+    Promise.resolve()
+      .then(function() { return applyWallpaperAccent(false); })
+      .catch(function() { showToastMsg(tx('accent.wallpaper-fail')); })
+      .then(function() { btn.disabled = false; });
   });
+}
+// Re-derive the accent whenever the wallpaper behind us changes, but only
+// while the user still wants it matched.
+function refreshWallpaperAccent() {
+  if (wallpaperAccentFollow()) applyWallpaperAccent(true);
 }
 
 // ---- Accent color presets ----
@@ -12074,7 +12170,7 @@ function applyWallpaper(dataUrl) {
   document.body.classList.add('has-wallpaper');
   lsSet('anthkeys-wallpaper', dataUrl);
   // Dynamic colour: re-derive the accent whenever the wallpaper changes.
-  if (wallpaperAccentFollow()) applyWallpaperAccent(true);
+  refreshWallpaperAccent();
 }
 function loadWallpaper() {
   const saved = lsGet('anthkeys-wallpaper', '');

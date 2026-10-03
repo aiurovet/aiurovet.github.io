@@ -6,6 +6,11 @@
 const I18N_WN = window.I18N_WN || {};
 
 I18N_WN.es = {
+  'v52.6': [
+    'Corregido: «Coincidir con el fondo» ahora funciona con los fondos integrados en los estilos de diseño, no solo con los fondos que subes tú.',
+    'Corregido: los fondos en degradado ahora también se tienen en cuenta, y el mensaje es más claro cuando no hay ningún fondo que leer.',
+  ],
+
   'v52.5': [    'Nuevo: \u00abCoincidir con el fondo\u00bb en Color de acento, como el color din\u00e1mico de Android. Anthkeys lee tu fondo, elige su color dominante y mantiene el acento igual cuando cambias de fondo.',
     'Nuevo: el bot\u00f3n \u00abBuscar actualizaciones ahora\u00bb est\u00e1 ahora en Acerca, justo debajo de tu n\u00famero de versi\u00f3n, para encontrarlo m\u00e1s f\u00e1cilmente.',
     'Nuevo: buscar actualizaciones a mano funciona aunque las notificaciones est\u00e9n desactivadas, y te dice con claridad cu\u00e1ndo hay una versi\u00f3n m\u00e1s reciente lista.',
@@ -250,6 +255,11 @@ I18N_WN.es = {
 };
 
 I18N_WN.fr = {
+  'v52.6': [
+    'Corrigé : « Concordance avec le fond d’écran » fonctionne désormais avec les fonds intégrés aux styles de design, et pas seulement avec ceux que vous téléversez.',
+    'Corrigé : les fonds en dégradé sont désormais pris en compte, et le message est plus clair lorsqu’il n’y a aucun fond à lire.',
+  ],
+
   'v52.5': [    'Nouveau : \u00ab Aligner sur le fond d\'\u00e9cran \u00bb dans Couleur d\'accent, comme la couleur dynamique d\'Android. Anthkeys lit votre fond, choisit sa couleur dominante et garde l\'accent assorti quand vous changez de fond.',
     'Nouveau : le bouton \u00ab Rechercher des mises \u00e0 jour maintenant \u00bb se trouve maintenant dans \u00c0 propos, juste sous votre num\u00e9ro de version, pour le trouver plus facilement.',
     'Nouveau : la recherche manuelle des mises \u00e0 jour fonctionne m\u00eame si les notifications sont d\u00e9sactiv\u00e9es, et vous dit clairement quand une version plus r\u00e9cente est pr\u00eate.',
@@ -494,6 +504,11 @@ I18N_WN.fr = {
 };
 
 I18N_WN.de = {
+  'v52.6': [
+    'Behoben: »Mit dem Hintergrund abgleichen« funktioniert jetzt auch mit den Hintergrundbildern der Designstile, nicht nur mit selbst hochgeladenen.',
+    'Behoben: Verlaufs-Hintergründe werden jetzt ebenfalls berücksichtigt, und die Meldung ist klarer, wenn es keinen Hintergrund zum Auslesen gibt.',
+  ],
+
   'v52.5': [    'Neu: \u201eAn Hintergrund anpassen\u201c in der Akzentfarbe, ganz wie Androids dynamische Farbe. Anthkeys liest dein Hintergrundbild, w\u00e4hlt dessen dominante Farbe und h\u00e4lt den Akzent passend, wenn du das Bild wechselst.',
     'Neu: die Schaltfl\u00e4che \u201eJetzt nach Updates suchen\u201c ist jetzt in Info direkt unter deiner Versionsnummer zu finden.',
     'Neu: die manuelle Update-Pr\u00fcfung funktioniert auch, wenn Benachrichtigungen ausgeschaltet sind, und sagt dir klar, wenn eine neuere Version bereitsteht.',
@@ -738,6 +753,11 @@ I18N_WN.de = {
 };
 
 I18N_WN.it = {
+  'v52.6': [
+    'Corretto: «Abbina allo sfondo» ora funziona anche con gli sfondi integrati negli stili di design, non solo con quelli che carichi tu.',
+    'Corretto: gli sfondi in gradiente vengono ora considerati, e il messaggio è più chiaro quando non c’è nessuno sfondo da leggere.',
+  ],
+
   'v52.5': [    'Novit\u00e0: \u00abAdatta allo sfondo\u00bb nel colore d\'accento, come il colore dinamico di Android. Anthkeys legge lo sfondo, sceglie il suo colore dominante e mantiene l\'accento in linea quando cambi immagine.',
     'Novit\u00e0: il pulsante \u00abControlla ora gli aggiornamenti\u00bb \u00e8 ora in Informazioni, proprio sotto il numero di versione, cos\u00ec \u00e8 pi\u00f9 facile da trovare.',
     'Novit\u00e0: la ricerca manuale degli aggiornamenti funziona anche con le notifiche disattivate e ti dice chiaramente quando c\'\u00e8 una versione pi\u00f9 recente pronta.',
@@ -982,6 +1002,11 @@ I18N_WN.it = {
 };
 
 I18N_WN.pt = {
+  'v52.6': [
+    'Corrigido: «Combinar com o fundo» agora funciona também com os fundos incluídos nos estilos de design, não apenas com os que carregas.',
+    'Corrigido: os fundos em degradê também passam a ser considerados, e a mensagem fica mais clara quando não há nenhum fundo para ler.',
+  ],
+
   'v52.5': [    'Novo: \u00abCombinar com o fundo\u00bb na cor de destaque, tal como a cor din\u00e2mica do Android. O Anthkeys l\u00ea o teu fundo, escolhe a cor dominante e mant\u00e9m o destaque Combinado quando mudas de fundo.',
     'Novo: o bot\u00e3o \u00abProcurar atualiza\u00e7\u00f5es agora\u00bb passou para Sobre, mesmo por baixo do n\u00famero da vers\u00e3o, para ser mais f\u00e1cil de encontrar.',
     'Novo: procurar atualiza\u00e7\u00f5es manualmente funciona mesmo com as notifica\u00e7\u00f5es desligadas e diz-te com clareza quando h\u00e1 uma vers\u00e3o mais recente \u00e0 espera.',
@@ -1226,6 +1251,11 @@ I18N_WN.pt = {
 };
 
 I18N_WN.nl = {
+  'v52.6': [
+    'Opgelost: «Met achtergrond afstemmen» werkt nu ook met de achtergronden die in de ontwerpstijlen zitten, niet alleen met je eigen uploads.',
+    'Opgelost: kleurverloop-achtergronden worden nu meegenomen, en de melding is duidelijker als er geen achtergrond is om te lezen.',
+  ],
+
   'v52.5': [    'Nieuw: \u201cAchtergrond volgen\u201d bij Accentkleur, net als de dynamische kleur van Android. Anthkeys leest je achtergrond, kiest de dominante kleur en houdt het accent gelijk wanneer je de achtergrond verandert.',
     'Nieuw: de knop \u201cNu controleren op updates\u201d staat nu in Over, vlak onder je versienummer, zodat hij makkelijker te vinden is.',
     'Nieuw: handmatig controleren op updates werkt ook als meldingen uit staan, en zegt duidelijk wanneer er een nieuwere versie klaarstaat.',
@@ -1470,6 +1500,11 @@ I18N_WN.nl = {
 };
 
 I18N_WN.ja = {
+  'v52.6': [
+    '修正: 「壁紙に合わせる」は、自分でアップロードした壁紙だけでなく、デザインスタイルに内蔵された背景でも使えるようになりました。',
+    '修正: グラデーションの背景も反映されるようになり、読み取る背景がない場合のメッセージもより明確になりました。',
+  ],
+
   'v52.5': [    '\u65b0\u6a5f\u80fd\uff1a\u30a2\u30af\u30bb\u30f3\u30c8\u30ab\u30e9\u30fc\u306b\u300c\u58c1\u7d19\u306b\u5408\u308f\u305b\u308b\u300d\u3092\u8ffd\u52a0\u3002Android \u306e\u30c0\u30a4\u30ca\u30df\u30c3\u30af\u30ab\u30e9\u30fc\u3068\u540c\u3058\u3088\u3046\u306b\u3001\u58c1\u7d19\u304b\u3089\u8272\u3092\u9078\u3093\u3067\u30a2\u30af\u30bb\u30f3\u30c8\u3092\u5408\u308f\u305b\u3001\u58c1\u7d19\u3092\u5909\u3048\u308b\u3068\u81ea\u52d5\u3067\u8ffd\u5f93\u3057\u307e\u3059\u3002',
     '\u65b0\u6a5f\u80fd\uff1a\u300c\u4eca\u3059\u3050\u66f4\u65b0\u3092\u78ba\u8a8d\u300d\u30dc\u30bf\u30f3\u3092 About \u306e\u30d0\u30fc\u30b8\u30e7\u30f3\u756a\u53f7\u306e\u76f4\u4e0b\u306b\u79fb\u52d5\u3057\u305f\u306e\u3067\u3001\u898b\u3064\u3051\u3084\u3059\u304f\u306a\u308a\u307e\u3059\u3002',
     '\u65b0\u6a5f\u80fd\uff1a\u624b\u52d5\u3067\u306e\u66f4\u65b0\u78ba\u8a8d\u306f\u901a\u77e5\u3092\u30aa\u30d5\u306b\u3057\u3066\u3082\u4f7f\u3048\u308b\u3088\u3046\u306b\u306a\u308a\u3001\u65b0\u3057\u3044\u30d0\u30fc\u30b8\u30e7\u30f3\u304c\u3042\u308c\u3070\u306f\u3063\u304d\u308a\u3068\u77e5\u3089\u305b\u307e\u3059\u3002',
@@ -1714,6 +1749,11 @@ I18N_WN.ja = {
 };
 
 I18N_WN.ru = {
+  'v52.6': [
+    'Исправлено: «Подобрать под обои» теперь работает и со встроенными фонами стилей, а не только с теми, что загружаете вы сами.',
+    'Исправлено: фоны в градиенте теперь тоже учитываются, а сообщение яснее, когда нет фона для чтения.',
+  ],
+
   'v52.5': [    '\u041d\u043e\u0432\u043e\u0435: \u00ab\u041f\u043e \u043e\u0431\u043e\u044f\u043c\u00bb \u0432 \u0446\u0432\u0435\u0442\u0435 \u0430\u043a\u0446\u0435\u043d\u0442\u0430 \u2014 \u043a\u0430\u043a \u0434\u0438\u043d\u0430\u043c\u0438\u0447\u0435\u0441\u043a\u0438\u0435 \u0446\u0432\u0435\u0442\u0430 \u0432 Android. Anthkeys \u0447\u0438\u0442\u0430\u0435\u0442 \u043e\u0431\u043e\u0438, \u0432\u044b\u0431\u0438\u0440\u0430\u0435\u0442 \u0438\u0445 \u0433\u043b\u0430\u0432\u043d\u044b\u0439 \u0446\u0432\u0435\u0442 \u0438 \u0434\u0435\u0440\u0436\u0438\u0442 \u0430\u043a\u0446\u0435\u043d\u0442 \u0432 \u0442\u043e\u043d, \u043a\u043e\u0433\u0434\u0430 \u0432\u044b \u043c\u0435\u043d\u044f\u0435\u0442\u0435 \u043e\u0431\u043e\u0438.',
     '\u041d\u043e\u0432\u043e\u0435: \u043a\u043d\u043e\u043f\u043a\u0430 \u00ab\u041f\u0440\u043e\u0432\u0435\u0440\u0438\u0442\u044c \u043e\u0431\u043d\u043e\u0432\u043b\u0435\u043d\u0438\u044f \u0441\u0435\u0439\u0447\u0430\u0441\u00bb \u043f\u0435\u0440\u0435\u0435\u0445\u0430\u043b\u0430 \u0432 \u0440\u0430\u0437\u0434\u0435\u043b \u00ab\u041e \u043f\u0440\u043e\u0433\u0440\u0430\u043c\u043c\u0435\u00bb, \u043f\u0440\u044f\u043c\u043e \u043f\u043e\u0434 \u043d\u043e\u043c\u0435\u0440\u043e\u043c \u0432\u0435\u0440\u0441\u0438\u0438, \u0442\u0430\u043a \u0447\u0442\u043e \u0435\u0451 \u043f\u0440\u043e\u0449\u0435 \u043d\u0430\u0439\u0442\u0438.',
     '\u041d\u043e\u0432\u043e\u0435: \u0440\u0443\u0447\u043d\u0430\u044f \u043f\u0440\u043e\u0432\u0435\u0440\u043a\u0430 \u043e\u0431\u043d\u043e\u0432\u043b\u0435\u043d\u0438\u0439 \u0440\u0430\u0431\u043e\u0442\u0430\u0435\u0442 \u0434\u0430\u0436\u0435 \u043f\u0440\u0438 \u0432\u044b\u043a\u043b\u044e\u0447\u0435\u043d\u043d\u044b\u0445 \u0443\u0432\u0435\u0434\u043e\u043c\u043b\u0435\u043d\u0438\u044f\u0445 \u0438 \u043f\u0440\u044f\u043c\u043e \u0433\u043e\u0432\u043e\u0440\u0438\u0442, \u043a\u043e\u0433\u0434\u0430 \u0434\u043e\u0441\u0442\u0443\u043f\u043d\u0430 \u0431\u043e\u043b\u0435\u0435 \u043d\u043e\u0432\u0430\u044f \u0441\u0431\u043e\u0440\u043a\u0430.',
@@ -1958,6 +1998,11 @@ I18N_WN.ru = {
 };
 
 I18N_WN.ko = {
+  'v52.6': [
+    '수정: 「배경에 일치」는 이제 직접 업로드한 배경뿐 아니라 디자인 스타일에 내장된 배경에도 적용됩니다.',
+    '수정: 그라데이션 배경도 반영되며, 배경이 없으면 메시지가 더 명확해집니다.',
+  ],
+
   'v52.5': [    '\uc0c8 \uae30\ub2a5: \uac15\uc870\uc0c9\uc5d0 \u201c\ubc30\uacbd\uc5d0 \ub9de\ucd94\uae30\u201d\ub97c \ucd94\uac00\ud588\uc2b5\ub2c8\ub2e4. Android\uc758 \ub2e4\uc774\ub0b4\ubbf9 \uceec\ub7ec\ucc98\ub7fc, Anthkeys\uac00 \ubc30\uacbd \uc0ac\uc9c4\uc744 \uc77d\uc5b4\uc8fc\uc778 \uc0c9\uc744 \uace0\ub974\uace0 \ubc30\uacbd\uc744 \ubc14\uafb8\uba74 \uc790\ub3d9\uc73c\ub85c \ub530\ub77c\uac11\ub2c8\ub2e4.',
     '\uc0c8 \uae30\ub2a5: \u201c\uc9c0\uae08 \uc5c5\ub370\uc774\ud2b8 \ud655\uc778\u201d \ubc84\ud2bc\uc744 \ubc84\uc804 \ubc88\ud638 \ubc14\ub85c \uc544\ub798\uc778 \uc815\ubcf4 \ud654\uba74\uc73c\ub85c \uc62e\uaca8 \ucc3e\uae30 \uc27d\uac8c \ud588\uc2b5\ub2c8\ub2e4.',
     '\uc0c8 \uae30\ub2a5: \uc54c\ub9bc\uc774 \uaebc\uc838 \uc788\uc5b4\ub3c4 \uc9c1\uc811 \uc5c5\ub370\uc774\ud2b8\ub97c \ud655\uc778\ud560 \uc218 \uc788\uace0, \uc0c8 \ubc84\uc804\uc774 \uc788\uc73c\uba74 \ubd84\uba85\ud788 \uc54c\ub824 \uc90d\ub2c8\ub2e4.',
@@ -2202,6 +2247,11 @@ I18N_WN.ko = {
 };
 
 I18N_WN.pl = {
+  'v52.6': [
+    'Poprawiono: opcja „Dopasuj do tapety” działa teraz także z tłami wbudowanymi w style projektu, a nie tylko z tymi, które przesyłasz sam.',
+    'Poprawiono: gradienty są teraz uwzględniane, a komunikat jest jaśniejszy, gdy nie ma tapety do odczytania.',
+  ],
+
   'v52.5': [    'Nowo\u015b\u0107: \u201eDopasuj do tapety\u201d w kolorze akcentu, tak jak dynamiczne kolory w Androidzie. Anthkeys odczytuje tapet\u0119, wybiera jej dominuj\u0105cy kolor i dopasowuje akcent tak\u017ce po jej zmianie.',
     'Nowo\u015b\u0107: przycisk \u201eSprawd\u017a aktualizacje\u201d przeni\u00f3s\u0142 si\u0119 do sekcji O aplikacji, tu\u017c pod numerem wersji, wi\u0119c \u0142atwiej go znale\u017a\u0107.',
     'Nowo\u015b\u0107: r\u0119czne sprawdzanie aktualizacji dzia\u0142a tak\u017ce przy wy\u0142\u0105czonych powiadomieniach i wyra\u017anie informuje, gdy jest nowsza wersja.',
@@ -2446,6 +2496,11 @@ I18N_WN.pl = {
 };
 
 I18N_WN.tr = {
+  'v52.6': [
+    'Düzeltildi: «Duvar kâğıdıyla eşle» artık tasarım stillerinin yerleşik arka planlarıyla da çalışıyor.',
+    'Düzeltildi: gradyan arka planlar artık da hesaba katılıyor ve okunacak bir arka plan yoksa mesaj daha anlaşılır.',
+  ],
+
   'v52.5': [    'Yeni: \u201cDuvar k\u00e2\u011f\u0131d\u0131na uy\u201d vurgu renginde, Android\'in dinamik rengi gibi. Anthkeys duvar k\u00e2\u011f\u0131d\u0131n\u0131 okur, bask\u0131n rengini se\u00e7er ve duvar k\u00e2\u011f\u0131d\u0131n\u0131 de\u011fi\u015ftirdi\u011finde vurgu rengini ona g\u00f6re g\u00fcnceller.',
     'Yeni: \u201c\u015eimdi g\u00fcncellemeleri denetle\u201d d\u00fc\u011fmesi art\u0131k s\u00fcr\u00fcm numaran\u0131z\u0131n hemen alt\u0131ndaki Hakk\u0131nda b\u00f6l\u00fcm\u00fcnde ve daha kolay bulunuyor.',
     'Yeni: elle g\u00fcncelleme denetimi, bildirimler kapal\u0131yken de \u00e7al\u0131\u015f\u0131yor ve daha yeni bir s\u00fcr\u00fcm haz\u0131r oldu\u011funda bunu a\u00e7\u0131k\u00e7a s\u00f6yl\u00fcyor.',
@@ -2690,6 +2745,11 @@ I18N_WN.tr = {
 };
 
 I18N_WN.vi = {
+  'v52.6': [
+    'Đã sửa: “Khớp với ảnh nền” giờ đã dùng được với ảnh nền có sẵn trong các kiểu thiết kế, không chỉ ảnh nền bạn tự tải lên.',
+    'Đã sửa: các nền chuyển dựng được tính đến, và thông báo rõ ràng hơn khi không có ảnh nền để đọc.',
+  ],
+
   'v52.5': [    'M\u1edbi: \u201cKh\u1edbp v\u1edbi \u1ea3nh n\u1ec1n\u201d trong m\u00e0u nh\u1ea5n, gi\u1ed1ng m\u00e0u \u0111\u1ed9ng c\u1ee7a Android. Anthkeys \u0111\u1ecdc \u1ea3nh n\u1ec1n, ch\u1ecdn m\u00e0u ch\u1ee7 \u0111\u1ea1o v\u00e0 gi\u1eef m\u00e0u nh\u1ea5n lu\u00f4n kh\u1edbp khi b\u1ea1n \u0111\u1ed5i \u1ea3nh n\u1ec1n.',
     'M\u1edbi: n\u00fat \u201cKi\u1ec3m tra c\u1eadp nh\u1eadt ngay\u201d \u0111\u00e3 chuy\u1ec3n sang Gi\u1edbi thi\u1ec7u, ngay d\u01b0\u1edbi s\u1ed1 phi\u00ean b\u1ea3n, n\u00ean d\u1ec5 t\u00ecm h\u01a1n.',
     'M\u1edbi: ki\u1ec3m tra c\u1eadp nh\u1eadt th\u1ee7 c\u00f4ng v\u1eabn ho\u1ea1t \u0111\u1ed9ng khi \u0111\u00e3 t\u1eaft th\u00f4ng b\u00e1o, v\u00e0 n\u00f3i r\u00f5 khi c\u00f3 b\u1ea3n m\u1edbi h\u01a1n \u0111ang ch\u1edd.',
@@ -2934,6 +2994,11 @@ I18N_WN.vi = {
 };
 
 I18N_WN.ar = {
+  'v52.6': [
+    'إصلاح: تعمل الآن «مطابقة الخلفية» مع الخلفيات المضمّنة في أنماط التصميم، ولا فت فقط مع تلك التي ترفعها بنفسك.',
+    'إصلاح: الخلفية المتدرجة تُحتسب الآن أيضًا، وتصبح الرسالة أوضوح عند عدم وجود خلفية لقراءتها.',
+  ],
+
   'v52.5': [    '\u062c\u062f\u064a\u062f: \u00ab\u0627\u0644\u0645\u0637\u0627\u0628\u0642\u0629 \u0645\u0639 \u0627\u0644\u062e\u0644\u0641\u064a\u0629\u00bb \u0641\u064a \u0644\u0648\u0646 \u0627\u0644\u062a\u0645\u064a\u064a\u0632\u060c \u0645\u062b\u0644 \u0623\u0644\u0648\u0627\u0646 \u0623\u0646\u062f\u0631\u0648\u064a\u062f \u0627\u0644\u062f\u064a\u0646\u0627\u0645\u064a\u0643\u064a\u0629. \u064a\u0642\u0631\u0623 Anthkeys \u062e\u0644\u0641\u064a\u062a\u0643\u060c \u0648\u064a\u062e\u062a\u0627\u0631 \u0644\u0648\u0646\u0647\u0627 \u0627\u0644\u063a\u0627\u0644\u0628\u060c \u0648\u064a\u064f\u0628\u0642\u064a \u0644\u0648\u0646 \u0627\u0644\u062a\u0645\u064a\u064a\u0632 \u0645\u0637\u0627\u0628\u0642\u064b\u0627 \u0639\u0646\u062f \u062a\u063a\u064a\u064a\u0631 \u0627\u0644\u062e\u0644\u0641\u064a\u0629.',
     '\u062c\u062f\u064a\u062f: \u0627\u0646\u062a\u0642\u0644 \u0632\u0631 \u00ab\u0627\u0644\u062a\u062d\u0642\u0642 \u0645\u0646 \u0627\u0644\u062a\u062d\u062f\u064a\u062b\u0627\u062a \u0627\u0644\u0622\u0646\u00bb \u0625\u0644\u0649 \u0642\u0633\u0645 \u00ab\u062d\u0648\u0644\u00bb\u060c \u0645\u0628\u0627\u0634\u0631\u0629 \u062a\u062d\u062a \u0631\u0642\u0645 \u0627\u0644\u0625\u0635\u062f\u0627\u0631\u060c \u0644\u064a\u0633\u0647\u0644 \u0627\u0644\u0639\u062b\u0648\u0631 \u0639\u0644\u064a\u0647.',
     '\u062c\u062f\u064a\u062f: \u064a\u0639\u0645\u0644 \u0627\u0644\u062a\u062d\u0642\u0642 \u0627\u0644\u064a\u062f\u0648\u064a \u0645\u0646 \u0627\u0644\u062a\u062d\u062f\u064a\u062b\u0627\u062a \u062d\u062a\u0649 \u0645\u0639 \u0625\u064a\u0642\u0627\u0641 \u0627\u0644\u0625\u0634\u0639\u0627\u0631\u0627\u062a\u060c \u0648\u064a\u062e\u0628\u0631\u0643 \u0628\u0648\u0636\u0648\u062d \u0639\u0646\u062f\u0645\u0627 \u064a\u0643\u0648\u0646 \u0647\u0646\u0627\u0643 \u0625\u0635\u062f\u0627\u0631 \u0623\u062d\u062f\u062b \u0628\u0627\u0646\u062a\u0638\u0627\u0631\u0643.',
@@ -3178,6 +3243,11 @@ I18N_WN.ar = {
 };
 
 I18N_WN.hi = {
+  'v52.6': [
+    'ठीक किया गया: अब «वॉलपेपर से मेलमेंट» केवल आपकी अपलोड की गई वॉलपेपर के साथ ही नहीं, बल्कि डिज़ाइन शैलियों के भीतर बने बैकग्राउंड के साथ भी काम करता है।',
+    'ठीक किया गया: अब ग्रेडिएंट बैकग्राउंड को भी ध्यान में रखा जाता है, और बैकग्राउंड न होने पर संदेश अधिक स्पष्ट होता है।',
+  ],
+
   'v52.5': [    '\u0928\u092f\u093e: \u201c\u0935\u0949\u0932\u092a\u0947\u092a\u0930 \u0938\u0947 \u092e\u0947\u0932 \u0916\u093e\u090f\u0901\u201d \u090f\u0915\u094d\u0938\u0947\u0902\u091f \u0930\u0902\u0917 \u092e\u0947\u0902, \u092c\u093f\u0932\u094d\u0915\u0941\u0932 Android \u0915\u0940 \u0921\u093e\u092f\u0928\u0947\u092e\u093f\u0915 \u0915\u0932\u0930 \u0915\u0940 \u0924\u0930\u0939\u0964 Anthkeys \u0906\u092a\u0915\u093e \u0935\u0949\u0932\u092a\u0947\u092a\u0930 \u092a\u0922\u093c\u0924\u093e \u0939\u0948, \u0909\u0938\u0915\u093e \u092e\u0941\u0916\u094d\u092f \u0930\u0902\u0917 \u091a\u0941\u0928\u0924\u093e \u0939\u0948, \u0914\u0930 \u0935\u0949\u0932\u092a\u0947\u092a\u0930 \u092c\u0926\u0932\u0928\u0947 \u092a\u0930 \u090f\u0915\u094d\u0938\u0947\u0902\u091f \u0930\u0902\u0917 \u0909\u0938\u0940 \u0915\u0947 \u0905\u0928\u0941\u0938\u093e\u0930 \u0930\u0916\u0924\u093e \u0939\u0948\u0964',
     '\u0928\u092f\u093e: \u201c\u0905\u092d\u0940 \u0905\u092a\u0921\u0947\u091f \u091c\u093e\u0901\u091a\u0947\u0902\u201d \u092c\u091f\u0928 \u0905\u092c About \u092e\u0947\u0902, \u0938\u0940\u0927\u0947 \u0906\u092a\u0915\u0947 \u0938\u0902\u0938\u094d\u0915\u0930\u0923 \u0928\u0902\u092c\u0930 \u0915\u0947 \u0928\u0940\u091a\u0947 \u0939\u0948, \u0907\u0938\u0932\u093f\u090f \u0922\u0942\u0901\u0922\u0928\u093e \u0906\u0938\u093e\u0928 \u0939\u0948\u0964',
     '\u0928\u092f\u093e: \u0905\u092a\u0921\u0947\u091f \u0915\u0940 \u091c\u093e\u0901\u091a \u0905\u092c \u0928\u094b\u091f\u093f\u092b\u093c\u093f\u0915\u0947\u0936\u0928 \u092c\u0902\u0926 \u0939\u094b\u0928\u0947 \u092a\u0930 \u092d\u0940 \u0915\u093e\u092e \u0915\u0930\u0924\u0940 \u0939\u0948, \u0914\u0930 \u0938\u093e\u092b\u093c \u092c\u0924\u093e \u0926\u0947\u0924\u0940 \u0939\u0948 \u0915\u093f \u0928\u092f\u093e \u0938\u0902\u0938\u094d\u0915\u0930\u0923 \u0924\u0948\u092f\u093e\u0930 \u0939\u0948\u0964',
@@ -3422,6 +3492,11 @@ I18N_WN.hi = {
 };
 
 I18N_WN.sv = {
+  'v52.6': [
+    'Ändrat: ”Matcha bakgrunden” fungerar nu även med de bakgrunder som ingår i designstilar, inte bara med dem du laddar upp själv.',
+    'Ändrat: tonöverlappningar räknas nu in, och meddelandet är tydligare när det inte finns någon bakgrund att läsa.',
+  ],
+
   'v52.5': [    'Nytt: \u201dF\u00f6lj bakgrunden\u201d i accentf\u00e4rgen, precis som Androids dynamiska f\u00e4rg. Anthkeys l\u00e4ser din bakgrund, v\u00e4ljer dess dominerande f\u00e4rg och h\u00e5ller accenten matchad n\u00e4r du byter bakgrund.',
     'Nytt: knappen \u201dKontrollera uppdateringar nu\u201d ligger nu under Om, precis under ditt versionsnummer, s\u00e5 att den \u00e4r l\u00e4ttare att hitta.',
     'Nytt: att kontrollera uppdateringar manuellt fungerar \u00e4ven n\u00e4r aviseringar \u00e4r avst\u00e4ngda, och s\u00e4ger tydligt n\u00e4r en nyare version v\u00e4ntar.',
@@ -3666,6 +3741,11 @@ I18N_WN.sv = {
 };
 
 I18N_WN.da = {
+  'v52.6': [
+    'Rettet: ”Match baggrunden” virker nu også med de baggrunde, der indgår i designstilar, ikke kun med dem, du selv uploader.',
+    'Rettet: gradientbaggrunde indgår nu også, og beskeden er tydeligere, når der ikke er nogen baggrund at læse.',
+  ],
+
   'v52.5': [    'Nyt: \u201dTilpas baggrunden\u201d i accentfarven, ligesom Androids dynamiske farver. Anthkeys l\u00e6ser din baggrund, v\u00e6lger dens dominerende farve og holder accenten matchet, n\u00e5r du skifter baggrund.',
     'Nyt: knappen \u201dS\u00f8g efter opdateringer nu\u201d ligger nu under Om, lige under dit versionsnummer, s\u00e5 den er lettere at finde.',
     'Nyt: manuel opdateringstjek virker, selv n\u00e5r notifikationer er sl\u00e5et fra, og fort\u00e6ller tydeligt, n\u00e5r en nyere version er klar.',
@@ -3910,6 +3990,11 @@ I18N_WN.da = {
 };
 
 I18N_WN.fi = {
+  'v52.6': [
+    'Korjattu: ”Täsmätä taustakuvaan” toimii nyt myös suunnittelutyylien sisällä olevien taustakuvien kanssa, ei vain itse lataamiesi kuvien.',
+    'Korjattu: liukähteet taustakuvat huomioidaan nyt, ja ilmoitus on selvempi, kun luettavaa taustakuvaa ei ole.',
+  ],
+
   'v52.5': [    'Uusi: \u201dSovita taustav\u00e4riin\u201d korostusv\u00e4riss\u00e4 aivan kuten Androidin dynaaminen v\u00e4ri. Anthkeys lukee taustakuvasi, valitsee sen hallitsevan v\u00e4rin ja pit\u00e4\u00e4 korostusv\u00e4rin mukana, kun vaihdat taustaa.',
     'Uusi: \u201dTarkista p\u00e4ivitykset nyt\u201d -painike on nyt Tietoja-otsikon alla heti versionsnumerosi alapuolella, joten se on helpompi l\u00f6yt\u00e4\u00e4.',
     'Uusi: manuaalinen p\u00e4ivitysten tarkistus toimii my\u00f6s, kun ilmoitukset ovat pois p\u00e4\u00e4lt\u00e4, ja kertoo selv\u00e4sti, kun uudempi versio odottaa.',
@@ -4154,6 +4239,11 @@ I18N_WN.fi = {
 };
 
 I18N_WN.no = {
+  'v52.6': [
+    'Rettet: ”Match bakgrunnen” fungerer nå også med bakgrunnene som er innebygd i designstilene, ikke bare med dem du laster opp selv.',
+    'Rettet: gradientbakgrunner tas nå med, og meldingen er tydeligere når det ikke finnes noen bakgrunn å lese.',
+  ],
+
   'v52.5': [    'Nytt: \u00abTilpass til bakgrunnen\u00bb i aksentfargen, akkurat som Androids dynamiske farge. Anthkeys leser bakgrunnen din, velger den dominerende fargen og holder aksenten i samsvar n\u00e5r du bytter bakgrunn.',
     'Nytt: knappen \u00abSe etter oppdateringer n\u00e5\u00bb ligger n\u00e5 under Om, rett under versjonsnummeret ditt, s\u00e5 den er lettere \u00e5 finne.',
     'Nytt: manuel oppdateringssjekk fungerer selv n\u00e5r varsler er av, og sier tydelig n\u00e5r en nyere versjon venter.',
@@ -4398,6 +4488,11 @@ I18N_WN.no = {
 };
 
 I18N_WN.cs = {
+  'v52.6': [
+    'Opraveno: „Při sladnout s tapetou“ nyní funguje i s pozadími zabudovanými ve stylech návrhu, ne jen s tapetami, které nahráváte sami.',
+    'Opraveno: gradientní pozadí se nyní také zohledňní a zpráva je srozumitelnější, když není žádná tapeta k přečtení.',
+  ],
+
   'v52.5': [    'Novinka: \u201eSladit s pozad\u00edm\u201d v barv\u011b zv\u00fdrazn\u011bn\u00ed, stejn\u011b jako dynamick\u00e9 barvy Androidu. Anthkeys na\u010dte pozad\u00ed, vybere jeho p\u0159evl\u00e1daj\u00edc\u00ed barvu a zv\u00fdrazn\u011bn\u00ed s n\u00ed bude ladit i po v\u00fdm\u011bn\u011b pozad\u00ed.',
     'Novinka: tla\u010d\u00edtko \u201eZkontrolovat aktualizace\u201d je nyn\u00ed v \u010d\u00e1sti O aplikaci, hned pod \u010d\u00edslem verze, tak\u017ee ho sn\u00e1ze najdete.',
     'Novinka: ru\u010dn\u00ed kontrola aktualizac\u00ed funguje i p\u0159i vypnut\u00fdch ozn\u00e1men\u00edch a jasn\u011b v\u00e1m \u0159ekne, kdy\u017e je k dispozici nov\u011bj\u0161\u00ed verze.',
@@ -4642,6 +4737,11 @@ I18N_WN.cs = {
 };
 
 I18N_WN.hu = {
+  'v52.6': [
+    'Javítva: az „Illesszük a háttérrel” mostantól működik a designstílusokba beépített háttérképekkel is, nem csak a saját feltöltött képekkel.',
+    'Javítva: az átmenetes háttérképeket is figyelembe vesszük, és az üzenet egyértelműbb, ha nincs olvasnivaló háttérkép.',
+  ],
+
   'v52.5': [    '\u00daj: \u201eIgazod\u00e1s a h\u00e1tt\u00e9rhez\u201d az akcentus sz\u00ednn\u00e9l, az Android dinamikus sz\u00edneihez hasonl\u00f3an. Az Anthkeys beolvassa a h\u00e1tteredet, kiv\u00e1lasztja a f\u0151 sz\u00edn\u00e9t, \u00e9s a h\u00e1tt\u00e9r v\u00e1lt\u00e1sakor is igaz\u00edtja az akcentus sz\u00ednt.',
     '\u00daj: a \u201eFriss\u00edt\u00e9s ellen\u0151rz\u00e9se most\u201d gomb mostant\u00f3l a N\u00e9vjegyben van, k\u00f6zvetlen\u00fcl a verzi\u00f3sz\u00e1m alatt, \u00edgy k\u00f6nnyebben megtal\u00e1lhat\u00f3.',
     '\u00daj: az update-ellen\u0151rz\u00e9s akkor is m\u0171k\u00f6dik, ha az \u00e9rtes\u00edt\u00e9sek ki vannak kapcsolva, \u00e9s egy\u00e9rtelm\u0171en jelzi, ha \u00fajabb verzi\u00f3 v\u00e1r.',
