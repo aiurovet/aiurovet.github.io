@@ -80,7 +80,13 @@ const i18n = {
     'accent.wallpaper-applied': 'Accent matched to your wallpaper',
     'accent.wallpaper-follow': 'Keeps your accent matched to your wallpaper',
     'accent.wallpaper-fail': 'Could not read your wallpaper',
-    'accent.wallpaper-none': 'Set a wallpaper or design style first',
+    'accent.wallpaper-none': 'Set a wallpaper or design style first',    'setting.glass': 'Liquid glass',    'update.install': 'Install Anthkeys',
+    'update.install-note': 'Installed apps can check for updates in the background.',
+
+    'glass.normal': 'Normal',
+    'glass.off': 'Flat',
+    'glass.subtle': 'Subtle',
+    'glass.liquid': 'Liquid glass',
     'accent.device-applied': 'Device accent applied',
     'accent.device-fail': 'Device accent not available here \u2014 open the installed app',
     'linux.distro': 'Distribution',
@@ -313,7 +319,16 @@ const i18n = {
     'font.google-sans': 'Google Sans',
     'font.inter': 'Inter',
     'font.roboto': 'Roboto',
-    'font.open-sans': 'Open Sans',
+    'font.open-sans': 'Open Sans',    'font.nunito': 'Nunito',
+    'font.lato': 'Lato',
+    'font.montserrat': 'Montserrat',
+    'font.work-sans': 'Work Sans',
+    'font.rubik': 'Rubik',
+    'font.poppins': 'Poppins',
+    'font.source-sans': 'Source Sans 3',
+    'font.ibm-plex': 'IBM Plex Sans',
+    'font.fira-sans': 'Fira Sans',
+    'font.jetbrains': 'JetBrains Mono',
     'mod.text': 'Text',
     'mod.symbol': 'Symbols',
     'blur.label': 'Blur overlay background',
@@ -724,7 +739,16 @@ i18n.ar = {
     'font.google-sans': 'Google Sans',
     'font.inter': 'Inter',
     'font.roboto': 'Roboto',
-    'font.open-sans': 'Open Sans',
+    'font.open-sans': 'Open Sans',    'font.nunito': 'Nunito',
+    'font.lato': 'Lato',
+    'font.montserrat': 'Montserrat',
+    'font.work-sans': 'Work Sans',
+    'font.rubik': 'Rubik',
+    'font.poppins': 'Poppins',
+    'font.source-sans': 'Source Sans 3',
+    'font.ibm-plex': 'IBM Plex Sans',
+    'font.fira-sans': 'Fira Sans',
+    'font.jetbrains': 'JetBrains Mono',
     'mod.text': 'نص',
     'mod.symbol': 'الرموز',
     'blur.label': 'طمس تراكب الخلفية',
@@ -1195,7 +1219,16 @@ i18n.cs = {
     'font.google-sans': 'Google Sans',
     'font.inter': 'Inter',
     'font.roboto': 'Roboto',
-    'font.open-sans': 'Open Sans',
+    'font.open-sans': 'Open Sans',    'font.nunito': 'Nunito',
+    'font.lato': 'Lato',
+    'font.montserrat': 'Montserrat',
+    'font.work-sans': 'Work Sans',
+    'font.rubik': 'Rubik',
+    'font.poppins': 'Poppins',
+    'font.source-sans': 'Source Sans 3',
+    'font.ibm-plex': 'IBM Plex Sans',
+    'font.fira-sans': 'Fira Sans',
+    'font.jetbrains': 'JetBrains Mono',
     'mod.text': 'Text',
     'mod.symbol': 'Symboly',
     'blur.label': 'Rozostření pozadí překrytí',
@@ -1666,7 +1699,16 @@ i18n.da = {
     'font.google-sans': 'Google Sans',
     'font.inter': 'Inter',
     'font.roboto': 'Roboto',
-    'font.open-sans': 'Open Sans',
+    'font.open-sans': 'Open Sans',    'font.nunito': 'Nunito',
+    'font.lato': 'Lato',
+    'font.montserrat': 'Montserrat',
+    'font.work-sans': 'Work Sans',
+    'font.rubik': 'Rubik',
+    'font.poppins': 'Poppins',
+    'font.source-sans': 'Source Sans 3',
+    'font.ibm-plex': 'IBM Plex Sans',
+    'font.fira-sans': 'Fira Sans',
+    'font.jetbrains': 'JetBrains Mono',
     'mod.text': 'Tekst',
     'mod.symbol': 'Symboler',
     'blur.label': 'Slør overlejringsbaggrund',
@@ -2137,7 +2179,16 @@ i18n.de = {
     'font.google-sans': 'Google Sans',
     'font.inter': 'Inter',
     'font.roboto': 'Roboto',
-    'font.open-sans': 'Open Sans',
+    'font.open-sans': 'Open Sans',    'font.nunito': 'Nunito',
+    'font.lato': 'Lato',
+    'font.montserrat': 'Montserrat',
+    'font.work-sans': 'Work Sans',
+    'font.rubik': 'Rubik',
+    'font.poppins': 'Poppins',
+    'font.source-sans': 'Source Sans 3',
+    'font.ibm-plex': 'IBM Plex Sans',
+    'font.fira-sans': 'Fira Sans',
+    'font.jetbrains': 'JetBrains Mono',
     'mod.text': 'Text',
     'mod.symbol': 'Symbole',
     'blur.label': 'Overlay-Hintergrundunschärfe',
@@ -2608,7 +2659,16 @@ i18n.es = {
     'font.google-sans': 'Google Sans',
     'font.inter': 'Inter',
     'font.roboto': 'Roboto',
-    'font.open-sans': 'Open Sans',
+    'font.open-sans': 'Open Sans',    'font.nunito': 'Nunito',
+    'font.lato': 'Lato',
+    'font.montserrat': 'Montserrat',
+    'font.work-sans': 'Work Sans',
+    'font.rubik': 'Rubik',
+    'font.poppins': 'Poppins',
+    'font.source-sans': 'Source Sans 3',
+    'font.ibm-plex': 'IBM Plex Sans',
+    'font.fira-sans': 'Fira Sans',
+    'font.jetbrains': 'JetBrains Mono',
     'mod.text': 'Texto',
     'mod.symbol': 'Símbolos',
     'blur.label': 'Desenfocar fondo superpuesto',
@@ -3079,7 +3139,16 @@ i18n.fi = {
     'font.google-sans': 'Google Sans',
     'font.inter': 'Inter',
     'font.roboto': 'Roboto',
-    'font.open-sans': 'Open Sans',
+    'font.open-sans': 'Open Sans',    'font.nunito': 'Nunito',
+    'font.lato': 'Lato',
+    'font.montserrat': 'Montserrat',
+    'font.work-sans': 'Work Sans',
+    'font.rubik': 'Rubik',
+    'font.poppins': 'Poppins',
+    'font.source-sans': 'Source Sans 3',
+    'font.ibm-plex': 'IBM Plex Sans',
+    'font.fira-sans': 'Fira Sans',
+    'font.jetbrains': 'JetBrains Mono',
     'mod.text': 'Teksti',
     'mod.symbol': 'Symbolit',
     'blur.label': 'Sumenna peittokuva tausta',
@@ -3550,7 +3619,16 @@ i18n.fr = {
     'font.google-sans': 'Google Sans',
     'font.inter': 'Inter',
     'font.roboto': 'Roboto',
-    'font.open-sans': 'Open Sans',
+    'font.open-sans': 'Open Sans',    'font.nunito': 'Nunito',
+    'font.lato': 'Lato',
+    'font.montserrat': 'Montserrat',
+    'font.work-sans': 'Work Sans',
+    'font.rubik': 'Rubik',
+    'font.poppins': 'Poppins',
+    'font.source-sans': 'Source Sans 3',
+    'font.ibm-plex': 'IBM Plex Sans',
+    'font.fira-sans': 'Fira Sans',
+    'font.jetbrains': 'JetBrains Mono',
     'mod.text': 'Texte',
     'mod.symbol': 'Symboles',
     'blur.label': 'Flou de la superposition',
@@ -4022,7 +4100,16 @@ i18n.hi = {
     'font.google-sans': 'Google Sans',
     'font.inter': 'Inter',
     'font.roboto': 'Roboto',
-    'font.open-sans': 'Open Sans',
+    'font.open-sans': 'Open Sans',    'font.nunito': 'Nunito',
+    'font.lato': 'Lato',
+    'font.montserrat': 'Montserrat',
+    'font.work-sans': 'Work Sans',
+    'font.rubik': 'Rubik',
+    'font.poppins': 'Poppins',
+    'font.source-sans': 'Source Sans 3',
+    'font.ibm-plex': 'IBM Plex Sans',
+    'font.fira-sans': 'Fira Sans',
+    'font.jetbrains': 'JetBrains Mono',
     'mod.text': 'मूलपाठ',
     'mod.symbol': 'प्रतीक',
     'blur.label': 'ओवरले पृष्ठभूमि को धुंधला करें',
@@ -4493,7 +4580,16 @@ i18n.hu = {
     'font.google-sans': 'Google Sans',
     'font.inter': 'Inter',
     'font.roboto': 'Roboto',
-    'font.open-sans': 'Open Sans',
+    'font.open-sans': 'Open Sans',    'font.nunito': 'Nunito',
+    'font.lato': 'Lato',
+    'font.montserrat': 'Montserrat',
+    'font.work-sans': 'Work Sans',
+    'font.rubik': 'Rubik',
+    'font.poppins': 'Poppins',
+    'font.source-sans': 'Source Sans 3',
+    'font.ibm-plex': 'IBM Plex Sans',
+    'font.fira-sans': 'Fira Sans',
+    'font.jetbrains': 'JetBrains Mono',
     'mod.text': 'Szöveg',
     'mod.symbol': 'Szimbólumok',
     'blur.label': 'Háttér elmosódása',
@@ -4964,7 +5060,16 @@ i18n.it = {
     'font.google-sans': 'Google Sans',
     'font.inter': 'Inter',
     'font.roboto': 'Roboto',
-    'font.open-sans': 'Open Sans',
+    'font.open-sans': 'Open Sans',    'font.nunito': 'Nunito',
+    'font.lato': 'Lato',
+    'font.montserrat': 'Montserrat',
+    'font.work-sans': 'Work Sans',
+    'font.rubik': 'Rubik',
+    'font.poppins': 'Poppins',
+    'font.source-sans': 'Source Sans 3',
+    'font.ibm-plex': 'IBM Plex Sans',
+    'font.fira-sans': 'Fira Sans',
+    'font.jetbrains': 'JetBrains Mono',
     'mod.text': 'Testo',
     'mod.symbol': 'Simboli',
     'blur.label': 'Sfocatura dello sfondo sovrapposto',
@@ -5435,7 +5540,16 @@ i18n.ja = {
     'font.google-sans': 'Google Sans',
     'font.inter': 'Inter',
     'font.roboto': 'Roboto',
-    'font.open-sans': 'Open Sans',
+    'font.open-sans': 'Open Sans',    'font.nunito': 'Nunito',
+    'font.lato': 'Lato',
+    'font.montserrat': 'Montserrat',
+    'font.work-sans': 'Work Sans',
+    'font.rubik': 'Rubik',
+    'font.poppins': 'Poppins',
+    'font.source-sans': 'Source Sans 3',
+    'font.ibm-plex': 'IBM Plex Sans',
+    'font.fira-sans': 'Fira Sans',
+    'font.jetbrains': 'JetBrains Mono',
     'mod.text': '文章',
     'mod.symbol': '記号',
     'blur.label': 'オーバーレイの背景をぼかす',
@@ -5906,7 +6020,16 @@ i18n.ko = {
     'font.google-sans': 'Google Sans',
     'font.inter': 'Inter',
     'font.roboto': 'Roboto',
-    'font.open-sans': 'Open Sans',
+    'font.open-sans': 'Open Sans',    'font.nunito': 'Nunito',
+    'font.lato': 'Lato',
+    'font.montserrat': 'Montserrat',
+    'font.work-sans': 'Work Sans',
+    'font.rubik': 'Rubik',
+    'font.poppins': 'Poppins',
+    'font.source-sans': 'Source Sans 3',
+    'font.ibm-plex': 'IBM Plex Sans',
+    'font.fira-sans': 'Fira Sans',
+    'font.jetbrains': 'JetBrains Mono',
     'mod.text': '텍스트',
     'mod.symbol': '기호',
     'blur.label': '오버레이 배경 흐림',
@@ -6377,7 +6500,16 @@ i18n.nl = {
     'font.google-sans': 'Google Sans',
     'font.inter': 'Inter',
     'font.roboto': 'Roboto',
-    'font.open-sans': 'Open Sans',
+    'font.open-sans': 'Open Sans',    'font.nunito': 'Nunito',
+    'font.lato': 'Lato',
+    'font.montserrat': 'Montserrat',
+    'font.work-sans': 'Work Sans',
+    'font.rubik': 'Rubik',
+    'font.poppins': 'Poppins',
+    'font.source-sans': 'Source Sans 3',
+    'font.ibm-plex': 'IBM Plex Sans',
+    'font.fira-sans': 'Fira Sans',
+    'font.jetbrains': 'JetBrains Mono',
     'mod.text': 'Tekst',
     'mod.symbol': 'Symbolen',
     'blur.label': 'Overlay-achtergrond vervagen',
@@ -6848,7 +6980,16 @@ i18n.no = {
     'font.google-sans': 'Google Sans',
     'font.inter': 'Inter',
     'font.roboto': 'Roboto',
-    'font.open-sans': 'Open Sans',
+    'font.open-sans': 'Open Sans',    'font.nunito': 'Nunito',
+    'font.lato': 'Lato',
+    'font.montserrat': 'Montserrat',
+    'font.work-sans': 'Work Sans',
+    'font.rubik': 'Rubik',
+    'font.poppins': 'Poppins',
+    'font.source-sans': 'Source Sans 3',
+    'font.ibm-plex': 'IBM Plex Sans',
+    'font.fira-sans': 'Fira Sans',
+    'font.jetbrains': 'JetBrains Mono',
     'mod.text': 'Tekst',
     'mod.symbol': 'Symboler',
     'blur.label': 'Uskarp overleggsbakgrunn',
@@ -7319,7 +7460,16 @@ i18n.pl = {
     'font.google-sans': 'Google Sans',
     'font.inter': 'Inter',
     'font.roboto': 'Roboto',
-    'font.open-sans': 'Open Sans',
+    'font.open-sans': 'Open Sans',    'font.nunito': 'Nunito',
+    'font.lato': 'Lato',
+    'font.montserrat': 'Montserrat',
+    'font.work-sans': 'Work Sans',
+    'font.rubik': 'Rubik',
+    'font.poppins': 'Poppins',
+    'font.source-sans': 'Source Sans 3',
+    'font.ibm-plex': 'IBM Plex Sans',
+    'font.fira-sans': 'Fira Sans',
+    'font.jetbrains': 'JetBrains Mono',
     'mod.text': 'Tekst',
     'mod.symbol': 'Symbolika',
     'blur.label': 'Rozmycie tła nakładki',
@@ -7790,7 +7940,16 @@ i18n.pt = {
     'font.google-sans': 'Google Sans',
     'font.inter': 'Inter',
     'font.roboto': 'Roboto',
-    'font.open-sans': 'Open Sans',
+    'font.open-sans': 'Open Sans',    'font.nunito': 'Nunito',
+    'font.lato': 'Lato',
+    'font.montserrat': 'Montserrat',
+    'font.work-sans': 'Work Sans',
+    'font.rubik': 'Rubik',
+    'font.poppins': 'Poppins',
+    'font.source-sans': 'Source Sans 3',
+    'font.ibm-plex': 'IBM Plex Sans',
+    'font.fira-sans': 'Fira Sans',
+    'font.jetbrains': 'JetBrains Mono',
     'mod.text': 'Texto',
     'mod.symbol': 'Símbolos',
     'blur.label': 'Desfocar sobreposição fundo',
@@ -8261,7 +8420,16 @@ i18n.ru = {
     'font.google-sans': 'Google Sans',
     'font.inter': 'Inter',
     'font.roboto': 'Roboto',
-    'font.open-sans': 'Open Sans',
+    'font.open-sans': 'Open Sans',    'font.nunito': 'Nunito',
+    'font.lato': 'Lato',
+    'font.montserrat': 'Montserrat',
+    'font.work-sans': 'Work Sans',
+    'font.rubik': 'Rubik',
+    'font.poppins': 'Poppins',
+    'font.source-sans': 'Source Sans 3',
+    'font.ibm-plex': 'IBM Plex Sans',
+    'font.fira-sans': 'Fira Sans',
+    'font.jetbrains': 'JetBrains Mono',
     'mod.text': 'Текст',
     'mod.symbol': 'Символы',
     'blur.label': 'Размытие фона наложения',
@@ -8732,7 +8900,16 @@ i18n.sv = {
     'font.google-sans': 'Google Sans',
     'font.inter': 'Inter',
     'font.roboto': 'Roboto',
-    'font.open-sans': 'Open Sans',
+    'font.open-sans': 'Open Sans',    'font.nunito': 'Nunito',
+    'font.lato': 'Lato',
+    'font.montserrat': 'Montserrat',
+    'font.work-sans': 'Work Sans',
+    'font.rubik': 'Rubik',
+    'font.poppins': 'Poppins',
+    'font.source-sans': 'Source Sans 3',
+    'font.ibm-plex': 'IBM Plex Sans',
+    'font.fira-sans': 'Fira Sans',
+    'font.jetbrains': 'JetBrains Mono',
     'mod.text': 'Text',
     'mod.symbol': 'Symboler',
     'blur.label': 'Oskärpa överläggsbakgrund',
@@ -9203,7 +9380,16 @@ i18n.tr = {
     'font.google-sans': 'Google Sans',
     'font.inter': 'Inter',
     'font.roboto': 'Roboto',
-    'font.open-sans': 'Open Sans',
+    'font.open-sans': 'Open Sans',    'font.nunito': 'Nunito',
+    'font.lato': 'Lato',
+    'font.montserrat': 'Montserrat',
+    'font.work-sans': 'Work Sans',
+    'font.rubik': 'Rubik',
+    'font.poppins': 'Poppins',
+    'font.source-sans': 'Source Sans 3',
+    'font.ibm-plex': 'IBM Plex Sans',
+    'font.fira-sans': 'Fira Sans',
+    'font.jetbrains': 'JetBrains Mono',
     'mod.text': 'Metin',
     'mod.symbol': 'Semboller',
     'blur.label': 'Kaplama arka planını bulanıklaştır',
@@ -9675,7 +9861,16 @@ i18n.vi = {
     'font.google-sans': 'Google Sans',
     'font.inter': 'Inter',
     'font.roboto': 'Roboto',
-    'font.open-sans': 'Open Sans',
+    'font.open-sans': 'Open Sans',    'font.nunito': 'Nunito',
+    'font.lato': 'Lato',
+    'font.montserrat': 'Montserrat',
+    'font.work-sans': 'Work Sans',
+    'font.rubik': 'Rubik',
+    'font.poppins': 'Poppins',
+    'font.source-sans': 'Source Sans 3',
+    'font.ibm-plex': 'IBM Plex Sans',
+    'font.fira-sans': 'Fira Sans',
+    'font.jetbrains': 'JetBrains Mono',
     'mod.text': 'Chữ',
     'mod.symbol': 'Biểu tượng',
     'blur.label': 'Làm mờ nền lớp phủ',
@@ -10142,6 +10337,16 @@ function applyAppsFilter() {
   setAppsTabLabel();
 }
 
+// Liquid glass is a body-level class so it can scale the frosting on every
+// design style at once. 'normal' keeps whatever the style already ships.
+const _akGlassLevels = ['normal', 'off', 'subtle', 'liquid'];
+function applyGlassLevel(level) {
+  const v = _akGlassLevels.includes(level) ? level : 'normal';
+  document.body.classList.remove('glass-normal', 'glass-off', 'glass-subtle', 'glass-liquid');
+  document.body.classList.add('glass-' + v);
+  document.querySelectorAll('[data-glass]').forEach(b => b.classList.toggle('active', b.dataset.glass === v));
+}
+
 function saveSettings() {
   const activeAccent = document.querySelector('.accent-opt.active');
   const customBtn = document.getElementById('customAccentBtn');
@@ -10154,6 +10359,7 @@ function saveSettings() {
     language: document.querySelector('[data-lang].active')?.dataset.lang || 'auto',
     accent: document.querySelector('.gradient-opt.active') ? 'gold' : (activeAccent?.dataset.accent || (isCustom ? 'custom' : 'gold')),
     blur: document.getElementById('toggleBlur')?.classList.contains('on') ?? true,
+    glass: document.querySelector('[data-glass].active')?.dataset.glass || 'normal',
     keyStyle: document.querySelector('[data-key-style].active')?.dataset.keyStyle || 'spaced',
     modStyle: document.querySelector('[data-mod-style].active')?.dataset.modStyle || 'text',
     compact: document.body.classList.contains('compact'),
@@ -10216,7 +10422,7 @@ function loadSettings() {
       const fBtn = document.querySelector('[data-font="' + data.font + '"]');
       if (fBtn) {
         fBtn.classList.add('active');
-        document.body.classList.remove('font-inter','font-roboto','font-open-sans','font-google-sans');
+        document.body.classList.remove('font-google-sans','font-inter','font-roboto','font-open-sans','font-nunito','font-lato','font-montserrat','font-work-sans','font-rubik','font-poppins','font-source-sans','font-ibm-plex','font-fira-sans','font-jetbrains');
         document.body.classList.add('font-' + data.font);
       }
     }
@@ -10292,6 +10498,8 @@ function loadSettings() {
         document.body.classList.toggle('noblur', !data.blur);
       }
     }
+
+    applyGlassLevel(data.glass);
 
     if (data.keyStyle) {
       document.querySelectorAll('[data-key-style]').forEach(b => b.classList.remove('active'));
@@ -10714,6 +10922,46 @@ async function unregisterPeriodicSync() {
   } catch(e) { }
 }
 
+// ---- Installing the app ----
+// Chrome only lets a Periodic Background Sync worker run while the app is
+// closed if Anthkeys is installed, so offer the install prompt next to the
+// update controls. Without this the worker simply never wakes up.
+let _akInstallPrompt = null;
+let _akVisibilityHook = false;
+window.addEventListener('beforeinstallprompt', function(e) {
+  e.preventDefault();
+  _akInstallPrompt = e;
+  const row = document.getElementById('installAppRow');
+  if (row) row.hidden = false;
+});
+window.addEventListener('appinstalled', function() {
+  _akInstallPrompt = null;
+  const row = document.getElementById('installAppRow');
+  if (row) row.hidden = true;
+  if (registerPeriodicSync) registerPeriodicSync();
+});
+document.addEventListener('click', function(e) {
+  const btn = e.target.closest ? e.target.closest('#btnInstallApp') : null;
+  if (!btn || !_akInstallPrompt) return;
+  const prompt = _akInstallPrompt;
+  _akInstallPrompt = null;
+  btn.disabled = true;
+  prompt.prompt();
+  prompt.userChoice.then(function() {
+    btn.disabled = false;
+    const row = document.getElementById('installAppRow');
+    if (row) row.hidden = true;
+  });
+});
+function askWorkerForABackgroundCheck() {
+  // One-shot sync is the cheap half of the answer: the browser runs it the next
+  // time the network is available, even if the app has not been opened.
+  if (!('serviceWorker' in navigator)) return;
+  navigator.serviceWorker.ready.then(function(reg) {
+    if (reg.sync) reg.sync.register(AK_UPDATE_TAG).catch(function() {});
+  }).catch(function() {});
+}
+
 async function registerPeriodicSync() {
   if (!notifySupported || !NOTIFY.isEnabled() || notifyState() !== 'granted') {
     unregisterPeriodicSync();
@@ -10958,7 +11206,7 @@ if ('serviceWorker' in navigator) {
     const el = document.querySelector('[data-update-mode].active');
     return el ? el.dataset.updateMode : 'auto';
   };
-  navigator.serviceWorker.register('sw.js?v=18').then(reg => {
+  navigator.serviceWorker.register('sw.js?v=19').then(reg => {
     reg.addEventListener('updatefound', () => {
       const newSW = reg.installing;
       if (!newSW) return;
@@ -12152,6 +12400,15 @@ checkForUpdate();
   }
   // Coming back to a tab that has been sitting open, or reconnecting after
   // being offline, are the moments a new version is most likely to exist.
+// Nudge the worker to look for a new version when we are being closed.
+  if (!_akVisibilityHook) {
+    _akVisibilityHook = true;
+    document.addEventListener('visibilitychange', function() {
+      if (document.visibilityState === 'hidden') askWorkerForABackgroundCheck();
+    });
+  }
+  // ...and once at launch, so a freshly installed or freshly updated app checks too.
+  askWorkerForABackgroundCheck();
   document.addEventListener('visibilitychange', () => {
     if (document.visibilityState === 'visible') {
       reportVersionToSW();
@@ -12230,10 +12487,16 @@ document.querySelectorAll('[data-font]').forEach(btn => {
   btn.addEventListener('click', () => {
     document.querySelectorAll('[data-font]').forEach(b => b.classList.remove('active'));
     btn.classList.add('active');
-    document.body.classList.remove('font-google-sans','font-inter','font-roboto','font-open-sans');
+    document.body.classList.remove('font-google-sans','font-inter','font-roboto','font-open-sans','font-nunito','font-lato','font-montserrat','font-work-sans','font-rubik','font-poppins','font-source-sans','font-ibm-plex','font-fira-sans','font-jetbrains');
     document.body.classList.add('font-' + btn.dataset.font);
     saveSettings();
   });
+document.querySelectorAll('[data-glass]').forEach(btn => {
+  btn.addEventListener('click', () => {
+    applyGlassLevel(btn.dataset.glass);
+    saveSettings();
+  });
+});
 });
 
 onId('toggleAnim', 'click', function() {
@@ -12363,6 +12626,7 @@ document.querySelectorAll('.reset-btn').forEach(btn => {
     const defaults = {
       language: 'auto',       keyStyle: 'spaced', modStyle: 'text',
       blur: true, compact: false, noAnim: false, perfMode: false, tip: true,
+    glass: 'normal',
       theme: 'light', accent: 'gold', style: 'm3',
       size: 'medium', font: 'google-sans', updateMode: 'auto'
     };
@@ -12414,6 +12678,9 @@ document.querySelectorAll('.reset-btn').forEach(btn => {
       document.querySelectorAll('[data-font]').forEach(b => b.classList.remove('active'));
       const defBtn = document.querySelector('[data-font="google-sans"]');
       if (defBtn) defBtn.click();
+    } else if (setting === 'glass') {
+      applyGlassLevel('normal');
+      saveSettings();
     } else if (setting === 'keyStyle') {
       document.querySelectorAll('[data-key-style]').forEach(b => b.classList.remove('active'));
       const defBtn = document.querySelector('[data-key-style="spaced"]');

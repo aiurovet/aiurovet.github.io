@@ -1,4 +1,4 @@
-const CACHE = 'anthkeys-v52.6';
+const CACHE = 'anthkeys-v52.7';
 const CFG_CACHE = 'anthkeys-notify-cfg';
 const CFG_URL = 'notify-cfg.json';
 const TIP_TAG = 'anthkeys-daily-tip';
@@ -193,6 +193,15 @@ self.addEventListener('periodicsync', e => {
     e.waitUntil(showDailyTip());
     return;
   }
+  if (e.tag === UPDATE_TAG) {
+    e.waitUntil(checkUpdateInBackground());
+  }
+});
+
+// One-shot Background Sync: the browser hands this to us as soon as the
+// network is back, which covers the gap between periodic timers on browsers
+// that throttle them heavily.
+self.addEventListener('sync', e => {
   if (e.tag === UPDATE_TAG) {
     e.waitUntil(checkUpdateInBackground());
   }

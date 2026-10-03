@@ -27,8 +27,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="default">
   <script>if (location.protocol === 'file:') document.getElementById('manifestLink').remove();</script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=Roboto:wght@400;500;600;700&family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/anthkeys.css?v=113">
+  <link href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=Roboto:wght@400;500;600;700&family=Open+Sans:wght@400;500;600;700&family=Nunito:wght@400;500;600;700&family=Lato:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700&family=Work+Sans:wght@400;500;600;700&family=Rubik:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&family=Source+Sans+3:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&family=Fira+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/anthkeys.css?v=114">
 </head>
 <body class="light style-m3 size-medium font-google-sans">
  <div class="container">
@@ -820,11 +820,24 @@
             <span id="appVersionInline" style="font-size:.75rem;color:var(--text-variant)"></span>
           </div>
           <p id="updateCheckResult" style="margin:.45rem 0 0;font-size:.75rem;line-height:1.45;color:var(--text-variant)" hidden></p>
+          <div style="display:flex;gap:.4rem;margin-top:.5rem;align-items:center;flex-wrap:wrap" id="installAppRow" hidden>
+            <button class="pill" id="btnInstallApp" data-i18n="update.install">Install Anthkeys</button>
+            <span style="font-size:.72rem;color:var(--text-variant);line-height:1.4" data-i18n="update.install-note">Installed apps can check for updates in the background.</span>
+          </div>
           <div class="whatsnew">
                 <div class="whatsnew-title" data-i18n="whatsnew.title">What's new</div>
                 <p class="whatsnew-sub" data-i18n="whatsnew.sub">Recent changes to Anthkeys</p>
                 <select id="whatsnewSelect" aria-label="Version" style="width:100%;padding:.45rem .7rem;border:1px solid var(--outline-variant);border-radius:var(--radius-sm);background:var(--surface);color:var(--text);font:var(--size) var(--font);font-size:.8rem;margin-bottom:.6rem;box-sizing:border-box;outline:none"></select>
-                <div class="wn-entry">
+                                <div class="wn-entry">
+                  <div class="wn-ver">v52.7 <span class="wn-date">Oct 3, 2026</span></div>
+                  <ul>
+                    <li>New: a &ldquo;Liquid glass&rdquo; setting that turns the panels translucent and shiny, like Apple&rsquo;s glass.</li>
+                    <li>Fixed: design styles that shared a background photo, or lost theirs to a dead link, now each have their own, so they no longer look alike.</li>
+                    <li>New: more fonts to pick from &mdash; Nunito, Lato, Montserrat, Work Sans, Rubik, Poppins, Source Sans 3, IBM Plex Sans, Fira Sans and JetBrains Mono.</li>
+                    <li>New: background update alerts now tell you what they need: an installed Anthkeys. There is an &ldquo;Install Anthkeys&rdquo; button in About, and the worker can check for versions with the app closed.</li>
+                  </ul>
+                </div>
+<div class="wn-entry">
                   <div class="wn-ver">v52.6 <span class="wn-date">Oct 3, 2026</span></div>
                   <ul>
                     <li>Fixed: &ldquo;Match wallpaper&rdquo; now works with the backgrounds built into the design styles, not just with wallpapers you upload yourself.</li>
@@ -1681,6 +1694,25 @@
           <button class="theme-opt" data-font="inter"><span data-i18n="font.inter">Inter</span></button>
           <button class="theme-opt" data-font="roboto"><span data-i18n="font.roboto">Roboto</span></button>
           <button class="theme-opt" data-font="open-sans"><span data-i18n="font.open-sans">Open Sans</span></button>
+          <button class="theme-opt" data-font="nunito"><span data-i18n="font.nunito">Nunito</span></button>
+          <button class="theme-opt" data-font="lato"><span data-i18n="font.lato">Lato</span></button>
+          <button class="theme-opt" data-font="montserrat"><span data-i18n="font.montserrat">Montserrat</span></button>
+          <button class="theme-opt" data-font="work-sans"><span data-i18n="font.work-sans">Work Sans</span></button>
+          <button class="theme-opt" data-font="rubik"><span data-i18n="font.rubik">Rubik</span></button>
+          <button class="theme-opt" data-font="poppins"><span data-i18n="font.poppins">Poppins</span></button>
+          <button class="theme-opt" data-font="source-sans"><span data-i18n="font.source-sans">Source Sans 3</span></button>
+          <button class="theme-opt" data-font="ibm-plex"><span data-i18n="font.ibm-plex">IBM Plex Sans</span></button>
+          <button class="theme-opt" data-font="fira-sans"><span data-i18n="font.fira-sans">Fira Sans</span></button>
+          <button class="theme-opt" data-font="jetbrains"><span data-i18n="font.jetbrains">JetBrains Mono</span></button>
+        </div>
+      </div>
+      <div class="setting-group">
+        <h2 data-i18n="setting.glass">Liquid glass <button class="reset-btn" data-reset="glass" title="Reset to default">↺</button></h2>
+        <div class="setting-body">
+          <button class="theme-opt active" data-glass="normal"><span data-i18n="glass.normal">Normal</span></button>
+          <button class="theme-opt" data-glass="off"><span data-i18n="glass.off">Flat</span></button>
+          <button class="theme-opt" data-glass="subtle"><span data-i18n="glass.subtle">Subtle</span></button>
+          <button class="theme-opt" data-glass="liquid"><span data-i18n="glass.liquid">Liquid glass</span></button>
         </div>
       </div>
       <div class="setting-group">
@@ -1811,7 +1843,7 @@
   <script src="js/qrcode.js"></script>
   <script src="js/i18n-recent.js"></script>
 <script src="js/i18n-wn.js"></script>
-<script src="js/anthkeys.js?v=52.6">
+<script src="js/anthkeys.js?v=52.7">
 </script>
 </body>
 </html>
