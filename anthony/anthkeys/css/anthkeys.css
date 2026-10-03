@@ -669,6 +669,15 @@ body.galaxy.glass-liquid .modal {
 }
 body.dark.glass-liquid .pill, body.dark.glass-liquid .dict-toggle, body.dark.glass-liquid .top-bar,
 body.dark.glass-liquid .search-bar input { background: rgba(255,255,255,.1) !important; border-color: rgba(255,255,255,.16) !important; }
+/* On phones the top bar is a bare grid (see the small-screen rule near the top of
+   this file). The glass panes above use !important, so without this they would creep
+   back onto it and a full-width blur there reads as a stray square under the title. */
+@media (max-width: 480px) {
+  body.glass-subtle .top-bar, body.glass-liquid .top-bar, body.glass-liquid .top-bar * {
+    backdrop-filter: none !important; -webkit-backdrop-filter: none !important;
+    background: none !important; border: none !important; box-shadow: none !important;
+  }
+}
 /* Performance mode still wins over any glass level. */
 body.perf-mode .panel, body.perf-mode .dict-panel, body.perf-mode .setting-group, body.perf-mode .top-bar,
 body.perf-mode .note, body.perf-mode .daily-tip, body.perf-mode .dict-toggle, body.perf-mode .pill,

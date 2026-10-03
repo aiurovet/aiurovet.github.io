@@ -1,4 +1,4 @@
-const CACHE = 'anthkeys-v52.7';
+const CACHE = 'anthkeys-v52.8';
 const CFG_CACHE = 'anthkeys-notify-cfg';
 const CFG_URL = 'notify-cfg.json';
 const TIP_TAG = 'anthkeys-daily-tip';
