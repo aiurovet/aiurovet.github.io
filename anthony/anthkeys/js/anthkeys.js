@@ -22,6 +22,7 @@ const i18n = {
     'notify.checkNow': 'Check for updates now',
     'notify.check.upToDate': 'You are on the latest version.',
     'notify.check.newer': 'v{ver} is ready. Open Anthkeys to update.',
+    'notify.check.working': 'Checking…',
     'notify.check.failed': 'Could not check just now. Try again later.',
     'notify.tip.title': 'Today\u2019s shortcut',
     'notify.test.title': 'Test notification',
@@ -75,6 +76,10 @@ const i18n = {
     'settings.search': 'Search settings\u2026',
     'accent.copy': 'Copy',
     'accent.match-device': 'Match my device',
+    'accent.match-wallpaper': 'Match wallpaper',
+    'accent.wallpaper-applied': 'Accent matched to your wallpaper',
+    'accent.wallpaper-follow': 'Keeps your accent matched to your wallpaper',
+    'accent.wallpaper-fail': 'Could not read your wallpaper',
     'accent.device-applied': 'Device accent applied',
     'accent.device-fail': 'Device accent not available here \u2014 open the installed app',
     'linux.distro': 'Distribution',
@@ -490,6 +495,7 @@ i18n.ar = {
     'notify.checkNow': 'افحص عن تحديثات الآن',
     'notify.check.upToDate': 'أنت على أحدث إصدار.',
     'notify.check.newer': 'الإصدار v{ver} جاهز. افتح Anthkeys للتحديث.',
+    'notify.check.working': 'تجميع الفحص…',
     'notify.check.failed': 'تعذّر الفحص الآن. حاول لاحقًا.',
     'notify.tip.title': 'اختصار اليوم',
     'notify.test.title': 'إشعار تجريبي',
@@ -960,6 +966,7 @@ i18n.cs = {
     'notify.checkNow': 'Zkontrolovat aktualizace nyní',
     'notify.check.upToDate': 'Máte nejnovější verzi.',
     'notify.check.newer': 'Verze v{ver} je připravena. Otevřete Anthkeys pro aktualizaci.',
+    'notify.check.working': 'Kontroluji…',
     'notify.check.failed': 'Kontrolu se nepodařilo provést. Zkuste to později.',
     'notify.tip.title': 'Dnešní zkratka',
     'notify.test.title': 'Zkušební oznámení',
@@ -1430,6 +1437,7 @@ i18n.da = {
     'notify.checkNow': 'Tjek for opdateringer nu',
     'notify.check.upToDate': 'Du har den nyeste version.',
     'notify.check.newer': 'v{ver} er klar. Åbn Anthkeys for at opdatere.',
+    'notify.check.working': 'Kontrollerer…',
     'notify.check.failed': 'Kunne ikke tjekke lige nu. Prøv igen senere.',
     'notify.tip.title': 'Dagens genvej',
     'notify.test.title': 'Testnotifikation',
@@ -1900,6 +1908,7 @@ i18n.de = {
     'notify.checkNow': 'Jetzt nach Updates suchen',
     'notify.check.upToDate': 'Du hast die neueste Version.',
     'notify.check.newer': 'v{ver} ist bereit. Öffne Anthkeys zum Aktualisieren.',
+    'notify.check.working': 'Wird geprüft…',
     'notify.check.failed': 'Die Suche war gerade nicht möglich. Später erneut versuchen.',
     'notify.tip.title': 'Dein Tipp des Tages',
     'notify.test.title': 'Testbenachrichtigung',
@@ -2370,6 +2379,7 @@ i18n.es = {
     'notify.checkNow': 'Buscar actualizaciones ahora',
     'notify.check.upToDate': 'Ya tienes la última versión.',
     'notify.check.newer': 'v{ver} está lista. Abre Anthkeys para actualizar.',
+    'notify.check.working': 'Comprobando…',
     'notify.check.failed': 'No se ha podido comprobar ahora. Inténtalo más tarde.',
     'notify.tip.title': 'Tu atajo de hoy',
     'notify.test.title': 'Notificación de prueba',
@@ -2840,6 +2850,7 @@ i18n.fi = {
     'notify.checkNow': 'Tarkista päivitykset nyt',
     'notify.check.upToDate': 'Sinulla on uusin versio.',
     'notify.check.newer': 'v{ver} on valmis. Avaa Anthkeys päivittääksesi.',
+    'notify.check.working': 'Tarkistetaan…',
     'notify.check.failed': 'Tarkistus ei onnistunut. Yritä myöhemmin uudelleen.',
     'notify.tip.title': 'Tänään oma pikakuvake',
     'notify.test.title': 'Testi-ilmoitus',
@@ -3310,6 +3321,7 @@ i18n.fr = {
     'notify.checkNow': 'Rechercher les mises à jour',
     'notify.check.upToDate': 'Vous avez la dernière version.',
     'notify.check.newer': 'La version v{ver} est prête. Ouvrez Anthkeys pour mettre à jour.',
+    'notify.check.working': 'Vérification…',
     'notify.check.failed': 'Impossible de vérifier pour l\'instant. Réessayez plus tard.',
     'notify.tip.title': 'Votre raccourci du jour',
     'notify.test.title': 'Notification de test',
@@ -3781,6 +3793,7 @@ i18n.hi = {
     'notify.checkNow': 'अभी अपडेट देखें',
     'notify.check.upToDate': 'आपके पास नवीनतम संस्करण है।',
     'notify.check.newer': 'v{ver} तैयार है। अपडेट करने के लिए Anthkeys खोलें।',
+    'notify.check.working': 'चांच गर रहे है…',
     'notify.check.failed': 'अभी जाँच नहीं हो सकी। बाद में कोशिश करें।',
     'notify.tip.title': 'आज का शॉर्टकट',
     'notify.test.title': 'परीक्षण सूचना',
@@ -4251,6 +4264,7 @@ i18n.hu = {
     'notify.checkNow': 'Frissítések ellenőrzése most',
     'notify.check.upToDate': 'A legfrissebb verziót használod.',
     'notify.check.newer': 'A v{ver} készen áll. Nyisd meg az Anthkeys alkalmazást a frissítéshez.',
+    'notify.check.working': 'Ellenőrzés…',
     'notify.check.failed': 'Most nem sikerült ellenőrizni. Próbáld meg később.',
     'notify.tip.title': 'A mai gyorsbillentyű',
     'notify.test.title': 'Tesztértesítés',
@@ -4721,6 +4735,7 @@ i18n.it = {
     'notify.checkNow': 'Controlla ora gli aggiornamenti',
     'notify.check.upToDate': 'Hai già l\'ultima versione.',
     'notify.check.newer': 'La v{ver} è pronta. Apri Anthkeys per aggiornare.',
+    'notify.check.working': 'Controllo…',
     'notify.check.failed': 'Impossibile controllare adesso. Riprova più tardi.',
     'notify.tip.title': 'La tua scorciatoia di oggi',
     'notify.test.title': 'Notifica di prova',
@@ -5191,6 +5206,7 @@ i18n.ja = {
     'notify.checkNow': '今すぐ更新を確認',
     'notify.check.upToDate': '最新バージョンです。',
     'notify.check.newer': 'v{ver} の準備ができました。Anthkeys を開いて更新してください。',
+    'notify.check.working': 'チェック中…',
     'notify.check.failed': '今はその確認できませんでした。時間をおいて試してください。',
     'notify.tip.title': '今日のショートカット',
     'notify.test.title': 'テスト通知',
@@ -5661,6 +5677,7 @@ i18n.ko = {
     'notify.checkNow': '지금 업데이트 확인',
     'notify.check.upToDate': '최신 버전입니다.',
     'notify.check.newer': 'v{ver}이 준비되었습니다. Anthkeys를 열어 업데이트하세요.',
+    'notify.check.working': '크모합니다…',
     'notify.check.failed': '지금은 확인하지 못했습니다. 나중에 다시 시도하세요.',
     'notify.tip.title': '오늘의 단축키',
     'notify.test.title': '테스트 알림',
@@ -6131,6 +6148,7 @@ i18n.nl = {
     'notify.checkNow': 'Nu controleren op updates',
     'notify.check.upToDate': 'Je hebt de nieuwste versie.',
     'notify.check.newer': 'v{ver} staat klaar. Open Anthkeys om te updaten.',
+    'notify.check.working': 'Controleren…',
     'notify.check.failed': 'Kon nu niet controleren. Probeer het later opnieuw.',
     'notify.tip.title': 'Je snelktoets van vandaag',
     'notify.test.title': 'Testmelding',
@@ -6601,6 +6619,7 @@ i18n.no = {
     'notify.checkNow': 'Sjekk etter oppdateringer nå',
     'notify.check.upToDate': 'Du har den nyeste versjonen.',
     'notify.check.newer': 'v{ver} er klar. Åpne Anthkeys for å oppdatere.',
+    'notify.check.working': 'Sjekker…',
     'notify.check.failed': 'Kunne ikke sjekke nå. Prøv igjen senere.',
     'notify.tip.title': 'Dagens hurtigtast',
     'notify.test.title': 'Testvarsel',
@@ -7071,6 +7090,7 @@ i18n.pl = {
     'notify.checkNow': 'Sprawdź aktualizacje teraz',
     'notify.check.upToDate': 'Masz najnowszą wersję.',
     'notify.check.newer': 'v{ver} jest gotowa. Otwórz Anthkeys, aby zaktualizować.',
+    'notify.check.working': 'Sprawdzanie…',
     'notify.check.failed': 'Nie udało się teraz sprawdzić. Spróbuj później.',
     'notify.tip.title': 'Twój skrót na dziś',
     'notify.test.title': 'Powiadomienie testowe',
@@ -7541,6 +7561,7 @@ i18n.pt = {
     'notify.checkNow': 'Procurar atualizações agora',
     'notify.check.upToDate': 'Você já tem a versão mais recente.',
     'notify.check.newer': 'A v{ver} está pronta. Abra o Anthkeys para atualizar.',
+    'notify.check.working': 'Verificando…',
     'notify.check.failed': 'Não foi possível verificar agora. Tente mais tarde.',
     'notify.tip.title': 'A tua atalho de hoje',
     'notify.test.title': 'Notificação de teste',
@@ -8011,6 +8032,7 @@ i18n.ru = {
     'notify.checkNow': 'Проверить обновления сейчас',
     'notify.check.upToDate': 'У вас последняя версия.',
     'notify.check.newer': 'Версия v{ver} готова. Откройте Anthkeys, чтобы обновиться.',
+    'notify.check.working': 'Проверка…',
     'notify.check.failed': 'Сейчас не удалось проверить. Попробуйте позже.',
     'notify.tip.title': 'Ваше сочетание на сегодня',
     'notify.test.title': 'Тестовое уведомление',
@@ -8481,6 +8503,7 @@ i18n.sv = {
     'notify.checkNow': 'Sök efter uppdateringar nu',
     'notify.check.upToDate': 'Du har den senaste versionen.',
     'notify.check.newer': 'v{ver} är klar. Öppna Anthkeys för att uppdatera.',
+    'notify.check.working': 'Kontrollerar…',
     'notify.check.failed': 'Kunde inte kontrollera just nu. Försök igen senare.',
     'notify.tip.title': 'Dagens genväg',
     'notify.test.title': 'Testavisering',
@@ -8951,6 +8974,7 @@ i18n.tr = {
     'notify.checkNow': 'Şimdi güncellemeleri denetle',
     'notify.check.upToDate': 'En son sürümü kullanıyorsunuz.',
     'notify.check.newer': 'v{ver} hazır. Güncellemek için Anthkeys\'i açın.',
+    'notify.check.working': 'Denetleniyor…',
     'notify.check.failed': 'Şu anda denetlenemedi. Daha sonra tekrar deneyin.',
     'notify.tip.title': 'Bugünün kısayolun',
     'notify.test.title': 'Test bildirimi',
@@ -9422,6 +9446,7 @@ i18n.vi = {
     'notify.checkNow': 'Kiểm tra cập nhật ngay',
     'notify.check.upToDate': 'Bạn đang dùng bản mới nhất.',
     'notify.check.newer': 'v{ver} đã sẵn sàng. Hãy mở Anthkeys để cập nhật.',
+    'notify.check.working': 'Đang kiểm tra…',
     'notify.check.failed': 'Không kiểm tra được lúc này. Hãy thử lại sau.',
     'notify.tip.title': 'Phím tắt hôm nay',
     'notify.test.title': 'Thông báo thử',
@@ -10652,7 +10677,7 @@ function reportVersionToSW() {
 }
 
 // Ask the worker to run the very same background check on demand.
-function askSWForUpdate(timeoutMs) {
+function askSWForUpdate(timeoutMs, manual) {
   return activeWorker().then(sw => {
     if (!sw) return { state: 'no-worker' };
     return new Promise(resolve => {
@@ -10669,7 +10694,7 @@ function askSWForUpdate(timeoutMs) {
           clearTimeout(timer);
           finish(ev.data);
         };
-        sw.postMessage({ type: 'CHECK_UPDATE_NOW' }, [ch.port2]);
+        sw.postMessage({ type: 'CHECK_UPDATE_NOW', manual: !!manual }, [ch.port2]);
       } catch(e) {
         clearTimeout(timer);
         finish({ state: 'error' });
@@ -10796,7 +10821,6 @@ function renderNotifyUI() {
   const updateWrap = document.getElementById('notifyUpdateWrap');
   const updateToggle = document.getElementById('toggleNotifyUpdate');
   const updateStatus = document.getElementById('notifyUpdateStatus');
-  const checkBtn = document.getElementById('btnCheckUpdate');
   const state = notifyState();
   const on = NOTIFY.isEnabled() && state === 'granted';
   const roomsOn = on && NOTIFY.roomsEnabled();
@@ -10827,7 +10851,6 @@ if (updateStatus) {
     if (!updatesOn) updateStatus.textContent = notifyText('notify.updates.off', '');
     else renderUpdateStatus();
   }
-  if (checkBtn) checkBtn.hidden = state !== 'granted';
   if (testBtn) testBtn.hidden = state !== 'granted';
 }
 
@@ -10892,9 +10915,13 @@ onId('btnCheckUpdate', 'click', async function() {
   const btn = this;
   const prev = btn.disabled;
   btn.disabled = true;
-  const res = await askSWForUpdate(15000);
+  showUpdateCheckResult(notifyText('notify.check.working', 'Checking\u2026'));
+  // This button sits in About and works whether or not notifications are on,
+  // so make sure the worker knows which build to compare against first.
+  reportVersionToSW();
+  const res = await askSWForUpdate(15000, true);
   btn.disabled = prev;
-  const newer = res && (res.state === 'notified' || res.state === 'already-notified');
+  const newer = res && (res.state === 'notified' || res.state === 'already-notified' || res.state === 'available');
   if (newer) {
     showUpdateCheckResult(notifyText('notify.check.newer', 'v{ver} is ready. Open Anthkeys to update.').replace('{ver}', res.latest));
   } else if (res && res.state === 'current') {
@@ -10930,7 +10957,7 @@ if ('serviceWorker' in navigator) {
     const el = document.querySelector('[data-update-mode].active');
     return el ? el.dataset.updateMode : 'auto';
   };
-  navigator.serviceWorker.register('sw.js?v=17').then(reg => {
+  navigator.serviceWorker.register('sw.js?v=18').then(reg => {
     reg.addEventListener('updatefound', () => {
       const newSW = reg.installing;
       if (!newSW) return;
@@ -11060,6 +11087,9 @@ function verCmp(a, b) {
       APP_VERSION = m[1];
       const span = verEl.querySelector('span') || verEl;
       span.textContent = 'v' + APP_VERSION;
+      // The manual check lives in About, so name the running build there too.
+      const inlineVer = document.getElementById('appVersionInline');
+      if (inlineVer) inlineVer.textContent = 'v' + APP_VERSION;
       const helpChip = Array.from(document.querySelectorAll('.help-tip kbd')).find(k => /^v\d/.test(k.textContent));
       if (helpChip) {
         helpChip.textContent = 'v' + APP_VERSION;
@@ -11534,6 +11564,7 @@ function renderGradientAccents() {
 function applyGradientAccent(id) {
   const gc = gradientAccents[id];
   if (!gc) return;
+  setWallpaperAccentFollow(false);
   document.querySelectorAll('.accent-opt').forEach(b => b.classList.remove('active'));
   document.querySelectorAll('.gradient-opt').forEach(b => b.classList.remove('active'));
   const cust = document.getElementById('customAccentBtn');
@@ -11564,6 +11595,7 @@ document.querySelectorAll('.accent-opt').forEach(btn => {
   btn.addEventListener('click', () => {
     clearAccentSelections();
     btn.classList.add('active');
+    setWallpaperAccentFollow(false);
     const c = accents[btn.dataset.accent];
     document.body.style.setProperty('--accent-1', c[0]);
     document.body.style.setProperty('--accent-2', c[1]);
@@ -11585,8 +11617,9 @@ updateAccentPreview();
 
 const _customAccentBtn = document.getElementById('customAccentBtn');
 const _customAccentCopy = document.getElementById('customAccentCopy');
-function applyCustomAccent(hex) {
+function applyCustomAccent(hex, keepWallpaperFollow) {
   if (!/^#[0-9a-fA-F]{6}$/.test(hex)) return false;
+  if (!keepWallpaperFollow) setWallpaperAccentFollow(false);
   const r = parseInt(hex.slice(1,3), 16);
   const g = parseInt(hex.slice(3,5), 16);
   const b = parseInt(hex.slice(5,7), 16);
@@ -11816,6 +11849,124 @@ if (_btnMatchDeviceAccent) {
   });
 }
 
+// ---- Match the accent to the wallpaper (Material You style dynamic colour) ----
+const _wpFollowKey = 'anthkeys-accent-follow-wallpaper';
+function wallpaperAccentFollow() { return lsGet(_wpFollowKey, '') === '1'; }
+function setWallpaperAccentFollow(on) {
+  if (on) lsSet(_wpFollowKey, '1');
+  else lsRemove(_wpFollowKey);
+  const btn = document.getElementById('btnMatchWallpaperAccent');
+  if (btn) btn.classList.toggle('active', !!on);
+}
+function wallpaperImageSource() {
+  const saved = lsGet('anthkeys-wallpaper', '');
+  if (saved && saved.indexOf('data:') === 0) return saved;
+  const css = getComputedStyle(document.body).getPropertyValue('--bg-img') || '';
+  const m = css.match(/url\((["']?)(.*?)\1\)/);
+  return m && m[2] && m[2].indexOf('data:') === 0 ? m[2] : '';
+}
+function _wpRgbToHsl(r, g, b) {
+  r /= 255; g /= 255; b /= 255;
+  const max = Math.max(r, g, b), min = Math.min(r, g, b), d = max - min;
+  let h = 0;
+  if (d !== 0) {
+    if (max === r) h = ((g - b) / d) % 6;
+    else if (max === g) h = (b - r) / d + 2;
+    else h = (r - g) / d + 4;
+    h *= 60;
+    if (h < 0) h += 360;
+  }
+  const l = (max + min) / 2;
+  const s = d === 0 ? 0 : d / (1 - Math.abs(2 * l - 1));
+  return [h, s, l];
+}
+// Keep the wallpaper's hue, then pull it into the mid-tone band the presets use
+// so the accent stays readable on both light and dark surfaces.
+function _wpTuneAccent(r, g, b) {
+  const hsl = _wpRgbToHsl(r, g, b);
+  let s = hsl[1], l = hsl[2];
+  if (s < 0.34) s = 0.34;
+  if (s > 0.80) s = 0.80;
+  if (l < 0.40) l = 0.40;
+  if (l > 0.56) l = 0.56;
+  // _hslToRgb takes percentages, not 0-1 fractions.
+  const rgb = _hslToRgb(hsl[0], s * 100, l * 100).map(v => Math.max(0, Math.min(255, Math.round(v))));
+  return '#' + rgb.map(v => v.toString(16).padStart(2, '0')).join('');
+}
+function _wpSamplePixels(src, size, cb) {
+  const img = new Image();
+  img.onload = function() {
+    try {
+      const w = img.naturalWidth || img.width;
+      const h = img.naturalHeight || img.height;
+      if (!w || !h) return cb(null);
+      const scale = size / Math.max(w, h);
+      const cv = document.createElement('canvas');
+      cv.width = Math.max(1, Math.round(w * scale));
+      cv.height = Math.max(1, Math.round(h * scale));
+      const cx = cv.getContext('2d', { willReadFrequently: true });
+      if (!cx) return cb(null);
+      cx.drawImage(img, 0, 0, cv.width, cv.height);
+      cb(cx.getImageData(0, 0, cv.width, cv.height).data);
+    } catch (err) { cb(null); }
+  };
+  img.onerror = function() { cb(null); };
+  img.src = src;
+}
+// Quantize into colour families, then favour the most colourful popular family,
+// the way Material You pulls its seed colour out of a wallpaper.
+function extractWallpaperAccent(src) {
+  return new Promise(function(resolve) {
+    _wpSamplePixels(src, 48, function(data) {
+      if (!data) return resolve(null);
+      const buckets = new Map();
+      for (let i = 0; i < data.length; i += 4) {
+        if (data[i + 3] < 125) continue;
+        const r = data[i], g = data[i + 1], b = data[i + 2];
+        const key = ((r >> 4) << 8) | ((g >> 4) << 4) | (b >> 4);
+        let e = buckets.get(key);
+        if (!e) { e = { n: 0, r: 0, g: 0, b: 0 }; buckets.set(key, e); }
+        e.n++; e.r += r; e.g += g; e.b += b;
+      }
+      let best = null, bestScore = -1;
+      buckets.forEach(function(e) {
+        const hsl = _wpRgbToHsl(e.r / e.n, e.g / e.n, e.b / e.n);
+        if (hsl[2] < 0.10 || hsl[2] > 0.94) return;
+        const score = e.n * (0.28 + hsl[1] * 1.72);
+        if (score > bestScore) {
+          bestScore = score;
+          best = [e.r / e.n, e.g / e.n, e.b / e.n];
+        }
+      });
+      resolve(best ? _wpTuneAccent(best[0], best[1], best[2]) : null);
+    });
+  });
+}
+function applyWallpaperAccent(silent) {
+  const src = wallpaperImageSource();
+  if (!src) {
+    if (!silent) showToastMsg(tx('accent.wallpaper-fail'));
+    return Promise.resolve(false);
+  }
+  return extractWallpaperAccent(src).then(function(hex) {
+    if (!hex) {
+      if (!silent) showToastMsg(tx('accent.wallpaper-fail'));
+      return false;
+    }
+    setWallpaperAccentFollow(true);
+    applyCustomAccent(hex.toUpperCase(), true);
+    if (!silent) showToastMsg(tx('accent.wallpaper-applied'));
+    return true;
+  });
+}
+const _btnMatchWallpaperAccent = document.getElementById('btnMatchWallpaperAccent');
+if (_btnMatchWallpaperAccent) {
+  _btnMatchWallpaperAccent.addEventListener('click', function() {
+    _btnMatchWallpaperAccent.disabled = true;
+    applyWallpaperAccent(false).then(function() { _btnMatchWallpaperAccent.disabled = false; });
+  });
+}
+
 // ---- Accent color presets ----
 const accentPresetsContainer = document.getElementById('accentPresets');
 let accentPresets = JSON.parse(lsGet('anthkeys-accent-presets') || '[]');
@@ -11855,6 +12006,7 @@ if (accentPresetsContainer) {
       const p = accentPresets[idx];
       if (!p) return;
       const hex = p.hex;
+      setWallpaperAccentFollow(false);
       const r = parseInt(hex.slice(1,3), 16);
       const g = parseInt(hex.slice(3,5), 16);
       const b = parseInt(hex.slice(5,7), 16);
@@ -11921,6 +12073,8 @@ function applyWallpaper(dataUrl) {
   document.body.style.setProperty('--bg-img', `url(${dataUrl})`);
   document.body.classList.add('has-wallpaper');
   lsSet('anthkeys-wallpaper', dataUrl);
+  // Dynamic colour: re-derive the accent whenever the wallpaper changes.
+  if (wallpaperAccentFollow()) applyWallpaperAccent(true);
 }
 function loadWallpaper() {
   const saved = lsGet('anthkeys-wallpaper', '');
@@ -11928,6 +12082,7 @@ function loadWallpaper() {
   else if (saved) lsRemove('anthkeys-wallpaper');
 }
 loadWallpaper();
+if (wallpaperAccentFollow()) applyWallpaperAccent(true);
 showDailyTip();
 
 const wallpaperInput = document.getElementById('wallpaperInput');

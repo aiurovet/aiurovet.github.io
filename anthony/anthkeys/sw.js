@@ -1,4 +1,4 @@
-const CACHE = 'anthkeys-v52.4';
+const CACHE = 'anthkeys-v52.5';
 const CFG_CACHE = 'anthkeys-notify-cfg';
 const CFG_URL = 'notify-cfg.json';
 const TIP_TAG = 'anthkeys-daily-tip';
@@ -88,15 +88,21 @@ function notifyUpdateAvailable(cfg, latest) {
 
 // Runs from periodicsync / activate / an explicit page request, so the user
 // hears about a new version without having to open the app.
-function checkUpdateInBackground() {
+//
+// manual=true comes from the "Check for updates now" button, which now lives
+// in About and must work whether or not notifications are switched on. It
+// compares versions and reports what it found, but never raises a notification:
+// the answer is already on screen, and permission may not even exist.
+function checkUpdateInBackground(manual) {
   return readCfg().then(cfg => {
     if (!cfg) return { state: 'no-config' };
-    if (cfg.updates === false) return { state: 'disabled' };
+    if (cfg.updates === false && !manual) return { state: 'disabled' };
     if (!cfg.version) return { state: 'unknown-version' };
     return latestPublishedVersion().then(latest => {
       if (!latest) return { state: 'offline', running: cfg.version };
       if (verCmp(latest, cfg.version) <= 0) return { state: 'current', latest: latest, running: cfg.version };
       if (cfg.notified === latest) return { state: 'already-notified', latest: latest, running: cfg.version };
+      if (manual) return { state: 'available', latest: latest, running: cfg.version };
       return notifyUpdateAvailable(cfg, latest)
         .then(() => patchCfg({ notified: latest }))
         .then(() => ({ state: 'notified', latest: latest, running: cfg.version }))
@@ -149,7 +155,7 @@ self.addEventListener('message', e => {
   }
   if (data.type === 'CHECK_UPDATE_NOW') {
     const port = e.ports && e.ports[0];
-    e.waitUntil(checkUpdateInBackground().then(res => {
+    e.waitUntil(checkUpdateInBackground(!!data.manual).then(res => {
       if (port) {
         try { port.postMessage(res); } catch (err) { }
       }
