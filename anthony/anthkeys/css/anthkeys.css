@@ -638,11 +638,13 @@ body.glass-subtle .modal, body.glass-subtle .ctx-menu, body.glass-subtle .search
    creep back onto it and a full-width blur there reads as a stray square under
    the title. */
 @media (max-width: 480px) {
-  body.glass-subtle .top-bar {
+  body.glass-off .top-bar, body.glass-subtle .top-bar {
     backdrop-filter: none !important; -webkit-backdrop-filter: none !important;
     background: none !important; border: none !important; box-shadow: none !important;
   }
-}body.perf-mode .panel, body.perf-mode .dict-panel, body.perf-mode .setting-group, body.perf-mode .top-bar,
+}
+
+body.perf-mode .panel, body.perf-mode .dict-panel, body.perf-mode .setting-group, body.perf-mode .top-bar,
 body.perf-mode .note, body.perf-mode .daily-tip, body.perf-mode .dict-toggle, body.perf-mode .pill,
 body.perf-mode .modal, body.perf-mode .ctx-menu, body.perf-mode .search-bar input {
   backdrop-filter: none !important; -webkit-backdrop-filter: none !important; animation: none !important; transition: none !important;

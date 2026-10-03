@@ -6,6 +6,11 @@
 const I18N_WN = window.I18N_WN || {};
 
 I18N_WN.es = {
+  'v52.10': [
+    'Corregido: el modo «Plano» ya no pinta un bloque sólido debajo del título en los teléfonos.',
+  ],
+
+
   'v52.9': [
     'Eliminado: la opción «cristal líquido» ya no está; siguen Normal, Plano y Sutil.',
   ],
@@ -270,6 +275,11 @@ I18N_WN.es = {
 };
 
 I18N_WN.fr = {
+  'v52.10': [
+    'Corrigé : le mode « Plat » ne dessine plus de bloc solide sous le titre sur les téléphones.',
+  ],
+
+
   'v52.9': [
     'Supprimé : l’option « Verre liquide » a disparu ; Normal, Plat et Subtil restent.',
   ],
@@ -534,6 +544,11 @@ I18N_WN.fr = {
 };
 
 I18N_WN.de = {
+  'v52.10': [
+    'Behoben: Der Modus „Matt“ malt auf Telefonen keinen soliden Block mehr unter den Titel.',
+  ],
+
+
   'v52.9': [
     'Entfernt: Die Option „Flüssigglas“ ist weg – Normal, Matt und Sanft bleiben.',
   ],
@@ -798,6 +813,11 @@ I18N_WN.de = {
 };
 
 I18N_WN.it = {
+  'v52.10': [
+    'Corretto: la modalità «Piatto» non dipinge più un blocco pieno sotto il titolo sui telefoni.',
+  ],
+
+
   'v52.9': [
     'Rimosso: l’opzione «Vetro liquido» non c’è più — Restano Normale, Piatto e Delicato.',
   ],
@@ -1062,6 +1082,11 @@ I18N_WN.it = {
 };
 
 I18N_WN.pt = {
+  'v52.10': [
+    'Corrigido: o modo «Plano» já não pinta um bloco sólido por baixo do título nos telemóveis.',
+  ],
+
+
   'v52.9': [
     'Removido: a opção «vidro líquido» desapareceu — permanecem Normal, Plano e Sutil.',
   ],
@@ -1326,6 +1351,11 @@ I18N_WN.pt = {
 };
 
 I18N_WN.nl = {
+  'v52.10': [
+    'Opgelost: de stand ‘Plat’ tekent op telefoons geen solide blok meer onder de titel.',
+  ],
+
+
   'v52.9': [
     'Verwijderd: de stand ‘Vloeibaar glas’ is weg — Normaal, Plat en Subtiel blijven.',
   ],
@@ -1590,6 +1620,11 @@ I18N_WN.nl = {
 };
 
 I18N_WN.ja = {
+  'v52.10': [
+    '修正：「フラット」モードで、スマートフォンのタイトル下に塗りつぶしが残らないようにしました。',
+  ],
+
+
   'v52.9': [
     '削除：「リキッドグラス」选项を廃止しました。標準・フラット・サブルの3種類です。',
   ],
@@ -1854,6 +1889,11 @@ I18N_WN.ja = {
 };
 
 I18N_WN.ru = {
+  'v52.10': [
+    'Исправлено: режим «Плоский» больше не рисует сплошной блок под заголовком на телефонах.',
+  ],
+
+
   'v52.9': [
     'Удалено: вариант «Жидкое стекло» больше нет — остались Обычный, Плоский и Нежный.',
   ],
@@ -2118,6 +2158,11 @@ I18N_WN.ru = {
 };
 
 I18N_WN.ko = {
+  'v52.10': [
+    '수정: 플랫 모드에서 휴대폰 화면의 제목 아래에 칠해진 블록이 더 이상 나타나지 않습니다.',
+  ],
+
+
   'v52.9': [
     '삭제: 리퀴드 글래스 옵션을 없앴습니다 — 일반, 플랫, 서브틀만 남습니다.',
   ],
@@ -2382,6 +2427,11 @@ I18N_WN.ko = {
 };
 
 I18N_WN.pl = {
+  'v52.10': [
+    'Poprawiono: tryb „Płaski” nie rysuje już pełnego bloku pod tytułem na telefonach.',
+  ],
+
+
   'v52.9': [
     'Usunięto: opcja „Cieczącego szkła” zniknęła — zostają Zwykły, Płaski i Delikatny.',
   ],
@@ -2646,6 +2696,11 @@ I18N_WN.pl = {
 };
 
 I18N_WN.tr = {
+  'v52.10': [
+    'Düzeltildi: Düz mod artık telefonlarda başlığın altına dolu bir blok çizmiyor.',
+  ],
+
+
   'v52.9': [
     'Kaldırıldı: Sıvı cam seçeneği artık yok — Normal, Düz ve Hafif kalıyor.',
   ],
@@ -2910,6 +2965,11 @@ I18N_WN.tr = {
 };
 
 I18N_WN.vi = {
+  'v52.10': [
+    'Đã sửa: chế độ «Phẳng» không còn tô một khối đặc bên dưới tiêu đề trên điện thoại.',
+  ],
+
+
   'v52.9': [
     'Đã bỏ: tuỳ chọn «Kính lỏng» không còn — vẫn có Bình thường, Phẳng và Nhẹ.',
   ],
@@ -3174,6 +3234,11 @@ I18N_WN.vi = {
 };
 
 I18N_WN.ar = {
+  'v52.10': [
+    'إصلاح: لم يعد وضع «مسطّح» يرسم كتلة صلبة أسفل العنوان على الهواتف.',
+  ],
+
+
   'v52.9': [
     'أُزيل: خيار «زجاج سائل» لم يعد موجودًا — باقٍ عادي مسطّح وخفيف.',
   ],
@@ -3438,6 +3503,11 @@ I18N_WN.ar = {
 };
 
 I18N_WN.hi = {
+  'v52.10': [
+    'ठीक किया गया: फ़्लैट मोड अब फ़ोन पर शीर्षक के नीचे कोई ठोस ब्लॉक नहीं बनाता।',
+  ],
+
+
   'v52.9': [
     'हटाया गया: लिक्विड ग्लास विकल्प हटा दिया गया — सामान्य, फ़्लैट और हल्का बाकी है।',
   ],
@@ -3702,6 +3772,11 @@ I18N_WN.hi = {
 };
 
 I18N_WN.sv = {
+  'v52.10': [
+    'Rättat: läget ”Platt” målar inte längre en solid block under titeln på telefoner.',
+  ],
+
+
   'v52.9': [
     'Borttagen: valet ”Vätskeglass” är slut — Normal, Platt och Subtil finns kvar.',
   ],
@@ -3966,6 +4041,11 @@ I18N_WN.sv = {
 };
 
 I18N_WN.da = {
+  'v52.10': [
+    'Rettet: indstillingen ”Flad” tegner ikke længere en massiv blok under titlen på telefoner.',
+  ],
+
+
   'v52.9': [
     'Fjernet: indstillingen ”Væskglas” er væk — Normal, Flad og Let bliver.',
   ],
@@ -4230,6 +4310,11 @@ I18N_WN.da = {
 };
 
 I18N_WN.fi = {
+  'v52.10': [
+    'Korjattu: ”Tasainen”-tila ei enää piirtävä puhelimissa kiinteää lohkoa otsikon alle.',
+  ],
+
+
   'v52.9': [
     'Poistettu: ”Nestemäinen lasi” -asetus on poistettu — Normaali, Tasainen ja Hillitty jäävät.',
   ],
@@ -4494,6 +4579,11 @@ I18N_WN.fi = {
 };
 
 I18N_WN.no = {
+  'v52.10': [
+    'Rettet: innstillingen ”Flat” tegner ikke lenger et solidt blokk under tittelen på telefoner.',
+  ],
+
+
   'v52.9': [
     'Fjernet: innstillingen ”Væskeglass” er borte — Normal, Flat og Mykt blir igjen.',
   ],
@@ -4758,6 +4848,11 @@ I18N_WN.no = {
 };
 
 I18N_WN.cs = {
+  'v52.10': [
+    'Opraveno: režim „Ploché“ už na telefonech nekreslí plnou barev pod nadpisem.',
+  ],
+
+
   'v52.9': [
     'Odebráno: možnost „Tekuté sklo“ zmizela — zůstává Normální, Ploché a Jemné.',
   ],
@@ -5022,6 +5117,11 @@ I18N_WN.cs = {
 };
 
 I18N_WN.hu = {
+  'v52.10': [
+    'Javítva: a „Sík” mód már nem rajzol tömör blokkot a cím alatt a telefonokon.',
+  ],
+
+
   'v52.9': [
     'Eltávolítva: a „Folyékony üveg” lehetőség megszűnt — marad: Normál, Sík és Finom.',
   ],
