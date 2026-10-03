@@ -80,13 +80,12 @@ const i18n = {
     'accent.wallpaper-applied': 'Accent matched to your wallpaper',
     'accent.wallpaper-follow': 'Keeps your accent matched to your wallpaper',
     'accent.wallpaper-fail': 'Could not read your wallpaper',
-    'accent.wallpaper-none': 'Set a wallpaper or design style first',    'setting.glass': 'Liquid glass',    'update.install': 'Install Anthkeys',
+    'accent.wallpaper-none': 'Set a wallpaper or design style first',    'setting.glass': 'Transparency',    'update.install': 'Install Anthkeys',
     'update.install-note': 'Installed apps can check for updates in the background.',
 
     'glass.normal': 'Normal',
     'glass.off': 'Flat',
     'glass.subtle': 'Subtle',
-    'glass.liquid': 'Liquid glass',
     'accent.device-applied': 'Device accent applied',
     'accent.device-fail': 'Device accent not available here \u2014 open the installed app',
     'linux.distro': 'Distribution',
@@ -10337,12 +10336,12 @@ function applyAppsFilter() {
   setAppsTabLabel();
 }
 
-// Liquid glass is a body-level class so it can scale the frosting on every
+// Transparency is a body-level class so it can scale the frosting on every
 // design style at once. 'normal' keeps whatever the style already ships.
-const _akGlassLevels = ['normal', 'off', 'subtle', 'liquid'];
+const _akGlassLevels = ['normal', 'off', 'subtle'];
 function applyGlassLevel(level) {
   const v = _akGlassLevels.includes(level) ? level : 'normal';
-  document.body.classList.remove('glass-normal', 'glass-off', 'glass-subtle', 'glass-liquid');
+  document.body.classList.remove('glass-normal', 'glass-off', 'glass-subtle');
   document.body.classList.add('glass-' + v);
   document.querySelectorAll('[data-glass]').forEach(b => b.classList.toggle('active', b.dataset.glass === v));
 }
@@ -11206,7 +11205,7 @@ if ('serviceWorker' in navigator) {
     const el = document.querySelector('[data-update-mode].active');
     return el ? el.dataset.updateMode : 'auto';
   };
-  navigator.serviceWorker.register('sw.js?v=20').then(reg => {
+  navigator.serviceWorker.register('sw.js?v=21').then(reg => {
     reg.addEventListener('updatefound', () => {
       const newSW = reg.installing;
       if (!newSW) return;

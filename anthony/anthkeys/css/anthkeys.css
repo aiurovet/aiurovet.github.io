@@ -611,12 +611,11 @@ body::before { background-size: cover; background-position: center; background-r
 
 /* Gradient backdrops need to cover the viewport like a photo does. */
 body::before { background-size: cover; background-position: center; background-repeat: no-repeat; }
-/* ---- Liquid glass transparency ----
+/* ---- Panel transparency ----
    Every design style ships its own blur, so this sits on top of them all and
-   scales the frosting from off through subtle to a full liquid-glass look. */
+   scales the frosting from off (Flat) through Subtle to the plain Normal look. */
 :root { --glass-blur: 30px; --glass-sat: 1.6; --glass-veil: .58; --glass-edge: rgba(255,255,255,.34); --glass-shadow: 0 10px 30px rgba(15,23,42,.13); }
 body.glass-subtle { --glass-blur: 8px; --glass-sat: 1.2; --glass-veil: .82; --glass-edge: rgba(255,255,255,.2); --glass-shadow: 0 2px 10px rgba(15,23,42,.08); }
-body.glass-liquid { --glass-blur: 64px; --glass-sat: 2.4; --glass-veil: .3; --glass-edge: rgba(255,255,255,.5); --glass-shadow: 0 18px 50px rgba(15,23,42,.2); }
 
 body.glass-off .panel, body.glass-off .dict-panel, body.glass-off .setting-group, body.glass-off .top-bar,
 body.glass-off .note, body.glass-off .daily-tip, body.glass-off .dict-toggle, body.glass-off .pill,
@@ -628,58 +627,22 @@ body.glass-off .modal, body.glass-off .ctx-menu, body.glass-off .search-bar inpu
 
 body.glass-subtle .panel, body.glass-subtle .dict-panel, body.glass-subtle .setting-group, body.glass-subtle .top-bar,
 body.glass-subtle .note, body.glass-subtle .daily-tip, body.glass-subtle .dict-toggle, body.glass-subtle .pill,
-body.glass-subtle .modal, body.glass-subtle .ctx-menu, body.glass-subtle .search-bar input,
-body.glass-liquid .panel, body.glass-liquid .dict-panel, body.glass-liquid .setting-group, body.glass-liquid .top-bar,
-body.glass-liquid .note, body.glass-liquid .daily-tip, body.glass-liquid .dict-toggle, body.glass-liquid .pill,
-body.glass-liquid .modal, body.glass-liquid .ctx-menu, body.glass-liquid .search-bar input {
+body.glass-subtle .modal, body.glass-subtle .ctx-menu, body.glass-subtle .search-bar input {
   backdrop-filter: blur(var(--glass-blur)) saturate(var(--glass-sat)) !important;
   -webkit-backdrop-filter: blur(var(--glass-blur)) saturate(var(--glass-sat)) !important;
   box-shadow: var(--glass-shadow) !important;
 }
 
-/* Liquid glass: a thin translucent pane with a lit top edge and a soft rim. */
-body.glass-liquid .panel, body.glass-liquid .dict-panel, body.glass-liquid .setting-group,
-body.glass-liquid .modal, body.glass-liquid .ctx-menu {
-  background: linear-gradient(135deg, rgba(255,255,255,calc(var(--glass-veil) + .14)), rgba(255,255,255,var(--glass-veil))) !important;
-  border: 1px solid var(--glass-edge) !important;
-  box-shadow: var(--glass-shadow), inset 0 1px 0 rgba(255,255,255,.7), inset 0 -1px 0 rgba(255,255,255,.22) !important;
-}
-body.glass-liquid .pill, body.glass-liquid .dict-toggle, body.glass-liquid .top-bar, body.glass-liquid .search-bar input {
-  background: rgba(255,255,255,calc(var(--glass-veil) + .06)) !important;
-  border: 1px solid var(--glass-edge) !important;
-}
-/* On dark surfaces a white wash reads as fog, so use a faint light sheen instead. */
-body.dark.glass-liquid .panel, body.dark.glass-liquid .dict-panel, body.dark.glass-liquid .setting-group,
-body.dark.glass-liquid .modal, body.midnight.glass-liquid .panel, body.midnight.glass-liquid .dict-panel,
-body.midnight.glass-liquid .setting-group, body.midnight.glass-liquid .modal, body.nebula.glass-liquid .panel,
-body.nebula.glass-liquid .dict-panel, body.nebula.glass-liquid .setting-group, body.nebula.glass-liquid .modal,
-body.aurora.glass-liquid .panel, body.aurora.glass-liquid .dict-panel, body.aurora.glass-liquid .setting-group,
-body.aurora.glass-liquid .modal, body.cocoa.glass-liquid .panel, body.cocoa.glass-liquid .dict-panel,
-body.cocoa.glass-liquid .setting-group, body.cocoa.glass-liquid .modal, body.storm.glass-liquid .panel,
-body.storm.glass-liquid .dict-panel, body.storm.glass-liquid .setting-group, body.storm.glass-liquid .modal,
-body.twilight.glass-liquid .panel, body.twilight.glass-liquid .dict-panel, body.twilight.glass-liquid .setting-group,
-body.twilight.glass-liquid .modal, body.cherry.glass-liquid .panel, body.cherry.glass-liquid .dict-panel,
-body.cherry.glass-liquid .setting-group, body.cherry.glass-liquid .modal, body.volcano.glass-liquid .panel,
-body.volcano.glass-liquid .dict-panel, body.volcano.glass-liquid .setting-group, body.volcano.glass-liquid .modal,
-body.galaxy.glass-liquid .panel, body.galaxy.glass-liquid .dict-panel, body.galaxy.glass-liquid .setting-group,
-body.galaxy.glass-liquid .modal {
-  background: linear-gradient(135deg, rgba(255,255,255,.16), rgba(255,255,255,.05)) !important;
-  border-color: rgba(255,255,255,.2) !important;
-  box-shadow: var(--glass-shadow), inset 0 1px 0 rgba(255,255,255,.28), inset 0 -1px 0 rgba(255,255,255,.1) !important;
-}
-body.dark.glass-liquid .pill, body.dark.glass-liquid .dict-toggle, body.dark.glass-liquid .top-bar,
-body.dark.glass-liquid .search-bar input { background: rgba(255,255,255,.1) !important; border-color: rgba(255,255,255,.16) !important; }
 /* On phones the top bar is a bare grid (see the small-screen rule near the top of
-   this file). The glass panes above use !important, so without this they would creep
-   back onto it and a full-width blur there reads as a stray square under the title. */
+   this file). The rules above use !important, so without this the frosting would
+   creep back onto it and a full-width blur there reads as a stray square under
+   the title. */
 @media (max-width: 480px) {
-  body.glass-subtle .top-bar, body.glass-liquid .top-bar, body.glass-liquid .top-bar * {
+  body.glass-subtle .top-bar {
     backdrop-filter: none !important; -webkit-backdrop-filter: none !important;
     background: none !important; border: none !important; box-shadow: none !important;
   }
-}
-/* Performance mode still wins over any glass level. */
-body.perf-mode .panel, body.perf-mode .dict-panel, body.perf-mode .setting-group, body.perf-mode .top-bar,
+}body.perf-mode .panel, body.perf-mode .dict-panel, body.perf-mode .setting-group, body.perf-mode .top-bar,
 body.perf-mode .note, body.perf-mode .daily-tip, body.perf-mode .dict-toggle, body.perf-mode .pill,
 body.perf-mode .modal, body.perf-mode .ctx-menu, body.perf-mode .search-bar input {
   backdrop-filter: none !important; -webkit-backdrop-filter: none !important; animation: none !important; transition: none !important;

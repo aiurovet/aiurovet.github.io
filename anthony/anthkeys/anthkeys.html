@@ -28,7 +28,7 @@
   <script>if (location.protocol === 'file:') document.getElementById('manifestLink').remove();</script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=Roboto:wght@400;500;600;700&family=Open+Sans:wght@400;500;600;700&family=Nunito:wght@400;500;600;700&family=Lato:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700&family=Work+Sans:wght@400;500;600;700&family=Rubik:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&family=Source+Sans+3:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&family=Fira+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/anthkeys.css?v=115">
+  <link rel="stylesheet" href="css/anthkeys.css?v=116">
 </head>
 <body class="light style-m3 size-medium font-google-sans">
  <div class="container">
@@ -829,9 +829,15 @@
                 <p class="whatsnew-sub" data-i18n="whatsnew.sub">Recent changes to Anthkeys</p>
                 <select id="whatsnewSelect" aria-label="Version" style="width:100%;padding:.45rem .7rem;border:1px solid var(--outline-variant);border-radius:var(--radius-sm);background:var(--surface);color:var(--text);font:var(--size) var(--font);font-size:.8rem;margin-bottom:.6rem;box-sizing:border-box;outline:none"></select>
                                 <div class="wn-entry">
+                  <div class="wn-ver">v52.9 <span class="wn-date">Oct 4, 2026</span></div>
+                  <ul>
+                    <li>Removed: the Liquid glass option is gone &mdash; Normal, Flat and Subtle remain.</li>
+                  </ul>
+                </div>
+                <div class="wn-entry">
                   <div class="wn-ver">v52.8 <span class="wn-date">Oct 4, 2026</span></div>
                   <ul>
-                    <li>Fixed: on phones, Liquid glass no longer left a translucent square under the title.</li>
+                    <li>Fixed: on phones, panel transparency no longer left a translucent square under the title\.</li>
                   </ul>
                 </div>
                 <div class="wn-entry">
@@ -1718,7 +1724,6 @@
           <button class="theme-opt active" data-glass="normal"><span data-i18n="glass.normal">Normal</span></button>
           <button class="theme-opt" data-glass="off"><span data-i18n="glass.off">Flat</span></button>
           <button class="theme-opt" data-glass="subtle"><span data-i18n="glass.subtle">Subtle</span></button>
-          <button class="theme-opt" data-glass="liquid"><span data-i18n="glass.liquid">Liquid glass</span></button>
         </div>
       </div>
       <div class="setting-group">
@@ -1849,7 +1854,7 @@
   <script src="js/qrcode.js"></script>
   <script src="js/i18n-recent.js"></script>
 <script src="js/i18n-wn.js"></script>
-<script src="js/anthkeys.js?v=52.8">
+<script src="js/anthkeys.js?v=52.9">
 </script>
 </body>
 </html>

@@ -5,10 +5,14 @@
    leaves the English markup in place. */
 const I18N_WN = window.I18N_WN || {};
 
-I18N_WN.es = {  'v52.8': [
-    'Corregido: en los teléfonos, el modo «cristal líquido» ya no deja un cuadrado translúcido debajo del título.',
+I18N_WN.es = {
+  'v52.9': [
+    'Eliminado: la opción «cristal líquido» ya no está; siguen Normal, Plano y Sutil.',
   ],
 
+  'v52.8': [
+    'Corregido: en los teléfonos, el modo «cristal líquido» ya no deja un cuadrado translúcido debajo del título.',
+  ],
 
   'v52.7': [
     'Nuevo: un ajuste de «cristal líquido» que vuelve los paneles translúcidos y brillantes, como el cristal de Apple.',
@@ -16,7 +20,6 @@ I18N_WN.es = {  'v52.8': [
     'Nuevo: más fuentes para elegir: Nunito, Lato, Montserrat, Work Sans, Rubik, Poppins, Source Sans 3, IBM Plex Sans, Fira Sans y JetBrains Mono.',
     'Nuevo: las alertas de actualización en segundo plano ahora dicen lo que necesitan: una Anthkeys instalada. En Acerca hay un botón «Instalar Anthkeys» y el worker puede comprobar versiones con la app cerrada.',
   ],
-
 
   'v52.6': [
     'Corregido: «Coincidir con el fondo» ahora funciona con los fondos integrados en los estilos de diseño, no solo con los fondos que subes tú.',
@@ -266,10 +269,14 @@ I18N_WN.es = {  'v52.8': [
   'v1': ['La primera versi&oacute;n de Anthkeys: los atajos de teclado diarios de Windows, macOS, Linux y ChromeOS en una sola p&aacute;gina.']
 };
 
-I18N_WN.fr = {  'v52.8': [
-    'Corrigé : sur les téléphones, le mode « Verre liquide » ne laisse plus de carré translucide sous le titre.',
+I18N_WN.fr = {
+  'v52.9': [
+    'Supprimé : l’option « Verre liquide » a disparu ; Normal, Plat et Subtil restent.',
   ],
 
+  'v52.8': [
+    'Corrigé : sur les téléphones, le mode « Verre liquide » ne laisse plus de carré translucide sous le titre.',
+  ],
 
   'v52.7': [
     'Nouveau : un réglage « Verre liquide » qui rend les panneaux translucides et brillants, comme le verre d\'Apple.',
@@ -277,7 +284,6 @@ I18N_WN.fr = {  'v52.8': [
     'Nouveau : plus de polices au choix : Nunito, Lato, Montserrat, Work Sans, Rubik, Poppins, Source Sans 3, IBM Plex Sans, Fira Sans et JetBrains Mono.',
     'Nouveau : les alertes de mise à jour en arrière-plan disent maintenant ce qu\'elles demandent : une Anthkeys installée. À propos, un bouton « Installer Anthkeys » permet au worker de vérifier les versions même quand l\'app est fermée.',
   ],
-
 
   'v52.6': [
     'Corrigé : « Concordance avec le fond d’écran » fonctionne désormais avec les fonds intégrés aux styles de design, et pas seulement avec ceux que vous téléversez.',
@@ -527,10 +533,14 @@ I18N_WN.fr = {  'v52.8': [
   'v1': ['La premi&egrave;re version d&rsquo;Anthkeys : les raccourcis clavier quotidiens de Windows, macOS, Linux et ChromeOS sur une seule page.']
 };
 
-I18N_WN.de = {  'v52.8': [
-    'Behoben: Auf Telefonen hinterlässt der Modus „Flüssigglas“ kein durchscheinendes Quadrat mehr unter dem Titel.',
+I18N_WN.de = {
+  'v52.9': [
+    'Entfernt: Die Option „Flüssigglas“ ist weg – Normal, Matt und Sanft bleiben.',
   ],
 
+  'v52.8': [
+    'Behoben: Auf Telefonen hinterlässt der Modus „Flüssigglas“ kein durchscheinendes Quadrat mehr unter dem Titel.',
+  ],
 
   'v52.7': [
     'Neu: eine Einstellung „Flüssigglas“, die die Bedienfelder durchscheinend und glänzend macht wie Apples Glas.',
@@ -538,7 +548,6 @@ I18N_WN.de = {  'v52.8': [
     'Neu: mehr Schriften zur Auswahl: Nunito, Lato, Montserrat, Work Sans, Rubik, Poppins, Source Sans 3, IBM Plex Sans, Fira Sans und JetBrains Mono.',
     'Neu: Update-Hinweise im Hintergrund sagen jetzt, was sie brauchen: eine installierte Anthkeys. Unter „Über“ gibt es „Anthkeys installieren“, damit der Worker auch bei geschlossener App nach Versionen suchen kann.',
   ],
-
 
   'v52.6': [
     'Behoben: »Mit dem Hintergrund abgleichen« funktioniert jetzt auch mit den Hintergrundbildern der Designstile, nicht nur mit selbst hochgeladenen.',
@@ -788,10 +797,14 @@ I18N_WN.de = {  'v52.8': [
   'v1': ['Die erste Version von Anthkeys &mdash; alle t&auml;glichen Tastenk&uuml;rzel f&uuml;r Windows, macOS, Linux und ChromeOS auf einer Seite.']
 };
 
-I18N_WN.it = {  'v52.8': [
-    'Corretto: sui telefoni la modalità «Vetro liquido» non lascia più un quadrato traslucido sotto il titolo.',
+I18N_WN.it = {
+  'v52.9': [
+    'Rimosso: l’opzione «Vetro liquido» non c’è più — Restano Normale, Piatto e Delicato.',
   ],
 
+  'v52.8': [
+    'Corretto: sui telefoni la modalità «Vetro liquido» non lascia più un quadrato traslucido sotto il titolo.',
+  ],
 
   'v52.7': [
     'Nuovo: un\'impostazione «Vetro liquido» che rende i pannelli traslucidi e lucenti come il vetro di Apple.',
@@ -799,7 +812,6 @@ I18N_WN.it = {  'v52.8': [
     'Nuovo: più font tra cui scegliere: Nunito, Lato, Montserrat, Work Sans, Rubik, Poppins, Source Sans 3, IBM Plex Sans, Fira Sans e JetBrains Mono.',
     'Nuovo: gli avvisi di aggiornamento in background ora dicono cosa serve: un Anthkeys installato. In Informazioni c\'è «Installa Anthkeys», così il worker può controllare le versioni anche ad app chiusa.',
   ],
-
 
   'v52.6': [
     'Corretto: «Abbina allo sfondo» ora funziona anche con gli sfondi integrati negli stili di design, non solo con quelli che carichi tu.',
@@ -1049,10 +1061,14 @@ I18N_WN.it = {  'v52.8': [
   'v1': ['La prima versione di Anthkeys: tutte le scorciatoie da tastiera quotidiane per Windows, macOS, Linux e ChromeOS in una sola pagina.']
 };
 
-I18N_WN.pt = {  'v52.8': [
-    'Corrigido: nos telemóveis, o modo «vidro líquido» já não deixa um quadrado translúcido por baixo do título.',
+I18N_WN.pt = {
+  'v52.9': [
+    'Removido: a opção «vidro líquido» desapareceu — permanecem Normal, Plano e Sutil.',
   ],
 
+  'v52.8': [
+    'Corrigido: nos telemóveis, o modo «vidro líquido» já não deixa um quadrado translúcido por baixo do título.',
+  ],
 
   'v52.7': [
     'Novo: um ajuste de «vidro líquido» que deixa os painéis translúcidos e brilhantes como o vidro da Apple.',
@@ -1060,7 +1076,6 @@ I18N_WN.pt = {  'v52.8': [
     'Novo: mais fontes para escolher: Nunito, Lato, Montserrat, Work Sans, Rubik, Poppins, Source Sans 3, IBM Plex Sans, Fira Sans e JetBrains Mono.',
     'Novo: os alertas de atualização em segundo plano agora dizem o que precisam: um Anthkeys instalado. Em Sobre há «Instalar Anthkeys», e o worker passa a poder verificar versões com o app fechado.',
   ],
-
 
   'v52.6': [
     'Corrigido: «Combinar com o fundo» agora funciona também com os fundos incluídos nos estilos de design, não apenas com os que carregas.',
@@ -1310,10 +1325,14 @@ I18N_WN.pt = {  'v52.8': [
   'v1': ['A primeira vers&atilde;o do Anthkeys: todos os atalhos de teclado do dia a dia para Windows, macOS, Linux e ChromeOS em uma &uacute;nica p&aacute;gina.']
 };
 
-I18N_WN.nl = {  'v52.8': [
-    'Opgelost: op telefoons laat de stand «Vloeibaar glas» geen doorschijnend vierkant meer onder de titel zien.',
+I18N_WN.nl = {
+  'v52.9': [
+    'Verwijderd: de stand ‘Vloeibaar glas’ is weg — Normaal, Plat en Subtiel blijven.',
   ],
 
+  'v52.8': [
+    'Opgelost: op telefoons laat de stand «Vloeibaar glas» geen doorschijnend vierkant meer onder de titel zien.',
+  ],
 
   'v52.7': [
     'Nieuw: een instelling \'Vloeibaar glas\' die de panelen doorschijnend en glanzend maakt, zoals het glas van Apple.',
@@ -1321,7 +1340,6 @@ I18N_WN.nl = {  'v52.8': [
     'Nieuw: meer lettertypen om uit te kiezen: Nunito, Lato, Montserrat, Work Sans, Rubik, Poppins, Source Sans 3, IBM Plex Sans, Fira Sans en JetBrains Mono.',
     'Nieuw: achtergrondupdates zeggen nu wat ze nodig hebben: een geïnstalleerde Anthkeys. Bij Overen staat een knop \'Anthkeys installeren\', zodat de worker versies kan controleren met de app dicht.',
   ],
-
 
   'v52.6': [
     'Opgelost: «Met achtergrond afstemmen» werkt nu ook met de achtergronden die in de ontwerpstijlen zitten, niet alleen met je eigen uploads.',
@@ -1571,10 +1589,14 @@ I18N_WN.nl = {  'v52.8': [
   'v1': ['De eerste versie van Anthkeys: alle dagelijkse toetsenbord-sneltoetsen voor Windows, macOS, Linux en ChromeOS op &eacute;&eacute;n pagina.']
 };
 
-I18N_WN.ja = {  'v52.8': [
-    '修正：スマートフォンで「リキッドガラス」を使うと、タイトルの下に透き通った正方形が出てしまう問題を直しました。',
+I18N_WN.ja = {
+  'v52.9': [
+    '削除：「リキッドグラス」选项を廃止しました。標準・フラット・サブルの3種類です。',
   ],
 
+  'v52.8': [
+    '修正：スマートフォンで「リキッドガラス」を使うと、タイトルの下に透き通った正方形が出てしまう問題を直しました。',
+  ],
 
   'v52.7': [
     '新規：「リキッドグラス」設定で、パネルをAppleのガラスのように透き通って光るものにできます。',
@@ -1582,7 +1604,6 @@ I18N_WN.ja = {  'v52.8': [
     '新規：Nunito、Lato、Montserrat、Work Sans、Rubik、Poppins、Source Sans 3、IBM Plex Sans、Fira Sans、JetBrains Monoを追加しました。',
     '新規：バックグラウンドの更新通知が必要な条件を説明できるようになりました。Aboutに「Anthkeysをインストール」ボタンがあり、アプリを閉じたままでもworkerがバージョンを確認できます。',
   ],
-
 
   'v52.6': [
     '修正: 「壁紙に合わせる」は、自分でアップロードした壁紙だけでなく、デザインスタイルに内蔵された背景でも使えるようになりました。',
@@ -1832,10 +1853,14 @@ I18N_WN.ja = {  'v52.8': [
   'v1': ['Anthkeys の最初のバージョンです。Windows、macOS、Linux、ChromeOS の日常的なキーボードショートカットを 1 ページにまとめました。']
 };
 
-I18N_WN.ru = {  'v52.8': [
-    'Исправлено: на телефонах режим «Жидкое стекло» больше не оставляет полупрозрачный квадрат под заголовком.',
+I18N_WN.ru = {
+  'v52.9': [
+    'Удалено: вариант «Жидкое стекло» больше нет — остались Обычный, Плоский и Нежный.',
   ],
 
+  'v52.8': [
+    'Исправлено: на телефонах режим «Жидкое стекло» больше не оставляет полупрозрачный квадрат под заголовком.',
+  ],
 
   'v52.7': [
     'Новое: настройка «Жидкое стекло» делает панели прозрачными и блестящими, как стекло Apple.',
@@ -1843,7 +1868,6 @@ I18N_WN.ru = {  'v52.8': [
     'Новое: больше шрифтов на выбор: Nunito, Lato, Montserrat, Work Sans, Rubik, Poppins, Source Sans 3, IBM Plex Sans, Fira Sans и JetBrains Mono.',
     'Новое: фоновые уведомления об обновлениях теперь объясняют, что им нужно: установленную Anthkeys. В разделе «О программе» появилась кнопка «Установить Anthkeys», и работник может проверять версии при закрытом приложении.',
   ],
-
 
   'v52.6': [
     'Исправлено: «Подобрать под обои» теперь работает и со встроенными фонами стилей, а не только с теми, что загружаете вы сами.',
@@ -2093,10 +2117,14 @@ I18N_WN.ru = {  'v52.8': [
   'v1': ['Первая версия Anthkeys: все повседневные сочетания клавиш для Windows, macOS, Linux и ChromeOS на одной странице.']
 };
 
-I18N_WN.ko = {  'v52.8': [
-    '수정: 휴대폰에서 리퀴드 글래스를 쓸 때 제목 아래에 반투명 사각형이 보이던 문제를 고쳤습니다.',
+I18N_WN.ko = {
+  'v52.9': [
+    '삭제: 리퀴드 글래스 옵션을 없앴습니다 — 일반, 플랫, 서브틀만 남습니다.',
   ],
 
+  'v52.8': [
+    '수정: 휴대폰에서 리퀴드 글래스를 쓸 때 제목 아래에 반투명 사각형이 보이던 문제를 고쳤습니다.',
+  ],
 
   'v52.7': [
     '새 기능: «리퀴드 글래스» 설정으로 패널을 Apple의 유리처럼 투명하고 반짝이게 만듭니다.',
@@ -2104,7 +2132,6 @@ I18N_WN.ko = {  'v52.8': [
     '새 기능: Nunito, Lato, Montserrat, Work Sans, Rubik, Poppins, Source Sans 3, IBM Plex Sans, Fira Sans, JetBrains Mono 등 더 많은 글꼴을 추가했습니다.',
     '새 기능: 백그라운드 업데이트 알림이 이제 필요한 조건을 알려줍니다: Anthkeys 설치. 정보 탭에 «Anthkeys 설치» 버튼이 있어 앱을 닫아도 작업자가 버전을 확인할 수 있습니다.',
   ],
-
 
   'v52.6': [
     '수정: 「배경에 일치」는 이제 직접 업로드한 배경뿐 아니라 디자인 스타일에 내장된 배경에도 적용됩니다.',
@@ -2354,10 +2381,14 @@ I18N_WN.ko = {  'v52.8': [
   'v1': ['Anthkeys의 첫 버전입니다. Windows, macOS, Linux, ChromeOS의 일상적인 키보드 단축키를 한 페이지에 모았습니다.']
 };
 
-I18N_WN.pl = {  'v52.8': [
-    'Poprawiono: na telefonach tryb „Cieczącego szkła” nie tworzy już półprzezroczystego kwadratu pod tytułem.',
+I18N_WN.pl = {
+  'v52.9': [
+    'Usunięto: opcja „Cieczącego szkła” zniknęła — zostają Zwykły, Płaski i Delikatny.',
   ],
 
+  'v52.8': [
+    'Poprawiono: na telefonach tryb „Cieczącego szkła” nie tworzy już półprzezroczystego kwadratu pod tytułem.',
+  ],
 
   'v52.7': [
     'Nowość: ustawienie „Cieczące szkło” sprawia, że panele stają się przezroczyste i lśniące jak szkło Apple.',
@@ -2365,7 +2396,6 @@ I18N_WN.pl = {  'v52.8': [
     'Nowość: więcej krojów do wyboru: Nunito, Lato, Montserrat, Work Sans, Rubik, Poppins, Source Sans 3, IBM Plex Sans, Fira Sans i JetBrains Mono.',
     'Nowość: alerty o aktualizacjach w tle mówią teraz, czego potrzebują: zainstalowanej Anthkeys. W sekcji O programie jest przycisk „Zainstaluj Anthkeys”, dzięki któremu worker sprawdza wersje przy zamkniętej aplikacji.',
   ],
-
 
   'v52.6': [
     'Poprawiono: opcja „Dopasuj do tapety” działa teraz także z tłami wbudowanymi w style projektu, a nie tylko z tymi, które przesyłasz sam.',
@@ -2615,10 +2645,14 @@ I18N_WN.pl = {  'v52.8': [
   'v1': ['Pierwsza wersja Anthkeys: wszystkie codzienne skróty klawiszowe dla Windows, macOS, Linux i ChromeOS na jednej stronie.']
 };
 
-I18N_WN.tr = {  'v52.8': [
-    'Düzeltildi: telefonlarda Sıvı cam modu artık başlığın altında yarı saydam bir kare bırakmıyor.',
+I18N_WN.tr = {
+  'v52.9': [
+    'Kaldırıldı: Sıvı cam seçeneği artık yok — Normal, Düz ve Hafif kalıyor.',
   ],
 
+  'v52.8': [
+    'Düzeltildi: telefonlarda Sıvı cam modu artık başlığın altında yarı saydam bir kare bırakmıyor.',
+  ],
 
   'v52.7': [
     'Yeni: panelleri Apple camı gibi saydam ve parlak yapan «Sıvı cam» ayarı.',
@@ -2626,7 +2660,6 @@ I18N_WN.tr = {  'v52.8': [
     'Yeni: seçebileceğiniz daha fazla yazı tipi: Nunito, Lato, Montserrat, Work Sans, Rubik, Poppins, Source Sans 3, IBM Plex Sans, Fira Sans ve JetBrains Mono.',
     'Yeni: arka plan güncelleme uyarıları artık neye ihtiyaç duyduğunu söylüyor: kurulu bir Anthkeys\'e. Hakkında bölümünde «Anthkeys\'i kur» düğmesi var, böylece uygulama kapalıyken worker sürümleri denetleyebiliyor.',
   ],
-
 
   'v52.6': [
     'Düzeltildi: «Duvar kâğıdıyla eşle» artık tasarım stillerinin yerleşik arka planlarıyla da çalışıyor.',
@@ -2876,10 +2909,14 @@ I18N_WN.tr = {  'v52.8': [
   'v1': ['Anthkeys’in ilk sürümü: Windows, macOS, Linux ve ChromeOS için günlük klavye kısayollarının tamamı tek bir sayfada.']
 };
 
-I18N_WN.vi = {  'v52.8': [
-    'Đã sửa: trên điện thoại, chế độ «Kính lỏng» không còn để lại một hình vuông mờ bên dưới tiêu đề.',
+I18N_WN.vi = {
+  'v52.9': [
+    'Đã bỏ: tuỳ chọn «Kính lỏng» không còn — vẫn có Bình thường, Phẳng và Nhẹ.',
   ],
 
+  'v52.8': [
+    'Đã sửa: trên điện thoại, chế độ «Kính lỏng» không còn để lại một hình vuông mờ bên dưới tiêu đề.',
+  ],
 
   'v52.7': [
     'Mới: tùy chọn «Kính lỏng» làm cho các bảng trong suốt và lấp lánh như kính của Apple.',
@@ -2887,7 +2924,6 @@ I18N_WN.vi = {  'v52.8': [
     'Mới: thêm nhiều phông chữ để chọn: Nunito, Lato, Montserrat, Work Sans, Rubik, Poppins, Source Sans 3, IBM Plex Sans, Fira Sans và JetBrains Mono.',
     'Mới: cảnh báo cập nhật ở nền giờ nói rõ điều kiện cần có: Anthkeys đã cài. Trong Giới thiệu có nút «Cài Anthkeys» để worker kiểm tra phiên bản khi ứng dụng đã đóng.',
   ],
-
 
   'v52.6': [
     'Đã sửa: “Khớp với ảnh nền” giờ đã dùng được với ảnh nền có sẵn trong các kiểu thiết kế, không chỉ ảnh nền bạn tự tải lên.',
@@ -3137,10 +3173,14 @@ I18N_WN.vi = {  'v52.8': [
   'v1': ['Bản đầu tiên của Anthkeys: toàn bộ phím tắt bàn phím hằng ngày cho Windows, macOS, Linux và ChromeOS trong một trang.']
 };
 
-I18N_WN.ar = {  'v52.8': [
-    'إصلاح: على الهواتف، لم يعد وضع «زجاج سائل» يترك مربعًا شبه شفاف أسفل العنوان.',
+I18N_WN.ar = {
+  'v52.9': [
+    'أُزيل: خيار «زجاج سائل» لم يعد موجودًا — باقٍ عادي مسطّح وخفيف.',
   ],
 
+  'v52.8': [
+    'إصلاح: على الهواتف، لم يعد وضع «زجاج سائل» يترك مربعًا شبه شفاف أسفل العنوان.',
+  ],
 
   'v52.7': [
     'جديد: خيار «زجاج سائل» يجعل الألواح شفافة ولامعة كزجاج Apple.',
@@ -3148,7 +3188,6 @@ I18N_WN.ar = {  'v52.8': [
     'جديد: خطوط أكثر للاختيار: Nunito وLato وMontserrat وWork Sans وRubik وPoppins وSource Sans 3 وIBM Plex Sans وFira Sans وJetBrains Mono.',
     'جديد: تنبيهات التحديث في الخلفية توضّح الآن ما تحتاجه: تثبيت Anthkeys. يوجد زر «تثبيت Anthkeys» في «حول»، فيستطيع العامل فحص الإصدارات والتطبيق مغلق.',
   ],
-
 
   'v52.6': [
     'إصلاح: تعمل الآن «مطابقة الخلفية» مع الخلفيات المضمّنة في أنماط التصميم، ولا فت فقط مع تلك التي ترفعها بنفسك.',
@@ -3398,10 +3437,14 @@ I18N_WN.ar = {  'v52.8': [
   'v1': ['الإصدار الأول من Anthkeys: كل اختصارات لوحة المفاتيح اليومية لـWindows وmacOS وLinux وChromeOS في صفحة واحدة.']
 };
 
-I18N_WN.hi = {  'v52.8': [
-    'ठीक किया गया: फ़ोन पर लिक्विड ग्लास अब शीर्षक के नीचे एक पारदर्शी वर्ग नहीं छोड़ता।',
+I18N_WN.hi = {
+  'v52.9': [
+    'हटाया गया: लिक्विड ग्लास विकल्प हटा दिया गया — सामान्य, फ़्लैट और हल्का बाकी है।',
   ],
 
+  'v52.8': [
+    'ठीक किया गया: फ़ोन पर लिक्विड ग्लास अब शीर्षक के नीचे एक पारदर्शी वर्ग नहीं छोड़ता।',
+  ],
 
   'v52.7': [
     'नया: «तरल काँच» सेटिंग पैनल को Apple के काँच की तरह पारदर्शी और चमकदार बनाती है।',
@@ -3409,7 +3452,6 @@ I18N_WN.hi = {  'v52.8': [
     'नया: चुनने के लिए और फ़ॉन्ट: Nunito, Lato, Montserrat, Work Sans, Rubik, Poppins, Source Sans 3, IBM Plex Sans, Fira Sans और JetBrains Mono।',
     'नया: बैकग्राउंड अपडेट अलर्ट अब बताते हैं कि उन्हें क्या चाहिए: इंस्टॉल किया गया Anthkeys। «परिचय» में «Anthkeys इंस्टॉल करें» बटन है, जिससे ऐप बंद होने पर भी वर्कर वर्ज़न जाँच सकता है।',
   ],
-
 
   'v52.6': [
     'ठीक किया गया: अब «वॉलपेपर से मेलमेंट» केवल आपकी अपलोड की गई वॉलपेपर के साथ ही नहीं, बल्कि डिज़ाइन शैलियों के भीतर बने बैकग्राउंड के साथ भी काम करता है।',
@@ -3659,10 +3701,14 @@ I18N_WN.hi = {  'v52.8': [
   'v1': ['Anthkeys का पहला संस्करण: Windows, macOS, Linux और ChromeOS के रोज़मर्रा कीबोर्ड शॉर्टकट एक ही पेज पर.']
 };
 
-I18N_WN.sv = {  'v52.8': [
-    'Rättat: på telefoner lägger läget ”Vätskeglass” inte längre kvar en genomskinlig kvadrat under titeln.',
+I18N_WN.sv = {
+  'v52.9': [
+    'Borttagen: valet ”Vätskeglass” är slut — Normal, Platt och Subtil finns kvar.',
   ],
 
+  'v52.8': [
+    'Rättat: på telefoner lägger läget ”Vätskeglass” inte längre kvar en genomskinlig kvadrat under titeln.',
+  ],
 
   'v52.7': [
     'Nytt: en inställning ”Vätska glas” som gör panelerna genomskinliga och glansiga som Apples glas.',
@@ -3670,7 +3716,6 @@ I18N_WN.sv = {  'v52.8': [
     'Nytt: fler typsnitt att välja mellan: Nunito, Lato, Montserrat, Work Sans, Rubik, Poppins, Source Sans 3, IBM Plex Sans, Fira Sans och JetBrains Mono.',
     'Nytt: bakgrundsuppdateringar säger nu vad de behöver: en installerad Anthkeys. Det finns en knapp ”Installera Anthkeys” i Om, så workern kan kontrollera versioner när appen är stängd.',
   ],
-
 
   'v52.6': [
     'Ändrat: ”Matcha bakgrunden” fungerar nu även med de bakgrunder som ingår i designstilar, inte bara med dem du laddar upp själv.',
@@ -3920,10 +3965,14 @@ I18N_WN.sv = {  'v52.8': [
   'v1': ['Första versionen av Anthkeys: alla dagliga tangentbordsgenvägar för Windows, macOS, Linux och ChromeOS på en sida.']
 };
 
-I18N_WN.da = {  'v52.8': [
-    'Rettet: på telefoner efterlader indstillingen ”Væskglas” ikke længere et gennemsigtigt kvadrat under titlen.',
+I18N_WN.da = {
+  'v52.9': [
+    'Fjernet: indstillingen ”Væskglas” er væk — Normal, Flad og Let bliver.',
   ],
 
+  'v52.8': [
+    'Rettet: på telefoner efterlader indstillingen ”Væskglas” ikke længere et gennemsigtigt kvadrat under titlen.',
+  ],
 
   'v52.7': [
     'Nyt: en indstilling ”Væskglas”, der gør panelerne gennemsigtige og blanke som Apples glas.',
@@ -3931,7 +3980,6 @@ I18N_WN.da = {  'v52.8': [
     'Nyt: flere skrifttyper at vælge imellem: Nunito, Lato, Montserrat, Work Sans, Rubik, Poppins, Source Sans 3, IBM Plex Sans, Fira Sans og JetBrains Mono.',
     'Nyt: opdateringer i baggrunden siger nu, hvad de kræver: en installeret Anthkeys. Der er en knap ”Installér Anthkeys” under Om, så workeren kan tjekke versioner med appen lukket.',
   ],
-
 
   'v52.6': [
     'Rettet: ”Match baggrunden” virker nu også med de baggrunde, der indgår i designstilar, ikke kun med dem, du selv uploader.',
@@ -4181,10 +4229,14 @@ I18N_WN.da = {  'v52.8': [
   'v1': ['Første udgave af Anthkeys: alle daglige tastaturgenveje til Windows, macOS, Linux og ChromeOS på én side.']
 };
 
-I18N_WN.fi = {  'v52.8': [
-    'Korjattu: puhelimilla ”Nestemäinen lasi” ei jätä enää läpikuultavaa neliötä otsikon alle.',
+I18N_WN.fi = {
+  'v52.9': [
+    'Poistettu: ”Nestemäinen lasi” -asetus on poistettu — Normaali, Tasainen ja Hillitty jäävät.',
   ],
 
+  'v52.8': [
+    'Korjattu: puhelimilla ”Nestemäinen lasi” ei jätä enää läpikuultavaa neliötä otsikon alle.',
+  ],
 
   'v52.7': [
     'Uusi: ”Nestemäinen lasi” -asetus tekee paneeleista läpinäkyviä ja kiiltäviä kuin Applen lasi.',
@@ -4192,7 +4244,6 @@ I18N_WN.fi = {  'v52.8': [
     'Uusi: enemmän valittavia fontteja: Nunito, Lato, Montserrat, Work Sans, Rubik, Poppins, Source Sans 3, IBM Plex Sans, Fira Sans ja JetBrains Mono.',
     'Uusi: taustapäivitysilmot kertovat nyt, mitä ne tarvitsevat: asennetun Anthkeys-sovelluksen. Tietoja-näkymässä on ”Asenna Anthkeys”, joten työntekijä voi tarkistaa versioita myös sovelluksen ollessa kiinni.',
   ],
-
 
   'v52.6': [
     'Korjattu: ”Täsmätä taustakuvaan” toimii nyt myös suunnittelutyylien sisällä olevien taustakuvien kanssa, ei vain itse lataamiesi kuvien.',
@@ -4442,10 +4493,14 @@ I18N_WN.fi = {  'v52.8': [
   'v1': ['Anthkeysin ensimmäinen versio: kaikki päivittäiset näppäinoikotiet Windowsille, macOS:lle, Linuxille ja ChromeOS:lle yhdellä sivulla.']
 };
 
-I18N_WN.no = {  'v52.8': [
-    'Rettet: på telefoner gir innstillingen ”Væskeglass” ikke lenger et gjennomsiktig kvadrat under tittelen.',
+I18N_WN.no = {
+  'v52.9': [
+    'Fjernet: innstillingen ”Væskeglass” er borte — Normal, Flat og Mykt blir igjen.',
   ],
 
+  'v52.8': [
+    'Rettet: på telefoner gir innstillingen ”Væskeglass” ikke lenger et gjennomsiktig kvadrat under tittelen.',
+  ],
 
   'v52.7': [
     'Nytt: en innstilling ”Væskeglass” som gjør panelene gjennomsiktige og blanke som Apples glass.',
@@ -4453,7 +4508,6 @@ I18N_WN.no = {  'v52.8': [
     'Nytt: flere skrifttyper å velge mellom: Nunito, Lato, Montserrat, Work Sans, Rubik, Poppins, Source Sans 3, IBM Plex Sans, Fira Sans og JetBrains Mono.',
     'Nytt: bakgrunnsoppdateringer sier nå hva de trenger: en installert Anthkeys. Det er en knapp ”Installer Anthkeys” under Om, så arbeideren kan sjekke versjoner når appen er lukket.',
   ],
-
 
   'v52.6': [
     'Rettet: ”Match bakgrunnen” fungerer nå også med bakgrunnene som er innebygd i designstilene, ikke bare med dem du laster opp selv.',
@@ -4703,10 +4757,14 @@ I18N_WN.no = {  'v52.8': [
   'v1': ['Første utgave av Anthkeys: alle daglige tastaturgenveier for Windows, macOS, Linux og ChromeOS på én side.']
 };
 
-I18N_WN.cs = {  'v52.8': [
-    'Opraveno: na telefonech už režim „Tekuté sklo“ nenechává pod nadpisem průhledný čtverec.',
+I18N_WN.cs = {
+  'v52.9': [
+    'Odebráno: možnost „Tekuté sklo“ zmizela — zůstává Normální, Ploché a Jemné.',
   ],
 
+  'v52.8': [
+    'Opraveno: na telefonech už režim „Tekuté sklo“ nenechává pod nadpisem průhledný čtverec.',
+  ],
 
   'v52.7': [
     'Novinka: nastavení „Tekuté sklo” nechá panely průhledné a lesklé jako sklo Applu.',
@@ -4714,7 +4772,6 @@ I18N_WN.cs = {  'v52.8': [
     'Novinka: více fontů na výběr: Nunito, Lato, Montserrat, Work Sans, Rubik, Poppins, Source Sans 3, IBM Plex Sans, Fira Sans a JetBrains Mono.',
     'Novinka: oznámení o aktualizacích na pozadí nyní říkají, co potřebují: nainstalovanou Anthkeys. V části O programu je tlačítko „Nainstalovat Anthkeys”, takže worker zkontroluje verze i při zavřené aplikaci.',
   ],
-
 
   'v52.6': [
     'Opraveno: „Při sladnout s tapetou“ nyní funguje i s pozadími zabudovanými ve stylech návrhu, ne jen s tapetami, které nahráváte sami.',
@@ -4964,10 +5021,14 @@ I18N_WN.cs = {  'v52.8': [
   'v1': ['První verze Anthkeys: všechny denní klávesové zkratky pro Windows, macOS, Linux a ChromeOS na jedné stránce.']
 };
 
-I18N_WN.hu = {  'v52.8': [
-    'Javítva: telefonokon a „Folyékony üveg” mód már nem hagy átlátszó négyzetet a cím alatt.',
+I18N_WN.hu = {
+  'v52.9': [
+    'Eltávolítva: a „Folyékony üveg” lehetőség megszűnt — marad: Normál, Sík és Finom.',
   ],
 
+  'v52.8': [
+    'Javítva: telefonokon a „Folyékony üveg” mód már nem hagy átlátszó négyzetet a cím alatt.',
+  ],
 
   'v52.7': [
     'Új: a „Folyékony üveg” beállítás áttetsző és csillogó paneleket ad, akául az Apple üvege.',
@@ -4975,7 +5036,6 @@ I18N_WN.hu = {  'v52.8': [
     'Új: több választható betűtípus: Nunito, Lato, Montserrat, Work Sans, Rubik, Poppins, Source Sans 3, IBM Plex Sans, Fira Sans és JetBrains Mono.',
     'Új: a háttérben érkező frissítési értesítések mostantól megmondják, mire van szükségük: egy telepített Anthkeysre. A Névjegyben található egy „Anthkeys telepítése” gomb, így a worker akkor is ellenőrizheti a verziókat, ha az app zárva van.',
   ],
-
 
   'v52.6': [
     'Javítva: az „Illesszük a háttérrel” mostantól működik a designstílusokba beépített háttérképekkel is, nem csak a saját feltöltött képekkel.',
