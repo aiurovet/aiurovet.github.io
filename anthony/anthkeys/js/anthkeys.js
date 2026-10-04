@@ -14,7 +14,7 @@ const i18n = {
     'notify.state.off': 'Allowed, but switched off.',
     'notify.time': 'Daily tip at',
     'notify.test': 'Send a test notification',
-    'notify.note': 'Update alerts arrive on their own. Tips are sent while this site is open. Installed on Chrome they can also arrive when it is closed, but the browser picks the time and may skip a day.',
+    'notify.note': 'Daily tips are sent while this site is open. Installed on Chrome they can also arrive when it is closed, but the browser picks the time and may skip a day.',
     'notify.updates': 'Update alerts',
     'notify.updates.active': 'Checking for new versions in the background.',
     'notify.updates.needsInstall': 'Install Anthkeys on Chrome or Edge so this works while it is closed.',
@@ -502,7 +502,7 @@ i18n.ar = {
     'notify.state.off': 'مسموح، لكنه مُعطّل.',
     'notify.time': 'نصيحة اليوم في',
     'notify.test': 'أرسل إشعارًا تجريبيًا',
-    'notify.note': 'تصل تنبيهات التحديث تلقائيًا. \u062A\u062A\u0645 \u062A\u0642\u0644\u064A\u0639\u0627\u062A \u0627\u0644\u0627\u062E\u062A\u0635\u0627\u0631 \u0645\u062A\u064A \u0645\u0641\u062A\u062D \u0647\u0630\u0627 \u0627\u0644\u0645\u0648\u0642\u0639. \u0639\u0646\u062F\u0627 \u062A\u062B\u0628\u064A\u062A \u0627\u0644\u062A\u0637\u0628\u064a\u0642 \u0639\u0644\u0649 Chrome \u0641\u0642\u062F \u062A\u0635\u0644 \u0623\u064A\u0636\u0627\u064b \u0623\u064A\u0646 \u0627\u0644\u0645\u0648\u0642\u0639 \u0645\u063A\u0644\u0642\u064b\u060C \u0644\u0643\u0646 \u0627\u0644\u0645\u062A\u0635\u0641\u062D \u064A\u062D\u062F\u062F \u0627\u0644\u0648\u0642\u062A \u0648\u0642\u062F \u064A\u062A\u062E\u0637\u0651 \u064A\u0648\u0645\u064b\u0627 \u0643\u0627\u0645\u0644\u0627\u064b\u060C',
+    'notify.note': 'تُرسل النصائح اليومية طالما يكون هذا الموقع مفتوحاً. وعند التثبيت على Chrome يمكن أن تصل أيضاً وهو مغلق، لكن المتصفح يختار الوقت وقد يتخطى يوماً.',
     'notify.updates': 'تنبيهات التحديث',
     'notify.updates.active': 'أفحص عن إصدارات جديدة في الخلفية.',
     'notify.updates.needsInstall': 'ثبّت Anthkeys على Chrome أو Edge ليعمل هذا وهو مغلق.',
@@ -982,7 +982,7 @@ i18n.cs = {
     'notify.state.off': 'Povoleno, ale vypnuto.',
     'notify.time': 'Denní tip v',
     'notify.test': 'Odeslat zkušební oznámení',
-    'notify.note': 'Oznámení o aktualizacích přicházejí sama. Tipy se odes\u00EDlat\u00E1, dokud je tento web otev\u011Ben\u00FD. Nainstalov\u00E1no v Chromu mohou dorazit i p\u0159i zav\u0159en\u00E9m webu, ale prohl\u00ED\u017E\u010D ur\u010D\u00ED \u010Das a m\u016F\u017Ee p\u0159esko\u010Dit den.',
+    'notify.note': 'Denní tipy se posílají, dokud je tato stránka otevřená. Nainstalované v Chromu mohou přicházet i při zavřené stránce, ale prohlížeoč vybere čas a může přeskočit den.',
     'notify.updates': 'Upozornění na aktualizace',
     'notify.updates.active': 'Na pozadí kontroluji nové verze.',
     'notify.updates.needsInstall': 'Nainstalujte Anthkeys v Chrome nebo Edge, aby to fungovalo i při zavřené aplikaci.',
@@ -1462,7 +1462,7 @@ i18n.da = {
     'notify.state.off': 'Tilladt, men slået fra.',
     'notify.time': 'Dagligt tip kl.',
     'notify.test': 'Send en testnotifikation',
-    'notify.note': 'Opdateringsvarsler kommer af sig selv. Tips sendes, mens dette websted er \u00E5bent. Installeret i Chrome kan de ogs\u00E5 komme, mens webstedet er lukket, men browseren v\u00E6lger tidspunktet og kan springe en dag over.',
+    'notify.note': 'Daglige tips sendes, mens dette websted er åbent. Installeret i Chrome kan de også komme, når det er lukket, men browseren vælger tidspunktet og kan springe en dag over.',
     'notify.updates': 'Opdateringsvarsler',
     'notify.updates.active': 'Tjekker nye versioner i baggrunden.',
     'notify.updates.needsInstall': 'Installér Anthkeys i Chrome eller Edge, så det virker, selv når den er lukket.',
@@ -1942,7 +1942,7 @@ i18n.de = {
     'notify.state.off': 'Erlaubt, aber ausgeschaltet.',
     'notify.time': 'Täglicher Tipp um',
     'notify.test': 'Testbenachrichtigung senden',
-    'notify.note': 'Update-Hinweise kommen von selbst. Hinweise werden gesendet, solange diese Seite ge\u00F6ffnet ist. Installiert in Chrome k\u00F6nnen sie auch bei geschlossener Seite ankommen, aber der Browser bestimmt die Uhrzeit und kann einen Tag \u00FCberspringen.',
+    'notify.note': 'Tägliche Tipps werden gesendet, solange diese Seite geöffnet ist. Installiert in Chrome können sie auch eintreffen, wenn sie geschlossen ist, aber der Browser bestimmt den Zeitpunkt und überspringt manchmal einen Tag.',
     'notify.updates': 'Update-Hinweise',
     'notify.updates.active': 'Ich suche im Hintergrund nach neuen Versionen.',
     'notify.updates.needsInstall': 'Installiere Anthkeys in Chrome oder Edge, damit das auch bei geschlossener App funktioniert.',
@@ -2422,7 +2422,7 @@ i18n.es = {
     'notify.state.off': 'Permitido, pero desactivado.',
     'notify.time': 'Consejo diario a las',
     'notify.test': 'Enviar una notificación de prueba',
-    'notify.note': 'Los avisos de actualización llegan solos. Los recordatorios se env\u00EDan mientras este sitio est\u00E1 abierto. Si lo instalas en Chrome tambi\u00E9n pueden llegar con el sitio cerrado, pero el navegador decide la hora y puede saltarse un d\u00EDa.',
+    'notify.note': 'Los consejos diarios se envían mientras este sitio está abierto. Instalado en Chrome también pueden llegar cuando está cerrado, pero el navegador elige el momento y puede saltar un día.',
     'notify.updates': 'Avisos de actualización',
     'notify.updates.active': 'Buscando nuevas versiones en segundo plano.',
     'notify.updates.needsInstall': 'Instala Anthkeys en Chrome o Edge para que funcione con la app cerrada.',
@@ -2902,7 +2902,7 @@ i18n.fi = {
     'notify.state.off': 'Sallittu, mutta pois päältä.',
     'notify.time': 'Päivän vinkki klo',
     'notify.test': 'Lähetä testi-ilmoitus',
-    'notify.note': 'Päivitys-ilmoitukset tulevat itsestään. Vinkkej\u00E4 l\u00E4hetet\u00E4n, kun verkkosivusto on auki. Asennettuna Chromeen ne voivat tulla vaikka sivusto olisi kiinni, mutta selain p\u00E4\u00E4tt\u00E4\u00E4 ajan ja voi ohittaa p\u00E4iv\u00E4n.',
+    'notify.note': 'Päivittäiset vinkit lähetetään, kun tämä sivusto on auki. Asennettuna Chromeen ne voivat tulla myös sivuston ollessa kiinni, mutta selain päättää ajankohdan ja voi ohittaa päivän.',
     'notify.updates': 'Päivitys-ilmoitukset',
     'notify.updates.active': 'Tarkistan taustalla uusia versioita.',
     'notify.updates.needsInstall': 'Asenna Anthkeys Chromessa tai Edgessä, jotta tämä toimii myös sovelluksen ollessa kiinni.',
@@ -3382,7 +3382,7 @@ i18n.fr = {
     'notify.state.off': 'Autorisé, mais désactivé.',
     'notify.time': 'Astuce du jour à',
     'notify.test': 'Envoyer une notification de test',
-    'notify.note': 'Les alertes de mise à jour arrivent d’elles-mêmes. Les conseils sont envoy\u00E9s tant que ce site est ouvert. Install\u00E9 sur Chrome, ils peuvent aussi arriver site ferm\u00E9, mais le navigateur choisit l\u2019heure et peut sauter un jour.',
+    'notify.note': 'Les conseils quotidiens sont envoyés tant que ce site est ouvert. Installé sur Chrome, ils peuvent aussi arriver site fermé, mais le navigateur choisit le moment et peut sauter un jour.',
     'notify.updates': 'Alertes de mise à jour',
     'notify.updates.active': 'Recherche de nouvelles versions en arrière-plan.',
     'notify.updates.needsInstall': 'Installez Anthkeys sur Chrome ou Edge pour que cela fonctionne même fermé.',
@@ -3863,7 +3863,7 @@ i18n.hi = {
     'notify.state.off': 'अनुमति है, लेकिन बंद है।',
     'notify.time': 'दैनिक सुझाव का समय',
     'notify.test': 'परीक्षण सूचना भेजें',
-    'notify.note': 'अपडेट सूचनाएँ अपने आप आ जाती हैं। \u0936\u0949\u0930\u094D\u0924 \u0938\u0942\u091A\u0928\u093E\u0935 \u0906\u092A\u0928\u0940 \u0938\u093E\u0907\u091F \u0916\u0941\u0932\u093E \u0939\u094B\u0928\u0947 \u0924\u0915 \u0938\u0942\u091A\u0928\u093E\u0913\u0902 \u091C\u093E\u0924\u093E \u0915\u093F\u090F \u091C\u093E\u0924\u0947\u0902\u0964 Chrome \u092E\u0947\u0902 \u0907\u0928\u094D\u0938\u094D\u091F\u0949\u0932 \u0915\u093F\u092F\u093E \u0917\u092F\u093E \u0939\u094B\u0928\u0947 \u090F\u0915 \u0938\u093E\u0907\u091F \u092C\u0902\u0926 \u0939\u094B\u0928\u0947 \u092A\u0930 \u0905\u0928\u0941\u0938\u0942\u091A\u0928 \u092D\u0947\u091C \u0938\u0915\u0947\u0902, \u0932\u0947\u0915\u093F\u0928 \u092C\u094D\u0930\u093E\u0909\u091C\u0930 \u0938\u092E\u092F \u091A\u0941\u0928\u0947\u0902 \u0914\u0930 \u090F\u0915 \u0926\u093F\u0928 \u091A\u0942\u0915\u094D \u0938\u0915\u0947\u0902\u0964',
+    'notify.note': 'रोज़ के सुछाव तब का जब का यह साइट खुली है तक टिपों को भेजज जाते हैं। Chrome में इंस्टॉल होने पर वे बंद होने पर भी आ सकते हैं, लेकिन समय ब्राउज़र तय करता है और एक दिन छूट सकता है।',
     'notify.updates': 'अपडेट सूचनाएँ',
     'notify.updates.active': 'पृष्ठभूमि में नए संस्करण खोज रहे हैं।',
     'notify.updates.needsInstall': 'बंद होने पर भी यह काम करे, इसके लिए Chrome या Edge में Anthkeys इंस्टॉल करें।',
@@ -4343,7 +4343,7 @@ i18n.hu = {
     'notify.state.off': 'Engedélyezve, de kikapcsolva.',
     'notify.time': 'Napi tipp ekkor:',
     'notify.test': 'Tesztértesítés küldése',
-    'notify.note': 'A frissítési értesítések maguktól jönnek. Tippek k\u00F6ld\u0151k, am\u00EDgy az oldal nyitva van. Chrome-ban telep\u00EDtve akkor is \u00E9rkezhetnek, ha az oldal z\u00E1rt, de a b\u00F6ngyel\u0151\u0151 d\u00F6nti az id\u0151pontot, \u00E9s kihagyhat egy napot.',
+    'notify.note': 'A napi tippek akkor mennek ki, amíg ez az oldal nyitva van. Chrome-ban telepítve akkor is érkezhetnek, ha zárva van, de a böngészőő választja az időpontot, és kihagyhat egy napot.',
     'notify.updates': 'Frissítési értesítések',
     'notify.updates.active': 'A háttérben új verziókat keresek.',
     'notify.updates.needsInstall': 'Telepítsd az Anthkeys alkalmazást a Chrome vagy az Edge böngészőbe, hogy akkor is működjön, ha zárva van.',
@@ -4823,7 +4823,7 @@ i18n.it = {
     'notify.state.off': 'Consentito, ma disattivato.',
     'notify.time': 'Suggerimento quotidiano alle',
     'notify.test': 'Invia una notifica di prova',
-    'notify.note': 'Gli avvisi di aggiornamento arrivano da soli. I promemoria vengono inviati mentre questo sito \u00E8 aperto. Installato su Chrome possono arrivare anche a sito chiuso, ma il browser sceglie l\u2019ora e pu\u00F2 saltare un giorno.',
+    'notify.note': 'I consigli giornalieri vengono inviati mentre questo sito è aperto. Installato su Chrome possono arrivare anche a sito chiuso, ma il browser sceglie il momento e può saltare un giorno.',
     'notify.updates': 'Avvisi di aggiornamento',
     'notify.updates.active': 'Ricerca di nuove versioni in background.',
     'notify.updates.needsInstall': 'Installa Anthkeys su Chrome o Edge perché funzioni anche da chiuso.',
@@ -5303,7 +5303,7 @@ i18n.ja = {
     'notify.state.off': '許可されていますが、オフになっています。',
     'notify.time': '毎日のヒントの時刻',
     'notify.test': 'テスト通知を送る',
-    'notify.note': '更新通知は自動で届きます。 \u30C8\u30A4\u30D7\u306F\u3053\u306E\u30B5\u30A4\u30C8\u3092\u958B\u3044\u3066\u3044\u308B\u9593\u306B\u9001\u4FE1\u3055\u308C\u307E\u3059\u3002Chrome\u306B\u30A4\u30F3\u30B9\u30C8\u30FC\u30EB\u3059\u308B\u3068\u3001\u30B5\u30A4\u30C8\u3092\u9589\u3058\u3066\u3044\u3066\u3082\u5C4A\u304D\u307E\u3059\u304C\u3001\u6642\u9593\u306F\u30D6\u30E9\u30A6\u30B6\u304C\u6C7A\u3081\u3001\u65E5\u5B66\u3092\u30B9\u30AD\u30C3\u30D7\u3059\u308B\u3053\u3068\u304C\u3042\u308A\u307E\u3059\u3002',
+    'notify.note': 'デイリーチップはこのサイトを開いている間に送信されます。Chrome にインストールしていると、閉じた状態でも届けることがありますが、配信時刻はブラウザが決めるため、1 日分後ろになることがあります。',
     'notify.updates': '更新通知',
     'notify.updates.active': 'バックグラウンドで新しいバージョンを確認しています。',
     'notify.updates.needsInstall': 'アプリを閉じたままでも使うには、Chrome または Edge に Anthkeys をインストールしてください。',
@@ -5783,7 +5783,7 @@ i18n.ko = {
     'notify.state.off': '허용되었지만 꺼져 있습니다.',
     'notify.time': '매일 팁 알림 시간',
     'notify.test': '테스트 알림 보내기',
-    'notify.note': '업데이트 알림은 자동으로 도착합니다. \uD78C\uD2B8\uB294 \uC774 \uC0C1\uD0DC\uB97C \uC5F4\uC5B4 \uC788\uC744 \uB2F9\uC2DC\uC5D0 \uC804\uB2EC\uB429\uB2C8\uB2E4. Chrome\uC5D0 \uC124\uCE58\uD558\uBA74 \uC0C1\uD0DC\uB97C \uB2EB\uC740 \uC0C1\uD0DC\uC5D0\uC11C\uB3C4 \uC801\uC740\uB2EC, \uC2DC\uAC04\uC740 \uBE0C\uB77C\uC6B0\uC800\uAC00 \uC81C\uC77C\uD558\uACE0 \uD558\uB8E8 \uC548\uB2A5\uD788 \uC218\uC788\uC2B5\uB2C8\uB2E4.',
+    'notify.note': '일일 필은 이 사이트가 열러 있을 때에 전송됩니다. Chrome에 설치했다면 사이트를 닫아도 도착할 수 있지만, 시간은 본라우저가 정하므로 하루 새을 초고할 수 있습니다.',
     'notify.updates': '업데이트 알림',
     'notify.updates.active': '백그라운드에서 새 버전을 확인하는 중입니다.',
     'notify.updates.needsInstall': '앱을 닫아도 동작하려면 Chrome 또는 Edge에 Anthkeys를 설치하세요.',
@@ -6263,7 +6263,7 @@ i18n.nl = {
     'notify.state.off': 'Toegestaan, maar uitgeschakeld.',
     'notify.time': 'Dagelijkse tip om',
     'notify.test': 'Een testmelding sturen',
-    'notify.note': 'Update-meldingen komen vanzelf. Herinneringen worden verstuurd zolang deze site open is. Ge\u00EFnstalleerd in Chrome kunnen ze ook bij een gesloten site aankomen, maar de browser bepaalt het tijdstip en slaat soms een dag over.',
+    'notify.note': 'Dagelijkse tips worden verstuurd terwijl deze site open is. Geïnstalleerd in Chrome kunnen ze ook binnenkomen als de site gesloten is, maar de browser kiest het moment en slaat soms een dag over.',
     'notify.updates': 'Update-meldingen',
     'notify.updates.active': 'Controleert op de achtergrond op nieuwe versies.',
     'notify.updates.needsInstall': 'Installeer Anthkeys in Chrome of Edge zodat dit werkt terwijl de app gesloten is.',
@@ -6743,7 +6743,7 @@ i18n.no = {
     'notify.state.off': 'Tillatt, men av.',
     'notify.time': 'Daglig tips kl.',
     'notify.test': 'Send en testvarsel',
-    'notify.note': 'Oppdateringsvarsler kommer av seg selv. Tips sendes mens dette nettstedet er \u00E5pent. Installert i Chrome kan de komme selv n\u00E5r nettstedet er lukket, men nettleseren velger tidspunktet og kan hoppe over en dag.',
+    'notify.note': 'Daglige tips sendes mens dette nettstedet er åpent. Installert i Chrome kan de også komme når det er lukket, men nettleseren velger tidspunktet og kan hoppe over en dag.',
     'notify.updates': 'Oppdateringsvarsler',
     'notify.updates.active': 'Søker etter nye versjoner i bakgrunnen.',
     'notify.updates.needsInstall': 'Installer Anthkeys i Chrome eller Edge slik at dette virker mens appen er lukket.',
@@ -7223,7 +7223,7 @@ i18n.pl = {
     'notify.state.off': 'Dozwolone, ale wyłączone.',
     'notify.time': 'Dzienna wskazówka o',
     'notify.test': 'Wyślij powiadomienie testowe',
-    'notify.note': 'Powiadomienia o aktualizacjach przychodzą same. Wskaz\u00F3wki s\u0105 wysy\u0142ane s\u0105, dop\u00F3ki ta strona jest otwarta. Po instalacji w Chrome mog\u0105 tak\u017Ce dotrze\u0107 przy zamkni\u0119tej stronie, ale przegl\u0105darka decyduje o porze i mo\u017ce pomin\u0105\u0107 dzie\u0144.',
+    'notify.note': 'Codzienne wskazówki są wysyłane, dopóki ta strona jest otwarta. Zainstalowane w Chrome mogą przychodzić także przy zamkniętej stronie, ale przeglądarka wybiera czas i może pominąć dzień.',
     'notify.updates': 'Powiadomienia o aktualizacjach',
     'notify.updates.active': 'Sprawdzam w tle, czy są nowe wersje.',
     'notify.updates.needsInstall': 'Zainstaluj Anthkeys w Chrome lub Edge, aby działało także przy zamkniętej aplikacji.',
@@ -7703,7 +7703,7 @@ i18n.pt = {
     'notify.state.off': 'Permitido, mas desligado.',
     'notify.time': 'Dica diária às',
     'notify.test': 'Enviar uma notificação de teste',
-    'notify.note': 'Os avisos de atualização chegam sozinhos. Os lembretes s\u00E3o enviados enquanto este site estiver aberto. Instalado no Chrome, tamb\u00E9m podem chegar com o site fechado, mas o navegador escolhe a hora e pode pular um dia.',
+    'notify.note': 'As dicas diárias são enviadas enquanto este site está aberto. Instalado no Chrome, também podem chegar com o site fechado, mas o navegador escolhe a hora e pode saltar um dia.',
     'notify.updates': 'Avisos de atualização',
     'notify.updates.active': 'Procurando novas versões em segundo plano.',
     'notify.updates.needsInstall': 'Instale o Anthkeys no Chrome ou Edge para que funcione com o app fechado.',
@@ -8183,7 +8183,7 @@ i18n.ru = {
     'notify.state.off': 'Разрешено, но выключено.',
     'notify.time': 'Совет дня в',
     'notify.test': 'Отправить тестовое уведомление',
-    'notify.note': 'Уведомления об обновлениях приходят сами. \u0421\u043E\u0432\u0435\u0442\u044B \u043E\u0442\u043F\u0440\u0430\u0432\u043B\u044F\u044E\u0442\u0441\u044F, \u043F\u043E\u043A\u0430 \u044D\u0442\u043E\u0442 \u0441\u0430\u0439\u0442 \u043E\u0442\u043A\u0440\u044B\u0442. \u0415\u0441\u043B\u0438 \u0443\u0441\u0442\u0430\u043D\u043E\u0432\u0438\u0442\u044C \u0432 Chrome, \u043E\u043D\u0438 \u043C\u043E\u0433\u0443\u0442 \u043F\u0440\u0438\u0445\u043E\u0434\u0438\u0442\u044C \u0438 \u043F\u0440\u0438 \u0437\u0430\u043A\u0440\u044B\u0442\u043E\u043C \u0441\u0430\u0439\u0442\u0435, \u043D\u043E \u0431\u0440\u0430\u0443\u0437\u0435\u0440 \u0441\u0430\u043C \u0432\u044B\u0431\u0438\u0440\u0430\u0435\u0442 \u0432\u0440\u0435\u043C\u044F \u0438 \u043C\u043E\u0436\u0435\u0442 \u043F\u0440\u043E\u043F\u0443\u0441\u0442\u0438\u0442\u044C \u0434\u0435\u043D\u044C.',
+    'notify.note': 'Ежедневные советы приходят, пока сайт открыт. Если приложение установлено в Chrome, они тоже приходят при закрытом сайте, но время выбирает браузер, поэтому день может пропускаться.',
     'notify.updates': 'Уведомления об обновлениях',
     'notify.updates.active': 'Проверяю новые версии в фоне.',
     'notify.updates.needsInstall': 'Установите Anthkeys в Chrome или Edge, чтобы это работало и при закрытом приложении.',
@@ -8663,7 +8663,7 @@ i18n.sv = {
     'notify.state.off': 'Tillåten, men avstängd.',
     'notify.time': 'Dagligt tips kl.',
     'notify.test': 'Skicka en testavisering',
-    'notify.note': 'Uppdateringsaviseringar kommer av sig själv. Tips skickas medan webbplatsen \u00E4r \u00F6ppen. Installerad i Chrome kan de \u00E4ven komma n\u00E4r webbplatsen \u00E4r st\u00E4ngd, men webbl\u00E4saren v\u00E4ljer tidpunkten och kan hoppa \u00F6ver en dag.',
+    'notify.note': 'Dagliga tips skickas medan den här webbplatsen är öppen. Installerad i Chrome kan de även komma när den är stängd, men webbläsaren väljer tidpunkten och kan hoppa över en dag.',
     'notify.updates': 'Uppdateringsaviseringar',
     'notify.updates.active': 'Söker efter nya versioner i bakgrunden.',
     'notify.updates.needsInstall': 'Installera Anthkeys i Chrome eller Edge så att det fungerar även när appen är stängd.',
@@ -9143,7 +9143,7 @@ i18n.tr = {
     'notify.state.off': 'İzin verildi, ancak kapalı.',
     'notify.time': 'Günlük ipucu saati',
     'notify.test': 'Test bildirimi gönder',
-    'notify.note': 'Güncelleme uyarıları kendiliğinden gelir. Hat\u0131rlatlar bu site a\u00E7\u0131kken g\u00F6nderildi\u011Fi s\u00FCrece g\u00F6nderilir. Chrome\'a kuruldu\u011Fundaysa site kapal\u0131yken de gelebilir, ancak taray\u0131c\u0131 saati se\u00E7er ve bir g\u00FCn\u00FC atlayabilir.',
+    'notify.note': 'Günlük ipuçları bu site açıkken gönderilir. Chrome\'a yüklendiğinde site kapalıyken de gelebilir, ancak zamanı tarayıcı belirler ve bir günü atlayabilir.',
     'notify.updates': 'Güncelleme uyarıları',
     'notify.updates.active': 'Arka planda yeni sürümler aranıyor.',
     'notify.updates.needsInstall': 'Uygulama kapalıyken de çalışması için Anthkeys\'i Chrome veya Edge\'e kurun.',
@@ -9624,7 +9624,7 @@ i18n.vi = {
     'notify.state.off': 'Đã cho phép, nhưng đang tắt.',
     'notify.time': 'Mẹo hằng ngày lúc',
     'notify.test': 'Gửi thông báo thử',
-    'notify.note': 'Thông báo cập nhật tự đến. M\u1ED9i ti\u1EBFp \u0111\u01B0\u1EE3c g\u1EE5i khi trang n\u00E0y \u0111ang m\u1EDF. N\u1EBFu c\u00E0i \u0111\u1EB5t Chrome, ch\u00FAng c\u00F3 th\u1EC3 g\u1EE1i c\u00E1 khi \u0111\u00F3ng m\u1EDF trang, nh\u01B0ng tr\u00ECnh duy\u1EC7t s\u1EED quy\u1EBFt \u0111\u1ED7 v\u00E0 c\u00F3 th\u1EC3 b\u1ECB qua m\u1ED9t ng\u00E0y.',
+    'notify.note': 'Mẹo hằng ngày được gửi khi trang này đang mữ. Nếu đã cài trên Chrome, chúng có thể đến khi trang đã đóng, nhưng trình duyệt chọn thời điểm và có thể bỏ qua một ngày.',
     'notify.updates': 'Thông báo cập nhật',
     'notify.updates.active': 'Đang kiểm tra phiên bản mới ở nền.',
     'notify.updates.needsInstall': 'Cài Anthkeys trên Chrome hoặc Edge để tính năng này hoạt động khi đã đóng.',
@@ -10785,13 +10785,6 @@ async function pushNotifyConfig() {
   } catch(e) { }
 }
 
-// ---- Background update checks ----
-// A static site has no server to push to us, so background awareness is
-// carried by Periodic Background Sync: the worker wakes on its own, fetches
-// the deployed page, and notifies when the advertised version moves ahead of
-// the build the user is running. Chrome/Edge only, and only once Anthkeys is
-// installed as an app - see backgroundCheckState() for the honest fallback text.
-const AK_UPDATE_TAG = 'anthkeys-update-check';
 const AK_TIP_TAG = 'anthkeys-daily-tip';
 
 // Web Push config. Leave vapidPublicKey empty to keep push dormant; the
@@ -10916,7 +10909,6 @@ async function unregisterPeriodicSync() {
     const reg = await navigator.serviceWorker.ready;
     if (reg.periodicSync && typeof reg.periodicSync.unregister === 'function') {
       await reg.periodicSync.unregister(AK_TIP_TAG);
-      await reg.periodicSync.unregister(AK_UPDATE_TAG);
     }
   } catch(e) { }
 }
@@ -10952,14 +10944,6 @@ document.addEventListener('click', function(e) {
     if (row) row.hidden = true;
   });
 });
-function askWorkerForABackgroundCheck() {
-  // One-shot sync is the cheap half of the answer: the browser runs it the next
-  // time the network is available, even if the app has not been opened.
-  if (!('serviceWorker' in navigator)) return;
-  navigator.serviceWorker.ready.then(function(reg) {
-    if (reg.sync) reg.sync.register(AK_UPDATE_TAG).catch(function() {});
-  }).catch(function() {});
-}
 
 async function registerPeriodicSync() {
   if (!notifySupported || !NOTIFY.isEnabled() || notifyState() !== 'granted') {
@@ -10972,36 +10956,9 @@ async function registerPeriodicSync() {
     const st = await navigator.permissions.query({ name: 'periodic-background-sync' }).catch(() => null);
     if (st && st.state !== 'granted') return;
     await reg.periodicSync.register(AK_TIP_TAG, { minInterval: 24 * 60 * 60 * 1000 });
-    // The browser picks when this actually fires, so ask often and let it
-    // decide. The worker skips the work when the deployed version is unchanged.
-    if (NOTIFY.updatesEnabled()) {
-      await reg.periodicSync.register(AK_UPDATE_TAG, { minInterval: 6 * 60 * 60 * 1000 });
-    } else {
-      await reg.periodicSync.unregister(AK_UPDATE_TAG);
-    }
   } catch(e) { }
 }
 
-// What to honestly tell the reader about background checks.
-async function backgroundCheckState() {
-  if (!notifySupported) return 'unsupported';
-  if (notifyState() !== 'granted') return 'no-permission';
-  if (!NOTIFY.isEnabled()) return 'off';
-  if (!NOTIFY.updatesEnabled()) return 'updates-off';
-  try {
-    const reg = await navigator.serviceWorker.ready;
-    if (!('periodicSync' in reg)) return 'no-periodic-sync';
-    const st = await navigator.permissions.query({ name: 'periodic-background-sync' }).catch(() => null);
-    if (st && st.state === 'denied') return 'periodic-denied';
-    if (pushConfigured() && 'pushManager' in reg) {
-      const sub = await reg.pushManager.getSubscription().catch(() => null);
-      if (sub) return 'push';
-    }
-    return 'active';
-  } catch(e) {
-    return 'active';
-  }
-}
 
 function notifyRoomName(id) {
   if (!id || id === synDeviceId()) return notifyText('sync.unknown', 'Unknown device');
@@ -11066,13 +11023,9 @@ function renderNotifyUI() {
   const testBtn = document.getElementById('btnNotifyTest');
   const roomWrap = document.getElementById('notifyRoomWrap');
   const roomToggle = document.getElementById('toggleNotifyRoom');
-  const updateWrap = document.getElementById('notifyUpdateWrap');
-  const updateToggle = document.getElementById('toggleNotifyUpdate');
-  const updateStatus = document.getElementById('notifyUpdateStatus');
   const state = notifyState();
   const on = NOTIFY.isEnabled() && state === 'granted';
   const roomsOn = on && NOTIFY.roomsEnabled();
-  const updatesOn = on && NOTIFY.updatesEnabled();
   if (toggle) {
     toggle.classList.toggle('on', on);
     toggle.setAttribute('aria-checked', on ? 'true' : 'false');
@@ -11088,34 +11041,9 @@ function renderNotifyUI() {
     roomToggle.classList.toggle('on', roomsOn);
     roomToggle.setAttribute('aria-checked', roomsOn ? 'true' : 'false');
   }
-  if (updateWrap) updateWrap.hidden = !on;
-  if (updateToggle) {
-    updateToggle.classList.toggle('on', updatesOn);
-    updateToggle.setAttribute('aria-checked', updatesOn ? 'true' : 'false');
-  }
-if (updateStatus) {
-    // Only a plain "off" can be decided synchronously; whether background
-    // checks are really running depends on permissions and browser support.
-    if (!updatesOn) updateStatus.textContent = notifyText('notify.updates.off', '');
-    else renderUpdateStatus();
-  }
   if (testBtn) testBtn.hidden = state !== 'granted';
 }
 
-// Resolve the real state of background checks and paint it, so the settings
-// page never claims alerts are arriving in the background when they cannot.
-let updateStatusToken = 0;
-async function renderUpdateStatus() {
-  const el = document.getElementById('notifyUpdateStatus');
-  if (!el) return;
-  const token = ++updateStatusToken;
-  const state = await backgroundCheckState();
-  // A newer render may have started while we waited; let it win.
-  if (token !== updateStatusToken || !document.getElementById('notifyUpdateStatus')) return;
-  const key = (state === 'active' || state === 'push') ? 'notify.updates.active'
-    : (state === 'updates-off' ? 'notify.updates.off' : 'notify.updates.needsInstall');
-  el.textContent = notifyText(key, '');
-}
 
 onId('toggleNotify', 'click', async function() {
   const want = !this.classList.contains('on');
@@ -11142,15 +11070,6 @@ onId('toggleNotifyRoom', 'click', function() {
   renderNotifyUI();
 });
 
-onId('toggleNotifyUpdate', 'click', async function() {
-  const want = !this.classList.contains('on');
-  NOTIFY.set({ updates: want });
-  // A live subscription, when one exists, follows the switch immediately.
-  if (want) await enablePush(); else await disablePush();
-  await registerPeriodicSync();
-  reportVersionToSW();
-  renderNotifyUI();
-});
 
 function showUpdateCheckResult(text) {
   const el = document.getElementById('updateCheckResult');
@@ -11169,7 +11088,7 @@ onId('btnCheckUpdate', 'click', async function() {
   reportVersionToSW();
   const res = await askSWForUpdate(15000, true);
   btn.disabled = prev;
-  const newer = res && (res.state === 'notified' || res.state === 'already-notified' || res.state === 'available');
+  const newer = res && res.state === 'available';
   if (newer) {
     showUpdateCheckResult(notifyText('notify.check.newer', 'v{ver} is ready. Open Anthkeys to update.').replace('{ver}', res.latest));
   } else if (res && res.state === 'current') {
@@ -11201,24 +11120,7 @@ onId('btnNotifyTest', 'click', async function() {
 let reloadOnUpdate = false;
 if ('serviceWorker' in navigator) {
   let refreshing = false;
-  const updateMode = () => {
-    const el = document.querySelector('[data-update-mode].active');
-    return el ? el.dataset.updateMode : 'auto';
-  };
-  navigator.serviceWorker.register('sw.js?v=22').then(reg => {
-    reg.addEventListener('updatefound', () => {
-      const newSW = reg.installing;
-      if (!newSW) return;
-      newSW.addEventListener('statechange', () => {
-        if (newSW.state !== 'installed' || !navigator.serviceWorker.controller) return;
-        if (updateMode() === 'ask') {
-          const banner = document.getElementById('updateBanner');
-          if (banner) banner.hidden = false;
-        } else if (reg.waiting) {
-          reg.waiting.postMessage({ type: 'SKIP_WAITING' });
-        }
-      });
-    });
+  navigator.serviceWorker.register('sw.js?v=23').then(reg => {
     registerPeriodicSync();
     pushNotifyConfig();
   }).catch(() => {});
@@ -11249,16 +11151,6 @@ function refreshForUpdates() {
   }).catch(reload);
 }
 onId('btnRefresh', 'click', refreshForUpdates);
-onId('btnUpdate', 'click', () => {
-  const banner = document.getElementById('updateBanner');
-  if (banner) banner.hidden = true;
-  if (APP_VERSION) {
-    lsSet('anthkeys-last-version', String(APP_VERSION));
-    lsSet('anthkeys-highlight-version', String(APP_VERSION));
-    lsSet('anthkeys-highlight-at', String(Date.now()));
-  }
-  refreshForUpdates();
-});
 
 // ---- Install prompt ----
 (function() {
@@ -11375,17 +11267,6 @@ function onVersionBadgeClick() {
   }
   openWhatsNew();
 }
-function showUpdateToast(ver) {
-  const toast = document.getElementById('updateToast');
-  const text = document.getElementById('updateToastText');
-  if (!toast) return;
-  if (text) text.textContent = 'Updated to v' + ver + ' \u2014 ';
-  toast.classList.remove('show');
-  void toast.offsetHeight;
-  toast.classList.add('show');
-  clearTimeout(toast._timer);
-  toast._timer = setTimeout(() => toast.classList.remove('show'), 6000);
-}
 function openWhatsNew() {
   showSettings();
   const aboutTab = document.querySelector('.settings-tab[data-settings-tab="about"]');
@@ -11396,8 +11277,6 @@ function openWhatsNew() {
   if (about) {
     about.classList.add('open');
   }
-  const toast = document.getElementById('updateToast');
-  if (toast) { toast.classList.remove('show'); clearTimeout(toast._timer); }
   const pill = document.getElementById('appVersion');
   if (pill) {
     pill.classList.remove('pill-new');
@@ -11406,13 +11285,6 @@ function openWhatsNew() {
   const badge = document.getElementById('settingsBadge');
   if (badge) badge.hidden = true;
 }
-document.getElementById('updateToastLink')?.addEventListener('click', e => {
-  e.preventDefault();
-  openWhatsNew();
-});
-document.getElementById('updateToast')?.addEventListener('click', e => {
-  if (e.target.tagName !== 'A') openWhatsNew();
-});
 function initWhatsNewSelect() {
   const sel = document.getElementById('whatsnewSelect');
   if (!sel) return;
@@ -11446,26 +11318,16 @@ function cachedJsVersion() {
     .catch(() => null);
 }
 function showUpdateNotification() {
+  // Silent by design: the service worker swaps the new build in on its own, so
+  // there is nothing to announce. All that is left is marking the version pill
+  // and the What's New entry so the change is findable when they look.
   const badge = document.getElementById('settingsBadge');
   if (badge) badge.hidden = false;
-  sendNotification(
-    'update-' + APP_VERSION,
-    notifyText('notify.update.title', 'Update available'),
-    notifyText('notify.update.body', 'Anthkeys v{ver} is ready. Open it to update.').replace('{ver}', APP_VERSION),
-    'update-' + APP_VERSION
-  );
-  const mode = (document.querySelector('[data-update-mode].active')?.dataset.updateMode) || 'auto';
-  if (mode === 'ask') {
-    const banner = document.getElementById('updateBanner');
-    if (banner) banner.hidden = false;
-  } else {
-    lsSet('anthkeys-last-version', String(APP_VERSION));
-    lsSet('anthkeys-highlight-version', String(APP_VERSION));
-    lsSet('anthkeys-highlight-at', String(Date.now()));
-    const pill = document.getElementById('appVersion');
-    if (pill) pill.classList.add('pill-new');
-    showUpdateToast(APP_VERSION);
-  }
+  lsSet('anthkeys-last-version', String(APP_VERSION));
+  lsSet('anthkeys-highlight-version', String(APP_VERSION));
+  lsSet('anthkeys-highlight-at', String(Date.now()));
+  const pill = document.getElementById('appVersion');
+  if (pill) pill.classList.add('pill-new');
 }
 function checkForUpdate() {
   if (!APP_VERSION) return;
@@ -12388,7 +12250,7 @@ checkForUpdate();
       // A cached page can be behind the deployed one, so let the worker's
       // own comparison speak rather than trusting the loaded build blindly.
       askSWForUpdate(12000).then(res => {
-        if (res && res.state === 'notified') checkForUpdate();
+        if (res && res.state === 'available') checkForUpdate();
       });
     }).catch(() => { });
     // The worker only starts controlling this page after it activates, which
@@ -12399,15 +12261,6 @@ checkForUpdate();
   }
   // Coming back to a tab that has been sitting open, or reconnecting after
   // being offline, are the moments a new version is most likely to exist.
-// Nudge the worker to look for a new version when we are being closed.
-  if (!_akVisibilityHook) {
-    _akVisibilityHook = true;
-    document.addEventListener('visibilitychange', function() {
-      if (document.visibilityState === 'hidden') askWorkerForABackgroundCheck();
-    });
-  }
-  // ...and once at launch, so a freshly installed or freshly updated app checks too.
-  askWorkerForABackgroundCheck();
   document.addEventListener('visibilitychange', () => {
     if (document.visibilityState === 'visible') {
       reportVersionToSW();

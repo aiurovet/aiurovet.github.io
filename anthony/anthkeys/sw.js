@@ -1,8 +1,7 @@
-const CACHE = 'anthkeys-v52.10';
+const CACHE = 'anthkeys-v52.11';
 const CFG_CACHE = 'anthkeys-notify-cfg';
 const CFG_URL = 'notify-cfg.json';
 const TIP_TAG = 'anthkeys-daily-tip';
-const UPDATE_TAG = 'anthkeys-update-check';
 const URLS = ['anthkeys.html', '404.html', 'manifest.json', 'js/mqtt.min.js', 'js/qrcode.js', 'js/i18n-recent.js', 'js/i18n-wn.js', 'icon-192.png', 'icon-512.png', 'icon-maskable-192.png', 'icon-maskable-512.png', 'apple-touch-icon.png'];
 
 self.addEventListener('install', e => {
@@ -14,9 +13,6 @@ self.addEventListener('install', e => {
 self.addEventListener('activate', e => {
   e.waitUntil(
     caches.keys().then(keys => Promise.all(keys.filter(k => k !== CACHE && k !== CFG_CACHE).map(k => caches.delete(k))))
-      // A new worker only shows up after a visit, but the old cfg still knows
-      // which build the user was on, so use that window to announce the change.
-      .then(() => checkUpdateInBackground())
       .catch(() => null)
   );
   self.clients.claim();
@@ -72,41 +68,17 @@ function latestPublishedVersion() {
     .catch(() => null);
 }
 
-function notifyUpdateAvailable(cfg, latest) {
-  const body = (cfg.updateBody || 'Anthkeys v{ver} is ready. Open it to update.').replace('{ver}', latest);
-  const opts = {
-    body: body,
-    icon: 'icon-192.png',
-    badge: 'icon-192.png',
-    tag: 'update-' + latest,
-    renotify: false,
-    data: { url: 'anthkeys.html' }
-  };
-  if (cfg.dark) opts.theme = 'dark';
-  return self.registration.showNotification(cfg.updateTitle || 'Update available', opts);
-}
-
-// Runs from periodicsync / activate / an explicit page request, so the user
-// hears about a new version without having to open the app.
-//
-// manual=true comes from the "Check for updates now" button, which now lives
-// in About and must work whether or not notifications are switched on. It
-// compares versions and reports what it found, but never raises a notification:
-// the answer is already on screen, and permission may not even exist.
+// Compares the running build with the published one. Nothing is ever pushed to
+// the user: updates arrive silently through the service worker, and this only
+// answers the "Check for updates now" button in About.
 function checkUpdateInBackground(manual) {
   return readCfg().then(cfg => {
     if (!cfg) return { state: 'no-config' };
-    if (cfg.updates === false && !manual) return { state: 'disabled' };
     if (!cfg.version) return { state: 'unknown-version' };
     return latestPublishedVersion().then(latest => {
       if (!latest) return { state: 'offline', running: cfg.version };
       if (verCmp(latest, cfg.version) <= 0) return { state: 'current', latest: latest, running: cfg.version };
-      if (cfg.notified === latest) return { state: 'already-notified', latest: latest, running: cfg.version };
-      if (manual) return { state: 'available', latest: latest, running: cfg.version };
-      return notifyUpdateAvailable(cfg, latest)
-        .then(() => patchCfg({ notified: latest }))
-        .then(() => ({ state: 'notified', latest: latest, running: cfg.version }))
-        .catch(() => ({ state: 'denied', latest: latest, running: cfg.version }));
+      return { state: 'available', latest: latest, running: cfg.version };
     });
   }).catch(() => ({ state: 'error' }));
 }
@@ -192,18 +164,6 @@ self.addEventListener('periodicsync', e => {
   if (e.tag === TIP_TAG) {
     e.waitUntil(showDailyTip());
     return;
-  }
-  if (e.tag === UPDATE_TAG) {
-    e.waitUntil(checkUpdateInBackground());
-  }
-});
-
-// One-shot Background Sync: the browser hands this to us as soon as the
-// network is back, which covers the gap between periodic timers on browsers
-// that throttle them heavily.
-self.addEventListener('sync', e => {
-  if (e.tag === UPDATE_TAG) {
-    e.waitUntil(checkUpdateInBackground());
   }
 });
 

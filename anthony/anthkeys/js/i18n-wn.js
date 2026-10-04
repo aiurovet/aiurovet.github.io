@@ -5,7 +5,12 @@
    leaves the English markup in place. */
 const I18N_WN = window.I18N_WN || {};
 
-I18N_WN.es = {
+I18N_WN.es = {
+  'v52.11': [
+    'Actualizaciones: ahora son silenciosas. Una versión nueva se instala en segundo plano sin mostrar nada. Se eliminaron el interruptor de alertas de actualización, la banda de actualización y la ventana emergente.',
+  ],
+
+
   'v52.10': [
     'Corregido: el modo «Plano» ya no pinta un bloque sólido debajo del título en los teléfonos.',
   ],
@@ -274,7 +279,12 @@ I18N_WN.es = {
   'v1': ['La primera versi&oacute;n de Anthkeys: los atajos de teclado diarios de Windows, macOS, Linux y ChromeOS en una sola p&aacute;gina.']
 };
 
-I18N_WN.fr = {
+I18N_WN.fr = {
+  'v52.11': [
+    'Mises à jour: désormais silencieuses. Une nouvelle version s’installe en arrière-plan sans rien afficher. Les alertes de mise à jour, la bannière et la bulle ont été supprimés.',
+  ],
+
+
   'v52.10': [
     'Corrigé : le mode « Plat » ne dessine plus de bloc solide sous le titre sur les téléphones.',
   ],
@@ -543,7 +553,12 @@ I18N_WN.fr = {
   'v1': ['La premi&egrave;re version d&rsquo;Anthkeys : les raccourcis clavier quotidiens de Windows, macOS, Linux et ChromeOS sur une seule page.']
 };
 
-I18N_WN.de = {
+I18N_WN.de = {
+  'v52.11': [
+    'Updates: jetzt still. Eine neue Version installiert sich im Hintergrund, ohne dass etwas erscheint. Der Schalter für Update-Hinweise, das Update-Banner und der Popup wurden entfernt.',
+  ],
+
+
   'v52.10': [
     'Behoben: Der Modus „Matt“ malt auf Telefonen keinen soliden Block mehr unter den Titel.',
   ],
@@ -812,7 +827,12 @@ I18N_WN.de = {
   'v1': ['Die erste Version von Anthkeys &mdash; alle t&auml;glichen Tastenk&uuml;rzel f&uuml;r Windows, macOS, Linux und ChromeOS auf einer Seite.']
 };
 
-I18N_WN.it = {
+I18N_WN.it = {
+  'v52.11': [
+    'Aggiornamenti: ora sono silenziosi. Una nuova versione si installa in background senza mostrare nulla. Sono stati rimossi l’interruttore degli avvisi, il banner e il popup.',
+  ],
+
+
   'v52.10': [
     'Corretto: la modalità «Piatto» non dipinge più un blocco pieno sotto il titolo sui telefoni.',
   ],
@@ -1081,7 +1101,12 @@ I18N_WN.it = {
   'v1': ['La prima versione di Anthkeys: tutte le scorciatoie da tastiera quotidiane per Windows, macOS, Linux e ChromeOS in una sola pagina.']
 };
 
-I18N_WN.pt = {
+I18N_WN.pt = {
+  'v52.11': [
+    'Atualizações: agora são silenciosas. Uma versão nova instala-se em segundo plano sem mostrar nada. Foram removidos o interruptor de alertas, a faixa e o balão.',
+  ],
+
+
   'v52.10': [
     'Corrigido: o modo «Plano» já não pinta um bloco sólido por baixo do título nos telemóveis.',
   ],
@@ -1350,7 +1375,12 @@ I18N_WN.pt = {
   'v1': ['A primeira vers&atilde;o do Anthkeys: todos os atalhos de teclado do dia a dia para Windows, macOS, Linux e ChromeOS em uma &uacute;nica p&aacute;gina.']
 };
 
-I18N_WN.nl = {
+I18N_WN.nl = {
+  'v52.11': [
+    'Updates: nu stil. Een nieuwe versie installeert zich op de achtergrond zonder iets te tonen. De schakelaar voor update-meldingen, de update-banner en de meldingsknop zijn verwijderd.',
+  ],
+
+
   'v52.10': [
     'Opgelost: de stand ‘Plat’ tekent op telefoons geen solide blok meer onder de titel.',
   ],
@@ -1619,7 +1649,12 @@ I18N_WN.nl = {
   'v1': ['De eerste versie van Anthkeys: alle dagelijkse toetsenbord-sneltoetsen voor Windows, macOS, Linux en ChromeOS op &eacute;&eacute;n pagina.']
 };
 
-I18N_WN.ja = {
+I18N_WN.ja = {
+  'v52.11': [
+    '更新：現在は無反で完了します。新しいバージョンはバックグラウンドで自動的にインストールされ、何も表示されません。更新アラートのスイッチ、バンナー、ポップアップアは削除しました。',
+  ],
+
+
   'v52.10': [
     '修正：「フラット」モードで、スマートフォンのタイトル下に塗りつぶしが残らないようにしました。',
   ],
@@ -1888,7 +1923,12 @@ I18N_WN.ja = {
   'v1': ['Anthkeys の最初のバージョンです。Windows、macOS、Linux、ChromeOS の日常的なキーボードショートカットを 1 ページにまとめました。']
 };
 
-I18N_WN.ru = {
+I18N_WN.ru = {
+  'v52.11': [
+    'Обновления: теперь безмолвны. Новая версия становится в фоне, ничего не показывая. Переключатель уведомлений, баннер обновлений и всплывающее окно убранены.',
+  ],
+
+
   'v52.10': [
     'Исправлено: режим «Плоский» больше не рисует сплошной блок под заголовком на телефонах.',
   ],
@@ -2157,7 +2197,12 @@ I18N_WN.ru = {
   'v1': ['Первая версия Anthkeys: все повседневные сочетания клавиш для Windows, macOS, Linux и ChromeOS на одной странице.']
 };
 
-I18N_WN.ko = {
+I18N_WN.ko = {
+  'v52.11': [
+    '업데이트: 이제 자동으로 완따됩니다. 새 버전은 백그라운드에서 자동 설치되고 아무것도 표시되지 않습니다. 업데이트 알랰 스위치, 반너, 필스트를 제거했습니다.',
+  ],
+
+
   'v52.10': [
     '수정: 플랫 모드에서 휴대폰 화면의 제목 아래에 칠해진 블록이 더 이상 나타나지 않습니다.',
   ],
@@ -2426,7 +2471,12 @@ I18N_WN.ko = {
   'v1': ['Anthkeys의 첫 버전입니다. Windows, macOS, Linux, ChromeOS의 일상적인 키보드 단축키를 한 페이지에 모았습니다.']
 };
 
-I18N_WN.pl = {
+I18N_WN.pl = {
+  'v52.11': [
+    'Aktualizacje: są teraz ciche. Nowa wersja instaluje się w tle bez żadnych powiadomień. Usunięto przełącznik alertów, baner aktualizacji i wyskakujące okno.',
+  ],
+
+
   'v52.10': [
     'Poprawiono: tryb „Płaski” nie rysuje już pełnego bloku pod tytułem na telefonach.',
   ],
@@ -2695,7 +2745,12 @@ I18N_WN.pl = {
   'v1': ['Pierwsza wersja Anthkeys: wszystkie codzienne skróty klawiszowe dla Windows, macOS, Linux i ChromeOS na jednej stronie.']
 };
 
-I18N_WN.tr = {
+I18N_WN.tr = {
+  'v52.11': [
+    'Güncellemeler: artık sessiz. Yeni sürüm arka planda kendiliğinden kurulur ve hiçbir şey gösterilmez. Güncelleme uyarıları anahtarı, çubuk ve balon kaldırıldı.',
+  ],
+
+
   'v52.10': [
     'Düzeltildi: Düz mod artık telefonlarda başlığın altına dolu bir blok çizmiyor.',
   ],
@@ -2964,7 +3019,12 @@ I18N_WN.tr = {
   'v1': ['Anthkeys’in ilk sürümü: Windows, macOS, Linux ve ChromeOS için günlük klavye kısayollarının tamamı tek bir sayfada.']
 };
 
-I18N_WN.vi = {
+I18N_WN.vi = {
+  'v52.11': [
+    'Cập nhầt: giờ đã im lặng. Phiên bản mới tự cài đặt trong nền và không hiện gì. Đã gỡ công tắc, băng cập nhắt và hộp thoái.',
+  ],
+
+
   'v52.10': [
     'Đã sửa: chế độ «Phẳng» không còn tô một khối đặc bên dưới tiêu đề trên điện thoại.',
   ],
@@ -3233,7 +3293,12 @@ I18N_WN.vi = {
   'v1': ['Bản đầu tiên của Anthkeys: toàn bộ phím tắt bàn phím hằng ngày cho Windows, macOS, Linux và ChromeOS trong một trang.']
 };
 
-I18N_WN.ar = {
+I18N_WN.ar = {
+  'v52.11': [
+    'التحديثات: أصبحت هادئة الآن. تُثبّت الإصدار الجديد في الخلفية دون عرض شيء. أزيلت مفتاح إشعار التحديثات وشريط التحديث والنفاذة المنبقة.',
+  ],
+
+
   'v52.10': [
     'إصلاح: لم يعد وضع «مسطّح» يرسم كتلة صلبة أسفل العنوان على الهواتف.',
   ],
@@ -3502,7 +3567,12 @@ I18N_WN.ar = {
   'v1': ['الإصدار الأول من Anthkeys: كل اختصارات لوحة المفاتيح اليومية لـWindows وmacOS وLinux وChromeOS في صفحة واحدة.']
 };
 
-I18N_WN.hi = {
+I18N_WN.hi = {
+  'v52.11': [
+    'अपडेट: अब सीफ हैं। नया वर्कसन बैकग्राउंड में स्थरित इंस्टॉल हो जाता है, कुछ कोए गई नहीं ऒेटा जाता है। अपडेट अलर्ट स्विच्च, ब्नर और पोपअप हटा दिया गएर दिया गएँ।',
+  ],
+
+
   'v52.10': [
     'ठीक किया गया: फ़्लैट मोड अब फ़ोन पर शीर्षक के नीचे कोई ठोस ब्लॉक नहीं बनाता।',
   ],
@@ -3771,7 +3841,12 @@ I18N_WN.hi = {
   'v1': ['Anthkeys का पहला संस्करण: Windows, macOS, Linux और ChromeOS के रोज़मर्रा कीबोर्ड शॉर्टकट एक ही पेज पर.']
 };
 
-I18N_WN.sv = {
+I18N_WN.sv = {
+  'v52.11': [
+    'Uppdateringar: nu tysta. En ny version installeras i bakgrunden utan att något visas. Omkopplaren för uppdateringsaviseringar, uppdateringsbanderollen och popupen har tagits bort.',
+  ],
+
+
   'v52.10': [
     'Rättat: läget ”Platt” målar inte längre en solid block under titeln på telefoner.',
   ],
@@ -4040,7 +4115,12 @@ I18N_WN.sv = {
   'v1': ['Första versionen av Anthkeys: alla dagliga tangentbordsgenvägar för Windows, macOS, Linux och ChromeOS på en sida.']
 };
 
-I18N_WN.da = {
+I18N_WN.da = {
+  'v52.11': [
+    'Opdateringer: nu stille. En ny version installeres i baggrunden, uden at der vises noget. Kontakten til opdateringsnoter, banneret og pop op-vinduet er fjernet.',
+  ],
+
+
   'v52.10': [
     'Rettet: indstillingen ”Flad” tegner ikke længere en massiv blok under titlen på telefoner.',
   ],
@@ -4309,7 +4389,12 @@ I18N_WN.da = {
   'v1': ['Første udgave af Anthkeys: alle daglige tastaturgenveje til Windows, macOS, Linux og ChromeOS på én side.']
 };
 
-I18N_WN.fi = {
+I18N_WN.fi = {
+  'v52.11': [
+    'Päivitykset: nyt hiljaisia. Uusi versio asennetaan taustalla ilman mitään näkyvää. Päivitysasetusten kytkin, päivitysbanneri ja ponnahdikkko poistettiin.',
+  ],
+
+
   'v52.10': [
     'Korjattu: ”Tasainen”-tila ei enää piirtävä puhelimissa kiinteää lohkoa otsikon alle.',
   ],
@@ -4578,7 +4663,12 @@ I18N_WN.fi = {
   'v1': ['Anthkeysin ensimmäinen versio: kaikki päivittäiset näppäinoikotiet Windowsille, macOS:lle, Linuxille ja ChromeOS:lle yhdellä sivulla.']
 };
 
-I18N_WN.no = {
+I18N_WN.no = {
+  'v52.11': [
+    'Oppdateringer: nå stille. En ny versjon installeres i bakgrunnen uten at noe vises. Bryteren for oppdateringsvarsler, banneret og popup-vinduet er fjernet.',
+  ],
+
+
   'v52.10': [
     'Rettet: innstillingen ”Flat” tegner ikke lenger et solidt blokk under tittelen på telefoner.',
   ],
@@ -4847,7 +4937,12 @@ I18N_WN.no = {
   'v1': ['Første utgave av Anthkeys: alle daglige tastaturgenveier for Windows, macOS, Linux og ChromeOS på én side.']
 };
 
-I18N_WN.cs = {
+I18N_WN.cs = {
+  'v52.11': [
+    'Aktualizace: nyní tiché. Nová verze se nainstaluje na pozadí a nic se nezobrazí. Přepínač aktualizací, banner i vyskakovací okno byly odebrány.',
+  ],
+
+
   'v52.10': [
     'Opraveno: režim „Ploché“ už na telefonech nekreslí plnou barev pod nadpisem.',
   ],
@@ -5116,7 +5211,12 @@ I18N_WN.cs = {
   'v1': ['První verze Anthkeys: všechny denní klávesové zkratky pro Windows, macOS, Linux a ChromeOS na jedné stránce.']
 };
 
-I18N_WN.hu = {
+I18N_WN.hu = {
+  'v52.11': [
+    'Frissítések: mostant csendesek. Az új változat a háttérben települ és semmi sem jelenik meg. Eltávolt a frissítési értesításek kapcsolója, a banner és az ñablak.',
+  ],
+
+
   'v52.10': [
     'Javítva: a „Sík” mód már nem rajzol tömör blokkot a cím alatt a telefonokon.',
   ],
