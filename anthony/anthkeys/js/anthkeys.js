@@ -10665,7 +10665,7 @@ onId('btnNotifyTest', 'click', async function() {
 let reloadOnUpdate = false;
 if ('serviceWorker' in navigator) {
   let refreshing = false;
-  navigator.serviceWorker.register('sw.js?v=26').catch(() => {});
+  navigator.serviceWorker.register('sw.js?v=25').catch(() => {});
   navigator.serviceWorker.addEventListener('controllerchange', () => {
     if (!reloadOnUpdate || refreshing) return;
     refreshing = true;
@@ -12103,26 +12103,8 @@ onId('btnPrint', 'click', () => {
 });
 // Restore collapsed state after printing
 window.addEventListener('afterprint', () => {
-  document.body.classList.remove('study-print');
   // Re-apply category filter after print
   applyCategoryFilter();
-});
-
-// Study sheet: print the current system as a clean, compact PDF that only
-// includes the categories open right now (the search box and the advanced
-// toggle already narrow it further). Unlike Print, it does not expand
-// everything and it prints just the active panel.
-onId('btnStudy', 'click', () => {
-  document.body.classList.add('study-print');
-  const tab = document.querySelector('.tab.active');
-  const head = document.getElementById('studyHead');
-  if (head) {
-    const tabLabel = tab ? tab.textContent.trim() : '';
-    const label = (tabLabel ? tabLabel + ' \u00B7 ' : '') + 'Study sheet';
-    const dateTxt = new Date().toLocaleDateString(undefined, { year: 'numeric', month: 'short', day: 'numeric' });
-    head.innerHTML = escHtml(label) + '<small>' + escHtml(dateTxt) + '</small>';
-  }
-  setTimeout(() => window.print(), 100);
 });
 
 
