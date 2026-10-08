@@ -4,6 +4,11 @@ const CFG_URL = 'notify-cfg.json';
 const URLS = ['anthkeys.html', '404.html', 'manifest.json', 'js/mqtt.min.js', 'js/qrcode.js', 'js/i18n-recent.js', 'js/i18n-wn.js', 'icon-192.png', 'icon-512.png', 'icon-maskable-192.png', 'icon-maskable-512.png', 'apple-touch-icon.png'];
 
 self.addEventListener('install', e => {
+  // Take over as soon as the new worker is ready so the refreshed asset cache
+  // (which includes the freshly fetched anthkeys.html) is the one serving the
+  // very next navigation. Without this, a PWA keeps its old cache until the
+  // previous worker is discarded, which can delay fixes for multiple loads.
+  self.skipWaiting();
   e.waitUntil(
     caches.open(CACHE).then(c => c.addAll(URLS))
   );

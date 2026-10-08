@@ -11084,7 +11084,11 @@ function syncAccentWp(theme) {
 let bgFadeTimer = null;
 function withBgCrossfade(mutate) {
   const body = document.body;
-  if (body.classList.contains('no-anim') || window.matchMedia('(prefers-reduced-motion: reduce)').matches) { mutate(); return; }
+  // Skip only when the user explicitly turned Animations off. OS-level "reduce
+  // motion" is deliberately ignored here: a short background crossfade is not
+  // a vestibular trigger, and silently snapping backgrounds is the bug being
+  // fixed. Users who want zero animation use the Animations toggle instead.
+  if (body.classList.contains('no-anim')) { mutate(); return; }
   const cs = getComputedStyle(body, '::before');
   body.style.setProperty('--fade-img', cs.backgroundImage);
   body.style.setProperty('--fade-col', cs.backgroundColor);
