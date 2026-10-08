@@ -28,7 +28,7 @@
   <script>if (location.protocol === 'file:') document.getElementById('manifestLink').remove();</script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=Roboto:wght@400;500;600;700&family=Open+Sans:wght@400;500;600;700&family=Nunito:wght@400;500;600;700&family=Lato:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700&family=Work+Sans:wght@400;500;600;700&family=Rubik:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&family=Source+Sans+3:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&family=Fira+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/anthkeys.css?v=118">
+  <link rel="stylesheet" href="css/anthkeys.css?v=119">
 </head>
 <body class="light style-m3 size-medium font-google-sans">
  <div class="container">
@@ -630,10 +630,6 @@
             <button class="toggle" id="toggleNotify" role="switch" aria-checked="false"></button>
           </div>
           <p style="margin:.45rem 0 0;font-size:.75rem;line-height:1.45;color:var(--text-variant)" id="notifyStatus" data-i18n="notify.state.default">Click the switch and allow notifications in your browser prompt.</p>
-          <div id="notifyTimeWrap" hidden style="display:flex;align-items:center;gap:.5rem;margin-top:.5rem;padding:.5rem .6rem;border:1px solid var(--outline-variant);border-radius:var(--radius-sm);background:var(--surface-variant)">
-            <label for="notifyTime" style="font-size:.78rem;color:var(--text-variant)" data-i18n="notify.time">Daily tip at</label>
-            <input type="time" id="notifyTime" value="09:00" style="margin-left:auto;padding:.3rem .4rem;border:1px solid var(--outline-variant);border-radius:var(--radius-sm);background:var(--surface);color:var(--text);font:var(--size) var(--font)">
-          </div>
           <div id="notifyRoomWrap" hidden style="display:flex;align-items:center;gap:.6rem;margin-top:.5rem;padding:.5rem .6rem;border:1px solid var(--outline-variant);border-radius:var(--radius-sm);background:var(--surface-variant)">
             <div style="flex:1;min-width:0">
               <label for="toggleNotifyRoom" style="font-size:.78rem;color:var(--text)" data-i18n="notify.rooms">Live room alerts</label>
@@ -644,7 +640,6 @@
           <div style="display:flex;gap:.4rem;margin-top:.5rem">
             <button class="pill" id="btnNotifyTest" data-i18n="notify.test" title="Send a test notification" hidden>Send a test notification</button>
           </div>
-          <p style="margin:.45rem 0 0;font-size:.72rem;line-height:1.45;color:var(--text-variant)" data-i18n="notify.note">Daily tips are sent while this site is open. Installed on Chrome they can also arrive when it is closed, but the browser picks the time and may skip a day.</p>
         </div>
       </div>
       <div class="setting-group">
@@ -810,6 +805,13 @@
                 <div class="whatsnew-title" data-i18n="whatsnew.title">What's new</div>
                 <p class="whatsnew-sub" data-i18n="whatsnew.sub">Recent changes to Anthkeys</p>
                 <select id="whatsnewSelect" aria-label="Version" style="width:100%;padding:.45rem .7rem;border:1px solid var(--outline-variant);border-radius:var(--radius-sm);background:var(--surface);color:var(--text);font:var(--size) var(--font);font-size:.8rem;margin-bottom:.6rem;box-sizing:border-box;outline:none"></select>
+                <div class="wn-entry">
+                  <div class="wn-ver">v53.1 <span class="wn-date">Oct 8, 2026</span></div>
+                  <ul>
+                    <li>Fixed: backgrounds crossfade again &mdash; switching themes or wallpaper blends instead of snapping.</li>
+                    <li>Removed: scheduled daily-tip notifications. The in-app tip and the new-version badge by the Settings gear remain.</li>
+                  </ul>
+                </div>
                 <div class="wn-entry">
                   <div class="wn-ver">v53.0 <span class="wn-date">Oct 8, 2026</span></div>
                   <ul>
@@ -1856,7 +1858,7 @@
   <script src="js/qrcode.js"></script>
   <script src="js/i18n-recent.js"></script>
 <script src="js/i18n-wn.js"></script>
-<script src="js/anthkeys.js?v=53.0">
+<script src="js/anthkeys.js?v=53.1">
 </script>
 </body>
 </html>

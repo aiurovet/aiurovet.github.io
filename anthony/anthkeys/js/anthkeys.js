@@ -12,15 +12,12 @@ const i18n = {
     'notify.state.denied': 'Blocked. Allow notifications for this site in your browser settings.',
     'notify.state.unsupported': 'This browser cannot show notifications.',
     'notify.state.off': 'Allowed, but switched off.',
-    'notify.time': 'Daily tip at',
     'notify.test': 'Send a test notification',
-    'notify.note': 'Daily tips are sent while this site is open. Installed on Chrome they can also arrive when it is closed, but the browser picks the time and may skip a day.',
     'notify.checkNow': 'Check for updates now',
     'notify.check.upToDate': 'You are on the latest version.',
     'notify.check.newer': 'v{ver} is ready. Open Anthkeys to update.',
     'notify.check.working': 'Checking…',
     'notify.check.failed': 'Could not check just now. Try again later.',
-    'notify.tip.title': 'Today\u2019s shortcut',
     'notify.test.title': 'Test notification',
     'notify.test.body': 'Notifications are working.',
     'notify.rooms': 'Live room alerts',
@@ -490,15 +487,12 @@ i18n.ar = {
     'notify.state.denied': 'محظور. اسمح بإشعارات هذا الموقع من إعدادات المتصفح.',
     'notify.state.unsupported': 'لا يمكن لهذا المتصفح عرض الإشعارات.',
     'notify.state.off': 'مسموح، لكنه مُعطّل.',
-    'notify.time': 'نصيحة اليوم في',
     'notify.test': 'أرسل إشعارًا تجريبيًا',
-    'notify.note': 'تُرسل النصائح اليومية طالما يكون هذا الموقع مفتوحاً. وعند التثبيت على Chrome يمكن أن تصل أيضاً وهو مغلق، لكن المتصفح يختار الوقت وقد يتخطى يوماً.',
     'notify.checkNow': 'افحص عن تحديثات الآن',
     'notify.check.upToDate': 'أنت على أحدث إصدار.',
     'notify.check.newer': 'الإصدار v{ver} جاهز. افتح Anthkeys للتحديث.',
     'notify.check.working': 'تجميع الفحص…',
     'notify.check.failed': 'تعذّر الفحص الآن. حاول لاحقًا.',
-    'notify.tip.title': 'اختصار اليوم',
     'notify.test.title': 'إشعار تجريبي',
     'notify.test.body': 'الإشعارات تعمل.',
     'notify.rooms': 'تنبيهات الغرف المباشرة',
@@ -959,15 +953,12 @@ i18n.cs = {
     'notify.state.denied': 'Zablokováno. Povolte oznámení pro tento web v nastavení prohlížeče.',
     'notify.state.unsupported': 'Tento prohlížeč neumí zobrazovat oznámení.',
     'notify.state.off': 'Povoleno, ale vypnuto.',
-    'notify.time': 'Denní tip v',
     'notify.test': 'Odeslat zkušební oznámení',
-    'notify.note': 'Denní tipy se posílají, dokud je tato stránka otevřená. Nainstalované v Chromu mohou přicházet i při zavřené stránce, ale prohlížeoč vybere čas a může přeskočit den.',
     'notify.checkNow': 'Zkontrolovat aktualizace nyní',
     'notify.check.upToDate': 'Máte nejnovější verzi.',
     'notify.check.newer': 'Verze v{ver} je připravena. Otevřete Anthkeys pro aktualizaci.',
     'notify.check.working': 'Kontroluji…',
     'notify.check.failed': 'Kontrolu se nepodařilo provést. Zkuste to později.',
-    'notify.tip.title': 'Dnešní zkratka',
     'notify.test.title': 'Zkušební oznámení',
     'notify.test.body': 'Oznámení fungují.',
     'notify.rooms': 'Upozornění živých místností',
@@ -1428,15 +1419,12 @@ i18n.da = {
     'notify.state.denied': 'Blokeret. Tillad notifikationer for dette websted i browserens indstillinger.',
     'notify.state.unsupported': 'Denne browser kan ikke vise notifikationer.',
     'notify.state.off': 'Tilladt, men slået fra.',
-    'notify.time': 'Dagligt tip kl.',
     'notify.test': 'Send en testnotifikation',
-    'notify.note': 'Daglige tips sendes, mens dette websted er åbent. Installeret i Chrome kan de også komme, når det er lukket, men browseren vælger tidspunktet og kan springe en dag over.',
     'notify.checkNow': 'Tjek for opdateringer nu',
     'notify.check.upToDate': 'Du har den nyeste version.',
     'notify.check.newer': 'v{ver} er klar. Åbn Anthkeys for at opdatere.',
     'notify.check.working': 'Kontrollerer…',
     'notify.check.failed': 'Kunne ikke tjekke lige nu. Prøv igen senere.',
-    'notify.tip.title': 'Dagens genvej',
     'notify.test.title': 'Testnotifikation',
     'notify.test.body': 'Notifikationer virker.',
     'notify.rooms': 'Notifikationer fra live-rum',
@@ -1897,15 +1885,12 @@ i18n.de = {
     'notify.state.denied': 'Blockiert. Erlaube Benachrichtigungen für diese Seite in den Browsereinstellungen.',
     'notify.state.unsupported': 'Dieser Browser kann keine Benachrichtigungen anzeigen.',
     'notify.state.off': 'Erlaubt, aber ausgeschaltet.',
-    'notify.time': 'Täglicher Tipp um',
     'notify.test': 'Testbenachrichtigung senden',
-    'notify.note': 'Tägliche Tipps werden gesendet, solange diese Seite geöffnet ist. Installiert in Chrome können sie auch eintreffen, wenn sie geschlossen ist, aber der Browser bestimmt den Zeitpunkt und überspringt manchmal einen Tag.',
     'notify.checkNow': 'Jetzt nach Updates suchen',
     'notify.check.upToDate': 'Du hast die neueste Version.',
     'notify.check.newer': 'v{ver} ist bereit. Öffne Anthkeys zum Aktualisieren.',
     'notify.check.working': 'Wird geprüft…',
     'notify.check.failed': 'Die Suche war gerade nicht möglich. Später erneut versuchen.',
-    'notify.tip.title': 'Dein Tipp des Tages',
     'notify.test.title': 'Testbenachrichtigung',
     'notify.test.body': 'Benachrichtigungen funktionieren.',
     'notify.rooms': 'Live-Raum-Hinweise',
@@ -2366,15 +2351,12 @@ i18n.es = {
     'notify.state.denied': 'Bloqueado. Permite las notificaciones de este sitio en los ajustes de tu navegador.',
     'notify.state.unsupported': 'Este navegador no puede mostrar notificaciones.',
     'notify.state.off': 'Permitido, pero desactivado.',
-    'notify.time': 'Consejo diario a las',
     'notify.test': 'Enviar una notificación de prueba',
-    'notify.note': 'Los consejos diarios se envían mientras este sitio está abierto. Instalado en Chrome también pueden llegar cuando está cerrado, pero el navegador elige el momento y puede saltar un día.',
     'notify.checkNow': 'Buscar actualizaciones ahora',
     'notify.check.upToDate': 'Ya tienes la última versión.',
     'notify.check.newer': 'v{ver} está lista. Abre Anthkeys para actualizar.',
     'notify.check.working': 'Comprobando…',
     'notify.check.failed': 'No se ha podido comprobar ahora. Inténtalo más tarde.',
-    'notify.tip.title': 'Tu atajo de hoy',
     'notify.test.title': 'Notificación de prueba',
     'notify.test.body': 'Las notificaciones funcionan.',
     'notify.rooms': 'Avisos de salas en directo',
@@ -2835,15 +2817,12 @@ i18n.fi = {
     'notify.state.denied': 'Estetty. Salli ilmoitukset tälle sivustolle selaimen asetuksista.',
     'notify.state.unsupported': 'Tämä selain ei voi näyttää ilmoituksia.',
     'notify.state.off': 'Sallittu, mutta pois päältä.',
-    'notify.time': 'Päivän vinkki klo',
     'notify.test': 'Lähetä testi-ilmoitus',
-    'notify.note': 'Päivittäiset vinkit lähetetään, kun tämä sivusto on auki. Asennettuna Chromeen ne voivat tulla myös sivuston ollessa kiinni, mutta selain päättää ajankohdan ja voi ohittaa päivän.',
     'notify.checkNow': 'Tarkista päivitykset nyt',
     'notify.check.upToDate': 'Sinulla on uusin versio.',
     'notify.check.newer': 'v{ver} on valmis. Avaa Anthkeys päivittääksesi.',
     'notify.check.working': 'Tarkistetaan…',
     'notify.check.failed': 'Tarkistus ei onnistunut. Yritä myöhemmin uudelleen.',
-    'notify.tip.title': 'Tänään oma pikakuvake',
     'notify.test.title': 'Testi-ilmoitus',
     'notify.test.body': 'Ilmoitukset toimivat.',
     'notify.rooms': 'Live-tilojen ilmoitukset',
@@ -3304,15 +3283,12 @@ i18n.fr = {
     'notify.state.denied': 'Bloqué. Autorisez les notifications pour ce site dans les paramètres de votre navigateur.',
     'notify.state.unsupported': 'Ce navigateur ne peut pas afficher les notifications.',
     'notify.state.off': 'Autorisé, mais désactivé.',
-    'notify.time': 'Astuce du jour à',
     'notify.test': 'Envoyer une notification de test',
-    'notify.note': 'Les conseils quotidiens sont envoyés tant que ce site est ouvert. Installé sur Chrome, ils peuvent aussi arriver site fermé, mais le navigateur choisit le moment et peut sauter un jour.',
     'notify.checkNow': 'Rechercher les mises à jour',
     'notify.check.upToDate': 'Vous avez la dernière version.',
     'notify.check.newer': 'La version v{ver} est prête. Ouvrez Anthkeys pour mettre à jour.',
     'notify.check.working': 'Vérification…',
     'notify.check.failed': 'Impossible de vérifier pour l\'instant. Réessayez plus tard.',
-    'notify.tip.title': 'Votre raccourci du jour',
     'notify.test.title': 'Notification de test',
     'notify.test.body': 'Les notifications fonctionnent.',
     'notify.rooms': 'Alertes de salon en direct',
@@ -3774,15 +3750,12 @@ i18n.hi = {
     'notify.state.denied': 'अवरुद्ध। ब्राउज़र सेटिंग्स में इस साइट के लिए सूचनाओं की अनुमति दें।',
     'notify.state.unsupported': 'यह ब्राउज़र सूचनाएँ नहीं दिखा सकता।',
     'notify.state.off': 'अनुमति है, लेकिन बंद है।',
-    'notify.time': 'दैनिक सुझाव का समय',
     'notify.test': 'परीक्षण सूचना भेजें',
-    'notify.note': 'रोज़ के सुछाव तब का जब का यह साइट खुली है तक टिपों को भेजज जाते हैं। Chrome में इंस्टॉल होने पर वे बंद होने पर भी आ सकते हैं, लेकिन समय ब्राउज़र तय करता है और एक दिन छूट सकता है।',
     'notify.checkNow': 'अभी अपडेट देखें',
     'notify.check.upToDate': 'आपके पास नवीनतम संस्करण है।',
     'notify.check.newer': 'v{ver} तैयार है। अपडेट करने के लिए Anthkeys खोलें।',
     'notify.check.working': 'चांच गर रहे है…',
     'notify.check.failed': 'अभी जाँच नहीं हो सकी। बाद में कोशिश करें।',
-    'notify.tip.title': 'आज का शॉर्टकट',
     'notify.test.title': 'परीक्षण सूचना',
     'notify.test.body': 'सूचनाएँ काम कर रही हैं।',
     'notify.rooms': 'लाइव रूम सूचनाएँ',
@@ -4243,15 +4216,12 @@ i18n.hu = {
     'notify.state.denied': 'Letiltva. Engedélyezze az értesítéseket ehhez a webhelyhez a böngésző beállításaiban.',
     'notify.state.unsupported': 'Ez a böngésző nem tudja megjeleníteni az értesítéseket.',
     'notify.state.off': 'Engedélyezve, de kikapcsolva.',
-    'notify.time': 'Napi tipp ekkor:',
     'notify.test': 'Tesztértesítés küldése',
-    'notify.note': 'A napi tippek akkor mennek ki, amíg ez az oldal nyitva van. Chrome-ban telepítve akkor is érkezhetnek, ha zárva van, de a böngészőő választja az időpontot, és kihagyhat egy napot.',
     'notify.checkNow': 'Frissítések ellenőrzése most',
     'notify.check.upToDate': 'A legfrissebb verziót használod.',
     'notify.check.newer': 'A v{ver} készen áll. Nyisd meg az Anthkeys alkalmazást a frissítéshez.',
     'notify.check.working': 'Ellenőrzés…',
     'notify.check.failed': 'Most nem sikerült ellenőrizni. Próbáld meg később.',
-    'notify.tip.title': 'A mai gyorsbillentyű',
     'notify.test.title': 'Tesztértesítés',
     'notify.test.body': 'Az értesítések működnek.',
     'notify.rooms': 'Élő szobák értesítései',
@@ -4712,15 +4682,12 @@ i18n.it = {
     'notify.state.denied': 'Bloccato. Consenti le notifiche per questo sito nelle impostazioni del browser.',
     'notify.state.unsupported': 'Questo browser non può mostrare notifiche.',
     'notify.state.off': 'Consentito, ma disattivato.',
-    'notify.time': 'Suggerimento quotidiano alle',
     'notify.test': 'Invia una notifica di prova',
-    'notify.note': 'I consigli giornalieri vengono inviati mentre questo sito è aperto. Installato su Chrome possono arrivare anche a sito chiuso, ma il browser sceglie il momento e può saltare un giorno.',
     'notify.checkNow': 'Controlla ora gli aggiornamenti',
     'notify.check.upToDate': 'Hai già l\'ultima versione.',
     'notify.check.newer': 'La v{ver} è pronta. Apri Anthkeys per aggiornare.',
     'notify.check.working': 'Controllo…',
     'notify.check.failed': 'Impossibile controllare adesso. Riprova più tardi.',
-    'notify.tip.title': 'La tua scorciatoia di oggi',
     'notify.test.title': 'Notifica di prova',
     'notify.test.body': 'Le notifiche funzionano.',
     'notify.rooms': 'Avvisi delle stanze live',
@@ -5181,15 +5148,12 @@ i18n.ja = {
     'notify.state.denied': 'ブロックされています。ブラウザーの設定でこのサイトの通知を許可してください。',
     'notify.state.unsupported': 'このブラウザーは通知を表示できません。',
     'notify.state.off': '許可されていますが、オフになっています。',
-    'notify.time': '毎日のヒントの時刻',
     'notify.test': 'テスト通知を送る',
-    'notify.note': 'デイリーチップはこのサイトを開いている間に送信されます。Chrome にインストールしていると、閉じた状態でも届けることがありますが、配信時刻はブラウザが決めるため、1 日分後ろになることがあります。',
     'notify.checkNow': '今すぐ更新を確認',
     'notify.check.upToDate': '最新バージョンです。',
     'notify.check.newer': 'v{ver} の準備ができました。Anthkeys を開いて更新してください。',
     'notify.check.working': 'チェック中…',
     'notify.check.failed': '今はその確認できませんでした。時間をおいて試してください。',
-    'notify.tip.title': '今日のショートカット',
     'notify.test.title': 'テスト通知',
     'notify.test.body': '通知は正常に動作しています。',
     'notify.rooms': 'ライブルームの通知',
@@ -5650,15 +5614,12 @@ i18n.ko = {
     'notify.state.denied': '차단됨. 브라우저 설정에서 이 사이트의 알림을 허용하세요.',
     'notify.state.unsupported': '이 브라우저는 알림을 표시할 수 없습니다.',
     'notify.state.off': '허용되었지만 꺼져 있습니다.',
-    'notify.time': '매일 팁 알림 시간',
     'notify.test': '테스트 알림 보내기',
-    'notify.note': '일일 필은 이 사이트가 열러 있을 때에 전송됩니다. Chrome에 설치했다면 사이트를 닫아도 도착할 수 있지만, 시간은 본라우저가 정하므로 하루 새을 초고할 수 있습니다.',
     'notify.checkNow': '지금 업데이트 확인',
     'notify.check.upToDate': '최신 버전입니다.',
     'notify.check.newer': 'v{ver}이 준비되었습니다. Anthkeys를 열어 업데이트하세요.',
     'notify.check.working': '크모합니다…',
     'notify.check.failed': '지금은 확인하지 못했습니다. 나중에 다시 시도하세요.',
-    'notify.tip.title': '오늘의 단축키',
     'notify.test.title': '테스트 알림',
     'notify.test.body': '알림이 정상적으로 작동합니다.',
     'notify.rooms': '라이브 룸 알림',
@@ -6119,15 +6080,12 @@ i18n.nl = {
     'notify.state.denied': 'Geblokkeerd. Sta meldingen voor deze site toe in de browserinstellingen.',
     'notify.state.unsupported': 'Deze browser kan geen meldingen tonen.',
     'notify.state.off': 'Toegestaan, maar uitgeschakeld.',
-    'notify.time': 'Dagelijkse tip om',
     'notify.test': 'Een testmelding sturen',
-    'notify.note': 'Dagelijkse tips worden verstuurd terwijl deze site open is. Geïnstalleerd in Chrome kunnen ze ook binnenkomen als de site gesloten is, maar de browser kiest het moment en slaat soms een dag over.',
     'notify.checkNow': 'Nu controleren op updates',
     'notify.check.upToDate': 'Je hebt de nieuwste versie.',
     'notify.check.newer': 'v{ver} staat klaar. Open Anthkeys om te updaten.',
     'notify.check.working': 'Controleren…',
     'notify.check.failed': 'Kon nu niet controleren. Probeer het later opnieuw.',
-    'notify.tip.title': 'Je snelktoets van vandaag',
     'notify.test.title': 'Testmelding',
     'notify.test.body': 'Meldingen werken.',
     'notify.rooms': 'Meldingen voor live-ruimtes',
@@ -6588,15 +6546,12 @@ i18n.no = {
     'notify.state.denied': 'Blokkert. Tillat varsler for dette nettstedet i nettleserinnstillingene.',
     'notify.state.unsupported': 'Denne nettleseren kan ikke vise varsler.',
     'notify.state.off': 'Tillatt, men av.',
-    'notify.time': 'Daglig tips kl.',
     'notify.test': 'Send en testvarsel',
-    'notify.note': 'Daglige tips sendes mens dette nettstedet er åpent. Installert i Chrome kan de også komme når det er lukket, men nettleseren velger tidspunktet og kan hoppe over en dag.',
     'notify.checkNow': 'Sjekk etter oppdateringer nå',
     'notify.check.upToDate': 'Du har den nyeste versjonen.',
     'notify.check.newer': 'v{ver} er klar. Åpne Anthkeys for å oppdatere.',
     'notify.check.working': 'Sjekker…',
     'notify.check.failed': 'Kunne ikke sjekke nå. Prøv igjen senere.',
-    'notify.tip.title': 'Dagens hurtigtast',
     'notify.test.title': 'Testvarsel',
     'notify.test.body': 'Varsler fungerer.',
     'notify.rooms': 'Varsler for live-rom',
@@ -7057,15 +7012,12 @@ i18n.pl = {
     'notify.state.denied': 'Zablokowane. Zezwól na powiadomienia tej witryny w ustawieniach przeglądarki.',
     'notify.state.unsupported': 'Ta przeglądarka nie może wyświetlać powiadomień.',
     'notify.state.off': 'Dozwolone, ale wyłączone.',
-    'notify.time': 'Dzienna wskazówka o',
     'notify.test': 'Wyślij powiadomienie testowe',
-    'notify.note': 'Codzienne wskazówki są wysyłane, dopóki ta strona jest otwarta. Zainstalowane w Chrome mogą przychodzić także przy zamkniętej stronie, ale przeglądarka wybiera czas i może pominąć dzień.',
     'notify.checkNow': 'Sprawdź aktualizacje teraz',
     'notify.check.upToDate': 'Masz najnowszą wersję.',
     'notify.check.newer': 'v{ver} jest gotowa. Otwórz Anthkeys, aby zaktualizować.',
     'notify.check.working': 'Sprawdzanie…',
     'notify.check.failed': 'Nie udało się teraz sprawdzić. Spróbuj później.',
-    'notify.tip.title': 'Twój skrót na dziś',
     'notify.test.title': 'Powiadomienie testowe',
     'notify.test.body': 'Powiadomienia działają.',
     'notify.rooms': 'Powiadomienia z pokoi na żywo',
@@ -7526,15 +7478,12 @@ i18n.pt = {
     'notify.state.denied': 'Bloqueado. Permite as notificações deste site nas definições do navegador.',
     'notify.state.unsupported': 'Este navegador não consegue mostrar notificações.',
     'notify.state.off': 'Permitido, mas desligado.',
-    'notify.time': 'Dica diária às',
     'notify.test': 'Enviar uma notificação de teste',
-    'notify.note': 'As dicas diárias são enviadas enquanto este site está aberto. Instalado no Chrome, também podem chegar com o site fechado, mas o navegador escolhe a hora e pode saltar um dia.',
     'notify.checkNow': 'Procurar atualizações agora',
     'notify.check.upToDate': 'Você já tem a versão mais recente.',
     'notify.check.newer': 'A v{ver} está pronta. Abra o Anthkeys para atualizar.',
     'notify.check.working': 'Verificando…',
     'notify.check.failed': 'Não foi possível verificar agora. Tente mais tarde.',
-    'notify.tip.title': 'A tua atalho de hoje',
     'notify.test.title': 'Notificação de teste',
     'notify.test.body': 'As notificações estão a funcionar.',
     'notify.rooms': 'Avisos de salas ao vivo',
@@ -7995,15 +7944,12 @@ i18n.ru = {
     'notify.state.denied': 'Заблокировано. Разрешите уведомления для этого сайта в настройках браузера.',
     'notify.state.unsupported': 'Этот браузер не может показывать уведомления.',
     'notify.state.off': 'Разрешено, но выключено.',
-    'notify.time': 'Совет дня в',
     'notify.test': 'Отправить тестовое уведомление',
-    'notify.note': 'Ежедневные советы приходят, пока сайт открыт. Если приложение установлено в Chrome, они тоже приходят при закрытом сайте, но время выбирает браузер, поэтому день может пропускаться.',
     'notify.checkNow': 'Проверить обновления сейчас',
     'notify.check.upToDate': 'У вас последняя версия.',
     'notify.check.newer': 'Версия v{ver} готова. Откройте Anthkeys, чтобы обновиться.',
     'notify.check.working': 'Проверка…',
     'notify.check.failed': 'Сейчас не удалось проверить. Попробуйте позже.',
-    'notify.tip.title': 'Ваше сочетание на сегодня',
     'notify.test.title': 'Тестовое уведомление',
     'notify.test.body': 'Уведомления работают.',
     'notify.rooms': 'Уведомления live-комнат',
@@ -8464,15 +8410,12 @@ i18n.sv = {
     'notify.state.denied': 'Blockerad. Tillåt aviseringar för den här webbplatsen i webbläsarens inställningar.',
     'notify.state.unsupported': 'Den här webbläsaren kan inte visa aviseringar.',
     'notify.state.off': 'Tillåten, men avstängd.',
-    'notify.time': 'Dagligt tips kl.',
     'notify.test': 'Skicka en testavisering',
-    'notify.note': 'Dagliga tips skickas medan den här webbplatsen är öppen. Installerad i Chrome kan de även komma när den är stängd, men webbläsaren väljer tidpunkten och kan hoppa över en dag.',
     'notify.checkNow': 'Sök efter uppdateringar nu',
     'notify.check.upToDate': 'Du har den senaste versionen.',
     'notify.check.newer': 'v{ver} är klar. Öppna Anthkeys för att uppdatera.',
     'notify.check.working': 'Kontrollerar…',
     'notify.check.failed': 'Kunde inte kontrollera just nu. Försök igen senare.',
-    'notify.tip.title': 'Dagens genväg',
     'notify.test.title': 'Testavisering',
     'notify.test.body': 'Aviseringar fungerar.',
     'notify.rooms': 'Aviseringar för live-rum',
@@ -8933,15 +8876,12 @@ i18n.tr = {
     'notify.state.denied': 'Engellendi. Tarayıcı ayarlarından bu site için bildirimlere izin ver.',
     'notify.state.unsupported': 'Bu tarayıcı bildirim gösteremez.',
     'notify.state.off': 'İzin verildi, ancak kapalı.',
-    'notify.time': 'Günlük ipucu saati',
     'notify.test': 'Test bildirimi gönder',
-    'notify.note': 'Günlük ipuçları bu site açıkken gönderilir. Chrome\'a yüklendiğinde site kapalıyken de gelebilir, ancak zamanı tarayıcı belirler ve bir günü atlayabilir.',
     'notify.checkNow': 'Şimdi güncellemeleri denetle',
     'notify.check.upToDate': 'En son sürümü kullanıyorsunuz.',
     'notify.check.newer': 'v{ver} hazır. Güncellemek için Anthkeys\'i açın.',
     'notify.check.working': 'Denetleniyor…',
     'notify.check.failed': 'Şu anda denetlenemedi. Daha sonra tekrar deneyin.',
-    'notify.tip.title': 'Bugünün kısayolun',
     'notify.test.title': 'Test bildirimi',
     'notify.test.body': 'Bildirimler çalışıyor.',
     'notify.rooms': 'Canlı oda uyarıları',
@@ -9403,15 +9343,12 @@ i18n.vi = {
     'notify.state.denied': 'Đã chặn. Hãy cho phép thông báo cho trang này trong cài đặt trình duyệt.',
     'notify.state.unsupported': 'Trình duyệt này không thể hiển thị thông báo.',
     'notify.state.off': 'Đã cho phép, nhưng đang tắt.',
-    'notify.time': 'Mẹo hằng ngày lúc',
     'notify.test': 'Gửi thông báo thử',
-    'notify.note': 'Mẹo hằng ngày được gửi khi trang này đang mữ. Nếu đã cài trên Chrome, chúng có thể đến khi trang đã đóng, nhưng trình duyệt chọn thời điểm và có thể bỏ qua một ngày.',
     'notify.checkNow': 'Kiểm tra cập nhật ngay',
     'notify.check.upToDate': 'Bạn đang dùng bản mới nhất.',
     'notify.check.newer': 'v{ver} đã sẵn sàng. Hãy mở Anthkeys để cập nhật.',
     'notify.check.working': 'Đang kiểm tra…',
     'notify.check.failed': 'Không kiểm tra được lúc này. Hãy thử lại sau.',
-    'notify.tip.title': 'Phím tắt hôm nay',
     'notify.test.title': 'Thông báo thử',
     'notify.test.body': 'Thông báo đang hoạt động.',
     'notify.rooms': 'Thông báo phòng trực tiếp',
@@ -10418,15 +10355,12 @@ const NOTIFY = {
   isEnabled() { return NOTIFY.read().enabled === true; },
   roomsEnabled() { return NOTIFY.read().rooms !== false; },
   roomsOn() { return NOTIFY.isEnabled() && NOTIFY.roomsEnabled(); },
-  getTime() { return NOTIFY.read().time || '09:00'; },
-  getLastDay() { return NOTIFY.read().lastDay || ''; },
   set(patch) {
     lsSet('anthkeys-notify', JSON.stringify(Object.assign(NOTIFY.read(), patch)));
   }
 };
 
 const notifySupported = 'Notification' in window && 'serviceWorker' in navigator;
-let notifyTimer = null;
 
 function notifyState() {
   if (!notifySupported) return 'unsupported';
@@ -10471,11 +10405,6 @@ async function requestNotifyPermission() {
   }
 }
 
-function todayKey() {
-  const d = new Date();
-  return d.getFullYear() + '-' + (d.getMonth() + 1) + '-' + d.getDate();
-}
-
 function randomTip() {
   const panel = document.querySelector('.panel.active') || document.getElementById('windows');
   const tips = [];
@@ -10501,60 +10430,6 @@ function randomTip() {
   if (!tips.length) return null;
   return tips[Math.floor(Math.random() * tips.length)];
 }
-
-async function deliverDailyTip() {
-  const tip = randomTip();
-  if (!tip) return;
-  const ok = await sendNotification(
-    'daily-tip',
-    notifyText('notify.tip.title', 'Today\u2019s shortcut'),
-    tip,
-    'daily-tip-' + todayKey()
-  );
-  if (ok) {
-    NOTIFY.set({ lastDay: todayKey() });
-    pushNotifyConfig();
-  }
-}
-
-function scheduleDailyTip() {
-  if (notifyTimer) { clearTimeout(notifyTimer); notifyTimer = null; }
-  if (!notifySupported || !NOTIFY.isEnabled() || notifyState() !== 'granted') return;
-
-  const m = /^(\d{1,2}):(\d{2})$/.exec(NOTIFY.getTime());
-  const hh = m ? Math.min(23, Math.max(0, parseInt(m[1], 10))) : 9;
-  const mm = m ? Math.min(59, Math.max(0, parseInt(m[2], 10))) : 0;
-
-  const now = new Date();
-  const next = new Date(now.getFullYear(), now.getMonth(), now.getDate(), hh, mm, 0, 0);
-  if (next <= now) next.setDate(next.getDate() + 1);
-
-  if (next.getTime() - now.getTime() > 2147483647) return;
-  notifyTimer = setTimeout(() => {
-    notifyTimer = null;
-    if (NOTIFY.getLastDay() === todayKey()) { scheduleDailyTip(); return; }
-    deliverDailyTip().then(() => scheduleDailyTip());
-  }, next - now);
-}
-
-async function pushNotifyConfig() {
-  if (!notifySupported || !NOTIFY.isEnabled()) return;
-  try {
-    const reg = await navigator.serviceWorker.ready;
-    const sw = reg.active || navigator.serviceWorker.controller;
-    if (!sw) return;
-    sw.postMessage({
-      type: 'NOTIFY_SCHEDULE',
-      time: NOTIFY.getTime(),
-      lastDay: NOTIFY.getLastDay(),
-      tip: randomTip(),
-      title: notifyText('notify.tip.title', 'Today\u2019s shortcut'),
-      dark: document.body.classList.contains('dark')
-    });
-  } catch(e) { }
-}
-
-const AK_TIP_TAG = 'anthkeys-daily-tip';
 
 // Post to the registration's own worker rather than
 // navigator.serviceWorker.controller: `ready` resolves as soon as a worker is
@@ -10613,15 +10488,6 @@ function askSWForUpdate(timeoutMs, manual) {
   }).catch(() => ({ state: 'error' }));
 }
 
-async function unregisterPeriodicSync() {
-  try {
-    const reg = await navigator.serviceWorker.ready;
-    if (reg.periodicSync && typeof reg.periodicSync.unregister === 'function') {
-      await reg.periodicSync.unregister(AK_TIP_TAG);
-    }
-  } catch(e) { }
-}
-
 // ---- Installing the app ----
 // Chrome only lets a Periodic Background Sync worker run while the app is
 // closed if Anthkeys is installed, so offer the install prompt next to the
@@ -10638,7 +10504,6 @@ window.addEventListener('appinstalled', function() {
   _akInstallPrompt = null;
   const row = document.getElementById('installAppRow');
   if (row) row.hidden = true;
-  if (registerPeriodicSync) registerPeriodicSync();
 });
 document.addEventListener('click', function(e) {
   const btn = e.target.closest ? e.target.closest('#btnInstallApp') : null;
@@ -10653,20 +10518,6 @@ document.addEventListener('click', function(e) {
     if (row) row.hidden = true;
   });
 });
-
-async function registerPeriodicSync() {
-  if (!notifySupported || !NOTIFY.isEnabled() || notifyState() !== 'granted') {
-    unregisterPeriodicSync();
-    return;
-  }
-  try {
-    const reg = await navigator.serviceWorker.ready;
-    if (!('periodicSync' in reg)) return;
-    const st = await navigator.permissions.query({ name: 'periodic-background-sync' }).catch(() => null);
-    if (st && st.state !== 'granted') return;
-    await reg.periodicSync.register(AK_TIP_TAG, { minInterval: 24 * 60 * 60 * 1000 });
-  } catch(e) { }
-}
 
 
 function notifyRoomName(id) {
@@ -10727,8 +10578,6 @@ function notifyRoomNote(from, text) {
 function renderNotifyUI() {
   const toggle = document.getElementById('toggleNotify');
   const status = document.getElementById('notifyStatus');
-  const timeWrap = document.getElementById('notifyTimeWrap');
-  const timeInput = document.getElementById('notifyTime');
   const testBtn = document.getElementById('btnNotifyTest');
   const roomWrap = document.getElementById('notifyRoomWrap');
   const roomToggle = document.getElementById('toggleNotifyRoom');
@@ -10743,8 +10592,6 @@ function renderNotifyUI() {
     const key = (state === 'granted' && !NOTIFY.isEnabled()) ? 'notify.state.off' : 'notify.state.' + state;
     status.textContent = notifyText(key, '');
   }
-  if (timeInput) timeInput.value = NOTIFY.getTime();
-  if (timeWrap) timeWrap.hidden = !on;
   if (roomWrap) roomWrap.hidden = !on;
   if (roomToggle) {
     roomToggle.classList.toggle('on', roomsOn);
@@ -10764,14 +10611,10 @@ onId('toggleNotify', 'click', async function() {
       return;
     }
     NOTIFY.set({ enabled: true });
-    registerPeriodicSync();
-    pushNotifyConfig();
   } else {
     NOTIFY.set({ enabled: false });
-    unregisterPeriodicSync();
   }
   renderNotifyUI();
-  scheduleDailyTip();
 });
 
 onId('toggleNotifyRoom', 'click', function() {
@@ -10807,13 +10650,6 @@ onId('btnCheckUpdate', 'click', async function() {
   }
 });
 
-onId('notifyTime', 'change', function() {
-  const v = this.value || '09:00';
-  NOTIFY.set({ time: v });
-  scheduleDailyTip();
-  pushNotifyConfig();
-});
-
 onId('btnNotifyTest', 'click', async function() {
   const tip = randomTip();
   await sendNotification(
@@ -10829,10 +10665,7 @@ onId('btnNotifyTest', 'click', async function() {
 let reloadOnUpdate = false;
 if ('serviceWorker' in navigator) {
   let refreshing = false;
-  navigator.serviceWorker.register('sw.js?v=24').then(reg => {
-    registerPeriodicSync();
-    pushNotifyConfig();
-  }).catch(() => {});
+  navigator.serviceWorker.register('sw.js?v=25').catch(() => {});
   navigator.serviceWorker.addEventListener('controllerchange', () => {
     if (!reloadOnUpdate || refreshing) return;
     refreshing = true;
@@ -10842,8 +10675,6 @@ if ('serviceWorker' in navigator) {
 }
 
 applyLanguage('en');
-scheduleDailyTip();
-pushNotifyConfig();
 
 // ---- Refresh for updates ----
 function refreshForUpdates() {
@@ -11248,6 +11079,9 @@ function syncAccentWp(theme) {
 // Crossfade one background into the next: copy whatever is on screen onto the
 // front layer, let the new background take over behind it, then fade the front
 // layer away. Without this, background-image changes snap instead of blending.
+// The fade runs as a CSS animation: a single-frame add/mutate/remove leaves no
+// painted "from" state for a transition to animate from.
+let bgFadeTimer = null;
 function withBgCrossfade(mutate) {
   const body = document.body;
   if (body.classList.contains('no-anim') || window.matchMedia('(prefers-reduced-motion: reduce)').matches) { mutate(); return; }
@@ -11255,10 +11089,18 @@ function withBgCrossfade(mutate) {
   body.style.setProperty('--fade-img', cs.backgroundImage);
   body.style.setProperty('--fade-col', cs.backgroundColor);
   body.style.setProperty('--fade-filter', cs.filter);
+  if (body.classList.contains('bg-fading')) {
+    body.classList.remove('bg-fading');
+    void body.offsetWidth;
+  }
   body.classList.add('bg-fading');
   void body.offsetWidth;
   mutate();
-  body.classList.remove('bg-fading');
+  if (bgFadeTimer) clearTimeout(bgFadeTimer);
+  bgFadeTimer = setTimeout(() => {
+    bgFadeTimer = null;
+    body.classList.remove('bg-fading');
+  }, 720);
 }
 let preservedWp = null;
 function preserveWallpaperForDark() {
@@ -11996,7 +11838,6 @@ checkForUpdate();
   document.addEventListener('visibilitychange', () => {
     if (document.visibilityState === 'visible') {
       reportVersionToSW();
-      registerPeriodicSync();
     }
   });
   window.addEventListener('online', () => {

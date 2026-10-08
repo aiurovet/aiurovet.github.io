@@ -7,6 +7,12 @@ const I18N_WN = window.I18N_WN || {};
 
 I18N_WN.es = {
 
+  'v53.1': [
+    'Corregido: los fondos vuelven a fundirse — cambiar de tema o papel pintado ahora se mezcla suavemente en vez de un corte seco.',
+    'Eliminado: las notificaciones programadas del consejo diario. El consejo en la app y la insignia de nueva versión junto al engranaje de Ajustes se mantienen.',
+  ],
+
+
   'v53.0': [
     'Cambiado: las distribuciones Linux con los mismos atajos por defecto ahora son una sola entrada; GNOME y KDE se mantienen separados porque sus atajos sí difieren, y Arch, NixOS y Gentoo no traen escritorio predeterminado.',
     'Mejorado: cada fondo se funde con el siguiente en vez de cambiar de golpe, y cada foto descansa sobre un degradado a juego, para que un enlace roto nunca deje la pantalla lisa.',
@@ -286,6 +292,12 @@ I18N_WN.es = {
 };
 
 I18N_WN.fr = {
+
+  'v53.1': [
+    'Corrigé: les fonds se fondent à nouveau — changer de thème ou de papier peint les estompe au lieu d\'une bascule sèche.',
+    'Supprimé: les notifications programmées du conseil quotidien. Le conseil dans l\'app et le badge de nouvelle version près de l\'engrenage Réglages demeurent.',
+  ],
+
 
   'v53.0': [
     'Changé: les distributions Linux partageant les mêmes raccourcis par défaut ne forment plus qu\'une entrée — GNOME et KDE restent distincts car leurs touches diffèrent réellement, et Arch, NixOS et Gentoo ne fournissent aucun bureau par défaut.',
@@ -567,6 +579,12 @@ I18N_WN.fr = {
 
 I18N_WN.de = {
 
+  'v53.1': [
+    'Korrigiert: Hintergründe blenden wieder über — beim Wechsel von Design oder Wallpaper wird sanft gemischt statt hart umgeschaltet.',
+    'Entfernt: die geplanten Benachrichtigungen mit dem täglichen Tipp sind weg. Der Tipp in der App und das Abzeichen für die neue Version neben dem Einstellungen-Zahnrad bleiben.',
+  ],
+
+
   'v53.0': [
     'Geändert: Linux-Distributionen mit identischen Standardtasten sind jetzt ein Eintrag; GNOME und KDE bleiben getrennt, denn ihre Tasten unterscheiden sich wirklich, und Arch, NixOS und Gentoo liefern keinen Standard-Desktop.',
     'Verbessert: jeder Hintergrund blendet in den nächsten statt umzuschalten, und jedes Foto ruht auf einem passenden Farbverlauf — ein toter Link hinterlässt nie einen flachen Bildschirm.',
@@ -846,6 +864,12 @@ I18N_WN.de = {
 };
 
 I18N_WN.it = {
+
+  'v53.1': [
+    'Corretto: gli sfondi tornano a sfumare — cambiare tema o sfondo ora fonde dolcemente invece di uno scatto netto.',
+    'Rimosso: le notifiche programmate del consiglio quotidiano. Il consiglio nella app e il badge di nuova versione accanto all\'ingranaggio Impostazioni restano.',
+  ],
+
 
   'v53.0': [
     'Cambiato: le distribuzioni Linux con scorciatoie predefinite identiche sono ora una voce; GNOME e KDE restano separati perché i loro tasti differiscono davvero, e Arch, NixOS e Gentoo non offrono un desktop predefinito.',
@@ -1127,6 +1151,12 @@ I18N_WN.it = {
 
 I18N_WN.pt = {
 
+  'v53.1': [
+    'Corrigido: os fundos voltam a fundir-se — mudar de tema ou papel de parede agora mistura suavemente em vez de saltar.',
+    'Removido: as notificações programadas da dica diária. A dica na aplicação e o selo de nova versão junto à engrenagem de Definições permanecem.',
+  ],
+
+
   'v53.0': [
     'Alterado: as distribuições Linux com os mesmos atalhos predefinidos agora são uma única entrada; GNOME e KDE permanecem separados porque as suas teclas realmente diferem, e Arch, NixOS e Gentoo não trazem ambiente de trabalho predefinido.',
     'Melhorado: cada fundo funde-se com o seguinte em vez de mudar de repente, e cada foto assenta sobre um gradiente à cor combinada, para que uma ligação morta nunca deixe o ecrã plano.',
@@ -1406,6 +1436,12 @@ I18N_WN.pt = {
 };
 
 I18N_WN.nl = {
+
+  'v53.1': [
+    'Gecorrigeerd: achtergronden vloeien weer over — van thema wisselen of behang kiezen mengt nu zachtjes in plaats van te verspringen.',
+    'Verwijderd: de geplande dagelijkse tipmeldingen zijn weg. De tip in de app en het nieuwe-versie-badge bij het Instellingen-tandwiel blijven.',
+  ],
+
 
   'v53.0': [
     'Gewijzigd: Linux-distributies met identieke standaardtoetsen zijn nu één vermelding; GNOME en KDE blijven gescheiden omdat hun toetsen echt verschillen, en Arch, NixOS en Gentoo leveren geen standaard desktopomgeving.',
@@ -1687,6 +1723,12 @@ I18N_WN.nl = {
 
 I18N_WN.ja = {
 
+  'v53.1': [
+    '修正: 背景のクロスフェードが復活しました。テーマや壁紙を切り替えると、パッと切り替わる代りに滑らかに溶け合います。',
+    '削除: 予定された毎日のヒント通知を削除しました。アプリ内のヒントと、設定ギアの隣の新しいバージョンのバッジは残ります。',
+  ],
+
+
   'v53.0': [
     '変更: 既定のショートカットが同じ Linux ディストリビューションを 1 件にまとめました。GNOME と KDE はキーが実際に異なるため分けたまま、Arch・NixOS・Gentoo は既定のデスクトップを持ちません。',
     '改善: それぞれの背景は切り替える代りに次の背景へてりとクロスフェードし、各写真は色を合わせたグラデーションの上に載っていますので、画像が読めなくても画面が平になりません。',
@@ -1966,6 +2008,12 @@ I18N_WN.ja = {
 };
 
 I18N_WN.ru = {
+
+  'v53.1': [
+    'Исправлено: фоны снова плавно переходят друг в друга — при смене темы или обоев изображение мягко растворяется вместо резкой замены.',
+    'Удалено: запланированные ежедневные уведомления с советами. Совет в приложении и значок новой версии возле шестерёнки настроек остаются.',
+  ],
+
 
   'v53.0': [
     'Изменено: дистрибутивы Linux с одинаковыми сочетаниями клавиш теперь объединены в один пункт; GNOME и KDE остаются раздельными — их клавиши действительно различаются, а Arch, NixOS и Gentoo не поставляют рабочий стол по умолчанию.',
@@ -2247,6 +2295,12 @@ I18N_WN.ru = {
 
 I18N_WN.ko = {
 
+  'v53.1': [
+    '수정: 배경이 다시 부드럽게 전환됩니다. 테마나 배경화면을 바꾸면 갑자기 바끘는 대신 천천히 섞인니다.',
+    '제거: 예약된 하루 팝 알림을 제거했습니다. 앱 안의 팝과 설정 톱니바퀸 옆의 새 버전 배지는 유지됩니다.',
+  ],
+
+
   'v53.0': [
     '변경: 기본 단축케가 같은 Linux 배우판을 한 항목으로 모음에요. GNOME과 KDE는 단축케가 실제로 다를 때 따로 둔 면, Arch·NixOS·Gentoo는 기본 데스크톡이 없습니다.',
     '개선: 모든 배경이 전환 대신 다음 배경으로 불같게 공의되어 지나고, 각 사진은 일관한 그라디언트 위에 남자 보내 만타 연결이 써야든 화면이 평벼이 되지 않습니다.',
@@ -2526,6 +2580,12 @@ I18N_WN.ko = {
 };
 
 I18N_WN.pl = {
+
+  'v53.1': [
+    'Poprawione: tła znów przenikają — zmiana motywu lub tapety płynnie miesza zamiast gwałtownie przeskakiwać.',
+    'Usunięte: zaplanowane codzienne powiadomienia z poradami. Porada w aplikacji i plakietka nowej wersji obok koła zębatego Ustawień pozostają.',
+  ],
+
 
   'v53.0': [
     'Zmienione: dystrybucje Linuxa z identycznymi domyślnymi skrótami są teraz jednym wpisem; GNOME i KDE pozostają rozdzielenie, bo ich klawisze naprawdę się różnią, a Arch, NixOS i Gentoo nie mają domyślnego środowiska graficznego.',
@@ -2807,6 +2867,12 @@ I18N_WN.pl = {
 
 I18N_WN.tr = {
 
+  'v53.1': [
+    'Düzeltildi: arka planlar yeniden yumuşakça geçiyor — tema veya duvar kağıdı değiştirirken atlamak yerine birbirine karışıyor.',
+    'Kaldırıldı: planlı günlük ipucu bildirimleri kaldırıldı. Uygulamadaki ipucu ve Ayarlar dişlisi yanındaki yeni sürüm rozeti duruyor.',
+  ],
+
+
   'v53.0': [
     'Değiştirilen: aynı varsayılan kısayollara sahip Linux dağıtımları artık tek girdi; GNOME ve KDE kısayolları gerçekten farklı olduğu için ayrı kaldı, Arch, NixOS ve Gentoo ise varsayılan masaüstü sunmuyor.',
     'Geliştirilen: her arka plan sıradakine atlamak yerine yumuşakça geçiyor ve her fotoğraf uyumlu bir gradyan üzerinde duruyor, öylece ölü bağlantı asla düz bir ekran bırakmıyor.',
@@ -3086,6 +3152,12 @@ I18N_WN.tr = {
 };
 
 I18N_WN.vi = {
+
+  'v53.1': [
+    'Đã sửa: nền lại chuyển dần mượt mà — đổi chủ đề hoặc hình nền giờ hòa trộn nhẹ nhàng thay vì nhảy phát.',
+    'Đã xóa: thông báo mẹo hằng ngày theo lịch đã bị xóa. Mẹo trong ứng dụng và huy hiệu phiên bản mới cạnh bánh răng Cài đặt vẫn còn.',
+  ],
+
 
   'v53.0': [
     'Thay đổi: các bản phân phối Linux dùng chung phím tốt mặc định giờ1 là một mục; GNOME và KDE vẫn tách riîng vì phím tốt của chúng thực sế khác nhau, còn Arch, NixOS và Gentoo không có bàn làm việc mặc định.',
@@ -3367,6 +3439,12 @@ I18N_WN.vi = {
 
 I18N_WN.ar = {
 
+  'v53.1': [
+    'إصلاحاً: عادت الخلفيات إلى التلاشي من جديد — تغيير السمة أو الخلفية يمزج الآن بسلاسة بدلاً من القفز.',
+    'إزالةً: أزلنا تذكيرات النصائح اليومية المجدولة؛ تبقى النصيحة داخل التطبيق وشارة الإصدار الجديد بجوار ترس الإعدادات.',
+  ],
+
+
   'v53.0': [
     'ترجيعاً: توزيعات لينكس ذات الاختصارات الافتراضية المتشابهة أصبحت مدخلاً واحدً؛ يبقى GNOME و KDE منفصلين لأنهما تختلفان فعلاً، ولا يقدم الأسم و NixOS و Gentoo سطح مكتب افتراضياً.',
     'تحسيناً: كل خلفية تتلاشى في التالية بدلالً من القفز، وتستقر كل صورة على تدرج لوني مطابق، فلا تكتر رابطاً ميتاً شاشة مستطية.',
@@ -3646,6 +3724,12 @@ I18N_WN.ar = {
 };
 
 I18N_WN.hi = {
+
+  'v53.1': [
+    'सुधारा गया: पृष्ठभूमियाँ फिर से धीरे-धीरे बदलती हैं — थीम या वॉलपेपर बदलने पर अब कटने के बजाय मिलती हैं.',
+    'हटाया गया: निर्धारित दैनिक सुझाव सूचनाएँ। ऐप में सुझाव और सेटिंग्स गियर के पास नए-संस्करण का बैज बने रहते हैं।',
+  ],
+
 
   'v53.0': [
     'बदला: एक जैसे डिफ़ॉल्ट शॉर्टकट वाले लिनक्स वितरण अब एक प्रविष्टि हैं; GNOME और KDE अलग रहते हैं क्योंकि उनकी कुंजियाँ सचमें अलग हैं, और Arch, NixOS व Gentoo कोई डिफ़ॉल्ट डेस्कटोप नहीं देते.',
@@ -3927,6 +4011,12 @@ I18N_WN.hi = {
 
 I18N_WN.sv = {
 
+  'v53.1': [
+    'Korrigerat: bakgrunder tonar över igen — att byta tema eller bakgrundsbild blandas nu mjukt i stället för att hoppa.',
+    'Borttaget: de schemalagda dagstipsnotiserna är borta. Tipset i appen och märket för ny version vid inställningskuggen finns kvar.',
+  ],
+
+
   'v53.0': [
     'Ändrat: Linux-distributioner med identiska standardgenvägar är nu en post; GNOME och KDE hålls isär eftersom deras tangenter verkligen skiljer sig, och Arch, NixOS och Gentoo levererar ingen standarddesktop.',
     'Förbättrat: varje bakgrund tonar över i nästa i stället för att hoppa, och varje foto vilar på en färganpassad gradient, så en död länk lämnar aldrig en platt skärm.',
@@ -4206,6 +4296,12 @@ I18N_WN.sv = {
 };
 
 I18N_WN.da = {
+
+  'v53.1': [
+    'Rettet: baggrunde toner igen over — at skifte tema eller tapet glider nu blødt i stedet for at springe.',
+    'Fjernet: de planlagte dagstipsmeddelelser er væk. Tipset i appen og badge for ny version ved indstillingshjulet bliver.',
+  ],
+
 
   'v53.0': [
     'Ændret: Linux-distributioner med samme standardgenveje er nu én post; GNOME og KDE holdes adskilt, for deres taster er faktisk forskellige, og Arch, NixOS og Gentoo leverer intet standard-skrivebord.',
@@ -4487,6 +4583,12 @@ I18N_WN.da = {
 
 I18N_WN.fi = {
 
+  'v53.1': [
+    'Korjattu: taustat sulautuvat taas — teeman tai taustakuvan vaihtaminen liukuu nyt pehmeästi vaihtumisen sijaan.',
+    'Poistettu: ajoitetut päivävinkki-ilmoitukset on poistettu. Sovelluksen vinkki ja uuden version merkki asetusten ratasvaihteen vieressä säilyvät.',
+  ],
+
+
   'v53.0': [
     'Muutettu: Linux-jakelut, joilla on samat oletuspikanäppäimet, ovat nyt yksi kohta; GNOME ja KDE pysyvät erillään, koska niiden näppäimet todella eroavat, eivätkä Arch, NixOS ja Gentoo toimita oletustyöpöytää.',
     'Parannettu: jokainen tausta sulautuu seuraavaan sen sijaan, että se vaihtuisi äkillisesti, ja jokainen kuva lepää värisopivassa liukuväristä, joten rikkinäinen linkki ei jätä tasaa ruutua.',
@@ -4766,6 +4868,12 @@ I18N_WN.fi = {
 };
 
 I18N_WN.no = {
+
+  'v53.1': [
+    'Rettet: bakgrunner toner igjen over — å bytte tema eller bakgrunnsbilde smelter nå mykt over i stedet for å hoppe.',
+    'Fjernet: planlagte dagstips-varsler er borte. Tipset i appen og merket for ny versjon ved innstillings-hjulet blir.',
+  ],
+
 
   'v53.0': [
     'Endret: Linux-distribusjoner med samme standardvalgtaster er nå én oppføring; GNOME og KDE holdes atskilt fordi tastene faktisk er forskjellige, og Arch, NixOS og Gentoo leverer ingen standard skrivebord.',
@@ -5047,6 +5155,12 @@ I18N_WN.no = {
 
 I18N_WN.cs = {
 
+  'v53.1': [
+    'Opraveno: pozadí se znovu prolíná — přepnutí motivu či tapety se plynule slije místo skoku.',
+    'Odstraněno: plánovaná denní oznámení s tipem jsou pryč. Tip v aplikaci a odznak nové verze u ozubeného kola Nastavení zůstávají.',
+  ],
+
+
   'v53.0': [
     'Změněno: distribuce Linuxu se stejnými výchozími zkratkami jsou nyní jedna položka; GNOME a KDE zůstávají oddělené, protože se jejich klávesy skutečně liší, a Arch, NixOS a Gentoo žádnou výchozí plochu nenabízejí.',
     'Vylepšeno: každé pozadí se prolíná do dalšího místo okamžité výměny a každá fotka spočívá na barevně sladěném přechodu, takže mrtvý odkaz nikdy nezanechá plochou obrazovku.',
@@ -5326,6 +5440,12 @@ I18N_WN.cs = {
 };
 
 I18N_WN.hu = {
+
+  'v53.1': [
+    'Kijavítva: a hátterek ismét átúsznak — a téma vagy háttérkép váltása most finoman keveredik ahelyett, hogy hirtelen ugrana.',
+    'Eltávolítva: az ütemezett napi tipp-értesítések elmentek. Az alkalmazás tippje és a Beállítások fogaskerék melletti új-verzió jelvény marad.',
+  ],
+
 
   'v53.0': [
     'Módosítva: azonos alapértelmezett billentyűparancsokat használó Linux-disztribúciók most egyetlen bejegyzés; a GNOME és a KDE külön marad, mert a billentyűik tényleg eltérnek, az Arch, a NixOS és a Gentoo pedig nem szállít alapértelmezett asztali környezetet.',

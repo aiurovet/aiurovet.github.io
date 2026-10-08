@@ -1,7 +1,6 @@
-const CACHE = 'anthkeys-v53.0';
+const CACHE = 'anthkeys-v53.1';
 const CFG_CACHE = 'anthkeys-notify-cfg';
 const CFG_URL = 'notify-cfg.json';
-const TIP_TAG = 'anthkeys-daily-tip';
 const URLS = ['anthkeys.html', '404.html', 'manifest.json', 'js/mqtt.min.js', 'js/qrcode.js', 'js/i18n-recent.js', 'js/i18n-wn.js', 'icon-192.png', 'icon-512.png', 'icon-maskable-192.png', 'icon-maskable-512.png', 'apple-touch-icon.png'];
 
 self.addEventListener('install', e => {
@@ -18,11 +17,6 @@ self.addEventListener('activate', e => {
   self.clients.claim();
 });
 
-function todayKey() {
-  const d = new Date();
-  return d.getFullYear() + '-' + (d.getMonth() + 1) + '-' + d.getDate();
-}
-
 function readCfg() {
   return caches.open(CFG_CACHE)
     .then(c => c.match(CFG_URL))
@@ -37,7 +31,7 @@ function writeCfg(cfg) {
 }
 
 // Merge instead of replacing, so fields written by a newer page build
-// (version, dark mode, tip schedule) survive a partial NOTIFY_SCHEDULE.
+// (version, dark mode) survive a partial write.
 function patchCfg(patch) {
   return readCfg()
     .then(cur => writeCfg(Object.assign({}, cur || {}, patch)));
@@ -83,25 +77,6 @@ function checkUpdateInBackground(manual) {
   }).catch(() => ({ state: 'error' }));
 }
 
-function showDailyTip() {
-  return readCfg().then(cfg => {
-    if (!cfg || !cfg.tip) return null;
-    const day = todayKey();
-    if (cfg.lastDay === day) return null;
-    const opts = {
-      body: cfg.tip,
-      icon: 'icon-192.png',
-      badge: 'icon-192.png',
-      tag: 'daily-tip-' + day,
-      renotify: false,
-      data: { url: 'anthkeys.html' }
-    };
-    if (cfg.dark) opts.theme = 'dark';
-    return self.registration.showNotification(cfg.title || 'Anthkeys', opts)
-      .then(() => writeCfg(Object.assign({}, cfg, { lastDay: day })));
-  }).catch(() => null);
-}
-
 self.addEventListener('message', e => {
   const data = e.data || {};
   if (data.type === 'SKIP_WAITING') {
@@ -110,7 +85,7 @@ self.addEventListener('message', e => {
   }
   if (data.type === 'REPORT_VERSION') {
     // Sent on every load so the worker always knows which build the user is
-    // actually running, even when the daily-tip schedule is switched off.
+    // actually running.
     e.waitUntil(patchCfg({
       version: data.version || '',
       dark: !!data.dark
@@ -126,15 +101,6 @@ self.addEventListener('message', e => {
     }));
     return;
   }
-  if (data.type === 'NOTIFY_SCHEDULE') {
-    e.waitUntil(patchCfg({
-      time: data.time || '',
-      lastDay: data.lastDay || '',
-      tip: data.tip || '',
-      title: data.title || 'Anthkeys',
-      dark: !!data.dark
-    }));
-  }
 });
 
 self.addEventListener('notificationclick', e => {
@@ -149,14 +115,6 @@ self.addEventListener('notificationclick', e => {
       return self.clients.openWindow(target);
     })
   );
-});
-
-// Chrome/Edge only, installed PWA only, and the browser picks the time.
-self.addEventListener('periodicsync', e => {
-  if (e.tag === TIP_TAG) {
-    e.waitUntil(showDailyTip());
-    return;
-  }
 });
 
 self.addEventListener('fetch', e => {
