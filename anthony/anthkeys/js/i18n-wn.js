@@ -7,6 +7,11 @@ const I18N_WN = window.I18N_WN || {};
 
 I18N_WN.es = {
 
+  'v53.2': [
+    'Hoja de estudio: un nuevo botón junto a Imprimir exporta el sistema actual como un PDF limpio y compacto con solo las categorías abiertas.',
+  ],
+
+
   'v53.1': [
     'Corregido: los fondos vuelven a fundirse — cambiar de tema o papel pintado ahora se mezcla suavemente en vez de un corte seco.',
     'Eliminado: las notificaciones programadas del consejo diario. El consejo en la app y la insignia de nueva versión junto al engranaje de Ajustes se mantienen.',
@@ -292,6 +297,11 @@ I18N_WN.es = {
 };
 
 I18N_WN.fr = {
+
+  'v53.2': [
+    'Feuille d\'étude : un nouveau bouton à côté d\'Imprimer exporte le système actuel en PDF clair et compact, avec uniquement les catégories ouvertes.',
+  ],
+
 
   'v53.1': [
     'Corrigé: les fonds se fondent à nouveau — changer de thème ou de papier peint les estompe au lieu d\'une bascule sèche.',
@@ -579,6 +589,11 @@ I18N_WN.fr = {
 
 I18N_WN.de = {
 
+  'v53.2': [
+    'Lernblatt: ein neuer Button neben Drucken exportiert das aktuelle System als kompaktes PDF – nur mit den geöffneten Kategorien.',
+  ],
+
+
   'v53.1': [
     'Korrigiert: Hintergründe blenden wieder über — beim Wechsel von Design oder Wallpaper wird sanft gemischt statt hart umgeschaltet.',
     'Entfernt: die geplanten Benachrichtigungen mit dem täglichen Tipp sind weg. Der Tipp in der App und das Abzeichen für die neue Version neben dem Einstellungen-Zahnrad bleiben.',
@@ -864,6 +879,11 @@ I18N_WN.de = {
 };
 
 I18N_WN.it = {
+
+  'v53.2': [
+    'Foglio di studio: un nuovo pulsante accanto a Stampa esporta il sistema corrente come PDF pulito e compatto, solo con le categorie aperte.',
+  ],
+
 
   'v53.1': [
     'Corretto: gli sfondi tornano a sfumare — cambiare tema o sfondo ora fonde dolcemente invece di uno scatto netto.',
@@ -1151,6 +1171,11 @@ I18N_WN.it = {
 
 I18N_WN.pt = {
 
+  'v53.2': [
+    'Folha de estudo: um novo botão ao lado de Imprimir exporta o sistema atual como um PDF limpo e compacto, apenas com as categorias abertas.',
+  ],
+
+
   'v53.1': [
     'Corrigido: os fundos voltam a fundir-se — mudar de tema ou papel de parede agora mistura suavemente em vez de saltar.',
     'Removido: as notificações programadas da dica diária. A dica na aplicação e o selo de nova versão junto à engrenagem de Definições permanecem.',
@@ -1436,6 +1461,11 @@ I18N_WN.pt = {
 };
 
 I18N_WN.nl = {
+
+  'v53.2': [
+    'Studieblad: een nieuwe knop naast Afdrukken exporteert het huidige systeem als een strak, compact pdf, alleen met de open categorieën.',
+  ],
+
 
   'v53.1': [
     'Gecorrigeerd: achtergronden vloeien weer over — van thema wisselen of behang kiezen mengt nu zachtjes in plaats van te verspringen.',
@@ -1723,6 +1753,11 @@ I18N_WN.nl = {
 
 I18N_WN.ja = {
 
+  'v53.2': [
+    '学習シート：印刷の隣に新しいボタンを追加。現在のシステムを、開いているカテゴリだけをまとめたすっきりしたPDFに書き出します。',
+  ],
+
+
   'v53.1': [
     '修正: 背景のクロスフェードが復活しました。テーマや壁紙を切り替えると、パッと切り替わる代りに滑らかに溶け合います。',
     '削除: 予定された毎日のヒント通知を削除しました。アプリ内のヒントと、設定ギアの隣の新しいバージョンのバッジは残ります。',
@@ -2008,6 +2043,11 @@ I18N_WN.ja = {
 };
 
 I18N_WN.ru = {
+
+  'v53.2': [
+    'Лист для изучения: новая кнопка рядом с «Печать» выгружает текущую систему в аккуратный компактный PDF только с открытыми категориями.',
+  ],
+
 
   'v53.1': [
     'Исправлено: фоны снова плавно переходят друг в друга — при смене темы или обоев изображение мягко растворяется вместо резкой замены.',
@@ -2295,6 +2335,11 @@ I18N_WN.ru = {
 
 I18N_WN.ko = {
 
+  'v53.2': [
+    '학습 시트: 인쇄 옆의 새 버튼으로 열려 있는 카테고리만 담은 깊끊한 PDF로 현재 시스템을 내보냅니다.',
+  ],
+
+
   'v53.1': [
     '수정: 배경이 다시 부드럽게 전환됩니다. 테마나 배경화면을 바꾸면 갑자기 바끘는 대신 천천히 섞인니다.',
     '제거: 예약된 하루 팝 알림을 제거했습니다. 앱 안의 팝과 설정 톱니바퀸 옆의 새 버전 배지는 유지됩니다.',
@@ -2580,6 +2625,11 @@ I18N_WN.ko = {
 };
 
 I18N_WN.pl = {
+
+  'v53.2': [
+    'Arkusz nauki: nowy przycisk obok Drukuj eksportuje bieżący system do czystego, zwartego PDF z tylko otwartymi kategoriami.',
+  ],
+
 
   'v53.1': [
     'Poprawione: tła znów przenikają — zmiana motywu lub tapety płynnie miesza zamiast gwałtownie przeskakiwać.',
@@ -2867,6 +2917,11 @@ I18N_WN.pl = {
 
 I18N_WN.tr = {
 
+  'v53.2': [
+    'Çalışma kâğıdı: Yazdır yanındaki yeni düğme, yalnızca açık kategorilerle mevcut sistemi temiz ve derli toplu bir PDF olarak dışa aktarır.',
+  ],
+
+
   'v53.1': [
     'Düzeltildi: arka planlar yeniden yumuşakça geçiyor — tema veya duvar kağıdı değiştirirken atlamak yerine birbirine karışıyor.',
     'Kaldırıldı: planlı günlük ipucu bildirimleri kaldırıldı. Uygulamadaki ipucu ve Ayarlar dişlisi yanındaki yeni sürüm rozeti duruyor.',
@@ -3152,6 +3207,11 @@ I18N_WN.tr = {
 };
 
 I18N_WN.vi = {
+
+  'v53.2': [
+    'Phiếu học tập: nút mới bên cạnh nút In sẽ xuất hệ thống hiện tại thành PDF gọn gàng, chỉ gồm các nhóm đang mở.',
+  ],
+
 
   'v53.1': [
     'Đã sửa: nền lại chuyển dần mượt mà — đổi chủ đề hoặc hình nền giờ hòa trộn nhẹ nhàng thay vì nhảy phát.',
@@ -3439,6 +3499,11 @@ I18N_WN.vi = {
 
 I18N_WN.ar = {
 
+  'v53.2': [
+    'ورقة دراسة: زر جديد بجانب طباعة يصدّر النظام الحالي كملف PDF واضح ومضغوط يضم الفئات المفتوحة فقط.',
+  ],
+
+
   'v53.1': [
     'إصلاحاً: عادت الخلفيات إلى التلاشي من جديد — تغيير السمة أو الخلفية يمزج الآن بسلاسة بدلاً من القفز.',
     'إزالةً: أزلنا تذكيرات النصائح اليومية المجدولة؛ تبقى النصيحة داخل التطبيق وشارة الإصدار الجديد بجوار ترس الإعدادات.',
@@ -3724,6 +3789,11 @@ I18N_WN.ar = {
 };
 
 I18N_WN.hi = {
+
+  'v53.2': [
+    'अध्ययन पत्र: प्रिंट के बगल में नया बटन वर्तमान सिस्टम को केवल खुली श्रेणियों के साथ साफ-सुथरे PDF के रूप में निर्यात करता है।',
+  ],
+
 
   'v53.1': [
     'सुधारा गया: पृष्ठभूमियाँ फिर से धीरे-धीरे बदलती हैं — थीम या वॉलपेपर बदलने पर अब कटने के बजाय मिलती हैं.',
@@ -4011,6 +4081,11 @@ I18N_WN.hi = {
 
 I18N_WN.sv = {
 
+  'v53.2': [
+    'Studieblad: en ny knapp bredvid Skriv ut exporterar det aktuella systemet som en ren, kompakt PDF med bara de kategorier du har öppna.',
+  ],
+
+
   'v53.1': [
     'Korrigerat: bakgrunder tonar över igen — att byta tema eller bakgrundsbild blandas nu mjukt i stället för att hoppa.',
     'Borttaget: de schemalagda dagstipsnotiserna är borta. Tipset i appen och märket för ny version vid inställningskuggen finns kvar.',
@@ -4296,6 +4371,11 @@ I18N_WN.sv = {
 };
 
 I18N_WN.da = {
+
+  'v53.2': [
+    'Studieark: en ny knap ved siden af Udskriv eksporterer det aktuelle system som en ren, kompakt PDF med kun de åbne kategorier.',
+  ],
+
 
   'v53.1': [
     'Rettet: baggrunde toner igen over — at skifte tema eller tapet glider nu blødt i stedet for at springe.',
@@ -4583,6 +4663,11 @@ I18N_WN.da = {
 
 I18N_WN.fi = {
 
+  'v53.2': [
+    'Opiskelulista: uusi painike Tulosta-painikkeen vieressä vie nykyisen järjestelmän siistiin ja kompaktiin PDF-tiedostoon vain avoinna olevat kategoriat.',
+  ],
+
+
   'v53.1': [
     'Korjattu: taustat sulautuvat taas — teeman tai taustakuvan vaihtaminen liukuu nyt pehmeästi vaihtumisen sijaan.',
     'Poistettu: ajoitetut päivävinkki-ilmoitukset on poistettu. Sovelluksen vinkki ja uuden version merkki asetusten ratasvaihteen vieressä säilyvät.',
@@ -4868,6 +4953,11 @@ I18N_WN.fi = {
 };
 
 I18N_WN.no = {
+
+  'v53.2': [
+    'Studieark: en ny knapp ved siden av Skriv ut eksporterer det aktuelle systemet som en ren, kompakt PDF med bare de kategoriene du har åpne.',
+  ],
+
 
   'v53.1': [
     'Rettet: bakgrunner toner igjen over — å bytte tema eller bakgrunnsbilde smelter nå mykt over i stedet for å hoppe.',
@@ -5155,6 +5245,11 @@ I18N_WN.no = {
 
 I18N_WN.cs = {
 
+  'v53.2': [
+    'Studijní list: nové tlačítko vedle Tisku exportuje aktuální systém jako čisté kompaktní PDF pouze s otevřenými kategoriemi.',
+  ],
+
+
   'v53.1': [
     'Opraveno: pozadí se znovu prolíná — přepnutí motivu či tapety se plynule slije místo skoku.',
     'Odstraněno: plánovaná denní oznámení s tipem jsou pryč. Tip v aplikaci a odznak nové verze u ozubeného kola Nastavení zůstávají.',
@@ -5440,6 +5535,11 @@ I18N_WN.cs = {
 };
 
 I18N_WN.hu = {
+
+  'v53.2': [
+    'Tanulólap: egy új gomb a Nyomtatás mellett az aktuális rendszert tiszta, kompakt PDF-ként exportálja, csak a nyitott kategóriákkal.',
+  ],
+
 
   'v53.1': [
     'Kijavítva: a hátterek ismét átúsznak — a téma vagy háttérkép váltása most finoman keveredik ahelyett, hogy hirtelen ugrana.',
