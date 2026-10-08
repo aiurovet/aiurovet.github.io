@@ -11076,36 +11076,11 @@ const WP_THEMES = ['ocean','forest','sunset','lavender','midnight','coral','mint
 function syncAccentWp(theme) {
   document.body.classList.toggle('has-accent-wp', WP_THEMES.includes(theme));
 }
-// Crossfade one background into the next: copy whatever is on screen onto the
-// front layer, let the new background take over behind it, then fade the front
-// layer away. Without this, background-image changes snap instead of blending.
-// The fade runs as a CSS animation: a single-frame add/mutate/remove leaves no
-// painted "from" state for a transition to animate from.
-let bgFadeTimer = null;
-function withBgCrossfade(mutate) {
-  const body = document.body;
-  // Skip only when the user explicitly turned Animations off. OS-level "reduce
-  // motion" is deliberately ignored here: a short background crossfade is not
-  // a vestibular trigger, and silently snapping backgrounds is the bug being
-  // fixed. Users who want zero animation use the Animations toggle instead.
-  if (body.classList.contains('no-anim')) { mutate(); return; }
-  const cs = getComputedStyle(body, '::before');
-  body.style.setProperty('--fade-img', cs.backgroundImage);
-  body.style.setProperty('--fade-col', cs.backgroundColor);
-  body.style.setProperty('--fade-filter', cs.filter);
-  if (body.classList.contains('bg-fading')) {
-    body.classList.remove('bg-fading');
-    void body.offsetWidth;
-  }
-  body.classList.add('bg-fading');
-  void body.offsetWidth;
-  mutate();
-  if (bgFadeTimer) clearTimeout(bgFadeTimer);
-  bgFadeTimer = setTimeout(() => {
-    bgFadeTimer = null;
-    body.classList.remove('bg-fading');
-  }, 720);
-}
+// Background transitions are plain CSS again (v52.10 style): body::before owns
+// the layer and carries the background-colour / background-image transitions,
+// so the theme handlers just swap classes and variables and the browser blends
+// compatible backgrounds (gradients and colours) while images swap cleanly.
+function withBgCrossfade(mutate) { mutate(); }
 let preservedWp = null;
 function preserveWallpaperForDark() {
   if (preservedWp) return;
