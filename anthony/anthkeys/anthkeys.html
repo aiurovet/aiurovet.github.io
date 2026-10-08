@@ -28,7 +28,7 @@
   <script>if (location.protocol === 'file:') document.getElementById('manifestLink').remove();</script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=Roboto:wght@400;500;600;700&family=Open+Sans:wght@400;500;600;700&family=Nunito:wght@400;500;600;700&family=Lato:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700&family=Work+Sans:wght@400;500;600;700&family=Rubik:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&family=Source+Sans+3:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&family=Fira+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/anthkeys.css?v=117">
+  <link rel="stylesheet" href="css/anthkeys.css?v=118">
 </head>
 <body class="light style-m3 size-medium font-google-sans">
  <div class="container">
@@ -810,6 +810,14 @@
                 <div class="whatsnew-title" data-i18n="whatsnew.title">What's new</div>
                 <p class="whatsnew-sub" data-i18n="whatsnew.sub">Recent changes to Anthkeys</p>
                 <select id="whatsnewSelect" aria-label="Version" style="width:100%;padding:.45rem .7rem;border:1px solid var(--outline-variant);border-radius:var(--radius-sm);background:var(--surface);color:var(--text);font:var(--size) var(--font);font-size:.8rem;margin-bottom:.6rem;box-sizing:border-box;outline:none"></select>
+                <div class="wn-entry">
+                  <div class="wn-ver">v53.0 <span class="wn-date">Oct 8, 2026</span></div>
+                  <ul>
+                    <li>Changed: Linux distros that share identical defaults are now one entry &mdash; GNOME and KDE stay apart because their shortcuts really do differ, and Arch, NixOS and Gentoo admit they ship no default desktop.</li>
+                    <li>Improved: every background fades into the next instead of snapping, and each photo background rests on a colour-matched gradient, so a dead image link never leaves a flat screen.</li>
+                  </ul>
+                </div>
+
                                 <div class="wn-entry">
                   <div class="wn-ver">v52.11 <span class="wn-date">Oct 4, 2026</span></div>
                   <ul>
@@ -1848,7 +1856,7 @@
   <script src="js/qrcode.js"></script>
   <script src="js/i18n-recent.js"></script>
 <script src="js/i18n-wn.js"></script>
-<script src="js/anthkeys.js?v=52.11">
+<script src="js/anthkeys.js?v=53.0">
 </script>
 </body>
 </html>

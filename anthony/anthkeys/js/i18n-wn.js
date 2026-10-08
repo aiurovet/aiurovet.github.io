@@ -5,7 +5,13 @@
    leaves the English markup in place. */
 const I18N_WN = window.I18N_WN || {};
 
-I18N_WN.es = {
+I18N_WN.es = {
+
+  'v53.0': [
+    'Cambiado: las distribuciones Linux con los mismos atajos por defecto ahora son una sola entrada; GNOME y KDE se mantienen separados porque sus atajos sí difieren, y Arch, NixOS y Gentoo no traen escritorio predeterminado.',
+    'Mejorado: cada fondo se funde con el siguiente en vez de cambiar de golpe, y cada foto descansa sobre un degradado a juego, para que un enlace roto nunca deje la pantalla lisa.',
+  ],
+
   'v52.11': [
     'Actualizaciones: ahora son silenciosas. Una versión nueva se instala en segundo plano sin mostrar nada. Se eliminaron el interruptor de alertas de actualización, la banda de actualización y la ventana emergente.',
   ],
@@ -279,7 +285,13 @@ I18N_WN.es = {
   'v1': ['La primera versi&oacute;n de Anthkeys: los atajos de teclado diarios de Windows, macOS, Linux y ChromeOS en una sola p&aacute;gina.']
 };
 
-I18N_WN.fr = {
+I18N_WN.fr = {
+
+  'v53.0': [
+    'Changé: les distributions Linux partageant les mêmes raccourcis par défaut ne forment plus qu\'une entrée — GNOME et KDE restent distincts car leurs touches diffèrent réellement, et Arch, NixOS et Gentoo ne fournissent aucun bureau par défaut.',
+    'Amélioré: chaque fond se fond dans le suivant au lieu de basculer sèchement, et chaque photo repose sur un dégradé assorti, pour qu\'un lien mort ne laisse jamais un écran en aplat.',
+  ],
+
   'v52.11': [
     'Mises à jour: désormais silencieuses. Une nouvelle version s’installe en arrière-plan sans rien afficher. Les alertes de mise à jour, la bannière et la bulle ont été supprimés.',
   ],
@@ -553,7 +565,13 @@ I18N_WN.fr = {
   'v1': ['La premi&egrave;re version d&rsquo;Anthkeys : les raccourcis clavier quotidiens de Windows, macOS, Linux et ChromeOS sur une seule page.']
 };
 
-I18N_WN.de = {
+I18N_WN.de = {
+
+  'v53.0': [
+    'Geändert: Linux-Distributionen mit identischen Standardtasten sind jetzt ein Eintrag; GNOME und KDE bleiben getrennt, denn ihre Tasten unterscheiden sich wirklich, und Arch, NixOS und Gentoo liefern keinen Standard-Desktop.',
+    'Verbessert: jeder Hintergrund blendet in den nächsten statt umzuschalten, und jedes Foto ruht auf einem passenden Farbverlauf — ein toter Link hinterlässt nie einen flachen Bildschirm.',
+  ],
+
   'v52.11': [
     'Updates: jetzt still. Eine neue Version installiert sich im Hintergrund, ohne dass etwas erscheint. Der Schalter für Update-Hinweise, das Update-Banner und der Popup wurden entfernt.',
   ],
@@ -827,7 +845,13 @@ I18N_WN.de = {
   'v1': ['Die erste Version von Anthkeys &mdash; alle t&auml;glichen Tastenk&uuml;rzel f&uuml;r Windows, macOS, Linux und ChromeOS auf einer Seite.']
 };
 
-I18N_WN.it = {
+I18N_WN.it = {
+
+  'v53.0': [
+    'Cambiato: le distribuzioni Linux con scorciatoie predefinite identiche sono ora una voce; GNOME e KDE restano separati perché i loro tasti differiscono davvero, e Arch, NixOS e Gentoo non offrono un desktop predefinito.',
+    'Migliorato: ogni sfondo sfuma nel successivo invece di cambiare di colpo, e ogni foto poggia su un gradiente color-matched, così un link morto non lascia mai uno schermo piatto.',
+  ],
+
   'v52.11': [
     'Aggiornamenti: ora sono silenziosi. Una nuova versione si installa in background senza mostrare nulla. Sono stati rimossi l’interruttore degli avvisi, il banner e il popup.',
   ],
@@ -1101,7 +1125,13 @@ I18N_WN.it = {
   'v1': ['La prima versione di Anthkeys: tutte le scorciatoie da tastiera quotidiane per Windows, macOS, Linux e ChromeOS in una sola pagina.']
 };
 
-I18N_WN.pt = {
+I18N_WN.pt = {
+
+  'v53.0': [
+    'Alterado: as distribuições Linux com os mesmos atalhos predefinidos agora são uma única entrada; GNOME e KDE permanecem separados porque as suas teclas realmente diferem, e Arch, NixOS e Gentoo não trazem ambiente de trabalho predefinido.',
+    'Melhorado: cada fundo funde-se com o seguinte em vez de mudar de repente, e cada foto assenta sobre um gradiente à cor combinada, para que uma ligação morta nunca deixe o ecrã plano.',
+  ],
+
   'v52.11': [
     'Atualizações: agora são silenciosas. Uma versão nova instala-se em segundo plano sem mostrar nada. Foram removidos o interruptor de alertas, a faixa e o balão.',
   ],
@@ -1375,7 +1405,13 @@ I18N_WN.pt = {
   'v1': ['A primeira vers&atilde;o do Anthkeys: todos os atalhos de teclado do dia a dia para Windows, macOS, Linux e ChromeOS em uma &uacute;nica p&aacute;gina.']
 };
 
-I18N_WN.nl = {
+I18N_WN.nl = {
+
+  'v53.0': [
+    'Gewijzigd: Linux-distributies met identieke standaardtoetsen zijn nu één vermelding; GNOME en KDE blijven gescheiden omdat hun toetsen echt verschillen, en Arch, NixOS en Gentoo leveren geen standaard desktopomgeving.',
+    'Verbeterd: elke achtergrond vloeit over in de volgende in plaats van over te slaan, en elke foto rust op een kleurpassend verloop, zodat een dode link nooit een vlak scherm achterlaat.',
+  ],
+
   'v52.11': [
     'Updates: nu stil. Een nieuwe versie installeert zich op de achtergrond zonder iets te tonen. De schakelaar voor update-meldingen, de update-banner en de meldingsknop zijn verwijderd.',
   ],
@@ -1649,7 +1685,13 @@ I18N_WN.nl = {
   'v1': ['De eerste versie van Anthkeys: alle dagelijkse toetsenbord-sneltoetsen voor Windows, macOS, Linux en ChromeOS op &eacute;&eacute;n pagina.']
 };
 
-I18N_WN.ja = {
+I18N_WN.ja = {
+
+  'v53.0': [
+    '変更: 既定のショートカットが同じ Linux ディストリビューションを 1 件にまとめました。GNOME と KDE はキーが実際に異なるため分けたまま、Arch・NixOS・Gentoo は既定のデスクトップを持ちません。',
+    '改善: それぞれの背景は切り替える代りに次の背景へてりとクロスフェードし、各写真は色を合わせたグラデーションの上に載っていますので、画像が読めなくても画面が平になりません。',
+  ],
+
   'v52.11': [
     '更新：現在は無反で完了します。新しいバージョンはバックグラウンドで自動的にインストールされ、何も表示されません。更新アラートのスイッチ、バンナー、ポップアップアは削除しました。',
   ],
@@ -1923,7 +1965,13 @@ I18N_WN.ja = {
   'v1': ['Anthkeys の最初のバージョンです。Windows、macOS、Linux、ChromeOS の日常的なキーボードショートカットを 1 ページにまとめました。']
 };
 
-I18N_WN.ru = {
+I18N_WN.ru = {
+
+  'v53.0': [
+    'Изменено: дистрибутивы Linux с одинаковыми сочетаниями клавиш теперь объединены в один пункт; GNOME и KDE остаются раздельными — их клавиши действительно различаются, а Arch, NixOS и Gentoo не поставляют рабочий стол по умолчанию.',
+    'Улучшено: каждый фон плавно переходит в следующий вместо резкой смены, и каждая фотография лежит на подобранном по цвету градиенте, поэтому битая ссылка никогда не оставит плоский экран.',
+  ],
+
   'v52.11': [
     'Обновления: теперь безмолвны. Новая версия становится в фоне, ничего не показывая. Переключатель уведомлений, баннер обновлений и всплывающее окно убранены.',
   ],
@@ -2197,7 +2245,13 @@ I18N_WN.ru = {
   'v1': ['Первая версия Anthkeys: все повседневные сочетания клавиш для Windows, macOS, Linux и ChromeOS на одной странице.']
 };
 
-I18N_WN.ko = {
+I18N_WN.ko = {
+
+  'v53.0': [
+    '변경: 기본 단축케가 같은 Linux 배우판을 한 항목으로 모음에요. GNOME과 KDE는 단축케가 실제로 다를 때 따로 둔 면, Arch·NixOS·Gentoo는 기본 데스크톡이 없습니다.',
+    '개선: 모든 배경이 전환 대신 다음 배경으로 불같게 공의되어 지나고, 각 사진은 일관한 그라디언트 위에 남자 보내 만타 연결이 써야든 화면이 평벼이 되지 않습니다.',
+  ],
+
   'v52.11': [
     '업데이트: 이제 자동으로 완따됩니다. 새 버전은 백그라운드에서 자동 설치되고 아무것도 표시되지 않습니다. 업데이트 알랰 스위치, 반너, 필스트를 제거했습니다.',
   ],
@@ -2471,7 +2525,13 @@ I18N_WN.ko = {
   'v1': ['Anthkeys의 첫 버전입니다. Windows, macOS, Linux, ChromeOS의 일상적인 키보드 단축키를 한 페이지에 모았습니다.']
 };
 
-I18N_WN.pl = {
+I18N_WN.pl = {
+
+  'v53.0': [
+    'Zmienione: dystrybucje Linuxa z identycznymi domyślnymi skrótami są teraz jednym wpisem; GNOME i KDE pozostają rozdzielenie, bo ich klawisze naprawdę się różnią, a Arch, NixOS i Gentoo nie mają domyślnego środowiska graficznego.',
+    'Ulepszone: każde tło przenika do następnego zamiast przeskakiwać, a każde zdjęcie spoczywa na dopasowanym kolorystycznie gradiencie, więc martwy link nigdy nie zostawi płaskiego ekranu.',
+  ],
+
   'v52.11': [
     'Aktualizacje: są teraz ciche. Nowa wersja instaluje się w tle bez żadnych powiadomień. Usunięto przełącznik alertów, baner aktualizacji i wyskakujące okno.',
   ],
@@ -2745,7 +2805,13 @@ I18N_WN.pl = {
   'v1': ['Pierwsza wersja Anthkeys: wszystkie codzienne skróty klawiszowe dla Windows, macOS, Linux i ChromeOS na jednej stronie.']
 };
 
-I18N_WN.tr = {
+I18N_WN.tr = {
+
+  'v53.0': [
+    'Değiştirilen: aynı varsayılan kısayollara sahip Linux dağıtımları artık tek girdi; GNOME ve KDE kısayolları gerçekten farklı olduğu için ayrı kaldı, Arch, NixOS ve Gentoo ise varsayılan masaüstü sunmuyor.',
+    'Geliştirilen: her arka plan sıradakine atlamak yerine yumuşakça geçiyor ve her fotoğraf uyumlu bir gradyan üzerinde duruyor, öylece ölü bağlantı asla düz bir ekran bırakmıyor.',
+  ],
+
   'v52.11': [
     'Güncellemeler: artık sessiz. Yeni sürüm arka planda kendiliğinden kurulur ve hiçbir şey gösterilmez. Güncelleme uyarıları anahtarı, çubuk ve balon kaldırıldı.',
   ],
@@ -3019,7 +3085,13 @@ I18N_WN.tr = {
   'v1': ['Anthkeys’in ilk sürümü: Windows, macOS, Linux ve ChromeOS için günlük klavye kısayollarının tamamı tek bir sayfada.']
 };
 
-I18N_WN.vi = {
+I18N_WN.vi = {
+
+  'v53.0': [
+    'Thay đổi: các bản phân phối Linux dùng chung phím tốt mặc định giờ1 là một mục; GNOME và KDE vẫn tách riîng vì phím tốt của chúng thực sế khác nhau, còn Arch, NixOS và Gentoo không có bàn làm việc mặc định.',
+    'Cải thiện: mỗi nền chuyển dần sang nền tiếp theo thay vì nhấy phằt, và mỗi ảnh nằm trên một gradient hợp màu, nên liên kết chết không bao giố lẽ lại màn hình phẹng.',
+  ],
+
   'v52.11': [
     'Cập nhầt: giờ đã im lặng. Phiên bản mới tự cài đặt trong nền và không hiện gì. Đã gỡ công tắc, băng cập nhắt và hộp thoái.',
   ],
@@ -3293,7 +3365,13 @@ I18N_WN.vi = {
   'v1': ['Bản đầu tiên của Anthkeys: toàn bộ phím tắt bàn phím hằng ngày cho Windows, macOS, Linux và ChromeOS trong một trang.']
 };
 
-I18N_WN.ar = {
+I18N_WN.ar = {
+
+  'v53.0': [
+    'ترجيعاً: توزيعات لينكس ذات الاختصارات الافتراضية المتشابهة أصبحت مدخلاً واحدً؛ يبقى GNOME و KDE منفصلين لأنهما تختلفان فعلاً، ولا يقدم الأسم و NixOS و Gentoo سطح مكتب افتراضياً.',
+    'تحسيناً: كل خلفية تتلاشى في التالية بدلالً من القفز، وتستقر كل صورة على تدرج لوني مطابق، فلا تكتر رابطاً ميتاً شاشة مستطية.',
+  ],
+
   'v52.11': [
     'التحديثات: أصبحت هادئة الآن. تُثبّت الإصدار الجديد في الخلفية دون عرض شيء. أزيلت مفتاح إشعار التحديثات وشريط التحديث والنفاذة المنبقة.',
   ],
@@ -3567,7 +3645,13 @@ I18N_WN.ar = {
   'v1': ['الإصدار الأول من Anthkeys: كل اختصارات لوحة المفاتيح اليومية لـWindows وmacOS وLinux وChromeOS في صفحة واحدة.']
 };
 
-I18N_WN.hi = {
+I18N_WN.hi = {
+
+  'v53.0': [
+    'बदला: एक जैसे डिफ़ॉल्ट शॉर्टकट वाले लिनक्स वितरण अब एक प्रविष्टि हैं; GNOME और KDE अलग रहते हैं क्योंकि उनकी कुंजियाँ सचमें अलग हैं, और Arch, NixOS व Gentoo कोई डिफ़ॉल्ट डेस्कटोप नहीं देते.',
+    'बेहतर: हर पृष्ठभूमि अगली में रंग-मिलान वाले ग्रेडिएंट पर टिकी रहती है, ताकि मृत लिंक कभी सपाट स्क्रीन न छोडे.',
+  ],
+
   'v52.11': [
     'अपडेट: अब सीफ हैं। नया वर्कसन बैकग्राउंड में स्थरित इंस्टॉल हो जाता है, कुछ कोए गई नहीं ऒेटा जाता है। अपडेट अलर्ट स्विच्च, ब्नर और पोपअप हटा दिया गएर दिया गएँ।',
   ],
@@ -3841,7 +3925,13 @@ I18N_WN.hi = {
   'v1': ['Anthkeys का पहला संस्करण: Windows, macOS, Linux और ChromeOS के रोज़मर्रा कीबोर्ड शॉर्टकट एक ही पेज पर.']
 };
 
-I18N_WN.sv = {
+I18N_WN.sv = {
+
+  'v53.0': [
+    'Ändrat: Linux-distributioner med identiska standardgenvägar är nu en post; GNOME och KDE hålls isär eftersom deras tangenter verkligen skiljer sig, och Arch, NixOS och Gentoo levererar ingen standarddesktop.',
+    'Förbättrat: varje bakgrund tonar över i nästa i stället för att hoppa, och varje foto vilar på en färganpassad gradient, så en död länk lämnar aldrig en platt skärm.',
+  ],
+
   'v52.11': [
     'Uppdateringar: nu tysta. En ny version installeras i bakgrunden utan att något visas. Omkopplaren för uppdateringsaviseringar, uppdateringsbanderollen och popupen har tagits bort.',
   ],
@@ -4115,7 +4205,13 @@ I18N_WN.sv = {
   'v1': ['Första versionen av Anthkeys: alla dagliga tangentbordsgenvägar för Windows, macOS, Linux och ChromeOS på en sida.']
 };
 
-I18N_WN.da = {
+I18N_WN.da = {
+
+  'v53.0': [
+    'Ændret: Linux-distributioner med samme standardgenveje er nu én post; GNOME og KDE holdes adskilt, for deres taster er faktisk forskellige, og Arch, NixOS og Gentoo leverer intet standard-skrivebord.',
+    'Forbedret: hvert baggrundsbillede smelter over i det næste i stedet for at skifte brådt, og hvert foto hviler på en farvematchet forløb, så et dødt link aldrig efterlader en flad skærm.',
+  ],
+
   'v52.11': [
     'Opdateringer: nu stille. En ny version installeres i baggrunden, uden at der vises noget. Kontakten til opdateringsnoter, banneret og pop op-vinduet er fjernet.',
   ],
@@ -4389,7 +4485,13 @@ I18N_WN.da = {
   'v1': ['Første udgave af Anthkeys: alle daglige tastaturgenveje til Windows, macOS, Linux og ChromeOS på én side.']
 };
 
-I18N_WN.fi = {
+I18N_WN.fi = {
+
+  'v53.0': [
+    'Muutettu: Linux-jakelut, joilla on samat oletuspikanäppäimet, ovat nyt yksi kohta; GNOME ja KDE pysyvät erillään, koska niiden näppäimet todella eroavat, eivätkä Arch, NixOS ja Gentoo toimita oletustyöpöytää.',
+    'Parannettu: jokainen tausta sulautuu seuraavaan sen sijaan, että se vaihtuisi äkillisesti, ja jokainen kuva lepää värisopivassa liukuväristä, joten rikkinäinen linkki ei jätä tasaa ruutua.',
+  ],
+
   'v52.11': [
     'Päivitykset: nyt hiljaisia. Uusi versio asennetaan taustalla ilman mitään näkyvää. Päivitysasetusten kytkin, päivitysbanneri ja ponnahdikkko poistettiin.',
   ],
@@ -4663,7 +4765,13 @@ I18N_WN.fi = {
   'v1': ['Anthkeysin ensimmäinen versio: kaikki päivittäiset näppäinoikotiet Windowsille, macOS:lle, Linuxille ja ChromeOS:lle yhdellä sivulla.']
 };
 
-I18N_WN.no = {
+I18N_WN.no = {
+
+  'v53.0': [
+    'Endret: Linux-distribusjoner med samme standardvalgtaster er nå én oppføring; GNOME og KDE holdes atskilt fordi tastene faktisk er forskjellige, og Arch, NixOS og Gentoo leverer ingen standard skrivebord.',
+    'Forbedret: hvert bakgrunnsbilde glir over i det neste i stedet for å bytte brått, og hvert foto hviler på en fargetilpasset gradient, så en død lenke aldri etterlater en flat skjerm.',
+  ],
+
   'v52.11': [
     'Oppdateringer: nå stille. En ny versjon installeres i bakgrunnen uten at noe vises. Bryteren for oppdateringsvarsler, banneret og popup-vinduet er fjernet.',
   ],
@@ -4937,7 +5045,13 @@ I18N_WN.no = {
   'v1': ['Første utgave av Anthkeys: alle daglige tastaturgenveier for Windows, macOS, Linux og ChromeOS på én side.']
 };
 
-I18N_WN.cs = {
+I18N_WN.cs = {
+
+  'v53.0': [
+    'Změněno: distribuce Linuxu se stejnými výchozími zkratkami jsou nyní jedna položka; GNOME a KDE zůstávají oddělené, protože se jejich klávesy skutečně liší, a Arch, NixOS a Gentoo žádnou výchozí plochu nenabízejí.',
+    'Vylepšeno: každé pozadí se prolíná do dalšího místo okamžité výměny a každá fotka spočívá na barevně sladěném přechodu, takže mrtvý odkaz nikdy nezanechá plochou obrazovku.',
+  ],
+
   'v52.11': [
     'Aktualizace: nyní tiché. Nová verze se nainstaluje na pozadí a nic se nezobrazí. Přepínač aktualizací, banner i vyskakovací okno byly odebrány.',
   ],
@@ -5211,7 +5325,13 @@ I18N_WN.cs = {
   'v1': ['První verze Anthkeys: všechny denní klávesové zkratky pro Windows, macOS, Linux a ChromeOS na jedné stránce.']
 };
 
-I18N_WN.hu = {
+I18N_WN.hu = {
+
+  'v53.0': [
+    'Módosítva: azonos alapértelmezett billentyűparancsokat használó Linux-disztribúciók most egyetlen bejegyzés; a GNOME és a KDE külön marad, mert a billentyűik tényleg eltérnek, az Arch, a NixOS és a Gentoo pedig nem szállít alapértelmezett asztali környezetet.',
+    'Javítva: minden háttér átúszik a következőbe ahelyett, hogy hirtelen váltana, és minden fotó színben illő gradiensen pihen, így a halott link sosem hagy sík képernyőt.',
+  ],
+
   'v52.11': [
     'Frissítések: mostant csendesek. Az új változat a háttérben települ és semmi sem jelenik meg. Eltávolt a frissítési értesításek kapcsolója, a banner és az ñablak.',
   ],

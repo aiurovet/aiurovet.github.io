@@ -1,4 +1,4 @@
-const CACHE = 'anthkeys-v52.11';
+const CACHE = 'anthkeys-v53.0';
 const CFG_CACHE = 'anthkeys-notify-cfg';
 const CFG_URL = 'notify-cfg.json';
 const TIP_TAG = 'anthkeys-daily-tip';
@@ -37,7 +37,7 @@ function writeCfg(cfg) {
 }
 
 // Merge instead of replacing, so fields written by a newer page build
-// (version, notified, update strings) survive a partial NOTIFY_SCHEDULE.
+// (version, dark mode, tip schedule) survive a partial NOTIFY_SCHEDULE.
 function patchCfg(patch) {
   return readCfg()
     .then(cur => writeCfg(Object.assign({}, cur || {}, patch)));
@@ -113,15 +113,7 @@ self.addEventListener('message', e => {
     // actually running, even when the daily-tip schedule is switched off.
     e.waitUntil(patchCfg({
       version: data.version || '',
-      updates: data.updates !== false,
-      updateTitle: data.updateTitle || '',
-      updateBody: data.updateBody || '',
-      vapidPublicKey: data.vapidPublicKey || '',
-      pushSubscribeUrl: data.pushSubscribeUrl || '',
       dark: !!data.dark
-    }).then(() => {
-      // A build just changed under us: let the next background run decide.
-      if (data.version) return patchCfg({ notified: '' });
     }));
     return;
   }
@@ -165,61 +157,6 @@ self.addEventListener('periodicsync', e => {
     e.waitUntil(showDailyTip());
     return;
   }
-});
-
-// ---- Web Push (dormant until a backend is configured) ----
-// The VAPID public key is not secret and may live in the page; the private
-// key never does. Until AK_PUSH_SUBSCRIBE_URL is filled in on the page, no
-// subscription is ever created and these handlers stay dormant.
-self.addEventListener('push', e => {
-  let payload = {};
-  try {
-    payload = e.data ? e.data.json() : {};
-  } catch (err) {
-    payload = { body: e.data ? e.data.text() : '' };
-  }
-  if (payload.silent) return;
-  const title = payload.title || 'Anthkeys';
-  const opts = {
-    body: payload.body || '',
-    icon: 'icon-192.png',
-    badge: 'icon-192.png',
-    tag: payload.tag || 'push-' + Date.now(),
-    renotify: false,
-    data: { url: payload.url || 'anthkeys.html' }
-  };
-  e.waitUntil(self.registration.showNotification(title, opts));
-});
-
-// A push service can rotate or drop a subscription; re-subscribe in place so
-// alerts keep arriving without the user having to reopen the app.
-function b64ToUint8Array(base64) {
-  if (self.urlBase64ToUint8Array) return self.urlBase64ToUint8Array(base64);
-  const padding = '='.repeat((4 - (base64.length % 4)) % 4);
-  const raw = atob((base64 + padding).replace(/-/g, '+').replace(/_/g, '/'));
-  const out = new Uint8Array(raw.length);
-  for (let i = 0; i < raw.length; i++) out[i] = raw.charCodeAt(i);
-  return out;
-}
-
-self.addEventListener('pushsubscriptionchange', e => {
-  const reg = self.registration;
-  e.waitUntil(
-    readCfg().then(cfg => {
-      if (!cfg || !cfg.pushSubscribeUrl) return null;
-      if (!reg.pushManager) return null;
-      return reg.pushManager.getSubscription()
-        .then(sub => sub || reg.pushManager.subscribe({
-          userVisibleOnly: true,
-          applicationServerKey: b64ToUint8Array(cfg.vapidPublicKey)
-        }))
-        .then(sub => fetch(cfg.pushSubscribeUrl, {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ subscription: sub.toJSON() })
-        }));
-    }).catch(() => null)
-  );
 });
 
 self.addEventListener('fetch', e => {

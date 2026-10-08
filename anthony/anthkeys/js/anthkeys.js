@@ -15,10 +15,6 @@ const i18n = {
     'notify.time': 'Daily tip at',
     'notify.test': 'Send a test notification',
     'notify.note': 'Daily tips are sent while this site is open. Installed on Chrome they can also arrive when it is closed, but the browser picks the time and may skip a day.',
-    'notify.updates': 'Update alerts',
-    'notify.updates.active': 'Checking for new versions in the background.',
-    'notify.updates.needsInstall': 'Install Anthkeys on Chrome or Edge so this works while it is closed.',
-    'notify.updates.off': 'Background update alerts are off.',
     'notify.checkNow': 'Check for updates now',
     'notify.check.upToDate': 'You are on the latest version.',
     'notify.check.newer': 'v{ver} is ready. Open Anthkeys to update.',
@@ -27,8 +23,6 @@ const i18n = {
     'notify.tip.title': 'Today\u2019s shortcut',
     'notify.test.title': 'Test notification',
     'notify.test.body': 'Notifications are working.',
-    'notify.update.title': 'Update available',
-    'notify.update.body': 'Anthkeys v{ver} is ready. Open it to update.',
     'notify.rooms': 'Live room alerts',
     'notify.rooms-note': 'Tell me when a device joins or leaves your room, rings, runs low on battery, or sends a note.',
     'notify.room.join.title': 'Device joined',
@@ -57,12 +51,6 @@ const i18n = {
     'msg.copied': 'Copied!',
     'install.text': 'Install Anthkeys for offline access',
     'install.cta': 'Install',
-    'update.text': 'A new version is available',
-    'update.cta': 'Refresh',
-    'setting.update-mode': 'Updates',
-    'update.auto': 'Auto-update',
-    'update.ask': 'Ask before updating',
-    'update.note': 'Auto-update reloads the page when a new version is available. "Ask" shows a Refresh button instead.',
     'search.placeholder': 'Search actions\u2026',
     'search.results': 'Results: {n}',
     'search.noresults': 'No results',
@@ -89,6 +77,7 @@ const i18n = {
     'accent.device-applied': 'Device accent applied',
     'accent.device-fail': 'Device accent not available here \u2014 open the installed app',
     'linux.distro': 'Distribution',
+    'linux.no-default': 'No default shortcut',
     'accent.gradient-title': 'Gradient accents',
     'setting.theme': 'Theme',
     'setting.presets': 'Style',
@@ -493,6 +482,7 @@ const i18n = {
 }
 
 i18n.ar = {
+    'linux.no-default': 'لا يوجد اختصار افتراضي',
     'setting.notifications': 'الإشعارات',
     'notify.label': 'أرسل إليّ إشعارات',
     'notify.state.default': 'شغّل المفتاح واسمح بالإشعارات في نافذة المتصفح.',
@@ -503,10 +493,6 @@ i18n.ar = {
     'notify.time': 'نصيحة اليوم في',
     'notify.test': 'أرسل إشعارًا تجريبيًا',
     'notify.note': 'تُرسل النصائح اليومية طالما يكون هذا الموقع مفتوحاً. وعند التثبيت على Chrome يمكن أن تصل أيضاً وهو مغلق، لكن المتصفح يختار الوقت وقد يتخطى يوماً.',
-    'notify.updates': 'تنبيهات التحديث',
-    'notify.updates.active': 'أفحص عن إصدارات جديدة في الخلفية.',
-    'notify.updates.needsInstall': 'ثبّت Anthkeys على Chrome أو Edge ليعمل هذا وهو مغلق.',
-    'notify.updates.off': 'تنبيهات التحديث في الخلفية متوقفة.',
     'notify.checkNow': 'افحص عن تحديثات الآن',
     'notify.check.upToDate': 'أنت على أحدث إصدار.',
     'notify.check.newer': 'الإصدار v{ver} جاهز. افتح Anthkeys للتحديث.',
@@ -515,8 +501,6 @@ i18n.ar = {
     'notify.tip.title': 'اختصار اليوم',
     'notify.test.title': 'إشعار تجريبي',
     'notify.test.body': 'الإشعارات تعمل.',
-    'notify.update.title': 'يتوفر تحديث',
-    'notify.update.body': 'Anthkeys v{ver} جاهزة. افتحها للتحديث.',
     'notify.rooms': 'تنبيهات الغرف المباشرة',
     'notify.rooms-note': 'أخبرني عندما ينضم جهاز إلى غرفتك أو يغادرها أو يرنّ أو تنخفض بطاريته أو يرسل لي ملاحظة.',
     'notify.room.join.title': 'انضم جهاز',
@@ -951,15 +935,9 @@ i18n.ar = {
     'quiz.type-shortcut': 'اكتب الاختصار:',
     'quiz.wrong': 'خطأ!',
     'setting.tip': 'نصيحة يومية',
-    'setting.update-mode': 'التحديثات',
     'settings.search': 'بحث في الإعدادات…',
     'theme.auto': '⏰ تلقائي (حسب الوقت)',
     'tip.label': 'نصيحة',
-    'update.ask': 'اسأل قبل التحديث',
-    'update.auto': 'تحديث تلقائي',
-    'update.cta': 'تحديث',
-    'update.note': 'التحديث التلقائي يعيد تحميل الصفحة عند توفر إصدار جديد. «اسأل» يعرض زر تحديث بدلاً من ذلك.',
-    'update.text': 'يتوفر إصدار جديد',
     'wallpaper.remove': 'إزالة الخلفية',
     'offline.badge': 'غير متصل',
     'offline.toast': 'أنت غير متصل — يعمل Anthkeys من الملف المؤقت.',
@@ -973,6 +951,7 @@ i18n.ar = {
 };;
 
 i18n.cs = {
+    'linux.no-default': 'Výchozí zkratka není',
     'setting.notifications': 'Oznámení',
     'notify.label': 'Zasílat mi oznámení',
     'notify.state.default': 'Zapněte přepínač a v dotazu prohlížeče povolte oznámení.',
@@ -983,10 +962,6 @@ i18n.cs = {
     'notify.time': 'Denní tip v',
     'notify.test': 'Odeslat zkušební oznámení',
     'notify.note': 'Denní tipy se posílají, dokud je tato stránka otevřená. Nainstalované v Chromu mohou přicházet i při zavřené stránce, ale prohlížeoč vybere čas a může přeskočit den.',
-    'notify.updates': 'Upozornění na aktualizace',
-    'notify.updates.active': 'Na pozadí kontroluji nové verze.',
-    'notify.updates.needsInstall': 'Nainstalujte Anthkeys v Chrome nebo Edge, aby to fungovalo i při zavřené aplikaci.',
-    'notify.updates.off': 'Kontrola aktualizací na pozadí je vypnutá.',
     'notify.checkNow': 'Zkontrolovat aktualizace nyní',
     'notify.check.upToDate': 'Máte nejnovější verzi.',
     'notify.check.newer': 'Verze v{ver} je připravena. Otevřete Anthkeys pro aktualizaci.',
@@ -995,8 +970,6 @@ i18n.cs = {
     'notify.tip.title': 'Dnešní zkratka',
     'notify.test.title': 'Zkušební oznámení',
     'notify.test.body': 'Oznámení fungují.',
-    'notify.update.title': 'Dostupná aktualizace',
-    'notify.update.body': 'Anthkeys v{ver} je připravená. Otevřete ji pro aktualizaci.',
     'notify.rooms': 'Upozornění živých místností',
     'notify.rooms-note': 'Informujte mě, když se zařízení připojí k místnosti nebo odejde, zazvoní, má nízkou baterii nebo pošle poznámku.',
     'notify.room.join.title': 'Připojeno zařízení',
@@ -1431,15 +1404,9 @@ i18n.cs = {
     'quiz.type-shortcut': 'Napište zkratku:',
     'quiz.wrong': 'Chyba!',
     'setting.tip': 'Denní tip',
-    'setting.update-mode': 'Aktualizace',
     'settings.search': 'Hledat v nastavení…',
     'theme.auto': '⏰ Automaticky (podle času)',
     'tip.label': 'Tip',
-    'update.ask': 'Zeptat se před aktualizací',
-    'update.auto': 'Automatická aktualizace',
-    'update.cta': 'Obnovit',
-    'update.note': 'Automatická aktualizace znovu načte stránku, když je k dispozici nová verze. Volba „Zeptat se“ místo toho zobrazí tlačítko Obnovit.',
-    'update.text': 'Je k dispozici nová verze',
     'wallpaper.remove': 'Odebrat tapetu',
     'offline.badge': 'Offline',
     'offline.toast': 'Jste offline \u2014 Anthkeys funguje z mezipaměti.',
@@ -1453,6 +1420,7 @@ i18n.cs = {
 };;
 
 i18n.da = {
+    'linux.no-default': 'Ingen standardgenvej',
     'setting.notifications': 'Notifikationer',
     'notify.label': 'Send mig notifikationer',
     'notify.state.default': 'Tænd kontakten og tillad notifikationer i browserens prompt.',
@@ -1463,10 +1431,6 @@ i18n.da = {
     'notify.time': 'Dagligt tip kl.',
     'notify.test': 'Send en testnotifikation',
     'notify.note': 'Daglige tips sendes, mens dette websted er åbent. Installeret i Chrome kan de også komme, når det er lukket, men browseren vælger tidspunktet og kan springe en dag over.',
-    'notify.updates': 'Opdateringsvarsler',
-    'notify.updates.active': 'Tjekker nye versioner i baggrunden.',
-    'notify.updates.needsInstall': 'Installér Anthkeys i Chrome eller Edge, så det virker, selv når den er lukket.',
-    'notify.updates.off': 'Opdateringsvarsler i baggrunden er slået fra.',
     'notify.checkNow': 'Tjek for opdateringer nu',
     'notify.check.upToDate': 'Du har den nyeste version.',
     'notify.check.newer': 'v{ver} er klar. Åbn Anthkeys for at opdatere.',
@@ -1475,8 +1439,6 @@ i18n.da = {
     'notify.tip.title': 'Dagens genvej',
     'notify.test.title': 'Testnotifikation',
     'notify.test.body': 'Notifikationer virker.',
-    'notify.update.title': 'Opdatering tilgængelig',
-    'notify.update.body': 'Anthkeys v{ver} er klar. Åbn den for at opdatere.',
     'notify.rooms': 'Notifikationer fra live-rum',
     'notify.rooms-note': 'Giv mig besked, når en enhed kommer ind i dit rum eller forlader det, ringer, har lavt batteri eller sender dig en note.',
     'notify.room.join.title': 'Enhed tilsluttet',
@@ -1911,15 +1873,9 @@ i18n.da = {
     'quiz.type-shortcut': 'Skriv genvejen:',
     'quiz.wrong': 'Forkert!',
     'setting.tip': 'Dagligt tip',
-    'setting.update-mode': 'Opdateringer',
     'settings.search': 'Søg i indstillinger…',
     'theme.auto': '⏰ Automatisk (tid)',
     'tip.label': 'Tip',
-    'update.ask': 'Spørg før opdatering',
-    'update.auto': 'Automatisk opdatering',
-    'update.cta': 'Opdater',
-    'update.note': 'Automatisk opdatering genindlæser siden, når der er en ny version. "Spørg" viser i stedet en Opdater-knap.',
-    'update.text': 'Der er en ny version',
     'wallpaper.remove': 'Fjern baggrundsbillede',
     'offline.badge': 'Offline',
     'offline.toast': 'Du er offline \u2014 Anthkeys fungerer fra cachen.',
@@ -1933,6 +1889,7 @@ i18n.da = {
 };;
 
 i18n.de = {
+    'linux.no-default': 'Keine Standardtaste',
     'setting.notifications': 'Benachrichtigungen',
     'notify.label': 'Benachrichtigungen senden',
     'notify.state.default': 'Schalte den Regler ein und erlaube Benachrichtigungen in der Browserabfrage.',
@@ -1943,10 +1900,6 @@ i18n.de = {
     'notify.time': 'Täglicher Tipp um',
     'notify.test': 'Testbenachrichtigung senden',
     'notify.note': 'Tägliche Tipps werden gesendet, solange diese Seite geöffnet ist. Installiert in Chrome können sie auch eintreffen, wenn sie geschlossen ist, aber der Browser bestimmt den Zeitpunkt und überspringt manchmal einen Tag.',
-    'notify.updates': 'Update-Hinweise',
-    'notify.updates.active': 'Ich suche im Hintergrund nach neuen Versionen.',
-    'notify.updates.needsInstall': 'Installiere Anthkeys in Chrome oder Edge, damit das auch bei geschlossener App funktioniert.',
-    'notify.updates.off': 'Update-Hinweise im Hintergrund sind aus.',
     'notify.checkNow': 'Jetzt nach Updates suchen',
     'notify.check.upToDate': 'Du hast die neueste Version.',
     'notify.check.newer': 'v{ver} ist bereit. Öffne Anthkeys zum Aktualisieren.',
@@ -1955,8 +1908,6 @@ i18n.de = {
     'notify.tip.title': 'Dein Tipp des Tages',
     'notify.test.title': 'Testbenachrichtigung',
     'notify.test.body': 'Benachrichtigungen funktionieren.',
-    'notify.update.title': 'Update verfügbar',
-    'notify.update.body': 'Anthkeys v{ver} ist bereit. Öffne sie, um zu aktualisieren.',
     'notify.rooms': 'Live-Raum-Hinweise',
     'notify.rooms-note': 'Benachrichtige mich, wenn ein Gerät deinem Raum beitritt oder ihn verlässt, klingelt, einen niedrigen Akkustand hat oder mir eine Notiz schickt.',
     'notify.room.join.title': 'Gerät beigetreten',
@@ -2391,15 +2342,9 @@ i18n.de = {
     'quiz.type-shortcut': 'Kürzel eingeben:',
     'quiz.wrong': 'Falsch!',
     'setting.tip': 'Täglicher Tipp',
-    'setting.update-mode': 'Updates',
     'settings.search': 'Einstellungen durchsuchen…',
     'theme.auto': '⏰ Automatisch (Uhrzeit)',
     'tip.label': 'Tipp',
-    'update.ask': 'Vor dem Update fragen',
-    'update.auto': 'Automatisch aktualisieren',
-    'update.cta': 'Aktualisieren',
-    'update.note': 'Die automatische Aktualisierung lädt die Seite neu, wenn eine neue Version verfügbar ist. „Fragen“ zeigt stattdessen eine Aktualisieren-Schaltfläche.',
-    'update.text': 'Eine neue Version ist verfügbar',
     'wallpaper.remove': 'Hintergrundbild entfernen',
     'offline.badge': 'Offline',
     'offline.toast': 'Du bist offline \u2014 Anthkeys funktioniert aus dem Cache.',
@@ -2413,6 +2358,7 @@ i18n.de = {
 };;
 
 i18n.es = {
+    'linux.no-default': 'Sin atajo predeterminado',
     'setting.notifications': 'Notificaciones',
     'notify.label': 'Enviarme notificaciones',
     'notify.state.default': 'Pulsa el interruptor y permite las notificaciones en el aviso del navegador.',
@@ -2423,10 +2369,6 @@ i18n.es = {
     'notify.time': 'Consejo diario a las',
     'notify.test': 'Enviar una notificación de prueba',
     'notify.note': 'Los consejos diarios se envían mientras este sitio está abierto. Instalado en Chrome también pueden llegar cuando está cerrado, pero el navegador elige el momento y puede saltar un día.',
-    'notify.updates': 'Avisos de actualización',
-    'notify.updates.active': 'Buscando nuevas versiones en segundo plano.',
-    'notify.updates.needsInstall': 'Instala Anthkeys en Chrome o Edge para que funcione con la app cerrada.',
-    'notify.updates.off': 'Los avisos de actualización en segundo plano están desactivados.',
     'notify.checkNow': 'Buscar actualizaciones ahora',
     'notify.check.upToDate': 'Ya tienes la última versión.',
     'notify.check.newer': 'v{ver} está lista. Abre Anthkeys para actualizar.',
@@ -2435,8 +2377,6 @@ i18n.es = {
     'notify.tip.title': 'Tu atajo de hoy',
     'notify.test.title': 'Notificación de prueba',
     'notify.test.body': 'Las notificaciones funcionan.',
-    'notify.update.title': 'Actualización disponible',
-    'notify.update.body': 'Anthkeys v{ver} está lista. Ábrela para actualizar.',
     'notify.rooms': 'Avisos de salas en directo',
     'notify.rooms-note': 'Avísame cuando un dispositivo se une a mi sala o la abandona, me llama, tiene la batería baja o me envía una nota.',
     'notify.room.join.title': 'Dispositivo conectado',
@@ -2871,15 +2811,9 @@ i18n.es = {
     'quiz.type-shortcut': 'Escribe el atajo:',
     'quiz.wrong': '¡Incorrecto!',
     'setting.tip': 'Consejo diario',
-    'setting.update-mode': 'Actualizaciones',
     'settings.search': 'Buscar en ajustes…',
     'theme.auto': '⏰ Automático (hora)',
     'tip.label': 'Consejo',
-    'update.ask': 'Preguntar antes de actualizar',
-    'update.auto': 'Actualización automática',
-    'update.cta': 'Actualizar',
-    'update.note': 'La actualización automática recarga la página cuando hay una nueva versión. "Preguntar" muestra en su lugar un botón de Actualizar.',
-    'update.text': 'Hay una nueva versión disponible',
     'wallpaper.remove': 'Quitar fondo de pantalla',
     'offline.badge': 'Sin conexión',
     'offline.toast': 'No tienes conexión \u2014 Anthkeys funciona desde la caché.',
@@ -2893,6 +2827,7 @@ i18n.es = {
 };;
 
 i18n.fi = {
+    'linux.no-default': 'Ei oletuspikanäppäintä',
     'setting.notifications': 'Ilmoitukset',
     'notify.label': 'Lähetä minulle ilmoituksia',
     'notify.state.default': 'Kytke kytkin päälle ja salli ilmoitukset selaimen kyselyssä.',
@@ -2903,10 +2838,6 @@ i18n.fi = {
     'notify.time': 'Päivän vinkki klo',
     'notify.test': 'Lähetä testi-ilmoitus',
     'notify.note': 'Päivittäiset vinkit lähetetään, kun tämä sivusto on auki. Asennettuna Chromeen ne voivat tulla myös sivuston ollessa kiinni, mutta selain päättää ajankohdan ja voi ohittaa päivän.',
-    'notify.updates': 'Päivitys-ilmoitukset',
-    'notify.updates.active': 'Tarkistan taustalla uusia versioita.',
-    'notify.updates.needsInstall': 'Asenna Anthkeys Chromessa tai Edgessä, jotta tämä toimii myös sovelluksen ollessa kiinni.',
-    'notify.updates.off': 'Taustaiset päivitys-ilmoitukset ovat pois päältä.',
     'notify.checkNow': 'Tarkista päivitykset nyt',
     'notify.check.upToDate': 'Sinulla on uusin versio.',
     'notify.check.newer': 'v{ver} on valmis. Avaa Anthkeys päivittääksesi.',
@@ -2915,8 +2846,6 @@ i18n.fi = {
     'notify.tip.title': 'Tänään oma pikakuvake',
     'notify.test.title': 'Testi-ilmoitus',
     'notify.test.body': 'Ilmoitukset toimivat.',
-    'notify.update.title': 'Päivitys saatavilla',
-    'notify.update.body': 'Anthkeys v{ver} on valmis. Avaa se päivittääksesi.',
     'notify.rooms': 'Live-tilojen ilmoitukset',
     'notify.rooms-note': 'Ilmoita, kun laite liittyy huoneeseeni tai poistuu, soittaa minulle, akun virta on vähissä tai lähettää muistutuksen.',
     'notify.room.join.title': 'Laite liittyi',
@@ -3351,15 +3280,9 @@ i18n.fi = {
     'quiz.type-shortcut': 'Kirjoita oikotie:',
     'quiz.wrong': 'Väärin!',
     'setting.tip': 'Päivän vinkki',
-    'setting.update-mode': 'Päivitykset',
     'settings.search': 'Hae asetuksista…',
     'theme.auto': '⏰ Automaattinen (ajan mukaan)',
     'tip.label': 'Vinkki',
-    'update.ask': 'Kysy ennen päivitystä',
-    'update.auto': 'Automaattinen päivitys',
-    'update.cta': 'Päivitä',
-    'update.note': 'Automaattinen päivitys lataa sivun uudelleen, kun uusi versio on saatavilla. "Kysy" näyttää sen sijaan Päivitä-painikkeen.',
-    'update.text': 'Uusi versio on saatavilla',
     'wallpaper.remove': 'Poista taustakuva',
     'offline.badge': 'Offline',
     'offline.toast': 'Olet offline \u2014 Anthkeys toimii välimuistista.',
@@ -3373,6 +3296,7 @@ i18n.fi = {
 };;
 
 i18n.fr = {
+    'linux.no-default': 'Aucun raccourci par défaut',
     'setting.notifications': 'Notifications',
     'notify.label': 'M’envoyer des notifications',
     'notify.state.default': 'Activez l’interrupteur et autorisez les notifications dans l’invite du navigateur.',
@@ -3383,10 +3307,6 @@ i18n.fr = {
     'notify.time': 'Astuce du jour à',
     'notify.test': 'Envoyer une notification de test',
     'notify.note': 'Les conseils quotidiens sont envoyés tant que ce site est ouvert. Installé sur Chrome, ils peuvent aussi arriver site fermé, mais le navigateur choisit le moment et peut sauter un jour.',
-    'notify.updates': 'Alertes de mise à jour',
-    'notify.updates.active': 'Recherche de nouvelles versions en arrière-plan.',
-    'notify.updates.needsInstall': 'Installez Anthkeys sur Chrome ou Edge pour que cela fonctionne même fermé.',
-    'notify.updates.off': 'Les alertes de mise à jour en arrière-plan sont désactivées.',
     'notify.checkNow': 'Rechercher les mises à jour',
     'notify.check.upToDate': 'Vous avez la dernière version.',
     'notify.check.newer': 'La version v{ver} est prête. Ouvrez Anthkeys pour mettre à jour.',
@@ -3395,8 +3315,6 @@ i18n.fr = {
     'notify.tip.title': 'Votre raccourci du jour',
     'notify.test.title': 'Notification de test',
     'notify.test.body': 'Les notifications fonctionnent.',
-    'notify.update.title': 'Mise à jour disponible',
-    'notify.update.body': 'Anthkeys v{ver} est prête. Ouvrez-la pour mettre à jour.',
     'notify.rooms': 'Alertes de salon en direct',
     'notify.rooms-note': 'Préviens-moi quand un appareil rejoint mon salon ou le quitte, sonne, a une batterie faible ou m\'envoie une note.',
     'notify.room.join.title': 'Appareil rejoint',
@@ -3832,15 +3750,9 @@ i18n.fr = {
     'quiz.type-shortcut': 'Saisissez le raccourci :',
     'quiz.wrong': 'Faux !',
     'setting.tip': 'Astuce du jour',
-    'setting.update-mode': 'Mises à jour',
     'settings.search': 'Rechercher dans les paramètres…',
     'theme.auto': '⏰ Automatique (heure)',
     'tip.label': 'Astuce',
-    'update.ask': 'Demander avant de mettre à jour',
-    'update.auto': 'Mise à jour automatique',
-    'update.cta': 'Actualiser',
-    'update.note': 'La mise à jour automatique recharge la page quand une nouvelle version est disponible. « Demander » affiche à la place un bouton Actualiser.',
-    'update.text': 'Une nouvelle version est disponible',
     'wallpaper.remove': 'Supprimer le fond d\'écran',
     'offline.badge': 'Hors ligne',
     'offline.toast': 'Vous êtes hors ligne \u2014 Anthkeys fonctionne depuis le cache.',
@@ -3854,6 +3766,7 @@ i18n.fr = {
 };
 
 i18n.hi = {
+    'linux.no-default': 'कोई डिफ़ोल्ट शॉर्टकट नहीं',
     'setting.notifications': 'सूचनाएँ',
     'notify.label': 'मुझे सूचनाएँ भेजें',
     'notify.state.default': 'स्विच चालू करें और ब्राउज़र की अनुमति विंडो में सूचनाओं की अनुमति दें।',
@@ -3864,10 +3777,6 @@ i18n.hi = {
     'notify.time': 'दैनिक सुझाव का समय',
     'notify.test': 'परीक्षण सूचना भेजें',
     'notify.note': 'रोज़ के सुछाव तब का जब का यह साइट खुली है तक टिपों को भेजज जाते हैं। Chrome में इंस्टॉल होने पर वे बंद होने पर भी आ सकते हैं, लेकिन समय ब्राउज़र तय करता है और एक दिन छूट सकता है।',
-    'notify.updates': 'अपडेट सूचनाएँ',
-    'notify.updates.active': 'पृष्ठभूमि में नए संस्करण खोज रहे हैं।',
-    'notify.updates.needsInstall': 'बंद होने पर भी यह काम करे, इसके लिए Chrome या Edge में Anthkeys इंस्टॉल करें।',
-    'notify.updates.off': 'पृष्ठभूमि अपडेट सूचनाएँ बंद हैं।',
     'notify.checkNow': 'अभी अपडेट देखें',
     'notify.check.upToDate': 'आपके पास नवीनतम संस्करण है।',
     'notify.check.newer': 'v{ver} तैयार है। अपडेट करने के लिए Anthkeys खोलें।',
@@ -3876,8 +3785,6 @@ i18n.hi = {
     'notify.tip.title': 'आज का शॉर्टकट',
     'notify.test.title': 'परीक्षण सूचना',
     'notify.test.body': 'सूचनाएँ काम कर रही हैं।',
-    'notify.update.title': 'अपडेट उपलब्ध है',
-    'notify.update.body': 'Anthkeys v{ver} तैयार है। अपडेट करने के लिए इसे खोलें।',
     'notify.rooms': 'लाइव रूम सूचनाएँ',
     'notify.rooms-note': 'जब कोई डिवाइस मेरे रूम में जुड़े या निकले, रिंग करे, उसकी बैटरी कम हो, या वह मुझे नोट भेजे तो मुझे बताएँ।',
     'notify.room.join.title': 'डिवाइस जुड़ा',
@@ -4312,15 +4219,9 @@ i18n.hi = {
     'quiz.type-shortcut': 'शॉर्टकट टाइप करें:',
     'quiz.wrong': 'गलत!',
     'setting.tip': 'दैनिक टिप',
-    'setting.update-mode': 'अपडेट',
     'settings.search': 'सेटिंग्स खोजें…',
     'theme.auto': '⏰ स्वचालित (समय)',
     'tip.label': 'टिप',
-    'update.ask': 'अपडेट से पहले पूछें',
-    'update.auto': 'स्वचालित अपडेट',
-    'update.cta': 'ताज़ा करें',
-    'update.note': 'नई संस्करण उपलब्ध होने पर स्वचालित अपडेट पेज को फिर से लोड करता है। "पूछें" इसके बजाय अपडेट बटन दिखाता है।',
-    'update.text': 'एक नया संस्करण उपलब्ध है',
     'wallpaper.remove': 'वॉलपेपर हटाएँ',
     'offline.badge': 'ऑफ़लाइन',
     'offline.toast': 'आप ऑफ़लाइन हैं \u2014 Anthkeys कैश से काम करता है।',
@@ -4334,6 +4235,7 @@ i18n.hi = {
 };;
 
 i18n.hu = {
+    'linux.no-default': 'Nincs alapértelmezett billentyűparancs',
     'setting.notifications': 'Értesítések',
     'notify.label': 'Értesítsen',
     'notify.state.default': 'Kapcsolja be a kapcsolót, és engedélyezze az értesítéseket a böngésző kérésében.',
@@ -4344,10 +4246,6 @@ i18n.hu = {
     'notify.time': 'Napi tipp ekkor:',
     'notify.test': 'Tesztértesítés küldése',
     'notify.note': 'A napi tippek akkor mennek ki, amíg ez az oldal nyitva van. Chrome-ban telepítve akkor is érkezhetnek, ha zárva van, de a böngészőő választja az időpontot, és kihagyhat egy napot.',
-    'notify.updates': 'Frissítési értesítések',
-    'notify.updates.active': 'A háttérben új verziókat keresek.',
-    'notify.updates.needsInstall': 'Telepítsd az Anthkeys alkalmazást a Chrome vagy az Edge böngészőbe, hogy akkor is működjön, ha zárva van.',
-    'notify.updates.off': 'A háttérben érkező frissítési értesítések ki vannak kapcsolva.',
     'notify.checkNow': 'Frissítések ellenőrzése most',
     'notify.check.upToDate': 'A legfrissebb verziót használod.',
     'notify.check.newer': 'A v{ver} készen áll. Nyisd meg az Anthkeys alkalmazást a frissítéshez.',
@@ -4356,8 +4254,6 @@ i18n.hu = {
     'notify.tip.title': 'A mai gyorsbillentyű',
     'notify.test.title': 'Tesztértesítés',
     'notify.test.body': 'Az értesítések működnek.',
-    'notify.update.title': 'Frissítés elérhető',
-    'notify.update.body': 'Az Anthkeys v{ver} készen áll. Nyissa meg a frissítéshez.',
     'notify.rooms': 'Élő szobák értesítései',
     'notify.rooms-note': 'Értesíts, ha egy eszköz csatlakozik a szobámhoz vagy távozik, csenget, alacsony az akkumulátora, vagy jegyzetet küld nekem.',
     'notify.room.join.title': 'Eszköz csatlakozott',
@@ -4792,15 +4688,9 @@ i18n.hu = {
     'quiz.type-shortcut': 'Írja be a billentyűparancsot:',
     'quiz.wrong': 'Hibás!',
     'setting.tip': 'Napi tipp',
-    'setting.update-mode': 'Frissítések',
     'settings.search': 'Keresés a beállításokban…',
     'theme.auto': '⏰ Automatikus (idő)',
     'tip.label': 'Tipp',
-    'update.ask': 'Kérdezzen frissítés előtt',
-    'update.auto': 'Automatikus frissítés',
-    'update.cta': 'Frissítés',
-    'update.note': 'Az automatikus frissítés újratölti az oldalt, ha új verzió érhető el. A Kérdezzen opció ehelyett egy Frissítés gombot mutat.',
-    'update.text': 'Új verzió érhető el',
     'wallpaper.remove': 'Háttérkép eltávolítása',
     'offline.badge': 'Offline',
     'offline.toast': 'Ön offline \u2014 az Anthkeys a gyorsítótárból működik.',
@@ -4814,6 +4704,7 @@ i18n.hu = {
 };;
 
 i18n.it = {
+    'linux.no-default': 'Nessuna scorciatoia predefinita',
     'setting.notifications': 'Notifiche',
     'notify.label': 'Inviami notifiche',
     'notify.state.default': 'Attiva l’interruttore e consenti le notifiche nella richiesta del browser.',
@@ -4824,10 +4715,6 @@ i18n.it = {
     'notify.time': 'Suggerimento quotidiano alle',
     'notify.test': 'Invia una notifica di prova',
     'notify.note': 'I consigli giornalieri vengono inviati mentre questo sito è aperto. Installato su Chrome possono arrivare anche a sito chiuso, ma il browser sceglie il momento e può saltare un giorno.',
-    'notify.updates': 'Avvisi di aggiornamento',
-    'notify.updates.active': 'Ricerca di nuove versioni in background.',
-    'notify.updates.needsInstall': 'Installa Anthkeys su Chrome o Edge perché funzioni anche da chiuso.',
-    'notify.updates.off': 'Gli avvisi di aggiornamento in background sono disattivati.',
     'notify.checkNow': 'Controlla ora gli aggiornamenti',
     'notify.check.upToDate': 'Hai già l\'ultima versione.',
     'notify.check.newer': 'La v{ver} è pronta. Apri Anthkeys per aggiornare.',
@@ -4836,8 +4723,6 @@ i18n.it = {
     'notify.tip.title': 'La tua scorciatoia di oggi',
     'notify.test.title': 'Notifica di prova',
     'notify.test.body': 'Le notifiche funzionano.',
-    'notify.update.title': 'Aggiornamento disponibile',
-    'notify.update.body': 'Anthkeys v{ver} è pronta. Aprila per aggiornare.',
     'notify.rooms': 'Avvisi delle stanze live',
     'notify.rooms-note': 'Avvisami quando un dispositivo si unisce alla mia stanza o esce, mi chiama, ha la batteria scarica o mi invia una nota.',
     'notify.room.join.title': 'Dispositivo collegato',
@@ -5272,15 +5157,9 @@ i18n.it = {
     'quiz.type-shortcut': 'Digita la scorciatoia:',
     'quiz.wrong': 'Sbagliato!',
     'setting.tip': 'Suggerimento quotidiano',
-    'setting.update-mode': 'Aggiornamenti',
     'settings.search': 'Cerca nelle impostazioni…',
     'theme.auto': '⏰ Automatico (ora)',
     'tip.label': 'Suggerimento',
-    'update.ask': 'Chiedi prima di aggiornare',
-    'update.auto': 'Aggiornamento automatico',
-    'update.cta': 'Aggiorna',
-    'update.note': 'L\'aggiornamento automatico ricarica la pagina quando è disponibile una nuova versione. "Chiedi" mostra invece un pulsante Aggiorna.',
-    'update.text': 'È disponibile una nuova versione',
     'wallpaper.remove': 'Rimuovi sfondo',
     'offline.badge': 'Offline',
     'offline.toast': 'Sei offline \u2014 Anthkeys funziona dalla cache.',
@@ -5294,6 +5173,7 @@ i18n.it = {
 };;
 
 i18n.ja = {
+    'linux.no-default': '既定のショートカットなし',
     'setting.notifications': '通知',
     'notify.label': '通知を受け取る',
     'notify.state.default': 'スイッチをオンにして、ブラウザの案内で通知を許可してください。',
@@ -5304,10 +5184,6 @@ i18n.ja = {
     'notify.time': '毎日のヒントの時刻',
     'notify.test': 'テスト通知を送る',
     'notify.note': 'デイリーチップはこのサイトを開いている間に送信されます。Chrome にインストールしていると、閉じた状態でも届けることがありますが、配信時刻はブラウザが決めるため、1 日分後ろになることがあります。',
-    'notify.updates': '更新通知',
-    'notify.updates.active': 'バックグラウンドで新しいバージョンを確認しています。',
-    'notify.updates.needsInstall': 'アプリを閉じたままでも使うには、Chrome または Edge に Anthkeys をインストールしてください。',
-    'notify.updates.off': 'バックグラウンドの更新通知はオフです。',
     'notify.checkNow': '今すぐ更新を確認',
     'notify.check.upToDate': '最新バージョンです。',
     'notify.check.newer': 'v{ver} の準備ができました。Anthkeys を開いて更新してください。',
@@ -5316,8 +5192,6 @@ i18n.ja = {
     'notify.tip.title': '今日のショートカット',
     'notify.test.title': 'テスト通知',
     'notify.test.body': '通知は正常に動作しています。',
-    'notify.update.title': 'アップデートがあります',
-    'notify.update.body': 'Anthkeys v{ver} の準備ができました。開いて更新してください。',
     'notify.rooms': 'ライブルームの通知',
     'notify.rooms-note': 'デバイスがルームに参加・退出したり、呼びかけしてきたり、バッテリー残量が少なくなったり、メモを送ってきたりしたら知らせて。',
     'notify.room.join.title': 'デバイスが参加',
@@ -5752,15 +5626,9 @@ i18n.ja = {
     'quiz.type-shortcut': 'ショートカットを入力：',
     'quiz.wrong': '不正解！',
     'setting.tip': '今日のヒント',
-    'setting.update-mode': '更新',
     'settings.search': '設定を検索…',
     'theme.auto': '⏰ 自動（時間）',
     'tip.label': 'ヒント',
-    'update.ask': '更新前に確認する',
-    'update.auto': '自動更新',
-    'update.cta': '更新',
-    'update.note': '自動更新は新しいバージョンが利用可能になるとページを再読み込みします。「確認する」を選ぶと代わりに更新ボタンが表示されます。',
-    'update.text': '新しいバージョンが利用可能です',
     'wallpaper.remove': '壁紙を削除',
     'offline.badge': 'オフライン',
     'offline.toast': 'オフラインです \u2014 Anthkeys はキャッシュから動作します。',
@@ -5774,6 +5642,7 @@ i18n.ja = {
 };;
 
 i18n.ko = {
+    'linux.no-default': '기본 단축케 없음',
     'setting.notifications': '알림',
     'notify.label': '알림 받기',
     'notify.state.default': '스위치를 켜고 브라우저의 안내에서 알림을 허용하세요.',
@@ -5784,10 +5653,6 @@ i18n.ko = {
     'notify.time': '매일 팁 알림 시간',
     'notify.test': '테스트 알림 보내기',
     'notify.note': '일일 필은 이 사이트가 열러 있을 때에 전송됩니다. Chrome에 설치했다면 사이트를 닫아도 도착할 수 있지만, 시간은 본라우저가 정하므로 하루 새을 초고할 수 있습니다.',
-    'notify.updates': '업데이트 알림',
-    'notify.updates.active': '백그라운드에서 새 버전을 확인하는 중입니다.',
-    'notify.updates.needsInstall': '앱을 닫아도 동작하려면 Chrome 또는 Edge에 Anthkeys를 설치하세요.',
-    'notify.updates.off': '백그라운드 업데이트 알림이 꺼져 있습니다.',
     'notify.checkNow': '지금 업데이트 확인',
     'notify.check.upToDate': '최신 버전입니다.',
     'notify.check.newer': 'v{ver}이 준비되었습니다. Anthkeys를 열어 업데이트하세요.',
@@ -5796,8 +5661,6 @@ i18n.ko = {
     'notify.tip.title': '오늘의 단축키',
     'notify.test.title': '테스트 알림',
     'notify.test.body': '알림이 정상적으로 작동합니다.',
-    'notify.update.title': '업데이트 사용 가능',
-    'notify.update.body': 'Anthkeys v{ver}가 준비되었습니다. 열어서 업데이트하세요.',
     'notify.rooms': '라이브 룸 알림',
     'notify.rooms-note': '기기가 내 룸에 들어오거나 나가고, 전화가 오거나, 배터리가 거의 다 됐거나, 메모를 보낼 때 알려주세요.',
     'notify.room.join.title': '기기 참여',
@@ -6232,15 +6095,9 @@ i18n.ko = {
     'quiz.type-shortcut': '단축키를 입력하세요:',
     'quiz.wrong': '오답!',
     'setting.tip': '오늘의 팁',
-    'setting.update-mode': '업데이트',
     'settings.search': '설정 검색…',
     'theme.auto': '⏰ 자동 (시간별)',
     'tip.label': '팁',
-    'update.ask': '업데이트 전에 묻기',
-    'update.auto': '자동 업데이트',
-    'update.cta': '새로고침',
-    'update.note': '새 버전이 있으면 자동 업데이트가 페이지를 다시 로드합니다. 대신 "묻기"가 업데이트 버튼을 표시합니다.',
-    'update.text': '새 버전이 있습니다',
     'wallpaper.remove': '배경화면 제거',
     'offline.badge': '오프라인',
     'offline.toast': '오프라인 상태 \u2014 Anthkeys가 캐시에서 작동합니다.',
@@ -6254,6 +6111,7 @@ i18n.ko = {
 };;
 
 i18n.nl = {
+    'linux.no-default': 'Geen standaardsneltoets',
     'setting.notifications': 'Meldingen',
     'notify.label': 'Stuur mij meldingen',
     'notify.state.default': 'Zet de schakelaar aan en sta meldingen toe in de melding van de browser.',
@@ -6264,10 +6122,6 @@ i18n.nl = {
     'notify.time': 'Dagelijkse tip om',
     'notify.test': 'Een testmelding sturen',
     'notify.note': 'Dagelijkse tips worden verstuurd terwijl deze site open is. Geïnstalleerd in Chrome kunnen ze ook binnenkomen als de site gesloten is, maar de browser kiest het moment en slaat soms een dag over.',
-    'notify.updates': 'Update-meldingen',
-    'notify.updates.active': 'Controleert op de achtergrond op nieuwe versies.',
-    'notify.updates.needsInstall': 'Installeer Anthkeys in Chrome of Edge zodat dit werkt terwijl de app gesloten is.',
-    'notify.updates.off': 'Update-meldingen op de achtergrond staan uit.',
     'notify.checkNow': 'Nu controleren op updates',
     'notify.check.upToDate': 'Je hebt de nieuwste versie.',
     'notify.check.newer': 'v{ver} staat klaar. Open Anthkeys om te updaten.',
@@ -6276,8 +6130,6 @@ i18n.nl = {
     'notify.tip.title': 'Je snelktoets van vandaag',
     'notify.test.title': 'Testmelding',
     'notify.test.body': 'Meldingen werken.',
-    'notify.update.title': 'Update beschikbaar',
-    'notify.update.body': 'Anthkeys v{ver} staat klaar. Open hem om bij te werken.',
     'notify.rooms': 'Meldingen voor live-ruimtes',
     'notify.rooms-note': 'Laat het weten als een apparaat mijn ruimte binnenkomt of verlaat, belt, een lege batterij heeft of me een notitie stuurt.',
     'notify.room.join.title': 'Apparaat toegevoegd',
@@ -6712,15 +6564,9 @@ i18n.nl = {
     'quiz.type-shortcut': 'Typ de sneltoets:',
     'quiz.wrong': 'Fout!',
     'setting.tip': 'Dagelijkse tip',
-    'setting.update-mode': 'Updates',
     'settings.search': 'Instellingen doorzoeken…',
     'theme.auto': '⏰ Automatisch (tijd)',
     'tip.label': 'Tip',
-    'update.ask': 'Vragen vóór bijwerken',
-    'update.auto': 'Automatisch bijwerken',
-    'update.cta': 'Vernieuwen',
-    'update.note': 'Automatisch bijwerken herlaadt de pagina wanneer er een nieuwe versie is. "Vragen" toont in plaats daarvan een Update-knop.',
-    'update.text': 'Er is een nieuwe versie beschikbaar',
     'wallpaper.remove': 'Achtergrond verwijderen',
     'offline.badge': 'Offline',
     'offline.toast': 'Je bent offline \u2014 Anthkeys werkt vanuit de cache.',
@@ -6734,6 +6580,7 @@ i18n.nl = {
 };;
 
 i18n.no = {
+    'linux.no-default': 'Ingen standardgenvei',
     'setting.notifications': 'Varsler',
     'notify.label': 'Send meg varsler',
     'notify.state.default': 'Slå på bryteren og tillat varsler i nettleserens forespørsel.',
@@ -6744,10 +6591,6 @@ i18n.no = {
     'notify.time': 'Daglig tips kl.',
     'notify.test': 'Send en testvarsel',
     'notify.note': 'Daglige tips sendes mens dette nettstedet er åpent. Installert i Chrome kan de også komme når det er lukket, men nettleseren velger tidspunktet og kan hoppe over en dag.',
-    'notify.updates': 'Oppdateringsvarsler',
-    'notify.updates.active': 'Søker etter nye versjoner i bakgrunnen.',
-    'notify.updates.needsInstall': 'Installer Anthkeys i Chrome eller Edge slik at dette virker mens appen er lukket.',
-    'notify.updates.off': 'Oppdateringsvarsler i bakgrunnen er av.',
     'notify.checkNow': 'Sjekk etter oppdateringer nå',
     'notify.check.upToDate': 'Du har den nyeste versjonen.',
     'notify.check.newer': 'v{ver} er klar. Åpne Anthkeys for å oppdatere.',
@@ -6756,8 +6599,6 @@ i18n.no = {
     'notify.tip.title': 'Dagens hurtigtast',
     'notify.test.title': 'Testvarsel',
     'notify.test.body': 'Varsler fungerer.',
-    'notify.update.title': 'Oppdatering tilgjengelig',
-    'notify.update.body': 'Anthkeys v{ver} er klar. Åpne den for å oppdatere.',
     'notify.rooms': 'Varsler for live-rom',
     'notify.rooms-note': 'Gi meg beskjed når en enhet blir med i rommet mitt eller forsvinner, ringer, har lavt batteri eller sender meg et notat.',
     'notify.room.join.title': 'Enhet koblet til',
@@ -7192,15 +7033,9 @@ i18n.no = {
     'quiz.type-shortcut': 'Skriv snarveien:',
     'quiz.wrong': 'Feil!',
     'setting.tip': 'Daglig tips',
-    'setting.update-mode': 'Oppdateringer',
     'settings.search': 'Søk i innstillinger…',
     'theme.auto': '⏰ Automatisk (tid)',
     'tip.label': 'Tips',
-    'update.ask': 'Spør før oppdatering',
-    'update.auto': 'Automatisk oppdatering',
-    'update.cta': 'Oppdater',
-    'update.note': 'Automatisk oppdatering laster inn siden på nytt når det finnes en ny versjon. "Spør" viser i stedet en Oppdater-knapp.',
-    'update.text': 'En ny versjon er tilgjengelig',
     'wallpaper.remove': 'Fjern bakgrunnsbilde',
     'offline.badge': 'Offline',
     'offline.toast': 'Du er offline \u2014 Anthkeys fungerer fra hurtigbufferen.',
@@ -7214,6 +7049,7 @@ i18n.no = {
 };;
 
 i18n.pl = {
+    'linux.no-default': 'Brak domyślnego skrótu',
     'setting.notifications': 'Powiadomienia',
     'notify.label': 'Wysyłaj mi powiadomienia',
     'notify.state.default': 'Włącz przełącznik i zezwól na powiadomienia w monicie przeglądarki.',
@@ -7224,10 +7060,6 @@ i18n.pl = {
     'notify.time': 'Dzienna wskazówka o',
     'notify.test': 'Wyślij powiadomienie testowe',
     'notify.note': 'Codzienne wskazówki są wysyłane, dopóki ta strona jest otwarta. Zainstalowane w Chrome mogą przychodzić także przy zamkniętej stronie, ale przeglądarka wybiera czas i może pominąć dzień.',
-    'notify.updates': 'Powiadomienia o aktualizacjach',
-    'notify.updates.active': 'Sprawdzam w tle, czy są nowe wersje.',
-    'notify.updates.needsInstall': 'Zainstaluj Anthkeys w Chrome lub Edge, aby działało także przy zamkniętej aplikacji.',
-    'notify.updates.off': 'Powiadomienia o aktualizacjach w tle są wyłączone.',
     'notify.checkNow': 'Sprawdź aktualizacje teraz',
     'notify.check.upToDate': 'Masz najnowszą wersję.',
     'notify.check.newer': 'v{ver} jest gotowa. Otwórz Anthkeys, aby zaktualizować.',
@@ -7236,8 +7068,6 @@ i18n.pl = {
     'notify.tip.title': 'Twój skrót na dziś',
     'notify.test.title': 'Powiadomienie testowe',
     'notify.test.body': 'Powiadomienia działają.',
-    'notify.update.title': 'Dostępna aktualizacja',
-    'notify.update.body': 'Anthkeys v{ver} jest gotowa. Otwórz ją, aby zaktualizować.',
     'notify.rooms': 'Powiadomienia z pokoi na żywo',
     'notify.rooms-note': 'Daj znać, gdy urządzenie dołączy do pokoju lub z niego wyjdzie, zadzwoni, ma niski poziom baterii lub wyśle notatkę.',
     'notify.room.join.title': 'Urządzenie dołączyło',
@@ -7672,15 +7502,9 @@ i18n.pl = {
     'quiz.type-shortcut': 'Wpisz skrót:',
     'quiz.wrong': 'Źle!',
     'setting.tip': 'Dzienna wskazówka',
-    'setting.update-mode': 'Aktualizacje',
     'settings.search': 'Szukaj w ustawieniach…',
     'theme.auto': '⏰ Automatycznie (czas)',
     'tip.label': 'Wskazówka',
-    'update.ask': 'Pytaj przed aktualizacją',
-    'update.auto': 'Automatyczna aktualizacja',
-    'update.cta': 'Odśwież',
-    'update.note': 'Automatyczna aktualizacja przeładowuje stronę, gdy dostępna jest nowa wersja. "Pytaj" zamiast tego pokazuje przycisk Odśwież.',
-    'update.text': 'Dostępna jest nowa wersja',
     'wallpaper.remove': 'Usuń tapetę',
     'offline.badge': 'Offline',
     'offline.toast': 'Jesteś offline \u2014 Anthkeys działa z pamięci podręcznej.',
@@ -7694,6 +7518,7 @@ i18n.pl = {
 };;
 
 i18n.pt = {
+    'linux.no-default': 'Sem atalho predefinido',
     'setting.notifications': 'Notificações',
     'notify.label': 'Enviar-me notificações',
     'notify.state.default': 'Ative o interruptor e permita as notificações no pedido do navegador.',
@@ -7704,10 +7529,6 @@ i18n.pt = {
     'notify.time': 'Dica diária às',
     'notify.test': 'Enviar uma notificação de teste',
     'notify.note': 'As dicas diárias são enviadas enquanto este site está aberto. Instalado no Chrome, também podem chegar com o site fechado, mas o navegador escolhe a hora e pode saltar um dia.',
-    'notify.updates': 'Avisos de atualização',
-    'notify.updates.active': 'Procurando novas versões em segundo plano.',
-    'notify.updates.needsInstall': 'Instale o Anthkeys no Chrome ou Edge para que funcione com o app fechado.',
-    'notify.updates.off': 'Os avisos de atualização em segundo plano estão desligados.',
     'notify.checkNow': 'Procurar atualizações agora',
     'notify.check.upToDate': 'Você já tem a versão mais recente.',
     'notify.check.newer': 'A v{ver} está pronta. Abra o Anthkeys para atualizar.',
@@ -7716,8 +7537,6 @@ i18n.pt = {
     'notify.tip.title': 'A tua atalho de hoje',
     'notify.test.title': 'Notificação de teste',
     'notify.test.body': 'As notificações estão a funcionar.',
-    'notify.update.title': 'Atualização disponível',
-    'notify.update.body': 'O Anthkeys v{ver} está pronto. Abre-o para atualizar.',
     'notify.rooms': 'Avisos de salas ao vivo',
     'notify.rooms-note': 'Avise-me quando um dispositivo entra na minha sala ou sai, me chama, fica com a bateria fraca ou envia-me uma nota.',
     'notify.room.join.title': 'Dispositivo entrou',
@@ -8152,15 +7971,9 @@ i18n.pt = {
     'quiz.type-shortcut': 'Digite o atalho:',
     'quiz.wrong': 'Errado!',
     'setting.tip': 'Dica diária',
-    'setting.update-mode': 'Atualizações',
     'settings.search': 'Pesquisar nas configurações…',
     'theme.auto': '⏰ Automático (hora)',
     'tip.label': 'Dica',
-    'update.ask': 'Perguntar antes de atualizar',
-    'update.auto': 'Atualização automática',
-    'update.cta': 'Atualizar',
-    'update.note': 'A atualização automática recarrega a página quando há uma nova versão. "Perguntar" mostra em vez disso um botão Atualizar.',
-    'update.text': 'Uma nova versão está disponível',
     'wallpaper.remove': 'Remover papel de parede',
     'offline.badge': 'Offline',
     'offline.toast': 'Você está offline \u2014 o Anthkeys funciona do cache.',
@@ -8174,6 +7987,7 @@ i18n.pt = {
 };;
 
 i18n.ru = {
+    'linux.no-default': 'Сочетания клавиш по умолчанию нет',
     'setting.notifications': 'Уведомления',
     'notify.label': 'Присылать мне уведомления',
     'notify.state.default': 'Включите переключатель и разрешите уведомления в запросе браузера.',
@@ -8184,10 +7998,6 @@ i18n.ru = {
     'notify.time': 'Совет дня в',
     'notify.test': 'Отправить тестовое уведомление',
     'notify.note': 'Ежедневные советы приходят, пока сайт открыт. Если приложение установлено в Chrome, они тоже приходят при закрытом сайте, но время выбирает браузер, поэтому день может пропускаться.',
-    'notify.updates': 'Уведомления об обновлениях',
-    'notify.updates.active': 'Проверяю новые версии в фоне.',
-    'notify.updates.needsInstall': 'Установите Anthkeys в Chrome или Edge, чтобы это работало и при закрытом приложении.',
-    'notify.updates.off': 'Фоновые уведомления об обновлениях выключены.',
     'notify.checkNow': 'Проверить обновления сейчас',
     'notify.check.upToDate': 'У вас последняя версия.',
     'notify.check.newer': 'Версия v{ver} готова. Откройте Anthkeys, чтобы обновиться.',
@@ -8196,8 +8006,6 @@ i18n.ru = {
     'notify.tip.title': 'Ваше сочетание на сегодня',
     'notify.test.title': 'Тестовое уведомление',
     'notify.test.body': 'Уведомления работают.',
-    'notify.update.title': 'Доступно обновление',
-    'notify.update.body': 'Anthkeys v{ver} готова. Откройте её, чтобы обновиться.',
     'notify.rooms': 'Уведомления live-комнат',
     'notify.rooms-note': 'Сообщи мне, когда устройство заходит в комнату или выходит, звонит, почти разряжено или присылает заметку.',
     'notify.room.join.title': 'Устройство подключилось',
@@ -8632,15 +8440,9 @@ i18n.ru = {
     'quiz.type-shortcut': 'Введите сочетание клавиш:',
     'quiz.wrong': 'Неверно!',
     'setting.tip': 'Совет дня',
-    'setting.update-mode': 'Обновления',
     'settings.search': 'Поиск в настройках…',
     'theme.auto': '⏰ Авто (по времени)',
     'tip.label': 'Совет',
-    'update.ask': 'Спрашивать перед обновлением',
-    'update.auto': 'Автообновление',
-    'update.cta': 'Обновить',
-    'update.note': 'Автообновление перезагружает страницу, когда доступна новая версия. «Спрашивать» вместо этого показывает кнопку Обновить.',
-    'update.text': 'Доступна новая версия',
     'wallpaper.remove': 'Удалить обои',
     'offline.badge': 'Офлайн',
     'offline.toast': 'Вы офлайн \u2014 Anthkeys работает из кэша.',
@@ -8654,6 +8456,7 @@ i18n.ru = {
 };;
 
 i18n.sv = {
+    'linux.no-default': 'Ingen standardgenväg',
     'setting.notifications': 'Aviseringar',
     'notify.label': 'Skicka aviseringar till mig',
     'notify.state.default': 'Slå på reglaget och tillåt aviseringar i webbläsarens fråga.',
@@ -8664,10 +8467,6 @@ i18n.sv = {
     'notify.time': 'Dagligt tips kl.',
     'notify.test': 'Skicka en testavisering',
     'notify.note': 'Dagliga tips skickas medan den här webbplatsen är öppen. Installerad i Chrome kan de även komma när den är stängd, men webbläsaren väljer tidpunkten och kan hoppa över en dag.',
-    'notify.updates': 'Uppdateringsaviseringar',
-    'notify.updates.active': 'Söker efter nya versioner i bakgrunden.',
-    'notify.updates.needsInstall': 'Installera Anthkeys i Chrome eller Edge så att det fungerar även när appen är stängd.',
-    'notify.updates.off': 'Uppdateringsaviseringar i bakgrunden är avstängda.',
     'notify.checkNow': 'Sök efter uppdateringar nu',
     'notify.check.upToDate': 'Du har den senaste versionen.',
     'notify.check.newer': 'v{ver} är klar. Öppna Anthkeys för att uppdatera.',
@@ -8676,8 +8475,6 @@ i18n.sv = {
     'notify.tip.title': 'Dagens genväg',
     'notify.test.title': 'Testavisering',
     'notify.test.body': 'Aviseringar fungerar.',
-    'notify.update.title': 'Uppdatering tillgänglig',
-    'notify.update.body': 'Anthkeys v{ver} är klar. Öppna den för att uppdatera.',
     'notify.rooms': 'Aviseringar för live-rum',
     'notify.rooms-note': 'Meddela mig när en enhet kommer in i mitt rum eller lämnar det, ringer, har lågt batteri eller skickar mig en anteckning.',
     'notify.room.join.title': 'Enhet ansluten',
@@ -9112,15 +8909,9 @@ i18n.sv = {
     'quiz.type-shortcut': 'Skriv genvägen:',
     'quiz.wrong': 'Fel!',
     'setting.tip': 'Dagligt tips',
-    'setting.update-mode': 'Uppdateringar',
     'settings.search': 'Sök i inställningar…',
     'theme.auto': '⏰ Automatiskt (tid)',
     'tip.label': 'Tips',
-    'update.ask': 'Fråga innan uppdatering',
-    'update.auto': 'Automatisk uppdatering',
-    'update.cta': 'Uppdatera',
-    'update.note': 'Automatisk uppdatering laddar om sidan när en ny version finns. "Fråga" visar istället en Uppdatera-knapp.',
-    'update.text': 'En ny version finns tillgänglig',
     'wallpaper.remove': 'Ta bort bakgrundsbild',
     'offline.badge': 'Offline',
     'offline.toast': 'Du är offline \u2014 Anthkeys fungerar från cachen.',
@@ -9134,6 +8925,7 @@ i18n.sv = {
 };;
 
 i18n.tr = {
+    'linux.no-default': 'Varsayılan kısayol yok',
     'setting.notifications': 'Bildirimler',
     'notify.label': 'Bana bildirim gönder',
     'notify.state.default': 'Anahtarı aç ve tarayıcı isteminde bildirimlere izin ver.',
@@ -9144,10 +8936,6 @@ i18n.tr = {
     'notify.time': 'Günlük ipucu saati',
     'notify.test': 'Test bildirimi gönder',
     'notify.note': 'Günlük ipuçları bu site açıkken gönderilir. Chrome\'a yüklendiğinde site kapalıyken de gelebilir, ancak zamanı tarayıcı belirler ve bir günü atlayabilir.',
-    'notify.updates': 'Güncelleme uyarıları',
-    'notify.updates.active': 'Arka planda yeni sürümler aranıyor.',
-    'notify.updates.needsInstall': 'Uygulama kapalıyken de çalışması için Anthkeys\'i Chrome veya Edge\'e kurun.',
-    'notify.updates.off': 'Arka plan güncelleme uyarıları kapalı.',
     'notify.checkNow': 'Şimdi güncellemeleri denetle',
     'notify.check.upToDate': 'En son sürümü kullanıyorsunuz.',
     'notify.check.newer': 'v{ver} hazır. Güncellemek için Anthkeys\'i açın.',
@@ -9156,8 +8944,6 @@ i18n.tr = {
     'notify.tip.title': 'Bugünün kısayolun',
     'notify.test.title': 'Test bildirimi',
     'notify.test.body': 'Bildirimler çalışıyor.',
-    'notify.update.title': 'Güncelleme var',
-    'notify.update.body': 'Anthkeys v{ver} hazır. Güncellemek için aç.',
     'notify.rooms': 'Canlı oda uyarıları',
     'notify.rooms-note': 'Bana haber ver: bir cihaz odama katıldığında veya ayrıldığında, çaldığında, pili düşük olduğunda ya da bana bir not gönderdiğinde.',
     'notify.room.join.title': 'Cihaz katıldı',
@@ -9593,15 +9379,9 @@ i18n.tr = {
     'quiz.type-shortcut': 'Kısayolu yazın:',
     'quiz.wrong': 'Yanlış!',
     'setting.tip': 'Günlük ipucu',
-    'setting.update-mode': 'Güncellemeler',
     'settings.search': 'Ayarlarda ara…',
     'theme.auto': '⏰ Otomatik (saat)',
     'tip.label': 'İpucu',
-    'update.ask': 'Güncellemeden önce sor',
-    'update.auto': 'Otomatik güncelle',
-    'update.cta': 'Yenile',
-    'update.note': 'Yeni bir sürüm olduğunda otomatik güncelleme sayfayı yeniden yükler. "Sor" bunun yerine Güncelle düğmesini gösterir.',
-    'update.text': 'Yeni bir sürüm mevcut',
     'wallpaper.remove': 'Duvar kağıdını kaldır',
     'offline.badge': 'Çevrimdışı',
     'offline.toast': 'Çevrimdışısınız \u2014 Anthkeys önbellekten çalışır.',
@@ -9615,6 +9395,7 @@ i18n.tr = {
 };
 
 i18n.vi = {
+    'linux.no-default': 'Không có phím tốt mặc định',
     'setting.notifications': 'Thông báo',
     'notify.label': 'Gửi cho tôi thông báo',
     'notify.state.default': 'Bật công tắc và cho phép thông báo trong lời nhắc của trình duyệt.',
@@ -9625,10 +9406,6 @@ i18n.vi = {
     'notify.time': 'Mẹo hằng ngày lúc',
     'notify.test': 'Gửi thông báo thử',
     'notify.note': 'Mẹo hằng ngày được gửi khi trang này đang mữ. Nếu đã cài trên Chrome, chúng có thể đến khi trang đã đóng, nhưng trình duyệt chọn thời điểm và có thể bỏ qua một ngày.',
-    'notify.updates': 'Thông báo cập nhật',
-    'notify.updates.active': 'Đang kiểm tra phiên bản mới ở nền.',
-    'notify.updates.needsInstall': 'Cài Anthkeys trên Chrome hoặc Edge để tính năng này hoạt động khi đã đóng.',
-    'notify.updates.off': 'Thông báo cập nhật ở nền đang tắt.',
     'notify.checkNow': 'Kiểm tra cập nhật ngay',
     'notify.check.upToDate': 'Bạn đang dùng bản mới nhất.',
     'notify.check.newer': 'v{ver} đã sẵn sàng. Hãy mở Anthkeys để cập nhật.',
@@ -9637,8 +9414,6 @@ i18n.vi = {
     'notify.tip.title': 'Phím tắt hôm nay',
     'notify.test.title': 'Thông báo thử',
     'notify.test.body': 'Thông báo đang hoạt động.',
-    'notify.update.title': 'Đã có bản cập nhật',
-    'notify.update.body': 'Anthkeys v{ver} đã sẵn sàng. Hãy mở để cập nhật.',
     'notify.rooms': 'Thông báo phòng trực tiếp',
     'notify.rooms-note': 'Báo tôi khi một thiết bị tham gia phòng hoặc rời đi, gọi cho tôi, sắp hết pin hoặc gửi cho tôi một ghi chú.',
     'notify.room.join.title': 'Thiết bị đã tham gia',
@@ -10073,15 +9848,9 @@ i18n.vi = {
     'quiz.type-shortcut': 'Nhập phím tắt:',
     'quiz.wrong': 'Sai!',
     'setting.tip': 'Mẹo hằng ngày',
-    'setting.update-mode': 'Cập nhật',
     'settings.search': 'Tìm kiếm trong cài đặt…',
     'theme.auto': '⏰ Tự động (theo giờ)',
     'tip.label': 'Mẹo',
-    'update.ask': 'Hỏi trước khi cập nhật',
-    'update.auto': 'Tự động cập nhật',
-    'update.cta': 'Làm mới',
-    'update.note': 'Tự động cập nhật sẽ tải lại trang khi có phiên bản mới. "Hỏi" sẽ hiển thị nút Làm mới thay vào đó.',
-    'update.text': 'Có phiên bản mới',
     'wallpaper.remove': 'Gỡ hình nền',
     'offline.badge': 'Ngoại tuyến',
     'offline.toast': 'Bạn đang ngoại tuyến \u2014 Anthkeys vẫn hoạt động từ bộ nhớ đệm.',
@@ -10152,28 +9921,32 @@ const LINUX_KBD_DEFAULTS = {
   'screenshot': '<kbd>Print Screen</kbd>',
   'open-terminal': '<kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>T</kbd>'
 };
+// The row value a distribution ships no default binding for.
+const LINUX_NO_DEFAULT = 'none';
+// One entry per set of identical five-row defaults, checked against each
+// desktop environment's own documentation. GNOME and KDE stay apart: their
+// lock, workspace and switcher keys really do differ.
 const linuxDistros = [
-  { id: 'ubuntu', label: 'Ubuntu (GNOME)' },
-  { id: 'debian', label: 'Debian' },
-  { id: 'fedora', label: 'Fedora Workstation (GNOME)' },
-  { id: 'arch', label: 'Arch Linux' },
-  { id: 'linuxmint', label: 'Linux Mint (Cinnamon)', overrides: { 'lock-screen': '<kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>L</kbd>' } },
-  { id: 'popos', label: 'Pop!_OS (GNOME)' },
-  { id: 'elementary', label: 'elementary OS (Pantheon)', overrides: { 'open-terminal': '<kbd>Super</kbd> + <kbd>T</kbd>' } },
-  { id: 'opensuse-kde', label: 'openSUSE (KDE Plasma)', overrides: { 'switch-workspace': '<kbd>Ctrl</kbd> + <kbd>F1\u2026F4</kbd>' } },
-  { id: 'manjaro', label: 'Manjaro (XFCE)' },
-  { id: 'kali', label: 'Kali Linux' },
-  { id: 'zorin', label: 'Zorin OS' },
-  { id: 'kubuntu', label: 'Kubuntu (KDE Plasma)', overrides: { 'switch-workspace': '<kbd>Ctrl</kbd> + <kbd>F1\u2026F4</kbd>' } },
-  { id: 'xubuntu', label: 'Xubuntu (XFCE)' },
-  { id: 'kdeneon', label: 'KDE neon (KDE Plasma)', overrides: { 'switch-workspace': '<kbd>Ctrl</kbd> + <kbd>F1\u2026F4</kbd>' } },
-  { id: 'endeavouros', label: 'EndeavourOS' },
-  { id: 'nixos', label: 'NixOS' },
-  { id: 'gentoo', label: 'Gentoo' },
-  { id: 'mxlinux', label: 'MX Linux' },
-  { id: 'rocky', label: 'Rocky Linux' },
-  { id: 'almalinux', label: 'AlmaLinux' }
+  { id: 'ubuntu', label: 'Ubuntu \u00b7 Zorin OS \u00b7 Xubuntu' },
+  { id: 'gnome', label: 'Fedora GNOME \u00b7 Debian \u00b7 Rocky Linux \u00b7 AlmaLinux', overrides: { 'open-terminal': LINUX_NO_DEFAULT } },
+  { id: 'kde', label: 'Fedora KDE \u00b7 Kubuntu \u00b7 openSUSE \u00b7 KDE neon \u00b7 EndeavourOS', overrides: { 'switch-workspace': '<kbd>Ctrl</kbd> + <kbd>F1\u2026F4</kbd>', 'lock-screen': '<kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>L</kbd>' } },
+  { id: 'mint', label: 'Linux Mint \u00b7 Manjaro \u00b7 MX Linux', overrides: { 'lock-screen': '<kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>L</kbd>' } },
+  { id: 'popos', label: 'Pop!_OS 24.04', overrides: { 'switch-window': '<kbd>Super</kbd> + <kbd>Tab</kbd>', 'switch-workspace': '<kbd>Super</kbd> + <kbd>Ctrl</kbd> + <kbd>\u2190</kbd> / <kbd>\u2192</kbd>', 'lock-screen': '<kbd>Super</kbd> + <kbd>Esc</kbd>', 'open-terminal': '<kbd>Super</kbd> + <kbd>T</kbd>' } },
+  { id: 'pop22', label: 'Pop!_OS 22.04', overrides: { 'switch-window': '<kbd>Super</kbd> + <kbd>Tab</kbd>', 'switch-workspace': '<kbd>Super</kbd> + <kbd>Ctrl</kbd> + <kbd>\u2191</kbd> / <kbd>\u2193</kbd>', 'lock-screen': '<kbd>Super</kbd> + <kbd>Esc</kbd>', 'open-terminal': '<kbd>Super</kbd> + <kbd>T</kbd>' } },
+  { id: 'elementary', label: 'elementary OS', overrides: { 'switch-workspace': '<kbd>Super</kbd> + <kbd>\u2190</kbd> / <kbd>\u2192</kbd>', 'open-terminal': '<kbd>Super</kbd> + <kbd>T</kbd>' } },
+  { id: 'kali', label: 'Kali Linux', overrides: { 'open-terminal': '<kbd>Super</kbd> + <kbd>T</kbd>' } },
+  { id: 'nodefault', label: 'Arch \u00b7 NixOS \u00b7 Gentoo', none: true }
 ];
+// Earlier builds saved a single distro; point those ids at the group that
+// carries the same five rows so an old setting still lands somewhere sensible.
+const LINUX_DISTRO_ALIASES = {
+  zorin: 'ubuntu', xubuntu: 'ubuntu',
+  debian: 'gnome', fedora: 'gnome', rocky: 'gnome', almalinux: 'gnome',
+  'opensuse-kde': 'kde', kubuntu: 'kde', kdeneon: 'kde', endeavouros: 'kde',
+  linuxmint: 'mint', manjaro: 'mint', mxlinux: 'mint',
+  popos: 'popos', kali: 'kali', elementary: 'elementary',
+  arch: 'nodefault', nixos: 'nodefault', gentoo: 'nodefault'
+};
 let linuxDistroState = null;
 function renderLinuxDistroMenu() {
   const menu = document.getElementById('linuxDistroMenu');
@@ -10236,7 +10009,11 @@ function applyLinuxDistro(id) {
   if (distroSuffix) distroSuffix.textContent = ' - ' + dist.label;
   const overrides = dist.overrides || {};
   document.querySelectorAll('#linux [data-kbd]').forEach(td => {
-    td.innerHTML = overrides[td.dataset.kbd] || LINUX_KBD_DEFAULTS[td.dataset.kbd];
+    const v = dist.none ? LINUX_NO_DEFAULT
+      : (Object.prototype.hasOwnProperty.call(overrides, td.dataset.kbd) ? overrides[td.dataset.kbd] : LINUX_KBD_DEFAULTS[td.dataset.kbd]);
+    td.innerHTML = v === LINUX_NO_DEFAULT
+      ? '<span class="kbd-none">' + tx('linux.no-default') + '</span>'
+      : v;
   });
   renderLinuxDistroMenu();
 }
@@ -10365,7 +10142,6 @@ function saveSettings() {
     noAnim: document.body.classList.contains('no-anim'),
     perfMode: document.body.classList.contains('perf-mode'),
     tip: document.getElementById('toggleTip')?.classList.contains('on') ?? true,
-    updateMode: document.querySelector('[data-update-mode].active')?.dataset.updateMode || 'auto',
     linuxDistro: linuxDistroState || 'ubuntu',
     appsApp: appsFilterState || 'all'
   };
@@ -10388,21 +10164,23 @@ function loadSettings() {
       const tBtn = document.querySelector('.theme-opt[data-theme="' + data.theme + '"]');
       if (tBtn) {
         tBtn.classList.add('active');
-        document.body.classList.remove('light','dark','ocean','forest','sunset','lavender','midnight','coral','mint','sky','rose','amber','slate','cherry','tundra','nebula','sakura','emerald','peach','storm','desert','glade','aurora','cocoa','twilight','arctic','meadow','volcano','lagoon','autumn','blossom','canyon','frost','galaxy');
-        if (WP_THEMES.includes(data.theme)) {
-          if (data.mode === 'dark') document.body.classList.add('dark');
-          else if (data.mode === 'light') document.body.classList.add('light');
-          document.body.classList.add(data.theme);
-        } else if (data.theme === 'light') {
-          document.body.classList.add('light');
-        } else if (data.theme === 'dark') {
-          document.body.classList.add('dark');
-        } else if (data.theme === 'device') {
-          document.body.classList.add(window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
-        } else if (data.theme === 'auto') {
-          applyAutoTheme();
-        }
-        syncAccentWp(data.theme);
+        withBgCrossfade(() => {
+          document.body.classList.remove('light','dark','ocean','forest','sunset','lavender','midnight','coral','mint','sky','rose','amber','slate','cherry','tundra','nebula','sakura','emerald','peach','storm','desert','glade','aurora','cocoa','twilight','arctic','meadow','volcano','lagoon','autumn','blossom','canyon','frost','galaxy');
+          if (WP_THEMES.includes(data.theme)) {
+            if (data.mode === 'dark') document.body.classList.add('dark');
+            else if (data.mode === 'light') document.body.classList.add('light');
+            document.body.classList.add(data.theme);
+          } else if (data.theme === 'light') {
+            document.body.classList.add('light');
+          } else if (data.theme === 'dark') {
+            document.body.classList.add('dark');
+          } else if (data.theme === 'device') {
+            document.body.classList.add(window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+          } else if (data.theme === 'auto') {
+            applyAutoTheme();
+          }
+          syncAccentWp(data.theme);
+        });
       }
     }
 
@@ -10487,7 +10265,7 @@ function loadSettings() {
       updateAccentPreview();
     }
 
-    if (data.linuxDistro) applyLinuxDistro(data.linuxDistro);
+    if (data.linuxDistro) applyLinuxDistro(LINUX_DISTRO_ALIASES[data.linuxDistro] || data.linuxDistro);
 
     if (data.blur !== undefined) {
       const blurToggle = document.getElementById('toggleBlur');
@@ -10510,12 +10288,6 @@ function loadSettings() {
       document.querySelectorAll('[data-mod-style]').forEach(b => b.classList.remove('active'));
       const msBtn = document.querySelector('[data-mod-style="' + data.modStyle + '"]');
       if (msBtn) msBtn.classList.add('active');
-    }
-
-    if (data.updateMode) {
-      document.querySelectorAll('[data-update-mode]').forEach(b => b.classList.remove('active'));
-      const umBtn = document.querySelector('[data-update-mode="' + data.updateMode + '"]');
-      if (umBtn) umBtn.classList.add('active');
     }
 
     if (typeof renderAnthkeys === 'function') renderAnthkeys();
@@ -10645,9 +10417,6 @@ const NOTIFY = {
   },
   isEnabled() { return NOTIFY.read().enabled === true; },
   roomsEnabled() { return NOTIFY.read().rooms !== false; },
-  // Update alerts are on by default, so someone who never touches the
-  // notification switch still hears about new builds in the background.
-  updatesEnabled() { return NOTIFY.read().updates !== false; },
   roomsOn() { return NOTIFY.isEnabled() && NOTIFY.roomsEnabled(); },
   getTime() { return NOTIFY.read().time || '09:00'; },
   getLastDay() { return NOTIFY.read().lastDay || ''; },
@@ -10787,60 +10556,6 @@ async function pushNotifyConfig() {
 
 const AK_TIP_TAG = 'anthkeys-daily-tip';
 
-// Web Push config. Leave vapidPublicKey empty to keep push dormant; the
-// subscribe URL must be an endpoint on a backend you control that stores the
-// subscription and can POST to the push service with your VAPID private key.
-const AK_PUSH = {
-  vapidPublicKey: '',
-  subscribeUrl: ''
-};
-
-function pushConfigured() {
-  return !!(AK_PUSH.vapidPublicKey && AK_PUSH.subscribeUrl);
-}
-function pushSupported() {
-  return 'serviceWorker' in navigator && 'PushManager' in window && 'Notification' in window;
-}
-function b64ToUint8Array(base64) {
-  const pad = '='.repeat((4 - (base64.length % 4)) % 4);
-  const raw = atob((base64 + pad).replace(/-/g, '+').replace(/_/g, '/'));
-  const out = new Uint8Array(raw.length);
-  for (let i = 0; i < raw.length; i++) out[i] = raw.charCodeAt(i);
-  return out;
-}
-
-async function enablePush() {
-  if (!pushSupported() || !pushConfigured()) return { ok: false, reason: pushConfigured() ? 'unsupported' : 'not-configured' };
-  if (Notification.permission !== 'granted') return { ok: false, reason: 'denied' };
-  try {
-    const reg = await navigator.serviceWorker.ready;
-    let sub = await reg.pushManager.getSubscription();
-    if (!sub) {
-      sub = await reg.pushManager.subscribe({
-        userVisibleOnly: true,
-        applicationServerKey: b64ToUint8Array(AK_PUSH.vapidPublicKey)
-      });
-    }
-    const res = await fetch(AK_PUSH.subscribeUrl, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ subscription: sub.toJSON() })
-    });
-    if (!res.ok) return { ok: false, reason: 'backend' };
-    return { ok: true };
-  } catch(e) {
-    return { ok: false, reason: 'error' };
-  }
-}
-
-async function disablePush() {
-  try {
-    const reg = await navigator.serviceWorker.ready;
-    const sub = await reg.pushManager.getSubscription();
-    if (sub) await sub.unsubscribe();
-  } catch(e) { }
-}
-
 // Post to the registration's own worker rather than
 // navigator.serviceWorker.controller: `ready` resolves as soon as a worker is
 // active, which can happen a tick or two before it controls this page, and
@@ -10852,9 +10567,8 @@ function activeWorker() {
     .catch(() => null);
 }
 
-// Tell the worker which build this page is running, plus the strings it needs
-// to write a notification in the reader's own language. Sent unconditionally:
-// update awareness should not depend on the daily-tip switch.
+// Tell the worker which build this page is running, sent on every load so the
+// manual "Check for updates now" button always compares against reality.
 function reportVersionToSW() {
   if (!notifySupported || !APP_VERSION) return Promise.resolve(false);
   return activeWorker().then(sw => {
@@ -10863,11 +10577,6 @@ function reportVersionToSW() {
       sw.postMessage({
         type: 'REPORT_VERSION',
         version: APP_VERSION,
-        updates: NOTIFY.updatesEnabled(),
-        updateTitle: notifyText('notify.update.title', 'Update available'),
-        updateBody: notifyText('notify.update.body', 'Anthkeys v{ver} is ready. Open it to update.'),
-        vapidPublicKey: AK_PUSH.vapidPublicKey,
-        pushSubscribeUrl: AK_PUSH.subscribeUrl,
         dark: document.body.classList.contains('dark')
       });
       return true;
@@ -11120,7 +10829,7 @@ onId('btnNotifyTest', 'click', async function() {
 let reloadOnUpdate = false;
 if ('serviceWorker' in navigator) {
   let refreshing = false;
-  navigator.serviceWorker.register('sw.js?v=23').then(reg => {
+  navigator.serviceWorker.register('sw.js?v=24').then(reg => {
     registerPeriodicSync();
     pushNotifyConfig();
   }).catch(() => {});
@@ -11486,9 +11195,11 @@ function setThemeToggleIcon(isDark) {
 onId('btnThemeToggle', 'click', () => {
   const isDark = document.body.classList.contains('dark');
   const wp = WP_THEMES.find(t => document.body.classList.contains(t));
-  document.body.classList.remove('light','dark');
-  document.body.classList.add(isDark ? 'light' : 'dark');
-  if (wp) document.body.classList.add('has-accent-wp');
+  withBgCrossfade(() => {
+    document.body.classList.remove('light','dark');
+    document.body.classList.add(isDark ? 'light' : 'dark');
+    if (wp) document.body.classList.add('has-accent-wp');
+  });
   setThemeToggleIcon(isDark);
   if (!wp) {
     document.querySelectorAll('[data-theme].active').forEach(b => b.classList.remove('active'));
@@ -11534,6 +11245,21 @@ const WP_THEMES = ['ocean','forest','sunset','lavender','midnight','coral','mint
 function syncAccentWp(theme) {
   document.body.classList.toggle('has-accent-wp', WP_THEMES.includes(theme));
 }
+// Crossfade one background into the next: copy whatever is on screen onto the
+// front layer, let the new background take over behind it, then fade the front
+// layer away. Without this, background-image changes snap instead of blending.
+function withBgCrossfade(mutate) {
+  const body = document.body;
+  if (body.classList.contains('no-anim') || window.matchMedia('(prefers-reduced-motion: reduce)').matches) { mutate(); return; }
+  const cs = getComputedStyle(body, '::before');
+  body.style.setProperty('--fade-img', cs.backgroundImage);
+  body.style.setProperty('--fade-col', cs.backgroundColor);
+  body.style.setProperty('--fade-filter', cs.filter);
+  body.classList.add('bg-fading');
+  void body.offsetWidth;
+  mutate();
+  body.classList.remove('bg-fading');
+}
 let preservedWp = null;
 function preserveWallpaperForDark() {
   if (preservedWp) return;
@@ -11559,11 +11285,13 @@ document.querySelectorAll('.theme-opt[data-theme]').forEach(opt => {
       document.querySelectorAll('.theme-opt[data-theme]').forEach(t => t.classList.remove('active'));
       opt.classList.add('active');
       const wasDark = document.body.classList.contains('dark');
-      clearPreservedWp();
-      document.body.classList.remove('light','dark','ocean','forest','sunset','lavender','midnight','coral','mint','sky','rose','amber','slate','cherry','tundra','nebula','sakura','emerald','peach','storm','desert','glade','aurora','cocoa','twilight','arctic','meadow','volcano','lagoon','autumn','blossom','canyon','frost','galaxy');
-      if (wasDark) document.body.classList.add('dark');
-      document.body.classList.add(theme);
-      syncAccentWp(theme);
+      withBgCrossfade(() => {
+        clearPreservedWp();
+        document.body.classList.remove('light','dark','ocean','forest','sunset','lavender','midnight','coral','mint','sky','rose','amber','slate','cherry','tundra','nebula','sakura','emerald','peach','storm','desert','glade','aurora','cocoa','twilight','arctic','meadow','volcano','lagoon','autumn','blossom','canyon','frost','galaxy');
+        if (wasDark) document.body.classList.add('dark');
+        document.body.classList.add(theme);
+        syncAccentWp(theme);
+      });
       refreshWallpaperAccent();
       saveSettings();
       return;
@@ -11571,9 +11299,11 @@ document.querySelectorAll('.theme-opt[data-theme]').forEach(opt => {
     const wp = WP_THEMES.find(t => document.body.classList.contains(t));
     if (wp) {
       const wantDark = theme === 'dark' || (theme === 'device' && window.matchMedia('(prefers-color-scheme: dark)').matches) || (theme === 'auto' && isAutoDark());
-      document.body.classList.remove('light','dark');
-      document.body.classList.add(wantDark ? 'dark' : 'light');
-      document.body.classList.add('has-accent-wp');
+      withBgCrossfade(() => {
+        document.body.classList.remove('light','dark');
+        document.body.classList.add(wantDark ? 'dark' : 'light');
+        document.body.classList.add('has-accent-wp');
+      });
       document.querySelectorAll('.theme-opt[data-theme]').forEach(t => t.classList.remove('active'));
       const wpBtn = document.querySelector('.theme-opt[data-theme="' + wp + '"]');
       if (wpBtn) wpBtn.classList.add('active');
@@ -11582,21 +11312,23 @@ document.querySelectorAll('.theme-opt[data-theme]').forEach(opt => {
     }
     document.querySelectorAll('.theme-opt[data-theme]').forEach(t => t.classList.remove('active'));
     opt.classList.add('active');
-    preserveWallpaperForDark();
-    const wantDark = theme === 'dark' || (theme === 'device' && window.matchMedia('(prefers-color-scheme: dark)').matches) || (theme === 'auto' && isAutoDark());
-    document.body.classList.remove('light','dark','ocean','forest','sunset','lavender','midnight','coral','mint','sky','rose','amber','slate','cherry','tundra','nebula','sakura','emerald','peach','storm','desert','glade','aurora','cocoa','twilight','arctic','meadow','volcano','lagoon','autumn','blossom','canyon','frost','galaxy');
-    if (theme === 'light') {
-      document.body.classList.add('light');
-    } else if (theme === 'dark') {
-      document.body.classList.add('dark');
-    } else if (theme === 'device') {
-      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-      document.body.classList.add(prefersDark ? 'dark' : 'light');
-    } else if (theme === 'auto') {
-      applyAutoTheme();
-    }
-    syncAccentWp(theme);
-    if (preservedWp) document.body.classList.add('has-accent-wp');
+    withBgCrossfade(() => {
+      preserveWallpaperForDark();
+      const wantDark = theme === 'dark' || (theme === 'device' && window.matchMedia('(prefers-color-scheme: dark)').matches) || (theme === 'auto' && isAutoDark());
+      document.body.classList.remove('light','dark','ocean','forest','sunset','lavender','midnight','coral','mint','sky','rose','amber','slate','cherry','tundra','nebula','sakura','emerald','peach','storm','desert','glade','aurora','cocoa','twilight','arctic','meadow','volcano','lagoon','autumn','blossom','canyon','frost','galaxy');
+      if (theme === 'light') {
+        document.body.classList.add('light');
+      } else if (theme === 'dark') {
+        document.body.classList.add('dark');
+      } else if (theme === 'device') {
+        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        document.body.classList.add(prefersDark ? 'dark' : 'light');
+      } else if (theme === 'auto') {
+        applyAutoTheme();
+      }
+      syncAccentWp(theme);
+      if (preservedWp) document.body.classList.add('has-accent-wp');
+    });
     refreshWallpaperAccent();
     saveSettings();
   });
@@ -12275,8 +12007,10 @@ checkForUpdate();
 
 function applyWallpaper(dataUrl) {
   preservedWp = null;
-  document.body.style.setProperty('--bg-img', `url(${dataUrl})`);
-  document.body.classList.add('has-wallpaper');
+  withBgCrossfade(() => {
+    document.body.style.setProperty('--bg-img', `url(${dataUrl})`);
+    document.body.classList.add('has-wallpaper');
+  });
   lsSet('anthkeys-wallpaper', dataUrl);
   // Dynamic colour: re-derive the accent whenever the wallpaper changes.
   refreshWallpaperAccent();
@@ -12320,8 +12054,10 @@ const removeBtn = document.getElementById('removeWallpaper');
 if (removeBtn) {
   removeBtn.addEventListener('click', () => {
     lsRemove('anthkeys-wallpaper');
-    document.body.classList.remove('has-wallpaper');
-    document.body.style.removeProperty('--bg-img');
+    withBgCrossfade(() => {
+      document.body.classList.remove('has-wallpaper');
+      document.body.style.removeProperty('--bg-img');
+    });
     preservedWp = null;
   });
 }
@@ -12394,14 +12130,6 @@ document.querySelectorAll('[data-mod-style]').forEach(btn => {
     saveSettings();
   });
 });
-document.querySelectorAll('[data-update-mode]').forEach(btn => {
-  btn.addEventListener('click', () => {
-    document.querySelectorAll('[data-update-mode]').forEach(b => b.classList.remove('active'));
-    btn.classList.add('active');
-    saveSettings();
-  });
-});
-
 document.querySelectorAll('.setting-group h2').forEach(h => {
   h.addEventListener('click', () => {
     const group = h.parentElement;
@@ -12480,7 +12208,7 @@ document.querySelectorAll('.reset-btn').forEach(btn => {
       blur: true, compact: false, noAnim: false, perfMode: false, tip: true,
     glass: 'normal',
       theme: 'light', accent: 'gold', style: 'm3',
-      size: 'medium', font: 'google-sans', updateMode: 'auto'
+      size: 'medium', font: 'google-sans'
     };
     const val = defaults[setting];
     if (val === undefined) return;
@@ -12515,10 +12243,12 @@ document.querySelectorAll('.reset-btn').forEach(btn => {
       document.querySelectorAll('.theme-opt[data-theme]').forEach(t => t.classList.remove('active'));
       const defBtn = document.querySelector('.theme-opt[data-theme="light"]');
       if (defBtn) defBtn.classList.add('active');
-      document.body.classList.remove('light','dark','ocean','forest','sunset','lavender','midnight','coral','mint','sky','rose','amber','slate','cherry','tundra','nebula','sakura','emerald','peach','storm','desert','glade','aurora','cocoa','twilight','arctic','meadow','volcano','lagoon','autumn','blossom','canyon','frost','galaxy');
-      document.body.classList.add('light');
-      clearPreservedWp();
-      syncAccentWp('light');
+      withBgCrossfade(() => {
+        document.body.classList.remove('light','dark','ocean','forest','sunset','lavender','midnight','coral','mint','sky','rose','amber','slate','cherry','tundra','nebula','sakura','emerald','peach','storm','desert','glade','aurora','cocoa','twilight','arctic','meadow','volcano','lagoon','autumn','blossom','canyon','frost','galaxy');
+        document.body.classList.add('light');
+        clearPreservedWp();
+        syncAccentWp('light');
+      });
     } else if (setting === 'accent') {
       const goldBtn = document.querySelector('.accent-opt[data-accent="gold"]');
       if (goldBtn) goldBtn.click();
@@ -12540,10 +12270,6 @@ document.querySelectorAll('.reset-btn').forEach(btn => {
     } else if (setting === 'modStyle') {
       document.querySelectorAll('[data-mod-style]').forEach(b => b.classList.remove('active'));
       const defBtn = document.querySelector('[data-mod-style="text"]');
-      if (defBtn) defBtn.click();
-    } else if (setting === 'updateMode') {
-      document.querySelectorAll('[data-update-mode]').forEach(b => b.classList.remove('active'));
-      const defBtn = document.querySelector('[data-update-mode="auto"]');
       if (defBtn) defBtn.click();
     }
     saveSettings();
