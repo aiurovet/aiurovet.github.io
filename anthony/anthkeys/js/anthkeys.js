@@ -3,6 +3,20 @@ function onId(id, event, handler) {
   if (el) el.addEventListener(event, handler);
 }
 
+// Boot diagnostics: capture any runtime error so a blank UI is never a mystery.
+// Read back with window.__akErrors (e.g. after a failed startup, paste in a bug report).
+window.__akErrors = [];
+window.addEventListener('error', function (ev) {
+  var m = (ev && ev.message) || 'error';
+  if (ev && ev.filename) m += ' @' + String(ev.filename).split('/').pop() + (ev.lineno ? ':' + ev.lineno : '');
+  try { window.__akErrors.push(m); } catch (e) {}
+});
+window.addEventListener('unhandledrejection', function (ev) {
+  var r = (ev && ev.reason);
+  var m = 'rejection: ' + ((r && r.message) || r);
+  try { window.__akErrors.push(m); } catch (e) {}
+});
+
 const i18n = {
   en: {
     'setting.notifications': 'Notifications',
@@ -10666,7 +10680,7 @@ onId('btnNotifyTest', 'click', async function() {
 let reloadOnUpdate = false;
 if ('serviceWorker' in navigator) {
   let refreshing = false;
-  navigator.serviceWorker.register('sw.js?v=27').catch(() => {});
+  navigator.serviceWorker.register('sw.js?v=28').catch(() => {});
   navigator.serviceWorker.addEventListener('controllerchange', () => {
     if (!reloadOnUpdate || refreshing) return;
     refreshing = true;
@@ -10903,7 +10917,24 @@ function selectPlatformTab(tab, smoothScroll) {
   if (scrollArea && smoothScroll) scrollArea.scrollTo({ top: 0, behavior: 'smooth' });
   const isParity = tab.dataset.tab === 'parity';
   document.body.classList.toggle('parity-mode', isParity);
-  if (isParity) renderPlatformParity();
+  if (isParity) {
+    // Self-healing: if boot died before initParity() (e.g. a corrupt stored value),
+    // build the chips lazily here and never leave the panel blank on error.
+    try {
+      const chipsEl = document.getElementById('parityChips');
+      if (chipsEl && !chipsEl.children.length) initParity();
+      renderPlatformParity();
+    } catch (err) {
+      try { window.__akErrors.push('parity render: ' + (err && err.message)); } catch (e) {}
+      const g = document.getElementById('parityGrid');
+      const em = document.getElementById('parityEmpty');
+      if (g) {
+        g.innerHTML = '<div class="parity-group">Parity</div><div class="parity-row"><div class="pcell p-action">Could not render the parity map</div></div>';
+        g.style.display = '';
+      }
+      if (em) em.hidden = true;
+    }
+  }
   updateCompareOptions();
   buildModBar();
   applyCategoryFilter();
@@ -11731,7 +11762,7 @@ function refreshWallpaperAccent() {
 
 // ---- Accent color presets ----
 const accentPresetsContainer = document.getElementById('accentPresets');
-let accentPresets = JSON.parse(lsGet('anthkeys-accent-presets') || '[]');
+let accentPresets = (() => { try { return JSON.parse(lsGet('anthkeys-accent-presets') || '[]'); } catch (e) { return []; } })();
 function saveAccentPresets() { lsSet('anthkeys-accent-presets', JSON.stringify(accentPresets)); }
 function renderAccentPresets() {
   if (!accentPresetsContainer) return;
@@ -12214,7 +12245,7 @@ function getRowCategory(row) {
 }
 
 // ---- Favorites / pinned shortcuts ----
-let pinnedIds = JSON.parse(lsGet('anthkeys-pinned') || '[]');
+let pinnedIds = (() => { try { return JSON.parse(lsGet('anthkeys-pinned') || '[]'); } catch (e) { return []; } })();
 function savePinned() { lsSet('anthkeys-pinned', JSON.stringify(pinnedIds)); }
 function getPinId(tr) {
   const panel = tr.closest('.panel');
@@ -12304,8 +12335,8 @@ document.querySelectorAll('.panel tbody').forEach(tbody => {
 
 // ---- Search history ----
 const searchHistory = document.getElementById('searchHistory');
-let searchTerms = JSON.parse(lsGet('anthkeys-search-history') || '[]');
-let recentShortcuts = JSON.parse(lsGet('anthkeys-recent-shortcuts') || '[]');
+let searchTerms = (() => { try { return JSON.parse(lsGet('anthkeys-search-history') || '[]'); } catch (e) { return []; } })();
+let recentShortcuts = (() => { try { return JSON.parse(lsGet('anthkeys-recent-shortcuts') || '[]'); } catch (e) { return []; } })();
 function saveSearchHistory() { lsSet('anthkeys-search-history', JSON.stringify(searchTerms.slice(0, 10))); }
 function saveRecentShortcuts() { lsSet('anthkeys-recent-shortcuts', JSON.stringify(recentShortcuts.slice(0, 6))); }
 function recordCopiedShortcut(key, desc) {
@@ -12710,24 +12741,31 @@ function toggleParityPlatform(pid) {
 function initParity() {
   const chips = document.getElementById('parityChips');
   if (!chips) return;
-  PARITY_PLATFORMS.forEach(pid => {
-    const b = document.createElement('button');
-    b.type = 'button';
-    b.className = 'parity-chip';
-    b.dataset.plat = pid;
-    b.textContent = parityPlatformName(pid);
-    b.setAttribute('data-i18n', 'tab.' + pid);
-    b.classList.toggle('on', paritySel.includes(pid));
-    b.addEventListener('click', () => toggleParityPlatform(pid));
-    chips.appendChild(b);
-  });
-  const cb = document.getElementById('parityOnlyDiff');
-  if (cb) {
-    parityOnlyDiff = cb.checked;
-    cb.addEventListener('change', () => {
-      parityOnlyDiff = cb.checked;
-      renderPlatformParity();
+  if (chips.children.length) return; // idempotent: already built (boot or lazy path)
+  try {
+    PARITY_PLATFORMS.forEach(pid => {
+      const b = document.createElement('button');
+      b.type = 'button';
+      b.className = 'parity-chip';
+      b.dataset.plat = pid;
+      b.textContent = parityPlatformName(pid);
+      b.setAttribute('data-i18n', 'tab.' + pid);
+      b.classList.toggle('on', paritySel.includes(pid));
+      b.addEventListener('click', () => toggleParityPlatform(pid));
+      chips.appendChild(b);
     });
+    const cb = document.getElementById('parityOnlyDiff');
+    if (cb) {
+      parityOnlyDiff = cb.checked;
+      cb.addEventListener('change', () => {
+        parityOnlyDiff = cb.checked;
+        renderPlatformParity();
+      });
+    }
+  } catch (e) {
+    // A failed build must never leave a blank panel: clear and retry next activation.
+    while (chips.firstChild) chips.removeChild(chips.firstChild);
+    try { window.__akErrors.push('initParity: ' + (e && e.message)); } catch (err) {}
   }
 }
 initParity();

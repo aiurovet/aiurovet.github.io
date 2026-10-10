@@ -6,6 +6,10 @@
 const I18N_WN = window.I18N_WN || {};
 
 I18N_WN.es = {
+  'v53.5': [
+    'Corregido: un valor guardado dañado podía impedir que la app arrancara del todo (pestaña Paridad vacía). El arranque es ahora robusto y el mapa de paridad se construye al abrir la pestaña.',
+  ],
+
   'v53.4': [
     'Corregido: reconstruida la v53.3 para limpiar la caché &mdash; recarga una vez más y la pestaña Paridad mostrará sus diferencias.',
   ],
@@ -300,6 +304,10 @@ I18N_WN.es = {
 };
 
 I18N_WN.fr = {
+  'v53.5': [
+    'Corrigé&nbsp;: une valeur enregistrée corrompue pouvait empêcher le démarrage complet (onglet Parité vide). Le démarrage est désormais robuste et la carte se construit à l’ouverture de l’onglet.',
+  ],
+
   'v53.4': [
     'Corrigé&nbsp;: v53.3 reconstruite pour vider le cache &mdash; rechargez une fois de plus et l’onglet Parité affichera ses différences.',
   ],
@@ -594,6 +602,10 @@ I18N_WN.fr = {
 };
 
 I18N_WN.de = {
+  'v53.5': [
+    'Behoben: ein beschädigter gespeicherter Wert konnte den Start abbrechen (leerer Parity-Tab). Der Start ist jetzt robust und die Karte baut sich beim Öffnen des Tabs auf.',
+  ],
+
   'v53.4': [
     'Behoben: v53.3 neu erstellt, um alte Caches zu leeren &mdash; einmal neu laden und der Parity-Tab zeigt seine Unterschiede.',
   ],
@@ -888,6 +900,10 @@ I18N_WN.de = {
 };
 
 I18N_WN.it = {
+  'v53.5': [
+    'Corretto: un valore salvato danneggiato poteva bloccare l’avvio (scheda Parità vuota). L’avvio è ora robusto e la mappa si costruisce all’apertura della scheda.',
+  ],
+
   'v53.4': [
     'Corretto: ricostruita la v53.3 per pulire la cache &mdash; ricarica ancora una volta e la scheda Parità mostrerà le sue differenze.',
   ],
@@ -1182,6 +1198,10 @@ I18N_WN.it = {
 };
 
 I18N_WN.pt = {
+  'v53.5': [
+    'Corrigido: um valor salvo corrompido podia impedir a inicialização (aba Paridade vazia). A inicialização agora é robusta e o mapa se monta ao abrir a aba.',
+  ],
+
   'v53.4': [
     'Corrigido: v53.3 reconstruída para limpar a cache &mdash; recarregue mais uma vez e a aba Paridade mostrará as diferenças.',
   ],
@@ -1476,6 +1496,10 @@ I18N_WN.pt = {
 };
 
 I18N_WN.nl = {
+  'v53.5': [
+    'Opgelost: een beschadigde opgeslagen waarde kon de start blokkeren (leeg tabblad Pariteit). De start is nu robuust en de kaart wordt opgebouwd bij het openen van het tabblad.',
+  ],
+
   'v53.4': [
     'Opgelost: v53.3 herbouwd om oude caches te wissen &mdash; laad nog een keer opnieuw en het tabblad Pariteit toont de verschillen.',
   ],
@@ -1770,6 +1794,10 @@ I18N_WN.nl = {
 };
 
 I18N_WN.ja = {
+  'v53.5': [
+    '修正：保存データの破損で起動が途中で止まり、パリティタブが空になることがありました。起動処理を頑健にし、タブを開くとマップを組み立てるようにしました。',
+  ],
+
   'v53.4': [
     '修正：古いキャッシュを消すため v53.3 を再構築 &mdash; もう一度読み込むとパリティタブに違いが表示されます。',
   ],
@@ -2064,6 +2092,10 @@ I18N_WN.ja = {
 };
 
 I18N_WN.ru = {
+  'v53.5': [
+    'Исправлено: повреждённое сохранённое значение могло остановить запуск (пустая вкладка «Parity»). Запуск теперь устойчив, и карта строится при открытии вкладки.',
+  ],
+
   'v53.4': [
     'Исправлено: v53.3 пересобрана для очистки кэша &mdash; обновите страницу ещё раз, и вкладка «Parity» покажет различия.',
   ],
@@ -2358,6 +2390,10 @@ I18N_WN.ru = {
 };
 
 I18N_WN.ko = {
+  'v53.5': [
+    '수정: 저장된 값 손상으로 앱 시작이 중단되어 패리티 탭이 비어 보일 수 있었습니다. 이제 시작이 견고하며 탭을 열면 맵이 스스로 구성됩니다.',
+  ],
+
   'v53.4': [
     '수정: 오래된 캐시를 지우기 위해 v53.3을 다시 빌드 &mdash; 한 번 더 새로고침하면 패리티 탭에 차이가 표시됩니다.',
   ],
@@ -2652,6 +2688,10 @@ I18N_WN.ko = {
 };
 
 I18N_WN.pl = {
+  'v53.5': [
+    'Poprawione: uszkodzona zapisana wartość mogła zatrzymać uruchamianie (pusta karta Parzystości). Uruchamianie jest teraz odporne, a mapa buduje się po otwarciu karty.',
+  ],
+
   'v53.4': [
     'Poprawione: przebudowano v53.3, aby wyczyścić stare cache &mdash; przeładuj jeszcze raz, a karta Parzystości pokaże różnice.',
   ],
@@ -2946,6 +2986,10 @@ I18N_WN.pl = {
 };
 
 I18N_WN.tr = {
+  'v53.5': [
+    'Düzeltildi: bozuk bir kayıtlı değer başlatmayı durdurabiliyordu (boş Fark sekmesi). Başlatma artık dayanıklı ve sekme açılınca harita kendini oluşturuyor.',
+  ],
+
   'v53.4': [
     'Düzeltildi: eski önbellekleri temizlemek için v53.3 yeniden oluşturuldu &mdash; bir kez daha yenileyin, Fark sekmesi farkları gösterir.',
   ],
@@ -3240,6 +3284,10 @@ I18N_WN.tr = {
 };
 
 I18N_WN.vi = {
+  'v53.5': [
+    'Đã sửa: giá trị lưu bị hỏng có thể khiến ứng dụng không khởi động hết (tab Chênh lệch trống). Khởi động giờ chắc chắn hơn và bản đồ tự dựng khi mở tab.',
+  ],
+
   'v53.4': [
     'Đã sửa: xây dựng lại v53.3 để xóa bộ nhớ đệm cũ &mdash; tải lại một lần nữa và tab Chênh lệch sẽ hiển thị khác biệt.',
   ],
@@ -3534,6 +3582,10 @@ I18N_WN.vi = {
 };
 
 I18N_WN.ar = {
+  'v53.5': [
+    'تم الإصلاح: قيمة محفوظة تالفة قد توقف التشغيل (تبويب الفروق فارغ). التشغيل أصبح متينًا الآن وتُبنى الخريطة عند فتح التبويب.',
+  ],
+
   'v53.4': [
     'تم الإصلاح: إعادة بناء v53.3 لمسح ذاكرة التخزين المؤقتة القديمة &mdash; أعد التحميل مرة أخرى وستظهر اختلافات تبويب الفروق.',
   ],
@@ -3828,6 +3880,10 @@ I18N_WN.ar = {
 };
 
 I18N_WN.hi = {
+  'v53.5': [
+    'ठीक किया गया: दूषित सहेजी गई वैल्यू ऐप को पूरा शुरू होने से रोक सकती थी (खाली पैरिटी टैब)। अब शुरुआत मज़बूत है और टैब खोलते ही मैप बन जाता है।',
+  ],
+
   'v53.4': [
     'ठीक किया गया: पुराने कैश हटाने के लिए v53.3 फिर से बनाया गया &mdash; एक बार फिर लोड करें, पैरिटी टैब में अंतर दिखेंगे।',
   ],
@@ -4122,6 +4178,10 @@ I18N_WN.hi = {
 };
 
 I18N_WN.sv = {
+  'v53.5': [
+    'Åtgärdat: ett skadat sparat värde kunde stoppa starten (tom flik Paritet). Starten är nu robust och kartan byggs när fliken öppnas.',
+  ],
+
   'v53.4': [
     'Åtgärdat: v53.3 återuppbyggd för att rensa gamla cacheminnen &mdash; ladda om en gång till så visar fliken Paritet skillnaderna.',
   ],
@@ -4416,6 +4476,10 @@ I18N_WN.sv = {
 };
 
 I18N_WN.da = {
+  'v53.5': [
+    'Rettet: en beskadiget gemt værdi kunne stoppe opstarten (tom fane Paritet). Opstarten er nu robust, og kortet bygges, når fanen åbnes.',
+  ],
+
   'v53.4': [
     'Rettet: v53.3 genopbygget for at rydde gamle caches &mdash; genindlæs én gang til, så viser fanen Paritet forskellene.',
   ],
@@ -4710,6 +4774,10 @@ I18N_WN.da = {
 };
 
 I18N_WN.fi = {
+  'v53.5': [
+    'Korjattu: vioittunut tallennettu arvo saattoi pysäyttää käynnistyksen (tyhjä Pariteetti-välilehti). Käynnistys on nyt vakaa ja kartta rakentuu välilehteä avattaessa.',
+  ],
+
   'v53.4': [
     'Korjattu: v53.3 rakennettiin uudelleen vanhan välimuistin tyhjentämiseksi &mdash; lataa kerran uudelleen, niin Pariteetti-välilehti näyttää erot.',
   ],
@@ -5004,6 +5072,10 @@ I18N_WN.fi = {
 };
 
 I18N_WN.no = {
+  'v53.5': [
+    'Fikset: en skadet lagret verdi kunne stoppe oppstarten (tom fane Paritet). Oppstarten er nå robust og kartet bygges når fanen åpnes.',
+  ],
+
   'v53.4': [
     'Fikset: v53.3 gjenoppbygd for å tømme gamle cacher &mdash; last inn på nytt én gang til, så viser fanen Paritet forskjellene.',
   ],
@@ -5298,6 +5370,10 @@ I18N_WN.no = {
 };
 
 I18N_WN.cs = {
+  'v53.5': [
+    'Opraveno: poškozená uložená hodnota mohla zastavit spuštění (prázdná karta Rozdíly). Spuštění je nyní odolné a mapa se postaví při otevření karty.',
+  ],
+
   'v53.4': [
     'Opraveno: v53.3 přestavěna pro vyčištění starých mezipamětí &mdash; jednou znovu načtěte a karta Rozdíly ukáže rozdíly.',
   ],
@@ -5592,6 +5668,10 @@ I18N_WN.cs = {
 };
 
 I18N_WN.hu = {
+  'v53.5': [
+    'Javítva: egy sérült mentett érték megakaszthatta az indítást (üres Paritás fül). Az indítás most már stabil, és a térkép a fül megnyitásakor felépül.',
+  ],
+
   'v53.4': [
     'Javítva: a v53.3 újraépítve a régi gyorsítótár törléséhez &mdash; töltsd be még egyszer újra, és a Paritás fül megmutatja a különbségeket.',
   ],
