@@ -1,5 +1,16 @@
 const I18N_RECENT = {
+  en: {
+    'parity.tab': 'Parity',
+    'parity.sub': 'Only the shortcuts that differ between the chosen platforms.',
+    'parity.onlyDiff': 'Differences only',
+    'parity.empty': 'No differences in this selection.',
+  },
+
   es: {
+    'parity.tab': 'Diferencias',
+    'parity.sub': 'Solo los atajos que difieren entre las plataformas elegidas.',
+    'parity.onlyDiff': 'Solo diferencias',
+    'parity.empty': 'Sin diferencias en esta selección.',
     'accent.copy': 'Copiar',
     'accent.device-applied': 'Acento del dispositivo aplicado',
     'accent.device-fail': 'El acento del dispositivo no est\u00e1 disponible aqu\u00ed \u2014 abre la app instalada',
@@ -106,6 +117,10 @@ const I18N_RECENT = {
     'perf.banner.cta': 'Activar'
   },
   fr: {
+    'parity.tab': 'Différences',
+    'parity.sub': 'Uniquement les raccourcis qui diffèrent entre les plateformes choisies.',
+    'parity.onlyDiff': 'Différences uniquement',
+    'parity.empty': 'Aucune différence dans cette sélection.',
     'accent.copy': 'Copier',
     'accent.device-applied': 'Accent du dispositif appliqu\u00e9',
     'accent.device-fail': 'L\u2019accent du dispositif n\u2019est pas disponible ici \u2014 ouvrez l\u2019app install\u00e9e',
@@ -212,6 +227,10 @@ const I18N_RECENT = {
     'perf.banner.cta': 'Activer'
   },
   de: {
+    'parity.tab': 'Unterschiede',
+    'parity.sub': 'Nur die Tastenkürzel, die sich zwischen den gewählten Plattformen unterscheiden.',
+    'parity.onlyDiff': 'Nur Unterschiede',
+    'parity.empty': 'Keine Unterschiede in dieser Auswahl.',
     'accent.copy': 'Kopieren',
     'accent.device-applied': 'Ger\u00e4teakzent angewendet',
     'accent.device-fail': 'Ger\u00e4teakzent ist hier nicht verf\u00fcgbar \u2014 \u00f6ffnen Sie die installierte App',
@@ -318,6 +337,10 @@ const I18N_RECENT = {
     'perf.banner.cta': 'Aktivieren'
   },
   ja: {
+    'parity.tab': '違い',
+    'parity.sub': '選んだプラットフォーム間で異なるショートカットのみ',
+    'parity.onlyDiff': '違いのみ',
+    'parity.empty': 'この選択に違いはありません。',
     'accent.copy': '\u30b3\u30d4\u30fc',
     'accent.device-applied': '\u30c7\u30d0\u30a4\u30b9\u306e\u30a2\u30af\u30bb\u30f3\u30c8\u3092\u9069\u7528\u3057\u307e\u3057\u305f',
     'accent.device-fail': '\u3053\u3053\u3067\u306f\u30c7\u30d0\u30a4\u30b9\u306e\u30a2\u30af\u30bb\u30f3\u30c8\u3092\u5229\u7528\u3067\u304d\u307e\u305b\u3093 \u2014 \u30a4\u30f3\u30b9\u30c8\u30fc\u30eb\u6e08\u307f\u306e\u30a2\u30d7\u30ea\u3092\u958b\u3044\u3066\u304f\u3060\u3055\u3044',
@@ -424,6 +447,10 @@ const I18N_RECENT = {
     'perf.banner.cta': '\u30aa\u30f3\u306b\u3059\u308b'
   },
   it: {
+    'parity.tab': 'Differenze',
+    'parity.sub': 'Solo le scorciatoie che differiscono tra le piattaforme scelte.',
+    'parity.onlyDiff': 'Solo differenze',
+    'parity.empty': 'Nessuna differenza in questa selezione.',
     'accent.copy': 'Copia',
     'accent.device-applied': 'Accento del dispositivo applicato',
     'accent.device-fail': 'L\u2019accento del dispositivo non \u00e8 disponibile qui \u2014 apri l\u2019app installata',
@@ -530,6 +557,10 @@ const I18N_RECENT = {
     'perf.banner.cta': 'Attiva'
   },
   pt: {
+    'parity.tab': 'Diferenças',
+    'parity.sub': 'Apenas os atalhos que diferem entre as plataformas escolhidas.',
+    'parity.onlyDiff': 'Só diferenças',
+    'parity.empty': 'Nenhuma diferença nesta seleção.',
     'accent.copy': 'Copiar',
     'accent.device-applied': 'Cor do dispositivo aplicada',
     'accent.device-fail': 'A cor do dispositivo n\u00e3o est\u00e1 dispon\u00edvel aqui \u2014 abra o app instalado',
@@ -636,6 +667,10 @@ const I18N_RECENT = {
     'perf.banner.cta': 'Ativar'
   },
   nl: {
+    'parity.tab': 'Verschillen',
+    'parity.sub': 'Alleen de sneltoetsen die verschillen tussen de gekozen platforms.',
+    'parity.onlyDiff': 'Alleen verschillen',
+    'parity.empty': 'Geen verschillen in deze selectie.',
     'accent.copy': 'Kopieren',
     'accent.device-applied': 'Apparaataccent toegepast',
     'accent.device-fail': 'Apparaataccent is hier niet beschikbaar \u2014 open de ge\u00efnstalleerde app',
@@ -742,6 +777,10 @@ const I18N_RECENT = {
     'perf.banner.cta': 'Inschakelen'
   },
   ko: {
+    'parity.tab': '차이점',
+    'parity.sub': '선택한 플래틴 간에 다른 단축키만 표시합니다.',
+    'parity.onlyDiff': '차이만',
+    'parity.empty': '이 선택 항목에 차이가 없습니다.',
     'accent.copy': '\ubcf5\uc0ac',
     'accent.device-applied': '\uae30\uae30 \ud31d \uc0c9\uc774 \uc801\uc6a9\ub418\uc5c8\uc2b5\ub2c8\ub2e4',
     'accent.device-fail': '\uc5ec\uae30\uc11c\ub294 \uae30\uae30 \ud31d \uc0c9\uc744 \uc0ac\uc6a9\ud560 \uc218 \uc5c6\uc2b5\ub2c8\ub2e4 \u2014 \uc124\uce58\ub41c \uc571\uc744 \uc5ec\uc2ed\uc2dc\uc624',
@@ -848,6 +887,10 @@ const I18N_RECENT = {
     'perf.banner.cta': '\ucf1c\uae30'
   },
   ru: {
+    'parity.tab': 'Различия',
+    'parity.sub': 'Только сочетания клавиш, различающиеся между выбранными платформами.',
+    'parity.onlyDiff': 'Только различия',
+    'parity.empty': 'В этом наборе платформ различий нет.',
     'accent.copy': '\u041a\u043e\u043f\u0438\u0440\u043e\u0432\u0430\u0442\u044c',
     'accent.device-applied': '\u0410\u043a\u0446\u0435\u043d\u0442 \u0443\u0441\u0442\u0440\u043e\u0439\u0441\u0442\u0432\u0430 \u043f\u0440\u0438\u043c\u0435\u043d\u0451\u043d',
     'accent.device-fail': '\u0410\u043a\u0446\u0435\u043d\u0442 \u0443\u0441\u0442\u0440\u043e\u0439\u0441\u0442\u0432\u0430 \u0437\u0434\u0435\u0441\u044c \u043d\u0435\u0434\u043e\u0441\u0442\u0443\u043f\u0435\u043d \u2014 \u043e\u0442\u043a\u0440\u043e\u0439\u0442\u0435 \u0443\u0441\u0442\u0430\u043d\u043e\u0432\u043b\u0435\u043d\u043d\u043e\u0435 \u043f\u0440\u0438\u043b\u043e\u0436\u0435\u043d\u0438\u0435',
@@ -954,6 +997,10 @@ const I18N_RECENT = {
     'perf.banner.cta': '\u0412\u043a\u043b\u044e\u0447\u0438\u0442\u044c'
   },
   pl: {
+    'parity.tab': 'Różnice',
+    'parity.sub': 'Tylko skróty różniące się między wybranymi platformami.',
+    'parity.onlyDiff': 'Tylko różnice',
+    'parity.empty': 'Brak różnic w tym wyborze.',
     'accent.copy': 'Kopiuj',
     'accent.device-applied': 'Zastosowano kolor akcentu urz\u0105dzenia',
     'accent.device-fail': 'Kolor akcentu urz\u0105dzenia nie jest tu dost\u0119pny \u2014 otw\u00f3rz zainstalowan\u0105 aplikacj\u0119',
@@ -1060,6 +1107,10 @@ const I18N_RECENT = {
     'perf.banner.cta': 'W\u0142\u0105cz'
   },
   tr: {
+    'parity.tab': 'Farklar',
+    'parity.sub': 'Yalnızca seçilen platformlar arasında farklı olan kısayollar.',
+    'parity.onlyDiff': 'Yalnızca farklar',
+    'parity.empty': 'Bu seçimde fark yok.',
     'accent.copy': 'Kopyala',
     'accent.device-applied': 'Cihaz vurgu rengi uyguland\u0131',
     'accent.device-fail': 'Cihaz vurgu rengi burada kullan\u0131lam\u0131yor \u2014 y\u00fckl\u00fc uygulamay\u0131 a\u00e7\u0131n',
@@ -1166,6 +1217,10 @@ const I18N_RECENT = {
     'perf.banner.cta': 'A\u00e7'
   },
   vi: {
+    'parity.tab': 'Khác biệt',
+    'parity.sub': 'Chỉ các phím tắt khác nhau giữa các nền tảng đã chọn.',
+    'parity.onlyDiff': 'Chỉ khác biệt',
+    'parity.empty': 'Không có khác biệt nào trong lựa chọn này.',
     'accent.copy': 'Sao che\u0301p',
     'accent.device-applied': '\u0110\u00e3 \u00e1p d\u1ee5ng m\u00e0u nh\u1ea5n c\u1ee7a thi\u1ebft b\u1ecb',
     'accent.device-fail': 'M\u00e0u nh\u1ea5n c\u1ee7a thi\u1ebft b\u1ecb kh\u00f4ng kh\u1ea3 d\u1ee5ng \u1edf \u0111\u00e2y \u2014 h\u00e3y m\u1edf \u1ee9ng d\u1ee5ng \u0111\u00e3 c\u00e0i \u0111\u1eb7t',
@@ -1272,6 +1327,10 @@ const I18N_RECENT = {
     'perf.banner.cta': 'B\u1eadt'
   },
   ar: {
+    'parity.tab': 'الفروق',
+    'parity.sub': 'فقط الاختصارات المختلفة بين المنصات المختارة.',
+    'parity.onlyDiff': 'الفروق فقط',
+    'parity.empty': 'لا توجد فروق في هذا التحديد.',
     'accent.copy': '\u0646\u0633\u062e',
     'accent.device-applied': '\u062a\u0645 \u062a\u0637\u0628\u064a\u0642 \u0644\u0648\u0646 \u062a\u0645\u064a\u0632 \u0627\u0644\u062c\u0647\u0627\u0632',
     'accent.device-fail': '\u0644\u0648\u0646 \u062a\u0645\u064a\u0632 \u0627\u0644\u062c\u0647\u0627\u0632 \u063a\u064a\u0631 \u0645\u062a\u0648\u0641\u0631 \u0647\u0646\u0627 \u2014 \u0627\u0641\u062a\u062d \u0627\u0644\u062a\u0637\u0628\u064a\u0642 \u0627\u0644\u0645\u062b\u0628\u062a',
@@ -1378,6 +1437,10 @@ const I18N_RECENT = {
     'perf.banner.cta': '\u062a\u0641\u0639\u064a\u0644'
   },
   hi: {
+    'parity.tab': 'अंतर',
+    'parity.sub': 'चुनी गई प्लेटफ़ॉर्म के बीच केवल भिन्न शॉर्टकट।',
+    'parity.onlyDiff': 'केवल अंतर',
+    'parity.empty': 'इस चयन में कोई अंतर नहीं है।',
     'accent.copy': '\u0915\u0949\u092a\u0940 \u0915\u0930\u0947\u0902',
     'accent.device-applied': '\u0921\u093f\u0935\u093e\u0907\u0938 \u090f\u0915\u094d\u0938\u0947\u0902\u091f \u0932\u093e\u0917\u0942 \u0939\u0941\u0906',
     'accent.device-fail': '\u0921\u093f\u0935\u093e\u0907\u0938 \u090f\u0915\u094d\u0938\u0947\u0902\u091f \u092f\u0939\u093e\u0902 \u0909\u092a\u0932\u092c\u094d\u0927 \u0928\u0939\u0940\u0902 \u0939\u0948 \u2014 \u0907\u0902\u0938\u094d\u091f\u0949\u0932 \u0915\u093f\u092f\u093e \u0939\u0941\u0906 \u090f\u092a \u0916\u094b\u0932\u0947\u0902',
@@ -1484,6 +1547,10 @@ const I18N_RECENT = {
     'perf.banner.cta': '\u091a\u093e\u0932\u0942 \u0915\u0930\u0947\u0902'
   },
   sv: {
+    'parity.tab': 'Skillnader',
+    'parity.sub': 'Endast genvägarna som skiljer sig mellan de valda plattformarna.',
+    'parity.onlyDiff': 'Endast skillnader',
+    'parity.empty': 'Inga skillnader i det här urvalet.',
     'accent.copy': 'Kopiera',
     'accent.device-applied': 'Enhetens accentf\u00e4rg har till\u00e4mpats',
     'accent.device-fail': 'Enhetens accentf\u00e4rg \u00e4r inte tillg\u00e4nglig h\u00e4r \u2014 \u00f6ppna den installerade appen',
@@ -1590,6 +1657,10 @@ const I18N_RECENT = {
     'perf.banner.cta': 'Aktivera'
   },
   da: {
+    'parity.tab': 'Forskelle',
+    'parity.sub': 'Kun genvejene, der adskiller sig mellem de valgte platforme.',
+    'parity.onlyDiff': 'Kun forskelle',
+    'parity.empty': 'Ingen forskelle i dette valg.',
     'accent.copy': 'Kopi\u00e9r',
     'accent.device-applied': 'Enhedens accentfarve er anvendt',
     'accent.device-fail': 'Enhedens accentfarve er ikke tilg\u00e6ngelig her \u2014 \u00e5bn den installerede app',
@@ -1696,6 +1767,10 @@ const I18N_RECENT = {
     'perf.banner.cta': 'Sl\u00e5 til'
   },
   fi: {
+    'parity.tab': 'Erot',
+    'parity.sub': 'Vain valittujen alustojen välillä eroavat pikanäppäimet.',
+    'parity.onlyDiff': 'Vain erot',
+    'parity.empty': 'Ei eroja tässä valinnassa.',
     'accent.copy': 'Kopioi',
     'accent.device-applied': 'Laitteen korostusv\u00e4ri k\u00e4ytetty',
     'accent.device-fail': 'Laitteen korostusv\u00e4ri ei ole k\u00e4ytett\u00e4viss\u00e4 t\u00e4\u00e4ll\u00e4 \u2014 avaa asennettu sovellus',
@@ -1802,6 +1877,10 @@ const I18N_RECENT = {
     'perf.banner.cta': 'Ota k\u00e4ytt\u00f6\u00f6n'
   },
   no: {
+    'parity.tab': 'Forskjeller',
+    'parity.sub': 'Kun snarveiene som skiller seg mellom de valgte plattformene.',
+    'parity.onlyDiff': 'Kun forskjeller',
+    'parity.empty': 'Ingen forskjeller i dette utvalget.',
     'accent.copy': 'Kopier',
     'accent.device-applied': 'Enhetens aksentfarge er brukt',
     'accent.device-fail': 'Enhetens aksentfarge er ikke tilgjengelig her \u2014 \u00e5pne den installerte appen',
@@ -1908,6 +1987,10 @@ const I18N_RECENT = {
     'perf.banner.cta': 'Sl\u00e5 p\u00e5'
   },
   cs: {
+    'parity.tab': 'Rozdíly',
+    'parity.sub': 'Pouze zkratky, které se mezi vybranými platformami liší.',
+    'parity.onlyDiff': 'Pouze rozdíly',
+    'parity.empty': 'V tomto výběru nejsou žádné rozdíly.',
     'accent.copy': 'Kop\u00edrovat',
     'accent.device-applied': 'Barva p\u0159\u00edzvuku za\u0159\u00edzen\u00ed pou\u017eita',
     'accent.device-fail': 'Barva p\u0159\u00edzvuku za\u0159\u00edzen\u00ed zde nen\u00ed k dispozici \u2014 otev\u0159ete nainstalovanou aplikaci',
@@ -2014,6 +2097,10 @@ const I18N_RECENT = {
     'perf.banner.cta': 'Zapnout'
   },
   hu: {
+    'parity.tab': 'Eltérések',
+    'parity.sub': 'Csak azok a gyorsbillentyűk, amelyek eltérnek a kiválasztott platformok között.',
+    'parity.onlyDiff': 'Csak eltérések',
+    'parity.empty': 'Nincs eltérés ebben a kiválasztásban.',
     'accent.copy': 'M\u00e1sol\u00e1s',
     'accent.device-applied': 'Eszk\u00f6z kiemel\u00e9si sz\u00edne alkalmazva',
     'accent.device-fail': 'Az eszk\u00f6z kiemel\u00e9si sz\u00edne itt nem \u00e9rhet\u0151 el \u2014 nyissa meg a telep\u00edtett alkalmaz\u00e1st',

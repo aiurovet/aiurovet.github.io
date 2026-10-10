@@ -6,6 +6,10 @@
 const I18N_WN = window.I18N_WN || {};
 
 I18N_WN.es = {
+  'v53.3': [
+    'Nuevo: mapa de paridad &mdash; solo muestra los atajos que difieren entre las plataformas que elijas (Windows, macOS, Linux y ChromeOS).',
+  ],
+
 
   'v53.1': [
     'Corregido: los fondos vuelven a fundirse — cambiar de tema o papel pintado ahora se mezcla suavemente en vez de un corte seco.',
@@ -292,6 +296,10 @@ I18N_WN.es = {
 };
 
 I18N_WN.fr = {
+  'v53.3': [
+    'Nouveau&nbsp;: carte de parité &mdash; n’affiche que les raccourcis qui diffèrent entre les plateformes choisies (Windows, macOS, Linux et ChromeOS).',
+  ],
+
 
   'v53.1': [
     'Corrigé: les fonds se fondent à nouveau — changer de thème ou de papier peint les estompe au lieu d\'une bascule sèche.',
@@ -578,6 +586,10 @@ I18N_WN.fr = {
 };
 
 I18N_WN.de = {
+  'v53.3': [
+    'Neu: Paritätsansicht &mdash; zeigt nur die Tastenkürzel, die sich zwischen den gewählten Plattformen unterscheiden (Windows, macOS, Linux und ChromeOS).',
+  ],
+
 
   'v53.1': [
     'Korrigiert: Hintergründe blenden wieder über — beim Wechsel von Design oder Wallpaper wird sanft gemischt statt hart umgeschaltet.',
@@ -864,6 +876,10 @@ I18N_WN.de = {
 };
 
 I18N_WN.it = {
+  'v53.3': [
+    'Nuovo: mappa di parità &mdash; mostra solo le scorciatoie che differiscono tra le piattaforme scelte (Windows, macOS, Linux e ChromeOS).',
+  ],
+
 
   'v53.1': [
     'Corretto: gli sfondi tornano a sfumare — cambiare tema o sfondo ora fonde dolcemente invece di uno scatto netto.',
@@ -1150,6 +1166,10 @@ I18N_WN.it = {
 };
 
 I18N_WN.pt = {
+  'v53.3': [
+    'Novo: mapa de paridade &mdash; mostra apenas os atalhos que diferem entre as plataformas escolhidas (Windows, macOS, Linux e ChromeOS).',
+  ],
+
 
   'v53.1': [
     'Corrigido: os fundos voltam a fundir-se — mudar de tema ou papel de parede agora mistura suavemente em vez de saltar.',
@@ -1436,6 +1456,10 @@ I18N_WN.pt = {
 };
 
 I18N_WN.nl = {
+  'v53.3': [
+    'Nieuw: pariteitskaart &mdash; toont alleen de sneltoetsen die verschillen tussen de gekozen platforms (Windows, macOS, Linux en ChromeOS).',
+  ],
+
 
   'v53.1': [
     'Gecorrigeerd: achtergronden vloeien weer over — van thema wisselen of behang kiezen mengt nu zachtjes in plaats van te verspringen.',
@@ -1722,6 +1746,10 @@ I18N_WN.nl = {
 };
 
 I18N_WN.ja = {
+  'v53.3': [
+    '新機能：パリティマップ &mdash; 選択したプラットフォーム間で異なるショートカットのみを表示（Windows、macOS、Linux、ChromeOS）。',
+  ],
+
 
   'v53.1': [
     '修正: 背景のクロスフェードが復活しました。テーマや壁紙を切り替えると、パッと切り替わる代りに滑らかに溶け合います。',
@@ -2008,6 +2036,10 @@ I18N_WN.ja = {
 };
 
 I18N_WN.ru = {
+  'v53.3': [
+    'Новое: карта различий &mdash; показывает только сочетания клавиш, которые различаются между выбранными платформами (Windows, macOS, Linux и ChromeOS).',
+  ],
+
 
   'v53.1': [
     'Исправлено: фоны снова плавно переходят друг в друга — при смене темы или обоев изображение мягко растворяется вместо резкой замены.',
@@ -2294,6 +2326,10 @@ I18N_WN.ru = {
 };
 
 I18N_WN.ko = {
+  'v53.3': [
+    '새 기능: 패리티 맵 &mdash; 선택한 플래틴 간 다른 단축키만 표시합니다 (Windows, macOS, Linux, ChromeOS).',
+  ],
+
 
   'v53.1': [
     '수정: 배경이 다시 부드럽게 전환됩니다. 테마나 배경화면을 바꾸면 갑자기 바끘는 대신 천천히 섞인니다.',
@@ -2580,6 +2616,10 @@ I18N_WN.ko = {
 };
 
 I18N_WN.pl = {
+  'v53.3': [
+    'Nowość: mapa parzystości &mdash; pokazuje tylko skróty różniące się między wybranymi platformami (Windows, macOS, Linux i ChromeOS).',
+  ],
+
 
   'v53.1': [
     'Poprawione: tła znów przenikają — zmiana motywu lub tapety płynnie miesza zamiast gwałtownie przeskakiwać.',
@@ -2866,6 +2906,10 @@ I18N_WN.pl = {
 };
 
 I18N_WN.tr = {
+  'v53.3': [
+    'Yeni: fark haritası &mdash; yalnızca seçilen platformlar arasında farklı olan kısayolları gösterir (Windows, macOS, Linux ve ChromeOS).',
+  ],
+
 
   'v53.1': [
     'Düzeltildi: arka planlar yeniden yumuşakça geçiyor — tema veya duvar kağıdı değiştirirken atlamak yerine birbirine karışıyor.',
@@ -3152,6 +3196,10 @@ I18N_WN.tr = {
 };
 
 I18N_WN.vi = {
+  'v53.3': [
+    'Mới: bản đồ khác biệt &mdash; chỉ hiển thị các phím tắt khác nhau giữa các nền tảng đã chọn (Windows, macOS, Linux và ChromeOS).',
+  ],
+
 
   'v53.1': [
     'Đã sửa: nền lại chuyển dần mượt mà — đổi chủ đề hoặc hình nền giờ hòa trộn nhẹ nhàng thay vì nhảy phát.',
@@ -3438,6 +3486,10 @@ I18N_WN.vi = {
 };
 
 I18N_WN.ar = {
+  'v53.3': [
+    'جديد: خريطة الفروق &mdash; تعرض فقط الاختصارات المختلفة بين المنصات المختارة (Windows وmacOS وLinux وChromeOS).',
+  ],
+
 
   'v53.1': [
     'إصلاحاً: عادت الخلفيات إلى التلاشي من جديد — تغيير السمة أو الخلفية يمزج الآن بسلاسة بدلاً من القفز.',
@@ -3724,6 +3776,10 @@ I18N_WN.ar = {
 };
 
 I18N_WN.hi = {
+  'v53.3': [
+    'नया: पैरिटी मैप &mdash; चुनी गई प्लेटफ़ॉर्म के बीच केवल भिन्न शॉर्टकट दिखाता है (Windows, macOS, Linux और ChromeOS)।',
+  ],
+
 
   'v53.1': [
     'सुधारा गया: पृष्ठभूमियाँ फिर से धीरे-धीरे बदलती हैं — थीम या वॉलपेपर बदलने पर अब कटने के बजाय मिलती हैं.',
@@ -4010,6 +4066,10 @@ I18N_WN.hi = {
 };
 
 I18N_WN.sv = {
+  'v53.3': [
+    'Nytt: paritetskarta &mdash; visar endast genvägarna som skiljer sig mellan de valda plattformarna (Windows, macOS, Linux och ChromeOS).',
+  ],
+
 
   'v53.1': [
     'Korrigerat: bakgrunder tonar över igen — att byta tema eller bakgrundsbild blandas nu mjukt i stället för att hoppa.',
@@ -4296,6 +4356,10 @@ I18N_WN.sv = {
 };
 
 I18N_WN.da = {
+  'v53.3': [
+    'Nyt: paritetskort &mdash; viser kun genvejene, der adskiller sig mellem de valgte platforme (Windows, macOS, Linux og ChromeOS).',
+  ],
+
 
   'v53.1': [
     'Rettet: baggrunde toner igen over — at skifte tema eller tapet glider nu blødt i stedet for at springe.',
@@ -4582,6 +4646,10 @@ I18N_WN.da = {
 };
 
 I18N_WN.fi = {
+  'v53.3': [
+    'Uusi: pariteettikartta &mdash; näyttää vain valittujen alustojen välillä eroavat pikanäppäimet (Windows, macOS, Linux ja ChromeOS).',
+  ],
+
 
   'v53.1': [
     'Korjattu: taustat sulautuvat taas — teeman tai taustakuvan vaihtaminen liukuu nyt pehmeästi vaihtumisen sijaan.',
@@ -4868,6 +4936,10 @@ I18N_WN.fi = {
 };
 
 I18N_WN.no = {
+  'v53.3': [
+    'Ny: paritetskart &mdash; viser kun snarveiene som skiller seg mellom de valgte plattformene (Windows, macOS, Linux og ChromeOS).',
+  ],
+
 
   'v53.1': [
     'Rettet: bakgrunner toner igjen over — å bytte tema eller bakgrunnsbilde smelter nå mykt over i stedet for å hoppe.',
@@ -5154,6 +5226,10 @@ I18N_WN.no = {
 };
 
 I18N_WN.cs = {
+  'v53.3': [
+    'Novinka: mapa rozdílů &mdash; zobrazuje pouze zkratky, které se mezi vybranými platformami liší (Windows, macOS, Linux a ChromeOS).',
+  ],
+
 
   'v53.1': [
     'Opraveno: pozadí se znovu prolíná — přepnutí motivu či tapety se plynule slije místo skoku.',
@@ -5440,6 +5516,10 @@ I18N_WN.cs = {
 };
 
 I18N_WN.hu = {
+  'v53.3': [
+    'Új: paritástérkép &mdash; csak a kiválasztott platformok között eltérő gyorsbillentyűket mutatja (Windows, macOS, Linux és ChromeOS).',
+  ],
+
 
   'v53.1': [
     'Kijavítva: a hátterek ismét átúsznak — a téma vagy háttérkép váltása most finoman keveredik ahelyett, hogy hirtelen ugrana.',
