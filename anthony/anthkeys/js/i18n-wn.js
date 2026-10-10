@@ -6,6 +6,10 @@
 const I18N_WN = window.I18N_WN || {};
 
 I18N_WN.es = {
+  'v53.4': [
+    'Corregido: reconstruida la v53.3 para limpiar la caché &mdash; recarga una vez más y la pestaña Paridad mostrará sus diferencias.',
+  ],
+
   'v53.3': [
     'Nuevo: mapa de paridad &mdash; solo muestra los atajos que difieren entre las plataformas que elijas (Windows, macOS, Linux y ChromeOS).',
   ],
@@ -296,6 +300,10 @@ I18N_WN.es = {
 };
 
 I18N_WN.fr = {
+  'v53.4': [
+    'Corrigé&nbsp;: v53.3 reconstruite pour vider le cache &mdash; rechargez une fois de plus et l’onglet Parité affichera ses différences.',
+  ],
+
   'v53.3': [
     'Nouveau&nbsp;: carte de parité &mdash; n’affiche que les raccourcis qui diffèrent entre les plateformes choisies (Windows, macOS, Linux et ChromeOS).',
   ],
@@ -586,6 +594,10 @@ I18N_WN.fr = {
 };
 
 I18N_WN.de = {
+  'v53.4': [
+    'Behoben: v53.3 neu erstellt, um alte Caches zu leeren &mdash; einmal neu laden und der Parity-Tab zeigt seine Unterschiede.',
+  ],
+
   'v53.3': [
     'Neu: Paritätsansicht &mdash; zeigt nur die Tastenkürzel, die sich zwischen den gewählten Plattformen unterscheiden (Windows, macOS, Linux und ChromeOS).',
   ],
@@ -876,6 +888,10 @@ I18N_WN.de = {
 };
 
 I18N_WN.it = {
+  'v53.4': [
+    'Corretto: ricostruita la v53.3 per pulire la cache &mdash; ricarica ancora una volta e la scheda Parità mostrerà le sue differenze.',
+  ],
+
   'v53.3': [
     'Nuovo: mappa di parità &mdash; mostra solo le scorciatoie che differiscono tra le piattaforme scelte (Windows, macOS, Linux e ChromeOS).',
   ],
@@ -1166,6 +1182,10 @@ I18N_WN.it = {
 };
 
 I18N_WN.pt = {
+  'v53.4': [
+    'Corrigido: v53.3 reconstruída para limpar a cache &mdash; recarregue mais uma vez e a aba Paridade mostrará as diferenças.',
+  ],
+
   'v53.3': [
     'Novo: mapa de paridade &mdash; mostra apenas os atalhos que diferem entre as plataformas escolhidas (Windows, macOS, Linux e ChromeOS).',
   ],
@@ -1456,6 +1476,10 @@ I18N_WN.pt = {
 };
 
 I18N_WN.nl = {
+  'v53.4': [
+    'Opgelost: v53.3 herbouwd om oude caches te wissen &mdash; laad nog een keer opnieuw en het tabblad Pariteit toont de verschillen.',
+  ],
+
   'v53.3': [
     'Nieuw: pariteitskaart &mdash; toont alleen de sneltoetsen die verschillen tussen de gekozen platforms (Windows, macOS, Linux en ChromeOS).',
   ],
@@ -1746,6 +1770,10 @@ I18N_WN.nl = {
 };
 
 I18N_WN.ja = {
+  'v53.4': [
+    '修正：古いキャッシュを消すため v53.3 を再構築 &mdash; もう一度読み込むとパリティタブに違いが表示されます。',
+  ],
+
   'v53.3': [
     '新機能：パリティマップ &mdash; 選択したプラットフォーム間で異なるショートカットのみを表示（Windows、macOS、Linux、ChromeOS）。',
   ],
@@ -2036,6 +2064,10 @@ I18N_WN.ja = {
 };
 
 I18N_WN.ru = {
+  'v53.4': [
+    'Исправлено: v53.3 пересобрана для очистки кэша &mdash; обновите страницу ещё раз, и вкладка «Parity» покажет различия.',
+  ],
+
   'v53.3': [
     'Новое: карта различий &mdash; показывает только сочетания клавиш, которые различаются между выбранными платформами (Windows, macOS, Linux и ChromeOS).',
   ],
@@ -2326,6 +2358,10 @@ I18N_WN.ru = {
 };
 
 I18N_WN.ko = {
+  'v53.4': [
+    '수정: 오래된 캐시를 지우기 위해 v53.3을 다시 빌드 &mdash; 한 번 더 새로고침하면 패리티 탭에 차이가 표시됩니다.',
+  ],
+
   'v53.3': [
     '새 기능: 패리티 맵 &mdash; 선택한 플래틴 간 다른 단축키만 표시합니다 (Windows, macOS, Linux, ChromeOS).',
   ],
@@ -2616,6 +2652,10 @@ I18N_WN.ko = {
 };
 
 I18N_WN.pl = {
+  'v53.4': [
+    'Poprawione: przebudowano v53.3, aby wyczyścić stare cache &mdash; przeładuj jeszcze raz, a karta Parzystości pokaże różnice.',
+  ],
+
   'v53.3': [
     'Nowość: mapa parzystości &mdash; pokazuje tylko skróty różniące się między wybranymi platformami (Windows, macOS, Linux i ChromeOS).',
   ],
@@ -2906,6 +2946,10 @@ I18N_WN.pl = {
 };
 
 I18N_WN.tr = {
+  'v53.4': [
+    'Düzeltildi: eski önbellekleri temizlemek için v53.3 yeniden oluşturuldu &mdash; bir kez daha yenileyin, Fark sekmesi farkları gösterir.',
+  ],
+
   'v53.3': [
     'Yeni: fark haritası &mdash; yalnızca seçilen platformlar arasında farklı olan kısayolları gösterir (Windows, macOS, Linux ve ChromeOS).',
   ],
@@ -3196,6 +3240,10 @@ I18N_WN.tr = {
 };
 
 I18N_WN.vi = {
+  'v53.4': [
+    'Đã sửa: xây dựng lại v53.3 để xóa bộ nhớ đệm cũ &mdash; tải lại một lần nữa và tab Chênh lệch sẽ hiển thị khác biệt.',
+  ],
+
   'v53.3': [
     'Mới: bản đồ khác biệt &mdash; chỉ hiển thị các phím tắt khác nhau giữa các nền tảng đã chọn (Windows, macOS, Linux và ChromeOS).',
   ],
@@ -3486,6 +3534,10 @@ I18N_WN.vi = {
 };
 
 I18N_WN.ar = {
+  'v53.4': [
+    'تم الإصلاح: إعادة بناء v53.3 لمسح ذاكرة التخزين المؤقتة القديمة &mdash; أعد التحميل مرة أخرى وستظهر اختلافات تبويب الفروق.',
+  ],
+
   'v53.3': [
     'جديد: خريطة الفروق &mdash; تعرض فقط الاختصارات المختلفة بين المنصات المختارة (Windows وmacOS وLinux وChromeOS).',
   ],
@@ -3776,6 +3828,10 @@ I18N_WN.ar = {
 };
 
 I18N_WN.hi = {
+  'v53.4': [
+    'ठीक किया गया: पुराने कैश हटाने के लिए v53.3 फिर से बनाया गया &mdash; एक बार फिर लोड करें, पैरिटी टैब में अंतर दिखेंगे।',
+  ],
+
   'v53.3': [
     'नया: पैरिटी मैप &mdash; चुनी गई प्लेटफ़ॉर्म के बीच केवल भिन्न शॉर्टकट दिखाता है (Windows, macOS, Linux और ChromeOS)।',
   ],
@@ -4066,6 +4122,10 @@ I18N_WN.hi = {
 };
 
 I18N_WN.sv = {
+  'v53.4': [
+    'Åtgärdat: v53.3 återuppbyggd för att rensa gamla cacheminnen &mdash; ladda om en gång till så visar fliken Paritet skillnaderna.',
+  ],
+
   'v53.3': [
     'Nytt: paritetskarta &mdash; visar endast genvägarna som skiljer sig mellan de valda plattformarna (Windows, macOS, Linux och ChromeOS).',
   ],
@@ -4356,6 +4416,10 @@ I18N_WN.sv = {
 };
 
 I18N_WN.da = {
+  'v53.4': [
+    'Rettet: v53.3 genopbygget for at rydde gamle caches &mdash; genindlæs én gang til, så viser fanen Paritet forskellene.',
+  ],
+
   'v53.3': [
     'Nyt: paritetskort &mdash; viser kun genvejene, der adskiller sig mellem de valgte platforme (Windows, macOS, Linux og ChromeOS).',
   ],
@@ -4646,6 +4710,10 @@ I18N_WN.da = {
 };
 
 I18N_WN.fi = {
+  'v53.4': [
+    'Korjattu: v53.3 rakennettiin uudelleen vanhan välimuistin tyhjentämiseksi &mdash; lataa kerran uudelleen, niin Pariteetti-välilehti näyttää erot.',
+  ],
+
   'v53.3': [
     'Uusi: pariteettikartta &mdash; näyttää vain valittujen alustojen välillä eroavat pikanäppäimet (Windows, macOS, Linux ja ChromeOS).',
   ],
@@ -4936,6 +5004,10 @@ I18N_WN.fi = {
 };
 
 I18N_WN.no = {
+  'v53.4': [
+    'Fikset: v53.3 gjenoppbygd for å tømme gamle cacher &mdash; last inn på nytt én gang til, så viser fanen Paritet forskjellene.',
+  ],
+
   'v53.3': [
     'Ny: paritetskart &mdash; viser kun snarveiene som skiller seg mellom de valgte plattformene (Windows, macOS, Linux og ChromeOS).',
   ],
@@ -5226,6 +5298,10 @@ I18N_WN.no = {
 };
 
 I18N_WN.cs = {
+  'v53.4': [
+    'Opraveno: v53.3 přestavěna pro vyčištění starých mezipamětí &mdash; jednou znovu načtěte a karta Rozdíly ukáže rozdíly.',
+  ],
+
   'v53.3': [
     'Novinka: mapa rozdílů &mdash; zobrazuje pouze zkratky, které se mezi vybranými platformami liší (Windows, macOS, Linux a ChromeOS).',
   ],
@@ -5516,6 +5592,10 @@ I18N_WN.cs = {
 };
 
 I18N_WN.hu = {
+  'v53.4': [
+    'Javítva: a v53.3 újraépítve a régi gyorsítótár törléséhez &mdash; töltsd be még egyszer újra, és a Paritás fül megmutatja a különbségeket.',
+  ],
+
   'v53.3': [
     'Új: paritástérkép &mdash; csak a kiválasztott platformok között eltérő gyorsbillentyűket mutatja (Windows, macOS, Linux és ChromeOS).',
   ],

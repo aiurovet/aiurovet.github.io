@@ -10666,7 +10666,7 @@ onId('btnNotifyTest', 'click', async function() {
 let reloadOnUpdate = false;
 if ('serviceWorker' in navigator) {
   let refreshing = false;
-  navigator.serviceWorker.register('sw.js?v=26').catch(() => {});
+  navigator.serviceWorker.register('sw.js?v=27').catch(() => {});
   navigator.serviceWorker.addEventListener('controllerchange', () => {
     if (!reloadOnUpdate || refreshing) return;
     refreshing = true;

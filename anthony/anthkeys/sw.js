@@ -1,4 +1,4 @@
-const CACHE = 'anthkeys-v53.3';
+const CACHE = 'anthkeys-v53.4';
 const CFG_CACHE = 'anthkeys-notify-cfg';
 const CFG_URL = 'notify-cfg.json';
 const URLS = ['anthkeys.html', '404.html', 'manifest.json', 'js/mqtt.min.js', 'js/qrcode.js', 'js/i18n-recent.js', 'js/i18n-wn.js', 'icon-192.png', 'icon-512.png', 'icon-maskable-192.png', 'icon-maskable-512.png', 'apple-touch-icon.png'];
