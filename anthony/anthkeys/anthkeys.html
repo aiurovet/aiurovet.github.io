@@ -29,7 +29,7 @@
   <script>if (location.protocol === 'file:') document.getElementById('manifestLink').remove();</script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=Roboto:wght@400;500;600;700&family=Open+Sans:wght@400;500;600;700&family=Nunito:wght@400;500;600;700&family=Lato:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700&family=Work+Sans:wght@400;500;600;700&family=Rubik:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&family=Source+Sans+3:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&family=Fira+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/anthkeys.css?v=124">
+  <link rel="stylesheet" href="css/anthkeys.css?v=125">
 </head>
 <body class="light style-m3 size-medium font-google-sans">
  <div class="container">
@@ -61,7 +61,7 @@
     </span>
   </div>
 
-  <div class="search-bar" style="position:relative"><input type="text" id="searchInput" data-i18n-placeholder="search.placeholder" placeholder="Search actions…" autocomplete="off"><button class="search-clear" id="searchClear" title="Clear search" aria-label="Clear search" hidden>&times;</button><div class="search-history" id="searchHistory"></div></div>
+  <div class="search-bar" style="position:relative"><input type="text" id="searchInput" data-i18n-placeholder="search.placeholder" placeholder="Search actions…" autocomplete="off"><button class="search-clear search-everywhere" id="searchEverywhere" type="button" aria-pressed="false" data-i18n-title="search.everywhere" title="Search all platforms at once">&#10825;</button><button class="search-clear" id="searchClear" title="Clear search" aria-label="Clear search" hidden>&times;</button><div class="search-history" id="searchHistory"></div></div>
   <div class="daily-tip" id="dailyTip" style="display:none"><span class="tip-icon">&#128161;</span><span class="tip-label" data-i18n="tip.label">Tip</span>: <span id="tipContent"></span><button class="tip-close" id="tipClose" title="Dismiss" aria-label="Dismiss tip">&times;</button></div>
   <div class="filter-menu" id="filterMenu">
     <button class="pill filter-menu-btn" id="filterMenuBtn" aria-haspopup="true" aria-expanded="false"><span class="filter-menu-icon">&#9776;</span><span data-i18n="filter.menu">Filters</span><span class="filter-menu-caret">&#9662;</span></button>
@@ -560,7 +560,76 @@
         <tr><td data-i18n="app.outlook-reply">Reply</td><td><kbd>Ctrl</kbd> + <kbd>R</kbd></td></tr>
         <tr><td data-i18n="app.outlook-forward">Forward</td><td><kbd>Ctrl</kbd> + <kbd>F</kbd></td></tr>
         <tr><td data-i18n="app.outlook-search">Search</td><td><kbd>Ctrl</kbd> + <kbd>E</kbd></td></tr>
-        <tr><td data-i18n="app.outlook-calendar">Go to Calendar</td><td><kbd>Ctrl</kbd> + <kbd>2</kbd></td></tr>
+        <tr class="category"><td colspan="2" data-i18n="cat.gimp">GIMP</td></tr>
+        <tr><td data-i18n="app.gimp-merge-down">Merge Down</td><td><kbd>Ctrl</kbd> + <kbd>M</kbd></td></tr>
+        <tr><td data-i18n="app.gimp-duplicate-layer">Duplicate Layer</td><td><kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>D</kbd></td></tr>
+        <tr><td data-i18n="app.gimp-quick-mask">Toggle Quick Mask</td><td><kbd>Shift</kbd> + <kbd>Q</kbd></td></tr>
+        <tr><td data-i18n="app.gimp-new-layer">New Layer</td><td><kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>N</kbd></td></tr>
+        <tr><td data-i18n="app.gimp-zoom-in">Zoom In</td><td><kbd>Ctrl</kbd> + <kbd>+</kbd></td></tr>
+        <tr><td data-i18n="app.gimp-toggle-guides">Toggle Guides</td><td><kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>T</kbd></td></tr>
+        <tr class="category"><td colspan="2" data-i18n="cat.obs">OBS Studio</td></tr>
+        <tr><td data-i18n="app.obs-start-stream">Start / Stop Streaming</td><td><kbd>Ctrl</kbd> + <kbd>S</kbd></td></tr>
+        <tr><td data-i18n="app.obs-start-record">Start / Stop Recording</td><td><kbd>Ctrl</kbd> + <kbd>R</kbd></td></tr>
+        <tr><td data-i18n="app.obs-studio-mode">Studio Mode</td><td><kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>S</kbd></td></tr>
+        <tr><td data-i18n="app.obs-mute">Toggle Mute</td><td><kbd>Ctrl</kbd> + <kbd>M</kbd></td></tr>
+        <tr><td data-i18n="app.obs-fullscreen">Fullscreen Projector</td><td><kbd>Ctrl</kbd> + <kbd>F</kbd></td></tr>
+        <tr><td data-i18n="app.obs-screenshot">Take Screenshot</td><td><kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>S</kbd></td></tr>
+        <tr class="category"><td colspan="2" data-i18n="cat.powerpoint">PowerPoint</td></tr>
+        <tr><td data-i18n="app.ppt-start">Start From Beginning</td><td><kbd>F5</kbd></td></tr>
+        <tr><td data-i18n="app.ppt-from-current">Start From Current Slide</td><td><kbd>Shift</kbd> + <kbd>F5</kbd></td></tr>
+        <tr><td data-i18n="app.ppt-new-slide">New Slide</td><td><kbd>Ctrl</kbd> + <kbd>M</kbd></td></tr>
+        <tr><td data-i18n="app.ppt-duplicate-slide">Duplicate Slide</td><td><kbd>Ctrl</kbd> + <kbd>D</kbd></td></tr>
+        <tr><td data-i18n="app.ppt-group">Group</td><td><kbd>Ctrl</kbd> + <kbd>G</kbd></td></tr>
+        <tr><td data-i18n="app.ppt-ungroup">Ungroup</td><td><kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>G</kbd></td></tr>
+        <tr class="category"><td colspan="2" data-i18n="cat.excel">Excel</td></tr>
+        <tr><td data-i18n="app.xls-sum">AutoSum</td><td><kbd>Alt</kbd> + <kbd>=</kbd></td></tr>
+        <tr><td data-i18n="app.xls-fill-down">Fill Down</td><td><kbd>Ctrl</kbd> + <kbd>D</kbd></td></tr>
+        <tr><td data-i18n="app.xls-table">Insert Table</td><td><kbd>Ctrl</kbd> + <kbd>T</kbd></td></tr>
+        <tr><td data-i18n="app.xls-goto">Go To Cell</td><td><kbd>Ctrl</kbd> + <kbd>G</kbd></td></tr>
+        <tr><td data-i18n="app.xls-new-sheet">Insert New Sheet</td><td><kbd>Shift</kbd> + <kbd>F11</kbd></td></tr>
+        <tr><td data-i18n="app.xls-filter">Toggle Filter</td><td><kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>L</kbd></td></tr>
+        <tr class="category"><td colspan="2" data-i18n="cat.gdocs">Google Docs</td></tr>
+        <tr><td data-i18n="app.gdocs-comment">Insert Comment</td><td><kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>M</kbd></td></tr>
+        <tr><td data-i18n="app.gdocs-footnote">Insert Footnote</td><td><kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>F</kbd></td></tr>
+        <tr><td data-i18n="app.gdocs-link">Insert Link</td><td><kbd>Ctrl</kbd> + <kbd>K</kbd></td></tr>
+        <tr><td data-i18n="app.gdocs-wordcount">Word Count</td><td><kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>C</kbd></td></tr>
+        <tr><td data-i18n="app.gdocs-copy-format">Copy Formatting</td><td><kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>C</kbd></td></tr>
+        <tr><td data-i18n="app.gdocs-paste-format">Paste Formatting</td><td><kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>V</kbd></td></tr>
+        <tr class="category"><td colspan="2" data-i18n="cat.gsheets">Google Sheets</td></tr>
+        <tr><td data-i18n="app.gsheets-currency">Format as Currency</td><td><kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>4</kbd></td></tr>
+        <tr><td data-i18n="app.gsheets-percent">Format as Percent</td><td><kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>5</kbd></td></tr>
+        <tr><td data-i18n="app.gsheets-link">Insert Link</td><td><kbd>Ctrl</kbd> + <kbd>K</kbd></td></tr>
+        <tr><td data-i18n="app.gsheets-filter">Toggle Filter</td><td><kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>L</kbd></td></tr>
+        <tr><td data-i18n="app.gsheets-explore">Explore</td><td><kbd>Alt</kbd> + <kbd>Shift</kbd> + <kbd>X</kbd></td></tr>
+        <tr><td data-i18n="app.gsheets-fill-down">Fill Down</td><td><kbd>Ctrl</kbd> + <kbd>D</kbd></td></tr>
+        <tr class="category"><td colspan="2" data-i18n="cat.premiere">Premiere Pro</td></tr>
+        <tr><td data-i18n="app.pr-selection">Selection Tool</td><td><kbd>V</kbd></td></tr>
+        <tr><td data-i18n="app.pr-razor">Razor Tool</td><td><kbd>C</kbd></td></tr>
+        <tr><td data-i18n="app.pr-cut">Cut At Playhead</td><td><kbd>Ctrl</kbd> + <kbd>K</kbd></td></tr>
+        <tr><td data-i18n="app.pr-sequence">New Sequence</td><td><kbd>Ctrl</kbd> + <kbd>N</kbd></td></tr>
+        <tr><td data-i18n="app.pr-match-frame">Match Frame</td><td><kbd>F</kbd></td></tr>
+        <tr><td data-i18n="app.pr-render">Render In to Out</td><td><kbd>Enter</kbd></td></tr>
+        <tr class="category"><td colspan="2" data-i18n="cat.aftereffects">After Effects</td></tr>
+        <tr><td data-i18n="app.ae-composition">New Composition</td><td><kbd>Ctrl</kbd> + <kbd>N</kbd></td></tr>
+        <tr><td data-i18n="app.ae-ram-preview">Preview RAM</td><td><kbd>0</kbd></td></tr>
+        <tr><td data-i18n="app.ae-split">Split Layer</td><td><kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>D</kbd></td></tr>
+        <tr><td data-i18n="app.ae-precompose">Pre-compose</td><td><kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>C</kbd></td></tr>
+        <tr><td data-i18n="app.ae-grid">Toggle Grid</td><td><kbd>Ctrl</kbd> + <kbd>'</kbd></td></tr>
+        <tr><td data-i18n="app.ae-purge">Purge All Memory</td><td><kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>/</kbd></td></tr>
+        <tr class="category"><td colspan="2" data-i18n="cat.androidstudio">Android Studio</td></tr>
+        <tr><td data-i18n="app.as-find-action">Find Action</td><td><kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>A</kbd></td></tr>
+        <tr><td data-i18n="app.as-run">Run</td><td><kbd>Shift</kbd> + <kbd>F10</kbd></td></tr>
+        <tr><td data-i18n="app.as-debug">Debug</td><td><kbd>Shift</kbd> + <kbd>F9</kbd></td></tr>
+        <tr><td data-i18n="app.as-generate">Generate Code</td><td><kbd>Alt</kbd> + <kbd>Insert</kbd></td></tr>
+        <tr><td data-i18n="app.as-reformat">Reformat Code</td><td><kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>L</kbd></td></tr>
+        <tr><td data-i18n="app.as-rename">Rename</td><td><kbd>Shift</kbd> + <kbd>F6</kbd></td></tr>
+        <tr class="category"><td colspan="2" data-i18n="cat.sublime">Sublime Text</td></tr>
+        <tr><td data-i18n="app.sub-command-palette">Command Palette</td><td><kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>P</kbd></td></tr>
+        <tr><td data-i18n="app.sub-goto-anything">Go to Anything</td><td><kbd>Ctrl</kbd> + <kbd>P</kbd></td></tr>
+        <tr><td data-i18n="app.sub-select-occurrence">Select Next Occurrence</td><td><kbd>Ctrl</kbd> + <kbd>D</kbd></td></tr>
+        <tr><td data-i18n="app.sub-toggle-sidebar">Toggle Sidebar</td><td><kbd>Ctrl</kbd> + <kbd>K</kbd> <kbd>Ctrl</kbd> + <kbd>B</kbd></td></tr>
+        <tr><td data-i18n="app.sub-split-panes">Split Pane: 2 Columns</td><td><kbd>Alt</kbd> + <kbd>Shift</kbd> + <kbd>2</kbd></td></tr>
+        <tr><td data-i18n="app.sub-find-files">Find in Files</td><td><kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>F</kbd></td></tr>
       </tbody>
     </table>
   </div>
@@ -666,6 +735,16 @@
             <input type="text" id="customActionInput" data-i18n-placeholder="custom.action-placeholder" placeholder="Action name" style="flex:1;min-width:0;box-sizing:border-box;padding:.5rem;border:1px solid var(--outline-variant);border-radius:var(--radius-sm);background:var(--surface);color:var(--text);font:var(--size) var(--font)">
             <input type="text" id="customAnthkeyInput" data-i18n-placeholder="custom.anthkey-placeholder" placeholder="Shortcut (e.g. Ctrl+Shift+Z)" style="flex:1;min-width:0;box-sizing:border-box;padding:.5rem;border:1px solid var(--outline-variant);border-radius:var(--radius-sm);background:var(--surface);color:var(--text);font:var(--size) var(--font)">
             <button class="theme-opt" id="btnAddCustom" aria-label="Add custom shortcut" style="flex:0 0 auto;width:auto;justify-content:center;padding:.5rem .8rem">+</button>
+          </div>
+        </div>
+      </div>
+      <div class="setting-group">
+        <h2 data-i18n="custom-apps.title">Custom apps</h2>
+        <div class="setting-body">
+          <div id="customAppsList"></div>
+          <div style="display:flex;gap:.4rem;margin-top:.4rem">
+            <input type="text" id="customAppNameInput" data-i18n-placeholder="custom-apps.name-placeholder" placeholder="App name (e.g. ChatGPT)" style="flex:1;min-width:0;box-sizing:border-box;padding:.5rem;border:1px solid var(--outline-variant);border-radius:var(--radius-sm);background:var(--surface);color:var(--text);font:var(--size) var(--font)">
+            <button class="theme-opt" id="btnAddCustomApp" aria-label="Add app" title="Add app" style="flex:0 0 auto;width:auto;justify-content:center;padding:.5rem .8rem">+</button>
           </div>
         </div>
       </div>
@@ -861,6 +940,14 @@
                 <div class="whatsnew-title" data-i18n="whatsnew.title">What's new</div>
                 <p class="whatsnew-sub" data-i18n="whatsnew.sub">Recent changes to Anthkeys</p>
                 <select id="whatsnewSelect" aria-label="Version" style="width:100%;padding:.45rem .7rem;border:1px solid var(--outline-variant);border-radius:var(--radius-sm);background:var(--surface);color:var(--text);font:var(--size) var(--font);font-size:.8rem;margin-bottom:.6rem;box-sizing:border-box;outline:none"></select>
+                <div class="wn-entry">
+                  <div class="wn-ver">v53.8 <span class="wn-date">Oct 10, 2026</span></div>
+                  <ul>
+                    <li>New: create your own app sections &mdash; give an app a name and its shortcuts in Settings, then filter to it from the Apps tab; they sync through room sync, offline codes, export and Gist.</li>
+                    <li>New: ten more apps in the Apps tab &mdash; GIMP, OBS Studio, PowerPoint, Excel, Google Docs, Google Sheets, Premiere Pro, After Effects, Android Studio and Sublime Text.</li>
+                    <li>Improved: search can now look across all platforms at once &mdash; toggle the all-platforms button in the search bar and results appear grouped by platform.</li>
+                  </ul>
+                </div>
                 <div class="wn-entry">
                   <div class="wn-ver">v53.7 <span class="wn-date">Oct 10, 2026</span></div>
                   <ul>
@@ -1945,7 +2032,7 @@
   <script src="js/qrcode.js"></script>
   <script src="js/i18n-recent.js"></script>
 <script src="js/i18n-wn.js"></script>
-<script src="js/anthkeys.js?v=53.7">
+<script src="js/anthkeys.js?v=53.8">
 </script>
 </body>
 </html>

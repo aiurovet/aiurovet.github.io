@@ -348,6 +348,10 @@ const i18n = {
     'dict.head': 'Key Legend',
     'dict.key': 'Key',
     'tab.apps': 'Apps',
+    'tab.windows': 'Windows',
+    'tab.macos': 'macOS',
+    'tab.linux': 'Linux',
+    'tab.chromeos': 'ChromeOS',
     'whatsnew.title': "What's new",
     'whatsnew.sub': 'Recent changes to Anthkeys',
     'cat.vscode': 'VS Code',
@@ -546,6 +550,83 @@ const i18n = {
     'app.outlook-search': 'Search',
     'app.outlook-calendar': 'Go to Calendar',
     'search.didyoumean': 'Did you mean {0}?',
+    'cat.gimp': 'GIMP',
+    'app.gimp-merge-down': 'Merge Down',
+    'app.gimp-duplicate-layer': 'Duplicate Layer',
+    'app.gimp-quick-mask': 'Toggle Quick Mask',
+    'app.gimp-new-layer': 'New Layer',
+    'app.gimp-zoom-in': 'Zoom In',
+    'app.gimp-toggle-guides': 'Toggle Guides',
+    'cat.obs': 'OBS Studio',
+    'app.obs-start-stream': 'Start / Stop Streaming',
+    'app.obs-start-record': 'Start / Stop Recording',
+    'app.obs-studio-mode': 'Studio Mode',
+    'app.obs-mute': 'Toggle Mute',
+    'app.obs-fullscreen': 'Fullscreen Projector',
+    'app.obs-screenshot': 'Take Screenshot',
+    'cat.powerpoint': 'PowerPoint',
+    'app.ppt-start': 'Start From Beginning',
+    'app.ppt-from-current': 'Start From Current Slide',
+    'app.ppt-new-slide': 'New Slide',
+    'app.ppt-duplicate-slide': 'Duplicate Slide',
+    'app.ppt-group': 'Group',
+    'app.ppt-ungroup': 'Ungroup',
+    'cat.excel': 'Excel',
+    'app.xls-sum': 'AutoSum',
+    'app.xls-fill-down': 'Fill Down',
+    'app.xls-table': 'Insert Table',
+    'app.xls-goto': 'Go To Cell',
+    'app.xls-new-sheet': 'Insert New Sheet',
+    'app.xls-filter': 'Toggle Filter',
+    'cat.gdocs': 'Google Docs',
+    'app.gdocs-comment': 'Insert Comment',
+    'app.gdocs-footnote': 'Insert Footnote',
+    'app.gdocs-link': 'Insert Link',
+    'app.gdocs-wordcount': 'Word Count',
+    'app.gdocs-copy-format': 'Copy Formatting',
+    'app.gdocs-paste-format': 'Paste Formatting',
+    'cat.gsheets': 'Google Sheets',
+    'app.gsheets-currency': 'Format as Currency',
+    'app.gsheets-percent': 'Format as Percent',
+    'app.gsheets-link': 'Insert Link',
+    'app.gsheets-filter': 'Toggle Filter',
+    'app.gsheets-explore': 'Explore',
+    'app.gsheets-fill-down': 'Fill Down',
+    'cat.premiere': 'Premiere Pro',
+    'app.pr-selection': 'Selection Tool',
+    'app.pr-razor': 'Razor Tool',
+    'app.pr-cut': 'Cut At Playhead',
+    'app.pr-sequence': 'New Sequence',
+    'app.pr-match-frame': 'Match Frame',
+    'app.pr-render': 'Render In to Out',
+    'cat.aftereffects': 'After Effects',
+    'app.ae-composition': 'New Composition',
+    'app.ae-ram-preview': 'Preview RAM',
+    'app.ae-split': 'Split Layer',
+    'app.ae-precompose': 'Pre-compose',
+    'app.ae-grid': 'Toggle Grid',
+    'app.ae-purge': 'Purge All Memory',
+    'cat.androidstudio': 'Android Studio',
+    'app.as-find-action': 'Find Action',
+    'app.as-run': 'Run',
+    'app.as-debug': 'Debug',
+    'app.as-generate': 'Generate Code',
+    'app.as-reformat': 'Reformat Code',
+    'app.as-rename': 'Rename',
+    'cat.sublime': 'Sublime Text',
+    'app.sub-command-palette': 'Command Palette',
+    'app.sub-goto-anything': 'Go to Anything',
+    'app.sub-select-occurrence': 'Select Next Occurrence',
+    'app.sub-toggle-sidebar': 'Toggle Sidebar',
+    'app.sub-split-panes': 'Split Pane: 2 Columns',
+    'app.sub-find-files': 'Find in Files',
+    'custom-apps.title': 'Custom apps',
+    'custom-apps.none': 'No custom apps yet',
+    'custom-apps.name-placeholder': 'App name (e.g. ChatGPT)',
+    'custom-apps.add-app': 'Add app',
+    'custom-apps.add-shortcut': 'Add shortcut',
+    'custom-apps.delete-app': 'Delete app',
+    'search.everywhere': 'Search all platforms at once',
   }
 }
 
@@ -1070,6 +1151,83 @@ i18n.ar = {
     'app.outlook-search': 'بحث',
     'app.outlook-calendar': 'الانتقال إلى التقويم',
     'search.didyoumean': 'هل تقصد {0}?',
+    'cat.gimp': 'GIMP',
+    'app.gimp-merge-down': 'دمج للأسفل',
+    'app.gimp-duplicate-layer': 'تكرار الطبقة',
+    'app.gimp-quick-mask': 'تبديل القناع السريع',
+    'app.gimp-new-layer': 'طبقة جديدة',
+    'app.gimp-zoom-in': 'تكبير',
+    'app.gimp-toggle-guides': 'إظهار/إخفاء الأدلة',
+    'cat.obs': 'OBS Studio',
+    'app.obs-start-stream': 'بدء / إيقاف البث',
+    'app.obs-start-record': 'بدء / إيقاف التسجيل',
+    'app.obs-studio-mode': 'وضع الاستوديو',
+    'app.obs-mute': 'تبديل كتم الصوت',
+    'app.obs-fullscreen': 'عرض ملء الشاشة',
+    'app.obs-screenshot': 'التقاط لقطة شاشة',
+    'cat.powerpoint': 'PowerPoint',
+    'app.ppt-start': 'بدء من البداية',
+    'app.ppt-from-current': 'بدء من الشريحة الحالية',
+    'app.ppt-new-slide': 'شريحة جديدة',
+    'app.ppt-duplicate-slide': 'تكرار الشريحة',
+    'app.ppt-group': 'تجميع',
+    'app.ppt-ungroup': 'فك التجميع',
+    'cat.excel': 'Excel',
+    'app.xls-sum': 'مجموع تلقائي',
+    'app.xls-fill-down': 'تعبئة لأسفل',
+    'app.xls-table': 'إدراج جدول',
+    'app.xls-goto': 'الانتقال إلى خلية',
+    'app.xls-new-sheet': 'إدراج ورقة جديدة',
+    'app.xls-filter': 'تبديل عامل التصفية',
+    'cat.gdocs': 'Google Docs',
+    'app.gdocs-comment': 'إدراج تعليق',
+    'app.gdocs-footnote': 'إدراج حاشية سفلية',
+    'app.gdocs-link': 'إدراج رابط',
+    'app.gdocs-wordcount': 'عدد الكلمات',
+    'app.gdocs-copy-format': 'نسخ التنسيق',
+    'app.gdocs-paste-format': 'لصق التنسيق',
+    'cat.gsheets': 'Google Sheets',
+    'app.gsheets-currency': 'تنسيق كعملة',
+    'app.gsheets-percent': 'تنسيق كنسبة مئوية',
+    'app.gsheets-link': 'إدراج رابط',
+    'app.gsheets-filter': 'تبديل عامل التصفية',
+    'app.gsheets-explore': 'استكشاف',
+    'app.gsheets-fill-down': 'تعبئة لأسفل',
+    'cat.premiere': 'Premiere Pro',
+    'app.pr-selection': 'أداة التحديد',
+    'app.pr-razor': 'أداة الشفرة',
+    'app.pr-cut': 'قص عند مؤشر التشغيل',
+    'app.pr-sequence': 'تسلسل جديد',
+    'app.pr-match-frame': 'مطابقة الإطار',
+    'app.pr-render': 'عرض من الدخول إلى الخروج',
+    'cat.aftereffects': 'After Effects',
+    'app.ae-composition': 'تركيبة جديدة',
+    'app.ae-ram-preview': 'معاينة RAM',
+    'app.ae-split': 'تقسيم الطبقة',
+    'app.ae-precompose': 'تركيب مسبق',
+    'app.ae-grid': 'إظهار/إخفاء الشبكة',
+    'app.ae-purge': 'مسح كل الذاكرة',
+    'cat.androidstudio': 'Android Studio',
+    'app.as-find-action': 'العثور على إجراء',
+    'app.as-run': 'تشغيل',
+    'app.as-debug': 'تصحيح',
+    'app.as-generate': 'توليد الكود',
+    'app.as-reformat': 'إعادة تنسيق الكود',
+    'app.as-rename': 'إعادة تسمية',
+    'cat.sublime': 'Sublime Text',
+    'app.sub-command-palette': 'لوحة الأوامر',
+    'app.sub-goto-anything': 'الانتقال إلى أي شيء',
+    'app.sub-select-occurrence': 'تحديد التواجد التالي',
+    'app.sub-toggle-sidebar': 'إظهار/إخفاء الشريط الجانبي',
+    'app.sub-split-panes': 'تقسيم: عمودان',
+    'app.sub-find-files': 'البحث في الملفات',
+    'custom-apps.title': 'تطبيقات مخصصة',
+    'custom-apps.none': 'لا توجد تطبيقات مخصصة بعد',
+    'custom-apps.name-placeholder': 'اسم التطبيق (مثل ChatGPT)',
+    'custom-apps.add-app': 'إضافة تطبيق',
+    'custom-apps.add-shortcut': 'إضافة اختصار',
+    'custom-apps.delete-app': 'حذف التطبيق',
+    'search.everywhere': 'ابحث في جميع المنصات دفعة واحدة',
 };;
 
 i18n.cs = {
@@ -1593,6 +1751,83 @@ i18n.cs = {
     'app.outlook-search': 'Hledat',
     'app.outlook-calendar': 'Přejít do kalendáře',
     'search.didyoumean': 'Mysleli jste na {0}?',
+    'cat.gimp': 'GIMP',
+    'app.gimp-merge-down': 'Sloučit dolů',
+    'app.gimp-duplicate-layer': 'Duplikovat vrstvu',
+    'app.gimp-quick-mask': 'Přepnout rychlou masku',
+    'app.gimp-new-layer': 'Nová vrstva',
+    'app.gimp-zoom-in': 'Přiblížit',
+    'app.gimp-toggle-guides': 'Přepnout vodicí čáry',
+    'cat.obs': 'OBS Studio',
+    'app.obs-start-stream': 'Spustit / zastavit vysílání',
+    'app.obs-start-record': 'Spustit / zastavit nahrávání',
+    'app.obs-studio-mode': 'Studiový režim',
+    'app.obs-mute': 'Přepnout ztlumení',
+    'app.obs-fullscreen': 'Projektor přes celou obrazovku',
+    'app.obs-screenshot': 'Pořídit snímek obrazovky',
+    'cat.powerpoint': 'PowerPoint',
+    'app.ppt-start': 'Spustit od začátku',
+    'app.ppt-from-current': 'Spustit od aktuálního snímku',
+    'app.ppt-new-slide': 'Nový snímek',
+    'app.ppt-duplicate-slide': 'Duplikovat snímek',
+    'app.ppt-group': 'Seskupit',
+    'app.ppt-ungroup': 'Zrušit seskupení',
+    'cat.excel': 'Excel',
+    'app.xls-sum': 'Automatický součet',
+    'app.xls-fill-down': 'Vyplnit dolů',
+    'app.xls-table': 'Vložit tabulku',
+    'app.xls-goto': 'Přejít na buňku',
+    'app.xls-new-sheet': 'Vložit nový list',
+    'app.xls-filter': 'Přepnout filtr',
+    'cat.gdocs': 'Google Docs',
+    'app.gdocs-comment': 'Vložit komentář',
+    'app.gdocs-footnote': 'Vložit poznámku pod čarou',
+    'app.gdocs-link': 'Vložit odkaz',
+    'app.gdocs-wordcount': 'Počet slov',
+    'app.gdocs-copy-format': 'Kopírovat formátování',
+    'app.gdocs-paste-format': 'Vložit formátování',
+    'cat.gsheets': 'Google Sheets',
+    'app.gsheets-currency': 'Formátovat jako měnu',
+    'app.gsheets-percent': 'Formátovat jako procenta',
+    'app.gsheets-link': 'Vložit odkaz',
+    'app.gsheets-filter': 'Přepnout filtr',
+    'app.gsheets-explore': 'Prozkoumat',
+    'app.gsheets-fill-down': 'Vyplnit dolů',
+    'cat.premiere': 'Premiere Pro',
+    'app.pr-selection': 'Nástroj pro výběr',
+    'app.pr-razor': 'Nástroj žiletka',
+    'app.pr-cut': 'Střih v místě přehrávací hlavy',
+    'app.pr-sequence': 'Nová sekvence',
+    'app.pr-match-frame': 'Přiřadit snímek',
+    'app.pr-render': 'Vyrenderovat od začátku do konce',
+    'cat.aftereffects': 'After Effects',
+    'app.ae-composition': 'Nová kompozice',
+    'app.ae-ram-preview': 'Náhled RAM',
+    'app.ae-split': 'Rozdělit vrstvu',
+    'app.ae-precompose': 'Předkomponovat',
+    'app.ae-grid': 'Přepnout mřížku',
+    'app.ae-purge': 'Vyčistit veškerou paměť',
+    'cat.androidstudio': 'Android Studio',
+    'app.as-find-action': 'Najít akci',
+    'app.as-run': 'Spustit',
+    'app.as-debug': 'Ladit',
+    'app.as-generate': 'Generovat kód',
+    'app.as-reformat': 'Přeformátovat kód',
+    'app.as-rename': 'Přejmenovat',
+    'cat.sublime': 'Sublime Text',
+    'app.sub-command-palette': 'Paleta příkazů',
+    'app.sub-goto-anything': 'Přejít kamkoli',
+    'app.sub-select-occurrence': 'Vybrat další výskyt',
+    'app.sub-toggle-sidebar': 'Přepnout postranní panel',
+    'app.sub-split-panes': 'Rozdělení: 2 sloupce',
+    'app.sub-find-files': 'Hledat v souborech',
+    'custom-apps.title': 'Vlastní aplikace',
+    'custom-apps.none': 'Zatím žádné vlastní aplikace',
+    'custom-apps.name-placeholder': 'Název aplikace (např. ChatGPT)',
+    'custom-apps.add-app': 'Přidat aplikaci',
+    'custom-apps.add-shortcut': 'Přidat zkratku',
+    'custom-apps.delete-app': 'Smazat aplikaci',
+    'search.everywhere': 'Hledat ve všech platformách najednou',
 };;
 
 i18n.da = {
@@ -2116,6 +2351,83 @@ i18n.da = {
     'app.outlook-search': 'Søg',
     'app.outlook-calendar': 'Gå til kalender',
     'search.didyoumean': 'Mente du {0}?',
+    'cat.gimp': 'GIMP',
+    'app.gimp-merge-down': 'Flet nedad',
+    'app.gimp-duplicate-layer': 'Dupliker lag',
+    'app.gimp-quick-mask': 'Skift hurtigmasker',
+    'app.gimp-new-layer': 'Nyt lag',
+    'app.gimp-zoom-in': 'Zoom ind',
+    'app.gimp-toggle-guides': 'Vis/skjul hjælpelinjer',
+    'cat.obs': 'OBS Studio',
+    'app.obs-start-stream': 'Start / stop stream',
+    'app.obs-start-record': 'Start / stop optagelse',
+    'app.obs-studio-mode': 'Studietilstand',
+    'app.obs-mute': 'Slå lyd fra/til',
+    'app.obs-fullscreen': 'Fuldskærmsprojektor',
+    'app.obs-screenshot': 'Tag skærmbillede',
+    'cat.powerpoint': 'PowerPoint',
+    'app.ppt-start': 'Start fra begyndelsen',
+    'app.ppt-from-current': 'Start fra aktuelle slide',
+    'app.ppt-new-slide': 'Ny slide',
+    'app.ppt-duplicate-slide': 'Dupliker slide',
+    'app.ppt-group': 'Grupper',
+    'app.ppt-ungroup': 'Opdel gruppe',
+    'cat.excel': 'Excel',
+    'app.xls-sum': 'Autosum',
+    'app.xls-fill-down': 'Udfyld nedad',
+    'app.xls-table': 'Indsæt tabel',
+    'app.xls-goto': 'Gå til celle',
+    'app.xls-new-sheet': 'Indsæt nyt ark',
+    'app.xls-filter': 'Slå filter til/fra',
+    'cat.gdocs': 'Google Docs',
+    'app.gdocs-comment': 'Indsæt kommentar',
+    'app.gdocs-footnote': 'Indsæt fodnote',
+    'app.gdocs-link': 'Indsæt link',
+    'app.gdocs-wordcount': 'Ordoptælling',
+    'app.gdocs-copy-format': 'Kopiér formatering',
+    'app.gdocs-paste-format': 'Indsæt formatering',
+    'cat.gsheets': 'Google Sheets',
+    'app.gsheets-currency': 'Formatér som valuta',
+    'app.gsheets-percent': 'Formatér som procent',
+    'app.gsheets-link': 'Indsæt link',
+    'app.gsheets-filter': 'Slå filter til/fra',
+    'app.gsheets-explore': 'Udforsk',
+    'app.gsheets-fill-down': 'Udfyld nedad',
+    'cat.premiere': 'Premiere Pro',
+    'app.pr-selection': 'Markeringsværktøj',
+    'app.pr-razor': 'Barberblad-værktøj',
+    'app.pr-cut': 'Klip ved afspilningshoved',
+    'app.pr-sequence': 'Ny sekvens',
+    'app.pr-match-frame': 'Match frame',
+    'app.pr-render': 'Render fra in til out',
+    'cat.aftereffects': 'After Effects',
+    'app.ae-composition': 'Ny komposition',
+    'app.ae-ram-preview': 'RAM-eksempel',
+    'app.ae-split': 'Opdel lag',
+    'app.ae-precompose': 'Prækomponér',
+    'app.ae-grid': 'Vis/skjul gitter',
+    'app.ae-purge': 'Ryd al hukommelse',
+    'cat.androidstudio': 'Android Studio',
+    'app.as-find-action': 'Find handling',
+    'app.as-run': 'Kør',
+    'app.as-debug': 'Fejlsøg',
+    'app.as-generate': 'Generér kode',
+    'app.as-reformat': 'Omformater kode',
+    'app.as-rename': 'Omdøb',
+    'cat.sublime': 'Sublime Text',
+    'app.sub-command-palette': 'Kommandopalet',
+    'app.sub-goto-anything': 'Gå til hvad som helst',
+    'app.sub-select-occurrence': 'Vælg næste forekomst',
+    'app.sub-toggle-sidebar': 'Vis/skjul sidepanel',
+    'app.sub-split-panes': 'Opdel: 2 kolonner',
+    'app.sub-find-files': 'Søg i filer',
+    'custom-apps.title': 'Brugerdefinerede apps',
+    'custom-apps.none': 'Ingen brugerdefinerede apps endnu',
+    'custom-apps.name-placeholder': 'App-navn (fx ChatGPT)',
+    'custom-apps.add-app': 'Tilføj app',
+    'custom-apps.add-shortcut': 'Tilføj genvej',
+    'custom-apps.delete-app': 'Slet app',
+    'search.everywhere': 'Søg på alle platforme på én gang',
 };;
 
 i18n.de = {
@@ -2639,6 +2951,83 @@ i18n.de = {
     'app.outlook-search': 'Suchen',
     'app.outlook-calendar': 'Zum Kalender',
     'search.didyoumean': 'Meintest du {0}?',
+    'cat.gimp': 'GIMP',
+    'app.gimp-merge-down': 'Nach unten zusammenführen',
+    'app.gimp-duplicate-layer': 'Ebene duplizieren',
+    'app.gimp-quick-mask': 'Schnellmaske umschalten',
+    'app.gimp-new-layer': 'Neue Ebene',
+    'app.gimp-zoom-in': 'Vergrößern',
+    'app.gimp-toggle-guides': 'Hilfslinien ein-/ausblenden',
+    'cat.obs': 'OBS Studio',
+    'app.obs-start-stream': 'Stream starten / stoppen',
+    'app.obs-start-record': 'Aufnahme starten / stoppen',
+    'app.obs-studio-mode': 'Studiomodus',
+    'app.obs-mute': 'Stummschaltung umschalten',
+    'app.obs-fullscreen': 'Vollbildprojektor',
+    'app.obs-screenshot': 'Screenshot aufnehmen',
+    'cat.powerpoint': 'PowerPoint',
+    'app.ppt-start': 'Von Anfang an starten',
+    'app.ppt-from-current': 'Ab aktueller Folie starten',
+    'app.ppt-new-slide': 'Neue Folie',
+    'app.ppt-duplicate-slide': 'Folie duplizieren',
+    'app.ppt-group': 'Gruppieren',
+    'app.ppt-ungroup': 'Gruppierung aufheben',
+    'cat.excel': 'Excel',
+    'app.xls-sum': 'AutoSumme',
+    'app.xls-fill-down': 'Nach unten ausfüllen',
+    'app.xls-table': 'Tabelle einfügen',
+    'app.xls-goto': 'Zur Zelle springen',
+    'app.xls-new-sheet': 'Neues Arbeitsblatt einfügen',
+    'app.xls-filter': 'Filter umschalten',
+    'cat.gdocs': 'Google Docs',
+    'app.gdocs-comment': 'Kommentar einfügen',
+    'app.gdocs-footnote': 'Fußnote einfügen',
+    'app.gdocs-link': 'Link einfügen',
+    'app.gdocs-wordcount': 'Wortanzahl',
+    'app.gdocs-copy-format': 'Formatierung kopieren',
+    'app.gdocs-paste-format': 'Formatierung einfügen',
+    'cat.gsheets': 'Google Sheets',
+    'app.gsheets-currency': 'Als Währung formatieren',
+    'app.gsheets-percent': 'Als Prozent formatieren',
+    'app.gsheets-link': 'Link einfügen',
+    'app.gsheets-filter': 'Filter umschalten',
+    'app.gsheets-explore': 'Erkunden',
+    'app.gsheets-fill-down': 'Nach unten ausfüllen',
+    'cat.premiere': 'Premiere Pro',
+    'app.pr-selection': 'Auswahlwerkzeug',
+    'app.pr-razor': 'Rasiermesser-Werkzeug',
+    'app.pr-cut': 'An Abspielposition schneiden',
+    'app.pr-sequence': 'Neue Sequenz',
+    'app.pr-match-frame': 'Frame abgleichen',
+    'app.pr-render': 'Von In- zu Out-Punkt rendern',
+    'cat.aftereffects': 'After Effects',
+    'app.ae-composition': 'Neue Komposition',
+    'app.ae-ram-preview': 'RAM-Vorschau',
+    'app.ae-split': 'Ebene teilen',
+    'app.ae-precompose': 'Vorkomponieren',
+    'app.ae-grid': 'Raster ein-/ausblenden',
+    'app.ae-purge': 'Gesamten Speicher leeren',
+    'cat.androidstudio': 'Android Studio',
+    'app.as-find-action': 'Aktion suchen',
+    'app.as-run': 'Ausführen',
+    'app.as-debug': 'Debuggen',
+    'app.as-generate': 'Code generieren',
+    'app.as-reformat': 'Code neu formatieren',
+    'app.as-rename': 'Umbenennen',
+    'cat.sublime': 'Sublime Text',
+    'app.sub-command-palette': 'Befehlspalette',
+    'app.sub-goto-anything': 'Zu allem springen',
+    'app.sub-select-occurrence': 'Nächstes Vorkommen auswählen',
+    'app.sub-toggle-sidebar': 'Seitenleiste ein-/ausblenden',
+    'app.sub-split-panes': 'Split-Ansicht: 2 Spalten',
+    'app.sub-find-files': 'In Dateien suchen',
+    'custom-apps.title': 'Benutzerdefinierte Apps',
+    'custom-apps.none': 'Noch keine benutzerdefinierten Apps',
+    'custom-apps.name-placeholder': 'App-Name (z. B. ChatGPT)',
+    'custom-apps.add-app': 'App hinzufügen',
+    'custom-apps.add-shortcut': 'Kürzel hinzufügen',
+    'custom-apps.delete-app': 'App löschen',
+    'search.everywhere': 'Auf allen Plattformen gleichzeitig suchen',
 };;
 
 i18n.es = {
@@ -3162,6 +3551,83 @@ i18n.es = {
     'app.outlook-search': 'Buscar',
     'app.outlook-calendar': 'Ir al calendario',
     'search.didyoumean': '¿Quisiste decir {0}?',
+    'cat.gimp': 'GIMP',
+    'app.gimp-merge-down': 'Combinar hacia abajo',
+    'app.gimp-duplicate-layer': 'Duplicar capa',
+    'app.gimp-quick-mask': 'Alternar máscara rápida',
+    'app.gimp-new-layer': 'Nueva capa',
+    'app.gimp-zoom-in': 'Acercar',
+    'app.gimp-toggle-guides': 'Mostrar/ocultar guías',
+    'cat.obs': 'OBS Studio',
+    'app.obs-start-stream': 'Iniciar / detener transmisión',
+    'app.obs-start-record': 'Iniciar / detener grabación',
+    'app.obs-studio-mode': 'Modo estudio',
+    'app.obs-mute': 'Silenciar/activar audio',
+    'app.obs-fullscreen': 'Proyector a pantalla completa',
+    'app.obs-screenshot': 'Capturar pantalla',
+    'cat.powerpoint': 'PowerPoint',
+    'app.ppt-start': 'Iniciar desde el principio',
+    'app.ppt-from-current': 'Iniciar desde la diapositiva actual',
+    'app.ppt-new-slide': 'Nueva diapositiva',
+    'app.ppt-duplicate-slide': 'Duplicar diapositiva',
+    'app.ppt-group': 'Agrupar',
+    'app.ppt-ungroup': 'Desagrupar',
+    'cat.excel': 'Excel',
+    'app.xls-sum': 'Autosuma',
+    'app.xls-fill-down': 'Rellenar hacia abajo',
+    'app.xls-table': 'Insertar tabla',
+    'app.xls-goto': 'Ir a celda',
+    'app.xls-new-sheet': 'Insertar nueva hoja',
+    'app.xls-filter': 'Alternar filtro',
+    'cat.gdocs': 'Google Docs',
+    'app.gdocs-comment': 'Insertar comentario',
+    'app.gdocs-footnote': 'Insertar nota al pie',
+    'app.gdocs-link': 'Insertar enlace',
+    'app.gdocs-wordcount': 'Contar palabras',
+    'app.gdocs-copy-format': 'Copiar formato',
+    'app.gdocs-paste-format': 'Pegar formato',
+    'cat.gsheets': 'Google Sheets',
+    'app.gsheets-currency': 'Formato moneda',
+    'app.gsheets-percent': 'Formato porcentaje',
+    'app.gsheets-link': 'Insertar enlace',
+    'app.gsheets-filter': 'Alternar filtro',
+    'app.gsheets-explore': 'Explorar',
+    'app.gsheets-fill-down': 'Rellenar hacia abajo',
+    'cat.premiere': 'Premiere Pro',
+    'app.pr-selection': 'Herramienta de selección',
+    'app.pr-razor': 'Herramienta cuchilla',
+    'app.pr-cut': 'Cortar en el cabezal',
+    'app.pr-sequence': 'Nueva secuencia',
+    'app.pr-match-frame': 'Coincidir fotograma',
+    'app.pr-render': 'Procesar de entrada a salida',
+    'cat.aftereffects': 'After Effects',
+    'app.ae-composition': 'Nueva composición',
+    'app.ae-ram-preview': 'Vista previa RAM',
+    'app.ae-split': 'Dividir capa',
+    'app.ae-precompose': 'Precomponer',
+    'app.ae-grid': 'Mostrar/ocultar cuadrícula',
+    'app.ae-purge': 'Purgar toda la memoria',
+    'cat.androidstudio': 'Android Studio',
+    'app.as-find-action': 'Buscar acción',
+    'app.as-run': 'Ejecutar',
+    'app.as-debug': 'Depurar',
+    'app.as-generate': 'Generar código',
+    'app.as-reformat': 'Reformatear código',
+    'app.as-rename': 'Cambiar nombre',
+    'cat.sublime': 'Sublime Text',
+    'app.sub-command-palette': 'Paleta de comandos',
+    'app.sub-goto-anything': 'Ir a cualquier cosa',
+    'app.sub-select-occurrence': 'Seleccionar siguiente aparición',
+    'app.sub-toggle-sidebar': 'Mostrar/ocultar barra lateral',
+    'app.sub-split-panes': 'Dividir panel: 2 columnas',
+    'app.sub-find-files': 'Buscar en archivos',
+    'custom-apps.title': 'Aplicaciones personalizadas',
+    'custom-apps.none': 'Aún no hay aplicaciones personalizadas',
+    'custom-apps.name-placeholder': 'Nombre de la app (p. ej. ChatGPT)',
+    'custom-apps.add-app': 'Añadir aplicación',
+    'custom-apps.add-shortcut': 'Añadir atajo',
+    'custom-apps.delete-app': 'Eliminar aplicación',
+    'search.everywhere': 'Buscar en todas las plataformas a la vez',
 };;
 
 i18n.fi = {
@@ -3685,6 +4151,83 @@ i18n.fi = {
     'app.outlook-search': 'Haku',
     'app.outlook-calendar': 'Siirry kalenteriin',
     'search.didyoumean': 'Tarkoititko {0}?',
+    'cat.gimp': 'GIMP',
+    'app.gimp-merge-down': 'Yhdistä alaspäin',
+    'app.gimp-duplicate-layer': 'Monista taso',
+    'app.gimp-quick-mask': 'Pikamaskin vaihto',
+    'app.gimp-new-layer': 'Uusi taso',
+    'app.gimp-zoom-in': 'Suurenna',
+    'app.gimp-toggle-guides': 'Näytä/piilota ohjausviivat',
+    'cat.obs': 'OBS Studio',
+    'app.obs-start-stream': 'Aloita / lopeta suoratoisto',
+    'app.obs-start-record': 'Aloita / lopeta tallennus',
+    'app.obs-studio-mode': 'Studiotila',
+    'app.obs-mute': 'Mykistyksen vaihto',
+    'app.obs-fullscreen': 'Koko näytön projektori',
+    'app.obs-screenshot': 'Ota kuvakaappaus',
+    'cat.powerpoint': 'PowerPoint',
+    'app.ppt-start': 'Aloita alusta',
+    'app.ppt-from-current': 'Aloita nykyiseltä dialta',
+    'app.ppt-new-slide': 'Uusi dia',
+    'app.ppt-duplicate-slide': 'Monista dia',
+    'app.ppt-group': 'Ryhmitä',
+    'app.ppt-ungroup': 'Pura ryhmitys',
+    'cat.excel': 'Excel',
+    'app.xls-sum': 'Autosumma',
+    'app.xls-fill-down': 'Täytä alaspäin',
+    'app.xls-table': 'Lisää taulukko',
+    'app.xls-goto': 'Siirry soluun',
+    'app.xls-new-sheet': 'Lisää uusi välilehti',
+    'app.xls-filter': 'Suodattimen vaihto',
+    'cat.gdocs': 'Google Docs',
+    'app.gdocs-comment': 'Lisää kommentti',
+    'app.gdocs-footnote': 'Lisää alaviite',
+    'app.gdocs-link': 'Lisää linkki',
+    'app.gdocs-wordcount': 'Sanalaskuri',
+    'app.gdocs-copy-format': 'Kopioi muotoilu',
+    'app.gdocs-paste-format': 'Liitä muotoilu',
+    'cat.gsheets': 'Google Sheets',
+    'app.gsheets-currency': 'Muotoile valuutaksi',
+    'app.gsheets-percent': 'Muotoile prosentiksi',
+    'app.gsheets-link': 'Lisää linkki',
+    'app.gsheets-filter': 'Suodattimen vaihto',
+    'app.gsheets-explore': 'Tutki',
+    'app.gsheets-fill-down': 'Täytä alaspäin',
+    'cat.premiere': 'Premiere Pro',
+    'app.pr-selection': 'Valintatyökalu',
+    'app.pr-razor': 'Partaterätyökalu',
+    'app.pr-cut': 'Leikkaa toistopään kohdalla',
+    'app.pr-sequence': 'Uusi sekvenssi',
+    'app.pr-match-frame': 'Yhdistä ruutu',
+    'app.pr-render': 'Renderöi in–out',
+    'cat.aftereffects': 'After Effects',
+    'app.ae-composition': 'Uusi kompositio',
+    'app.ae-ram-preview': 'RAM-esikatselu',
+    'app.ae-split': 'Jaa taso',
+    'app.ae-precompose': 'Esikomponoi',
+    'app.ae-grid': 'Ruudukon vaihto',
+    'app.ae-purge': 'Tyhjennä kaikki muisti',
+    'cat.androidstudio': 'Android Studio',
+    'app.as-find-action': 'Etsi toiminto',
+    'app.as-run': 'Suorita',
+    'app.as-debug': 'Suorita virheenkorjaus',
+    'app.as-generate': 'Luo koodia',
+    'app.as-reformat': 'Muotoile koodi uudelleen',
+    'app.as-rename': 'Nimeä uudelleen',
+    'cat.sublime': 'Sublime Text',
+    'app.sub-command-palette': 'Komentoalusta',
+    'app.sub-goto-anything': 'Siirry mihin tahansa',
+    'app.sub-select-occurrence': 'Valitse seuraava esiintymä',
+    'app.sub-toggle-sidebar': 'Näytä/piilota sivupalkki',
+    'app.sub-split-panes': 'Jako: 2 saraketta',
+    'app.sub-find-files': 'Etsi tiedostoista',
+    'custom-apps.title': 'Mukautetut sovellukset',
+    'custom-apps.none': 'Ei vielä mukautettuja sovelluksia',
+    'custom-apps.name-placeholder': 'Sovelluksen nimi (esim. ChatGPT)',
+    'custom-apps.add-app': 'Lisää sovellus',
+    'custom-apps.add-shortcut': 'Lisää pikanäppäin',
+    'custom-apps.delete-app': 'Poista sovellus',
+    'search.everywhere': 'Hae kaikista alustoista kerralla',
 };;
 
 i18n.fr = {
@@ -4209,6 +4752,83 @@ i18n.fr = {
     'app.outlook-search': 'Rechercher',
     'app.outlook-calendar': 'Aller au calendrier',
     'search.didyoumean': 'Vouliez-vous dire {0} ?',
+    'cat.gimp': 'GIMP',
+    'app.gimp-merge-down': 'Fusionner vers le bas',
+    'app.gimp-duplicate-layer': 'Dupliquer le calque',
+    'app.gimp-quick-mask': 'Basculer le masque rapide',
+    'app.gimp-new-layer': 'Nouveau calque',
+    'app.gimp-zoom-in': 'Zoom avant',
+    'app.gimp-toggle-guides': 'Afficher/masquer les guides',
+    'cat.obs': 'OBS Studio',
+    'app.obs-start-stream': 'Démarrer / arrêter le streaming',
+    'app.obs-start-record': 'Démarrer / arrêter l\'enregistrement',
+    'app.obs-studio-mode': 'Mode studio',
+    'app.obs-mute': 'Activer/désactiver le son',
+    'app.obs-fullscreen': 'Projecteur plein écran',
+    'app.obs-screenshot': 'Prendre une capture d\'écran',
+    'cat.powerpoint': 'PowerPoint',
+    'app.ppt-start': 'Démarrer depuis le début',
+    'app.ppt-from-current': 'Démarrer depuis la diapositive actuelle',
+    'app.ppt-new-slide': 'Nouvelle diapositive',
+    'app.ppt-duplicate-slide': 'Dupliquer la diapositive',
+    'app.ppt-group': 'Grouper',
+    'app.ppt-ungroup': 'Dissocier',
+    'cat.excel': 'Excel',
+    'app.xls-sum': 'Somme automatique',
+    'app.xls-fill-down': 'Recopier vers le bas',
+    'app.xls-table': 'Insérer un tableau',
+    'app.xls-goto': 'Aller à une cellule',
+    'app.xls-new-sheet': 'Insérer une nouvelle feuille',
+    'app.xls-filter': 'Activer/désactiver le filtre',
+    'cat.gdocs': 'Google Docs',
+    'app.gdocs-comment': 'Insérer un commentaire',
+    'app.gdocs-footnote': 'Insérer une note de bas de page',
+    'app.gdocs-link': 'Insérer un lien',
+    'app.gdocs-wordcount': 'Nombre de mots',
+    'app.gdocs-copy-format': 'Copier la mise en forme',
+    'app.gdocs-paste-format': 'Coller la mise en forme',
+    'cat.gsheets': 'Google Sheets',
+    'app.gsheets-currency': 'Format monnaie',
+    'app.gsheets-percent': 'Format pourcentage',
+    'app.gsheets-link': 'Insérer un lien',
+    'app.gsheets-filter': 'Activer/désactiver le filtre',
+    'app.gsheets-explore': 'Explorer',
+    'app.gsheets-fill-down': 'Recopier vers le bas',
+    'cat.premiere': 'Premiere Pro',
+    'app.pr-selection': 'Outil de sélection',
+    'app.pr-razor': 'Outil rasoir',
+    'app.pr-cut': 'Couper à la tête de lecture',
+    'app.pr-sequence': 'Nouvelle séquence',
+    'app.pr-match-frame': 'Cadre correspondant',
+    'app.pr-render': 'Rendu de l\'entrée à la sortie',
+    'cat.aftereffects': 'After Effects',
+    'app.ae-composition': 'Nouvelle composition',
+    'app.ae-ram-preview': 'Aperçu RAM',
+    'app.ae-split': 'Diviser le calque',
+    'app.ae-precompose': 'Précomposer',
+    'app.ae-grid': 'Afficher/masquer la grille',
+    'app.ae-purge': 'Vider toute la mémoire',
+    'cat.androidstudio': 'Android Studio',
+    'app.as-find-action': 'Rechercher une action',
+    'app.as-run': 'Exécuter',
+    'app.as-debug': 'Déboguer',
+    'app.as-generate': 'Générer du code',
+    'app.as-reformat': 'Reformater le code',
+    'app.as-rename': 'Renommer',
+    'cat.sublime': 'Sublime Text',
+    'app.sub-command-palette': 'Palette de commandes',
+    'app.sub-goto-anything': 'Aller à n\'importe quoi',
+    'app.sub-select-occurrence': 'Sélectionner l\'occurrence suivante',
+    'app.sub-toggle-sidebar': 'Afficher/masquer la barre latérale',
+    'app.sub-split-panes': 'Diviser en 2 colonnes',
+    'app.sub-find-files': 'Rechercher dans les fichiers',
+    'custom-apps.title': 'Applications personnalisées',
+    'custom-apps.none': 'Pas encore d\'applications personnalisées',
+    'custom-apps.name-placeholder': 'Nom de l\'application (ex. ChatGPT)',
+    'custom-apps.add-app': 'Ajouter une application',
+    'custom-apps.add-shortcut': 'Ajouter un raccourci',
+    'custom-apps.delete-app': 'Supprimer l\'application',
+    'search.everywhere': 'Rechercher sur toutes les plateformes à la fois',
 };
 
 i18n.hi = {
@@ -4732,6 +5352,83 @@ i18n.hi = {
     'app.outlook-search': 'खोजें',
     'app.outlook-calendar': 'कैलेंडर पर जाएँ',
     'search.didyoumean': 'क्या आपका मतलब {0} है?',
+    'cat.gimp': 'GIMP',
+    'app.gimp-merge-down': 'नीचे मर्ज करें',
+    'app.gimp-duplicate-layer': 'लेयर डुप्लिकेट करें',
+    'app.gimp-quick-mask': 'क्विक मास्क टॉगल करें',
+    'app.gimp-new-layer': 'नई लेयर',
+    'app.gimp-zoom-in': 'ज़ूम इन करें',
+    'app.gimp-toggle-guides': 'गाइड टॉगल करें',
+    'cat.obs': 'OBS Studio',
+    'app.obs-start-stream': 'स्ट्रीमिंग शुरू / बंद करें',
+    'app.obs-start-record': 'रिकॉर्डिंग शुरू / बंद करें',
+    'app.obs-studio-mode': 'स्टूडियो मोड',
+    'app.obs-mute': 'म्यूट टॉगल करें',
+    'app.obs-fullscreen': 'फुलस्क्रीन प्रोजेक्टर',
+    'app.obs-screenshot': 'स्क्रीनशॉट लें',
+    'cat.powerpoint': 'PowerPoint',
+    'app.ppt-start': 'शुरुआत से प्रारंभ करें',
+    'app.ppt-from-current': 'वर्तमान स्लाइड से शुरू करें',
+    'app.ppt-new-slide': 'नई स्लाइड',
+    'app.ppt-duplicate-slide': 'स्लाइड डुप्लिकेट करें',
+    'app.ppt-group': 'ग्रुप करें',
+    'app.ppt-ungroup': 'अनग्रुप करें',
+    'cat.excel': 'Excel',
+    'app.xls-sum': 'ऑटो सम',
+    'app.xls-fill-down': 'नीचे भरें',
+    'app.xls-table': 'टेबल डालें',
+    'app.xls-goto': 'सेल पर जाएँ',
+    'app.xls-new-sheet': 'नई शीट डालें',
+    'app.xls-filter': 'फ़िल्टर टॉगल करें',
+    'cat.gdocs': 'Google Docs',
+    'app.gdocs-comment': 'टिप्पणी डालें',
+    'app.gdocs-footnote': 'फुटनोट डालें',
+    'app.gdocs-link': 'लिंक डालें',
+    'app.gdocs-wordcount': 'शब्द गणना',
+    'app.gdocs-copy-format': 'फ़ॉर्मेटिंग कॉपी करें',
+    'app.gdocs-paste-format': 'फ़ॉर्मेटिंग पेस्ट करें',
+    'cat.gsheets': 'Google Sheets',
+    'app.gsheets-currency': 'मुद्रा के रूप में फ़ॉर्मेट करें',
+    'app.gsheets-percent': 'प्रतिशत के रूप में फ़ॉर्मेट करें',
+    'app.gsheets-link': 'लिंक डालें',
+    'app.gsheets-filter': 'फ़िल्टर टॉगल करें',
+    'app.gsheets-explore': 'एक्सप्लोर करें',
+    'app.gsheets-fill-down': 'नीचे भरें',
+    'cat.premiere': 'Premiere Pro',
+    'app.pr-selection': 'चयन टूल',
+    'app.pr-razor': 'रेज़र टूल',
+    'app.pr-cut': 'प्लेहेड पर काटें',
+    'app.pr-sequence': 'नया सीक्वेंस',
+    'app.pr-match-frame': 'मैच फ्रेम',
+    'app.pr-render': 'इन टू आउट रेंडर करें',
+    'cat.aftereffects': 'After Effects',
+    'app.ae-composition': 'नई कंपोज़िशन',
+    'app.ae-ram-preview': 'RAM प्रीव्यू',
+    'app.ae-split': 'लेयर विभाजित करें',
+    'app.ae-precompose': 'प्री-कंपोज़ करें',
+    'app.ae-grid': 'ग्रिड टॉगल करें',
+    'app.ae-purge': 'सभी मेमोरी शुद्ध करें',
+    'cat.androidstudio': 'Android Studio',
+    'app.as-find-action': 'एक्शन खोजें',
+    'app.as-run': 'चलाएँ',
+    'app.as-debug': 'डीबग करें',
+    'app.as-generate': 'कोड जनरेट करें',
+    'app.as-reformat': 'कोड रीफ़ॉर्मेट करें',
+    'app.as-rename': 'नाम बदलें',
+    'cat.sublime': 'Sublime Text',
+    'app.sub-command-palette': 'कमांड पैलेट',
+    'app.sub-goto-anything': 'एनीथिंग पर जाएँ',
+    'app.sub-select-occurrence': 'अगला ऑकरेंस चुनें',
+    'app.sub-toggle-sidebar': 'साइडबार टॉगल करें',
+    'app.sub-split-panes': '2 कॉलम में बाँटें',
+    'app.sub-find-files': 'फ़ाइलों में खोजें',
+    'custom-apps.title': 'कस्टम ऐप्स',
+    'custom-apps.none': 'अभी तक कोई कस्टम ऐप नहीं',
+    'custom-apps.name-placeholder': 'ऐप का नाम (जैसे ChatGPT)',
+    'custom-apps.add-app': 'ऐप जोड़ें',
+    'custom-apps.add-shortcut': 'शॉर्टकट जोड़ें',
+    'custom-apps.delete-app': 'ऐप हटाएँ',
+    'search.everywhere': 'एक साथ सभी प्लेटफ़ॉर्म में खोजें',
 };;
 
 i18n.hu = {
@@ -5255,6 +5952,83 @@ i18n.hu = {
     'app.outlook-search': 'Keresés',
     'app.outlook-calendar': 'Ugrás a naptárhoz',
     'search.didyoumean': 'Erre gondoltál: {0}?',
+    'cat.gimp': 'GIMP',
+    'app.gimp-merge-down': 'Összefűzés lefelé',
+    'app.gimp-duplicate-layer': 'Réteg duplikálása',
+    'app.gimp-quick-mask': 'Gyorsmaszk váltása',
+    'app.gimp-new-layer': 'Új réteg',
+    'app.gimp-zoom-in': 'Nagyítás',
+    'app.gimp-toggle-guides': 'Segédvonalak be/ki',
+    'cat.obs': 'OBS Studio',
+    'app.obs-start-stream': 'Közvetítés indítása / leállítása',
+    'app.obs-start-record': 'Felvétel indítása / leállítása',
+    'app.obs-studio-mode': 'Stúdiómód',
+    'app.obs-mute': 'Némítás váltása',
+    'app.obs-fullscreen': 'Teljes képernyős projektor',
+    'app.obs-screenshot': 'Képernyőkép készítése',
+    'cat.powerpoint': 'PowerPoint',
+    'app.ppt-start': 'Indítás az elejéről',
+    'app.ppt-from-current': 'Indítás az aktuális diáról',
+    'app.ppt-new-slide': 'Új dia',
+    'app.ppt-duplicate-slide': 'Dia duplikálása',
+    'app.ppt-group': 'Csoportosítás',
+    'app.ppt-ungroup': 'Csoportosítás feloldása',
+    'cat.excel': 'Excel',
+    'app.xls-sum': 'Autóösszeg',
+    'app.xls-fill-down': 'Kitöltés lefelé',
+    'app.xls-table': 'Táblázat beszúrása',
+    'app.xls-goto': 'Ugrás cellához',
+    'app.xls-new-sheet': 'Új lap beszúrása',
+    'app.xls-filter': 'Szűrő váltása',
+    'cat.gdocs': 'Google Docs',
+    'app.gdocs-comment': 'Megjegyzés beszúrása',
+    'app.gdocs-footnote': 'Lábjegyzet beszúrása',
+    'app.gdocs-link': 'Hivatkozás beszúrása',
+    'app.gdocs-wordcount': 'Szószámláló',
+    'app.gdocs-copy-format': 'Formázás másolása',
+    'app.gdocs-paste-format': 'Formázás beillesztése',
+    'cat.gsheets': 'Google Sheets',
+    'app.gsheets-currency': 'Formázás pénznemként',
+    'app.gsheets-percent': 'Formázás százalékként',
+    'app.gsheets-link': 'Hivatkozás beszúrása',
+    'app.gsheets-filter': 'Szűrő váltása',
+    'app.gsheets-explore': 'Felfedezés',
+    'app.gsheets-fill-down': 'Kitöltés lefelé',
+    'cat.premiere': 'Premiere Pro',
+    'app.pr-selection': 'Kijelölő eszköz',
+    'app.pr-razor': 'Borotva eszköz',
+    'app.pr-cut': 'Vágás a lejátszófejnél',
+    'app.pr-sequence': 'Új szekvencia',
+    'app.pr-match-frame': 'Képkocka egyeztetése',
+    'app.pr-render': 'Renderelés be–ki',
+    'cat.aftereffects': 'After Effects',
+    'app.ae-composition': 'Új kompozíció',
+    'app.ae-ram-preview': 'RAM előnézet',
+    'app.ae-split': 'Réteg felosztása',
+    'app.ae-precompose': 'Előkomponálás',
+    'app.ae-grid': 'Rács be/ki',
+    'app.ae-purge': 'Teljes memória törlése',
+    'cat.androidstudio': 'Android Studio',
+    'app.as-find-action': 'Művelet keresése',
+    'app.as-run': 'Futtatás',
+    'app.as-debug': 'Hibakeresés',
+    'app.as-generate': 'Kód generálása',
+    'app.as-reformat': 'Kód újraformázása',
+    'app.as-rename': 'Átnevezés',
+    'cat.sublime': 'Sublime Text',
+    'app.sub-command-palette': 'Parancskatalógus',
+    'app.sub-goto-anything': 'Ugrás bárhová',
+    'app.sub-select-occurrence': 'Következő előfordulás kijelölése',
+    'app.sub-toggle-sidebar': 'Oldalsáv be/ki',
+    'app.sub-split-panes': 'Felosztás: 2 oszlop',
+    'app.sub-find-files': 'Keresés fájlokban',
+    'custom-apps.title': 'Egyéni alkalmazások',
+    'custom-apps.none': 'Még nincsenek egyéni alkalmazások',
+    'custom-apps.name-placeholder': 'Alkalmazás neve (pl. ChatGPT)',
+    'custom-apps.add-app': 'Alkalmazás hozzáadása',
+    'custom-apps.add-shortcut': 'Gyorsbillentyű hozzáadása',
+    'custom-apps.delete-app': 'Alkalmazás törlése',
+    'search.everywhere': 'Keresés az összes platformon egyszerre',
 };;
 
 i18n.it = {
@@ -5778,6 +6552,83 @@ i18n.it = {
     'app.outlook-search': 'Cerca',
     'app.outlook-calendar': 'Vai al calendario',
     'search.didyoumean': 'Volevi dire {0}?',
+    'cat.gimp': 'GIMP',
+    'app.gimp-merge-down': 'Unisci verso il basso',
+    'app.gimp-duplicate-layer': 'Duplica livello',
+    'app.gimp-quick-mask': 'Attiva/disattiva maschera rapida',
+    'app.gimp-new-layer': 'Nuovo livello',
+    'app.gimp-zoom-in': 'Ingrandisci',
+    'app.gimp-toggle-guides': 'Mostra/nascondi guide',
+    'cat.obs': 'OBS Studio',
+    'app.obs-start-stream': 'Avvia / interrompi streaming',
+    'app.obs-start-record': 'Avvia / interrompi registrazione',
+    'app.obs-studio-mode': 'Modalità studio',
+    'app.obs-mute': 'Attiva/disattiva audio',
+    'app.obs-fullscreen': 'Proiettore a schermo intero',
+    'app.obs-screenshot': 'Acquisisci schermata',
+    'cat.powerpoint': 'PowerPoint',
+    'app.ppt-start': 'Avvia dall\'inizio',
+    'app.ppt-from-current': 'Avvia dalla diapositiva corrente',
+    'app.ppt-new-slide': 'Nuova diapositiva',
+    'app.ppt-duplicate-slide': 'Duplica diapositiva',
+    'app.ppt-group': 'Raggruppa',
+    'app.ppt-ungroup': 'Separa',
+    'cat.excel': 'Excel',
+    'app.xls-sum': 'Somma automatica',
+    'app.xls-fill-down': 'Completa verso il basso',
+    'app.xls-table': 'Inserisci tabella',
+    'app.xls-goto': 'Vai alla cella',
+    'app.xls-new-sheet': 'Inserisci nuovo foglio',
+    'app.xls-filter': 'Attiva/disattiva filtro',
+    'cat.gdocs': 'Google Docs',
+    'app.gdocs-comment': 'Inserisci commento',
+    'app.gdocs-footnote': 'Inserisci nota a piè di pagina',
+    'app.gdocs-link': 'Inserisci collegamento',
+    'app.gdocs-wordcount': 'Conteggio parole',
+    'app.gdocs-copy-format': 'Copia formattazione',
+    'app.gdocs-paste-format': 'Incolla formattazione',
+    'cat.gsheets': 'Google Sheets',
+    'app.gsheets-currency': 'Formato valuta',
+    'app.gsheets-percent': 'Formato percentuale',
+    'app.gsheets-link': 'Inserisci collegamento',
+    'app.gsheets-filter': 'Attiva/disattiva filtro',
+    'app.gsheets-explore': 'Esplora',
+    'app.gsheets-fill-down': 'Completa verso il basso',
+    'cat.premiere': 'Premiere Pro',
+    'app.pr-selection': 'Strumento selezione',
+    'app.pr-razor': 'Strumento rasoio',
+    'app.pr-cut': 'Taglia in corrispondenza della testina',
+    'app.pr-sequence': 'Nuova sequenza',
+    'app.pr-match-frame': 'Corrispondenza fotogramma',
+    'app.pr-render': 'Renderizza da in a out',
+    'cat.aftereffects': 'After Effects',
+    'app.ae-composition': 'Nuova composizione',
+    'app.ae-ram-preview': 'Anteprima RAM',
+    'app.ae-split': 'Dividi livello',
+    'app.ae-precompose': 'Pre-componi',
+    'app.ae-grid': 'Mostra/nascondi griglia',
+    'app.ae-purge': 'Svuota tutta la memoria',
+    'cat.androidstudio': 'Android Studio',
+    'app.as-find-action': 'Cerca azione',
+    'app.as-run': 'Esegui',
+    'app.as-debug': 'Debug',
+    'app.as-generate': 'Genera codice',
+    'app.as-reformat': 'Riformatta codice',
+    'app.as-rename': 'Rinomina',
+    'cat.sublime': 'Sublime Text',
+    'app.sub-command-palette': 'Paletta comandi',
+    'app.sub-goto-anything': 'Vai a qualsiasi cosa',
+    'app.sub-select-occurrence': 'Seleziona occorrenza successiva',
+    'app.sub-toggle-sidebar': 'Mostra/nascondi barra laterale',
+    'app.sub-split-panes': 'Dividi riquadro: 2 colonne',
+    'app.sub-find-files': 'Cerca nei file',
+    'custom-apps.title': 'App personalizzate',
+    'custom-apps.none': 'Nessuna app personalizzata',
+    'custom-apps.name-placeholder': 'Nome dell\'app (es. ChatGPT)',
+    'custom-apps.add-app': 'Aggiungi app',
+    'custom-apps.add-shortcut': 'Aggiungi scorciatoia',
+    'custom-apps.delete-app': 'Elimina app',
+    'search.everywhere': 'Cerca su tutte le piattaforme in una volta',
 };;
 
 i18n.ja = {
@@ -6301,6 +7152,83 @@ i18n.ja = {
     'app.outlook-search': '検索',
     'app.outlook-calendar': 'カレンダーへ移動',
     'search.didyoumean': '{0} のことですか?',
+    'cat.gimp': 'GIMP',
+    'app.gimp-merge-down': '下のレイヤーに結合',
+    'app.gimp-duplicate-layer': 'レイヤーを複製',
+    'app.gimp-quick-mask': 'クイックマスクの切り替え',
+    'app.gimp-new-layer': '新規レイヤー',
+    'app.gimp-zoom-in': '拡大',
+    'app.gimp-toggle-guides': 'ガイドの表示/非表示',
+    'cat.obs': 'OBS Studio',
+    'app.obs-start-stream': '配信の開始 / 停止',
+    'app.obs-start-record': '録画の開始 / 停止',
+    'app.obs-studio-mode': 'スタジオモード',
+    'app.obs-mute': 'ミュートの切り替え',
+    'app.obs-fullscreen': 'フルスクリーンプロジェクター',
+    'app.obs-screenshot': 'スクリーンショットを撮る',
+    'cat.powerpoint': 'PowerPoint',
+    'app.ppt-start': '最初から開始',
+    'app.ppt-from-current': '現在のスライドから開始',
+    'app.ppt-new-slide': '新しいスライド',
+    'app.ppt-duplicate-slide': 'スライドを複製',
+    'app.ppt-group': 'グループ化',
+    'app.ppt-ungroup': 'グループ解除',
+    'cat.excel': 'Excel',
+    'app.xls-sum': 'オートSUM',
+    'app.xls-fill-down': '下方向にフィル',
+    'app.xls-table': 'テーブルを挿入',
+    'app.xls-goto': 'セルに移動',
+    'app.xls-new-sheet': '新しいシートを挿入',
+    'app.xls-filter': 'フィルターの切り替え',
+    'cat.gdocs': 'Google Docs',
+    'app.gdocs-comment': 'コメントを挿入',
+    'app.gdocs-footnote': '脚注を挿入',
+    'app.gdocs-link': 'リンクを挿入',
+    'app.gdocs-wordcount': '単語数',
+    'app.gdocs-copy-format': '書式をコピー',
+    'app.gdocs-paste-format': '書式を貼り付け',
+    'cat.gsheets': 'Google Sheets',
+    'app.gsheets-currency': '通貨として書式設定',
+    'app.gsheets-percent': 'パーセントとして書式設定',
+    'app.gsheets-link': 'リンクを挿入',
+    'app.gsheets-filter': 'フィルターの切り替え',
+    'app.gsheets-explore': '探索',
+    'app.gsheets-fill-down': '下方向にフィル',
+    'cat.premiere': 'Premiere Pro',
+    'app.pr-selection': '選択ツール',
+    'app.pr-razor': 'かみそりツール',
+    'app.pr-cut': '再生ヘッド位置でカット',
+    'app.pr-sequence': '新規シーケンス',
+    'app.pr-match-frame': 'フレーム一致',
+    'app.pr-render': 'インからアウトまでレンダリング',
+    'cat.aftereffects': 'After Effects',
+    'app.ae-composition': '新規コンポジション',
+    'app.ae-ram-preview': 'RAMプレビュー',
+    'app.ae-split': 'レイヤーを分割',
+    'app.ae-precompose': 'プリコンポーズ',
+    'app.ae-grid': 'グリッドの表示/非表示',
+    'app.ae-purge': 'すべてのメモリを解放',
+    'cat.androidstudio': 'Android Studio',
+    'app.as-find-action': 'アクション検索',
+    'app.as-run': '実行',
+    'app.as-debug': 'デバッグ',
+    'app.as-generate': 'コードを生成',
+    'app.as-reformat': 'コードの整形',
+    'app.as-rename': '名前変更',
+    'cat.sublime': 'Sublime Text',
+    'app.sub-command-palette': 'コマンドパレット',
+    'app.sub-goto-anything': 'Anythingへ移動',
+    'app.sub-select-occurrence': '次の出現箇所を選択',
+    'app.sub-toggle-sidebar': 'サイドバーの表示/非表示',
+    'app.sub-split-panes': '2カラムに分割',
+    'app.sub-find-files': 'ファイル内検索',
+    'custom-apps.title': 'カスタムアプリ',
+    'custom-apps.none': 'カスタムアプリはまだありません',
+    'custom-apps.name-placeholder': 'アプリ名（例: ChatGPT）',
+    'custom-apps.add-app': 'アプリを追加',
+    'custom-apps.add-shortcut': 'ショートカットを追加',
+    'custom-apps.delete-app': 'アプリを削除',
+    'search.everywhere': 'すべてのプラットフォームを一度に検索',
 };;
 
 i18n.ko = {
@@ -6824,6 +7752,83 @@ i18n.ko = {
     'app.outlook-search': '검색',
     'app.outlook-calendar': '캘린더로 이동',
     'search.didyoumean': '{0} 을(를) 의미하나요?',
+    'cat.gimp': 'GIMP',
+    'app.gimp-merge-down': '아래로 병합',
+    'app.gimp-duplicate-layer': '레이어 복제',
+    'app.gimp-quick-mask': '빠른 마스크 전환',
+    'app.gimp-new-layer': '새 레이어',
+    'app.gimp-zoom-in': '확대',
+    'app.gimp-toggle-guides': '안내선 전환',
+    'cat.obs': 'OBS Studio',
+    'app.obs-start-stream': '스트리밍 시작 / 중지',
+    'app.obs-start-record': '녹화 시작 / 중지',
+    'app.obs-studio-mode': '스튜디오 모드',
+    'app.obs-mute': '음소거 전환',
+    'app.obs-fullscreen': '전체 화면 프로젝터',
+    'app.obs-screenshot': '스크린샷 찍기',
+    'cat.powerpoint': 'PowerPoint',
+    'app.ppt-start': '처음부터 시작',
+    'app.ppt-from-current': '현재 슬라이드에서 시작',
+    'app.ppt-new-slide': '새 슬라이드',
+    'app.ppt-duplicate-slide': '슬라이드 복제',
+    'app.ppt-group': '그룹화',
+    'app.ppt-ungroup': '그룹 해제',
+    'cat.excel': 'Excel',
+    'app.xls-sum': '자동 합계',
+    'app.xls-fill-down': '아래로 채우기',
+    'app.xls-table': '표 삽입',
+    'app.xls-goto': '셀로 이동',
+    'app.xls-new-sheet': '새 시트 삽입',
+    'app.xls-filter': '필터 전환',
+    'cat.gdocs': 'Google Docs',
+    'app.gdocs-comment': '댓글 삽입',
+    'app.gdocs-footnote': '각주 삽입',
+    'app.gdocs-link': '링크 삽입',
+    'app.gdocs-wordcount': '단어 수',
+    'app.gdocs-copy-format': '서식 복사',
+    'app.gdocs-paste-format': '서식 붙여넣기',
+    'cat.gsheets': 'Google Sheets',
+    'app.gsheets-currency': '통화 형식',
+    'app.gsheets-percent': '백분율 형식',
+    'app.gsheets-link': '링크 삽입',
+    'app.gsheets-filter': '필터 전환',
+    'app.gsheets-explore': '탐색',
+    'app.gsheets-fill-down': '아래로 채우기',
+    'cat.premiere': 'Premiere Pro',
+    'app.pr-selection': '선택 도구',
+    'app.pr-razor': '면도날 도구',
+    'app.pr-cut': '재생헤드에서 자르기',
+    'app.pr-sequence': '새 시퀀스',
+    'app.pr-match-frame': '프레임 일치',
+    'app.pr-render': '인-아웃 렌더링',
+    'cat.aftereffects': 'After Effects',
+    'app.ae-composition': '새 컴포지션',
+    'app.ae-ram-preview': 'RAM 미리보기',
+    'app.ae-split': '레이어 분할',
+    'app.ae-precompose': '프리컴포즈',
+    'app.ae-grid': '격자 전환',
+    'app.ae-purge': '모든 메모리 비우기',
+    'cat.androidstudio': 'Android Studio',
+    'app.as-find-action': '액션 찾기',
+    'app.as-run': '실행',
+    'app.as-debug': '디버그',
+    'app.as-generate': '코드 생성',
+    'app.as-reformat': '코드 재서식',
+    'app.as-rename': '이름 바꾸기',
+    'cat.sublime': 'Sublime Text',
+    'app.sub-command-palette': '명령 팔레트',
+    'app.sub-goto-anything': 'Anything로 이동',
+    'app.sub-select-occurrence': '다음 항목 선택',
+    'app.sub-toggle-sidebar': '사이드바 전환',
+    'app.sub-split-panes': '2열 분할',
+    'app.sub-find-files': '파일에서 찾기',
+    'custom-apps.title': '사용자 지정 앱',
+    'custom-apps.none': '아직 사용자 지정 앱 없음',
+    'custom-apps.name-placeholder': '앱 이름 (예: ChatGPT)',
+    'custom-apps.add-app': '앱 추가',
+    'custom-apps.add-shortcut': '바로 가기 추가',
+    'custom-apps.delete-app': '앱 삭제',
+    'search.everywhere': '모든 플랫폼에서 한 번에 검색',
 };;
 
 i18n.nl = {
@@ -7347,6 +8352,83 @@ i18n.nl = {
     'app.outlook-search': 'Zoeken',
     'app.outlook-calendar': 'Naar agenda',
     'search.didyoumean': 'Bedoelde je {0}?',
+    'cat.gimp': 'GIMP',
+    'app.gimp-merge-down': 'Naar beneden samenvoegen',
+    'app.gimp-duplicate-layer': 'Laag dupliceren',
+    'app.gimp-quick-mask': 'Snelle masker wisselen',
+    'app.gimp-new-layer': 'Nieuwe laag',
+    'app.gimp-zoom-in': 'Inzoomen',
+    'app.gimp-toggle-guides': 'Hulplijnen tonen/verbergen',
+    'cat.obs': 'OBS Studio',
+    'app.obs-start-stream': 'Stream starten/stoppen',
+    'app.obs-start-record': 'Opname starten/stoppen',
+    'app.obs-studio-mode': 'Studiomodus',
+    'app.obs-mute': 'Dempen aan/uit',
+    'app.obs-fullscreen': 'Volledig scherm-projector',
+    'app.obs-screenshot': 'Schermafdruk maken',
+    'cat.powerpoint': 'PowerPoint',
+    'app.ppt-start': 'Van begin af aan starten',
+    'app.ppt-from-current': 'Van huidige dia starten',
+    'app.ppt-new-slide': 'Nieuwe dia',
+    'app.ppt-duplicate-slide': 'Dia dupliceren',
+    'app.ppt-group': 'Groeperen',
+    'app.ppt-ungroup': 'Groep opheffen',
+    'cat.excel': 'Excel',
+    'app.xls-sum': 'Autosom',
+    'app.xls-fill-down': 'Naar beneden vullen',
+    'app.xls-table': 'Tabel invoegen',
+    'app.xls-goto': 'Naar cel gaan',
+    'app.xls-new-sheet': 'Nieuw blad invoegen',
+    'app.xls-filter': 'Filter aan/uit',
+    'cat.gdocs': 'Google Docs',
+    'app.gdocs-comment': 'Opmerking invoegen',
+    'app.gdocs-footnote': 'Voetnoot invoegen',
+    'app.gdocs-link': 'Link invoegen',
+    'app.gdocs-wordcount': 'Woordentelling',
+    'app.gdocs-copy-format': 'Opmaak kopiëren',
+    'app.gdocs-paste-format': 'Opmaak plakken',
+    'cat.gsheets': 'Google Sheets',
+    'app.gsheets-currency': 'Opmaak als valuta',
+    'app.gsheets-percent': 'Opmaak als percentage',
+    'app.gsheets-link': 'Link invoegen',
+    'app.gsheets-filter': 'Filter aan/uit',
+    'app.gsheets-explore': 'Verkennen',
+    'app.gsheets-fill-down': 'Naar beneden vullen',
+    'cat.premiere': 'Premiere Pro',
+    'app.pr-selection': 'Selectiegereedschap',
+    'app.pr-razor': 'Scheermesgereedschap',
+    'app.pr-cut': 'Knippen bij afspeelkop',
+    'app.pr-sequence': 'Nieuwe reeks',
+    'app.pr-match-frame': 'Frame matchen',
+    'app.pr-render': 'Renden van in- naar out-point',
+    'cat.aftereffects': 'After Effects',
+    'app.ae-composition': 'Nieuwe compositie',
+    'app.ae-ram-preview': 'RAM-voorbeeld',
+    'app.ae-split': 'Laag splitsen',
+    'app.ae-precompose': 'Voorcomposeren',
+    'app.ae-grid': 'Raster tonen/verbergen',
+    'app.ae-purge': 'Alle geheugen wissen',
+    'cat.androidstudio': 'Android Studio',
+    'app.as-find-action': 'Actie zoeken',
+    'app.as-run': 'Uitvoeren',
+    'app.as-debug': 'Debuggen',
+    'app.as-generate': 'Code genereren',
+    'app.as-reformat': 'Code herformatteren',
+    'app.as-rename': 'Hernoemen',
+    'cat.sublime': 'Sublime Text',
+    'app.sub-command-palette': 'Opdrachtenpalet',
+    'app.sub-goto-anything': 'Naar alles gaan',
+    'app.sub-select-occurrence': 'Volgend voorkomen selecteren',
+    'app.sub-toggle-sidebar': 'Zijbalk tonen/verbergen',
+    'app.sub-split-panes': 'Splitsen: 2 kolommen',
+    'app.sub-find-files': 'Zoeken in bestanden',
+    'custom-apps.title': 'Aangepaste apps',
+    'custom-apps.none': 'Nog geen aangepaste apps',
+    'custom-apps.name-placeholder': 'App-naam (bijv. ChatGPT)',
+    'custom-apps.add-app': 'App toevoegen',
+    'custom-apps.add-shortcut': 'Snelkoppeling toevoegen',
+    'custom-apps.delete-app': 'App verwijderen',
+    'search.everywhere': 'Zoek op alle platforms tegelijk',
 };;
 
 i18n.no = {
@@ -7870,6 +8952,83 @@ i18n.no = {
     'app.outlook-search': 'Søk',
     'app.outlook-calendar': 'Gå til kalender',
     'search.didyoumean': 'Mente du {0}?',
+    'cat.gimp': 'GIMP',
+    'app.gimp-merge-down': 'Slå sammen nedover',
+    'app.gimp-duplicate-layer': 'Dupliser lag',
+    'app.gimp-quick-mask': 'Veksle hurtigmask',
+    'app.gimp-new-layer': 'Nytt lag',
+    'app.gimp-zoom-in': 'Zoom inn',
+    'app.gimp-toggle-guides': 'Vis/skjul hjelpelinjer',
+    'cat.obs': 'OBS Studio',
+    'app.obs-start-stream': 'Start / stopp strømming',
+    'app.obs-start-record': 'Start / stopp opptak',
+    'app.obs-studio-mode': 'Studiomoduser',
+    'app.obs-mute': 'Veksle demping',
+    'app.obs-fullscreen': 'Fullskjermsprojektor',
+    'app.obs-screenshot': 'Ta skjermbilde',
+    'cat.powerpoint': 'PowerPoint',
+    'app.ppt-start': 'Start fra begynnelsen',
+    'app.ppt-from-current': 'Start fra gjeldende lysbilde',
+    'app.ppt-new-slide': 'Nytt lysbilde',
+    'app.ppt-duplicate-slide': 'Dupliser lysbilde',
+    'app.ppt-group': 'Grupper',
+    'app.ppt-ungroup': 'Del opp gruppe',
+    'cat.excel': 'Excel',
+    'app.xls-sum': 'Autosummer',
+    'app.xls-fill-down': 'Fyll nedover',
+    'app.xls-table': 'Sett inn tabell',
+    'app.xls-goto': 'Gå til celle',
+    'app.xls-new-sheet': 'Sett inn nytt ark',
+    'app.xls-filter': 'Veksle filter',
+    'cat.gdocs': 'Google Docs',
+    'app.gdocs-comment': 'Sett inn kommentar',
+    'app.gdocs-footnote': 'Sett inn fotnote',
+    'app.gdocs-link': 'Sett inn lenke',
+    'app.gdocs-wordcount': 'Ordtelling',
+    'app.gdocs-copy-format': 'Kopier formatering',
+    'app.gdocs-paste-format': 'Lim inn formatering',
+    'cat.gsheets': 'Google Sheets',
+    'app.gsheets-currency': 'Formater som valuta',
+    'app.gsheets-percent': 'Formater som prosent',
+    'app.gsheets-link': 'Sett inn lenke',
+    'app.gsheets-filter': 'Veksle filter',
+    'app.gsheets-explore': 'Utforsk',
+    'app.gsheets-fill-down': 'Fyll nedover',
+    'cat.premiere': 'Premiere Pro',
+    'app.pr-selection': 'Markeringsverktøy',
+    'app.pr-razor': 'Barberblad-verktøy',
+    'app.pr-cut': 'Kutt ved avspillingshode',
+    'app.pr-sequence': 'Ny sekvens',
+    'app.pr-match-frame': 'Match frame',
+    'app.pr-render': 'Render inn–ut',
+    'cat.aftereffects': 'After Effects',
+    'app.ae-composition': 'Ny komposisjon',
+    'app.ae-ram-preview': 'RAM-forhåndsvisning',
+    'app.ae-split': 'Del lag',
+    'app.ae-precompose': 'Forhåndskomponér',
+    'app.ae-grid': 'Vis/skjul rutenett',
+    'app.ae-purge': 'Tøm alt minne',
+    'cat.androidstudio': 'Android Studio',
+    'app.as-find-action': 'Finn handling',
+    'app.as-run': 'Kjør',
+    'app.as-debug': 'Feilsøk',
+    'app.as-generate': 'Generer kode',
+    'app.as-reformat': 'Omformater kode',
+    'app.as-rename': 'Gi nytt navn',
+    'cat.sublime': 'Sublime Text',
+    'app.sub-command-palette': 'Kommandopalett',
+    'app.sub-goto-anything': 'Gå til hva som helst',
+    'app.sub-select-occurrence': 'Velg neste forekomst',
+    'app.sub-toggle-sidebar': 'Vis/skjul sidepanel',
+    'app.sub-split-panes': 'Delt: 2 kolonner',
+    'app.sub-find-files': 'Søk i filer',
+    'custom-apps.title': 'Egendefinerte apper',
+    'custom-apps.none': 'Ingen egendefinerte apper ennå',
+    'custom-apps.name-placeholder': 'App-navn (f.eks. ChatGPT)',
+    'custom-apps.add-app': 'Legg til app',
+    'custom-apps.add-shortcut': 'Legg til snarvei',
+    'custom-apps.delete-app': 'Slett app',
+    'search.everywhere': 'Søk på alle plattformer samtidig',
 };;
 
 i18n.pl = {
@@ -8393,6 +9552,83 @@ i18n.pl = {
     'app.outlook-search': 'Szukaj',
     'app.outlook-calendar': 'Przejdź do kalendarza',
     'search.didyoumean': 'Czy chodziło ci o {0}?',
+    'cat.gimp': 'GIMP',
+    'app.gimp-merge-down': 'Połącz w dół',
+    'app.gimp-duplicate-layer': 'Duplikuj warstwę',
+    'app.gimp-quick-mask': 'Przełącz szybką maskę',
+    'app.gimp-new-layer': 'Nowa warstwa',
+    'app.gimp-zoom-in': 'Powiększ',
+    'app.gimp-toggle-guides': 'Pokaż/ukryj linie pomocnicze',
+    'cat.obs': 'OBS Studio',
+    'app.obs-start-stream': 'Rozpocznij / zakończ transmisję',
+    'app.obs-start-record': 'Rozpocznij / zakończ nagrywanie',
+    'app.obs-studio-mode': 'Tryb studyjny',
+    'app.obs-mute': 'Przełącz wyciszenie',
+    'app.obs-fullscreen': 'Projektor pełnoekranowy',
+    'app.obs-screenshot': 'Zrób zrzut ekranu',
+    'cat.powerpoint': 'PowerPoint',
+    'app.ppt-start': 'Rozpocznij od początku',
+    'app.ppt-from-current': 'Uruchom od bieżącego slajdu',
+    'app.ppt-new-slide': 'Nowy slajd',
+    'app.ppt-duplicate-slide': 'Duplikuj slajd',
+    'app.ppt-group': 'Grupuj',
+    'app.ppt-ungroup': 'Rozgrupuj',
+    'cat.excel': 'Excel',
+    'app.xls-sum': 'Autosumowanie',
+    'app.xls-fill-down': 'Wypełnij w dół',
+    'app.xls-table': 'Wstaw tabelę',
+    'app.xls-goto': 'Przejdź do komórki',
+    'app.xls-new-sheet': 'Wstaw nowy arkusz',
+    'app.xls-filter': 'Przełącz filtr',
+    'cat.gdocs': 'Google Docs',
+    'app.gdocs-comment': 'Wstaw komentarz',
+    'app.gdocs-footnote': 'Wstaw przypis dolny',
+    'app.gdocs-link': 'Wstaw link',
+    'app.gdocs-wordcount': 'Liczba słów',
+    'app.gdocs-copy-format': 'Kopiuj formatowanie',
+    'app.gdocs-paste-format': 'Wklej formatowanie',
+    'cat.gsheets': 'Google Sheets',
+    'app.gsheets-currency': 'Formatuj jako walutę',
+    'app.gsheets-percent': 'Formatuj jako procent',
+    'app.gsheets-link': 'Wstaw link',
+    'app.gsheets-filter': 'Przełącz filtr',
+    'app.gsheets-explore': 'Przeglądaj',
+    'app.gsheets-fill-down': 'Wypełnij w dół',
+    'cat.premiere': 'Premiere Pro',
+    'app.pr-selection': 'Narzędzie zaznaczania',
+    'app.pr-razor': 'Narzędzie żyletka',
+    'app.pr-cut': 'Wytnij w miejscu wskaźnika',
+    'app.pr-sequence': 'Nowa sekwencja',
+    'app.pr-match-frame': 'Dopasuj klatkę',
+    'app.pr-render': 'Renderuj od punktu wejścia do wyjścia',
+    'cat.aftereffects': 'After Effects',
+    'app.ae-composition': 'Nowa kompozycja',
+    'app.ae-ram-preview': 'Podgląd RAM',
+    'app.ae-split': 'Podziel warstwę',
+    'app.ae-precompose': 'Prekomponuj',
+    'app.ae-grid': 'Pokaż/ukryj siatkę',
+    'app.ae-purge': 'Wyczyść całą pamięć',
+    'cat.androidstudio': 'Android Studio',
+    'app.as-find-action': 'Znajdź akcję',
+    'app.as-run': 'Uruchom',
+    'app.as-debug': 'Debuguj',
+    'app.as-generate': 'Generuj kod',
+    'app.as-reformat': 'Przeformatuj kod',
+    'app.as-rename': 'Zmień nazwę',
+    'cat.sublime': 'Sublime Text',
+    'app.sub-command-palette': 'Paleta poleceń',
+    'app.sub-goto-anything': 'Przejdź do wszystkiego',
+    'app.sub-select-occurrence': 'Zaznacz kolejne wystąpienie',
+    'app.sub-toggle-sidebar': 'Pokaż/ukryj panel boczny',
+    'app.sub-split-panes': 'Podział: 2 kolumny',
+    'app.sub-find-files': 'Szukaj w plikach',
+    'custom-apps.title': 'Własne aplikacje',
+    'custom-apps.none': 'Brak własnych aplikacji',
+    'custom-apps.name-placeholder': 'Nazwa aplikacji (np. ChatGPT)',
+    'custom-apps.add-app': 'Dodaj aplikację',
+    'custom-apps.add-shortcut': 'Dodaj skrót',
+    'custom-apps.delete-app': 'Usuń aplikację',
+    'search.everywhere': 'Szukaj na wszystkich platformach naraz',
 };;
 
 i18n.pt = {
@@ -8916,6 +10152,83 @@ i18n.pt = {
     'app.outlook-search': 'Pesquisar',
     'app.outlook-calendar': 'Ir para a agenda',
     'search.didyoumean': 'Você quis dizer {0}?',
+    'cat.gimp': 'GIMP',
+    'app.gimp-merge-down': 'Combinar para baixo',
+    'app.gimp-duplicate-layer': 'Duplicar camada',
+    'app.gimp-quick-mask': 'Alternar máscara rápida',
+    'app.gimp-new-layer': 'Nova camada',
+    'app.gimp-zoom-in': 'Ampliar',
+    'app.gimp-toggle-guides': 'Mostrar/ocultar guias',
+    'cat.obs': 'OBS Studio',
+    'app.obs-start-stream': 'Iniciar / parar transmissão',
+    'app.obs-start-record': 'Iniciar / parar gravação',
+    'app.obs-studio-mode': 'Modo estúdio',
+    'app.obs-mute': 'Alternar mudo',
+    'app.obs-fullscreen': 'Projetor em tela cheia',
+    'app.obs-screenshot': 'Tirar captura de tela',
+    'cat.powerpoint': 'PowerPoint',
+    'app.ppt-start': 'Iniciar do começo',
+    'app.ppt-from-current': 'Iniciar do slide atual',
+    'app.ppt-new-slide': 'Novo slide',
+    'app.ppt-duplicate-slide': 'Duplicar slide',
+    'app.ppt-group': 'Agrupar',
+    'app.ppt-ungroup': 'Desagrupar',
+    'cat.excel': 'Excel',
+    'app.xls-sum': 'Autosoma',
+    'app.xls-fill-down': 'Preencher para baixo',
+    'app.xls-table': 'Inserir tabela',
+    'app.xls-goto': 'Ir para célula',
+    'app.xls-new-sheet': 'Inserir nova planilha',
+    'app.xls-filter': 'Alternar filtro',
+    'cat.gdocs': 'Google Docs',
+    'app.gdocs-comment': 'Inserir comentário',
+    'app.gdocs-footnote': 'Inserir nota de rodapé',
+    'app.gdocs-link': 'Inserir link',
+    'app.gdocs-wordcount': 'Contagem de palavras',
+    'app.gdocs-copy-format': 'Copiar formatação',
+    'app.gdocs-paste-format': 'Colar formatação',
+    'cat.gsheets': 'Google Sheets',
+    'app.gsheets-currency': 'Formatar como moeda',
+    'app.gsheets-percent': 'Formatar como porcentagem',
+    'app.gsheets-link': 'Inserir link',
+    'app.gsheets-filter': 'Alternar filtro',
+    'app.gsheets-explore': 'Explorar',
+    'app.gsheets-fill-down': 'Preencher para baixo',
+    'cat.premiere': 'Premiere Pro',
+    'app.pr-selection': 'Ferramenta de seleção',
+    'app.pr-razor': 'Ferramenta lâmina',
+    'app.pr-cut': 'Cortar no playhead',
+    'app.pr-sequence': 'Nova sequência',
+    'app.pr-match-frame': 'Corresponder quadro',
+    'app.pr-render': 'Renderizar do início ao fim',
+    'cat.aftereffects': 'After Effects',
+    'app.ae-composition': 'Nova composição',
+    'app.ae-ram-preview': 'Pré-visualização RAM',
+    'app.ae-split': 'Dividir camada',
+    'app.ae-precompose': 'Pré-compor',
+    'app.ae-grid': 'Mostrar/ocultar grade',
+    'app.ae-purge': 'Limpar toda a memória',
+    'cat.androidstudio': 'Android Studio',
+    'app.as-find-action': 'Localizar ação',
+    'app.as-run': 'Executar',
+    'app.as-debug': 'Depurar',
+    'app.as-generate': 'Gerar código',
+    'app.as-reformat': 'Reformatar código',
+    'app.as-rename': 'Renomear',
+    'cat.sublime': 'Sublime Text',
+    'app.sub-command-palette': 'Paleta de comandos',
+    'app.sub-goto-anything': 'Ir para qualquer coisa',
+    'app.sub-select-occurrence': 'Selecionar próxima ocorrência',
+    'app.sub-toggle-sidebar': 'Mostrar/ocultar barra lateral',
+    'app.sub-split-panes': 'Dividir painel: 2 colunas',
+    'app.sub-find-files': 'Localizar em arquivos',
+    'custom-apps.title': 'Aplicativos personalizados',
+    'custom-apps.none': 'Ainda não há aplicativos personalizados',
+    'custom-apps.name-placeholder': 'Nome do aplicativo (ex. ChatGPT)',
+    'custom-apps.add-app': 'Adicionar aplicativo',
+    'custom-apps.add-shortcut': 'Adicionar atalho',
+    'custom-apps.delete-app': 'Excluir aplicativo',
+    'search.everywhere': 'Pesquisar em todas as plataformas de uma vez',
 };;
 
 i18n.ru = {
@@ -9439,6 +10752,83 @@ i18n.ru = {
     'app.outlook-search': 'Поиск',
     'app.outlook-calendar': 'Перейти в календарь',
     'search.didyoumean': 'Вы имели в виду {0}?',
+    'cat.gimp': 'GIMP',
+    'app.gimp-merge-down': 'Объединить с нижним',
+    'app.gimp-duplicate-layer': 'Дублировать слой',
+    'app.gimp-quick-mask': 'Переключить быструю маску',
+    'app.gimp-new-layer': 'Новый слой',
+    'app.gimp-zoom-in': 'Приблизить',
+    'app.gimp-toggle-guides': 'Показать/скрыть направляющие',
+    'cat.obs': 'OBS Studio',
+    'app.obs-start-stream': 'Начать / остановить стрим',
+    'app.obs-start-record': 'Начать / остановить запись',
+    'app.obs-studio-mode': 'Режим студии',
+    'app.obs-mute': 'Переключить звук',
+    'app.obs-fullscreen': 'Проектор во весь экран',
+    'app.obs-screenshot': 'Сделать скриншот',
+    'cat.powerpoint': 'PowerPoint',
+    'app.ppt-start': 'Начать с начала',
+    'app.ppt-from-current': 'Начать с текущего слайда',
+    'app.ppt-new-slide': 'Новый слайд',
+    'app.ppt-duplicate-slide': 'Дублировать слайд',
+    'app.ppt-group': 'Сгруппировать',
+    'app.ppt-ungroup': 'Разгруппировать',
+    'cat.excel': 'Excel',
+    'app.xls-sum': 'Автосумма',
+    'app.xls-fill-down': 'Заполнить вниз',
+    'app.xls-table': 'Вставить таблицу',
+    'app.xls-goto': 'Перейти к ячейке',
+    'app.xls-new-sheet': 'Вставить новый лист',
+    'app.xls-filter': 'Переключить фильтр',
+    'cat.gdocs': 'Google Docs',
+    'app.gdocs-comment': 'Вставить комментарий',
+    'app.gdocs-footnote': 'Вставить сноску',
+    'app.gdocs-link': 'Вставить ссылку',
+    'app.gdocs-wordcount': 'Число слов',
+    'app.gdocs-copy-format': 'Копировать формат',
+    'app.gdocs-paste-format': 'Вставить формат',
+    'cat.gsheets': 'Google Sheets',
+    'app.gsheets-currency': 'Формат валюты',
+    'app.gsheets-percent': 'Формат процентов',
+    'app.gsheets-link': 'Вставить ссылку',
+    'app.gsheets-filter': 'Переключить фильтр',
+    'app.gsheets-explore': 'Обзор',
+    'app.gsheets-fill-down': 'Заполнить вниз',
+    'cat.premiere': 'Premiere Pro',
+    'app.pr-selection': 'Инструмент выделения',
+    'app.pr-razor': 'Инструмент бритва',
+    'app.pr-cut': 'Разрезать в позиции курсора',
+    'app.pr-sequence': 'Новая последовательность',
+    'app.pr-match-frame': 'Найти кадр',
+    'app.pr-render': 'Рендерить от In до Out',
+    'cat.aftereffects': 'After Effects',
+    'app.ae-composition': 'Новая композиция',
+    'app.ae-ram-preview': 'Предпросмотр RAM',
+    'app.ae-split': 'Разделить слой',
+    'app.ae-precompose': 'Предкомпозиция',
+    'app.ae-grid': 'Показать/скрыть сетку',
+    'app.ae-purge': 'Очистить всю память',
+    'cat.androidstudio': 'Android Studio',
+    'app.as-find-action': 'Найти действие',
+    'app.as-run': 'Запустить',
+    'app.as-debug': 'Отладить',
+    'app.as-generate': 'Сгенерировать код',
+    'app.as-reformat': 'Переформатировать код',
+    'app.as-rename': 'Переименовать',
+    'cat.sublime': 'Sublime Text',
+    'app.sub-command-palette': 'Палитра команд',
+    'app.sub-goto-anything': 'Перейти к чему угодно',
+    'app.sub-select-occurrence': 'Выбрать следующее вхождение',
+    'app.sub-toggle-sidebar': 'Показать/скрыть боковую панель',
+    'app.sub-split-panes': 'Разделить на 2 колонки',
+    'app.sub-find-files': 'Поиск в файлах',
+    'custom-apps.title': 'Свои приложения',
+    'custom-apps.none': 'Пока нет своих приложений',
+    'custom-apps.name-placeholder': 'Название приложения (например, ChatGPT)',
+    'custom-apps.add-app': 'Добавить приложение',
+    'custom-apps.add-shortcut': 'Добавить сочетание клавиш',
+    'custom-apps.delete-app': 'Удалить приложение',
+    'search.everywhere': 'Искать сразу по всем платформам',
 };;
 
 i18n.sv = {
@@ -9962,6 +11352,83 @@ i18n.sv = {
     'app.outlook-search': 'Sök',
     'app.outlook-calendar': 'Gå till kalender',
     'search.didyoumean': 'Menade du {0}?',
+    'cat.gimp': 'GIMP',
+    'app.gimp-merge-down': 'Slå ihop nedåt',
+    'app.gimp-duplicate-layer': 'Duplicera lager',
+    'app.gimp-quick-mask': 'Växla snabbmask',
+    'app.gimp-new-layer': 'Nytt lager',
+    'app.gimp-zoom-in': 'Zooma in',
+    'app.gimp-toggle-guides': 'Visa/dölj stödlinjer',
+    'cat.obs': 'OBS Studio',
+    'app.obs-start-stream': 'Starta / stoppa strömning',
+    'app.obs-start-record': 'Starta / stoppa inspelning',
+    'app.obs-studio-mode': 'Studioläge',
+    'app.obs-mute': 'Växla tyst',
+    'app.obs-fullscreen': 'Fullskärmsprojektor',
+    'app.obs-screenshot': 'Ta skärmbild',
+    'cat.powerpoint': 'PowerPoint',
+    'app.ppt-start': 'Starta från början',
+    'app.ppt-from-current': 'Starta från aktuell bild',
+    'app.ppt-new-slide': 'Ny bild',
+    'app.ppt-duplicate-slide': 'Duplicera bild',
+    'app.ppt-group': 'Gruppera',
+    'app.ppt-ungroup': 'Avgruppera',
+    'cat.excel': 'Excel',
+    'app.xls-sum': 'Autosumma',
+    'app.xls-fill-down': 'Fyll nedåt',
+    'app.xls-table': 'Infoga tabell',
+    'app.xls-goto': 'Gå till cell',
+    'app.xls-new-sheet': 'Infoga nytt blad',
+    'app.xls-filter': 'Växla filter',
+    'cat.gdocs': 'Google Docs',
+    'app.gdocs-comment': 'Infoga kommentar',
+    'app.gdocs-footnote': 'Infoga fotnot',
+    'app.gdocs-link': 'Infoga länk',
+    'app.gdocs-wordcount': 'Ordantal',
+    'app.gdocs-copy-format': 'Kopiera formatering',
+    'app.gdocs-paste-format': 'Klistra in formatering',
+    'cat.gsheets': 'Google Sheets',
+    'app.gsheets-currency': 'Formatera som valuta',
+    'app.gsheets-percent': 'Formatera som procent',
+    'app.gsheets-link': 'Infoga länk',
+    'app.gsheets-filter': 'Växla filter',
+    'app.gsheets-explore': 'Utforska',
+    'app.gsheets-fill-down': 'Fyll nedåt',
+    'cat.premiere': 'Premiere Pro',
+    'app.pr-selection': 'Markeringsverktyg',
+    'app.pr-razor': 'Rakbladverktyg',
+    'app.pr-cut': 'Klipp vid uppspelningshuvudet',
+    'app.pr-sequence': 'Ny sekvens',
+    'app.pr-match-frame': 'Matcha bildruta',
+    'app.pr-render': 'Rendera från in till ut',
+    'cat.aftereffects': 'After Effects',
+    'app.ae-composition': 'Ny komposition',
+    'app.ae-ram-preview': 'RAM-förhandsvisning',
+    'app.ae-split': 'Dela lager',
+    'app.ae-precompose': 'Förkomponera',
+    'app.ae-grid': 'Visa/dölj rutnät',
+    'app.ae-purge': 'Rensa allt minne',
+    'cat.androidstudio': 'Android Studio',
+    'app.as-find-action': 'Hitta åtgärd',
+    'app.as-run': 'Kör',
+    'app.as-debug': 'Felsöka',
+    'app.as-generate': 'Generera kod',
+    'app.as-reformat': 'Omformatera kod',
+    'app.as-rename': 'Byt namn',
+    'cat.sublime': 'Sublime Text',
+    'app.sub-command-palette': 'Kommandopalett',
+    'app.sub-goto-anything': 'Gå till vad som helst',
+    'app.sub-select-occurrence': 'Markera nästa förekomst',
+    'app.sub-toggle-sidebar': 'Visa/dölj sidopanel',
+    'app.sub-split-panes': 'Dela: 2 kolumner',
+    'app.sub-find-files': 'Sök i filer',
+    'custom-apps.title': 'Anpassade appar',
+    'custom-apps.none': 'Inga anpassade appar ännu',
+    'custom-apps.name-placeholder': 'Appnamn (t.ex. ChatGPT)',
+    'custom-apps.add-app': 'Lägg till app',
+    'custom-apps.add-shortcut': 'Lägg till genväg',
+    'custom-apps.delete-app': 'Ta bort app',
+    'search.everywhere': 'Sök på alla plattformar samtidigt',
 };;
 
 i18n.tr = {
@@ -10486,6 +11953,83 @@ i18n.tr = {
     'app.outlook-search': 'Ara',
     'app.outlook-calendar': 'Takvime git',
     'search.didyoumean': '{0} mi demek istediniz?',
+    'cat.gimp': 'GIMP',
+    'app.gimp-merge-down': 'Aşağı birleştir',
+    'app.gimp-duplicate-layer': 'Katmanı çoğalt',
+    'app.gimp-quick-mask': 'Hızlı maskeyi aç/kapat',
+    'app.gimp-new-layer': 'Yeni katman',
+    'app.gimp-zoom-in': 'Yakınlaştır',
+    'app.gimp-toggle-guides': 'Kılavuzları aç/kapat',
+    'cat.obs': 'OBS Studio',
+    'app.obs-start-stream': 'Yayını başlat / durdur',
+    'app.obs-start-record': 'Kaydı başlat / durdur',
+    'app.obs-studio-mode': 'Stüdyo modu',
+    'app.obs-mute': 'Sesi aç/kapat',
+    'app.obs-fullscreen': 'Tam ekran projektörü',
+    'app.obs-screenshot': 'Ekran görüntüsü al',
+    'cat.powerpoint': 'PowerPoint',
+    'app.ppt-start': 'Baştan başlat',
+    'app.ppt-from-current': 'Geçerli slayttan başlat',
+    'app.ppt-new-slide': 'Yeni slayt',
+    'app.ppt-duplicate-slide': 'Slaytı çoğalt',
+    'app.ppt-group': 'Grupla',
+    'app.ppt-ungroup': 'Grubu çöz',
+    'cat.excel': 'Excel',
+    'app.xls-sum': 'Otomatik toplam',
+    'app.xls-fill-down': 'Aşağı doldur',
+    'app.xls-table': 'Tablo ekle',
+    'app.xls-goto': 'Hücreye git',
+    'app.xls-new-sheet': 'Yeni sayfa ekle',
+    'app.xls-filter': 'Filtreyi aç/kapat',
+    'cat.gdocs': 'Google Docs',
+    'app.gdocs-comment': 'Yorum ekle',
+    'app.gdocs-footnote': 'Dipnot ekle',
+    'app.gdocs-link': 'Bağlantı ekle',
+    'app.gdocs-wordcount': 'Kelime sayısı',
+    'app.gdocs-copy-format': 'Biçimi kopyala',
+    'app.gdocs-paste-format': 'Biçimi yapıştır',
+    'cat.gsheets': 'Google Sheets',
+    'app.gsheets-currency': 'Para birimi olarak biçimlendir',
+    'app.gsheets-percent': 'Yüzde olarak biçimlendir',
+    'app.gsheets-link': 'Bağlantı ekle',
+    'app.gsheets-filter': 'Filtreyi aç/kapat',
+    'app.gsheets-explore': 'Keşfet',
+    'app.gsheets-fill-down': 'Aşağı doldur',
+    'cat.premiere': 'Premiere Pro',
+    'app.pr-selection': 'Seçim aracı',
+    'app.pr-razor': 'Jilet aracı',
+    'app.pr-cut': 'Oynatma kafasında kes',
+    'app.pr-sequence': 'Yeni dizi',
+    'app.pr-match-frame': 'Kareyi eşleştir',
+    'app.pr-render': 'Girişten çıkışa işle',
+    'cat.aftereffects': 'After Effects',
+    'app.ae-composition': 'Yeni kompozisyon',
+    'app.ae-ram-preview': 'RAM önizleme',
+    'app.ae-split': 'Katmanı böl',
+    'app.ae-precompose': 'Ön kompozisyon',
+    'app.ae-grid': 'Izgarayı aç/kapat',
+    'app.ae-purge': 'Tüm belleği temizle',
+    'cat.androidstudio': 'Android Studio',
+    'app.as-find-action': 'Eylem bul',
+    'app.as-run': 'Çalıştır',
+    'app.as-debug': 'Hata ayıkla',
+    'app.as-generate': 'Kod üret',
+    'app.as-reformat': 'Kodu yeniden biçimlendir',
+    'app.as-rename': 'Yeniden adlandır',
+    'cat.sublime': 'Sublime Text',
+    'app.sub-command-palette': 'Komut paleti',
+    'app.sub-goto-anything': 'Her şeye git',
+    'app.sub-select-occurrence': 'Sonraki oluşumu seç',
+    'app.sub-toggle-sidebar': 'Kenar çubuğunu aç/kapat',
+    'app.sub-split-panes': 'Bölme: 2 sütun',
+    'app.sub-find-files': 'Dosyalarda ara',
+    'custom-apps.title': 'Özel uygulamalar',
+    'custom-apps.none': 'Henüz özel uygulama yok',
+    'custom-apps.name-placeholder': 'Uygulama adı (örn. ChatGPT)',
+    'custom-apps.add-app': 'Uygulama ekle',
+    'custom-apps.add-shortcut': 'Kısayol ekle',
+    'custom-apps.delete-app': 'Uygulamayı sil',
+    'search.everywhere': 'Tüm platformlarda aynı anda ara',
 };
 
 i18n.vi = {
@@ -11009,6 +12553,83 @@ i18n.vi = {
     'app.outlook-search': 'Tìm kiếm',
     'app.outlook-calendar': 'Đi tới lịch',
     'search.didyoumean': 'Ý bạn là {0}?',
+    'cat.gimp': 'GIMP',
+    'app.gimp-merge-down': 'Hợp nhất xuống dưới',
+    'app.gimp-duplicate-layer': 'Nhân bản lớp',
+    'app.gimp-quick-mask': 'Bật/tắt mặt nạ nhanh',
+    'app.gimp-new-layer': 'Lớp mới',
+    'app.gimp-zoom-in': 'Phóng to',
+    'app.gimp-toggle-guides': 'Bật/tắt đường dẫn',
+    'cat.obs': 'OBS Studio',
+    'app.obs-start-stream': 'Bắt đầu / dừng phát trực tiếp',
+    'app.obs-start-record': 'Bắt đầu / dừng ghi hình',
+    'app.obs-studio-mode': 'Chế độ studio',
+    'app.obs-mute': 'Bật/tắt tiếng',
+    'app.obs-fullscreen': 'Máy chiếu toàn màn hình',
+    'app.obs-screenshot': 'Chụp màn hình',
+    'cat.powerpoint': 'PowerPoint',
+    'app.ppt-start': 'Bắt đầu từ đầu',
+    'app.ppt-from-current': 'Bắt đầu từ trang hiện tại',
+    'app.ppt-new-slide': 'Trang mới',
+    'app.ppt-duplicate-slide': 'Nhân bản trang',
+    'app.ppt-group': 'Nhóm',
+    'app.ppt-ungroup': 'Tách nhóm',
+    'cat.excel': 'Excel',
+    'app.xls-sum': 'Tự động tính tổng',
+    'app.xls-fill-down': 'Điền xuống',
+    'app.xls-table': 'Chèn bảng',
+    'app.xls-goto': 'Đi tới ô',
+    'app.xls-new-sheet': 'Chèn trang tính mới',
+    'app.xls-filter': 'Bật/tắt bộ lọc',
+    'cat.gdocs': 'Google Docs',
+    'app.gdocs-comment': 'Chèn nhận xét',
+    'app.gdocs-footnote': 'Chèn chú thích cuối trang',
+    'app.gdocs-link': 'Chèn liên kết',
+    'app.gdocs-wordcount': 'Đếm từ',
+    'app.gdocs-copy-format': 'Sao chép định dạng',
+    'app.gdocs-paste-format': 'Dán định dạng',
+    'cat.gsheets': 'Google Sheets',
+    'app.gsheets-currency': 'Định dạng tiền tệ',
+    'app.gsheets-percent': 'Định dạng phần trăm',
+    'app.gsheets-link': 'Chèn liên kết',
+    'app.gsheets-filter': 'Bật/tắt bộ lọc',
+    'app.gsheets-explore': 'Khám phá',
+    'app.gsheets-fill-down': 'Điền xuống',
+    'cat.premiere': 'Premiere Pro',
+    'app.pr-selection': 'Công cụ chọn',
+    'app.pr-razor': 'Công cụ dao cạo',
+    'app.pr-cut': 'Cắt tại đầu phát',
+    'app.pr-sequence': 'Chuỗi mới',
+    'app.pr-match-frame': 'Khớp khung hình',
+    'app.pr-render': 'Kết xuất từ vào ra',
+    'cat.aftereffects': 'After Effects',
+    'app.ae-composition': 'Composition mới',
+    'app.ae-ram-preview': 'Xem trước RAM',
+    'app.ae-split': 'Tách lớp',
+    'app.ae-precompose': 'Tiền composition',
+    'app.ae-grid': 'Bật/tắt lưới',
+    'app.ae-purge': 'Xóa toàn bộ bộ nhớ',
+    'cat.androidstudio': 'Android Studio',
+    'app.as-find-action': 'Tìm hành động',
+    'app.as-run': 'Chạy',
+    'app.as-debug': 'Gỡ lỗi',
+    'app.as-generate': 'Tạo mã',
+    'app.as-reformat': 'Định dạng lại mã',
+    'app.as-rename': 'Đổi tên',
+    'cat.sublime': 'Sublime Text',
+    'app.sub-command-palette': 'Bảng lệnh',
+    'app.sub-goto-anything': 'Đi tới bất cứ đâu',
+    'app.sub-select-occurrence': 'Chọn lần xuất hiện tiếp theo',
+    'app.sub-toggle-sidebar': 'Bật/tắt thanh bên',
+    'app.sub-split-panes': 'Chia ô: 2 cột',
+    'app.sub-find-files': 'Tìm trong tệp',
+    'custom-apps.title': 'Ứng dụng tùy chỉnh',
+    'custom-apps.none': 'Chưa có ứng dụng tùy chỉnh',
+    'custom-apps.name-placeholder': 'Tên ứng dụng (ví dụ: ChatGPT)',
+    'custom-apps.add-app': 'Thêm ứng dụng',
+    'custom-apps.add-shortcut': 'Thêm phím tắt',
+    'custom-apps.delete-app': 'Xóa ứng dụng',
+    'search.everywhere': 'Tìm kiếm trên mọi nền tảng cùng lúc',
 };
 
 let WN_ORIGINAL = null;
@@ -11028,6 +12649,11 @@ function applyLanguage(lang) {
     const key = el.getAttribute('data-i18n-placeholder');
     const val = langData[key] || (recent && recent[key]) || fallback[key];
     if (val) el.setAttribute('placeholder', val);
+  });
+  document.querySelectorAll('[data-i18n-title]').forEach(el => {
+    const key = el.getAttribute('data-i18n-title');
+    const val = langData[key] || (recent && recent[key]) || fallback[key];
+    if (val) el.setAttribute('title', val);
   });
   applyWhatsNewLanguage(lang);
   renderNotifyUI();
@@ -11182,7 +12808,7 @@ document.addEventListener('keydown', e => {
   }
 });
 
-const APPS_MENU = ['vscode','figma','photoshop','terminal-app','slack','devtools','obsidian','jetbrains','gmail','youtube','notion','linear','blender','resolve','krita','audacity','discord','outlook'];
+const APPS_MENU = ['vscode','figma','photoshop','terminal-app','slack','devtools','obsidian','jetbrains','gmail','youtube','notion','linear','blender','resolve','krita','audacity','discord','outlook','gimp','obs','powerpoint','excel','gdocs','gsheets','premiere','aftereffects','androidstudio','sublime'];
 let appsFilterState = 'all';
 function tagAppsRows() {
   const panel = document.getElementById('apps');
@@ -11190,6 +12816,7 @@ function tagAppsRows() {
   panel.dataset.tagged = '1';
   let cur = 'none';
   panel.querySelectorAll('tbody tr').forEach(tr => {
+    if (tr.hasAttribute('data-custom-app')) return;
     const td = tr.querySelector('td[data-i18n]');
     const key = td ? (td.getAttribute('data-i18n') || '') : (tr.getAttribute('data-i18n') || '');
     if (tr.classList.contains('category') && key.indexOf('cat.') === 0) {
@@ -11226,6 +12853,29 @@ function renderAppsMenu() {
       });
       menu.appendChild(b);
     });
+    if (customApps.length) {
+      const sep = document.createElement('div');
+      sep.style.cssText = 'padding:.25rem .6rem;font-size:.65rem;text-transform:uppercase;letter-spacing:.05em;color:var(--text-variant);border-top:1px solid var(--outline-variant);margin-top:.35rem';
+      sep.textContent = tx('custom-apps.title');
+      menu.appendChild(sep);
+      customApps.forEach(app => {
+        const b = document.createElement('button');
+        b.type = 'button';
+        b.className = 'linux-distro-option';
+        b.dataset.appOption = 'custom:' + app.id;
+        b.textContent = app.name;
+        b.addEventListener('click', () => {
+          appsFilterState = 'custom:' + app.id;
+          hideAppsMenu();
+          setAppsTabLabel();
+          applyView();
+          saveSettings();
+          const t = document.querySelector('.tab[data-tab="apps"]');
+          if (t && !t.classList.contains('active')) t.click();
+        });
+        menu.appendChild(b);
+      });
+    }
   }
   menu.querySelectorAll('.linux-distro-option').forEach(b => {
     b.classList.toggle('active', b.dataset.appOption === appsFilterState);
@@ -11244,7 +12894,16 @@ function hideAppsMenu() {
 function setAppsTabLabel() {
   const suffix = document.getElementById('appsTabApp');
   if (!suffix) return;
-  suffix.textContent = (!appsFilterState || appsFilterState === 'all') ? '' : ' - ' + (tx('cat.' + appsFilterState) || appsFilterState);
+  let label = '';
+  if (appsFilterState && appsFilterState !== 'all') {
+    if (appsFilterState.indexOf('custom:') === 0) {
+      const app = customApps.find(a => a.id === appsFilterState.slice(7));
+      label = app ? ' - ' + app.name : '';
+    } else {
+      label = ' - ' + (tx('cat.' + appsFilterState) || appsFilterState);
+    }
+  }
+  suffix.textContent = label;
 }
 const _appsTabBtn = document.querySelector('.tab[data-tab="apps"]');
 if (_appsTabBtn) {
@@ -11291,7 +12950,8 @@ function saveSettings() {
     perfMode: document.body.classList.contains('perf-mode'),
     tip: document.getElementById('toggleTip')?.classList.contains('on') ?? true,
     linuxDistro: linuxDistroState || 'ubuntu',
-    appsApp: appsFilterState || 'all'
+    appsApp: appsFilterState || 'all',
+    everywhere: searchEverywhere
   };
   if (data.accent === 'custom' || (activeAccent && !activeAccent.dataset.accent)) {
     data.customAccentHex = document.body.style.getPropertyValue('--accent-1').trim() || '#f7971e';
@@ -11471,6 +13131,10 @@ function loadSettings() {
       appsFilterState = data.appsApp;
       setAppsTabLabel();
       tagAppsRows();
+    }
+
+    if (data.everywhere !== undefined && typeof setSearchEverywhere === 'function') {
+      setSearchEverywhere(!!data.everywhere);
     }
 
     if (data.tip !== undefined && data.tip === false) {
@@ -11876,7 +13540,7 @@ onId('btnNotifyTest', 'click', async function() {
 let reloadOnUpdate = false;
 if ('serviceWorker' in navigator) {
   let refreshing = false;
-  navigator.serviceWorker.register('sw.js?v=30').catch(() => {});
+  navigator.serviceWorker.register('sw.js?v=31').catch(() => {});
   navigator.serviceWorker.addEventListener('controllerchange', () => {
     if (!reloadOnUpdate || refreshing) return;
     refreshing = true;
@@ -11954,9 +13618,186 @@ function renderCustomAnthkeys() {
 var _escDiv = null;
 function escHtml(s) { if (!_escDiv) _escDiv = document.createElement('div'); _escDiv.textContent = s; return _escDiv.innerHTML; }
 
+// ---- Custom apps (your own app sections inside the Apps tab) ----
+let customApps = [];
+function loadCustomApps() {
+  try { customApps = JSON.parse(lsGet('anthkeys-custom-apps') || '[]'); } catch(e) { customApps = []; }
+}
+function saveCustomApps() {
+  lsSet('anthkeys-custom-apps', JSON.stringify(customApps));
+  scheduleSyncPublish();
+}
+function customKbdHtml(raw) {
+  const norm = String(raw || '').trim().replace(/\s*\+\s*/g, '+');
+  if (!norm) return '';
+  return norm.split(/\s+/).map(ch => ch.split('+').map(k => '<kbd>' + escHtml(k) + '</kbd>').join(' + ')).join(' ');
+}
+function renderCustomAppsRows() {
+  const panel = document.getElementById('apps');
+  if (!panel) return;
+  panel.querySelectorAll('tr[data-custom-app]').forEach(tr => tr.remove());
+  const tbody = panel.querySelector('tbody');
+  if (!tbody || !customApps.length) return;
+  const frag = document.createDocumentFragment();
+  customApps.forEach(app => {
+    const cat = document.createElement('tr');
+    cat.className = 'category';
+    cat.setAttribute('data-custom-app', app.id);
+    const catTd = document.createElement('td');
+    catTd.colSpan = 2;
+    catTd.textContent = app.name;
+    cat.appendChild(catTd);
+    frag.appendChild(cat);
+    (app.shortcuts || []).forEach(s => {
+      const tr = document.createElement('tr');
+      tr.setAttribute('data-custom-app', app.id);
+      tr.setAttribute('data-app', 'custom:' + app.id);
+      const tdA = document.createElement('td');
+      tdA.textContent = s.action;
+      const tdB = document.createElement('td');
+      const html = customKbdHtml(s.anthkey);
+      tdB.dataset.raw = html;
+      tdB.innerHTML = html;
+      tr.appendChild(tdA);
+      tr.appendChild(tdB);
+      decorateAppRow(tr);
+      frag.appendChild(tr);
+    });
+  });
+  tbody.appendChild(frag);
+  if (typeof renderAnthkeys === 'function') renderAnthkeys();
+}
+function refreshAppsMenu() {
+  const menu = document.getElementById('appsMenu');
+  if (!menu) return;
+  menu.innerHTML = '';
+  delete menu.dataset.rendered;
+  renderAppsMenu();
+}
+const _customAppsListEl = document.getElementById('customAppsList');
+function renderCustomApps() {
+  const list = document.getElementById('customAppsList');
+  if (!list) return;
+  if (!customApps.length) {
+    list.innerHTML = '<p style="font-size:.8rem;color:var(--text-variant);padding:.4rem 0" data-i18n="custom-apps.none">No custom apps yet</p>';
+    return;
+  }
+  const delAppT = tx('custom-apps.delete-app');
+  const addScT = tx('custom-apps.add-shortcut');
+  const inStyle = 'flex:1;min-width:0;box-sizing:border-box;padding:.35rem .5rem;font-size:.8rem;border:1px solid var(--outline-variant);border-radius:var(--radius-sm);background:var(--surface);color:var(--text);font:var(--size) var(--font)';
+  const delBtn = 'background:none;border:none;color:var(--error,#dc2626);cursor:pointer;font-size:.85rem;padding:.1rem';
+  list.innerHTML = customApps.map((app, i) => {
+    const rows = (app.shortcuts || []).map((s, j) =>
+      '<div style="display:flex;align-items:center;gap:.4rem;padding:.15rem 0;font-size:.8rem">' +
+      '<span style="flex:1;color:var(--text)">' + escHtml(s.action) + '</span>' +
+      '<code style="background:var(--surface);padding:.15rem .4rem;border-radius:4px;color:var(--primary)">' + escHtml(s.anthkey) + '</code>' +
+      '<button type="button" class="del-ca-shortcut" data-app="' + i + '" data-idx="' + j + '" title="' + escHtml(tx('custom-apps.add-shortcut')) + '" aria-label="' + escHtml(tx('custom-apps.add-shortcut')) + '" style="' + delBtn + '">\u00d7</button></div>'
+    ).join('');
+    return '<div style="border-bottom:1px solid var(--outline-variant);padding:.35rem 0">' +
+      '<div style="display:flex;align-items:center;gap:.4rem;font-size:.85rem">' +
+      '<strong style="flex:1;color:var(--text)">' + escHtml(app.name) + '</strong>' +
+      '<button type="button" class="del-ca-app" data-idx="' + i + '" data-i18n-title="custom-apps.delete-app" title="' + escHtml(delAppT) + '" aria-label="' + escHtml(delAppT) + '" style="' + delBtn + '">\u00d7</button></div>' +
+      rows +
+      '<div class="ca-add-row" style="display:flex;gap:.4rem;padding:.25rem 0">' +
+      '<input class="ca-action" data-i18n-placeholder="custom.action-placeholder" placeholder="Action name" style="' + inStyle + '">' +
+      '<input class="ca-anthkey" data-i18n-placeholder="custom.anthkey-placeholder" placeholder="Shortcut (e.g. Ctrl+Shift+Z)" style="' + inStyle + '">' +
+      '<button type="button" class="ca-add theme-opt" data-app="' + i + '" data-i18n-title="custom-apps.add-shortcut" title="' + escHtml(addScT) + '" aria-label="' + escHtml(addScT) + '" style="flex:0 0 auto;width:auto;justify-content:center;padding:.35rem .6rem">+</button></div></div>';
+  }).join('');
+}
+function onCustomAppsChanged() {
+  saveCustomApps();
+  renderCustomApps();
+  renderCustomAppsRows();
+  refreshAppsMenu();
+}
+onId('btnAddCustomApp', 'click', () => {
+  const input = document.getElementById('customAppNameInput');
+  if (!input) return;
+  const name = input.value.trim();
+  if (!name) return;
+  customApps.push({ id: 'app' + Date.now().toString(36), name: name, shortcuts: [] });
+  onCustomAppsChanged();
+  input.value = '';
+});
+if (_customAppsListEl) {
+  _customAppsListEl.addEventListener('click', ev => {
+    const t = ev.target;
+    const delApp = t && t.closest ? t.closest('.del-ca-app') : null;
+    const delSc = t && t.closest ? t.closest('.del-ca-shortcut') : null;
+    const addSc = t && t.closest ? t.closest('.ca-add') : null;
+    if (delApp) {
+      const idx = parseInt(delApp.dataset.idx, 10);
+      if (!isNaN(idx) && customApps[idx]) { customApps.splice(idx, 1); onCustomAppsChanged(); }
+      return;
+    }
+    if (delSc) {
+      const app = customApps[parseInt(delSc.dataset.app, 10)];
+      const idx = parseInt(delSc.dataset.idx, 10);
+      if (app && !isNaN(idx)) { app.shortcuts.splice(idx, 1); onCustomAppsChanged(); }
+      return;
+    }
+    if (addSc) {
+      const app = customApps[parseInt(addSc.dataset.app, 10)];
+      if (!app) return;
+      const wrap = addSc.closest('.ca-add-row');
+      const a = wrap ? wrap.querySelector('.ca-action').value.trim() : '';
+      const k = wrap ? wrap.querySelector('.ca-anthkey').value.trim() : '';
+      if (!a || !k) return;
+      app.shortcuts.push({ action: a, anthkey: k });
+      onCustomAppsChanged();
+    }
+  });
+  _customAppsListEl.addEventListener('keydown', ev => {
+    if (ev.key === 'Enter') {
+      const row = ev.target.closest ? ev.target.closest('.ca-add-row') : null;
+      if (row) { ev.preventDefault(); const btn = row.querySelector('.ca-add'); if (btn) btn.click(); }
+    }
+  });
+}
+function mergeCustomApps(localA, incomingA) {
+  const out = localA.slice();
+  (incomingA || []).forEach(inc => {
+    if (!inc || typeof inc !== 'object' || !inc.id) return;
+    const i = out.findIndex(a => a.id === inc.id);
+    if (i === -1) {
+      out.push({ id: inc.id, name: inc.name || '', shortcuts: (inc.shortcuts || []).slice() });
+      return;
+    }
+    const known = new Set((out[i].shortcuts || []).map(s => String(s.action || '').toLowerCase()));
+    (inc.shortcuts || []).forEach(s => {
+      const k = String(s.action || '').toLowerCase();
+      if (!k || known.has(k)) return;
+      out[i].shortcuts.push(s);
+      known.add(k);
+    });
+    if (!out[i].name && inc.name) out[i].name = inc.name;
+  });
+  return out;
+}
+
+// ---- Search across all platforms (#13) ----
+let searchEverywhere = false;
+const searchEverywhereBtn = document.getElementById('searchEverywhere');
+function setSearchEverywhere(on) {
+  searchEverywhere = !!on;
+  if (searchEverywhereBtn) {
+    searchEverywhereBtn.classList.toggle('active', searchEverywhere);
+    searchEverywhereBtn.setAttribute('aria-pressed', searchEverywhere ? 'true' : 'false');
+  }
+  applyView();
+}
+if (searchEverywhereBtn) {
+  searchEverywhereBtn.addEventListener('click', () => {
+    setSearchEverywhere(!searchEverywhere);
+    saveSettings();
+  });
+}
+
 // ---- Init ----
 loadCustomAnthkeys();
 renderCustomAnthkeys();
+loadCustomApps();
+renderCustomApps();
 
 // ---- Version badge + update notification ----
 let APP_VERSION = '';
@@ -13226,6 +15067,7 @@ onId('btnReset', 'click', () => {
   if (confirm('Reset all to defaults?')) {
     lsRemove('anthkeys-settings');
     lsRemove('anthkeys-custom');
+    lsRemove('anthkeys-custom-apps');
     location.reload();
   }
 });
@@ -13323,7 +15165,8 @@ window.addEventListener('afterprint', () => {
 onId('btnExport', 'click', () => {
   const data = {
     settings: JSON.parse(lsGet('anthkeys-settings') || '{}'),
-    custom: JSON.parse(lsGet('anthkeys-custom') || '[]')
+    custom: JSON.parse(lsGet('anthkeys-custom') || '[]'),
+    customApps: JSON.parse(lsGet('anthkeys-custom-apps') || '[]')
   };
   const blob = new Blob([JSON.stringify(data, null, 2)], { type: 'application/json' });
   const url = URL.createObjectURL(blob);
@@ -13347,6 +15190,7 @@ if (btnImport && importFileInput) {
       const data = JSON.parse(ev.target.result);
       if (data.settings) lsSet('anthkeys-settings', JSON.stringify(data.settings));
       if (data.custom) lsSet('anthkeys-custom', JSON.stringify(data.custom));
+      if (data.customApps) lsSet('anthkeys-custom-apps', JSON.stringify(data.customApps));
       location.reload();
     } catch(err) {
       alert('Invalid settings file.');
@@ -13430,7 +15274,9 @@ function getPinId(tr) {
   return panel.id + ':' + (actionTd.getAttribute('data-i18n') || actionTd.textContent.trim());
 }
 // Add star buttons
-document.querySelectorAll('.panel tbody tr:not(.category)').forEach(tr => {
+function decorateRow(tr) {
+  if (tr.dataset.decorated) return;
+  tr.dataset.decorated = '1';
   const td = tr.querySelector('td:first-child');
   if (!td) return;
   const star = document.createElement('span');
@@ -13488,7 +15334,8 @@ document.querySelectorAll('.panel tbody tr:not(.category)').forEach(tr => {
       tr.parentNode.insertBefore(draggedTr, e.clientY > rect.top + rect.height / 2 ? tr.nextSibling : tr);
     }
   });
-});
+}
+document.querySelectorAll('.panel tbody tr:not(.category)').forEach(decorateRow);
 
 // Reorder pinned items to match saved order on load
 document.querySelectorAll('.panel tbody').forEach(tbody => {
@@ -13816,42 +15663,57 @@ function applyView() {
   const activeCats = new Set([...active].filter(c => c !== 'all' && c !== 'favorites'));
   const activeMods = new Set([...document.querySelectorAll('#modBar .pill.active')].map(p => p.dataset.mod));
   const panel = document.querySelector('.panel.active');
-  if (!panel) return;
-  const compareMap = comparePlatform ? buildShortcutMap(comparePlatform) : null;
+  const ever = searchEverywhere && !!q;
+  document.body.classList.toggle('search-everywhere', ever);
+  const views = ever ? Array.from(document.querySelectorAll('.panel')) : [panel];
+  if (!views[0]) return;
+  const compareMap = (!ever && comparePlatform) ? buildShortcutMap(comparePlatform) : null;
 
-  panel.querySelectorAll('tbody tr:not(.category)').forEach(tr => {
-    const cat = getRowCategory(tr);
-    if (panel.id === 'apps' && appsFilterState && appsFilterState !== 'all' && tr.dataset.app !== appsFilterState) {
-      tr.style.display = 'none';
-      tr.dataset.filtered = '1';
-      return;
-    }
-    const pinned = pinnedIds.includes(getPinId(tr));
-    const catOk = favOnly ? pinned : (showAll || (cat && activeCats.has(cat)));
-    const modOk = !activeMods.size || rowModifiers(tr).split(',').filter(Boolean).some(m => activeMods.has(m));
-    const rowOk = catOk && (!favOnly || pinned) && modOk && (!compareMap || (compareMap[getActionKey(tr)] !== normalizeShortcut(tr.querySelector('td:last-child')?.dataset.raw || '')));
-    tr.dataset.filtered = rowOk ? '' : '1';
-    if (!rowOk) { tr.style.display = 'none'; return; }
-    if (q) {
-      if (!tr.textContent.toLowerCase().includes(q)) { tr.style.display = 'none'; return; }
-    } else {
-      const prev = tr.previousElementSibling;
-      const hidden = prev && prev.classList.contains('category') && prev.classList.contains('collapsed');
-      if (hidden) { tr.style.display = 'none'; return; }
-    }
-    tr.style.display = '';
-    applyHighlight(tr, q);
+  views.forEach(pnl => {
+    pnl.querySelectorAll('tbody tr:not(.category)').forEach(tr => {
+      const cat = getRowCategory(tr);
+      if (pnl.id === 'apps' && appsFilterState && appsFilterState !== 'all' && tr.dataset.app !== appsFilterState) {
+        tr.style.display = 'none';
+        tr.dataset.filtered = '1';
+        return;
+      }
+      const pinned = pinnedIds.includes(getPinId(tr));
+      const catOk = favOnly ? pinned : (showAll || (cat && activeCats.has(cat)));
+      const modOk = !activeMods.size || rowModifiers(tr).split(',').filter(Boolean).some(m => activeMods.has(m));
+      const rowOk = catOk && (!favOnly || pinned) && modOk && (!compareMap || (compareMap[getActionKey(tr)] !== normalizeShortcut(tr.querySelector('td:last-child')?.dataset.raw || '')));
+      tr.dataset.filtered = rowOk ? '' : '1';
+      if (!rowOk) { tr.style.display = 'none'; return; }
+      if (q) {
+        if (!tr.textContent.toLowerCase().includes(q)) { tr.style.display = 'none'; return; }
+      } else {
+        const prev = tr.previousElementSibling;
+        const hidden = prev && prev.classList.contains('category') && prev.classList.contains('collapsed');
+        if (hidden) { tr.style.display = 'none'; return; }
+      }
+      tr.style.display = '';
+      applyHighlight(tr, q);
+    });
+    pnl.querySelectorAll('.category').forEach(cat => {
+      if (cat.classList.contains('collapsed')) return;
+      const tbody = cat.closest('tbody');
+      const rows = Array.from(tbody.querySelectorAll('tr'));
+      const idx = rows.indexOf(cat);
+      let end = idx + 1;
+      while (end < rows.length && !rows[end].classList.contains('category')) end++;
+      const ch = rows.slice(idx + 1, end);
+      cat.style.display = ch.some(r => r.style.display !== 'none') ? '' : 'none';
+    });
   });
-  panel.querySelectorAll('.category').forEach(cat => {
-    if (cat.classList.contains('collapsed')) return;
-    const tbody = cat.closest('tbody');
-    const rows = Array.from(tbody.querySelectorAll('tr'));
-    const idx = rows.indexOf(cat);
-    let end = idx + 1;
-    while (end < rows.length && !rows[end].classList.contains('category')) end++;
-    const ch = rows.slice(idx + 1, end);
-    cat.style.display = ch.some(r => r.style.display !== 'none') ? '' : 'none';
-  });
+
+  if (ever) {
+    views.forEach(pnl => {
+      const visible = Array.from(pnl.querySelectorAll('tbody tr:not(.category)')).some(tr => tr.style.display !== 'none');
+      pnl.classList.toggle('ev-show', visible);
+      pnl.dataset.label = tx('tab.' + pnl.id);
+    });
+  } else {
+    document.querySelectorAll('.panel.ev-show').forEach(p => p.classList.remove('ev-show'));
+  }
 
   const favPillEl = document.querySelector('.pill[data-cat="favorites"]');
   document.querySelector('[data-fav-active]')?.removeAttribute('data-fav-active');
@@ -13869,7 +15731,9 @@ function applyView() {
 // ---- Click (desktop) / long-press (touch) to copy anthkey ----
 let _lpActive = false;
 const _isCoarsePointer = window.matchMedia('(pointer: coarse)').matches;
-document.querySelectorAll('.panel table tr:not(.category) td:last-child').forEach(td => {
+function bindTdCopy(td) {
+  if (td.dataset.copied) return;
+  td.dataset.copied = '1';
   td.style.cursor = 'copy';
 
   function copyAnthkey() {
@@ -13918,7 +15782,13 @@ document.querySelectorAll('.panel table tr:not(.category) td:last-child').forEac
   } else {
     td.addEventListener('click', copyAnthkey);
   }
-});
+}
+document.querySelectorAll('.panel table tr:not(.category) td:last-child').forEach(bindTdCopy);
+function decorateAppRow(tr) {
+  if (typeof decorateRow === 'function') decorateRow(tr);
+  const tdB = tr.querySelector('td:last-child');
+  if (tdB && typeof bindTdCopy === 'function') bindTdCopy(tdB);
+}
 if (_isCoarsePointer) {
   document.addEventListener('contextmenu', function(e) {
     if (_lpActive) {
@@ -13952,8 +15822,10 @@ function updateSearchCount() {
   const el = document.getElementById('searchCount');
   if (!el) { updateSearchSuggestion(q); return; }
   if (!q) { el.textContent = ''; updateSearchSuggestion(''); return; }
-  const panel = document.querySelector('.panel.active');
-  const allRows = panel ? [...panel.querySelectorAll('tbody tr:not(.category)')] : [];
+  const ever = searchEverywhere;
+  const panels = ever ? Array.from(document.querySelectorAll('.panel')) : [document.querySelector('.panel.active')];
+  const allRows = [];
+  panels.forEach(p => { if (p) allRows.push(...p.querySelectorAll('tbody tr:not(.category)')); });
   const visible = allRows.filter(r => r.style.display !== 'none').length;
   if (visible === 0) { el.textContent = t('search.noresults'); updateSearchSuggestion(q); return; }
   el.textContent = t('search.results').replace('{n}', visible);
@@ -14458,7 +16330,8 @@ onId('btnCloudUpload', 'click', async () => {
   if (!token) { alert('Enter a GitHub token first.'); return; }
   const data = {
     settings: JSON.parse(lsGet('anthkeys-settings') || '{}'),
-    custom: JSON.parse(lsGet('anthkeys-custom') || '[]')
+    custom: JSON.parse(lsGet('anthkeys-custom') || '[]'),
+    customApps: JSON.parse(lsGet('anthkeys-custom-apps') || '[]')
   };
   const content = JSON.stringify(data, null, 2);
   const gistId = document.getElementById('cloudGistId')?.value.trim();
@@ -14509,6 +16382,7 @@ onId('btnCloudDownload', 'click', async () => {
     const data = await raw.json();
     if (data.settings) lsSet('anthkeys-settings', JSON.stringify(data.settings));
     if (data.custom) lsSet('anthkeys-custom', JSON.stringify(data.custom));
+    if (data.customApps) lsSet('anthkeys-custom-apps', JSON.stringify(data.customApps));
     alert('Settings restored from Gist! Reloading...');
     location.reload();
   } catch(e) {
@@ -14730,10 +16604,11 @@ function syncGenCode() {
 function syncTopic(sub) { return 'anthkeys/room/' + syncRoom + '/' + sub; }
 
 function syncSnap() {
-  let settings = {}, custom = [];
+  let settings = {}, custom = [], customApps = [];
   try { settings = JSON.parse(lsGet('anthkeys-settings') || '{}'); } catch (e) {}
   try { custom = JSON.parse(lsGet('anthkeys-custom') || '[]'); } catch (e) {}
-  return { v: 1, t: Date.now(), d: synDeviceId(), n: synDeviceName(), settings: settings, custom: custom };
+  try { customApps = JSON.parse(lsGet('anthkeys-custom-apps') || '[]'); } catch (e) {}
+  return { v: 1, t: Date.now(), d: synDeviceId(), n: synDeviceName(), settings: settings, custom: custom, customApps: customApps };
 }
 
 function syncSetStatus(color, text) {
@@ -15117,9 +16992,10 @@ function scheduleSyncPublish() {
 
 function syncMergeApply(m) {
   if (!m) return false;
-  let localS = {}, localC = [];
+  let localS = {}, localC = [], localCA = [];
   try { localS = JSON.parse(lsGet('anthkeys-settings') || '{}'); } catch (e) {}
   try { localC = JSON.parse(lsGet('anthkeys-custom') || '[]'); } catch (e) {}
+  try { localCA = JSON.parse(lsGet('anthkeys-custom-apps') || '[]'); } catch (e) {}
   let changed = false;
   if (m.settings && typeof m.settings === 'object') {
     const merged = Object.assign({}, localS, m.settings);
@@ -15131,11 +17007,19 @@ function syncMergeApply(m) {
     const added = m.custom.filter(c => !known.has(String(c.action || '').toLowerCase()));
     if (added.length) { lsSet('anthkeys-custom', JSON.stringify(localC.concat(added))); changed = true; }
   }
+  if (Array.isArray(m.customApps)) {
+    const mergedCA = mergeCustomApps(localCA, m.customApps);
+    const caJson = JSON.stringify(mergedCA);
+    if (caJson !== JSON.stringify(localCA)) { lsSet('anthkeys-custom-apps', caJson); changed = true; }
+  }
   if (!changed) return false;
   lsSet('anthkeys-sync-ts', String(parseInt(m.t, 10) || Date.now()));
   loadCustomAnthkeys();
+  loadCustomApps();
   loadSettings();
   renderCustomAnthkeys();
+  renderCustomApps();
+  renderCustomAppsRows();
   if (typeof renderAnthkeys === 'function') renderAnthkeys();
   return true;
 }
@@ -15184,11 +17068,20 @@ function syncApplyProfile(m) {
     lsSet('anthkeys-custom', JSON.stringify(Array.from(incoming.values())));
     changed = true;
   }
+  if (Array.isArray(m.customApps)) {
+    let localCA = [];
+    try { localCA = JSON.parse(lsGet('anthkeys-custom-apps') || '[]'); } catch (e) {}
+    lsSet('anthkeys-custom-apps', JSON.stringify(mergeCustomApps(localCA, m.customApps)));
+    changed = true;
+  }
   if (!changed) return;
   lsSet('anthkeys-sync-ts', String(parseInt(m.t, 10) || Date.now()));
   loadCustomAnthkeys();
+  loadCustomApps();
   loadSettings();
   renderCustomAnthkeys();
+  renderCustomApps();
+  renderCustomAppsRows();
   if (typeof renderAnthkeys === 'function') renderAnthkeys();
   showToastMsg(tx('sync.profile-recv').replace('{0}', (m.n || m.d || tx('sync.unknown'))));
 }
@@ -15620,7 +17513,7 @@ function syncB64UrlDecode(s) {
 }
 function syncManualEncode() {
   const snap = syncSnap();
-  const str = JSON.stringify({ v: snap.v, t: snap.t, settings: snap.settings, custom: snap.custom });
+  const str = JSON.stringify({ v: snap.v, t: snap.t, settings: snap.settings, custom: snap.custom, customApps: snap.customApps });
   return 'AK1.' + syncB64Url(str);
 }
 function syncManualDecode(raw) {
@@ -16129,3 +18022,4 @@ if (new URLSearchParams(location.search).get('debug') === '1') {
   else initDebugPanel();
 }
 
+renderCustomAppsRows();

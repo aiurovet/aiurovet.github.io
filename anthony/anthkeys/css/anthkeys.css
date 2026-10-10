@@ -295,6 +295,9 @@
 body.perf-mode, body.perf-mode *, body.perf-mode *::before, body.perf-mode *::after { backdrop-filter: none !important; -webkit-backdrop-filter: none !important; animation: none !important; transition: none !important; }
     .panel { display: none; background: var(--surface); border-radius: var(--radius); box-shadow: var(--shadow); overflow: hidden; padding: 1.25rem; transition: background .3s; }
     .panel.active { display: block; }
+    body.search-everywhere .panel { display: none; }
+    body.search-everywhere .panel.ev-show { display: block; margin-bottom: 1rem; }
+    body.search-everywhere .panel.ev-show::before { content: attr(data-label); display: block; font-size: .7rem; font-weight: 600; text-transform: uppercase; letter-spacing: .08em; color: var(--text-variant); padding-bottom: .5rem; margin-bottom: .35rem; border-bottom: 1px solid var(--outline-variant); }
     table { width: 100%; border-collapse: collapse; }
     th, td { padding: .7rem .75rem; text-align: left; border-bottom: 1px solid var(--outline-variant); }
     th { color: var(--text-variant); font-weight: 500; font-size: .7rem; text-transform: uppercase; letter-spacing: .05em; }
@@ -375,6 +378,8 @@ body.perf-mode, body.perf-mode *, body.perf-mode *::before, body.perf-mode *::af
     .search-clear { position: absolute; right: .35rem; top: 50%; transform: translateY(-50%); width: 1.5rem; height: 1.5rem; border: none; background: none; color: var(--text-variant); font-size: 1.05rem; line-height: 1; cursor: pointer; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; padding: 0; }
     .search-clear:hover { background: var(--outline-variant); color: var(--text); }
     .search-clear[hidden] { display: none; }
+    .search-bar .search-everywhere { right: 1.95rem; font-size: .85rem; }
+    .search-bar .search-everywhere:hover, .search-bar .search-everywhere.active { background: var(--outline-variant); color: var(--primary); }
     mark.hl { background: rgba(var(--accent-rgb), .28); color: inherit; border-radius: 3px; padding: 0 1px; }
     .offline-pill { position: absolute; left: .75rem; bottom: 3.2rem; z-index: 80; display: inline-flex; align-items: center; gap: .4rem; padding: .45rem .8rem; font-size: .72rem; font-weight: 500; color: var(--text); background: var(--surface); border: 1px solid var(--outline-variant); border-radius: 16px; box-shadow: var(--shadow); cursor: pointer; }
     .offline-pill .offline-dot { width: .5rem; height: .5rem; border-radius: 50%; background: var(--error); animation: dot-pulse 1.6s ease-in-out infinite; flex: none; }

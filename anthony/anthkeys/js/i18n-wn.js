@@ -6,6 +6,13 @@
 const I18N_WN = window.I18N_WN || {};
 
 I18N_WN.es = {
+  'v53.8': [
+    'Nuevo: crea tus propias secciones de apps &mdash; dale a una app un nombre y sus atajos en Ajustes, y fíltrala desde la pestaña Apps; se sincronizan mediante sincronización de sala, códigos sin conexión, exportación y Gist.',
+    'Nuevo: diez apps más en la pestaña Apps &mdash; GIMP, OBS Studio, PowerPoint, Excel, Google Docs, Google Sheets, Premiere Pro, After Effects, Android Studio y Sublime Text.',
+    'Mejorado: la búsqueda ahora puede mirar en todas las plataformas a la vez &mdash; activa el botón de todas las plataformas en la barra de búsqueda y los resultados aparecen agrupados por plataforma.',
+  ],
+
+
   'v53.7': [
     'Nuevo: ocho apps más en la pestaña Apps &mdash; Notion, Linear, Blender, DaVinci Resolve, Krita, Audacity, Discord y Outlook.',
     'Mejorado: ¿Sin resultados? La búsqueda ahora sugiere el atajo más parecido, y añadir ?debug=1 a la URL abre un panel de diagnóstico (versión, almacenamiento, errores, service worker).',
@@ -313,6 +320,13 @@ I18N_WN.es = {
 };
 
 I18N_WN.fr = {
+  'v53.8': [
+    'Nouveau : créez vos propres sections d\'applications &mdash; donnez un nom et des raccourcis à une app dans Paramètres, puis filtrez depuis l\'onglet Apps ; elles se synchronisent via la synchro de salle, les codes hors ligne, l\'export et Gist.',
+    'Nouveau : dix applications de plus dans l\'onglet Apps &mdash; GIMP, OBS Studio, PowerPoint, Excel, Google Docs, Google Sheets, Premiere Pro, After Effects, Android Studio et Sublime Text.',
+    'Amélioré : la recherche peut désormais chercher sur toutes les plateformes à la fois &mdash; activez le bouton toutes-plateformes dans la barre de recherche et les résultats apparaissent groupés par plateforme.',
+  ],
+
+
   'v53.7': [
     'Nouveau&nbsp;: huit applications de plus dans l\'onglet Apps&nbsp;&mdash; Notion, Linear, Blender, DaVinci Resolve, Krita, Audacity, Discord et Outlook.',
     'Amélioré&nbsp;: Aucun résultat&nbsp;? La recherche suggère désormais le raccourci le plus proche, et ajouter ?debug=1 à l\'URL ouvre un panneau de diagnostic (version, stockage, erreurs, service worker).',
@@ -620,6 +634,13 @@ I18N_WN.fr = {
 };
 
 I18N_WN.de = {
+  'v53.8': [
+    'Neu: erstelle eigene App-Bereiche &mdash; gib einer App in den Einstellungen einen Namen und ihre Kürzel, und filtere dann über die Apps-Registerkarte danach; sie synchronisieren über Raum-Sync, Offline-Codes, Export und Gist.',
+    'Neu: zehn weitere Apps in der Apps-Registerkarte &mdash; GIMP, OBS Studio, PowerPoint, Excel, Google Docs, Google Sheets, Premiere Pro, After Effects, Android Studio und Sublime Text.',
+    'Verbessert: Die Suche kann jetzt alle Plattformen gleichzeitig durchsuchen &mdash; schalte die Alles-Plattformen-Schaltfläche in der Suchleiste um und die Ergebnisse erscheinen nach Plattform gruppiert.',
+  ],
+
+
   'v53.7': [
     'Neu: acht weitere Apps im Apps-Tab &mdash; Notion, Linear, Blender, DaVinci Resolve, Krita, Audacity, Discord und Outlook.',
     'Verbessert: Keine Treffer? Die Suche schlägt jetzt das ähnlichste Tastenkürzel vor, und ?debug=1 in der URL öffnet ein Diagnosefenster (Version, Speicher, Fehler, Service Worker).',
@@ -927,6 +948,13 @@ I18N_WN.de = {
 };
 
 I18N_WN.it = {
+  'v53.8': [
+    'Nuovo: crea sezioni di app personalizzate &mdash; dai a un\'app un nome e le sue scorciatoie nelle Impostazioni, poi filtrala dalla scheda Apps; si sincronizzano tramite sync stanza, codici offline, esportazione e Gist.',
+    'Nuovo: dieci app in più nella scheda Apps &mdash; GIMP, OBS Studio, PowerPoint, Excel, Google Docs, Google Sheets, Premiere Pro, After Effects, Android Studio e Sublime Text.',
+    'Migliorato: la ricerca ora può cercare su tutte le piattaforme in una volta &mdash; attiva il pulsante tutte-le-piattaforme nella barra di ricerca e i risultati appaiono raggruppati per piattaforma.',
+  ],
+
+
   'v53.7': [
     'Nuovo: otto app in più nella scheda Apps &mdash; Notion, Linear, Blender, DaVinci Resolve, Krita, Audacity, Discord e Outlook.',
     'Migliorato: Nessun risultato? La ricerca ora suggerisce la scorciatoia più simile e aggiungere ?debug=1 all\'URL apre un pannello di diagnostica (versione, dati, errori, service worker).',
@@ -1234,6 +1262,13 @@ I18N_WN.it = {
 };
 
 I18N_WN.pt = {
+  'v53.8': [
+    'Novo: crie suas próprias seções de apps &mdash; dê a um app um nome e seus atalhos em Configurações e filtre por ele na aba Apps; elas sincronizam via sync de sala, códigos off-line, exportação e Gist.',
+    'Novo: mais dez apps na aba Apps &mdash; GIMP, OBS Studio, PowerPoint, Excel, Google Docs, Google Sheets, Premiere Pro, After Effects, Android Studio e Sublime Text.',
+    'Melhorado: a busca agora pode olhar em todas as plataformas de uma vez &mdash; ative o botão de todas as plataformas na barra de busca e os resultados aparecem agrupados por plataforma.',
+  ],
+
+
   'v53.7': [
     'Novo: oito apps a mais na aba Apps &mdash; Notion, Linear, Blender, DaVinci Resolve, Krita, Audacity, Discord e Outlook.',
     'Melhorado: Sem resultados? A busca agora sugere o atalho mais próximo, e adicionar ?debug=1 à URL abre um painel de diagnóstico (versão, armazenamento, erros, service worker).',
@@ -1541,6 +1576,13 @@ I18N_WN.pt = {
 };
 
 I18N_WN.nl = {
+  'v53.8': [
+    'Nieuw: maak je eigen app-secties &mdash; geef een app in Instellingen een naam en de snelkoppelingen, en filter er daarna op via het tabblad Apps; ze synchroniseren via kamer-sync, offline codes, export en Gist.',
+    'Nieuw: tien extra apps op het tabblad Apps &mdash; GIMP, OBS Studio, PowerPoint, Excel, Google Docs, Google Sheets, Premiere Pro, After Effects, Android Studio en Sublime Text.',
+    'Verbeterd: zoeken kan nu op alle platforms tegelijk &mdash; zet de alle-platforms-knop in de zoekbalk aan en de resultaten verschijnen gegroepeerd per platform.',
+  ],
+
+
   'v53.7': [
     'Nieuw: acht apps extra in het tabblad Apps &mdash; Notion, Linear, Blender, DaVinci Resolve, Krita, Audacity, Discord en Outlook.',
     'Verbeterd: Geen resultaten? Zoeken stelt nu de dichtstbijzijnde sneltoets voor; voeg ?debug=1 aan de URL toe voor een diagnostisch paneel (versie, opslag, fouten, service worker).',
@@ -1848,6 +1890,13 @@ I18N_WN.nl = {
 };
 
 I18N_WN.ja = {
+  'v53.8': [
+    '新機能：自分だけのアプリセクションを作成 &mdash; 設定でアプリに名前とショートカットを付け、Appsタブから絞り込みできます。ルーム同期・オフラインコード・エクスポート・Gistで同期されます。',
+    '新機能：Appsタブにアプリが10個追加 &mdash; GIMP、OBS Studio、PowerPoint、Excel、Google Docs、Google Sheets、Premiere Pro、After Effects、Android Studio、Sublime Text。',
+    '改善：検索がすべてのプラットフォームを一度に検索可能に &mdash; 検索バーの全プラットフォームボタンを切り替えると、結果がプラットフォームごとにまとめて表示されます。',
+  ],
+
+
   'v53.7': [
     '新機能：アプリタブに8つのアプリを追加 &mdash; Notion、Linear、Blender、DaVinci Resolve、Krita、Audacity、Discord、Outlook。',
     '改善：結果なし？ 検索が最も近いショートカットを提案するようになりました。URLに ?debug=1 を追加すると診断パネルが開きます（バージョン、保存データ、エラー、サービスワーカー）。',
@@ -2155,6 +2204,13 @@ I18N_WN.ja = {
 };
 
 I18N_WN.ru = {
+  'v53.8': [
+    'Новое: создавайте собственные разделы приложений &mdash; дайте приложению имя и его сочетания клавиш в Настройках, затем фильтруйте его во вкладке Apps; они синхронизируются через синхронизацию комнаты, офлайн-коды, экспорт и Gist.',
+    'Новое: ещё десять приложений во вкладке Apps &mdash; GIMP, OBS Studio, PowerPoint, Excel, Google Docs, Google Sheets, Premiere Pro, After Effects, Android Studio и Sublime Text.',
+    'Улучшено: поиск теперь может искать сразу по всем платформам &mdash; включите кнопку «все платформы» в строке поиска, и результаты появятся сгруппированными по платформам.',
+  ],
+
+
   'v53.7': [
     'Новое: ещё восемь приложений во вкладке приложений &mdash; Notion, Linear, Blender, DaVinci Resolve, Krita, Audacity, Discord и Outlook.',
     'Улучшено: Нет результатов? Поиск теперь предлагает ближайшее сочетание клавиш, а добавление ?debug=1 к URL открывает панель диагностики (версия, хранилище, ошибки, service worker).',
@@ -2462,6 +2518,13 @@ I18N_WN.ru = {
 };
 
 I18N_WN.ko = {
+  'v53.8': [
+    '새 기능: 나만의 앱 섹션 만들기 &mdash; 설정에서 앱에 이름과 단축키를 지정한 다음 Apps 탭에서 필터링하세요. 방 동기화, 오프라인 코드, 내보내기 및 Gist를 통해 동기화됩니다.',
+    '새 기능: Apps 탭에 앱 10개 추가 &mdash; GIMP, OBS Studio, PowerPoint, Excel, Google Docs, Google Sheets, Premiere Pro, After Effects, Android Studio, Sublime Text.',
+    '개선: 검색이 모든 플랫폼을 한 번에 검색 가능 &mdash; 검색 창의 전체 플랫폼 버튼을 켜면 결과가 플랫폼별로 그룹화되어 표시됩니다.',
+  ],
+
+
   'v53.7': [
     '새 기능: 앱 탭에 8개 앱 추가 &mdash; Notion, Linear, Blender, DaVinci Resolve, Krita, Audacity, Discord, Outlook.',
     '개선: 결과 없음? 검색이 가장 가까운 단축키를 제안하며, URL에 ?debug=1을 추가하면 진단 패널이 열립니다(버전, 저장소, 오류, 서비스 워커).',
@@ -2769,6 +2832,13 @@ I18N_WN.ko = {
 };
 
 I18N_WN.pl = {
+  'v53.8': [
+    'Nowość: twórz własne sekcje aplikacji &mdash; nadaj aplikacji nazwę i skróty w Ustawieniach, a następnie filtruj ją z karty Apps; synchronizują się przez synchronizację pokoju, kody offline, eksport i Gist.',
+    'Nowość: dziesięć kolejnych aplikacji na karcie Apps &mdash; GIMP, OBS Studio, PowerPoint, Excel, Google Docs, Google Sheets, Premiere Pro, After Effects, Android Studio i Sublime Text.',
+    'Ulepszenie: wyszukiwanie może teraz przeszukiwać wszystkie platformy naraz &mdash; włącz przycisk wszystkich platform na pasku wyszukiwania, a wyniki pojawią się pogrupowane według platformy.',
+  ],
+
+
   'v53.7': [
     'Nowość: osiem kolejnych aplikacji w zakładce Apps &mdash; Notion, Linear, Blender, DaVinci Resolve, Krita, Audacity, Discord i Outlook.',
     'Ulepszono: Brak wyników? Wyszukiwanie podpowiada teraz najbliższy skrót, a dodanie ?debug=1 do adresu URL otwiera panel diagnostyczny (wersja, pamięć, błędy, service worker).',
@@ -3076,6 +3146,13 @@ I18N_WN.pl = {
 };
 
 I18N_WN.tr = {
+  'v53.8': [
+    'Yeni: kendi uygulama bölümlerinizi oluşturun &mdash; Ayarlar\'da bir uygulamaya ad ve kısayollar verin, ardından Apps sekmesinden filtreleyin; oda senkronizasyonu, çevrimdışı kodlar, dışa aktarma ve Gist üzerinden senkronize edilir.',
+    'Yeni: Apps sekmesine on uygulama daha &mdash; GIMP, OBS Studio, PowerPoint, Excel, Google Docs, Google Sheets, Premiere Pro, After Effects, Android Studio ve Sublime Text.',
+    'İyileştirildi: arama artık tüm platformlarda aynı anda arama yapabilir &mdash; arama çubuğundaki tüm platformlar düğmesini açın, sonuçlar platformlara göre gruplanmış şekilde görünür.',
+  ],
+
+
   'v53.7': [
     'Yeni: Apps sekmesine sekiz uygulama daha &mdash; Notion, Linear, Blender, DaVinci Resolve, Krita, Audacity, Discord ve Outlook.',
     'Geliştirildi: Sonuç yok mu? Arama artık en yakın kısayolu öneriyor; URL\'ye ?debug=1 eklemek bir tanılama paneli açar (sürüm, depolama, hatalar, service worker).',
@@ -3383,6 +3460,13 @@ I18N_WN.tr = {
 };
 
 I18N_WN.vi = {
+  'v53.8': [
+    'Mới: tạo các phần ứng dụng của riêng bạn &mdash; đặt tên và phím tắt cho ứng dụng trong Cài đặt, sau đó lọc từ tab Apps; chúng đồng bộ qua đồng bộ phòng, mã ngoại tuyến, xuất và Gist.',
+    'Mới: thêm mười ứng dụng nữa trong tab Apps &mdash; GIMP, OBS Studio, PowerPoint, Excel, Google Docs, Google Sheets, Premiere Pro, After Effects, Android Studio và Sublime Text.',
+    'Cải thiện: tìm kiếm giờ có thể tìm trên mọi nền tảng cùng lúc &mdash; bật nút tất cả nền tảng trong thanh tìm kiếm, kết quả sẽ nhóm theo nền tảng.',
+  ],
+
+
   'v53.7': [
     'Mới: thêm tám ứng dụng trong tab Apps &mdash; Notion, Linear, Blender, DaVinci Resolve, Krita, Audacity, Discord và Outlook.',
     'Cải thiện: Không có kết quả? Tìm kiếm giờ gợi ý phím tắt gần nhất và thêm ?debug=1 vào URL sẽ mở bảng chẩn đoán (phiên bản, bộ nhớ, lỗi, service worker).',
@@ -3690,6 +3774,13 @@ I18N_WN.vi = {
 };
 
 I18N_WN.ar = {
+  'v53.8': [
+    'جديد: أنشئ أقسام تطبيقاتك الخاصة &mdash; امنح التطبيق اسماً واختصاراته في الإعدادات، ثم صفِّه من تبويب التطبيقات؛ وهي تتم مزامنتها عبر مزامنة الغرفة والرموز دون اتصال والتصدير وGist.',
+    'جديد: عشرة تطبيقات إضافية في تبويب التطبيقات &mdash; GIMP وOBS Studio وPowerPoint وExcel وGoogle Docs وGoogle Sheets وPremiere Pro وAfter Effects وAndroid Studio وSublime Text.',
+    'محسَّن: يمكن للبحث الآن شمل جميع المنصات دفعة واحدة &mdash; بدّل زر كل المنصات في شريط البحث وستظهر النتائج مجمعة حسب المنصة.',
+  ],
+
+
   'v53.7': [
     'جديد: ثماني تطبيقات إضافية في تبويب التطبيقات — Notion، Linear، Blender، DaVinci Resolve، Krita، Audacity، Discord وOutlook.',
     'تحسين: لا نتائج؟ يقترح البحث الآن أقرب اختصار، وإضافة ?debug=1 إلى الرابط تفتح لوحة تشخيص (الإصدار، التخزين، الأخطاء، عامل الخدمة).',
@@ -3997,6 +4088,13 @@ I18N_WN.ar = {
 };
 
 I18N_WN.hi = {
+  'v53.8': [
+    'नया: अपने खुद के ऐप सेक्शन बनाएं &mdash; सेटिंग्स में किसी ऐप को नाम और उसके शॉर्टकट दें, फिर Apps टैब से उसे फ़िल्टर करें; वे रूम सिंक, ऑफ़लाइन कोड, एक्सपोर्ट और Gist से सिंक होते हैं।',
+    'नया: Apps टैब में दस और ऐप्स &mdash; GIMP, OBS Studio, PowerPoint, Excel, Google Docs, Google Sheets, Premiere Pro, After Effects, Android Studio और Sublime Text।',
+    'बेहतर: खोज अब एक साथ सभी प्लेटफ़ॉर्म में देख सकती है &mdash; सर्च बार में सभी प्लेटफ़ॉर्म बटन चालू करें और परिणाम प्लेटफ़ॉर्म के अनुसार समूहित दिखेंगे।',
+  ],
+
+
   'v53.7': [
     'नया: ऐप्स टैब में आठ और ऐप्स &mdash; Notion, Linear, Blender, DaVinci Resolve, Krita, Audacity, Discord और Outlook।',
     'बेहतर: कोई परिणाम नहीं? खोज अब सबसे मिलता-जुलता शॉर्टकट सुझाती है, और URL में ?debug=1 जोड़ने पर डायग्नोस्टिक पैनल खुलता है (संस्करण, भंडारण, त्रुटियाँ, service worker)।',
@@ -4304,6 +4402,13 @@ I18N_WN.hi = {
 };
 
 I18N_WN.sv = {
+  'v53.8': [
+    'Nytt: skapa egna appsektioner &mdash; ge en app ett namn och dess genvägar i Inställningar och filtrera sedan på den i fliken Apps; de synkroniseras via rums-sync, offlinekoder, export och Gist.',
+    'Nytt: tio appar till i fliken Apps &mdash; GIMP, OBS Studio, PowerPoint, Excel, Google Docs, Google Sheets, Premiere Pro, After Effects, Android Studio och Sublime Text.',
+    'Förbättrat: sökningen kan nu söka på alla plattformar samtidigt &mdash; slå på alla-plattformar-knappen i sökfältet så visas resultaten grupperade efter plattform.',
+  ],
+
+
   'v53.7': [
     'Nytt: åtta appar till i fliken Apps &mdash; Notion, Linear, Blender, DaVinci Resolve, Krita, Audacity, Discord och Outlook.',
     'Förbättrat: Inga resultat? Sökningen föreslår nu det närmaste genvägskommandot och att lägga till ?debug=1 i URL:en öppnar en diagnospanel (version, lagring, fel, service worker).',
@@ -4611,6 +4716,13 @@ I18N_WN.sv = {
 };
 
 I18N_WN.da = {
+  'v53.8': [
+    'Ny: opret dine egne app-sektioner &mdash; giv en app et navn og dens genveje under Indstillinger, og filtrér derefter fra fanen Apps; de synkroniseres via værelsessynkronisering, offline-koder, eksport og Gist.',
+    'Ny: ti apps mere i fanen Apps &mdash; GIMP, OBS Studio, PowerPoint, Excel, Google Docs, Google Sheets, Premiere Pro, After Effects, Android Studio og Sublime Text.',
+    'Forbedret: søgning kan nu søge på alle platforme på én gang &mdash; tryk på knappen for alle platforme i søgefeltet, og resultaterne vises grupperet efter platform.',
+  ],
+
+
   'v53.7': [
     'Nyt: otte apps mere i fanen Apps &mdash; Notion, Linear, Blender, DaVinci Resolve, Krita, Audacity, Discord og Outlook.',
     'Forbedret: Ingen resultater? Søgningen foreslår nu den nærmeste genvej, og at tilføje ?debug=1 til URL\'en åbner et diagnosticeringspanel (version, lager, fejl, service worker).',
@@ -4918,6 +5030,13 @@ I18N_WN.da = {
 };
 
 I18N_WN.fi = {
+  'v53.8': [
+    'Uusi: luo omia sovellusosioita &mdash; anna sovellukselle nimi ja sen pikanäppäimet Asetuksissa, jonka jälkeen suodata sillä Apps-välilehdellä; ne synkronoituvat huonesynkronoinnilla, offline-koodeilla, viennillä ja Gistillä.',
+    'Uusi: kymmenen sovellusta lisää Apps-välilehdellä &mdash; GIMP, OBS Studio, PowerPoint, Excel, Google Docs, Google Sheets, Premiere Pro, After Effects, Android Studio ja Sublime Text.',
+    'Parannettu: haku voi nyt etsiä kaikista alustoista kerralla &mdash; ota käyttöön kaikki alustat -painike hakupalkissa, niin tulokset näkyvät alustan mukaan ryhmiteltynä.',
+  ],
+
+
   'v53.7': [
     'Uutta: kahdeksan sovellusta lisää Sovellukset-välilehdellä &mdash; Notion, Linear, Blender, DaVinci Resolve, Krita, Audacity, Discord ja Outlook.',
     'Parannettu: Ei tuloksia? Haku ehdottaa nyt lähintä pikanäppäintä ja ?debug=1 URL-osoitteeseen avaa diagnostiikkapaneelin (versio, tallennus, virheet, service worker).',
@@ -5225,6 +5344,13 @@ I18N_WN.fi = {
 };
 
 I18N_WN.no = {
+  'v53.8': [
+    'Ny: opprett dine egne app-seksjoner &mdash; gi en app navn og snarveier i Innstillinger, og filtrer deretter fra Apps-fanen; de synkroniseres via romsynkronisering, offline-koder, eksport og Gist.',
+    'Ny: ti apper til i Apps-fanen &mdash; GIMP, OBS Studio, PowerPoint, Excel, Google Docs, Google Sheets, Premiere Pro, After Effects, Android Studio og Sublime Text.',
+    'Forbedret: søk kan nå søke på alle plattformer samtidig &mdash; slå på alle-plattformer-knappen i søkefeltet, og resultatene vises gruppert etter plattform.',
+  ],
+
+
   'v53.7': [
     'Ny: åtte apper til i Apps-fanen &mdash; Notion, Linear, Blender, DaVinci Resolve, Krita, Audacity, Discord og Outlook.',
     'Forbedret: Ingen resultater? Søk foreslår nå den nærmeste snarveien, og å legge til ?debug=1 i URL-en åpner et diagnosepanel (versjon, lagring, feil, service worker).',
@@ -5532,6 +5658,13 @@ I18N_WN.no = {
 };
 
 I18N_WN.cs = {
+  'v53.8': [
+    'Novinka: vytvořte si vlastní sekce aplikací &mdash; pojmenujte aplikaci a doplňte její zkratky v Nastavení, poté ji filtrujte v záložce Apps; synchronizuje se přes synchronizaci místnosti, offline kódy, export i Gist.',
+    'Novinka: deset dalších aplikací v záložce Apps &mdash; GIMP, OBS Studio, PowerPoint, Excel, Google Docs, Google Sheets, Premiere Pro, After Effects, Android Studio a Sublime Text.',
+    'Vylepšení: vyhledávání nyní může prohledávat všechny platformy najednou &mdash; přepněte tlačítko všech platforem ve vyhledávacím poli a výsledky se zobrazí seskupené podle platformy.',
+  ],
+
+
   'v53.7': [
     'Novinka: osm dalších aplikací v záložce Apps &mdash; Notion, Linear, Blender, DaVinci Resolve, Krita, Audacity, Discord a Outlook.',
     'Vylepšeno: Žádné výsledky? Vyhledávání nyní nabídne nejbližší zástupce a přidání ?debug=1 do adresy URL otevře diagnostický panel (verze, úložiště, chyby, service worker).',
@@ -5839,6 +5972,13 @@ I18N_WN.cs = {
 };
 
 I18N_WN.hu = {
+  'v53.8': [
+    'Új: hozzon létre saját alkalmazásszekciókat &mdash; adjon nevet és gyorsbillentyűket egy alkalmazásnak a Beállításokban, majd szűrjön rá az Apps fülön; ezek szinkronizálódnak a szobaszinkron, az offline kódok, az export és a Gist révén.',
+    'Új: tíz további alkalmazás az Apps fülön &mdash; GIMP, OBS Studio, PowerPoint, Excel, Google Docs, Google Sheets, Premiere Pro, After Effects, Android Studio és Sublime Text.',
+    'Javítva: a keresés most már egyszerre felöleli az összes platformot &mdash; kapcsolja be az összes platform gombot a keresősávban, és az eredmények platformonként csoportosítva jelennek meg.',
+  ],
+
+
   'v53.7': [
     'Újdonság: nyolc további alkalmazás az Alkalmazások lapon &mdash; Notion, Linear, Blender, DaVinci Resolve, Krita, Audacity, Discord és Outlook.',
     'Javított: Nincs találat? A keresés most a legközelebbi billentyűparancsot javasolja, és a ?debug=1 hozzáadása az URL-hez diagnosztikai panelt nyit (verzió, tárolás, hibák, service worker).',
