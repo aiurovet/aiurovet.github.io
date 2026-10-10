@@ -9835,7 +9835,6 @@ function applyLanguage(lang) {
   applyWhatsNewLanguage(lang);
   renderNotifyUI();
   updateSearchCount();
-  if (document.querySelector('.panel.active')?.id === 'parity') renderPlatformParity();
 }
 
 function applyWhatsNewLanguage(lang) {
@@ -10680,7 +10679,7 @@ onId('btnNotifyTest', 'click', async function() {
 let reloadOnUpdate = false;
 if ('serviceWorker' in navigator) {
   let refreshing = false;
-  navigator.serviceWorker.register('sw.js?v=28').catch(() => {});
+  navigator.serviceWorker.register('sw.js?v=29').catch(() => {});
   navigator.serviceWorker.addEventListener('controllerchange', () => {
     if (!reloadOnUpdate || refreshing) return;
     refreshing = true;
@@ -10906,7 +10905,7 @@ renderAnthkeys();
 // (moved below click handlers and accents init)
 
 // ---- Event listeners ----
-const AK_TAB_IDS = ['windows', 'macos', 'linux', 'chromeos', 'apps', 'parity'];
+const AK_TAB_IDS = ['windows', 'macos', 'linux', 'chromeos', 'apps'];
 function selectPlatformTab(tab, smoothScroll) {
   document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
   document.querySelectorAll('.panel').forEach(p => p.classList.remove('active'));
@@ -10915,26 +10914,6 @@ function selectPlatformTab(tab, smoothScroll) {
   if (pnl) pnl.classList.add('active');
   const scrollArea = document.querySelector('.scroll-area');
   if (scrollArea && smoothScroll) scrollArea.scrollTo({ top: 0, behavior: 'smooth' });
-  const isParity = tab.dataset.tab === 'parity';
-  document.body.classList.toggle('parity-mode', isParity);
-  if (isParity) {
-    // Self-healing: if boot died before initParity() (e.g. a corrupt stored value),
-    // build the chips lazily here and never leave the panel blank on error.
-    try {
-      const chipsEl = document.getElementById('parityChips');
-      if (chipsEl && !chipsEl.children.length) initParity();
-      renderPlatformParity();
-    } catch (err) {
-      try { window.__akErrors.push('parity render: ' + (err && err.message)); } catch (e) {}
-      const g = document.getElementById('parityGrid');
-      const em = document.getElementById('parityEmpty');
-      if (g) {
-        g.innerHTML = '<div class="parity-group">Parity</div><div class="parity-row"><div class="pcell p-action">Could not render the parity map</div></div>';
-        g.style.display = '';
-      }
-      if (em) em.hidden = true;
-    }
-  }
   updateCompareOptions();
   buildModBar();
   applyCategoryFilter();
@@ -12594,181 +12573,6 @@ function updateCompareCount(panel) {
   cc.textContent = cnt + '/' + rows.length + ' differ';
 }
 
-// ---- Parity map: only the shortcuts that differ across chosen platforms ----
-const PARITY_PLATFORMS = ['windows', 'macos', 'linux', 'chromeos'];
-let paritySel = ['windows', 'macos'];
-let parityOnlyDiff = true;
-
-function parityEsc(s) {
-  return String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
-}
-
-function parityPlatformName(pid) {
-  const tab = document.querySelector('.tab[data-tab="' + pid + '"]');
-  if (!tab) return pid;
-  const copy = tab.cloneNode(true);
-  copy.querySelectorAll('#linuxTabDistro, #linuxChev, #appsTabApp, #appsChev').forEach(n => n.remove());
-  return (copy.textContent || '').trim();
-}
-
-function parityActionHeader() {
-  const el = document.querySelector('[data-i18n="th.action"]');
-  return el ? el.textContent.trim() : 'Action';
-}
-
-function collectParityRows(pid) {
-  const panel = document.getElementById(pid);
-  const out = [];
-  if (!panel) return out;
-  let catKey = null, catLabel = '';
-  panel.querySelectorAll('tbody tr').forEach(tr => {
-    if (tr.classList.contains('category')) {
-      const td = tr.querySelector('td[data-i18n]');
-      catKey = td ? td.getAttribute('data-i18n') : null;
-      catLabel = td ? td.textContent.trim() : '';
-      return;
-    }
-    const ac = tr.querySelector('td[data-i18n]');
-    const kd = tr.querySelector('td:last-child');
-    if (!ac || !kd) return;
-    out.push({
-      catKey: catKey,
-      catLabel: catLabel,
-      actionKey: ac.getAttribute('data-i18n'),
-      actionLabel: (ac.textContent || '').replace(/[☆★]/g, '').trim(),
-      norm: normalizeShortcut(kd.dataset.raw || kd.textContent),
-      raw: kd.dataset.raw || kd.textContent
-    });
-  });
-  return out;
-}
-
-function renderPlatformParity() {
-  const grid = document.getElementById('parityGrid');
-  const empty = document.getElementById('parityEmpty');
-  if (!grid || !empty) return;
-  const per = {};
-  paritySel.forEach(pid => { per[pid] = collectParityRows(pid); });
-  const meta = {}, order = [];
-  paritySel.forEach(pid => {
-    per[pid].forEach(r => {
-      if (!meta[r.actionKey]) {
-        meta[r.actionKey] = { catKey: r.catKey, catLabel: r.catLabel, label: r.actionLabel, byPlat: {} };
-        order.push(r.actionKey);
-      }
-      meta[r.actionKey].byPlat[pid] = { norm: r.norm, raw: r.raw };
-    });
-  });
-  const q = (document.getElementById('searchInput')?.value || '').trim().toLowerCase();
-  const onlyDiff = parityOnlyDiff && paritySel.length >= 2;
-  const rowsByCat = {}, cats = [];
-  order.forEach(k => {
-    const m = meta[k];
-    let present = 0;
-    paritySel.forEach(pid => { if (m.byPlat[pid]) present++; });
-    if (!present) return;
-    // "differences only": hide rows that are present on every selected platform
-    // with an identical shortcut; keep rows missing anywhere or differing.
-    if (onlyDiff && present === paritySel.length) {
-      const ref = m.byPlat[paritySel[0]].norm;
-      if (paritySel.every(pid => m.byPlat[pid].norm === ref)) return;
-    }
-    if (q) {
-      const hay = (m.label + ' ' + paritySel.map(pid => m.byPlat[pid] ? m.byPlat[pid].raw : '').join(' ')).toLowerCase();
-      if (!hay.includes(q)) return;
-    }
-    const ck = m.catKey || '__none__';
-    if (!rowsByCat[ck]) { rowsByCat[ck] = []; cats.push({ key: ck, label: m.catLabel || '' }); }
-    rowsByCat[ck].push(k);
-  });
-  grid.innerHTML = '';
-  if (!cats.length) {
-    grid.style.display = 'none';
-    empty.hidden = false;
-    return;
-  }
-  grid.style.display = '';
-  empty.hidden = true;
-  const cols = paritySel.length;
-  grid.style.gridTemplateColumns = 'minmax(10rem,1.5fr) repeat(' + cols + ', minmax(6.5rem,1fr))';
-  let html = '<div class="parity-row parity-th"><div class="pcell">' + parityEsc(parityActionHeader()) + '</div>';
-  paritySel.forEach(pid => { html += '<div class="pcell">' + parityEsc(parityPlatformName(pid)) + '</div>'; });
-  html += '</div>';
-  cats.forEach(c => {
-    html += '<div class="parity-group">' + parityEsc(c.label) + '</div>';
-    rowsByCat[c.key].forEach(k => {
-      const m = meta[k];
-      html += '<div class="parity-row"><div class="pcell p-action">' + parityEsc(m.label) + '</div>';
-      paritySel.forEach(pid => {
-        const e = m.byPlat[pid];
-        html += (e && e.raw) ? '<div class="pcell p-key">' + e.raw + '</div>'
-                             : '<div class="pcell p-key p-none">\u2014</div>';
-      });
-      html += '</div>';
-    });
-  });
-  grid.innerHTML = html;
-}
-
-function filterParityRows(q) {
-  const grid = document.getElementById('parityGrid');
-  const empty = document.getElementById('parityEmpty');
-  if (!grid || !empty) return;
-  if (grid.style.display === 'none') return;
-  let any = false;
-  grid.querySelectorAll('.parity-row').forEach(row => {
-    const show = !q || (row.textContent || '').toLowerCase().includes(q);
-    row.style.display = show ? '' : 'none';
-    if (show) any = true;
-  });
-  empty.hidden = any;
-}
-
-function toggleParityPlatform(pid) {
-  const i = paritySel.indexOf(pid);
-  if (i >= 0) {
-    if (paritySel.length === 1) return;
-    paritySel.splice(i, 1);
-  } else {
-    paritySel.push(pid);
-  }
-  document.querySelectorAll('#parityChips .parity-chip').forEach(b => {
-    b.classList.toggle('on', paritySel.includes(b.dataset.plat));
-  });
-  renderPlatformParity();
-}
-
-function initParity() {
-  const chips = document.getElementById('parityChips');
-  if (!chips) return;
-  if (chips.children.length) return; // idempotent: already built (boot or lazy path)
-  try {
-    PARITY_PLATFORMS.forEach(pid => {
-      const b = document.createElement('button');
-      b.type = 'button';
-      b.className = 'parity-chip';
-      b.dataset.plat = pid;
-      b.textContent = parityPlatformName(pid);
-      b.setAttribute('data-i18n', 'tab.' + pid);
-      b.classList.toggle('on', paritySel.includes(pid));
-      b.addEventListener('click', () => toggleParityPlatform(pid));
-      chips.appendChild(b);
-    });
-    const cb = document.getElementById('parityOnlyDiff');
-    if (cb) {
-      parityOnlyDiff = cb.checked;
-      cb.addEventListener('change', () => {
-        parityOnlyDiff = cb.checked;
-        renderPlatformParity();
-      });
-    }
-  } catch (e) {
-    // A failed build must never leave a blank panel: clear and retry next activation.
-    while (chips.firstChild) chips.removeChild(chips.firstChild);
-    try { window.__akErrors.push('initParity: ' + (e && e.message)); } catch (err) {}
-  }
-}
-initParity();
 function applyHighlight(tr, q) {
   const td = tr.querySelector('td[data-i18n]');
   if (!td) return;
@@ -12816,10 +12620,6 @@ function applyView() {
   const activeMods = new Set([...document.querySelectorAll('#modBar .pill.active')].map(p => p.dataset.mod));
   const panel = document.querySelector('.panel.active');
   if (!panel) return;
-  if (panel.id === 'parity') {
-    filterParityRows(q);
-    return;
-  }
   const compareMap = comparePlatform ? buildShortcutMap(comparePlatform) : null;
 
   panel.querySelectorAll('tbody tr:not(.category)').forEach(tr => {
@@ -12956,7 +12756,6 @@ function updateSearchCount() {
   if (!el) return;
   if (!q) { el.textContent = ''; return; }
   const panel = document.querySelector('.panel.active');
-  if (panel && panel.id === 'parity') { el.textContent = ''; return; }
   const allRows = panel ? [...panel.querySelectorAll('tbody tr:not(.category)')] : [];
   const visible = allRows.filter(r => r.style.display !== 'none').length;
   if (visible === 0) { el.textContent = t('search.noresults'); return; }

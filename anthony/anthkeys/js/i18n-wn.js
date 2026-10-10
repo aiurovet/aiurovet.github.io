@@ -6,6 +6,10 @@
 const I18N_WN = window.I18N_WN || {};
 
 I18N_WN.es = {
+  'v53.6': [
+    'Eliminado: la pestaña Paridad (vista de solo diferencias entre plataformas). Las pestañas de plataforma vuelven a ser las cinco habituales.',
+  ],
+
   'v53.5': [
     'Corregido: un valor guardado dañado podía impedir que la app arrancara del todo (pestaña Paridad vacía). El arranque es ahora robusto y el mapa de paridad se construye al abrir la pestaña.',
   ],
@@ -304,6 +308,10 @@ I18N_WN.es = {
 };
 
 I18N_WN.fr = {
+  'v53.6': [
+    'Supprimé&nbsp;: l’onglet Parité (vue des seules différences entre plateformes). Les onglets de plateforme redeviennent les cinq habituels.',
+  ],
+
   'v53.5': [
     'Corrigé&nbsp;: une valeur enregistrée corrompue pouvait empêcher le démarrage complet (onglet Parité vide). Le démarrage est désormais robuste et la carte se construit à l’ouverture de l’onglet.',
   ],
@@ -602,6 +610,10 @@ I18N_WN.fr = {
 };
 
 I18N_WN.de = {
+  'v53.6': [
+    'Entfernt: der Parity-Tab (Ansicht nur der Unterschiede zwischen Plattformen). Die Plattform-Tabs sind wieder die üblichen fünf.',
+  ],
+
   'v53.5': [
     'Behoben: ein beschädigter gespeicherter Wert konnte den Start abbrechen (leerer Parity-Tab). Der Start ist jetzt robust und die Karte baut sich beim Öffnen des Tabs auf.',
   ],
@@ -900,6 +912,10 @@ I18N_WN.de = {
 };
 
 I18N_WN.it = {
+  'v53.6': [
+    'Rimosso: la scheda Parità (vista solo differenze tra piattaforme). Le schede piattaforma tornano alle solite cinque.',
+  ],
+
   'v53.5': [
     'Corretto: un valore salvato danneggiato poteva bloccare l’avvio (scheda Parità vuota). L’avvio è ora robusto e la mappa si costruisce all’apertura della scheda.',
   ],
@@ -1198,6 +1214,10 @@ I18N_WN.it = {
 };
 
 I18N_WN.pt = {
+  'v53.6': [
+    'Removido: a aba Paridade (visão só de diferenças entre plataformas). As abas de plataforma voltam às cinco habituais.',
+  ],
+
   'v53.5': [
     'Corrigido: um valor salvo corrompido podia impedir a inicialização (aba Paridade vazia). A inicialização agora é robusta e o mapa se monta ao abrir a aba.',
   ],
@@ -1496,6 +1516,10 @@ I18N_WN.pt = {
 };
 
 I18N_WN.nl = {
+  'v53.6': [
+    'Verwijderd: het tabblad Pariteit (weergave van alleen verschillen tussen platforms). De platformtabbladen zijn weer de gebruikelijke vijf.',
+  ],
+
   'v53.5': [
     'Opgelost: een beschadigde opgeslagen waarde kon de start blokkeren (leeg tabblad Pariteit). De start is nu robuust en de kaart wordt opgebouwd bij het openen van het tabblad.',
   ],
@@ -1794,6 +1818,10 @@ I18N_WN.nl = {
 };
 
 I18N_WN.ja = {
+  'v53.6': [
+    '削除：パリティタブ（プラットフォーム間の違いのみを表示するビュー）。プラットフォームタブは通常の5つに戻りました。',
+  ],
+
   'v53.5': [
     '修正：保存データの破損で起動が途中で止まり、パリティタブが空になることがありました。起動処理を頑健にし、タブを開くとマップを組み立てるようにしました。',
   ],
@@ -2092,6 +2120,10 @@ I18N_WN.ja = {
 };
 
 I18N_WN.ru = {
+  'v53.6': [
+    'Удалено: вкладка «Parity» (просмотр только различий между платформами). Вкладки платформ вернулись к привычным пяти.',
+  ],
+
   'v53.5': [
     'Исправлено: повреждённое сохранённое значение могло остановить запуск (пустая вкладка «Parity»). Запуск теперь устойчив, и карта строится при открытии вкладки.',
   ],
@@ -2390,6 +2422,10 @@ I18N_WN.ru = {
 };
 
 I18N_WN.ko = {
+  'v53.6': [
+    '제거: 패리티 탭(플랫폼 간 차이만 보는 보기). 플랫폼 탭은 평소처럼 5개로 돌아왔습니다.',
+  ],
+
   'v53.5': [
     '수정: 저장된 값 손상으로 앱 시작이 중단되어 패리티 탭이 비어 보일 수 있었습니다. 이제 시작이 견고하며 탭을 열면 맵이 스스로 구성됩니다.',
   ],
@@ -2688,6 +2724,10 @@ I18N_WN.ko = {
 };
 
 I18N_WN.pl = {
+  'v53.6': [
+    'Usunięto: kartę Parzystości (widok samych różnic między platformami). Karty platform wracają do zwykłych pięciu.',
+  ],
+
   'v53.5': [
     'Poprawione: uszkodzona zapisana wartość mogła zatrzymać uruchamianie (pusta karta Parzystości). Uruchamianie jest teraz odporne, a mapa buduje się po otwarciu karty.',
   ],
@@ -2986,6 +3026,10 @@ I18N_WN.pl = {
 };
 
 I18N_WN.tr = {
+  'v53.6': [
+    'Kaldırıldı: Fark sekmesi (platformlar arasındaki yalnızca farkları gösteren görünüm). Platform sekmeleri her zamanki beşe döndü.',
+  ],
+
   'v53.5': [
     'Düzeltildi: bozuk bir kayıtlı değer başlatmayı durdurabiliyordu (boş Fark sekmesi). Başlatma artık dayanıklı ve sekme açılınca harita kendini oluşturuyor.',
   ],
@@ -3284,6 +3328,10 @@ I18N_WN.tr = {
 };
 
 I18N_WN.vi = {
+  'v53.6': [
+    'Đã gỡ: tab Chênh lệch (chế độ chỉ xem khác biệt giữa các nền tảng). Các tab nền tảng quay lại như năm tab thông thường.',
+  ],
+
   'v53.5': [
     'Đã sửa: giá trị lưu bị hỏng có thể khiến ứng dụng không khởi động hết (tab Chênh lệch trống). Khởi động giờ chắc chắn hơn và bản đồ tự dựng khi mở tab.',
   ],
@@ -3582,6 +3630,10 @@ I18N_WN.vi = {
 };
 
 I18N_WN.ar = {
+  'v53.6': [
+    'تمت الإزالة: تبويب الفروق (عرض الاختلافات فقط بين المنصات). عادت تبويبات المنصات إلى الخمسة المعتادة.',
+  ],
+
   'v53.5': [
     'تم الإصلاح: قيمة محفوظة تالفة قد توقف التشغيل (تبويب الفروق فارغ). التشغيل أصبح متينًا الآن وتُبنى الخريطة عند فتح التبويب.',
   ],
@@ -3880,6 +3932,10 @@ I18N_WN.ar = {
 };
 
 I18N_WN.hi = {
+  'v53.6': [
+    'हटाया गया: पैरिटी टैब (प्लेटफ़ॉर्मों के बीच केवल अंतर दिखाने वाला दृश्य)। प्लेटफ़ॉर्म टैब सामान्य पाँच पर लौट आए।',
+  ],
+
   'v53.5': [
     'ठीक किया गया: दूषित सहेजी गई वैल्यू ऐप को पूरा शुरू होने से रोक सकती थी (खाली पैरिटी टैब)। अब शुरुआत मज़बूत है और टैब खोलते ही मैप बन जाता है।',
   ],
@@ -4178,6 +4234,10 @@ I18N_WN.hi = {
 };
 
 I18N_WN.sv = {
+  'v53.6': [
+    'Borttaget: fliken Paritet (vy som bara visar skillnader mellan plattformar). Plattformsflikarna är tillbaka till de vanliga fem.',
+  ],
+
   'v53.5': [
     'Åtgärdat: ett skadat sparat värde kunde stoppa starten (tom flik Paritet). Starten är nu robust och kartan byggs när fliken öppnas.',
   ],
@@ -4476,6 +4536,10 @@ I18N_WN.sv = {
 };
 
 I18N_WN.da = {
+  'v53.6': [
+    'Fjernet: fanen Paritet (visning af kun forskelle mellem platforme). Platformsfanerne er tilbage til de sædvanlige fem.',
+  ],
+
   'v53.5': [
     'Rettet: en beskadiget gemt værdi kunne stoppe opstarten (tom fane Paritet). Opstarten er nu robust, og kortet bygges, når fanen åbnes.',
   ],
@@ -4774,6 +4838,10 @@ I18N_WN.da = {
 };
 
 I18N_WN.fi = {
+  'v53.6': [
+    'Poistettu: Pariteetti-välilehti (vain erot näyttävä näkymä alustojen välillä). Alustavälilehdet palasivat tavanomaisiin viiteen.',
+  ],
+
   'v53.5': [
     'Korjattu: vioittunut tallennettu arvo saattoi pysäyttää käynnistyksen (tyhjä Pariteetti-välilehti). Käynnistys on nyt vakaa ja kartta rakentuu välilehteä avattaessa.',
   ],
@@ -5072,6 +5140,10 @@ I18N_WN.fi = {
 };
 
 I18N_WN.no = {
+  'v53.6': [
+    'Fjernet: fanen Paritet (visning av kun forskjeller mellom plattformer). Plattformfanene er tilbake til de vanlige fem.',
+  ],
+
   'v53.5': [
     'Fikset: en skadet lagret verdi kunne stoppe oppstarten (tom fane Paritet). Oppstarten er nå robust og kartet bygges når fanen åpnes.',
   ],
@@ -5370,6 +5442,10 @@ I18N_WN.no = {
 };
 
 I18N_WN.cs = {
+  'v53.6': [
+    'Odstraněno: karta Rozdíly (zobrazení jen rozdílů mezi platformami). Karty platforem se vracejí na obvyklých pět.',
+  ],
+
   'v53.5': [
     'Opraveno: poškozená uložená hodnota mohla zastavit spuštění (prázdná karta Rozdíly). Spuštění je nyní odolné a mapa se postaví při otevření karty.',
   ],
@@ -5668,6 +5744,10 @@ I18N_WN.cs = {
 };
 
 I18N_WN.hu = {
+  'v53.6': [
+    'Eltávolítva: a Paritás fül (csak a platformok közötti különbségek nézete). A platformfülek visszatérnek a megszokott ötre.',
+  ],
+
   'v53.5': [
     'Javítva: egy sérült mentett érték megakaszthatta az indítást (üres Paritás fül). Az indítás most már stabil, és a térkép a fül megnyitásakor felépül.',
   ],
