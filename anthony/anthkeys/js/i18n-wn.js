@@ -6,6 +6,11 @@
 const I18N_WN = window.I18N_WN || {};
 
 I18N_WN.es = {
+  'v53.7': [
+    'Nuevo: ocho apps más en la pestaña Apps &mdash; Notion, Linear, Blender, DaVinci Resolve, Krita, Audacity, Discord y Outlook.',
+    'Mejorado: ¿Sin resultados? La búsqueda ahora sugiere el atajo más parecido, y añadir ?debug=1 a la URL abre un panel de diagnóstico (versión, almacenamiento, errores, service worker).',
+  ],
+
   'v53.6': [
     'Eliminado: la pestaña Paridad (vista de solo diferencias entre plataformas). Las pestañas de plataforma vuelven a ser las cinco habituales.',
   ],
@@ -308,6 +313,11 @@ I18N_WN.es = {
 };
 
 I18N_WN.fr = {
+  'v53.7': [
+    'Nouveau&nbsp;: huit applications de plus dans l\'onglet Apps&nbsp;&mdash; Notion, Linear, Blender, DaVinci Resolve, Krita, Audacity, Discord et Outlook.',
+    'Amélioré&nbsp;: Aucun résultat&nbsp;? La recherche suggère désormais le raccourci le plus proche, et ajouter ?debug=1 à l\'URL ouvre un panneau de diagnostic (version, stockage, erreurs, service worker).',
+  ],
+
   'v53.6': [
     'Supprimé&nbsp;: l’onglet Parité (vue des seules différences entre plateformes). Les onglets de plateforme redeviennent les cinq habituels.',
   ],
@@ -610,6 +620,11 @@ I18N_WN.fr = {
 };
 
 I18N_WN.de = {
+  'v53.7': [
+    'Neu: acht weitere Apps im Apps-Tab &mdash; Notion, Linear, Blender, DaVinci Resolve, Krita, Audacity, Discord und Outlook.',
+    'Verbessert: Keine Treffer? Die Suche schlägt jetzt das ähnlichste Tastenkürzel vor, und ?debug=1 in der URL öffnet ein Diagnosefenster (Version, Speicher, Fehler, Service Worker).',
+  ],
+
   'v53.6': [
     'Entfernt: der Parity-Tab (Ansicht nur der Unterschiede zwischen Plattformen). Die Plattform-Tabs sind wieder die üblichen fünf.',
   ],
@@ -912,6 +927,11 @@ I18N_WN.de = {
 };
 
 I18N_WN.it = {
+  'v53.7': [
+    'Nuovo: otto app in più nella scheda Apps &mdash; Notion, Linear, Blender, DaVinci Resolve, Krita, Audacity, Discord e Outlook.',
+    'Migliorato: Nessun risultato? La ricerca ora suggerisce la scorciatoia più simile e aggiungere ?debug=1 all\'URL apre un pannello di diagnostica (versione, dati, errori, service worker).',
+  ],
+
   'v53.6': [
     'Rimosso: la scheda Parità (vista solo differenze tra piattaforme). Le schede piattaforma tornano alle solite cinque.',
   ],
@@ -1214,6 +1234,11 @@ I18N_WN.it = {
 };
 
 I18N_WN.pt = {
+  'v53.7': [
+    'Novo: oito apps a mais na aba Apps &mdash; Notion, Linear, Blender, DaVinci Resolve, Krita, Audacity, Discord e Outlook.',
+    'Melhorado: Sem resultados? A busca agora sugere o atalho mais próximo, e adicionar ?debug=1 à URL abre um painel de diagnóstico (versão, armazenamento, erros, service worker).',
+  ],
+
   'v53.6': [
     'Removido: a aba Paridade (visão só de diferenças entre plataformas). As abas de plataforma voltam às cinco habituais.',
   ],
@@ -1516,6 +1541,11 @@ I18N_WN.pt = {
 };
 
 I18N_WN.nl = {
+  'v53.7': [
+    'Nieuw: acht apps extra in het tabblad Apps &mdash; Notion, Linear, Blender, DaVinci Resolve, Krita, Audacity, Discord en Outlook.',
+    'Verbeterd: Geen resultaten? Zoeken stelt nu de dichtstbijzijnde sneltoets voor; voeg ?debug=1 aan de URL toe voor een diagnostisch paneel (versie, opslag, fouten, service worker).',
+  ],
+
   'v53.6': [
     'Verwijderd: het tabblad Pariteit (weergave van alleen verschillen tussen platforms). De platformtabbladen zijn weer de gebruikelijke vijf.',
   ],
@@ -1818,6 +1848,11 @@ I18N_WN.nl = {
 };
 
 I18N_WN.ja = {
+  'v53.7': [
+    '新機能：アプリタブに8つのアプリを追加 &mdash; Notion、Linear、Blender、DaVinci Resolve、Krita、Audacity、Discord、Outlook。',
+    '改善：結果なし？ 検索が最も近いショートカットを提案するようになりました。URLに ?debug=1 を追加すると診断パネルが開きます（バージョン、保存データ、エラー、サービスワーカー）。',
+  ],
+
   'v53.6': [
     '削除：パリティタブ（プラットフォーム間の違いのみを表示するビュー）。プラットフォームタブは通常の5つに戻りました。',
   ],
@@ -2120,6 +2155,11 @@ I18N_WN.ja = {
 };
 
 I18N_WN.ru = {
+  'v53.7': [
+    'Новое: ещё восемь приложений во вкладке приложений &mdash; Notion, Linear, Blender, DaVinci Resolve, Krita, Audacity, Discord и Outlook.',
+    'Улучшено: Нет результатов? Поиск теперь предлагает ближайшее сочетание клавиш, а добавление ?debug=1 к URL открывает панель диагностики (версия, хранилище, ошибки, service worker).',
+  ],
+
   'v53.6': [
     'Удалено: вкладка «Parity» (просмотр только различий между платформами). Вкладки платформ вернулись к привычным пяти.',
   ],
@@ -2422,6 +2462,11 @@ I18N_WN.ru = {
 };
 
 I18N_WN.ko = {
+  'v53.7': [
+    '새 기능: 앱 탭에 8개 앱 추가 &mdash; Notion, Linear, Blender, DaVinci Resolve, Krita, Audacity, Discord, Outlook.',
+    '개선: 결과 없음? 검색이 가장 가까운 단축키를 제안하며, URL에 ?debug=1을 추가하면 진단 패널이 열립니다(버전, 저장소, 오류, 서비스 워커).',
+  ],
+
   'v53.6': [
     '제거: 패리티 탭(플랫폼 간 차이만 보는 보기). 플랫폼 탭은 평소처럼 5개로 돌아왔습니다.',
   ],
@@ -2724,6 +2769,11 @@ I18N_WN.ko = {
 };
 
 I18N_WN.pl = {
+  'v53.7': [
+    'Nowość: osiem kolejnych aplikacji w zakładce Apps &mdash; Notion, Linear, Blender, DaVinci Resolve, Krita, Audacity, Discord i Outlook.',
+    'Ulepszono: Brak wyników? Wyszukiwanie podpowiada teraz najbliższy skrót, a dodanie ?debug=1 do adresu URL otwiera panel diagnostyczny (wersja, pamięć, błędy, service worker).',
+  ],
+
   'v53.6': [
     'Usunięto: kartę Parzystości (widok samych różnic między platformami). Karty platform wracają do zwykłych pięciu.',
   ],
@@ -3026,6 +3076,11 @@ I18N_WN.pl = {
 };
 
 I18N_WN.tr = {
+  'v53.7': [
+    'Yeni: Apps sekmesine sekiz uygulama daha &mdash; Notion, Linear, Blender, DaVinci Resolve, Krita, Audacity, Discord ve Outlook.',
+    'Geliştirildi: Sonuç yok mu? Arama artık en yakın kısayolu öneriyor; URL\'ye ?debug=1 eklemek bir tanılama paneli açar (sürüm, depolama, hatalar, service worker).',
+  ],
+
   'v53.6': [
     'Kaldırıldı: Fark sekmesi (platformlar arasındaki yalnızca farkları gösteren görünüm). Platform sekmeleri her zamanki beşe döndü.',
   ],
@@ -3328,6 +3383,11 @@ I18N_WN.tr = {
 };
 
 I18N_WN.vi = {
+  'v53.7': [
+    'Mới: thêm tám ứng dụng trong tab Apps &mdash; Notion, Linear, Blender, DaVinci Resolve, Krita, Audacity, Discord và Outlook.',
+    'Cải thiện: Không có kết quả? Tìm kiếm giờ gợi ý phím tắt gần nhất và thêm ?debug=1 vào URL sẽ mở bảng chẩn đoán (phiên bản, bộ nhớ, lỗi, service worker).',
+  ],
+
   'v53.6': [
     'Đã gỡ: tab Chênh lệch (chế độ chỉ xem khác biệt giữa các nền tảng). Các tab nền tảng quay lại như năm tab thông thường.',
   ],
@@ -3630,6 +3690,11 @@ I18N_WN.vi = {
 };
 
 I18N_WN.ar = {
+  'v53.7': [
+    'جديد: ثماني تطبيقات إضافية في تبويب التطبيقات — Notion، Linear، Blender، DaVinci Resolve، Krita، Audacity، Discord وOutlook.',
+    'تحسين: لا نتائج؟ يقترح البحث الآن أقرب اختصار، وإضافة ?debug=1 إلى الرابط تفتح لوحة تشخيص (الإصدار، التخزين، الأخطاء، عامل الخدمة).',
+  ],
+
   'v53.6': [
     'تمت الإزالة: تبويب الفروق (عرض الاختلافات فقط بين المنصات). عادت تبويبات المنصات إلى الخمسة المعتادة.',
   ],
@@ -3932,6 +3997,11 @@ I18N_WN.ar = {
 };
 
 I18N_WN.hi = {
+  'v53.7': [
+    'नया: ऐप्स टैब में आठ और ऐप्स &mdash; Notion, Linear, Blender, DaVinci Resolve, Krita, Audacity, Discord और Outlook।',
+    'बेहतर: कोई परिणाम नहीं? खोज अब सबसे मिलता-जुलता शॉर्टकट सुझाती है, और URL में ?debug=1 जोड़ने पर डायग्नोस्टिक पैनल खुलता है (संस्करण, भंडारण, त्रुटियाँ, service worker)।',
+  ],
+
   'v53.6': [
     'हटाया गया: पैरिटी टैब (प्लेटफ़ॉर्मों के बीच केवल अंतर दिखाने वाला दृश्य)। प्लेटफ़ॉर्म टैब सामान्य पाँच पर लौट आए।',
   ],
@@ -4234,6 +4304,11 @@ I18N_WN.hi = {
 };
 
 I18N_WN.sv = {
+  'v53.7': [
+    'Nytt: åtta appar till i fliken Apps &mdash; Notion, Linear, Blender, DaVinci Resolve, Krita, Audacity, Discord och Outlook.',
+    'Förbättrat: Inga resultat? Sökningen föreslår nu det närmaste genvägskommandot och att lägga till ?debug=1 i URL:en öppnar en diagnospanel (version, lagring, fel, service worker).',
+  ],
+
   'v53.6': [
     'Borttaget: fliken Paritet (vy som bara visar skillnader mellan plattformar). Plattformsflikarna är tillbaka till de vanliga fem.',
   ],
@@ -4536,6 +4611,11 @@ I18N_WN.sv = {
 };
 
 I18N_WN.da = {
+  'v53.7': [
+    'Nyt: otte apps mere i fanen Apps &mdash; Notion, Linear, Blender, DaVinci Resolve, Krita, Audacity, Discord og Outlook.',
+    'Forbedret: Ingen resultater? Søgningen foreslår nu den nærmeste genvej, og at tilføje ?debug=1 til URL\'en åbner et diagnosticeringspanel (version, lager, fejl, service worker).',
+  ],
+
   'v53.6': [
     'Fjernet: fanen Paritet (visning af kun forskelle mellem platforme). Platformsfanerne er tilbage til de sædvanlige fem.',
   ],
@@ -4838,6 +4918,11 @@ I18N_WN.da = {
 };
 
 I18N_WN.fi = {
+  'v53.7': [
+    'Uutta: kahdeksan sovellusta lisää Sovellukset-välilehdellä &mdash; Notion, Linear, Blender, DaVinci Resolve, Krita, Audacity, Discord ja Outlook.',
+    'Parannettu: Ei tuloksia? Haku ehdottaa nyt lähintä pikanäppäintä ja ?debug=1 URL-osoitteeseen avaa diagnostiikkapaneelin (versio, tallennus, virheet, service worker).',
+  ],
+
   'v53.6': [
     'Poistettu: Pariteetti-välilehti (vain erot näyttävä näkymä alustojen välillä). Alustavälilehdet palasivat tavanomaisiin viiteen.',
   ],
@@ -5140,6 +5225,11 @@ I18N_WN.fi = {
 };
 
 I18N_WN.no = {
+  'v53.7': [
+    'Ny: åtte apper til i Apps-fanen &mdash; Notion, Linear, Blender, DaVinci Resolve, Krita, Audacity, Discord og Outlook.',
+    'Forbedret: Ingen resultater? Søk foreslår nå den nærmeste snarveien, og å legge til ?debug=1 i URL-en åpner et diagnosepanel (versjon, lagring, feil, service worker).',
+  ],
+
   'v53.6': [
     'Fjernet: fanen Paritet (visning av kun forskjeller mellom plattformer). Plattformfanene er tilbake til de vanlige fem.',
   ],
@@ -5442,6 +5532,11 @@ I18N_WN.no = {
 };
 
 I18N_WN.cs = {
+  'v53.7': [
+    'Novinka: osm dalších aplikací v záložce Apps &mdash; Notion, Linear, Blender, DaVinci Resolve, Krita, Audacity, Discord a Outlook.',
+    'Vylepšeno: Žádné výsledky? Vyhledávání nyní nabídne nejbližší zástupce a přidání ?debug=1 do adresy URL otevře diagnostický panel (verze, úložiště, chyby, service worker).',
+  ],
+
   'v53.6': [
     'Odstraněno: karta Rozdíly (zobrazení jen rozdílů mezi platformami). Karty platforem se vracejí na obvyklých pět.',
   ],
@@ -5744,6 +5839,11 @@ I18N_WN.cs = {
 };
 
 I18N_WN.hu = {
+  'v53.7': [
+    'Újdonság: nyolc további alkalmazás az Alkalmazások lapon &mdash; Notion, Linear, Blender, DaVinci Resolve, Krita, Audacity, Discord és Outlook.',
+    'Javított: Nincs találat? A keresés most a legközelebbi billentyűparancsot javasolja, és a ?debug=1 hozzáadása az URL-hez diagnosztikai panelt nyit (verzió, tárolás, hibák, service worker).',
+  ],
+
   'v53.6': [
     'Eltávolítva: a Paritás fül (csak a platformok közötti különbségek nézete). A platformfülek visszatérnek a megszokott ötre.',
   ],

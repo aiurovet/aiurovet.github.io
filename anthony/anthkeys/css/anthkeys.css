@@ -658,3 +658,9 @@ body.font-ibm-plex { --font: 'IBM Plex Sans',sans-serif; }
 body.font-fira-sans { --font: 'Fira Sans',sans-serif; }
 body.font-jetbrains { --font: 'JetBrains Mono',monospace; }
 
+
+/* ---- Search suggestion (did-you-mean, shown only on zero results) ---- */
+.search-suggest { font-size: .8rem; color: var(--text-variant); padding: .15rem .15rem .35rem; }
+.search-suggest[hidden] { display: none; }
+.suggest-term { border: 1px solid var(--outline-variant); background: var(--surface-variant); color: var(--text); border-radius: 999px; padding: .2rem .7rem; margin: 0 .15rem; font: inherit; font-size: .78rem; cursor: pointer; transition: background .15s; }
+.suggest-term:hover { background: var(--outline-variant); }

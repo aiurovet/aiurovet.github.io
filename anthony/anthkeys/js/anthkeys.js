@@ -488,7 +488,64 @@ const i18n = {
     'help.expand-all-done': 'All categories expanded',
     'help.collapse-all-done': 'All categories collapsed',
     'cmp.btn': '\u21c4 Compare',
-    'cmp.with': 'with'
+    'cmp.with': 'with',
+    'cat.notion': 'Notion',
+    'app.notion-new-page': 'New Page',
+    'app.notion-quick-find': 'Quick Find',
+    'app.notion-toggle-sidebar': 'Toggle Sidebar',
+    'app.notion-bold': 'Bold',
+    'app.notion-italic': 'Italic',
+    'app.notion-duplicate': 'Duplicate',
+    'cat.linear': 'Linear',
+    'app.linear-new-issue': 'New Issue',
+    'app.linear-search': 'Search',
+    'app.linear-command': 'Command Menu',
+    'app.linear-inbox': 'Inbox',
+    'app.linear-active': 'Active Issues',
+    'app.linear-projects': 'Projects',
+    'cat.blender': 'Blender',
+    'app.blender-add': 'Add Object',
+    'app.blender-move': 'Move',
+    'app.blender-rotate': 'Rotate',
+    'app.blender-scale': 'Scale',
+    'app.blender-extrude': 'Extrude',
+    'app.blender-edit-mode': 'Toggle Edit Mode',
+    'cat.resolve': 'DaVinci Resolve',
+    'app.resolve-import': 'Import Media',
+    'app.resolve-save': 'Save Project',
+    'app.resolve-undo': 'Undo',
+    'app.resolve-redo': 'Redo',
+    'app.resolve-split': 'Split Clip',
+    'app.resolve-play': 'Play / Pause',
+    'cat.krita': 'Krita',
+    'app.krita-new': 'New Document',
+    'app.krita-save': 'Save',
+    'app.krita-brush': 'Freehand Brush',
+    'app.krita-eraser': 'Eraser',
+    'app.krita-fill': 'Fill',
+    'app.krita-mirror': 'Mirror View',
+    'cat.audacity': 'Audacity',
+    'app.audacity-play': 'Play / Stop',
+    'app.audacity-record': 'Record',
+    'app.audacity-undo': 'Undo',
+    'app.audacity-redo': 'Redo',
+    'app.audacity-export': 'Export Audio',
+    'app.audacity-select-all': 'Select All',
+    'cat.discord': 'Discord',
+    'app.discord-quick-switcher': 'Quick Switcher',
+    'app.discord-search': 'Search',
+    'app.discord-mark-read': 'Mark All Read',
+    'app.discord-settings': 'User Settings',
+    'app.discord-pins': 'Pinned Messages',
+    'app.discord-mute': 'Toggle Mute',
+    'cat.outlook': 'Outlook',
+    'app.outlook-new-mail': 'New Email',
+    'app.outlook-send': 'Send',
+    'app.outlook-reply': 'Reply',
+    'app.outlook-forward': 'Forward',
+    'app.outlook-search': 'Search',
+    'app.outlook-calendar': 'Go to Calendar',
+    'search.didyoumean': 'Did you mean {0}?',
   }
 }
 
@@ -955,7 +1012,64 @@ i18n.ar = {
     'net.toast': 'افتح إعدادات Wi-Fi بجهازك لإعادة الاتصال.',
     'net.android': 'لا يسمح Android لمواقع الويب بفتح إعدادات النظام. افتح إعدادات Wi-Fi من تطبيق الإعدادات بجهازك.',
     'whatsnew.sub': 'التغييرات الأخيرة في أنكييز',
-    'whatsnew.title': 'ما الجديد'
+    'whatsnew.title': 'ما الجديد',
+    'cat.notion': 'Notion',
+    'app.notion-new-page': 'صفحة جديدة',
+    'app.notion-quick-find': 'بحث سريع',
+    'app.notion-toggle-sidebar': 'إظهار/إخفاء الشريط الجانبي',
+    'app.notion-bold': 'غامق',
+    'app.notion-italic': 'مائل',
+    'app.notion-duplicate': 'تكرار',
+    'cat.linear': 'Linear',
+    'app.linear-new-issue': 'مشكلة جديدة',
+    'app.linear-search': 'بحث',
+    'app.linear-command': 'قائمة الأوامر',
+    'app.linear-inbox': 'صندوق الوارد',
+    'app.linear-active': 'المشكلات النشطة',
+    'app.linear-projects': 'المشاريع',
+    'cat.blender': 'Blender',
+    'app.blender-add': 'إضافة كائن',
+    'app.blender-move': 'نقل',
+    'app.blender-rotate': 'تدوير',
+    'app.blender-scale': 'تحجيم',
+    'app.blender-extrude': 'بثق',
+    'app.blender-edit-mode': 'تبديل وضع التحرير',
+    'cat.resolve': 'DaVinci Resolve',
+    'app.resolve-import': 'استيراد الوسائط',
+    'app.resolve-save': 'حفظ المشروع',
+    'app.resolve-undo': 'تراجع',
+    'app.resolve-redo': 'إعادة',
+    'app.resolve-split': 'تقسيم المقطع',
+    'app.resolve-play': 'تشغيل / إيقاف مؤقت',
+    'cat.krita': 'Krita',
+    'app.krita-new': 'مستند جديد',
+    'app.krita-save': 'حفظ',
+    'app.krita-brush': 'فرشاة يدوية',
+    'app.krita-eraser': 'ممحاة',
+    'app.krita-fill': 'تعبئة',
+    'app.krita-mirror': 'عرض معكوس',
+    'cat.audacity': 'Audacity',
+    'app.audacity-play': 'تشغيل / إيقاف',
+    'app.audacity-record': 'تسجيل',
+    'app.audacity-undo': 'تراجع',
+    'app.audacity-redo': 'إعادة',
+    'app.audacity-export': 'تصدير الصوت',
+    'app.audacity-select-all': 'تحديد الكل',
+    'cat.discord': 'Discord',
+    'app.discord-quick-switcher': 'تبديل سريع',
+    'app.discord-search': 'بحث',
+    'app.discord-mark-read': 'تحديد الكل كمقروء',
+    'app.discord-settings': 'إعدادات المستخدم',
+    'app.discord-pins': 'الرسائل المثبتة',
+    'app.discord-mute': 'تبديل كتم الصوت',
+    'cat.outlook': 'Outlook',
+    'app.outlook-new-mail': 'بريد جديد',
+    'app.outlook-send': 'إرسال',
+    'app.outlook-reply': 'رد',
+    'app.outlook-forward': 'إعادة توجيه',
+    'app.outlook-search': 'بحث',
+    'app.outlook-calendar': 'الانتقال إلى التقويم',
+    'search.didyoumean': 'هل تقصد {0}?',
 };;
 
 i18n.cs = {
@@ -1421,7 +1535,64 @@ i18n.cs = {
     'net.toast': 'Otevřete nastavení Wi-Fi zařízení pro opětovné připojení.',
     'net.android': 'Android nedovoluje webům otevírat systémová nastavení. Otevřete nastavení Wi-Fi v aplikaci Nastavení zařízení.',
     'whatsnew.sub': 'Nedávné změny v Anthkeys',
-    'whatsnew.title': 'Co je nového'
+    'whatsnew.title': 'Co je nového',
+    'cat.notion': 'Notion',
+    'app.notion-new-page': 'Nová stránka',
+    'app.notion-quick-find': 'Rychlé hledání',
+    'app.notion-toggle-sidebar': 'Přepnout postranní panel',
+    'app.notion-bold': 'Tučné',
+    'app.notion-italic': 'Kurzíva',
+    'app.notion-duplicate': 'Duplikovat',
+    'cat.linear': 'Linear',
+    'app.linear-new-issue': 'Nový problém',
+    'app.linear-search': 'Hledat',
+    'app.linear-command': 'Nabídka příkazů',
+    'app.linear-inbox': 'Doručená pošta',
+    'app.linear-active': 'Aktivní problémy',
+    'app.linear-projects': 'Projekty',
+    'cat.blender': 'Blender',
+    'app.blender-add': 'Přidat objekt',
+    'app.blender-move': 'Přesunout',
+    'app.blender-rotate': 'Otočit',
+    'app.blender-scale': 'Škálovat',
+    'app.blender-extrude': 'Vysunout',
+    'app.blender-edit-mode': 'Přepnout režim úprav',
+    'cat.resolve': 'DaVinci Resolve',
+    'app.resolve-import': 'Importovat média',
+    'app.resolve-save': 'Uložit projekt',
+    'app.resolve-undo': 'Zpět',
+    'app.resolve-redo': 'Znovu',
+    'app.resolve-split': 'Rozdělit klip',
+    'app.resolve-play': 'Přehrát / Pozastavit',
+    'cat.krita': 'Krita',
+    'app.krita-new': 'Nový dokument',
+    'app.krita-save': 'Uložit',
+    'app.krita-brush': 'Štětec od ruky',
+    'app.krita-eraser': 'Guma',
+    'app.krita-fill': 'Vyplnit',
+    'app.krita-mirror': 'Zrcadlové zobrazení',
+    'cat.audacity': 'Audacity',
+    'app.audacity-play': 'Přehrát / Zastavit',
+    'app.audacity-record': 'Nahrávat',
+    'app.audacity-undo': 'Zpět',
+    'app.audacity-redo': 'Znovu',
+    'app.audacity-export': 'Exportovat zvuk',
+    'app.audacity-select-all': 'Vybrat vše',
+    'cat.discord': 'Discord',
+    'app.discord-quick-switcher': 'Rychlé přepnutí',
+    'app.discord-search': 'Hledat',
+    'app.discord-mark-read': 'Označit vše jako přečtené',
+    'app.discord-settings': 'Uživatelská nastavení',
+    'app.discord-pins': 'Připnuté zprávy',
+    'app.discord-mute': 'Přepnout ztlumení',
+    'cat.outlook': 'Outlook',
+    'app.outlook-new-mail': 'Nový e-mail',
+    'app.outlook-send': 'Odeslat',
+    'app.outlook-reply': 'Odpovědět',
+    'app.outlook-forward': 'Přeposlat',
+    'app.outlook-search': 'Hledat',
+    'app.outlook-calendar': 'Přejít do kalendáře',
+    'search.didyoumean': 'Mysleli jste na {0}?',
 };;
 
 i18n.da = {
@@ -1887,7 +2058,64 @@ i18n.da = {
     'net.toast': 'Åbn enhedens Wi-Fi-indstillinger for at oprette forbindelse igen.',
     'net.android': 'Android tillader ikke websteder at åbne systemindstillinger. Åbn Wi-Fi-indstillingerne i enhedens Indstillinger-app.',
     'whatsnew.sub': 'Nylige ændringer i Anthkeys',
-    'whatsnew.title': 'Hvad er nyt'
+    'whatsnew.title': 'Hvad er nyt',
+    'cat.notion': 'Notion',
+    'app.notion-new-page': 'Ny side',
+    'app.notion-quick-find': 'Hurtig søgning',
+    'app.notion-toggle-sidebar': 'Vis/skjul sidepanel',
+    'app.notion-bold': 'Fed',
+    'app.notion-italic': 'Kursiv',
+    'app.notion-duplicate': 'Dupliker',
+    'cat.linear': 'Linear',
+    'app.linear-new-issue': 'Ny sag',
+    'app.linear-search': 'Søg',
+    'app.linear-command': 'Kommandomenu',
+    'app.linear-inbox': 'Indbakke',
+    'app.linear-active': 'Aktive sager',
+    'app.linear-projects': 'Projekter',
+    'cat.blender': 'Blender',
+    'app.blender-add': 'Tilføj objekt',
+    'app.blender-move': 'Flyt',
+    'app.blender-rotate': 'Roter',
+    'app.blender-scale': 'Skalér',
+    'app.blender-extrude': 'Ekstrudér',
+    'app.blender-edit-mode': 'Skift redigeringstilstand',
+    'cat.resolve': 'DaVinci Resolve',
+    'app.resolve-import': 'Importér medier',
+    'app.resolve-save': 'Gem projekt',
+    'app.resolve-undo': 'Fortryd',
+    'app.resolve-redo': 'Gentag',
+    'app.resolve-split': 'Opdel klip',
+    'app.resolve-play': 'Afspil / Pause',
+    'cat.krita': 'Krita',
+    'app.krita-new': 'Nyt dokument',
+    'app.krita-save': 'Gem',
+    'app.krita-brush': 'Frihåndspensel',
+    'app.krita-eraser': 'Viskelæder',
+    'app.krita-fill': 'Udfyld',
+    'app.krita-mirror': 'Spejlvend visning',
+    'cat.audacity': 'Audacity',
+    'app.audacity-play': 'Afspil / Stop',
+    'app.audacity-record': 'Optag',
+    'app.audacity-undo': 'Fortryd',
+    'app.audacity-redo': 'Gentag',
+    'app.audacity-export': 'Eksportér lyd',
+    'app.audacity-select-all': 'Vælg alle',
+    'cat.discord': 'Discord',
+    'app.discord-quick-switcher': 'Hurtigskifter',
+    'app.discord-search': 'Søg',
+    'app.discord-mark-read': 'Markér alle som læst',
+    'app.discord-settings': 'Brugerindstillinger',
+    'app.discord-pins': 'Fastgjorte beskeder',
+    'app.discord-mute': 'Slå lyd fra/til',
+    'cat.outlook': 'Outlook',
+    'app.outlook-new-mail': 'Ny e-mail',
+    'app.outlook-send': 'Send',
+    'app.outlook-reply': 'Svar',
+    'app.outlook-forward': 'Videresend',
+    'app.outlook-search': 'Søg',
+    'app.outlook-calendar': 'Gå til kalender',
+    'search.didyoumean': 'Mente du {0}?',
 };;
 
 i18n.de = {
@@ -2353,7 +2581,64 @@ i18n.de = {
     'net.toast': 'Öffnen Sie die Wi-Fi-Einstellungen Ihres Geräts, um sich erneut zu verbinden.',
     'net.android': 'Android erlaubt es Websites nicht, Systemeinstellungen zu öffnen. Öffnen Sie die Wi-Fi-Einstellungen in der Einstellungen-App Ihres Geräts.',
     'whatsnew.sub': 'Aktuelle Änderungen an Anthkeys',
-    'whatsnew.title': 'Neuigkeiten'
+    'whatsnew.title': 'Neuigkeiten',
+    'cat.notion': 'Notion',
+    'app.notion-new-page': 'Neue Seite',
+    'app.notion-quick-find': 'Schnellsuche',
+    'app.notion-toggle-sidebar': 'Seitenleiste ein-/ausblenden',
+    'app.notion-bold': 'Fett',
+    'app.notion-italic': 'Kursiv',
+    'app.notion-duplicate': 'Duplizieren',
+    'cat.linear': 'Linear',
+    'app.linear-new-issue': 'Neues Ticket',
+    'app.linear-search': 'Suchen',
+    'app.linear-command': 'Befehlsmenü',
+    'app.linear-inbox': 'Posteingang',
+    'app.linear-active': 'Aktive Tickets',
+    'app.linear-projects': 'Projekte',
+    'cat.blender': 'Blender',
+    'app.blender-add': 'Objekt hinzufügen',
+    'app.blender-move': 'Bewegen',
+    'app.blender-rotate': 'Drehen',
+    'app.blender-scale': 'Skalieren',
+    'app.blender-extrude': 'Extrudieren',
+    'app.blender-edit-mode': 'Bearbeitungsmodus umschalten',
+    'cat.resolve': 'DaVinci Resolve',
+    'app.resolve-import': 'Medien importieren',
+    'app.resolve-save': 'Projekt speichern',
+    'app.resolve-undo': 'Rückgängig',
+    'app.resolve-redo': 'Wiederholen',
+    'app.resolve-split': 'Clip teilen',
+    'app.resolve-play': 'Wiedergabe / Pause',
+    'cat.krita': 'Krita',
+    'app.krita-new': 'Neues Dokument',
+    'app.krita-save': 'Speichern',
+    'app.krita-brush': 'Freihandpinsel',
+    'app.krita-eraser': 'Radierer',
+    'app.krita-fill': 'Füllen',
+    'app.krita-mirror': 'Spiegelansicht',
+    'cat.audacity': 'Audacity',
+    'app.audacity-play': 'Wiedergabe / Stopp',
+    'app.audacity-record': 'Aufnehmen',
+    'app.audacity-undo': 'Rückgängig',
+    'app.audacity-redo': 'Wiederholen',
+    'app.audacity-export': 'Audio exportieren',
+    'app.audacity-select-all': 'Alles auswählen',
+    'cat.discord': 'Discord',
+    'app.discord-quick-switcher': 'Schnellwechsler',
+    'app.discord-search': 'Suchen',
+    'app.discord-mark-read': 'Alle als gelesen markieren',
+    'app.discord-settings': 'Benutzereinstellungen',
+    'app.discord-pins': 'Angeheftete Nachrichten',
+    'app.discord-mute': 'Stummschaltung umschalten',
+    'cat.outlook': 'Outlook',
+    'app.outlook-new-mail': 'Neue E-Mail',
+    'app.outlook-send': 'Senden',
+    'app.outlook-reply': 'Antworten',
+    'app.outlook-forward': 'Weiterleiten',
+    'app.outlook-search': 'Suchen',
+    'app.outlook-calendar': 'Zum Kalender',
+    'search.didyoumean': 'Meintest du {0}?',
 };;
 
 i18n.es = {
@@ -2819,7 +3104,64 @@ i18n.es = {
     'net.toast': 'Abre los ajustes de Wi-Fi de tu dispositivo para reconectarte.',
     'net.android': 'Android no permite que los sitios web abran la configuración del sistema. Abre la configuración de Wi-Fi en la app de Ajustes de tu dispositivo.',
     'whatsnew.sub': 'Cambios recientes en Anthkeys',
-    'whatsnew.title': 'Novedades'
+    'whatsnew.title': 'Novedades',
+    'cat.notion': 'Notion',
+    'app.notion-new-page': 'Nueva página',
+    'app.notion-quick-find': 'Búsqueda rápida',
+    'app.notion-toggle-sidebar': 'Mostrar/ocultar panel lateral',
+    'app.notion-bold': 'Negrita',
+    'app.notion-italic': 'Cursiva',
+    'app.notion-duplicate': 'Duplicar',
+    'cat.linear': 'Linear',
+    'app.linear-new-issue': 'Nueva incidencia',
+    'app.linear-search': 'Buscar',
+    'app.linear-command': 'Menú de comandos',
+    'app.linear-inbox': 'Bandeja de entrada',
+    'app.linear-active': 'Incidencias activas',
+    'app.linear-projects': 'Proyectos',
+    'cat.blender': 'Blender',
+    'app.blender-add': 'Añadir objeto',
+    'app.blender-move': 'Mover',
+    'app.blender-rotate': 'Rotar',
+    'app.blender-scale': 'Escalar',
+    'app.blender-extrude': 'Extruir',
+    'app.blender-edit-mode': 'Alternar modo edición',
+    'cat.resolve': 'DaVinci Resolve',
+    'app.resolve-import': 'Importar medios',
+    'app.resolve-save': 'Guardar proyecto',
+    'app.resolve-undo': 'Deshacer',
+    'app.resolve-redo': 'Rehacer',
+    'app.resolve-split': 'Dividir clip',
+    'app.resolve-play': 'Reproducir / Pausar',
+    'cat.krita': 'Krita',
+    'app.krita-new': 'Nuevo documento',
+    'app.krita-save': 'Guardar',
+    'app.krita-brush': 'Pincel a mano alzada',
+    'app.krita-eraser': 'Borrador',
+    'app.krita-fill': 'Rellenar',
+    'app.krita-mirror': 'Vista espejo',
+    'cat.audacity': 'Audacity',
+    'app.audacity-play': 'Reproducir / Detener',
+    'app.audacity-record': 'Grabar',
+    'app.audacity-undo': 'Deshacer',
+    'app.audacity-redo': 'Rehacer',
+    'app.audacity-export': 'Exportar audio',
+    'app.audacity-select-all': 'Seleccionar todo',
+    'cat.discord': 'Discord',
+    'app.discord-quick-switcher': 'Cambio rápido',
+    'app.discord-search': 'Buscar',
+    'app.discord-mark-read': 'Marcar todo como leído',
+    'app.discord-settings': 'Ajustes de usuario',
+    'app.discord-pins': 'Mensajes fijados',
+    'app.discord-mute': 'Silenciar/activar micrófono',
+    'cat.outlook': 'Outlook',
+    'app.outlook-new-mail': 'Nuevo correo',
+    'app.outlook-send': 'Enviar',
+    'app.outlook-reply': 'Responder',
+    'app.outlook-forward': 'Reenviar',
+    'app.outlook-search': 'Buscar',
+    'app.outlook-calendar': 'Ir al calendario',
+    'search.didyoumean': '¿Quisiste decir {0}?',
 };;
 
 i18n.fi = {
@@ -3285,7 +3627,64 @@ i18n.fi = {
     'net.toast': 'Avaa laitteen Wi-Fi-asetukset yhdistääksesi uudelleen.',
     'net.android': 'Android ei salli verkkosivustojen avata järjestelmän asetuksia. Avaa Wi-Fi-asetukset laitteesi Asetukset-sovelluksesta.',
     'whatsnew.sub': 'Anthkeysin viimeaikaiset muutokset',
-    'whatsnew.title': 'Mitä uutta'
+    'whatsnew.title': 'Mitä uutta',
+    'cat.notion': 'Notion',
+    'app.notion-new-page': 'Uusi sivu',
+    'app.notion-quick-find': 'Pikahaku',
+    'app.notion-toggle-sidebar': 'Näytä/piilota sivupalkki',
+    'app.notion-bold': 'Lihavointi',
+    'app.notion-italic': 'Kursivointi',
+    'app.notion-duplicate': 'Monista',
+    'cat.linear': 'Linear',
+    'app.linear-new-issue': 'Uusi tehtävä',
+    'app.linear-search': 'Haku',
+    'app.linear-command': 'Komentovalikko',
+    'app.linear-inbox': 'Saapuneet',
+    'app.linear-active': 'Aktiiviset tehtävät',
+    'app.linear-projects': 'Projektit',
+    'cat.blender': 'Blender',
+    'app.blender-add': 'Lisää objekti',
+    'app.blender-move': 'Siirrä',
+    'app.blender-rotate': 'Kierrä',
+    'app.blender-scale': 'Skaalaa',
+    'app.blender-extrude': 'Pursota',
+    'app.blender-edit-mode': 'Vaihda muokkaustilaan',
+    'cat.resolve': 'DaVinci Resolve',
+    'app.resolve-import': 'Tuo media',
+    'app.resolve-save': 'Tallenna projekti',
+    'app.resolve-undo': 'Kumoa',
+    'app.resolve-redo': 'Tee uudelleen',
+    'app.resolve-split': 'Jaa leike',
+    'app.resolve-play': 'Toista / Keskeytä',
+    'cat.krita': 'Krita',
+    'app.krita-new': 'Uusi asiakirja',
+    'app.krita-save': 'Tallenna',
+    'app.krita-brush': 'Vapaasivellin',
+    'app.krita-eraser': 'Kumi',
+    'app.krita-fill': 'Täytä',
+    'app.krita-mirror': 'Peilausnäkymä',
+    'cat.audacity': 'Audacity',
+    'app.audacity-play': 'Toista / Pysäytä',
+    'app.audacity-record': 'Tallenna ääni',
+    'app.audacity-undo': 'Kumoa',
+    'app.audacity-redo': 'Tee uudelleen',
+    'app.audacity-export': 'Vie ääni',
+    'app.audacity-select-all': 'Valitse kaikki',
+    'cat.discord': 'Discord',
+    'app.discord-quick-switcher': 'Pikavaihto',
+    'app.discord-search': 'Haku',
+    'app.discord-mark-read': 'Merkitse kaikki luetuiksi',
+    'app.discord-settings': 'Käyttäjäasetukset',
+    'app.discord-pins': 'Kiinnitetyt viestit',
+    'app.discord-mute': 'Mykistyksen vaihto',
+    'cat.outlook': 'Outlook',
+    'app.outlook-new-mail': 'Uusi sähköposti',
+    'app.outlook-send': 'Lähetä',
+    'app.outlook-reply': 'Vastaa',
+    'app.outlook-forward': 'Välitä',
+    'app.outlook-search': 'Haku',
+    'app.outlook-calendar': 'Siirry kalenteriin',
+    'search.didyoumean': 'Tarkoititko {0}?',
 };;
 
 i18n.fr = {
@@ -3752,7 +4151,64 @@ i18n.fr = {
     'net.toast': 'Ouvrez les réglages Wi-Fi de votre appareil pour vous reconnecter.',
     'net.android': 'Android n\'autorise pas les sites web à ouvrir les paramètres système. Ouvrez les paramètres Wi-Fi dans l\'application Réglages de votre appareil.',
     'whatsnew.sub': 'Changements récents d\'Anthkeys',
-    'whatsnew.title': 'Quoi de neuf'
+    'whatsnew.title': 'Quoi de neuf',
+    'cat.notion': 'Notion',
+    'app.notion-new-page': 'Nouvelle page',
+    'app.notion-quick-find': 'Recherche rapide',
+    'app.notion-toggle-sidebar': 'Afficher/masquer la barre latérale',
+    'app.notion-bold': 'Gras',
+    'app.notion-italic': 'Italique',
+    'app.notion-duplicate': 'Dupliquer',
+    'cat.linear': 'Linear',
+    'app.linear-new-issue': 'Nouveau ticket',
+    'app.linear-search': 'Rechercher',
+    'app.linear-command': 'Menu des commandes',
+    'app.linear-inbox': 'Boîte de réception',
+    'app.linear-active': 'Tickets actifs',
+    'app.linear-projects': 'Projets',
+    'cat.blender': 'Blender',
+    'app.blender-add': 'Ajouter un objet',
+    'app.blender-move': 'Déplacer',
+    'app.blender-rotate': 'Pivoter',
+    'app.blender-scale': 'Mettre à l\'échelle',
+    'app.blender-extrude': 'Extruder',
+    'app.blender-edit-mode': 'Basculer en mode édition',
+    'cat.resolve': 'DaVinci Resolve',
+    'app.resolve-import': 'Importer des médias',
+    'app.resolve-save': 'Enregistrer le projet',
+    'app.resolve-undo': 'Annuler',
+    'app.resolve-redo': 'Rétablir',
+    'app.resolve-split': 'Scinder le clip',
+    'app.resolve-play': 'Lecture / Pause',
+    'cat.krita': 'Krita',
+    'app.krita-new': 'Nouveau document',
+    'app.krita-save': 'Enregistrer',
+    'app.krita-brush': 'Pinceau à main levée',
+    'app.krita-eraser': 'Gomme',
+    'app.krita-fill': 'Remplir',
+    'app.krita-mirror': 'Vue miroir',
+    'cat.audacity': 'Audacity',
+    'app.audacity-play': 'Lecture / Arrêt',
+    'app.audacity-record': 'Enregistrer',
+    'app.audacity-undo': 'Annuler',
+    'app.audacity-redo': 'Rétablir',
+    'app.audacity-export': 'Exporter l\'audio',
+    'app.audacity-select-all': 'Tout sélectionner',
+    'cat.discord': 'Discord',
+    'app.discord-quick-switcher': 'Commutateur rapide',
+    'app.discord-search': 'Rechercher',
+    'app.discord-mark-read': 'Tout marquer comme lu',
+    'app.discord-settings': 'Paramètres utilisateur',
+    'app.discord-pins': 'Messages épinglés',
+    'app.discord-mute': 'Activer/désactiver le micro',
+    'cat.outlook': 'Outlook',
+    'app.outlook-new-mail': 'Nouvel e-mail',
+    'app.outlook-send': 'Envoyer',
+    'app.outlook-reply': 'Répondre',
+    'app.outlook-forward': 'Transférer',
+    'app.outlook-search': 'Rechercher',
+    'app.outlook-calendar': 'Aller au calendrier',
+    'search.didyoumean': 'Vouliez-vous dire {0} ?',
 };
 
 i18n.hi = {
@@ -4218,7 +4674,64 @@ i18n.hi = {
     'net.toast': 'पुनः कनेक्ट करने के लिए अपनी डिवाइस की Wi-Fi सेटिंग खोलें।',
     'net.android': 'एंड्रॉइड वेबसाइटों को सिस्टम सेटिंग्स खोलने की अनुमति नहीं देता। अपने डिवाइस की Settings ऐप से Wi-Fi सेटिंग्स खोलें।',
     'whatsnew.sub': 'Anthkeys में हाल के बदलाव',
-    'whatsnew.title': 'नया क्या है'
+    'whatsnew.title': 'नया क्या है',
+    'cat.notion': 'Notion',
+    'app.notion-new-page': 'नया पृष्ठ',
+    'app.notion-quick-find': 'त्वरित खोज',
+    'app.notion-toggle-sidebar': 'साइडबार टॉगल करें',
+    'app.notion-bold': 'बोल्ड',
+    'app.notion-italic': 'इटैलिक',
+    'app.notion-duplicate': 'डुप्लिकेट',
+    'cat.linear': 'Linear',
+    'app.linear-new-issue': 'नया मुद्दा',
+    'app.linear-search': 'खोजें',
+    'app.linear-command': 'कमांड मेनू',
+    'app.linear-inbox': 'इनबॉक्स',
+    'app.linear-active': 'सक्रिय मुद्दे',
+    'app.linear-projects': 'प्रोजेक्ट',
+    'cat.blender': 'Blender',
+    'app.blender-add': 'ऑब्जेक्ट जोड़ें',
+    'app.blender-move': 'हटाएँ',
+    'app.blender-rotate': 'घुमाएँ',
+    'app.blender-scale': 'स्केल',
+    'app.blender-extrude': 'एक्सट्रूड',
+    'app.blender-edit-mode': 'संपादन मोड टॉगल करें',
+    'cat.resolve': 'DaVinci Resolve',
+    'app.resolve-import': 'मीडिया आयात करें',
+    'app.resolve-save': 'प्रोजेक्ट सहेजें',
+    'app.resolve-undo': 'पूर्ववत करें',
+    'app.resolve-redo': 'फिर से करें',
+    'app.resolve-split': 'क्लिप विभाजित करें',
+    'app.resolve-play': 'चलाएँ / रोकें',
+    'cat.krita': 'Krita',
+    'app.krita-new': 'नया दस्तावेज़',
+    'app.krita-save': 'सहेजें',
+    'app.krita-brush': 'फ्रीहैंड ब्रश',
+    'app.krita-eraser': 'इरेज़र',
+    'app.krita-fill': 'भरें',
+    'app.krita-mirror': 'मिरर दृश्य',
+    'cat.audacity': 'Audacity',
+    'app.audacity-play': 'चलाएँ / रोकें',
+    'app.audacity-record': 'रिकॉर्ड करें',
+    'app.audacity-undo': 'पूर्ववत करें',
+    'app.audacity-redo': 'फिर से करें',
+    'app.audacity-export': 'ऑडियो निर्यात करें',
+    'app.audacity-select-all': 'सभी चुनें',
+    'cat.discord': 'Discord',
+    'app.discord-quick-switcher': 'त्वरित स्विचर',
+    'app.discord-search': 'खोजें',
+    'app.discord-mark-read': 'सभी पढ़ा हुआ चिह्नित करें',
+    'app.discord-settings': 'उपयोगकर्ता सेटिंग',
+    'app.discord-pins': 'पिन किए गए संदेश',
+    'app.discord-mute': 'म्यूट टॉगल करें',
+    'cat.outlook': 'Outlook',
+    'app.outlook-new-mail': 'नया ईमेल',
+    'app.outlook-send': 'भेजें',
+    'app.outlook-reply': 'जवाब दें',
+    'app.outlook-forward': 'अग्रेषित करें',
+    'app.outlook-search': 'खोजें',
+    'app.outlook-calendar': 'कैलेंडर पर जाएँ',
+    'search.didyoumean': 'क्या आपका मतलब {0} है?',
 };;
 
 i18n.hu = {
@@ -4684,7 +5197,64 @@ i18n.hu = {
     'net.toast': 'Nyissa meg az eszköz Wi-Fi beállításait az újracsatlakozáshoz.',
     'net.android': 'Az Android nem engedi, hogy a weboldalak megnyissák a rendszerbeállításokat. Nyissa meg a Wi-Fi-beállításokat az eszköz Beállítások alkalmazásában.',
     'whatsnew.sub': 'Az Anthkeys legutóbbi változásai',
-    'whatsnew.title': 'Mi újság'
+    'whatsnew.title': 'Mi újság',
+    'cat.notion': 'Notion',
+    'app.notion-new-page': 'Új oldal',
+    'app.notion-quick-find': 'Gyorskeresés',
+    'app.notion-toggle-sidebar': 'Oldalsáv be/ki',
+    'app.notion-bold': 'Félkövér',
+    'app.notion-italic': 'Dőlt',
+    'app.notion-duplicate': 'Duplikálás',
+    'cat.linear': 'Linear',
+    'app.linear-new-issue': 'Új ügy',
+    'app.linear-search': 'Keresés',
+    'app.linear-command': 'Parancsmenü',
+    'app.linear-inbox': 'Bejövő',
+    'app.linear-active': 'Aktív ügyek',
+    'app.linear-projects': 'Projektek',
+    'cat.blender': 'Blender',
+    'app.blender-add': 'Objektum hozzáadása',
+    'app.blender-move': 'Mozgatás',
+    'app.blender-rotate': 'Forgás',
+    'app.blender-scale': 'Méretezés',
+    'app.blender-extrude': 'Kihúzás',
+    'app.blender-edit-mode': 'Szerkesztés mód váltása',
+    'cat.resolve': 'DaVinci Resolve',
+    'app.resolve-import': 'Média importálása',
+    'app.resolve-save': 'Projekt mentése',
+    'app.resolve-undo': 'Visszavonás',
+    'app.resolve-redo': 'Újra',
+    'app.resolve-split': 'Klipp felosztása',
+    'app.resolve-play': 'Lejátszás / Szünet',
+    'cat.krita': 'Krita',
+    'app.krita-new': 'Új dokumentum',
+    'app.krita-save': 'Mentés',
+    'app.krita-brush': 'Szabadkézi ecset',
+    'app.krita-eraser': 'Radír',
+    'app.krita-fill': 'Kitöltés',
+    'app.krita-mirror': 'Tükrözött nézet',
+    'cat.audacity': 'Audacity',
+    'app.audacity-play': 'Lejátszás / Leállítás',
+    'app.audacity-record': 'Felvétel',
+    'app.audacity-undo': 'Visszavonás',
+    'app.audacity-redo': 'Újra',
+    'app.audacity-export': 'Hang exportálása',
+    'app.audacity-select-all': 'Összes kijelölése',
+    'cat.discord': 'Discord',
+    'app.discord-quick-switcher': 'Gyorsváltó',
+    'app.discord-search': 'Keresés',
+    'app.discord-mark-read': 'Összes megjelölése olvasottként',
+    'app.discord-settings': 'Felhasználói beállítások',
+    'app.discord-pins': 'Kitűzött üzenetek',
+    'app.discord-mute': 'Némítás váltása',
+    'cat.outlook': 'Outlook',
+    'app.outlook-new-mail': 'Új e-mail',
+    'app.outlook-send': 'Küldés',
+    'app.outlook-reply': 'Válasz',
+    'app.outlook-forward': 'Továbbítás',
+    'app.outlook-search': 'Keresés',
+    'app.outlook-calendar': 'Ugrás a naptárhoz',
+    'search.didyoumean': 'Erre gondoltál: {0}?',
 };;
 
 i18n.it = {
@@ -5150,7 +5720,64 @@ i18n.it = {
     'net.toast': 'Apri le impostazioni Wi-Fi del dispositivo per riconnetterti.',
     'net.android': 'Android non consente ai siti web di aprire le impostazioni di sistema. Apri le impostazioni Wi-Fi nell\'app Impostazioni del dispositivo.',
     'whatsnew.sub': 'Ultime modifiche ad Anthkeys',
-    'whatsnew.title': 'Novità'
+    'whatsnew.title': 'Novità',
+    'cat.notion': 'Notion',
+    'app.notion-new-page': 'Nuova pagina',
+    'app.notion-quick-find': 'Ricerca rapida',
+    'app.notion-toggle-sidebar': 'Mostra/nascondi barra laterale',
+    'app.notion-bold': 'Grassetto',
+    'app.notion-italic': 'Corsivo',
+    'app.notion-duplicate': 'Duplica',
+    'cat.linear': 'Linear',
+    'app.linear-new-issue': 'Nuovo ticket',
+    'app.linear-search': 'Cerca',
+    'app.linear-command': 'Menu comandi',
+    'app.linear-inbox': 'Posta in arrivo',
+    'app.linear-active': 'Ticket attivi',
+    'app.linear-projects': 'Progetti',
+    'cat.blender': 'Blender',
+    'app.blender-add': 'Aggiungi oggetto',
+    'app.blender-move': 'Sposta',
+    'app.blender-rotate': 'Ruota',
+    'app.blender-scale': 'Scala',
+    'app.blender-extrude': 'Estrudi',
+    'app.blender-edit-mode': 'Attiva/disattiva modalità modifica',
+    'cat.resolve': 'DaVinci Resolve',
+    'app.resolve-import': 'Importa contenuti',
+    'app.resolve-save': 'Salva progetto',
+    'app.resolve-undo': 'Annulla',
+    'app.resolve-redo': 'Ripeti',
+    'app.resolve-split': 'Dividi clip',
+    'app.resolve-play': 'Riproduci / Pausa',
+    'cat.krita': 'Krita',
+    'app.krita-new': 'Nuovo documento',
+    'app.krita-save': 'Salva',
+    'app.krita-brush': 'Pennello a mano libera',
+    'app.krita-eraser': 'Gomma',
+    'app.krita-fill': 'Riempi',
+    'app.krita-mirror': 'Vista specchiata',
+    'cat.audacity': 'Audacity',
+    'app.audacity-play': 'Riproduci / Interrompi',
+    'app.audacity-record': 'Registra',
+    'app.audacity-undo': 'Annulla',
+    'app.audacity-redo': 'Ripeti',
+    'app.audacity-export': 'Esporta audio',
+    'app.audacity-select-all': 'Seleziona tutto',
+    'cat.discord': 'Discord',
+    'app.discord-quick-switcher': 'Cambio rapido',
+    'app.discord-search': 'Cerca',
+    'app.discord-mark-read': 'Segna tutto come letto',
+    'app.discord-settings': 'Impostazioni utente',
+    'app.discord-pins': 'Messaggi fissati',
+    'app.discord-mute': 'Attiva/disattiva microfono',
+    'cat.outlook': 'Outlook',
+    'app.outlook-new-mail': 'Nuova email',
+    'app.outlook-send': 'Invia',
+    'app.outlook-reply': 'Rispondi',
+    'app.outlook-forward': 'Inoltra',
+    'app.outlook-search': 'Cerca',
+    'app.outlook-calendar': 'Vai al calendario',
+    'search.didyoumean': 'Volevi dire {0}?',
 };;
 
 i18n.ja = {
@@ -5616,7 +6243,64 @@ i18n.ja = {
     'net.toast': '再接続するには、端末のWi-Fi設定を開いてください。',
     'net.android': 'Androidではウェブサイトからシステム設定を開くことはできません。端末の設定アプリからWi-Fi設定を開いてください。',
     'whatsnew.sub': 'Anthkeysの最近の変更',
-    'whatsnew.title': '新機能'
+    'whatsnew.title': '新機能',
+    'cat.notion': 'Notion',
+    'app.notion-new-page': '新規ページ',
+    'app.notion-quick-find': 'クイック検索',
+    'app.notion-toggle-sidebar': 'サイドバーの表示/非表示',
+    'app.notion-bold': '太字',
+    'app.notion-italic': '斜体',
+    'app.notion-duplicate': '複製',
+    'cat.linear': 'Linear',
+    'app.linear-new-issue': '新規イシュー',
+    'app.linear-search': '検索',
+    'app.linear-command': 'コマンドメニュー',
+    'app.linear-inbox': '受信トレイ',
+    'app.linear-active': 'アクティブなイシュー',
+    'app.linear-projects': 'プロジェクト',
+    'cat.blender': 'Blender',
+    'app.blender-add': 'オブジェクトを追加',
+    'app.blender-move': '移動',
+    'app.blender-rotate': '回転',
+    'app.blender-scale': '拡大縮小',
+    'app.blender-extrude': '押し出し',
+    'app.blender-edit-mode': '編集モードの切り替え',
+    'cat.resolve': 'DaVinci Resolve',
+    'app.resolve-import': 'メディアを読み込み',
+    'app.resolve-save': 'プロジェクトを保存',
+    'app.resolve-undo': '元に戻す',
+    'app.resolve-redo': 'やり直し',
+    'app.resolve-split': 'クリップを分割',
+    'app.resolve-play': '再生 / 一時停止',
+    'cat.krita': 'Krita',
+    'app.krita-new': '新規ドキュメント',
+    'app.krita-save': '保存',
+    'app.krita-brush': 'フリーハンドブラシ',
+    'app.krita-eraser': '消しゴム',
+    'app.krita-fill': '塗りつぶし',
+    'app.krita-mirror': 'ミラービュー',
+    'cat.audacity': 'Audacity',
+    'app.audacity-play': '再生 / 停止',
+    'app.audacity-record': '録音',
+    'app.audacity-undo': '元に戻す',
+    'app.audacity-redo': 'やり直し',
+    'app.audacity-export': 'オーディオを書き出し',
+    'app.audacity-select-all': 'すべて選択',
+    'cat.discord': 'Discord',
+    'app.discord-quick-switcher': 'クイックスイッチャー',
+    'app.discord-search': '検索',
+    'app.discord-mark-read': 'すべて既読にする',
+    'app.discord-settings': 'ユーザー設定',
+    'app.discord-pins': 'ピン留めメッセージ',
+    'app.discord-mute': 'ミュートの切り替え',
+    'cat.outlook': 'Outlook',
+    'app.outlook-new-mail': '新規メール',
+    'app.outlook-send': '送信',
+    'app.outlook-reply': '返信',
+    'app.outlook-forward': '転送',
+    'app.outlook-search': '検索',
+    'app.outlook-calendar': 'カレンダーへ移動',
+    'search.didyoumean': '{0} のことですか?',
 };;
 
 i18n.ko = {
@@ -6082,7 +6766,64 @@ i18n.ko = {
     'net.toast': '다시 연결하려면 기기의 Wi-Fi 설정을 여세요.',
     'net.android': 'Android에서는 웹사이트가 시스템 설정을 열 수 없습니다. 기기의 설정 앱에서 Wi-Fi 설정을 여세요.',
     'whatsnew.sub': 'Anthkeys의 최근 변경 사항',
-    'whatsnew.title': '새로운 기능'
+    'whatsnew.title': '새로운 기능',
+    'cat.notion': 'Notion',
+    'app.notion-new-page': '새 페이지',
+    'app.notion-quick-find': '빠른 찾기',
+    'app.notion-toggle-sidebar': '사이드바 전환',
+    'app.notion-bold': '굵게',
+    'app.notion-italic': '기울임꼴',
+    'app.notion-duplicate': '복제',
+    'cat.linear': 'Linear',
+    'app.linear-new-issue': '새 이슈',
+    'app.linear-search': '검색',
+    'app.linear-command': '명령 메뉴',
+    'app.linear-inbox': '받은 편지함',
+    'app.linear-active': '활성 이슈',
+    'app.linear-projects': '프로젝트',
+    'cat.blender': 'Blender',
+    'app.blender-add': '오브젝트 추가',
+    'app.blender-move': '이동',
+    'app.blender-rotate': '회전',
+    'app.blender-scale': '크기 조절',
+    'app.blender-extrude': '돌출',
+    'app.blender-edit-mode': '편집 모드 전환',
+    'cat.resolve': 'DaVinci Resolve',
+    'app.resolve-import': '미디어 가져오기',
+    'app.resolve-save': '프로젝트 저장',
+    'app.resolve-undo': '실행 취소',
+    'app.resolve-redo': '다시 실행',
+    'app.resolve-split': '클립 분할',
+    'app.resolve-play': '재생 / 일시정지',
+    'cat.krita': 'Krita',
+    'app.krita-new': '새 문서',
+    'app.krita-save': '저장',
+    'app.krita-brush': '자유형 브러시',
+    'app.krita-eraser': '지우개',
+    'app.krita-fill': '채우기',
+    'app.krita-mirror': '대칭 보기',
+    'cat.audacity': 'Audacity',
+    'app.audacity-play': '재생 / 정지',
+    'app.audacity-record': '녹음',
+    'app.audacity-undo': '실행 취소',
+    'app.audacity-redo': '다시 실행',
+    'app.audacity-export': '오디오 내보내기',
+    'app.audacity-select-all': '모두 선택',
+    'cat.discord': 'Discord',
+    'app.discord-quick-switcher': '빠른 전환',
+    'app.discord-search': '검색',
+    'app.discord-mark-read': '모두 읽음으로 표시',
+    'app.discord-settings': '사용자 설정',
+    'app.discord-pins': '고정된 메시지',
+    'app.discord-mute': '음소거 전환',
+    'cat.outlook': 'Outlook',
+    'app.outlook-new-mail': '새 이메일',
+    'app.outlook-send': '보내기',
+    'app.outlook-reply': '답장',
+    'app.outlook-forward': '전달',
+    'app.outlook-search': '검색',
+    'app.outlook-calendar': '캘린더로 이동',
+    'search.didyoumean': '{0} 을(를) 의미하나요?',
 };;
 
 i18n.nl = {
@@ -6548,7 +7289,64 @@ i18n.nl = {
     'net.toast': 'Open de Wi-Fi-instellingen van je apparaat om opnieuw verbinding te maken.',
     'net.android': 'Android staat websites niet toe om systeeminstellingen te openen. Open de Wi-Fi-instellingen in de Instellingen-app van je apparaat.',
     'whatsnew.sub': 'Recente wijzigingen aan Anthkeys',
-    'whatsnew.title': 'Wat is er nieuw'
+    'whatsnew.title': 'Wat is er nieuw',
+    'cat.notion': 'Notion',
+    'app.notion-new-page': 'Nieuwe pagina',
+    'app.notion-quick-find': 'Snel zoeken',
+    'app.notion-toggle-sidebar': 'Zijbalk tonen/verbergen',
+    'app.notion-bold': 'Vet',
+    'app.notion-italic': 'Cursief',
+    'app.notion-duplicate': 'Dupliceren',
+    'cat.linear': 'Linear',
+    'app.linear-new-issue': 'Nieuwe melding',
+    'app.linear-search': 'Zoeken',
+    'app.linear-command': 'Opdrachtenmenu',
+    'app.linear-inbox': 'Postvak IN',
+    'app.linear-active': 'Actieve meldingen',
+    'app.linear-projects': 'Projecten',
+    'cat.blender': 'Blender',
+    'app.blender-add': 'Object toevoegen',
+    'app.blender-move': 'Verplaatsen',
+    'app.blender-rotate': 'Roteren',
+    'app.blender-scale': 'Schalen',
+    'app.blender-extrude': 'Extruderen',
+    'app.blender-edit-mode': 'Bewerkmodus wisselen',
+    'cat.resolve': 'DaVinci Resolve',
+    'app.resolve-import': 'Media importeren',
+    'app.resolve-save': 'Project opslaan',
+    'app.resolve-undo': 'Ongedaan maken',
+    'app.resolve-redo': 'Opnieuw',
+    'app.resolve-split': 'Clip splitsen',
+    'app.resolve-play': 'Afspelen / Pauzeren',
+    'cat.krita': 'Krita',
+    'app.krita-new': 'Nieuw document',
+    'app.krita-save': 'Opslaan',
+    'app.krita-brush': 'Vrijehandpenseel',
+    'app.krita-eraser': 'Gum',
+    'app.krita-fill': 'Vullen',
+    'app.krita-mirror': 'Spiegelweergave',
+    'cat.audacity': 'Audacity',
+    'app.audacity-play': 'Afspelen / Stoppen',
+    'app.audacity-record': 'Opnemen',
+    'app.audacity-undo': 'Ongedaan maken',
+    'app.audacity-redo': 'Opnieuw',
+    'app.audacity-export': 'Audio exporteren',
+    'app.audacity-select-all': 'Alles selecteren',
+    'cat.discord': 'Discord',
+    'app.discord-quick-switcher': 'Snelwisselaar',
+    'app.discord-search': 'Zoeken',
+    'app.discord-mark-read': 'Alles als gelezen markeren',
+    'app.discord-settings': 'Gebruikersinstellingen',
+    'app.discord-pins': 'Vastgemaakte berichten',
+    'app.discord-mute': 'Dempen aan/uit',
+    'cat.outlook': 'Outlook',
+    'app.outlook-new-mail': 'Nieuwe e-mail',
+    'app.outlook-send': 'Verzenden',
+    'app.outlook-reply': 'Beantwoorden',
+    'app.outlook-forward': 'Doorsturen',
+    'app.outlook-search': 'Zoeken',
+    'app.outlook-calendar': 'Naar agenda',
+    'search.didyoumean': 'Bedoelde je {0}?',
 };;
 
 i18n.no = {
@@ -7014,7 +7812,64 @@ i18n.no = {
     'net.toast': 'Åpne enhetens Wi-Fi-innstillinger for å koble til igjen.',
     'net.android': 'Android tillater ikke nettsteder å åpne systeminnstillinger. Åpne Wi-Fi-innstillingene i enhetens Innstillinger-app.',
     'whatsnew.sub': 'Nylige endringer i Anthkeys',
-    'whatsnew.title': 'Hva er nytt'
+    'whatsnew.title': 'Hva er nytt',
+    'cat.notion': 'Notion',
+    'app.notion-new-page': 'Ny side',
+    'app.notion-quick-find': 'Hurtigsøk',
+    'app.notion-toggle-sidebar': 'Vis/skjul sidepanel',
+    'app.notion-bold': 'Fet',
+    'app.notion-italic': 'Kursiv',
+    'app.notion-duplicate': 'Dupliser',
+    'cat.linear': 'Linear',
+    'app.linear-new-issue': 'Ny sak',
+    'app.linear-search': 'Søk',
+    'app.linear-command': 'Kommandomeny',
+    'app.linear-inbox': 'Innboks',
+    'app.linear-active': 'Aktive saker',
+    'app.linear-projects': 'Prosjekter',
+    'cat.blender': 'Blender',
+    'app.blender-add': 'Legg til objekt',
+    'app.blender-move': 'Flytt',
+    'app.blender-rotate': 'Roter',
+    'app.blender-scale': 'Skaler',
+    'app.blender-extrude': 'Ekstruder',
+    'app.blender-edit-mode': 'Veksle redigeringsmodus',
+    'cat.resolve': 'DaVinci Resolve',
+    'app.resolve-import': 'Importer media',
+    'app.resolve-save': 'Lagre prosjekt',
+    'app.resolve-undo': 'Angre',
+    'app.resolve-redo': 'Gjør om',
+    'app.resolve-split': 'Del klipp',
+    'app.resolve-play': 'Spill av / Pause',
+    'cat.krita': 'Krita',
+    'app.krita-new': 'Nytt dokument',
+    'app.krita-save': 'Lagre',
+    'app.krita-brush': 'Frihåndspensel',
+    'app.krita-eraser': 'Viskelær',
+    'app.krita-fill': 'Fyll',
+    'app.krita-mirror': 'Speilvisning',
+    'cat.audacity': 'Audacity',
+    'app.audacity-play': 'Spill av / Stopp',
+    'app.audacity-record': 'Spill inn',
+    'app.audacity-undo': 'Angre',
+    'app.audacity-redo': 'Gjør om',
+    'app.audacity-export': 'Eksporter lyd',
+    'app.audacity-select-all': 'Merk alt',
+    'cat.discord': 'Discord',
+    'app.discord-quick-switcher': 'Hurtigbytter',
+    'app.discord-search': 'Søk',
+    'app.discord-mark-read': 'Merk alt som lest',
+    'app.discord-settings': 'Brukerinnstillinger',
+    'app.discord-pins': 'Festede meldinger',
+    'app.discord-mute': 'Veksle demping',
+    'cat.outlook': 'Outlook',
+    'app.outlook-new-mail': 'Ny e-post',
+    'app.outlook-send': 'Send',
+    'app.outlook-reply': 'Svar',
+    'app.outlook-forward': 'Videresend',
+    'app.outlook-search': 'Søk',
+    'app.outlook-calendar': 'Gå til kalender',
+    'search.didyoumean': 'Mente du {0}?',
 };;
 
 i18n.pl = {
@@ -7480,7 +8335,64 @@ i18n.pl = {
     'net.toast': 'Otwórz ustawienia Wi-Fi urządzenia, aby połączyć się ponownie.',
     'net.android': 'Android nie pozwala stronom internetowym otwierać ustawień systemowych. Otwórz ustawienia Wi-Fi w aplikacji Ustawienia na urządzeniu.',
     'whatsnew.sub': 'Ostatnie zmiany w Anthkeys',
-    'whatsnew.title': 'Co nowego'
+    'whatsnew.title': 'Co nowego',
+    'cat.notion': 'Notion',
+    'app.notion-new-page': 'Nowa strona',
+    'app.notion-quick-find': 'Szybkie wyszukiwanie',
+    'app.notion-toggle-sidebar': 'Pokaż/ukryj panel boczny',
+    'app.notion-bold': 'Pogrubienie',
+    'app.notion-italic': 'Kursywa',
+    'app.notion-duplicate': 'Duplikuj',
+    'cat.linear': 'Linear',
+    'app.linear-new-issue': 'Nowe zgłoszenie',
+    'app.linear-search': 'Szukaj',
+    'app.linear-command': 'Menu poleceń',
+    'app.linear-inbox': 'Skrzynka odbiorcza',
+    'app.linear-active': 'Aktywne zgłoszenia',
+    'app.linear-projects': 'Projekty',
+    'cat.blender': 'Blender',
+    'app.blender-add': 'Dodaj obiekt',
+    'app.blender-move': 'Przenieś',
+    'app.blender-rotate': 'Obróć',
+    'app.blender-scale': 'Skaluj',
+    'app.blender-extrude': 'Wytłocz',
+    'app.blender-edit-mode': 'Przełącz tryb edycji',
+    'cat.resolve': 'DaVinci Resolve',
+    'app.resolve-import': 'Importuj multimedia',
+    'app.resolve-save': 'Zapisz projekt',
+    'app.resolve-undo': 'Cofnij',
+    'app.resolve-redo': 'Ponów',
+    'app.resolve-split': 'Podziel klip',
+    'app.resolve-play': 'Odtwarzaj / Pauza',
+    'cat.krita': 'Krita',
+    'app.krita-new': 'Nowy dokument',
+    'app.krita-save': 'Zapisz',
+    'app.krita-brush': 'Pędzel odręczny',
+    'app.krita-eraser': 'Gumka',
+    'app.krita-fill': 'Wypełnij',
+    'app.krita-mirror': 'Widok lustrzany',
+    'cat.audacity': 'Audacity',
+    'app.audacity-play': 'Odtwarzaj / Zatrzymaj',
+    'app.audacity-record': 'Nagraj',
+    'app.audacity-undo': 'Cofnij',
+    'app.audacity-redo': 'Ponów',
+    'app.audacity-export': 'Eksportuj dźwięk',
+    'app.audacity-select-all': 'Zaznacz wszystko',
+    'cat.discord': 'Discord',
+    'app.discord-quick-switcher': 'Szybkie przełączanie',
+    'app.discord-search': 'Szukaj',
+    'app.discord-mark-read': 'Oznacz wszystko jako przeczytane',
+    'app.discord-settings': 'Ustawienia użytkownika',
+    'app.discord-pins': 'Przypięte wiadomości',
+    'app.discord-mute': 'Przełącz wyciszenie',
+    'cat.outlook': 'Outlook',
+    'app.outlook-new-mail': 'Nowa wiadomość',
+    'app.outlook-send': 'Wyślij',
+    'app.outlook-reply': 'Odpowiedz',
+    'app.outlook-forward': 'Przekaż dalej',
+    'app.outlook-search': 'Szukaj',
+    'app.outlook-calendar': 'Przejdź do kalendarza',
+    'search.didyoumean': 'Czy chodziło ci o {0}?',
 };;
 
 i18n.pt = {
@@ -7946,7 +8858,64 @@ i18n.pt = {
     'net.toast': 'Abra as definições de Wi-Fi do dispositivo para voltar a ligar.',
     'net.android': 'O Android não permite que os sites abram as definições do sistema. Abra as definições de Wi-Fi na aplicação Definições do dispositivo.',
     'whatsnew.sub': 'Mudanças recentes no Anthkeys',
-    'whatsnew.title': 'Novidades'
+    'whatsnew.title': 'Novidades',
+    'cat.notion': 'Notion',
+    'app.notion-new-page': 'Nova página',
+    'app.notion-quick-find': 'Localização rápida',
+    'app.notion-toggle-sidebar': 'Mostrar/ocultar barra lateral',
+    'app.notion-bold': 'Negrito',
+    'app.notion-italic': 'Itálico',
+    'app.notion-duplicate': 'Duplicar',
+    'cat.linear': 'Linear',
+    'app.linear-new-issue': 'Nova tarefa',
+    'app.linear-search': 'Pesquisar',
+    'app.linear-command': 'Menu de comandos',
+    'app.linear-inbox': 'Caixa de entrada',
+    'app.linear-active': 'Tarefas ativas',
+    'app.linear-projects': 'Projetos',
+    'cat.blender': 'Blender',
+    'app.blender-add': 'Adicionar objeto',
+    'app.blender-move': 'Mover',
+    'app.blender-rotate': 'Girar',
+    'app.blender-scale': 'Escalar',
+    'app.blender-extrude': 'Extrudar',
+    'app.blender-edit-mode': 'Alternar modo de edição',
+    'cat.resolve': 'DaVinci Resolve',
+    'app.resolve-import': 'Importar mídia',
+    'app.resolve-save': 'Salvar projeto',
+    'app.resolve-undo': 'Desfazer',
+    'app.resolve-redo': 'Refazer',
+    'app.resolve-split': 'Dividir clipe',
+    'app.resolve-play': 'Reproduzir / Pausar',
+    'cat.krita': 'Krita',
+    'app.krita-new': 'Novo documento',
+    'app.krita-save': 'Salvar',
+    'app.krita-brush': 'Pincel à mão livre',
+    'app.krita-eraser': 'Borracha',
+    'app.krita-fill': 'Preencher',
+    'app.krita-mirror': 'Vista espelhada',
+    'cat.audacity': 'Audacity',
+    'app.audacity-play': 'Reproduzir / Parar',
+    'app.audacity-record': 'Gravar',
+    'app.audacity-undo': 'Desfazer',
+    'app.audacity-redo': 'Refazer',
+    'app.audacity-export': 'Exportar áudio',
+    'app.audacity-select-all': 'Selecionar tudo',
+    'cat.discord': 'Discord',
+    'app.discord-quick-switcher': 'Troca rápida',
+    'app.discord-search': 'Pesquisar',
+    'app.discord-mark-read': 'Marcar tudo como lido',
+    'app.discord-settings': 'Configurações do usuário',
+    'app.discord-pins': 'Mensagens fixadas',
+    'app.discord-mute': 'Alternar mudo',
+    'cat.outlook': 'Outlook',
+    'app.outlook-new-mail': 'Novo e-mail',
+    'app.outlook-send': 'Enviar',
+    'app.outlook-reply': 'Responder',
+    'app.outlook-forward': 'Encaminhar',
+    'app.outlook-search': 'Pesquisar',
+    'app.outlook-calendar': 'Ir para a agenda',
+    'search.didyoumean': 'Você quis dizer {0}?',
 };;
 
 i18n.ru = {
@@ -8412,7 +9381,64 @@ i18n.ru = {
     'net.toast': 'Откройте настройки Wi-Fi устройства, чтобы снова подключиться.',
     'net.android': 'Android не позволяет веб-сайтам открывать системные настройки. Откройте настройки Wi-Fi в приложении Настройки на устройстве.',
     'whatsnew.sub': 'Последние изменения в Anthkeys',
-    'whatsnew.title': 'Что нового'
+    'whatsnew.title': 'Что нового',
+    'cat.notion': 'Notion',
+    'app.notion-new-page': 'Новая страница',
+    'app.notion-quick-find': 'Быстрый поиск',
+    'app.notion-toggle-sidebar': 'Показать/скрыть боковую панель',
+    'app.notion-bold': 'Полужирный',
+    'app.notion-italic': 'Курсив',
+    'app.notion-duplicate': 'Дублировать',
+    'cat.linear': 'Linear',
+    'app.linear-new-issue': 'Новая задача',
+    'app.linear-search': 'Поиск',
+    'app.linear-command': 'Меню команд',
+    'app.linear-inbox': 'Входящие',
+    'app.linear-active': 'Активные задачи',
+    'app.linear-projects': 'Проекты',
+    'cat.blender': 'Blender',
+    'app.blender-add': 'Добавить объект',
+    'app.blender-move': 'Переместить',
+    'app.blender-rotate': 'Повернуть',
+    'app.blender-scale': 'Масштаб',
+    'app.blender-extrude': 'Выдавить',
+    'app.blender-edit-mode': 'Переключить режим редактирования',
+    'cat.resolve': 'DaVinci Resolve',
+    'app.resolve-import': 'Импорт медиа',
+    'app.resolve-save': 'Сохранить проект',
+    'app.resolve-undo': 'Отменить',
+    'app.resolve-redo': 'Повторить',
+    'app.resolve-split': 'Разделить клип',
+    'app.resolve-play': 'Воспроизведение / Пауза',
+    'cat.krita': 'Krita',
+    'app.krita-new': 'Новый документ',
+    'app.krita-save': 'Сохранить',
+    'app.krita-brush': 'Кисть от руки',
+    'app.krita-eraser': 'Ластик',
+    'app.krita-fill': 'Заливка',
+    'app.krita-mirror': 'Зеркальный вид',
+    'cat.audacity': 'Audacity',
+    'app.audacity-play': 'Воспроизведение / Стоп',
+    'app.audacity-record': 'Запись',
+    'app.audacity-undo': 'Отменить',
+    'app.audacity-redo': 'Повторить',
+    'app.audacity-export': 'Экспорт аудио',
+    'app.audacity-select-all': 'Выделить всё',
+    'cat.discord': 'Discord',
+    'app.discord-quick-switcher': 'Быстрое переключение',
+    'app.discord-search': 'Поиск',
+    'app.discord-mark-read': 'Отметить всё прочитанным',
+    'app.discord-settings': 'Настройки пользователя',
+    'app.discord-pins': 'Закреплённые сообщения',
+    'app.discord-mute': 'Переключить микрофон',
+    'cat.outlook': 'Outlook',
+    'app.outlook-new-mail': 'Новое письмо',
+    'app.outlook-send': 'Отправить',
+    'app.outlook-reply': 'Ответить',
+    'app.outlook-forward': 'Переслать',
+    'app.outlook-search': 'Поиск',
+    'app.outlook-calendar': 'Перейти в календарь',
+    'search.didyoumean': 'Вы имели в виду {0}?',
 };;
 
 i18n.sv = {
@@ -8878,7 +9904,64 @@ i18n.sv = {
     'net.toast': 'Öppna enhetens Wi-Fi-inställningar för att återansluta.',
     'net.android': 'Android tillåter inte webbplatser att öppna systeminställningarna. Öppna Wi-Fi-inställningarna i enhetens Inställningar-app.',
     'whatsnew.sub': 'Senaste ändringarna i Anthkeys',
-    'whatsnew.title': 'Nyheter'
+    'whatsnew.title': 'Nyheter',
+    'cat.notion': 'Notion',
+    'app.notion-new-page': 'Ny sida',
+    'app.notion-quick-find': 'Snabbsök',
+    'app.notion-toggle-sidebar': 'Visa/dölj sidopanel',
+    'app.notion-bold': 'Fet',
+    'app.notion-italic': 'Kursiv',
+    'app.notion-duplicate': 'Duplicera',
+    'cat.linear': 'Linear',
+    'app.linear-new-issue': 'Nytt ärende',
+    'app.linear-search': 'Sök',
+    'app.linear-command': 'Kommandomeny',
+    'app.linear-inbox': 'Inkorg',
+    'app.linear-active': 'Aktiva ärenden',
+    'app.linear-projects': 'Projekt',
+    'cat.blender': 'Blender',
+    'app.blender-add': 'Lägg till objekt',
+    'app.blender-move': 'Flytta',
+    'app.blender-rotate': 'Rotera',
+    'app.blender-scale': 'Skala',
+    'app.blender-extrude': 'Extrudera',
+    'app.blender-edit-mode': 'Växla redigeringsläge',
+    'cat.resolve': 'DaVinci Resolve',
+    'app.resolve-import': 'Importera media',
+    'app.resolve-save': 'Spara projekt',
+    'app.resolve-undo': 'Ångra',
+    'app.resolve-redo': 'Gör om',
+    'app.resolve-split': 'Dela klipp',
+    'app.resolve-play': 'Spela / Pausa',
+    'cat.krita': 'Krita',
+    'app.krita-new': 'Nytt dokument',
+    'app.krita-save': 'Spara',
+    'app.krita-brush': 'Frihandspensel',
+    'app.krita-eraser': 'Suddgummi',
+    'app.krita-fill': 'Fyll',
+    'app.krita-mirror': 'Spegelvy',
+    'cat.audacity': 'Audacity',
+    'app.audacity-play': 'Spela / Stoppa',
+    'app.audacity-record': 'Spela in',
+    'app.audacity-undo': 'Ångra',
+    'app.audacity-redo': 'Gör om',
+    'app.audacity-export': 'Exportera ljud',
+    'app.audacity-select-all': 'Markera allt',
+    'cat.discord': 'Discord',
+    'app.discord-quick-switcher': 'Snabbväxlare',
+    'app.discord-search': 'Sök',
+    'app.discord-mark-read': 'Markera allt som läst',
+    'app.discord-settings': 'Användarinställningar',
+    'app.discord-pins': 'Fästa meddelanden',
+    'app.discord-mute': 'Växla tyst',
+    'cat.outlook': 'Outlook',
+    'app.outlook-new-mail': 'Nytt e-postmeddelande',
+    'app.outlook-send': 'Skicka',
+    'app.outlook-reply': 'Svara',
+    'app.outlook-forward': 'Vidarebefordra',
+    'app.outlook-search': 'Sök',
+    'app.outlook-calendar': 'Gå till kalender',
+    'search.didyoumean': 'Menade du {0}?',
 };;
 
 i18n.tr = {
@@ -9345,7 +10428,64 @@ i18n.tr = {
     'net.toast': 'Yeniden bağlanmak için cihazınızın Wi-Fi ayarlarını açın.',
     'net.android': 'Android, web sitelerinin sistem ayarlarını açmasına izin vermez. Cihazınızın Ayarlar uygulamasından Wi-Fi ayarlarını açın.',
     'whatsnew.sub': 'Anthkeys\'teki son değişiklikler',
-    'whatsnew.title': 'Yenilikler'
+    'whatsnew.title': 'Yenilikler',
+    'cat.notion': 'Notion',
+    'app.notion-new-page': 'Yeni sayfa',
+    'app.notion-quick-find': 'Hızlı bul',
+    'app.notion-toggle-sidebar': 'Kenar çubuğunu aç/kapat',
+    'app.notion-bold': 'Kalın',
+    'app.notion-italic': 'İtalik',
+    'app.notion-duplicate': 'Çoğalt',
+    'cat.linear': 'Linear',
+    'app.linear-new-issue': 'Yeni konu',
+    'app.linear-search': 'Ara',
+    'app.linear-command': 'Komut menüsü',
+    'app.linear-inbox': 'Gelen kutusu',
+    'app.linear-active': 'Etkin konular',
+    'app.linear-projects': 'Projeler',
+    'cat.blender': 'Blender',
+    'app.blender-add': 'Nesne ekle',
+    'app.blender-move': 'Taşı',
+    'app.blender-rotate': 'Döndür',
+    'app.blender-scale': 'Ölçekle',
+    'app.blender-extrude': 'Ekstrüzyon',
+    'app.blender-edit-mode': 'Düzenleme modunu aç/kapat',
+    'cat.resolve': 'DaVinci Resolve',
+    'app.resolve-import': 'Medya içe aktar',
+    'app.resolve-save': 'Projeyi kaydet',
+    'app.resolve-undo': 'Geri al',
+    'app.resolve-redo': 'Yinele',
+    'app.resolve-split': 'Klibi böl',
+    'app.resolve-play': 'Oynat / Duraklat',
+    'cat.krita': 'Krita',
+    'app.krita-new': 'Yeni belge',
+    'app.krita-save': 'Kaydet',
+    'app.krita-brush': 'Serbest fırça',
+    'app.krita-eraser': 'Silgi',
+    'app.krita-fill': 'Doldur',
+    'app.krita-mirror': 'Ayna görünümü',
+    'cat.audacity': 'Audacity',
+    'app.audacity-play': 'Çal / Durdur',
+    'app.audacity-record': 'Kaydet',
+    'app.audacity-undo': 'Geri al',
+    'app.audacity-redo': 'Yinele',
+    'app.audacity-export': 'Sesi dışa aktar',
+    'app.audacity-select-all': 'Tümünü seç',
+    'cat.discord': 'Discord',
+    'app.discord-quick-switcher': 'Hızlı geçiş',
+    'app.discord-search': 'Ara',
+    'app.discord-mark-read': 'Tümünü okundu işaretle',
+    'app.discord-settings': 'Kullanıcı ayarları',
+    'app.discord-pins': 'Sabitlenmiş mesajlar',
+    'app.discord-mute': 'Sesi aç/kapat',
+    'cat.outlook': 'Outlook',
+    'app.outlook-new-mail': 'Yeni e-posta',
+    'app.outlook-send': 'Gönder',
+    'app.outlook-reply': 'Yanıtla',
+    'app.outlook-forward': 'İlet',
+    'app.outlook-search': 'Ara',
+    'app.outlook-calendar': 'Takvime git',
+    'search.didyoumean': '{0} mi demek istediniz?',
 };
 
 i18n.vi = {
@@ -9811,7 +10951,64 @@ i18n.vi = {
     'net.toast': 'Mở cài đặt Wi-Fi của thiết bị để kết nối lại.',
     'net.android': 'Android không cho phép các trang web mở cài đặt hệ thống. Hãy mở cài đặt Wi-Fi trong ứng dụng Cài đặt của thiết bị.',
     'whatsnew.sub': 'Các thay đổi gần đây của Anthkeys',
-    'whatsnew.title': 'Có gì mới'
+    'whatsnew.title': 'Có gì mới',
+    'cat.notion': 'Notion',
+    'app.notion-new-page': 'Trang mới',
+    'app.notion-quick-find': 'Tìm nhanh',
+    'app.notion-toggle-sidebar': 'Bật/tắt thanh bên',
+    'app.notion-bold': 'Đậm',
+    'app.notion-italic': 'Nghiêng',
+    'app.notion-duplicate': 'Nhân bản',
+    'cat.linear': 'Linear',
+    'app.linear-new-issue': 'Vấn đề mới',
+    'app.linear-search': 'Tìm kiếm',
+    'app.linear-command': 'Menu lệnh',
+    'app.linear-inbox': 'Hộp thư đến',
+    'app.linear-active': 'Vấn đề đang mở',
+    'app.linear-projects': 'Dự án',
+    'cat.blender': 'Blender',
+    'app.blender-add': 'Thêm đối tượng',
+    'app.blender-move': 'Di chuyển',
+    'app.blender-rotate': 'Xoay',
+    'app.blender-scale': 'Thu phóng',
+    'app.blender-extrude': 'Đùn',
+    'app.blender-edit-mode': 'Bật/tắt chế độ chỉnh sửa',
+    'cat.resolve': 'DaVinci Resolve',
+    'app.resolve-import': 'Nhập phương tiện',
+    'app.resolve-save': 'Lưu dự án',
+    'app.resolve-undo': 'Hoàn tác',
+    'app.resolve-redo': 'Làm lại',
+    'app.resolve-split': 'Tách clip',
+    'app.resolve-play': 'Phát / Tạm dừng',
+    'cat.krita': 'Krita',
+    'app.krita-new': 'Tài liệu mới',
+    'app.krita-save': 'Lưu',
+    'app.krita-brush': 'Cọ vẽ tự do',
+    'app.krita-eraser': 'Cục tẩy',
+    'app.krita-fill': 'Tô',
+    'app.krita-mirror': 'Xem gương',
+    'cat.audacity': 'Audacity',
+    'app.audacity-play': 'Phát / Dừng',
+    'app.audacity-record': 'Ghi âm',
+    'app.audacity-undo': 'Hoàn tác',
+    'app.audacity-redo': 'Làm lại',
+    'app.audacity-export': 'Xuất âm thanh',
+    'app.audacity-select-all': 'Chọn tất cả',
+    'cat.discord': 'Discord',
+    'app.discord-quick-switcher': 'Chuyển nhanh',
+    'app.discord-search': 'Tìm kiếm',
+    'app.discord-mark-read': 'Đánh dấu đã đọc tất cả',
+    'app.discord-settings': 'Cài đặt người dùng',
+    'app.discord-pins': 'Tin nhắn đã ghim',
+    'app.discord-mute': 'Bật/tắt tắt tiếng',
+    'cat.outlook': 'Outlook',
+    'app.outlook-new-mail': 'Email mới',
+    'app.outlook-send': 'Gửi',
+    'app.outlook-reply': 'Trả lời',
+    'app.outlook-forward': 'Chuyển tiếp',
+    'app.outlook-search': 'Tìm kiếm',
+    'app.outlook-calendar': 'Đi tới lịch',
+    'search.didyoumean': 'Ý bạn là {0}?',
 };
 
 let WN_ORIGINAL = null;
@@ -9985,7 +11182,7 @@ document.addEventListener('keydown', e => {
   }
 });
 
-const APPS_MENU = ['vscode','figma','photoshop','terminal-app','slack','devtools','obsidian','jetbrains','gmail','youtube'];
+const APPS_MENU = ['vscode','figma','photoshop','terminal-app','slack','devtools','obsidian','jetbrains','gmail','youtube','notion','linear','blender','resolve','krita','audacity','discord','outlook'];
 let appsFilterState = 'all';
 function tagAppsRows() {
   const panel = document.getElementById('apps');
@@ -10679,7 +11876,7 @@ onId('btnNotifyTest', 'click', async function() {
 let reloadOnUpdate = false;
 if ('serviceWorker' in navigator) {
   let refreshing = false;
-  navigator.serviceWorker.register('sw.js?v=29').catch(() => {});
+  navigator.serviceWorker.register('sw.js?v=30').catch(() => {});
   navigator.serviceWorker.addEventListener('controllerchange', () => {
     if (!reloadOnUpdate || refreshing) return;
     refreshing = true;
@@ -12753,13 +13950,14 @@ onId('searchClear', 'click', function() {
 function updateSearchCount() {
   const q = document.getElementById('searchInput').value.trim();
   const el = document.getElementById('searchCount');
-  if (!el) return;
-  if (!q) { el.textContent = ''; return; }
+  if (!el) { updateSearchSuggestion(q); return; }
+  if (!q) { el.textContent = ''; updateSearchSuggestion(''); return; }
   const panel = document.querySelector('.panel.active');
   const allRows = panel ? [...panel.querySelectorAll('tbody tr:not(.category)')] : [];
   const visible = allRows.filter(r => r.style.display !== 'none').length;
-  if (visible === 0) { el.textContent = t('search.noresults'); return; }
+  if (visible === 0) { el.textContent = t('search.noresults'); updateSearchSuggestion(q); return; }
   el.textContent = t('search.results').replace('{n}', visible);
+  updateSearchSuggestion('');
 }
 
 // (Search focus with / is handled centrally further down this file.)
@@ -14752,4 +15950,182 @@ document.addEventListener('keydown', e => {
 // Runs last on purpose: selectPlatformTab reads state (comparePlatform and
 // friends) that is only initialised further down this file.
 restorePlatformTab();
+
+// ---- Did you mean (a suggestion when a search finds nothing) ----
+function _akLevenshtein(a, b) {
+  a = String(a); b = String(b);
+  var m = a.length, n = b.length, i, j;
+  if (!m) return n;
+  if (!n) return m;
+  var prev = new Array(n + 1), cur = new Array(n + 1), tmp;
+  for (j = 0; j <= n; j++) prev[j] = j;
+  for (i = 1; i <= m; i++) {
+    cur[0] = i;
+    for (j = 1; j <= n; j++) {
+      var cost = a.charCodeAt(i - 1) === b.charCodeAt(j - 1) ? 0 : 1;
+      cur[j] = Math.min(cur[j - 1] + 1, prev[j] + 1, prev[j - 1] + cost);
+    }
+    tmp = prev; prev = cur; cur = tmp;
+  }
+  return prev[n];
+}
+function _akSim(a, b) {
+  if (!a && !b) return 1;
+  var m = Math.max(a.length, b.length);
+  return m ? 1 - _akLevenshtein(a, b) / m : 0;
+}
+function _akSuggestLabel(td) {
+  if (td && td.hasAttribute('data-i18n')) {
+    var key = td.getAttribute('data-i18n');
+    var s = t(key);
+    if (s && s !== key) return String(s);
+  }
+  return td ? String(td.textContent || '') : '';
+}
+function updateSearchSuggestion(q) {
+  var el = document.getElementById('searchSuggest');
+  if (!el) return;
+  if (!q) { el.hidden = true; el.textContent = ''; return; }
+  var panel = document.querySelector('.panel.active');
+  if (!panel) { el.hidden = true; return; }
+  var needle = String(q).toLowerCase().replace(/\s+/g, ' ').trim();
+  var best = null;
+  var rows = panel.querySelectorAll('tbody tr:not(.category)');
+  for (var r = 0; r < rows.length; r++) {
+    var tds = rows[r].querySelectorAll('td');
+    if (tds.length < 2) continue;
+    var label = _akSuggestLabel(tds[0]).replace(/\s+/g, ' ').trim();
+    var combo = String(tds[1].textContent || '').replace(/\s+/g, ' ').trim();
+    var s = 0;
+    if (label) s = _akSim(needle, label.toLowerCase());
+    if (combo) s = Math.max(s, _akSim(needle, combo.toLowerCase()) * 0.98);
+    if ((!best || s > best.s) && label) best = { s: s, term: label.replace(/^[^\p{L}\p{N}]+/u, '') || label };
+  }
+  if (!best || best.s < 0.55 || !best.term) { el.hidden = true; el.textContent = ''; return; }
+  var tmpl = t('search.didyoumean') || 'Did you mean {0}?';
+  var parts = String(tmpl).split('{0}');
+  el.textContent = '';
+  if (parts[0]) el.appendChild(document.createTextNode(parts[0]));
+  var btn = document.createElement('button');
+  btn.type = 'button';
+  btn.className = 'suggest-term';
+  btn.textContent = best.term;
+  btn.addEventListener('click', function () {
+    var inp = document.getElementById('searchInput');
+    if (inp) { inp.value = best.term; updateSearchClear(); applyView(); inp.focus(); }
+  });
+  el.appendChild(btn);
+  if (parts[1]) el.appendChild(document.createTextNode(parts[1]));
+  el.hidden = false;
+}
+
+// ---- Debug panel (open with ?debug=1) ----
+function akDebugVersion() {
+  var s = document.querySelector('script[src*="anthkeys.js"]');
+  var m = s && s.src.match(/[?&]v=([^&]+)/);
+  return m ? m[1] : '?';
+}
+function akDebugRow(label, value) {
+  var row = document.createElement('div');
+  row.style.cssText = 'display:flex;gap:8px;padding:3px 0;border-bottom:1px solid var(--outline-variant)';
+  var k = document.createElement('span');
+  k.style.cssText = 'flex:0 0 96px;opacity:.7';
+  k.textContent = label;
+  var v = document.createElement('span');
+  v.style.cssText = 'flex:1;word-break:break-word';
+  v.textContent = value;
+  row.appendChild(k); row.appendChild(v);
+  return row;
+}
+function akDebugReport() {
+  var lines = ['Anthkeys debug'];
+  lines.push('url: ' + location.pathname);
+  lines.push('version: ' + akDebugVersion());
+  lines.push('online: ' + navigator.onLine);
+  lines.push('language: ' + (document.documentElement.lang || navigator.language || ''));
+  lines.push('storage keys: ' + localStorage.length);
+  for (var i = 0; i < localStorage.length; i++) {
+    var k = localStorage.key(i);
+    lines.push('  ' + k + ' = ' + String(localStorage.getItem(k) || '').length + ' chars');
+  }
+  lines.push('errors: ' + JSON.stringify(window.__akErrors || []));
+  if (window.caches && caches.keys) {
+    caches.keys().then(function (ks) { lines.push('caches: ' + (ks.length ? ks.join(', ') : 'none')); });
+  }
+  return lines.join('\n');
+}
+function initDebugPanel() {
+  if (window.__akDebug) return;
+  window.__akDebug = true;
+  var box = document.createElement('div');
+  box.id = 'akDebug';
+  box.style.cssText = 'position:fixed;right:14px;bottom:14px;z-index:9999;width:340px;max-width:calc(100vw - 28px);max-height:70vh;overflow:auto;background:var(--surface);color:var(--text);border:1px solid var(--outline-variant);border-radius:12px;box-shadow:var(--shadow-lg);font:12px/1.5 ui-monospace,SFMono-Regular,Consolas,monospace;padding:10px 12px;direction:ltr;text-align:left';
+  var head = document.createElement('div');
+  head.style.cssText = 'display:flex;justify-content:space-between;align-items:center;font-weight:700;margin-bottom:6px';
+  head.appendChild(document.createTextNode('Anthkeys debug'));
+  var close = document.createElement('button');
+  close.type = 'button';
+  close.textContent = '\u00d7';
+  close.style.cssText = 'border:0;background:none;color:inherit;font-size:16px;cursor:pointer;line-height:1';
+  close.setAttribute('aria-label', 'Close debug panel');
+  close.addEventListener('click', function () { box.remove(); window.__akDebug = false; });
+  head.appendChild(close);
+  box.appendChild(head);
+
+  box.appendChild(akDebugRow('version', akDebugVersion()));
+  var cacheRow = akDebugRow('caches', 'loading\u2026');
+  box.appendChild(cacheRow);
+  if (window.caches && caches.keys) {
+    caches.keys().then(function (ks) {
+      cacheRow.lastChild.textContent = ks.length ? ks.join(', ') : '(none)';
+    }).catch(function () { cacheRow.lastChild.textContent = 'n/a'; });
+  } else {
+    cacheRow.lastChild.textContent = 'n/a';
+  }
+  box.appendChild(akDebugRow('storage', localStorage.length + ' key(s)'));
+  var st = document.createElement('div');
+  st.style.cssText = 'font-size:11px;opacity:.85;white-space:pre-wrap;padding:2px 0 6px 104px';
+  var stx = [];
+  for (var i = 0; i < localStorage.length; i++) {
+    var k = localStorage.key(i);
+    stx.push(k + ' \u2192 ' + String(localStorage.getItem(k) || '').length + ' chars');
+  }
+  st.textContent = stx.length ? stx.join('\n') : '(empty)';
+  box.appendChild(st);
+  box.appendChild(akDebugRow('sw', (navigator.serviceWorker && navigator.serviceWorker.controller) ? 'active' : 'none'));
+  box.appendChild(akDebugRow('online', navigator.onLine ? 'yes' : 'no'));
+  box.appendChild(akDebugRow('lang', document.documentElement.lang || navigator.language || ''));
+  var errRow = akDebugRow('errors', '0');
+  box.appendChild(errRow);
+  errRow.lastChild.textContent = JSON.stringify(window.__akErrors || []);
+
+  var btns = document.createElement('div');
+  btns.style.cssText = 'display:flex;gap:6px;margin-top:8px;flex-wrap:wrap';
+  function mkBtn(text, fn) {
+    var b = document.createElement('button');
+    b.type = 'button';
+    b.textContent = text;
+    b.style.cssText = 'border:1px solid var(--outline-variant);background:var(--surface-variant);color:var(--text);border-radius:8px;padding:5px 9px;font:inherit;cursor:pointer';
+    b.addEventListener('click', fn);
+    return b;
+  }
+  btns.appendChild(mkBtn('Copy report', function () {
+    var btn = btns.firstChild;
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(String(akDebugReport())).catch(function () {});
+    }
+    btn.textContent = 'Copied!';
+    setTimeout(function () { btn.textContent = 'Copy report'; }, 1200);
+  }));
+  btns.appendChild(mkBtn('Clear storage', function () {
+    try { localStorage.clear(); } catch (e) {}
+    location.reload();
+  }));
+  box.appendChild(btns);
+  document.body.appendChild(box);
+}
+if (new URLSearchParams(location.search).get('debug') === '1') {
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', initDebugPanel);
+  else initDebugPanel();
+}
 

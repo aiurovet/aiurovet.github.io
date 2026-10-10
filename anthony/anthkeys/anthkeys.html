@@ -29,7 +29,7 @@
   <script>if (location.protocol === 'file:') document.getElementById('manifestLink').remove();</script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=Roboto:wght@400;500;600;700&family=Open+Sans:wght@400;500;600;700&family=Nunito:wght@400;500;600;700&family=Lato:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700&family=Work+Sans:wght@400;500;600;700&family=Rubik:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&family=Source+Sans+3:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&family=Fira+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/anthkeys.css?v=123">
+  <link rel="stylesheet" href="css/anthkeys.css?v=124">
 </head>
 <body class="light style-m3 size-medium font-google-sans">
  <div class="container">
@@ -83,6 +83,7 @@
     </div>
   </div>
   <div class="search-count" id="searchCount"></div>
+  <div class="search-suggest" id="searchSuggest" hidden></div>
   <button class="offline-pill" id="offlinePill" hidden><span class="offline-dot"></span><span data-i18n="offline.badge">Offline</span></button>
 
   <div class="tabs">
@@ -504,7 +505,62 @@
         <tr><td data-i18n="app.yt-fullscreen">Fullscreen</td><td><kbd>F</kbd></td></tr>
         <tr><td data-i18n="app.yt-captions">Toggle Captions</td><td><kbd>C</kbd></td></tr>
         <tr><td data-i18n="app.yt-vol-up">Increase Volume</td><td><kbd>↑</kbd></td></tr>
-        <tr><td data-i18n="app.yt-vol-down">Decrease Volume</td><td><kbd>↓</kbd></td></tr>
+        <tr class="category"><td colspan="2" data-i18n="cat.notion">Notion</td></tr>
+        <tr><td data-i18n="app.notion-new-page">New Page</td><td><kbd>Ctrl</kbd> + <kbd>N</kbd></td></tr>
+        <tr><td data-i18n="app.notion-quick-find">Quick Find</td><td><kbd>Ctrl</kbd> + <kbd>P</kbd></td></tr>
+        <tr><td data-i18n="app.notion-toggle-sidebar">Toggle Sidebar</td><td><kbd>Ctrl</kbd> + <kbd>\</kbd></td></tr>
+        <tr><td data-i18n="app.notion-bold">Bold</td><td><kbd>Ctrl</kbd> + <kbd>B</kbd></td></tr>
+        <tr><td data-i18n="app.notion-italic">Italic</td><td><kbd>Ctrl</kbd> + <kbd>I</kbd></td></tr>
+        <tr><td data-i18n="app.notion-duplicate">Duplicate</td><td><kbd>Ctrl</kbd> + <kbd>D</kbd></td></tr>
+        <tr class="category"><td colspan="2" data-i18n="cat.linear">Linear</td></tr>
+        <tr><td data-i18n="app.linear-new-issue">New Issue</td><td><kbd>C</kbd></td></tr>
+        <tr><td data-i18n="app.linear-search">Search</td><td><kbd>/</kbd></td></tr>
+        <tr><td data-i18n="app.linear-command">Command Menu</td><td><kbd>Ctrl</kbd> + <kbd>K</kbd></td></tr>
+        <tr><td data-i18n="app.linear-inbox">Inbox</td><td><kbd>G</kbd> <kbd>I</kbd></td></tr>
+        <tr><td data-i18n="app.linear-active">Active Issues</td><td><kbd>G</kbd> <kbd>A</kbd></td></tr>
+        <tr><td data-i18n="app.linear-projects">Projects</td><td><kbd>G</kbd> <kbd>P</kbd></td></tr>
+        <tr class="category"><td colspan="2" data-i18n="cat.blender">Blender</td></tr>
+        <tr><td data-i18n="app.blender-add">Add Object</td><td><kbd>Shift</kbd> + <kbd>A</kbd></td></tr>
+        <tr><td data-i18n="app.blender-move">Move</td><td><kbd>G</kbd></td></tr>
+        <tr><td data-i18n="app.blender-rotate">Rotate</td><td><kbd>R</kbd></td></tr>
+        <tr><td data-i18n="app.blender-scale">Scale</td><td><kbd>S</kbd></td></tr>
+        <tr><td data-i18n="app.blender-extrude">Extrude</td><td><kbd>E</kbd></td></tr>
+        <tr><td data-i18n="app.blender-edit-mode">Toggle Edit Mode</td><td><kbd>Tab</kbd></td></tr>
+        <tr class="category"><td colspan="2" data-i18n="cat.resolve">DaVinci Resolve</td></tr>
+        <tr><td data-i18n="app.resolve-import">Import Media</td><td><kbd>Ctrl</kbd> + <kbd>I</kbd></td></tr>
+        <tr><td data-i18n="app.resolve-save">Save Project</td><td><kbd>Ctrl</kbd> + <kbd>S</kbd></td></tr>
+        <tr><td data-i18n="app.resolve-undo">Undo</td><td><kbd>Ctrl</kbd> + <kbd>Z</kbd></td></tr>
+        <tr><td data-i18n="app.resolve-redo">Redo</td><td><kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>Z</kbd></td></tr>
+        <tr><td data-i18n="app.resolve-split">Split Clip</td><td><kbd>Ctrl</kbd> + <kbd>B</kbd></td></tr>
+        <tr><td data-i18n="app.resolve-play">Play / Pause</td><td><kbd>Space</kbd></td></tr>
+        <tr class="category"><td colspan="2" data-i18n="cat.krita">Krita</td></tr>
+        <tr><td data-i18n="app.krita-new">New Document</td><td><kbd>Ctrl</kbd> + <kbd>N</kbd></td></tr>
+        <tr><td data-i18n="app.krita-save">Save</td><td><kbd>Ctrl</kbd> + <kbd>S</kbd></td></tr>
+        <tr><td data-i18n="app.krita-brush">Freehand Brush</td><td><kbd>B</kbd></td></tr>
+        <tr><td data-i18n="app.krita-eraser">Eraser</td><td><kbd>E</kbd></td></tr>
+        <tr><td data-i18n="app.krita-fill">Fill</td><td><kbd>F</kbd></td></tr>
+        <tr><td data-i18n="app.krita-mirror">Mirror View</td><td><kbd>M</kbd></td></tr>
+        <tr class="category"><td colspan="2" data-i18n="cat.audacity">Audacity</td></tr>
+        <tr><td data-i18n="app.audacity-play">Play / Stop</td><td><kbd>Space</kbd></td></tr>
+        <tr><td data-i18n="app.audacity-record">Record</td><td><kbd>R</kbd></td></tr>
+        <tr><td data-i18n="app.audacity-undo">Undo</td><td><kbd>Ctrl</kbd> + <kbd>Z</kbd></td></tr>
+        <tr><td data-i18n="app.audacity-redo">Redo</td><td><kbd>Ctrl</kbd> + <kbd>Y</kbd></td></tr>
+        <tr><td data-i18n="app.audacity-export">Export Audio</td><td><kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>E</kbd></td></tr>
+        <tr><td data-i18n="app.audacity-select-all">Select All</td><td><kbd>Ctrl</kbd> + <kbd>A</kbd></td></tr>
+        <tr class="category"><td colspan="2" data-i18n="cat.discord">Discord</td></tr>
+        <tr><td data-i18n="app.discord-quick-switcher">Quick Switcher</td><td><kbd>Ctrl</kbd> + <kbd>K</kbd></td></tr>
+        <tr><td data-i18n="app.discord-search">Search</td><td><kbd>Ctrl</kbd> + <kbd>F</kbd></td></tr>
+        <tr><td data-i18n="app.discord-mark-read">Mark All Read</td><td><kbd>Shift</kbd> + <kbd>Esc</kbd></td></tr>
+        <tr><td data-i18n="app.discord-settings">User Settings</td><td><kbd>Ctrl</kbd> + <kbd>,</kbd></td></tr>
+        <tr><td data-i18n="app.discord-pins">Pinned Messages</td><td><kbd>Ctrl</kbd> + <kbd>P</kbd></td></tr>
+        <tr><td data-i18n="app.discord-mute">Toggle Mute</td><td><kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>M</kbd></td></tr>
+        <tr class="category"><td colspan="2" data-i18n="cat.outlook">Outlook</td></tr>
+        <tr><td data-i18n="app.outlook-new-mail">New Email</td><td><kbd>Ctrl</kbd> + <kbd>N</kbd></td></tr>
+        <tr><td data-i18n="app.outlook-send">Send</td><td><kbd>Ctrl</kbd> + <kbd>Enter</kbd></td></tr>
+        <tr><td data-i18n="app.outlook-reply">Reply</td><td><kbd>Ctrl</kbd> + <kbd>R</kbd></td></tr>
+        <tr><td data-i18n="app.outlook-forward">Forward</td><td><kbd>Ctrl</kbd> + <kbd>F</kbd></td></tr>
+        <tr><td data-i18n="app.outlook-search">Search</td><td><kbd>Ctrl</kbd> + <kbd>E</kbd></td></tr>
+        <tr><td data-i18n="app.outlook-calendar">Go to Calendar</td><td><kbd>Ctrl</kbd> + <kbd>2</kbd></td></tr>
       </tbody>
     </table>
   </div>
@@ -805,6 +861,13 @@
                 <div class="whatsnew-title" data-i18n="whatsnew.title">What's new</div>
                 <p class="whatsnew-sub" data-i18n="whatsnew.sub">Recent changes to Anthkeys</p>
                 <select id="whatsnewSelect" aria-label="Version" style="width:100%;padding:.45rem .7rem;border:1px solid var(--outline-variant);border-radius:var(--radius-sm);background:var(--surface);color:var(--text);font:var(--size) var(--font);font-size:.8rem;margin-bottom:.6rem;box-sizing:border-box;outline:none"></select>
+                <div class="wn-entry">
+                  <div class="wn-ver">v53.7 <span class="wn-date">Oct 10, 2026</span></div>
+                  <ul>
+                    <li>New: eight more apps in the Apps tab &mdash; Notion, Linear, Blender, DaVinci Resolve, Krita, Audacity, Discord and Outlook.</li>
+                    <li>Improved: when a search finds nothing, it now suggests the closest matching shortcut, and adding ?debug=1 to the URL opens a diagnostics panel (version, storage, errors, service worker).</li>
+                  </ul>
+                </div>
                 <div class="wn-entry">
                   <div class="wn-ver">v53.6 <span class="wn-date">Oct 10, 2026</span></div>
                   <ul>
@@ -1882,7 +1945,7 @@
   <script src="js/qrcode.js"></script>
   <script src="js/i18n-recent.js"></script>
 <script src="js/i18n-wn.js"></script>
-<script src="js/anthkeys.js?v=53.6">
+<script src="js/anthkeys.js?v=53.7">
 </script>
 </body>
 </html>
