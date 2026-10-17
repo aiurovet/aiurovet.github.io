@@ -6,6 +6,11 @@
 const I18N_WN = window.I18N_WN || {};
 
 I18N_WN.es = {
+  'v53.9': [
+    'Nuevo: una animación de inicio &mdash; Anthkeys ahora se abre con una pantalla de pulsación de tecla mientras carga, en escritorio y móvil.',
+    'Mejorado: la app ahora se abre directamente en tu tema guardado &mdash; los usuarios del modo oscuro ya no ven un destello claro antes de que la página se asiente.',
+  ],
+
   'v53.8': [
     'Nuevo: crea tus propias secciones de apps &mdash; dale a una app un nombre y sus atajos en Ajustes, y fíltrala desde la pestaña Apps; se sincronizan mediante sincronización de sala, códigos sin conexión, exportación y Gist.',
     'Nuevo: diez apps más en la pestaña Apps &mdash; GIMP, OBS Studio, PowerPoint, Excel, Google Docs, Google Sheets, Premiere Pro, After Effects, Android Studio y Sublime Text.',
@@ -320,6 +325,11 @@ I18N_WN.es = {
 };
 
 I18N_WN.fr = {
+  'v53.9': [
+    'Nouveau : une animation de démarrage &mdash; Anthkeys s\'ouvre désormais avec un écran d\'accueil montrant une touche pressée pendant le chargement, sur ordinateur et mobile.',
+    'Amélioré : l\'application s\'ouvre maintenant directement dans votre thème enregistré &mdash; les utilisateurs du mode sombre ne voient plus de flash clair avant que la page ne se stabilise.',
+  ],
+
   'v53.8': [
     'Nouveau : créez vos propres sections d\'applications &mdash; donnez un nom et des raccourcis à une app dans Paramètres, puis filtrez depuis l\'onglet Apps ; elles se synchronisent via la synchro de salle, les codes hors ligne, l\'export et Gist.',
     'Nouveau : dix applications de plus dans l\'onglet Apps &mdash; GIMP, OBS Studio, PowerPoint, Excel, Google Docs, Google Sheets, Premiere Pro, After Effects, Android Studio et Sublime Text.',
@@ -634,6 +644,11 @@ I18N_WN.fr = {
 };
 
 I18N_WN.de = {
+  'v53.9': [
+    'Neu: eine Startanimation &mdash; Anthkeys öffnet jetzt mit einem Tastendruck-Startbildschirm, während es lädt, auf Desktop und Mobil.',
+    'Verbessert: Die App öffnet jetzt direkt in deinem gespeicherten Theme &mdash; Nutzer des dunklen Modus sehen kein helles Aufblitzen mehr, bevor die Seite steht.',
+  ],
+
   'v53.8': [
     'Neu: erstelle eigene App-Bereiche &mdash; gib einer App in den Einstellungen einen Namen und ihre Kürzel, und filtere dann über die Apps-Registerkarte danach; sie synchronisieren über Raum-Sync, Offline-Codes, Export und Gist.',
     'Neu: zehn weitere Apps in der Apps-Registerkarte &mdash; GIMP, OBS Studio, PowerPoint, Excel, Google Docs, Google Sheets, Premiere Pro, After Effects, Android Studio und Sublime Text.',
@@ -948,6 +963,11 @@ I18N_WN.de = {
 };
 
 I18N_WN.it = {
+  'v53.9': [
+    'Nuovo: un\'animazione di avvio &mdash; Anthkeys ora si apre con una schermata che mostra la pressione di un tasto durante il caricamento, su desktop e mobile.',
+    'Migliorato: l\'app ora si apre direttamente nel tuo tema salvato &mdash; gli utenti della modalità scura non vedono più un lampo chiaro prima che la pagina si stabilizzi.',
+  ],
+
   'v53.8': [
     'Nuovo: crea sezioni di app personalizzate &mdash; dai a un\'app un nome e le sue scorciatoie nelle Impostazioni, poi filtrala dalla scheda Apps; si sincronizzano tramite sync stanza, codici offline, esportazione e Gist.',
     'Nuovo: dieci app in più nella scheda Apps &mdash; GIMP, OBS Studio, PowerPoint, Excel, Google Docs, Google Sheets, Premiere Pro, After Effects, Android Studio e Sublime Text.',
@@ -1262,6 +1282,11 @@ I18N_WN.it = {
 };
 
 I18N_WN.pt = {
+  'v53.9': [
+    'Novo: uma animação de inicialização &mdash; o Anthkeys agora abre com uma tela de abertura mostrando uma tecla sendo pressionada enquanto carrega, no desktop e no celular.',
+    'Melhorado: o app agora abre direto no seu tema salvo &mdash; usuários do modo escuro não veem mais um clarão claro antes de a página se estabilizar.',
+  ],
+
   'v53.8': [
     'Novo: crie suas próprias seções de apps &mdash; dê a um app um nome e seus atalhos em Configurações e filtre por ele na aba Apps; elas sincronizam via sync de sala, códigos off-line, exportação e Gist.',
     'Novo: mais dez apps na aba Apps &mdash; GIMP, OBS Studio, PowerPoint, Excel, Google Docs, Google Sheets, Premiere Pro, After Effects, Android Studio e Sublime Text.',
@@ -1576,6 +1601,11 @@ I18N_WN.pt = {
 };
 
 I18N_WN.nl = {
+  'v53.9': [
+    'Nieuw: een opstartanimatie &mdash; Anthkeys opent nu met een opstartscherm met een ingedrukte toets tijdens het laden, op desktop en mobiel.',
+    'Verbeterd: de app opent nu direct in je opgeslagen thema &mdash; gebruikers van de donkere modus zien geen lichte flits meer voordat de pagina staat.',
+  ],
+
   'v53.8': [
     'Nieuw: maak je eigen app-secties &mdash; geef een app in Instellingen een naam en de snelkoppelingen, en filter er daarna op via het tabblad Apps; ze synchroniseren via kamer-sync, offline codes, export en Gist.',
     'Nieuw: tien extra apps op het tabblad Apps &mdash; GIMP, OBS Studio, PowerPoint, Excel, Google Docs, Google Sheets, Premiere Pro, After Effects, Android Studio en Sublime Text.',
@@ -1890,6 +1920,11 @@ I18N_WN.nl = {
 };
 
 I18N_WN.ja = {
+  'v53.9': [
+    '新機能：起動アニメーション &mdash; Anthkeysは読み込み中にキーを押すスプラッシュ画面で開くようになりました（PC・モバイル）。',
+    '改善：アプリが保存したテーマで直接開くように &mdash; ダークモードのユーザーはページが落ち着く前に明るいフラッシュを見ることがなくなりました。',
+  ],
+
   'v53.8': [
     '新機能：自分だけのアプリセクションを作成 &mdash; 設定でアプリに名前とショートカットを付け、Appsタブから絞り込みできます。ルーム同期・オフラインコード・エクスポート・Gistで同期されます。',
     '新機能：Appsタブにアプリが10個追加 &mdash; GIMP、OBS Studio、PowerPoint、Excel、Google Docs、Google Sheets、Premiere Pro、After Effects、Android Studio、Sublime Text。',
@@ -2204,6 +2239,11 @@ I18N_WN.ja = {
 };
 
 I18N_WN.ru = {
+  'v53.9': [
+    'Новое: анимация запуска &mdash; Anthkeys теперь открывается с экраном загрузки, показывающим нажатие клавиши, на компьютере и телефоне.',
+    'Улучшено: приложение теперь открывается сразу в вашей сохранённой теме &mdash; пользователи тёмного режима больше не видят светлую вспышку до того, как страница установится.',
+  ],
+
   'v53.8': [
     'Новое: создавайте собственные разделы приложений &mdash; дайте приложению имя и его сочетания клавиш в Настройках, затем фильтруйте его во вкладке Apps; они синхронизируются через синхронизацию комнаты, офлайн-коды, экспорт и Gist.',
     'Новое: ещё десять приложений во вкладке Apps &mdash; GIMP, OBS Studio, PowerPoint, Excel, Google Docs, Google Sheets, Premiere Pro, After Effects, Android Studio и Sublime Text.',
@@ -2518,6 +2558,11 @@ I18N_WN.ru = {
 };
 
 I18N_WN.ko = {
+  'v53.9': [
+    '새 기능: 시작 애니메이션 &mdash; Anthkeys가 로딩 중 키를 누르는 스플래시 화면과 함께 열립니다(데스크톱 및 모바일).',
+    '개선: 앱이 저장된 테마로 바로 열립니다 &mdash; 다크 모드 사용자는 페이지가 안정되기 전 밝게 번쩍이는 현상을 더 이상 보지 않습니다.',
+  ],
+
   'v53.8': [
     '새 기능: 나만의 앱 섹션 만들기 &mdash; 설정에서 앱에 이름과 단축키를 지정한 다음 Apps 탭에서 필터링하세요. 방 동기화, 오프라인 코드, 내보내기 및 Gist를 통해 동기화됩니다.',
     '새 기능: Apps 탭에 앱 10개 추가 &mdash; GIMP, OBS Studio, PowerPoint, Excel, Google Docs, Google Sheets, Premiere Pro, After Effects, Android Studio, Sublime Text.',
@@ -2832,6 +2877,11 @@ I18N_WN.ko = {
 };
 
 I18N_WN.pl = {
+  'v53.9': [
+    'Nowość: animacja uruchamiania &mdash; Anthkeys otwiera się teraz z ekranem startowym przedstawiającym naciśnięcie klawisza podczas ładowania, na komputerze i telefonie.',
+    'Ulepszenie: aplikacja otwiera się teraz od razu w zapisanym motywie &mdash; użytkownicy trybu ciemnego nie widzą już jasnego błysku, zanim strona się ustabilizuje.',
+  ],
+
   'v53.8': [
     'Nowość: twórz własne sekcje aplikacji &mdash; nadaj aplikacji nazwę i skróty w Ustawieniach, a następnie filtruj ją z karty Apps; synchronizują się przez synchronizację pokoju, kody offline, eksport i Gist.',
     'Nowość: dziesięć kolejnych aplikacji na karcie Apps &mdash; GIMP, OBS Studio, PowerPoint, Excel, Google Docs, Google Sheets, Premiere Pro, After Effects, Android Studio i Sublime Text.',
@@ -3146,6 +3196,11 @@ I18N_WN.pl = {
 };
 
 I18N_WN.tr = {
+  'v53.9': [
+    'Yeni: bir açılış animasyonu &mdash; Anthkeys artık yüklenirken bir tuşa basıldığını gösteren açılış ekranıyla açılıyor, masaüstünde ve mobilde.',
+    'İyileştirildi: uygulama artık doğrudan kayıtlı temanızda açılıyor &mdash; koyu mod kullanıcıları sayfa oturmadan önce artık açık renkli bir parlama görmüyor.',
+  ],
+
   'v53.8': [
     'Yeni: kendi uygulama bölümlerinizi oluşturun &mdash; Ayarlar\'da bir uygulamaya ad ve kısayollar verin, ardından Apps sekmesinden filtreleyin; oda senkronizasyonu, çevrimdışı kodlar, dışa aktarma ve Gist üzerinden senkronize edilir.',
     'Yeni: Apps sekmesine on uygulama daha &mdash; GIMP, OBS Studio, PowerPoint, Excel, Google Docs, Google Sheets, Premiere Pro, After Effects, Android Studio ve Sublime Text.',
@@ -3460,6 +3515,11 @@ I18N_WN.tr = {
 };
 
 I18N_WN.vi = {
+  'v53.9': [
+    'Mới: hiệu ứng khởi động &mdash; Anthkeys giờ mở bằng màn hình nhấn phím trong khi tải, trên máy tính và điện thoại.',
+    'Cải thiện: ứng dụng giờ mở thẳng vào chủ đề đã lưu của bạn &mdash; người dùng chế độ tối không còn thấy nháy sáng trước khi trang ổn định.',
+  ],
+
   'v53.8': [
     'Mới: tạo các phần ứng dụng của riêng bạn &mdash; đặt tên và phím tắt cho ứng dụng trong Cài đặt, sau đó lọc từ tab Apps; chúng đồng bộ qua đồng bộ phòng, mã ngoại tuyến, xuất và Gist.',
     'Mới: thêm mười ứng dụng nữa trong tab Apps &mdash; GIMP, OBS Studio, PowerPoint, Excel, Google Docs, Google Sheets, Premiere Pro, After Effects, Android Studio và Sublime Text.',
@@ -3774,6 +3834,11 @@ I18N_WN.vi = {
 };
 
 I18N_WN.ar = {
+  'v53.9': [
+    'جديد: حركة بدء التشغيل &mdash; يفتح Anthkeys الآن بشاشة بدء تُظهر ضغطة مفتاح أثناء التحميل، على الحاسوب والهاتف.',
+    'محسَّن: يفتح التطبيق الآن مباشرة على سِمةك المحفوظة &mdash; لم يعد مستخدمو الوضع الداكن يرون وميضاً فاتحاً قبل استقرار الصفحة.',
+  ],
+
   'v53.8': [
     'جديد: أنشئ أقسام تطبيقاتك الخاصة &mdash; امنح التطبيق اسماً واختصاراته في الإعدادات، ثم صفِّه من تبويب التطبيقات؛ وهي تتم مزامنتها عبر مزامنة الغرفة والرموز دون اتصال والتصدير وGist.',
     'جديد: عشرة تطبيقات إضافية في تبويب التطبيقات &mdash; GIMP وOBS Studio وPowerPoint وExcel وGoogle Docs وGoogle Sheets وPremiere Pro وAfter Effects وAndroid Studio وSublime Text.',
@@ -4088,6 +4153,11 @@ I18N_WN.ar = {
 };
 
 I18N_WN.hi = {
+  'v53.9': [
+    'नया: स्टार्टअप एनिमेशन &mdash; लोड होते समय Anthkeys अब की-प्रेस स्प्लैश स्क्रीन के साथ खुलता है, डेस्कटॉप और मोबाइल दोनों पर।',
+    'बेहतर: ऐप अब सीधे आपकी सहेजी गई थीम में खुलता है &mdash; डार्क मोड उपयोगकर्ताओं को पेज स्थिर होने से पहले अब हल्की झलक नहीं दिखती।',
+  ],
+
   'v53.8': [
     'नया: अपने खुद के ऐप सेक्शन बनाएं &mdash; सेटिंग्स में किसी ऐप को नाम और उसके शॉर्टकट दें, फिर Apps टैब से उसे फ़िल्टर करें; वे रूम सिंक, ऑफ़लाइन कोड, एक्सपोर्ट और Gist से सिंक होते हैं।',
     'नया: Apps टैब में दस और ऐप्स &mdash; GIMP, OBS Studio, PowerPoint, Excel, Google Docs, Google Sheets, Premiere Pro, After Effects, Android Studio और Sublime Text।',
@@ -4402,6 +4472,11 @@ I18N_WN.hi = {
 };
 
 I18N_WN.sv = {
+  'v53.9': [
+    'Nytt: en startanimation &mdash; Anthkeys öppnas nu med en startskärm som visar ett tangenttryck medan den laddas, på dator och mobil.',
+    'Förbättrat: appen öppnas nu direkt i ditt sparade tema &mdash; användare av mörkt läge ser inte längre en ljus blinkning innan sidan lägger sig.',
+  ],
+
   'v53.8': [
     'Nytt: skapa egna appsektioner &mdash; ge en app ett namn och dess genvägar i Inställningar och filtrera sedan på den i fliken Apps; de synkroniseras via rums-sync, offlinekoder, export och Gist.',
     'Nytt: tio appar till i fliken Apps &mdash; GIMP, OBS Studio, PowerPoint, Excel, Google Docs, Google Sheets, Premiere Pro, After Effects, Android Studio och Sublime Text.',
@@ -4716,6 +4791,11 @@ I18N_WN.sv = {
 };
 
 I18N_WN.da = {
+  'v53.9': [
+    'Ny: startanimation &mdash; Anthkeys åbner nu med en opstartsskærm, der viser et tastetryk, mens den indlæses, på computer og mobil.',
+    'Forbedret: appen åbner nu direkte i dit gemte tema &mdash; brugere med mørk tilstand ser ikke længere et lyst glimt, før siden falder på plads.',
+  ],
+
   'v53.8': [
     'Ny: opret dine egne app-sektioner &mdash; giv en app et navn og dens genveje under Indstillinger, og filtrér derefter fra fanen Apps; de synkroniseres via værelsessynkronisering, offline-koder, eksport og Gist.',
     'Ny: ti apps mere i fanen Apps &mdash; GIMP, OBS Studio, PowerPoint, Excel, Google Docs, Google Sheets, Premiere Pro, After Effects, Android Studio og Sublime Text.',
@@ -5030,6 +5110,11 @@ I18N_WN.da = {
 };
 
 I18N_WN.fi = {
+  'v53.9': [
+    'Uusi: käynnistysanimaatio &mdash; Anthkeys avautuu nyt näppäimen painallusta esittävällä aloitusnäytöllä latautuessaan, sekä työpöydällä että mobiilissa.',
+    'Parannettu: sovellus avautuu nyt suoraan tallennettuun teemaasi &mdash; tumman tilan käyttäjät eivät enää näe vaaleaa välähdystä ennen sivun asettumista.',
+  ],
+
   'v53.8': [
     'Uusi: luo omia sovellusosioita &mdash; anna sovellukselle nimi ja sen pikanäppäimet Asetuksissa, jonka jälkeen suodata sillä Apps-välilehdellä; ne synkronoituvat huonesynkronoinnilla, offline-koodeilla, viennillä ja Gistillä.',
     'Uusi: kymmenen sovellusta lisää Apps-välilehdellä &mdash; GIMP, OBS Studio, PowerPoint, Excel, Google Docs, Google Sheets, Premiere Pro, After Effects, Android Studio ja Sublime Text.',
@@ -5344,6 +5429,11 @@ I18N_WN.fi = {
 };
 
 I18N_WN.no = {
+  'v53.9': [
+    'Ny: en startanimasjon &mdash; Anthkeys åpner nå med en oppstartsskjerm som viser et tastetrykk mens den laster, på PC og mobil.',
+    'Forbedret: appen åpner nå rett i ditt lagrede tema &mdash; brukere av mørk modus ser ikke lenger et lyst blink før siden faller på plass.',
+  ],
+
   'v53.8': [
     'Ny: opprett dine egne app-seksjoner &mdash; gi en app navn og snarveier i Innstillinger, og filtrer deretter fra Apps-fanen; de synkroniseres via romsynkronisering, offline-koder, eksport og Gist.',
     'Ny: ti apper til i Apps-fanen &mdash; GIMP, OBS Studio, PowerPoint, Excel, Google Docs, Google Sheets, Premiere Pro, After Effects, Android Studio og Sublime Text.',
@@ -5658,6 +5748,11 @@ I18N_WN.no = {
 };
 
 I18N_WN.cs = {
+  'v53.9': [
+    'Novinka: úvodní animace &mdash; Anthkeys se nyní spouští s úvodní obrazovkou stlačovaného klávesu během načítání, na počítači i mobilu.',
+    'Vylepšení: aplikace se nyní otevírá rovnou ve vašem uloženém motivu &mdash; uživatelé tmavého režimu už nevidí světlé bliknutí, než se stránka ustálí.',
+  ],
+
   'v53.8': [
     'Novinka: vytvořte si vlastní sekce aplikací &mdash; pojmenujte aplikaci a doplňte její zkratky v Nastavení, poté ji filtrujte v záložce Apps; synchronizuje se přes synchronizaci místnosti, offline kódy, export i Gist.',
     'Novinka: deset dalších aplikací v záložce Apps &mdash; GIMP, OBS Studio, PowerPoint, Excel, Google Docs, Google Sheets, Premiere Pro, After Effects, Android Studio a Sublime Text.',
@@ -5972,6 +6067,11 @@ I18N_WN.cs = {
 };
 
 I18N_WN.hu = {
+  'v53.9': [
+    'Új: induló animáció &mdash; az Anthkeys mostantól billentyűlenyomást mutató nyitóképernyővel indul betöltés közben, asztali gépen és mobilon.',
+    'Javítva: az alkalmazás mostantól egyenesen a mentett témádban nyílik meg &mdash; a sötét mód használói már nem látnak világos villanást, mielőtt az oldal megállapodik.',
+  ],
+
   'v53.8': [
     'Új: hozzon létre saját alkalmazásszekciókat &mdash; adjon nevet és gyorsbillentyűket egy alkalmazásnak a Beállításokban, majd szűrjön rá az Apps fülön; ezek szinkronizálódnak a szobaszinkron, az offline kódok, az export és a Gist révén.',
     'Új: tíz további alkalmazás az Apps fülön &mdash; GIMP, OBS Studio, PowerPoint, Excel, Google Docs, Google Sheets, Premiere Pro, After Effects, Android Studio és Sublime Text.',

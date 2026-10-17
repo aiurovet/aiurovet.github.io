@@ -13540,7 +13540,7 @@ onId('btnNotifyTest', 'click', async function() {
 let reloadOnUpdate = false;
 if ('serviceWorker' in navigator) {
   let refreshing = false;
-  navigator.serviceWorker.register('sw.js?v=31').catch(() => {});
+  navigator.serviceWorker.register('sw.js?v=32').catch(() => {});
   navigator.serviceWorker.addEventListener('controllerchange', () => {
     if (!reloadOnUpdate || refreshing) return;
     refreshing = true;
@@ -18023,3 +18023,4 @@ if (new URLSearchParams(location.search).get('debug') === '1') {
 }
 
 renderCustomAppsRows();
+if (window.__akSplashDone) window.__akSplashDone();
