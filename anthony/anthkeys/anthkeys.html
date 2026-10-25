@@ -908,6 +908,10 @@
             <button class="pill" data-preset="bounce" title="Bounce">Bounce</button>
             <button class="pill" data-preset="spin" title="Spin">Spin</button>
             <button class="pill" data-preset="glow" title="Glow">Glow</button>
+            <button class="pill" data-preset="pulse" title="Pulse">Pulse</button>
+            <button class="pill" data-preset="shake" title="Shake">Shake</button>
+            <button class="pill" data-preset="flash" title="Flash">Flash</button>
+            <button class="pill" data-preset="wave" title="Wave">Wave</button>
           </div>
           <p style="margin:.45rem 0 0;font-size:.75rem;line-height:1.45;color:var(--text-variant)" data-i18n="splash.preset.desc">Choose how the startup key-press splash animates.</p>
         </div>
@@ -1076,10 +1080,15 @@
                 <p class="whatsnew-sub" data-i18n="whatsnew.sub">Recent changes to Anthkeys</p>
                 <select id="whatsnewSelect" aria-label="Version" style="width:100%;padding:.45rem .7rem;border:1px solid var(--outline-variant);border-radius:var(--radius-sm);background:var(--surface);color:var(--text);font:var(--size) var(--font);font-size:.8rem;margin-bottom:.6rem;box-sizing:border-box;outline:none"></select>
                 <div class="wn-entry">
+                  <div class="wn-ver">v54.7 <span class="wn-date">Oct 25, 2026</span></div>
+                  <ul>
+                    <li>New: more startup animation presets &mdash; Pulse, Shake, Flash and Wave added alongside Default, Minimal, Bounce, Spin and Glow.</li>
+                  </ul>
+                </div>
+                <div class="wn-entry">
                   <div class="wn-ver">v54.6 <span class="wn-date">Oct 25, 2026</span></div>
                   <ul>
                     <li>Fixed: Glow preset now scales the key and pulses a much larger shadow so it is clearly visible.</li>
-                    <li>Note: the splash is skipped on mobile when the OS has "reduce motion" enabled (turn it off in your device settings to see the startup animation on mobile).</li>
                   </ul>
                 </div>
                 <div class="wn-entry">
@@ -2222,7 +2231,7 @@
   <script src="js/qrcode.js"></script>
   <script src="js/i18n-recent.js"></script>
 <script src="js/i18n-wn.js"></script>
-<script src="js/anthkeys.js?v=54.6">
+<script src="js/anthkeys.js?v=54.7">
 </script>
 </body>
 </html>

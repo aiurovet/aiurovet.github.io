@@ -13153,7 +13153,7 @@ function loadSettings() {
       }
       const el = document.getElementById('splash');
       if (el) {
-        el.classList.remove('splash-preset-default','splash-preset-minimal','splash-preset-bounce','splash-preset-spin','splash-preset-glow');
+        el.classList.remove('splash-preset-default','splash-preset-minimal','splash-preset-bounce','splash-preset-spin','splash-preset-glow','splash-preset-pulse','splash-preset-shake','splash-preset-flash','splash-preset-wave');
         el.classList.add('splash-preset-' + data.splashPreset);
       }
     }
@@ -15094,7 +15094,7 @@ document.querySelectorAll('#splashPresetBar .pill').forEach(function(pill) {
     this.classList.add('active');
     const el = document.getElementById('splash');
     if (el) {
-      el.classList.remove('splash-preset-default','splash-preset-minimal','splash-preset-bounce','splash-preset-spin','splash-preset-glow');
+      el.classList.remove('splash-preset-default','splash-preset-minimal','splash-preset-bounce','splash-preset-spin','splash-preset-glow','splash-preset-pulse','splash-preset-shake','splash-preset-flash','splash-preset-wave');
       el.classList.add('splash-preset-' + preset);
     }
     saveSettings();
