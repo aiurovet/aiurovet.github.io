@@ -682,3 +682,15 @@ body.font-jetbrains { --font: 'JetBrains Mono',monospace; }
 .splash-dots i:nth-child(3) { animation-delay: .32s; }
 @keyframes splashPress { 0%, 30% { transform: translateY(0); box-shadow: 0 9px 0 -1px rgba(0,0,0,.16), 0 18px 30px rgba(var(--accent-rgb), .38); } 46% { transform: translateY(8px); box-shadow: 0 2px 0 -1px rgba(0,0,0,.16), 0 8px 14px rgba(var(--accent-rgb), .3); } 64%, 100% { transform: translateY(0); box-shadow: 0 9px 0 -1px rgba(0,0,0,.16), 0 18px 30px rgba(var(--accent-rgb), .38); } }
 @keyframes splashDot { 0%, 100% { opacity: .3; transform: translateY(0); } 40% { opacity: 1; transform: translateY(-3px); } }
+
+/* ---- Startup splash details (v54.0) ---- */
+.splash-details { display: none; margin-top: .9rem; width: min(260px, 80vw); text-align: center; }
+.splash-details-on .splash-details { display: block; }
+.splash-status { margin-bottom: .55rem; min-height: 1.1rem; color: var(--text-variant); font-size: .78rem; }
+.splash-progress-wrap { height: 8px; background: rgba(var(--accent-rgb), .16); border-radius: 4px; overflow: hidden; border: 1px solid var(--outline-variant); }
+.splash-progress-bar { height: 100%; width: 0%; background: var(--accent-1); border-radius: 4px; transition: width .25s ease; }
+.splash-pct { margin-top: .4rem; font-size: .72rem; color: var(--text); font-variant-numeric: tabular-nums; }
+
+/* Slightly more relaxed key press when the details view is on */
+.splash-details-on .splash-key { animation-duration: 1.6s; }
+.splash-details-on .splash-dots i { animation-duration: 1.6s; }

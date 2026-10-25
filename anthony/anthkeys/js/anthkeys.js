@@ -110,6 +110,9 @@ const i18n = {
     'perf.label': 'Performance mode (turns off blur & animations)',
     'perf.banner': 'Anthkeys feels slow. Turn on Performance mode?',
     'perf.banner.cta': 'Turn on',
+    'setting.splash-details': 'Startup animation details',
+    'splash.details.label': 'Show loading progress on startup',
+    'splash.details.desc': 'When on, Anthkeys shows a loading bar and status while opening (adds a short delay).',
     'apps.all': 'All apps',
     'setting.custom-anthkeys': 'Custom shortcuts',
     'setting.about': 'About',
@@ -12951,7 +12954,8 @@ function saveSettings() {
     tip: document.getElementById('toggleTip')?.classList.contains('on') ?? true,
     linuxDistro: linuxDistroState || 'ubuntu',
     appsApp: appsFilterState || 'all',
-    everywhere: searchEverywhere
+    everywhere: searchEverywhere,
+    splashDetails: document.getElementById('toggleSplashDetails')?.classList.contains('on') ?? false
   };
   if (data.accent === 'custom' || (activeAccent && !activeAccent.dataset.accent)) {
     data.customAccentHex = document.body.style.getPropertyValue('--accent-1').trim() || '#f7971e';
@@ -13125,6 +13129,16 @@ function loadSettings() {
         togglePerf.classList.add('on');
         togglePerf.setAttribute('aria-checked', 'true');
       }
+    }
+
+    if (data.splashDetails !== undefined) {
+      const on = !!data.splashDetails;
+      const t = document.getElementById('toggleSplashDetails');
+      if (t) {
+        t.classList.toggle('on', on);
+        t.setAttribute('aria-checked', on);
+      }
+      document.body.classList.toggle('splash-details-on', on);
     }
 
     if (data.appsApp) {
@@ -15046,6 +15060,13 @@ onId('toggleTip', 'click', function() {
   const on = this.classList.toggle('on');
   this.setAttribute('aria-checked', on);
   document.getElementById('dailyTip').style.display = on ? '' : 'none';
+  saveSettings();
+});
+
+onId('toggleSplashDetails', 'click', function() {
+  const on = this.classList.toggle('on');
+  this.setAttribute('aria-checked', on);
+  document.body.classList.toggle('splash-details-on', on);
   saveSettings();
 });
 
