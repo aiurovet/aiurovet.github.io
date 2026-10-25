@@ -710,4 +710,7 @@ body.font-jetbrains { --font: 'JetBrains Mono',monospace; }
 
 .splash-preset-glow .splash-key { animation: splashGlow 2s ease-in-out infinite; }
 .splash-preset-glow .splash-dots { display: none !important; }
-@keyframes splashGlow { 0%, 100% { box-shadow: 0 9px 0 -1px rgba(0,0,0,.16), 0 18px 30px rgba(var(--accent-rgb), .38); } 50% { box-shadow: 0 9px 0 -1px rgba(0,0,0,.16), 0 18px 55px rgba(var(--accent-rgb), .65); } }
+@keyframes splashGlow { 
+  0%, 100% { box-shadow: 0 9px 0 -1px rgba(0,0,0,.16), 0 18px 30px rgba(var(--accent-rgb), .38); transform: scale(1); }
+  50% { box-shadow: 0 9px 0 -1px rgba(0,0,0,.16), 0 18px 70px rgba(var(--accent-rgb), .9); transform: scale(1.08); }
+}
