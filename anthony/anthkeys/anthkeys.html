@@ -1071,6 +1071,13 @@
                 <p class="whatsnew-sub" data-i18n="whatsnew.sub">Recent changes to Anthkeys</p>
                 <select id="whatsnewSelect" aria-label="Version" style="width:100%;padding:.45rem .7rem;border:1px solid var(--outline-variant);border-radius:var(--radius-sm);background:var(--surface);color:var(--text);font:var(--size) var(--font);font-size:.8rem;margin-bottom:.6rem;box-sizing:border-box;outline:none"></select>
                 <div class="wn-entry">
+                  <div class="wn-ver">v54.1 <span class="wn-date">Oct 25, 2026</span></div>
+                  <ul>
+                    <li>Fixed: startup progress bar now shows whole-number percentages and only appears on hard refresh (Ctrl+Shift+R), not on normal reloads.</li>
+                    <li>Fixed: progress bar no longer jumps straight to 100% &mdash; it fills smoothly over the 2–5 second startup window.</li>
+                  </ul>
+                </div>
+                <div class="wn-entry">
                   <div class="wn-ver">v54.0 <span class="wn-date">Oct 25, 2026</span></div>
                   <ul>
                     <li>New: startup animation details &mdash; turn on “Show loading progress on startup” in Settings to see an accent-coloured progress bar with percentage and status text while Anthkeys opens (startup takes 2–5 seconds).</li>
@@ -2176,7 +2183,7 @@
   <script src="js/qrcode.js"></script>
   <script src="js/i18n-recent.js"></script>
 <script src="js/i18n-wn.js"></script>
-<script src="js/anthkeys.js?v=54.0">
+<script src="js/anthkeys.js?v=54.1">
 </script>
 </body>
 </html>
