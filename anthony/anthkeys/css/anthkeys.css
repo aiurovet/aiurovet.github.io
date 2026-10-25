@@ -694,3 +694,19 @@ body.font-jetbrains { --font: 'JetBrains Mono',monospace; }
 /* Slightly more relaxed key press when the details view is on */
 .splash-details-on .splash-key { animation-duration: 1.6s; }
 .splash-details-on .splash-dots i { animation-duration: 1.6s; }
+
+/* ---- Startup animation presets (v54.4) ---- */
+.splash-preset-minimal .splash-key,
+.splash-preset-minimal .splash-dots { display: none !important; }
+.splash-preset-minimal .splash-word { animation: splashFade 1.4s ease-in-out infinite; }
+@keyframes splashFade { 0%, 100% { opacity: .55; } 50% { opacity: 1; } }
+
+.splash-preset-bounce .splash-key { animation: none; box-shadow: none; transform: none; }
+.splash-preset-bounce .splash-dots i { animation-duration: .55s; animation-name: splashDotBounce; }
+@keyframes splashDotBounce { 0%, 100% { transform: translateY(0); opacity: .3; } 50% { transform: translateY(-7px); opacity: 1; } }
+
+.splash-preset-spin .splash-key { animation: splashPress 1.15s ease-in-out infinite, splashSpin 2.5s linear infinite; }
+@keyframes splashSpin { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+
+.splash-preset-glow .splash-key { animation: splashPress 1.15s ease-in-out infinite, splashGlow 2s ease-in-out infinite; }
+@keyframes splashGlow { 0%, 100% { box-shadow: 0 9px 0 -1px rgba(0,0,0,.16), 0 18px 30px rgba(var(--accent-rgb), .38); } 50% { box-shadow: 0 9px 0 -1px rgba(0,0,0,.16), 0 18px 55px rgba(var(--accent-rgb), .65); } }

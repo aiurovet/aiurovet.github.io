@@ -113,6 +113,8 @@ const i18n = {
     'setting.splash-details': 'Startup animation details',
     'splash.details.label': 'Show loading progress on startup',
     'splash.details.desc': 'When on, Anthkeys shows a loading bar and status while opening (adds a short delay).',
+    'setting.splash-preset': 'Startup animation style',
+    'splash.preset.desc': 'Choose how the startup key-press splash animates.',
     'apps.all': 'All apps',
     'setting.custom-anthkeys': 'Custom shortcuts',
     'setting.about': 'About',
@@ -12955,7 +12957,8 @@ function saveSettings() {
     linuxDistro: linuxDistroState || 'ubuntu',
     appsApp: appsFilterState || 'all',
     everywhere: searchEverywhere,
-    splashDetails: document.getElementById('toggleSplashDetails')?.classList.contains('on') ?? false
+    splashDetails: document.getElementById('toggleSplashDetails')?.classList.contains('on') ?? false,
+    splashPreset: document.querySelector('#splashPresetBar .pill.active')?.dataset.preset || 'default'
   };
   if (data.accent === 'custom' || (activeAccent && !activeAccent.dataset.accent)) {
     data.customAccentHex = document.body.style.getPropertyValue('--accent-1').trim() || '#f7971e';
@@ -13139,6 +13142,20 @@ function loadSettings() {
         t.setAttribute('aria-checked', on);
       }
       document.body.classList.toggle('splash-details-on', on);
+    }
+
+    if (data.splashPreset) {
+      const bar = document.getElementById('splashPresetBar');
+      if (bar) {
+        bar.querySelectorAll('.pill').forEach(p => p.classList.remove('active'));
+        const p = bar.querySelector('[data-preset="' + data.splashPreset + '"]');
+        if (p) p.classList.add('active');
+      }
+      const el = document.getElementById('splash');
+      if (el) {
+        el.classList.remove('splash-preset-default','splash-preset-minimal','splash-preset-bounce','splash-preset-spin','splash-preset-glow');
+        el.classList.add('splash-preset-' + data.splashPreset);
+      }
     }
 
     if (data.appsApp) {
@@ -15068,6 +15085,20 @@ onId('toggleSplashDetails', 'click', function() {
   this.setAttribute('aria-checked', on);
   document.body.classList.toggle('splash-details-on', on);
   saveSettings();
+});
+
+document.querySelectorAll('#splashPresetBar .pill').forEach(function(pill) {
+  pill.addEventListener('click', function() {
+    const preset = this.dataset.preset;
+    document.querySelectorAll('#splashPresetBar .pill').forEach(p => p.classList.remove('active'));
+    this.classList.add('active');
+    const el = document.getElementById('splash');
+    if (el) {
+      el.classList.remove('splash-preset-default','splash-preset-minimal','splash-preset-bounce','splash-preset-spin','splash-preset-glow');
+      el.classList.add('splash-preset-' + preset);
+    }
+    saveSettings();
+  });
 });
 
 onId('btnAddCustom', 'click', () => {

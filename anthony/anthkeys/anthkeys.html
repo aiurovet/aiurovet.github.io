@@ -69,9 +69,9 @@
   var s = {};
   try { s = JSON.parse(localStorage.getItem('anthkeys-settings') || '{}'); } catch (e) {}
   var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches || s.noAnim || s.perfMode;
-  /* Hard refresh (Ctrl+Shift+R) re-fetches the document from network, so
-     transferSize > 0. A normal refresh from cache has transferSize ~0. */
   var details = !!s.splashDetails;
+  var preset = s.splashPreset || 'default';
+  el.classList.add('splash-preset-' + preset);
   var MIN = details ? 2000 : 900;
   var MAX = details ? 5000 : 6000;
 
@@ -900,6 +900,19 @@
         </div>
       </div>
       <div class="setting-group">
+        <h2 data-i18n="setting.splash-preset">Startup animation style <button class="reset-btn" data-reset="splashPreset" title="Reset to default">↺</button></h2>
+        <div class="setting-body">
+          <div class="pill-bar" id="splashPresetBar" style="gap:.35rem;margin-bottom:.4rem">
+            <button class="pill active" data-preset="default" title="Default">Default</button>
+            <button class="pill" data-preset="minimal" title="Minimal">Minimal</button>
+            <button class="pill" data-preset="bounce" title="Bounce">Bounce</button>
+            <button class="pill" data-preset="spin" title="Spin">Spin</button>
+            <button class="pill" data-preset="glow" title="Glow">Glow</button>
+          </div>
+          <p style="margin:.45rem 0 0;font-size:.75rem;line-height:1.45;color:var(--text-variant)" data-i18n="splash.preset.desc">Choose how the startup key-press splash animates.</p>
+        </div>
+      </div>
+      <div class="setting-group">
         <h2 data-i18n="sync.title">Live rooms</h2>
         <div class="setting-body">
           <div style="display:flex;align-items:center;gap:.5rem;padding:.5rem .6rem;border:1px solid var(--outline-variant);border-radius:var(--radius-sm);background:var(--surface-variant)">
@@ -1062,6 +1075,12 @@
                 <div class="whatsnew-title" data-i18n="whatsnew.title">What's new</div>
                 <p class="whatsnew-sub" data-i18n="whatsnew.sub">Recent changes to Anthkeys</p>
                 <select id="whatsnewSelect" aria-label="Version" style="width:100%;padding:.45rem .7rem;border:1px solid var(--outline-variant);border-radius:var(--radius-sm);background:var(--surface);color:var(--text);font:var(--size) var(--font);font-size:.8rem;margin-bottom:.6rem;box-sizing:border-box;outline:none"></select>
+                <div class="wn-entry">
+                  <div class="wn-ver">v54.4 <span class="wn-date">Oct 25, 2026</span></div>
+                  <ul>
+                    <li>New: startup animation presets &mdash; choose Default, Minimal, Bounce, Spin or Glow in Settings &rarr; General.</li>
+                  </ul>
+                </div>
                 <div class="wn-entry">
                   <div class="wn-ver">v54.3 <span class="wn-date">Oct 25, 2026</span></div>
                   <ul>
@@ -2189,7 +2208,7 @@
   <script src="js/qrcode.js"></script>
   <script src="js/i18n-recent.js"></script>
 <script src="js/i18n-wn.js"></script>
-<script src="js/anthkeys.js?v=54.3">
+<script src="js/anthkeys.js?v=54.4">
 </script>
 </body>
 </html>
