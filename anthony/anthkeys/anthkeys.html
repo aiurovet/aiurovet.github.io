@@ -65,6 +65,7 @@
   if (!el) return;
   var t0 = performance.now();
   var done = false;
+  var appReady = false;
   var s = {};
   try { s = JSON.parse(localStorage.getItem('anthkeys-settings') || '{}'); } catch (e) {}
   var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches || s.noAnim || s.perfMode;
@@ -72,7 +73,7 @@
   var MIN = details ? 2000 : 900;
   var MAX = details ? 5000 : 6000;
 
-  function finish() {
+  function hideSplash() {
     if (done) return;
     done = true;
     el.classList.add('splash-hide');
@@ -80,25 +81,22 @@
   }
 
   if (reduce) {
-    finish();
+    hideSplash();
     return;
   }
 
+  /* __akSplashDone is called by anthkeys.js when the app is ready, and by the
+     MAX failsafe. It only records readiness; in details mode the tick animation
+     owns the progress bar and decides when to hide. */
   window.__akSplashDone = function () {
+    appReady = true;
     if (done) return;
-    done = true;
-    if (details) {
-      var bar = el.querySelector('.splash-progress-bar');
-      var pct = el.querySelector('.splash-pct');
-      var status = el.querySelector('.splash-status');
-      if (bar) bar.style.width = '100%';
-      if (pct) pct.textContent = '100%';
-      if (status) status.textContent = 'Ready…';
+    if (!details) {
+      setTimeout(function () {
+        el.classList.add('splash-hide');
+        setTimeout(function () { if (el.parentNode) el.parentNode.removeChild(el); }, 600);
+      }, Math.max(0, MIN - (performance.now() - t0)));
     }
-    setTimeout(function () {
-      el.classList.add('splash-hide');
-      setTimeout(function () { if (el.parentNode) el.parentNode.removeChild(el); }, 600);
-    }, Math.max(0, MIN - (performance.now() - t0)));
   };
 
   if (details) {
@@ -135,13 +133,13 @@
       } else {
         setProgress(100);
         setMsg();
-        window.__akSplashDone();
+        hideSplash();
       }
     }
     requestAnimationFrame(tick);
   }
 
-  setTimeout(window.__akSplashDone, MAX);
+  setTimeout(function () { if (!done) hideSplash(); }, MAX);
 })();
 </script>
  <div class="container">
