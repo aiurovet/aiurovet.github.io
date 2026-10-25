@@ -688,7 +688,7 @@ body.font-jetbrains { --font: 'JetBrains Mono',monospace; }
 .splash-details-on .splash-details { display: block; }
 .splash-status { margin-bottom: .55rem; min-height: 1.1rem; color: var(--text-variant); font-size: .78rem; }
 .splash-progress-wrap { height: 8px; background: rgba(var(--accent-rgb), .16); border-radius: 4px; overflow: hidden; border: 1px solid var(--outline-variant); }
-.splash-progress-bar { height: 100%; width: 0%; background: var(--accent-1); border-radius: 4px; transition: width .25s ease; }
+.splash-progress-bar { height: 100%; width: 0%; background: linear-gradient(135deg, var(--accent-1), var(--accent-2)); border-radius: 4px; transition: width .25s ease; }
 .splash-pct { margin-top: .4rem; font-size: .72rem; color: var(--text); font-variant-numeric: tabular-nums; }
 
 /* Slightly more relaxed key press when the details view is on */
